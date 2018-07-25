@@ -1,0 +1,56 @@
+{
+  "name": "texploration-api",
+  "version": "1.0.0",
+  "author": "Linus Metzler <hi@linusmetzler.me>",
+  "private": true,
+  "dependencies": {
+    "async-lodash": "^1.0.9",
+    "bcrypt": "^3.0.0",
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.3",
+    "chokidar": "^2.0.4",
+    "compression": "^1.7.2",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "cross-env": "^5.2.0",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.0",
+    "fs-extra": "^6.0.1",
+    "ip": "^1.1.5",
+    "jsonwebtoken": "^8.3.0",
+    "lodash": "4.17.10",
+    "lodash.product": "^18.1.16",
+    "md5-file": "^4.0.0",
+    "moment": "^2.22.2",
+    "morgan": "^1.7.0",
+    "multer": "^1.3.1",
+    "papaparse": "^4.5.0",
+    "sqlite": "^2.9.2",
+    "tmp": "^0.0.33",
+    "uuid": "^3.3.2",
+    "winston": "^3.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.1.0",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-node": "^6.0.1"
+  },
+  "engines": {
+    "node": ">=8.0.0",
+    "yarn": "^1.3.0"
+  },
+  "scripts": {
+    "start": "cross-env NODE_ENV=development node app.js",
+    "dev": "nodemon --inspect -e js,json,sql",
+    "prod": "cross-env NODE_ENV=production node app.js"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "storage/*",
+      "input/*",
+      "output/*",
+      "evaluation/*"
+    ]
+  }
+}

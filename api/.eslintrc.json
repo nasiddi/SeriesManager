@@ -1,0 +1,29 @@
+{
+    "extends": [
+        "airbnb-base",
+        "plugin:node/recommended"
+    ],
+    "plugins": [
+        "import",
+        "node"
+    ],
+    "rules": {
+        "indent": [
+            "error",
+            2
+        ],
+        "linebreak-style":"off",
+        "no-warning-comments": [
+            "warn",
+            {
+                "terms": [
+                    "todo",
+                    "fixme"
+                ]
+            }
+        ]
+    },
+    "env": {
+        "node": true
+    }
+}
