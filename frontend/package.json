@@ -28,6 +28,7 @@
     "vue": "^2.5.16",
     "vue-chartjs": "^3.3.2",
     "vue-cookie": "^1.1.4",
+    "vue-enhanced-check": "^1.5.3",
     "vue-lodash": "^2.0.0",
     "vue-meta": "^1.5.2",
     "vue-moment": "^4.0.0",

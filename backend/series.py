@@ -15,6 +15,7 @@ class Series:
         self.premiere = ''
         self.final = ''
         self.names = {}
+        self.tvdb_id = 0
 
     def __str__(self):
         return ('Name:\t\t' + self.series_name +

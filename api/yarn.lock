@@ -1893,6 +1893,10 @@ nice-try@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.4.tgz#d93962f6c52f2c1558c0fbda6d512819f1efe1c4"
 
+node-fetch@^2.0.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.2.0.tgz#4ee79bde909262f9775f731e3656d0db55ced5b5"
+
 node-pre-gyp@0.10.2, node-pre-gyp@^0.10.0:
   version "0.10.2"
   resolved "https://registry.yarnpkg.com/node-pre-gyp/-/node-pre-gyp-0.10.2.tgz#e8945c20ef6795a20aac2b44f036eb13cf5146e3"
@@ -1922,6 +1926,13 @@ node-pre-gyp@~0.9.0:
     rimraf "^2.6.1"
     semver "^5.3.0"
     tar "^4"
+
+node-tvdb@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/node-tvdb/-/node-tvdb-4.1.0.tgz#c8d71f192aa913526249ef7b432a972c5d96018d"
+  dependencies:
+    lodash "^4.17.4"
+    node-fetch "^2.0.0"
 
 nopt@^4.0.1:
   version "4.0.1"

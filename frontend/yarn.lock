@@ -4798,7 +4798,7 @@ node-releases@^1.0.0-alpha.10:
   dependencies:
     semver "^5.3.0"
 
-node-sass@^4.9.2:
+node-sass@^4.5.0, node-sass@^4.9.2:
   version "4.9.2"
   resolved "https://registry.yarnpkg.com/node-sass/-/node-sass-4.9.2.tgz#5e63fe6bd0f2ae3ac9d6c14ede8620e2b8bdb437"
   dependencies:
@@ -6368,6 +6368,16 @@ sass-graph@^2.2.4:
     scss-tokenizer "^0.2.3"
     yargs "^7.0.0"
 
+sass-loader@^6.0.0:
+  version "6.0.7"
+  resolved "https://registry.yarnpkg.com/sass-loader/-/sass-loader-6.0.7.tgz#dd2fdb3e7eeff4a53f35ba6ac408715488353d00"
+  dependencies:
+    clone-deep "^2.0.1"
+    loader-utils "^1.0.1"
+    lodash.tail "^4.1.1"
+    neo-async "^2.5.0"
+    pify "^3.0.0"
+
 sass-loader@^7.0.3:
   version "7.0.3"
   resolved "https://registry.yarnpkg.com/sass-loader/-/sass-loader-7.0.3.tgz#6ca10871a1cc7549f8143db5a9958242c4e4ca2a"
@@ -7258,6 +7268,14 @@ vue-cookie@^1.1.4:
   dependencies:
     tiny-cookie "^1.0"
 
+vue-enhanced-check@^1.5.3:
+  version "1.5.3"
+  resolved "https://registry.yarnpkg.com/vue-enhanced-check/-/vue-enhanced-check-1.5.3.tgz#68807890bc64f22603a47bd0a59a3d2e93203315"
+  dependencies:
+    node-sass "^4.5.0"
+    sass-loader "^6.0.0"
+    vue "^2.1.10"
+
 vue-eslint-parser@^2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/vue-eslint-parser/-/vue-eslint-parser-2.0.3.tgz#c268c96c6d94cfe3d938a5f7593959b0ca3360d1"
@@ -7375,7 +7393,7 @@ vue-wordcloud@^1.0.2:
     vue "^2.3.3"
     vue-resize-directive "^1.0.0"
 
-vue@^2.3.3, vue@^2.5.16:
+vue@^2.1.10, vue@^2.3.3, vue@^2.5.16:
   version "2.5.16"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.16.tgz#07edb75e8412aaeed871ebafa99f4672584a0085"
 

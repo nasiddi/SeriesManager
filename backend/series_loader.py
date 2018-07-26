@@ -74,6 +74,9 @@ def add_metadata(shows):
         show.name_needed = info[NAME_NEEDED]
         show.premiere = info[PREMIERE]
         show.final = info[FINAL]
+        if ID not in info:
+            info[ID] = 0
+        show.tvdb_id = info[ID]
 
         for season in show.seasons.values():
             s_names = {}
@@ -86,27 +89,21 @@ def add_metadata(shows):
                 meta[show.series_name][EP_NAMES].update({str(season.s_nr): {}})
             meta[show.series_name][EP_NAMES][str(season.s_nr)].update(s_names)
         show.names = info[EP_NAMES]
-    save_json(meta, META_FILE)
-
+    save_json(meta, os.path.join('data', META_FILE))
 
 
 def main(args):
     start = time.time()
     print('running')
-    if False:
+    if True:
         shows = load_files(SERIES_DIR)
         shows.update(load_files(ANIME_DIR))
+        add_metadata(shows)
         pickle_dump(shows, 'shows')
     else:
         shows = pickle_load('shows')
     link_seasons_and_episodes(shows)
-
-
-    add_metadata(shows)
-
     print(time.time() - start)
-
-
     return shows
 
 

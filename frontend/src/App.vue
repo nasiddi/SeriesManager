@@ -9,15 +9,15 @@
       fluid
     >
       <b-row>
-        <b-col :cols="2">
+        <b-col :cols="1">
           <router-view name="sidebarLeft"/>
         </b-col>
 
-        <b-col :cols="8">
+        <b-col :cols="10">
           <router-view id="routerview-main"/>
         </b-col>
 
-        <b-col :cols="2">
+        <b-col :cols="1">
           <router-view name="sidebarRight"/>
         </b-col>
       </b-row>
@@ -72,6 +72,12 @@ export default {
 
 .overflow-x {
   overflow-x: scroll;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 .td-no-border td {

@@ -6,6 +6,8 @@ const jobModel = require('./../models/job');
 const processModel = require('./../models/process');
 const config = require('../../config');
 const python = require('../python/controller');
+const TVDB = require('node-tvdb');
+const tvdb = new TVDB('C9BPCUYZ8GFT2BZL');
 
 
 const routes = express.Router();
@@ -21,6 +23,42 @@ routes.post('/sync/start', async (req, res) => {
 
 routes.get('/names', async (req, res) => {
   python.prepFiles(res)
+});
+
+// TVDB
+routes.post('/tvdb', async (req, res) => {
+  console.log(req.body)
+  res.send(await tvdb.getEpisodesBySeriesId(req.body.tvdb)
+    .then(response => {
+      var episode2 = null;
+      var episode3 = null;
+      var titles = {};
+      var episode = response.find(obj => {
+        return obj.airedSeason === req.body.s_nr && obj.airedEpisodeNumber === req.body.e_nr
+      })
+      if (req.body.episode_option.selected !== 'Single') {
+        episode2 = response.find(obj => {
+        return obj.airedSeason === req.body.s_nr && obj.airedEpisodeNumber === req.body.e_nr + 1
+        })
+      }
+      if (req.body.episode_option.selected === 'Triple') {
+        episode3 = response.find(obj => {
+        return obj.airedSeason === req.body.s_nr && obj.airedEpisodeNumber === req.body.e_nr + 2
+        })
+      }
+      if (episode != null && 'episodeName' in episode){
+        titles.title = episode.episodeName
+      }
+      if (episode2 != null && 'episodeName' in episode2){
+        titles.title2 = episode2.episodeName
+      }
+      if (episode3 != null && 'episodeName' in episode3){
+        titles.title3 = episode3.episodeName
+      }
+      console.log(titles)
+      return titles
+    })
+    .catch(error => { console.log(error) }));
 });
 
 routes.get('/', async (req, res) => {

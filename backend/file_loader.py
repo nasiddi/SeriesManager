@@ -10,13 +10,16 @@ def main(args):
     io_utlis.parse_args(args)
     shows = io_utlis.pickle_load('shows')
     file_list = []
+    subs = []
     for root, dirs, files in os.walk(FILE_DIR):
         for name in files:
-            extention = name.split('.')[-1]
-            if extention in EXTENTIONS or extention in SUBS:
+            extention = name.split('.')[-1].lower()
+            if extention in EXTENTIONS:
                 if 'sample' in name.lower():
                     continue
                 file_list.append(File(location=os.path.join(root, name)))
+            if extention in SUBS:
+                subs.append({'text': name, 'value': os.path.join(root, name)})
 
     series_names = []
     series_n = shows.keys()
@@ -27,6 +30,30 @@ def main(args):
         while '-' in n:
             n.remove('-')
         series_names.append(n)
+
+    locations = []
+    multis = []
+    delete = []
+    for file in file_list:
+        loc = file.location.split('\\')[2]
+        if loc in locations:
+            if loc not in multis:
+                multis.append(loc)
+        else:
+            locations.append(loc)
+
+    for file in file_list:
+        loc = file.location.split('\\')[2]
+        if loc in multis:
+            delete.append(file)
+
+    for file in delete:
+        file_list.remove(file)
+
+    i = 0
+    for file in file_list:
+        file.file_id = i
+        i += 1
 
     pattern = re.compile('s[0-9]{2}e[0-9]{2}')
     for file in file_list:
@@ -42,15 +69,15 @@ def main(args):
                 index = series_names.index(name)
                 file.series_name = list(series_n)[index]
                 show = shows[file.series_name]
-                try:
-                    file.e_name = show.names[str(file.s_nr)][str(file.e_nr)]
-                except KeyError:
-                    pass
 
-    n_series = list(shows.keys())
-    n_series.append('Series Name')
+    n_series = {}
 
-    json = {'shows': n_series, 'files': []}
+    for n in list(shows.keys()):
+        n_series[n] = shows[n].tvdb_id
+
+    n_series['Series Name'] = 0
+
+    json = {'shows': n_series, 'files': [], 'subs': subs}
     for file in file_list:
         json['files'].append(file.__str__())
 

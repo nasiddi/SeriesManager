@@ -1,7 +1,6 @@
 {
     "13 Reasons Why": {
         "Final": "",
-        "ID": 323168,
         "Name Needed": false,
         "Names": {
             "1": {
@@ -36,11 +35,11 @@
             }
         },
         "Premiere": "2017-03-31",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "323168\n"
     },
     "24": {
         "Final": "2014-07-14",
-        "ID": 76290,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -267,11 +266,11 @@
             }
         },
         "Premiere": "2001-11-06",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "76290\n"
     },
     "8 Out of 10 Cats": {
         "Final": "",
-        "ID": 79556,
         "Name Needed": false,
         "Names": {
             "1": {
@@ -499,11 +498,11 @@
             }
         },
         "Premiere": "2005-06-03",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "79556\n"
     },
     "8 Out of 10 Cats Does Countdown": {
         "Final": "error",
-        "ID": 272156,
         "Name Needed": false,
         "Names": {
             "1": {
@@ -610,11 +609,11 @@
             }
         },
         "Premiere": "2012-01-02",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "272156\n"
     },
     "Agent Carter": {
         "Final": "2016-03-01",
-        "ID": 281485,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -641,11 +640,11 @@
             }
         },
         "Premiere": "2015-01-06",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "281485\n"
     },
     "Agents of S.H.I.E.L.D": {
         "Final": "null",
-        "ID": 263365,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -770,11 +769,11 @@
             }
         },
         "Premiere": "2013-09-24",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "263365\n"
     },
     "Angel": {
         "Final": "2004-05-19",
-        "ID": 71035,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -899,11 +898,11 @@
             }
         },
         "Premiere": "1999-10-05",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "71035\n"
     },
     "Arrow": {
         "Final": "",
-        "ID": 257655,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -1058,11 +1057,11 @@
             }
         },
         "Premiere": "2012-10-10",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "257655\n"
     },
     "Ashes to Ashes": {
         "Final": "2010-05-21",
-        "ID": 81253,
         "Name Needed": false,
         "Names": {
             "1": {
@@ -1097,11 +1096,11 @@
             }
         },
         "Premiere": "2008-02-07",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "81253\n"
     },
     "Avatar - The Last Airbender": {
         "Final": "2008-07-19",
-        "ID": 74852,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -1170,11 +1169,11 @@
             }
         },
         "Premiere": "2005-02-21",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "74852\n"
     },
     "Battlestar Galactica": {
         "Final": "2009-03-20",
-        "ID": 73545,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -1259,11 +1258,11 @@
             }
         },
         "Premiere": "2004-10-18",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "73545\n"
     },
     "Better Call Saul": {
         "Final": "",
-        "ID": 273181,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -1304,11 +1303,11 @@
             }
         },
         "Premiere": "2015-02-08",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "273181\n"
     },
     "Black Lightning": {
         "Final": "",
-        "ID": 332525,
         "Name Needed": false,
         "Names": {
             "1": {
@@ -1328,11 +1327,11 @@
             }
         },
         "Premiere": "2018-01-16",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "332525\n"
     },
     "Black Mirror": {
         "Final": "",
-        "ID": 253463,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -1364,11 +1363,11 @@
             }
         },
         "Premiere": "2011-12-04",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "253463\n"
     },
     "Black Sails": {
         "Final": "2017-04-02",
-        "ID": 262407,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -1419,11 +1418,11 @@
             }
         },
         "Premiere": "2014-01-25",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "262407\n"
     },
     "Blackadder": {
         "Final": "1989-11-02",
-        "ID": 76736,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -1460,11 +1459,11 @@
             }
         },
         "Premiere": "1983-06-15",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "76736\n"
     },
     "Blackpool": {
         "Final": "2004-12-16",
-        "ID": 75350,
         "Name Needed": false,
         "Names": {
             "1": {
@@ -1477,11 +1476,11 @@
             }
         },
         "Premiere": "2004-11-11",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "75350\n"
     },
     "Blue Bloods": {
         "Final": "",
-        "ID": 164981,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -1679,11 +1678,11 @@
             }
         },
         "Premiere": "2010-09-24",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "164981\n"
     },
     "Bones": {
         "Final": "2017-03-28",
-        "ID": 75682,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -1958,11 +1957,11 @@
             }
         },
         "Premiere": "2005-09-13",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "75682\n"
     },
     "Boruto": {
         "Final": "",
-        "ID": 0,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -2037,7 +2036,6 @@
     },
     "Breaking Bad": {
         "Final": "2013-09-29",
-        "ID": 81189,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -2114,11 +2112,11 @@
             }
         },
         "Premiere": "2008-01-20",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "81189\n"
     },
     "Broadchurch": {
         "Final": "2017-04-17",
-        "ID": 266398,
         "Name Needed": false,
         "Names": {
             "1": {
@@ -2153,11 +2151,11 @@
             }
         },
         "Premiere": "2013-03-04",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "266398\n"
     },
     "Buffy": {
         "Final": "2003-05-20",
-        "ID": 70327,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -2320,11 +2318,11 @@
             }
         },
         "Premiere": "1997-03-10",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "70327\n"
     },
     "Bull": {
         "Final": "",
-        "ID": 311945,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -2378,11 +2376,11 @@
             }
         },
         "Premiere": "2016-09-20",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "311945\n"
     },
     "CSI New York": {
         "Final": "2013-02-22",
-        "ID": 73696,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -2602,11 +2600,11 @@
             }
         },
         "Premiere": "2004-09-22",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "73696\n"
     },
     "Casanova": {
         "Final": "2005-03-27",
-        "ID": 75817,
         "Name Needed": false,
         "Names": {
             "1": {
@@ -2616,11 +2614,11 @@
             }
         },
         "Premiere": "2005-03-13",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "75817\n"
     },
     "Chance": {
         "Final": "2017-11-29",
-        "ID": 311196,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -2649,11 +2647,11 @@
             }
         },
         "Premiere": "2016-10-19",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "311196\n"
     },
     "Charmed": {
         "Final": "2006-05-21",
-        "ID": 70626,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -2852,11 +2850,11 @@
             }
         },
         "Premiere": "1998-10-07",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "70626\n"
     },
     "Chicago Fire": {
         "Final": "null",
-        "ID": 258541,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -3010,11 +3008,11 @@
             }
         },
         "Premiere": "2012-10-10",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "258541\n"
     },
     "Chicago Justice": {
         "Final": "2017-05-14",
-        "ID": 311896,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -3034,11 +3032,11 @@
             }
         },
         "Premiere": "2017-03-01",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "311896\n"
     },
     "Chicago Med": {
         "Final": "",
-        "ID": 295640,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -3110,11 +3108,11 @@
             }
         },
         "Premiere": "2015-11-17",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "295640\n"
     },
     "Chicago P.D": {
         "Final": "null",
-        "ID": 269641,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -3235,11 +3233,11 @@
             }
         },
         "Premiere": "2014-01-08",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "269641\n"
     },
     "Chuck": {
         "Final": "2012-09-27",
-        "ID": 80348,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -3345,11 +3343,11 @@
             }
         },
         "Premiere": "2007-09-24",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "80348\n"
     },
     "Class": {
         "Final": "2016-12-03",
-        "ID": 309893,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -3364,11 +3362,11 @@
             }
         },
         "Premiere": "2016-10-22",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "309893\n"
     },
     "Cloak & Dagger": {
         "Final": "",
-        "ID": 341455,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -3383,11 +3381,11 @@
             }
         },
         "Premiere": "2018-06-07",
-        "Status": "In Season"
+        "Status": "In Season",
+        "id": "341455\n"
     },
     "Colony": {
         "Final": "",
-        "ID": 284210,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -3433,11 +3431,11 @@
             }
         },
         "Premiere": "2016-01-14",
-        "Status": "In Season"
+        "Status": "In Season",
+        "id": "284210\n"
     },
     "Constantine": {
         "Final": "2015-02-13",
-        "ID": 273690,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -3457,11 +3455,11 @@
             }
         },
         "Premiere": "2014-10-24",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "273690\n"
     },
     "Constantine - City of Demons": {
         "Final": "",
-        "ID": 336139,
         "Name Needed": false,
         "Names": {
             "1": {
@@ -3473,11 +3471,11 @@
             }
         },
         "Premiere": "2018-03-24",
-        "Status": "In Season"
+        "Status": "In Season",
+        "id": "336139\n"
     },
     "Continuum": {
         "Final": "2015-10-09",
-        "ID": 258171,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -3532,11 +3530,11 @@
             }
         },
         "Premiere": "2012-05-27",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "258171\n"
     },
     "Criminal Minds": {
         "Final": "",
-        "ID": 75710,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -3866,11 +3864,11 @@
             }
         },
         "Premiere": "2005-09-22",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "75710\n"
     },
     "Crossing Lines": {
         "Final": "2015-12-04",
-        "ID": 267970,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -3915,11 +3913,11 @@
             }
         },
         "Premiere": "2013-06-14",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "267970\n"
     },
     "Da Vinci's Demons": {
         "Final": "2015-12-26",
-        "ID": 259669,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -3958,11 +3956,11 @@
             }
         },
         "Premiere": "2013-04-12",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "259669\n"
     },
     "Damien": {
         "Final": "2016-05-09",
-        "ID": 282165,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -3979,11 +3977,11 @@
             }
         },
         "Premiere": "2016-03-07",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "282165\n"
     },
     "Daredevil": {
         "Final": "",
-        "ID": 281662,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -4018,11 +4016,11 @@
             }
         },
         "Premiere": "2015-04-10",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "281662\n"
     },
     "Dark Angel": {
         "Final": "2002-05-03",
-        "ID": 76148,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -4073,11 +4071,11 @@
             }
         },
         "Premiere": "2000-10-03",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "76148\n"
     },
     "Dark Matter": {
         "Final": "2017-08-25",
-        "ID": 292174,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -4127,11 +4125,11 @@
             }
         },
         "Premiere": "2015-06-12",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "292174\n"
     },
     "Dexter": {
         "Final": "2013-09-22",
-        "ID": 79349,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -4248,11 +4246,11 @@
             }
         },
         "Premiere": "2006-10-01",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "79349\n"
     },
     "Doctor Who": {
         "Final": "",
-        "ID": 78804,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -4423,11 +4421,11 @@
             }
         },
         "Premiere": "2005-03-26",
-        "Status": "In Season"
+        "Status": "In Season",
+        "id": "78804\n"
     },
     "Doctor Who Classic": {
         "Final": "1989-12-06",
-        "ID": 76107,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -4642,11 +4640,11 @@
             }
         },
         "Premiere": "1963-11-23",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "76107\n"
     },
     "Dollhouse": {
         "Final": "2010-01-29",
-        "ID": 82046,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -4682,11 +4680,11 @@
             }
         },
         "Premiere": "2009-02-13",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "82046\n"
     },
     "Dolphins - Spy in the Pod": {
         "Final": "2014-01-09",
-        "ID": 276810,
         "Name Needed": false,
         "Names": {
             "1": {
@@ -4695,11 +4693,11 @@
             }
         },
         "Premiere": "2014-01-02",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "276810\n"
     },
     "Dragon Ball": {
         "Final": "1996-03-04",
-        "ID": 0,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -4863,7 +4861,6 @@
     },
     "Emerald City": {
         "Final": "2017-03-03",
-        "ID": 295779,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -4880,11 +4877,11 @@
             }
         },
         "Premiere": "2017-01-06",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "295779\n"
     },
     "Eureka": {
         "Final": "2012-07-16",
-        "ID": 79334,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -4976,11 +4973,11 @@
             }
         },
         "Premiere": "2006-07-18",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "79334\n"
     },
     "Fargo": {
         "Final": "",
-        "ID": 269613,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -5021,11 +5018,11 @@
             }
         },
         "Premiere": "2014-04-15",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "269613\n"
     },
     "Farscape": {
         "Final": "2003-03-21",
-        "ID": 70522,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -5126,11 +5123,11 @@
             }
         },
         "Premiere": "1999-03-19",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "70522\n"
     },
     "Fast and Loose": {
         "Final": "2011-03-04",
-        "ID": 221581,
         "Name Needed": false,
         "Names": {
             "1": {
@@ -5145,11 +5142,11 @@
             }
         },
         "Premiere": "2011-01-14",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "221581\n"
     },
     "Firefly": {
         "Final": "2002-12-20",
-        "ID": 78874,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -5170,11 +5167,11 @@
             }
         },
         "Premiere": "2002-09-20",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "78874\n"
     },
     "Friends": {
         "Final": "2004-05-06",
-        "ID": 79168,
         "Name Needed": false,
         "Names": {
             "1": {
@@ -5435,11 +5432,11 @@
             }
         },
         "Premiere": "1994-09-22",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "79168\n"
     },
     "Fringe": {
         "Final": "2013-01-18",
-        "ID": 82066,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -5554,11 +5551,11 @@
             }
         },
         "Premiere": "2008-09-09",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "82066\n"
     },
     "Game of Thrones": {
         "Final": "",
-        "ID": 121361,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -5644,11 +5641,11 @@
             }
         },
         "Premiere": "2011-04-17",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "121361\n"
     },
     "Gilmore Girls": {
         "Final": "2007-05-15",
-        "ID": 76568,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -5820,11 +5817,11 @@
             }
         },
         "Premiere": "2000-10-05",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "76568\n"
     },
     "Gilmore Girls - A Year in the Life": {
         "Final": "2016-11-25",
-        "ID": 311987,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -5835,11 +5832,11 @@
             }
         },
         "Premiere": "2016-11-25",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "311987\n"
     },
     "Gotham": {
         "Final": "",
-        "ID": 274431,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -5940,11 +5937,11 @@
             }
         },
         "Premiere": "2014-09-22",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "274431\n"
     },
     "Gracepoint": {
         "Final": "2014-12-11",
-        "ID": 276396,
         "Name Needed": false,
         "Names": {
             "1": {
@@ -5961,11 +5958,11 @@
             }
         },
         "Premiere": "2014-10-02",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "276396\n"
     },
     "Grey's Anatomy": {
         "Final": "",
-        "ID": 73762,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -6314,11 +6311,11 @@
             }
         },
         "Premiere": "2005-03-27",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "73762\n"
     },
     "Grimm": {
         "Final": "2017-03-31",
-        "ID": 248736,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -6458,11 +6455,11 @@
             }
         },
         "Premiere": "2011-10-28",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "248736\n"
     },
     "Gunpowder": {
         "Final": "2017-11-04",
-        "ID": 334069,
         "Name Needed": false,
         "Names": {
             "1": {
@@ -6472,11 +6469,11 @@
             }
         },
         "Premiere": "2017-10-21",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "334069\n"
     },
     "Hannibal": {
         "Final": "2015-08-29",
-        "ID": 259063,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -6526,11 +6523,11 @@
             }
         },
         "Premiere": "2013-04-04",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "259063\n"
     },
     "Hard Sun": {
         "Final": "",
-        "ID": 333402,
         "Name Needed": false,
         "Names": {
             "1": {
@@ -6543,11 +6540,11 @@
             }
         },
         "Premiere": "2018-01-06",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "333402\n"
     },
     "Hawaii Five-0": {
         "Final": "",
-        "ID": 164541,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -6761,11 +6758,11 @@
             }
         },
         "Premiere": "2010-09-20",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "164541\n"
     },
     "Heroes": {
         "Final": "2010-02-08",
-        "ID": 79501,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -6856,11 +6853,11 @@
             }
         },
         "Premiere": "2006-09-25",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "79501\n"
     },
     "Heroes Reborn": {
         "Final": "2016-01-21",
-        "ID": 279201,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -6880,11 +6877,11 @@
             }
         },
         "Premiere": "2015-09-24",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "279201\n"
     },
     "Houdini & Doyle": {
         "Final": "2016-05-12",
-        "ID": 306313,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -6901,11 +6898,11 @@
             }
         },
         "Premiere": "2016-03-13",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "306313\n"
     },
     "House": {
         "Final": "2012-05-21",
-        "ID": 73255,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -7102,11 +7099,11 @@
             }
         },
         "Premiere": "2004-11-16",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "73255\n"
     },
     "House of Cards": {
         "Final": "",
-        "ID": 262980,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -7186,11 +7183,11 @@
             }
         },
         "Premiere": "2013-02-01",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "262980\n"
     },
     "How I Met Your Mother": {
         "Final": "2014-03-31",
-        "ID": 75760,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -7421,11 +7418,11 @@
             }
         },
         "Premiere": "2005-09-19",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "75760\n"
     },
     "How to Get Away with Murder": {
         "Final": "",
-        "ID": 281620,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -7498,11 +7495,11 @@
             }
         },
         "Premiere": "2014-09-25",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "281620\n"
     },
     "Inhumans": {
         "Final": "2017-11-10",
-        "ID": 320558,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -7517,11 +7514,11 @@
             }
         },
         "Premiere": "2017-09-29",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "320558\n"
     },
     "Iron Fist": {
         "Final": "",
-        "ID": 317953,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -7541,11 +7538,11 @@
             }
         },
         "Premiere": "2017-03-17",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "317953\n"
     },
     "Jessica Jones": {
         "Final": "",
-        "ID": 284190,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -7580,11 +7577,11 @@
             }
         },
         "Premiere": "2015-11-20",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "284190\n"
     },
     "Killjoys": {
         "Final": "",
-        "ID": 281534,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -7629,11 +7626,11 @@
             }
         },
         "Premiere": "2015-06-19",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "281534\n"
     },
     "Last Week Tonight With John Oliver": {
         "Final": "",
-        "ID": 278518,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -7784,11 +7781,11 @@
             }
         },
         "Premiere": "2014-04-27",
-        "Status": "In Season"
+        "Status": "In Season",
+        "id": "278518\n"
     },
     "Legends of Tomorrow": {
         "Final": "",
-        "ID": 295760,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -7850,11 +7847,11 @@
             }
         },
         "Premiere": "2016-01-21",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "295760\n"
     },
     "Legion": {
         "Final": "",
-        "ID": 320724,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -7882,11 +7879,11 @@
             }
         },
         "Premiere": "2017-02-08",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "320724\n"
     },
     "Lethal Weapon": {
         "Final": "",
-        "ID": 311790,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -7935,11 +7932,11 @@
             }
         },
         "Premiere": "2016-09-21",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "311790\n"
     },
     "Life on Mars": {
         "Final": "2007-04-10",
-        "ID": 79177,
         "Name Needed": false,
         "Names": {
             "1": {
@@ -7964,11 +7961,11 @@
             }
         },
         "Premiere": "2006-01-09",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "79177\n"
     },
     "Lost": {
         "Final": "2010-05-23",
-        "ID": 73739,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -8106,11 +8103,11 @@
             }
         },
         "Premiere": "2004-09-22",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "73739\n"
     },
     "Lucifer": {
         "Final": "2018-05-14",
-        "ID": 295685,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -8178,11 +8175,11 @@
             }
         },
         "Premiere": "2016-01-25",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "295685\n"
     },
     "Luke Cage": {
         "Final": "",
-        "ID": 304219,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -8217,11 +8214,11 @@
             }
         },
         "Premiere": "2016-09-30",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "304219\n"
     },
     "Merlin": {
         "Final": "2012-12-24",
-        "ID": 83123,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -8286,11 +8283,11 @@
             }
         },
         "Premiere": "2008-09-20",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "83123\n"
     },
     "Minority Report": {
         "Final": "2015-11-30",
-        "ID": 295680,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -8307,11 +8304,11 @@
             }
         },
         "Premiere": "2015-09-21",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "295680\n"
     },
     "Mock the Week": {
         "Final": "2018-06-26",
-        "ID": 79761,
         "Name Needed": false,
         "Names": {
             "1": {
@@ -8489,11 +8486,11 @@
             }
         },
         "Premiere": "2005-06-05",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "79761\n"
     },
     "Moonlight": {
         "Final": "2008-05-16",
-        "ID": 80512,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -8516,11 +8513,11 @@
             }
         },
         "Premiere": "2007-09-28",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "80512\n"
     },
     "Mr. Robot": {
         "Final": "",
-        "ID": 289590,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -8563,11 +8560,11 @@
             }
         },
         "Premiere": "2015-06-24",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "289590\n"
     },
     "NCIS": {
         "Final": "",
-        "ID": 72108,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -8956,11 +8953,11 @@
             }
         },
         "Premiere": "2003-09-23",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "72108\n"
     },
     "NCIS Los Angeles": {
         "Final": "",
-        "ID": 95441,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -9199,11 +9196,11 @@
             }
         },
         "Premiere": "2009-09-22",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "95441\n"
     },
     "NCIS New Orleans": {
         "Final": "",
-        "ID": 278125,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -9311,11 +9308,11 @@
             }
         },
         "Premiere": "2014-09-23",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "278125\n"
     },
     "Narcos": {
         "Final": "",
-        "ID": 282670,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -9356,11 +9353,11 @@
             }
         },
         "Premiere": "2015-08-28",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "282670\n"
     },
     "Naruto": {
         "Final": "2007-02-08",
-        "ID": 0,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -9591,7 +9588,6 @@
     },
     "Naruto Shippuuden": {
         "Final": "2017-03-23",
-        "ID": 0,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -10102,7 +10098,6 @@
     },
     "Numb3rs": {
         "Final": "2010-03-12",
-        "ID": 73918,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -10237,11 +10232,11 @@
             }
         },
         "Premiere": "2005-01-23",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "73918\n"
     },
     "Orphan Black": {
         "Final": "2017-08-12",
-        "ID": 260315,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -10306,11 +10301,11 @@
             }
         },
         "Premiere": "2013-03-30",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "260315\n"
     },
     "Penguins - Spy in the Huddle": {
         "Final": "2013-02-25",
-        "ID": 266843,
         "Name Needed": false,
         "Names": {
             "1": {
@@ -10320,11 +10315,11 @@
             }
         },
         "Premiere": "2013-02-11",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "266843\n"
     },
     "Pillars of the Earth": {
         "Final": "2010-08-27",
-        "ID": 159431,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -10339,11 +10334,11 @@
             }
         },
         "Premiere": "2010-07-23",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "159431\n"
     },
     "Planet Earth": {
         "Final": "2006-12-10",
-        "ID": 79257,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -10361,11 +10356,11 @@
             }
         },
         "Premiere": "2006-03-05",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "79257\n"
     },
     "Planet Earth II": {
         "Final": "2016-12-11",
-        "ID": 318408,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -10378,11 +10373,11 @@
             }
         },
         "Premiere": "2016-11-06",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "318408\n"
     },
     "Please Like Me": {
         "Final": "2016-12-14",
-        "ID": 267014,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -10427,11 +10422,11 @@
             }
         },
         "Premiere": "2013-02-28",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "267014\n"
     },
     "Polar Bear - Spy on the Ice": {
         "Final": "2010-12-29",
-        "ID": 274142,
         "Name Needed": false,
         "Names": {
             "1": {
@@ -10439,11 +10434,11 @@
             }
         },
         "Premiere": "2010-12-29",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "274142\n"
     },
     "Pretty Little Liars": {
         "Final": "2017-06-27",
-        "ID": 146711,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -10621,11 +10616,11 @@
             }
         },
         "Premiere": "2010-06-08",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "146711\n"
     },
     "Prison Break": {
         "Final": "2009-05-15",
-        "ID": 75340,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -10729,11 +10724,11 @@
             }
         },
         "Premiere": "2005-08-29",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "75340\n"
     },
     "QI": {
         "Final": "2016-03-25",
-        "ID": 72716,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -10962,11 +10957,11 @@
             }
         },
         "Premiere": "2003-09-11",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "72716\n"
     },
     "Quantum Leap": {
         "Final": "1993-05-05",
-        "ID": 72248,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -11078,11 +11073,11 @@
             }
         },
         "Premiere": "1989-03-26",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "72248\n"
     },
     "Queer as Folk": {
         "Final": "2005-08-07",
-        "ID": 75367,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -11180,11 +11175,11 @@
             }
         },
         "Premiere": "2000-12-03",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "75367\n"
     },
     "Rick and Morty": {
         "Final": "",
-        "ID": 275274,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -11226,11 +11221,11 @@
             }
         },
         "Premiere": "2013-12-02",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "275274\n"
     },
     "Ripper Street": {
         "Final": "2016-10-12",
-        "ID": 260485,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -11281,11 +11276,11 @@
             }
         },
         "Premiere": "2012-12-30",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "260485\n"
     },
     "Runaways": {
         "Final": "",
-        "ID": 332027,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -11302,11 +11297,11 @@
             }
         },
         "Premiere": "2017-11-21",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "332027\n"
     },
     "Sanctuary": {
         "Final": "2011-12-30",
-        "ID": 80159,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -11378,11 +11373,11 @@
             }
         },
         "Premiere": "2008-10-03",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "80159\n"
     },
     "Saving Hope": {
         "Final": "2017-08-03",
-        "ID": 256111,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -11482,11 +11477,11 @@
             }
         },
         "Premiere": "2012-06-07",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "256111\n"
     },
     "Scorpion": {
         "Final": "2018-04-16",
-        "ID": 281630,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -11592,11 +11587,11 @@
             }
         },
         "Premiere": "2014-09-22",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "281630\n"
     },
     "Scrubs": {
         "Final": "2010-03-17",
-        "ID": 76156,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -11800,11 +11795,11 @@
             }
         },
         "Premiere": "2001-10-02",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "76156\n"
     },
     "Sense8": {
         "Final": "2018-06-08",
-        "ID": 268156,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -11837,11 +11832,11 @@
             }
         },
         "Premiere": "2015-06-05",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "268156\n"
     },
     "Sherlock": {
         "Final": "2017-01-15",
-        "ID": 176941,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -11868,11 +11863,11 @@
             }
         },
         "Premiere": "2010-07-25",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "176941\n"
     },
     "Shingeki no Kyojin": {
         "Final": "",
-        "ID": 0,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -11922,7 +11917,6 @@
     },
     "Single Father": {
         "Final": "2010-10-31",
-        "ID": 183331,
         "Name Needed": false,
         "Names": {
             "1": {
@@ -11933,11 +11927,11 @@
             }
         },
         "Premiere": "2010-10-10",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "183331\n"
     },
     "Sleepy Hollow": {
         "Final": "2017-03-31",
-        "ID": 269578,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -12012,11 +12006,11 @@
             }
         },
         "Premiere": "2013-09-16",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "269578\n"
     },
     "Smallville": {
         "Final": "2011-05-13",
-        "ID": 72218,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -12258,11 +12252,11 @@
             }
         },
         "Premiere": "2001-10-16",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "72218\n"
     },
     "Spies of Warsaw": {
         "Final": "2013-04-03",
-        "ID": 260313,
         "Name Needed": false,
         "Names": {
             "1": {
@@ -12271,11 +12265,11 @@
             }
         },
         "Premiere": "2013-04-03",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "260313\n"
     },
     "Spy in the Wild": {
         "Final": "",
-        "ID": 322505,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -12287,11 +12281,11 @@
             }
         },
         "Premiere": "2017-01-12",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "322505\n"
     },
     "Star Trek": {
         "Final": "1969-06-03",
-        "ID": 77526,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -12381,11 +12375,11 @@
             }
         },
         "Premiere": "1966-09-08",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "77526\n"
     },
     "Star Trek - Deep Space Nine": {
         "Final": "1999-06-02",
-        "ID": 72073,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -12580,11 +12574,11 @@
             }
         },
         "Premiere": "1993-01-03",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "72073\n"
     },
     "Star Trek - Discovery": {
         "Final": "",
-        "ID": 328711,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -12606,11 +12600,11 @@
             }
         },
         "Premiere": "2017-09-25",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "328711\n"
     },
     "Star Trek - Enterprise": {
         "Final": "2005-05-13",
-        "ID": 73893,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -12721,11 +12715,11 @@
             }
         },
         "Premiere": "2001-09-26",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "73893\n"
     },
     "Star Trek - The Animated Series": {
         "Final": "1974-10-12",
-        "ID": 73566,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -12756,11 +12750,11 @@
             }
         },
         "Premiere": "1973-09-08",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "73566\n"
     },
     "Star Trek - The Next Generation": {
         "Final": "1994-05-23",
-        "ID": 71470,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -12957,11 +12951,11 @@
             }
         },
         "Premiere": "1987-09-28",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "71470\n"
     },
     "Star Trek - Voyager": {
         "Final": "2001-05-23",
-        "ID": 74550,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -13152,11 +13146,11 @@
             }
         },
         "Premiere": "1995-01-16",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "74550\n"
     },
     "Stargate Atlantis": {
         "Final": "2009-01-09",
-        "ID": 70851,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -13271,11 +13265,11 @@
             }
         },
         "Premiere": "2004-07-16",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "70851\n"
     },
     "Stargate SG-1": {
         "Final": "2007-03-13",
-        "ID": 72449,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -13514,11 +13508,11 @@
             }
         },
         "Premiere": "1997-07-27",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "72449\n"
     },
     "Stargate Universe": {
         "Final": "2011-05-09",
-        "ID": 83237,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -13567,11 +13561,11 @@
             }
         },
         "Premiere": "2009-10-02",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "83237\n"
     },
     "Stranger Things": {
         "Final": "",
-        "ID": 305288,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -13597,11 +13591,11 @@
             }
         },
         "Premiere": "2016-07-15",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "305288\n"
     },
     "Supergirl": {
         "Final": "",
-        "ID": 295759,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -13677,11 +13671,11 @@
             }
         },
         "Premiere": "2015-10-26",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "295759\n"
     },
     "Supernatural": {
         "Final": "",
-        "ID": 78901,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -13999,11 +13993,11 @@
             }
         },
         "Premiere": "2005-09-13",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "78901\n"
     },
     "Terminator - The Sarah Connor Chronicles": {
         "Final": "2009-04-10",
-        "ID": 80344,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -14043,11 +14037,11 @@
             }
         },
         "Premiere": "2008-01-13",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "80344\n"
     },
     "The 100": {
         "Final": "",
-        "ID": 268592,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -14131,11 +14125,11 @@
             }
         },
         "Premiere": "2014-03-19",
-        "Status": "In Season"
+        "Status": "In Season",
+        "id": "268592\n"
     },
     "The Avengers - Earth's Mightiest Heroes": {
         "Final": "2013-05-05",
-        "ID": 192171,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -14196,11 +14190,11 @@
             }
         },
         "Premiere": "2010-09-22",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "192171\n"
     },
     "The Blacklist": {
         "Final": "",
-        "ID": 266189,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -14326,11 +14320,11 @@
             }
         },
         "Premiere": "2013-09-23",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "266189\n"
     },
     "The Crown": {
         "Final": "",
-        "ID": 305574,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -14347,11 +14341,11 @@
             }
         },
         "Premiere": "2016-11-04",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "305574\n"
     },
     "The Defenders": {
         "Final": "",
-        "ID": 326490,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -14366,11 +14360,11 @@
             }
         },
         "Premiere": "2017-08-18",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "326490\n"
     },
     "The End of The Fucking World": {
         "Final": "",
-        "ID": 336522,
         "Name Needed": false,
         "Names": {
             "1": {
@@ -14385,11 +14379,11 @@
             }
         },
         "Premiere": "2017-10-24",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "336522\n"
     },
     "The Expanse": {
         "Final": "",
-        "ID": 280619,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -14436,11 +14430,11 @@
             }
         },
         "Premiere": "2015-11-23",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "280619\n"
     },
     "The Fall": {
         "Final": "2016-10-28",
-        "ID": 258107,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -14468,11 +14462,11 @@
             }
         },
         "Premiere": "2013-05-13",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "258107\n"
     },
     "The Finder": {
         "Final": "2012-05-11",
-        "ID": 248651,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -14492,11 +14486,11 @@
             }
         },
         "Premiere": "2012-01-12",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "248651\n"
     },
     "The Flash": {
         "Final": "",
-        "ID": 279121,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -14601,11 +14595,11 @@
             }
         },
         "Premiere": "2014-10-07",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "279121\n"
     },
     "The Good Doctor": {
         "Final": "",
-        "ID": 328634,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -14630,11 +14624,11 @@
             }
         },
         "Premiere": "2017-09-25",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "328634\n"
     },
     "The Grand Tour": {
         "Final": "",
-        "ID": 314087,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -14667,11 +14661,11 @@
             }
         },
         "Premiere": "2016-11-18",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "314087\n"
     },
     "The Handmaid's Tale": {
         "Final": "",
-        "ID": 321239,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -14703,11 +14697,11 @@
             }
         },
         "Premiere": "2017-04-26",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "321239\n"
     },
     "The IT Crowd": {
         "Final": "2013-09-27",
-        "ID": 79216,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -14744,11 +14738,11 @@
             }
         },
         "Premiere": "2006-02-03",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "79216\n"
     },
     "The Legend of Korra": {
         "Final": "2014-12-19",
-        "ID": 251085,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -14814,11 +14808,11 @@
             }
         },
         "Premiere": "2012-04-14",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "251085\n"
     },
     "The Magicians": {
         "Final": "",
-        "ID": 218401,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -14868,11 +14862,11 @@
             }
         },
         "Premiere": "2015-12-16",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "218401\n"
     },
     "The Musketeers": {
         "Final": "2016-08-01",
-        "ID": 299139,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -14913,11 +14907,11 @@
             }
         },
         "Premiere": "2014-01-19",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "299139\n"
     },
     "The Night Manager": {
         "Final": "2016-03-27",
-        "ID": 290508,
         "Name Needed": false,
         "Names": {
             "1": {
@@ -14930,11 +14924,11 @@
             }
         },
         "Premiere": "2016-02-21",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "290508\n"
     },
     "The Office": {
         "Final": "2003-12-27",
-        "ID": 78107,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -14955,11 +14949,11 @@
             }
         },
         "Premiere": "2001-07-09",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "78107\n"
     },
     "The Originals": {
         "Final": "",
-        "ID": 266883,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -15064,11 +15058,11 @@
             }
         },
         "Premiere": "2013-10-03",
-        "Status": "In Season"
+        "Status": "In Season",
+        "id": "266883\n"
     },
     "The Orville": {
         "Final": "",
-        "ID": 328487,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -15087,11 +15081,11 @@
             }
         },
         "Premiere": "2017-09-11",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "328487\n"
     },
     "The Punisher": {
         "Final": "",
-        "ID": 331980,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -15111,11 +15105,11 @@
             }
         },
         "Premiere": "2017-11-17",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "331980\n"
     },
     "The Sarah Jane Adventures": {
         "Final": "2011-10-18",
-        "ID": 79708,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -15183,11 +15177,11 @@
             }
         },
         "Premiere": "2007-01-01",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "79708\n"
     },
     "The Shannara Chronicles": {
         "Final": "2018-01-20",
-        "ID": 289096,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -15216,11 +15210,11 @@
             }
         },
         "Premiere": "2016-01-05",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "289096\n"
     },
     "The Vampire Diaries": {
         "Final": "2017-03-10",
-        "ID": 95491,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -15412,11 +15406,11 @@
             }
         },
         "Premiere": "2009-09-10",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "95491\n"
     },
     "The Walking Dead": {
         "Final": "",
-        "ID": 153021,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -15552,11 +15546,11 @@
             }
         },
         "Premiere": "2010-10-31",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "153021\n"
     },
     "The X-Files": {
         "Final": "2018-03-21",
-        "ID": 77398,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -15801,11 +15795,11 @@
             }
         },
         "Premiere": "1993-09-10",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "77398\n"
     },
     "Tiger - Spy in the Jungle": {
         "Final": "2008-04-13",
-        "ID": 81652,
         "Name Needed": false,
         "Names": {
             "1": {
@@ -15815,11 +15809,11 @@
             }
         },
         "Premiere": "2008-04-13",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "81652\n"
     },
     "Timeless": {
         "Final": "",
-        "ID": 311713,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -15854,11 +15848,11 @@
             }
         },
         "Premiere": "2016-10-03",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "311713\n"
     },
     "Top Gear": {
         "Final": "2015-06-28",
-        "ID": 74608,
         "Name Needed": false,
         "Names": {
             "1": {
@@ -16083,11 +16077,11 @@
             }
         },
         "Premiere": "2002-10-20",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "74608\n"
     },
     "Torchwood": {
         "Final": "2011-09-15",
-        "ID": 79511,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -16141,11 +16135,11 @@
             }
         },
         "Premiere": "2006-10-22",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "79511\n"
     },
     "Travelers": {
         "Final": "",
-        "ID": 314544,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -16178,11 +16172,11 @@
             }
         },
         "Premiere": "2016-10-17",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "314544\n"
     },
     "True Detective": {
         "Final": "",
-        "ID": 270633,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -16207,11 +16201,11 @@
             }
         },
         "Premiere": "2014-01-12",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "270633\n"
     },
     "Turn - Washington's Spies": {
         "Final": "2017-08-12",
-        "ID": 272135,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -16264,11 +16258,11 @@
             }
         },
         "Premiere": "2014-04-06",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "272135\n"
     },
     "Two and a Half Men": {
         "Final": "2015-02-19",
-        "ID": 72227,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -16559,11 +16553,11 @@
             }
         },
         "Premiere": "2003-09-22",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "72227\n"
     },
     "Veronica Mars": {
         "Final": "2007-05-22",
-        "ID": 73730,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -16638,11 +16632,11 @@
             }
         },
         "Premiere": "2004-09-22",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "73730\n"
     },
     "Vikings": {
         "Final": "",
-        "ID": 260449,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -16716,11 +16710,11 @@
             }
         },
         "Premiere": "2013-03-03",
-        "Status": "In Season"
+        "Status": "In Season",
+        "id": "260449\n"
     },
     "Warehouse 13": {
         "Final": "2014-05-19",
-        "ID": 84676,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -16799,11 +16793,11 @@
             }
         },
         "Premiere": "2009-07-07",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "84676\n"
     },
     "Was It Something I Said": {
         "Final": "2013-11-24",
-        "ID": 273740,
         "Name Needed": false,
         "Names": {
             "1": {
@@ -16818,11 +16812,11 @@
             }
         },
         "Premiere": "2013-10-24",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "273740\n"
     },
     "Westworld": {
         "Final": "",
-        "ID": 296762,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -16851,11 +16845,11 @@
             }
         },
         "Premiere": "2016-10-02",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "296762\n"
     },
     "Wolf Hall": {
         "Final": "2015-02-25",
-        "ID": 281977,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -16868,11 +16862,11 @@
             }
         },
         "Premiere": "2015-01-21",
-        "Status": "Ended"
+        "Status": "Ended",
+        "id": "281977\n"
     },
     "Would I Lie to You": {
         "Final": "",
-        "ID": 82548,
         "Name Needed": false,
         "Names": {
             "1": {
@@ -16997,11 +16991,11 @@
             }
         },
         "Premiere": "2007-06-16",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "82548\n"
     },
     "Wynonna Earp": {
         "Final": "",
-        "ID": 305582,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -17038,11 +17032,11 @@
             }
         },
         "Premiere": "2016-04-01",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "305582\n"
     },
     "Yu-Gi-Oh - Duel Monsters": {
         "Final": "2006-11-25",
-        "ID": 0,
         "Name Needed": false,
         "Names": {
             "1": {
@@ -17277,7 +17271,6 @@
     },
     "iZombie": {
         "Final": "",
-        "ID": 281470,
         "Name Needed": true,
         "Names": {
             "1": {
@@ -17348,6 +17341,7 @@
             }
         },
         "Premiere": "2015-03-17",
-        "Status": "Hiatus"
+        "Status": "Hiatus",
+        "id": "281470\n"
     }
 }
