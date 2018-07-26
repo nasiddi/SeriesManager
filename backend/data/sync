@@ -1,27 +1,26 @@
 [
     {
-        "e_nr": 20,
+        "e_nr": 10,
         "episode_option": {
             "options": [
                 "Single",
                 "Double",
                 "Triple"
             ],
-            "selected": "Double"
+            "selected": "Single"
         },
         "fileID": 0,
         "location": "Agents of SHIELD S01E10 The Bridge.mp4",
         "manual": false,
         "override": false,
-        "s_nr": 8,
-        "series_name": "The X-Files",
+        "s_nr": 1,
+        "series_name": "Series Name",
         "show_subs": false,
         "subs": [],
-        "sync": true,
-        "title": "Essence (1)",
-        "title2": "Existence (2)",
+        "sync": false,
+        "title": "",
+        "title2": "",
         "title3": "",
-        "tvdb": 77398,
         "type_option": {
             "options": [
                 "Series",
@@ -49,8 +48,8 @@
         "series_name": "Series Name",
         "show_subs": false,
         "subs": [],
-        "sync": true,
-        "title": "Avengers",
+        "sync": false,
+        "title": "",
         "title2": "",
         "title3": "",
         "type_option": {
@@ -59,7 +58,7 @@
                 "HD",
                 "SD"
             ],
-            "selected": "HD"
+            "selected": "Series"
         }
     },
     {
@@ -80,7 +79,7 @@
         "series_name": "Series Name",
         "show_subs": false,
         "subs": [],
-        "sync": true,
+        "sync": false,
         "title": "",
         "title2": "",
         "title3": "",
@@ -111,7 +110,7 @@
         "series_name": "Series Name",
         "show_subs": false,
         "subs": [],
-        "sync": true,
+        "sync": false,
         "title": "",
         "title2": "",
         "title3": "",
@@ -142,7 +141,7 @@
         "series_name": "Series Name",
         "show_subs": false,
         "subs": [],
-        "sync": true,
+        "sync": false,
         "title": "",
         "title2": "",
         "title3": "",
@@ -173,7 +172,7 @@
         "series_name": "Series Name",
         "show_subs": false,
         "subs": [],
-        "sync": true,
+        "sync": false,
         "title": "",
         "title2": "",
         "title3": "",
@@ -204,7 +203,7 @@
         "series_name": "Series Name",
         "show_subs": false,
         "subs": [],
-        "sync": true,
+        "sync": false,
         "title": "",
         "title2": "",
         "title3": "",
@@ -235,11 +234,10 @@
         "series_name": "NCIS Los Angeles",
         "show_subs": false,
         "subs": [],
-        "sync": true,
-        "title": "Where Everybody Knows Your Name",
+        "sync": false,
+        "title": "",
         "title2": "",
         "title3": "",
-        "tvdb": 95441,
         "type_option": {
             "options": [
                 "Series",
@@ -268,10 +266,9 @@
         "show_subs": false,
         "subs": [],
         "sync": true,
-        "title": "Date with Destiny",
+        "title": "",
         "title2": "",
         "title3": "",
-        "tvdb": 72108,
         "type_option": {
             "options": [
                 "Series",
