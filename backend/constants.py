@@ -1,29 +1,27 @@
+DEBUG = True
+
 # Status
 NONE = 'none'
-AIRING = 'airing'
-HIATUS = 'hiatus'
-ENDED = 'ended'
+AIRING = 'Airing'
+HIATUS = 'Hiatus'
+ENDED = 'Ended'
 
-
-def get_status(status):
-    if status == AIRING:
-        return AIRING
-    elif status == HIATUS:
-        return HIATUS
-    elif status == ENDED:
-        return ENDED
-    else:
-        return NONE
-
+# Episode Options
+SINGLE = 'Single'
+DOUBLE = 'Double'
+TRIPLE = 'Triple'
 
 # Locations
-SERIES_DIR = 'V:\\Series'
-ANIME_DIR = 'V:\\Anime'
+SERIES_DIR = 'L:\\Series' if DEBUG else 'V:\\Series'
+ANIME_DIR = 'L:\\Anime' if DEBUG else 'V:\\Anime'
 TREE = 'C:\\Users\\nadina\\Documents\\code\\FileManager\\assets\\tree\\Series'
-HD_Movies = 'L:\\complete\\HD'
-SD_MOVIES = 'L:\\complete\\SD'
-FILE_DIR = 'L:\\complete\\'
-META_FILE = 'meta.json'
+HD_Movies = 'L:\\HD' if DEBUG else 'V:\\HD'
+SD_MOVIES = 'L:\\SD' if DEBUG else 'V:\\SD'
+FILE_DIR = 'L:\\complete\\' if DEBUG else 'V:\\downloads\\'
+META_FILE = 'metadata.json'
+SUB_DIR = 'T:\\Subs'
+LOCK_File = 'data\\shows.lock'
+OUT_FILE = 'OUTPUT_FILE'
 
 # Extentions
 
@@ -32,16 +30,34 @@ SUBS = ['idx', 'sub', 'srt']
 
 
 # Meta Fields
-STATUS = 'Status'
-NAME_NEEDED = 'Name Needed'
-PREMIERE = 'Premiere'
-FINAL = 'Final'
-EP_NAMES = 'Names'
-ID = 'ID'
+STATUS = 'status'
+NAME_NEEDED = 'name_needed'
+PREMIERE = 'premiere'
+FINAL = 'final'
+TVDB_ID = 'tvdb_id'
+SERIES_NAME = 'series_name'
+
 
 # Pattern
 ANIME_PATTERN = '[0-9]{2}x[0-9]{3}'
 SERIES_PATTERN = '[0-9]{2}x[0-9]{2}'
+
+wrongSymbols = [
+      ':',
+      '/',
+      '{',
+      '}',
+      '(',
+      ')',
+      '\\',
+      '<',
+      '>',
+      '*',
+      '?',
+      '$',
+      '!',
+      '@',
+    ]
 
 
 

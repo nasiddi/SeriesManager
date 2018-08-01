@@ -1,11 +1,13 @@
 <template>
   <div id="app">
-
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0">
     <vue-snotify/>
     <the-navigation/>
 
     <b-container
-      class="container-first"
+      class="container-fluid"
       fluid
     >
       <b-row>
@@ -43,10 +45,10 @@ export default {
     this.loadSettings();
   },
   metaInfo: {
-    title: 'GUI',
+    title: 'Series Manager',
     titleTemplate: (titleChunk) => {
-      const suffix = 'texploration by siddinad & metzllin';
-      return titleChunk ? `${titleChunk} | ${suffix}` : suffix;
+      const suffix = '';
+      return titleChunk ? `${titleChunk} ${suffix}` : suffix;
     },
   },
 };

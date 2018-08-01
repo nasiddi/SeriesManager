@@ -6,20 +6,6 @@
       class="mt-3">
       <b-row>
         <b-col
-          sm
-          class="pl-2 pr-2">
-          <label
-            class="sr-only"
-            for="fc">Name</label>
-          <b-form-select
-            v-if="'t_o' in f"
-            v-model="f.t_o.s"
-            :options="f.t_o.o"
-            :style="{width: '100%'}"
-            class="mt-2"
-            selected="Series"/>
-        </b-col>
-        <b-col
           sm="6"
           class="pl-2 pr-2">
           <b-input
@@ -27,59 +13,6 @@
             v-model="f.title"
             class="mt-2"
             placeholder="Title" />
-        </b-col>
-        <b-col
-          sm
-          class="pl-2 pr-2">
-          <b-button
-            :pressed.sync="f.override"
-            :variant="'outline-primary'"
-            :style="{width: '100%'}"
-            class="mt-2"
-          >Override</b-button>
-        </b-col>
-        <b-col
-          sm
-          class="pl-2 pr-2">
-          <b-button
-            :pressed.sync="f.show_subs"
-            :variant="'outline-primary'"
-            :disabled="subs.length === 0"
-            :style="{width: '100%'}"
-            class="mt-2"
-          >Subtitles</b-button>
-        </b-col>
-        <b-col
-          sm
-          class="pl-2 pr-2">
-          <b-button
-            :pressed.sync="f.sync"
-            :variant="syncColor"
-            :style="{width: '100%'}"
-            class="mt-2"
-          >Sync</b-button>
-        </b-col>
-      </b-row>
-      <b-row
-        v-if="'t_o' in f && f.t_o.s === 'Series'">
-        <b-col
-          sm="6"
-          class="pl-2 pr-2">
-          <b-input
-            v-if="f.new_series === true"
-            id="series-new_series"
-            v-model="f.series_name"
-            :style="{width: '100%'}"
-            class="mt-2"
-            placeholder="Series Name"/>
-          <b-form-select
-            v-if="f.new_series === false"
-            id="series-selector"
-            v-model="f.series_name"
-            :options="Object.keys(shows)"
-            :style="{width: '100%'}"
-            selected="f.series_name"
-            class="mt-2"/>
         </b-col>
         <b-col
           sm
@@ -107,77 +40,20 @@
           sm
           class="pl-2 pr-2">
           <b-form-select
-            v-if="'e_o' in f"
-            v-model="f.e_o.s"
-            :options="f.e_o.o"
+            v-model="f.episode_option"
+            :options="episode_options"
             :style="{width: '100%'}"
-            selected="Single"
-            class="mt-2"/>
-        </b-col>
-        <b-col
-          sm
-          class="pl-2 pr-2">
-          <b-form-select
-            v-if="'status_o' in f"
-            v-model="f.status_o.s"
-            :options="f.status_o.o"
-            :style="{width: '100%'}"
-            selected="Airing"
             class="mt-2"/>
         </b-col>
         <b-col
           sm
           class="pl-2 pr-2">
           <b-button
-            :pressed.sync="f.new_series"
-            :variant="'outline-primary'"
+            :variant="'primary'"
             :style="{width: '100%'}"
             class="mt-2"
-          >New Series</b-button>
-        </b-col>
-      </b-row>
-      <b-row
-        v-if="'t_o' in f && f.t_o.s ==='Series' && f.new_series === true">
-        <b-col
-          sm
-          class="pl-2 pr-2">
-          <b-form-select
-            v-if="'anime_o' in f"
-            v-model="f.anime_o.s"
-            :options="f.anime_o.o"
-            selected="Anime: No"
-            class="mt-2"/>
-        </b-col>
-        <b-col
-          sm
-          class="pl-2 pr-2">
-          <b-form-select
-            v-if="'name_o' in f"
-            v-model="f.name_o.s"
-            :options="f.name_o.o"
-            selected="Anime: Name required"
-            class="mt-2"/>
-        </b-col>
-        <b-col
-          sm
-          class="pl-2 pr-2">
-          <b-input
-            id="tvdb"
-            v-model="f.tvdb_id"
-            class="mt-2"
-            placeholder="TVDB ID"/>
-        </b-col>
-      </b-row>
-      <b-row>
-        <b-col
-          sm
-          class="pl-2 pr-2">
-          <b-form-select
-            v-if="new_show.o.length != 0"
-            v-model="f.tvdb_id"
-            :options="new_show.o"
-            :selected="f.tvdb_id"
-            class="mt-2"/>
+            @click="updateTitle(f)"
+          >Update</b-button>
         </b-col>
       </b-row>
       <b-row>
@@ -185,7 +61,7 @@
           sm
           class="pl-2 pr-2">
           <b-input
-            v-if="'t_o' in f && 'e_o' in f && f.e_o.s !== 'Single' && f.t_o.s === 'Series'"
+            v-if="f.episode_option !== 'Single'"
             id="checkTitle2"
             v-model="f.title2"
             class="mt-2"
@@ -197,39 +73,11 @@
           sm
           class="pl-2 pr-2">
           <b-input
-            v-if="'t_o' in f && 'e_o' in f && f.e_o.s === 'Triple' && f.t_o.s === 'Series'"
+            v-if="f.episode_option === 'Triple'"
             id="title3"
             v-model="f.title3"
             class="mt-2"
             placeholder="Title 3" />
-        </b-col>
-      </b-row>
-      <b-row>
-        <b-col
-          sm
-          class="pl-2 pr-2">
-          <b-form-checkbox-group
-            v-if="f.show_subs === true"
-            v-model="f.subs"
-            :options="subs"
-            :style="{width: '100%'}"
-            buttons
-            button-variant="outline-primary"
-            class="mt-2"
-            stacked/>
-        </b-col>
-      </b-row>
-      <b-row>
-        <b-col
-          sm
-          class="pl-2 pr-2">
-          <b-button
-            v-if="'t_o' in f && f.t_o.s === 'Series'"
-            :variant="'success'"
-            :style="{width: '100%'}"
-            class="mt-2"
-            @click="updateTitle(f)"
-          >Update</b-button>
         </b-col>
       </b-row>
     </b-card>
@@ -250,18 +98,14 @@ export default {
       type: Object,
       required: true,
     },
-    shows: {
-      type: Object,
-      required: true,
-    },
-    subs: {
-      type: Array,
-      required: true,
-    },
   },
   data: () => ({
+    episode_options: [
+      'Single',
+      'Double',
+      'Triple',
+    ],
     syncColor: 'outline-danger',
-    new_show: { o: [], s: 0 },
     wrongSymbols: [
       ':',
       '/',

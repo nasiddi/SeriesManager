@@ -1,228 +1,817 @@
 {
-    "files": [],
-    "shows": {
-        "13 Reasons Why": 323168,
-        "24": 76290,
-        "8 Out of 10 Cats": 79556,
-        "8 Out of 10 Cats Does Countdown": 272156,
-        "Agent Carter": 281485,
-        "Agents of S.H.I.E.L.D": 263365,
-        "Angel": 71035,
-        "Arrow": 257655,
-        "Ashes to Ashes": 81253,
-        "Avatar - The Last Airbender": 74852,
-        "Battlestar Galactica": 73545,
-        "Better Call Saul": 273181,
-        "Black Lightning": 332525,
-        "Black Mirror": 253463,
-        "Black Sails": 262407,
-        "Blackadder": 76736,
-        "Blackpool": 75350,
-        "Blue Bloods": 164981,
-        "Bones": 75682,
-        "Boruto": 0,
-        "Breaking Bad": 81189,
-        "Broadchurch": 266398,
-        "Buffy": 70327,
-        "Bull": 311945,
-        "CSI New York": 73696,
-        "Casanova": 75817,
-        "Chance": 311196,
-        "Charmed": 70626,
-        "Chicago Fire": 258541,
-        "Chicago Justice": 311896,
-        "Chicago Med": 295640,
-        "Chicago P.D": 269641,
-        "Chuck": 80348,
-        "Class": 309893,
-        "Cloak & Dagger": 341455,
-        "Colony": 284210,
-        "Constantine": 273690,
-        "Constantine - City of Demons": 336139,
-        "Continuum": 258171,
-        "Criminal Minds": 75710,
-        "Crossing Lines": 267970,
-        "Da Vinci's Demons": 259669,
-        "Damien": 282165,
-        "Daredevil": 281662,
-        "Dark Angel": 76148,
-        "Dark Matter": 292174,
-        "Dexter": 79349,
-        "Doctor Who": 78804,
-        "Doctor Who Classic": 76107,
-        "Dollhouse": 82046,
-        "Dolphins - Spy in the Pod": 276810,
-        "Dragon Ball": 0,
-        "Emerald City": 295779,
-        "Eureka": 79334,
-        "Fargo": 269613,
-        "Farscape": 70522,
-        "Fast and Loose": 221581,
-        "Firefly": 78874,
-        "Friends": 79168,
-        "Fringe": 82066,
-        "Game of Thrones": 121361,
-        "Gilmore Girls": 76568,
-        "Gilmore Girls - A Year in the Life": 311987,
-        "Gotham": 274431,
-        "Gracepoint": 276396,
-        "Grey's Anatomy": 73762,
-        "Grimm": 248736,
-        "Gunpowder": 334069,
-        "Hannibal": 259063,
-        "Hard Sun": 333402,
-        "Hawaii Five-0": 164541,
-        "Heroes": 79501,
-        "Heroes Reborn": 279201,
-        "Houdini & Doyle": 306313,
-        "House": 73255,
-        "House of Cards": 262980,
-        "How I Met Your Mother": 75760,
-        "How to Get Away with Murder": 281620,
-        "Inhumans": 320558,
-        "Iron Fist": 317953,
-        "Jessica Jones": 284190,
-        "Killjoys": 281534,
-        "Last Week Tonight With John Oliver": 278518,
-        "Legends of Tomorrow": 295760,
-        "Legion": 320724,
-        "Lethal Weapon": 311790,
-        "Life on Mars": 79177,
-        "Lost": 73739,
-        "Lucifer": 295685,
-        "Luke Cage": 304219,
-        "Merlin": 83123,
-        "Minority Report": 295680,
-        "Mock the Week": 79761,
-        "Moonlight": 80512,
-        "Mr. Robot": 289590,
-        "NCIS": 72108,
-        "NCIS Los Angeles": 95441,
-        "NCIS New Orleans": 278125,
-        "Narcos": 282670,
-        "Naruto": 0,
-        "Naruto Shippuuden": 0,
-        "Numb3rs": 73918,
-        "Orphan Black": 260315,
-        "Penguins - Spy in the Huddle": 266843,
-        "Pillars of the Earth": 159431,
-        "Planet Earth": 79257,
-        "Planet Earth II": 318408,
-        "Please Like Me": 267014,
-        "Polar Bear - Spy on the Ice": 274142,
-        "Pretty Little Liars": 146711,
-        "Prison Break": 75340,
-        "QI": 72716,
-        "Quantum Leap": 72248,
-        "Queer as Folk": 75367,
-        "Rick and Morty": 275274,
-        "Ripper Street": 260485,
-        "Runaways": 332027,
-        "Sanctuary": 80159,
-        "Saving Hope": 256111,
-        "Scorpion": 281630,
-        "Scrubs": 76156,
-        "Sense8": 268156,
-        "Series Name": 0,
-        "Sherlock": 176941,
-        "Shingeki no Kyojin": 0,
-        "Single Father": 183331,
-        "Sleepy Hollow": 269578,
-        "Smallville": 72218,
-        "Spies of Warsaw": 260313,
-        "Spy in the Wild": 322505,
-        "Star Trek": 77526,
-        "Star Trek - Deep Space Nine": 72073,
-        "Star Trek - Discovery": 328711,
-        "Star Trek - Enterprise": 73893,
-        "Star Trek - The Animated Series": 73566,
-        "Star Trek - The Next Generation": 71470,
-        "Star Trek - Voyager": 74550,
-        "Stargate Atlantis": 70851,
-        "Stargate SG-1": 72449,
-        "Stargate Universe": 83237,
-        "Stranger Things": 305288,
-        "Supergirl": 295759,
-        "Supernatural": 78901,
-        "Terminator - The Sarah Connor Chronicles": 80344,
-        "The 100": 268592,
-        "The Avengers - Earth's Mightiest Heroes": 192171,
-        "The Blacklist": 266189,
-        "The Crown": 305574,
-        "The Defenders": 326490,
-        "The End of The Fucking World": 336522,
-        "The Expanse": 280619,
-        "The Fall": 258107,
-        "The Finder": 248651,
-        "The Flash": 279121,
-        "The Good Doctor": 328634,
-        "The Grand Tour": 314087,
-        "The Handmaid's Tale": 321239,
-        "The IT Crowd": 79216,
-        "The Legend of Korra": 251085,
-        "The Magicians": 218401,
-        "The Musketeers": 299139,
-        "The Night Manager": 290508,
-        "The Office": 78107,
-        "The Originals": 266883,
-        "The Orville": 328487,
-        "The Punisher": 331980,
-        "The Sarah Jane Adventures": 79708,
-        "The Shannara Chronicles": 289096,
-        "The Vampire Diaries": 95491,
-        "The Walking Dead": 153021,
-        "The X-Files": 77398,
-        "Tiger - Spy in the Jungle": 81652,
-        "Timeless": 311713,
-        "Top Gear": 74608,
-        "Torchwood": 79511,
-        "Travelers": 314544,
-        "True Detective": 270633,
-        "Turn - Washington's Spies": 272135,
-        "Two and a Half Men": 72227,
-        "Veronica Mars": 73730,
-        "Vikings": 260449,
-        "Warehouse 13": 84676,
-        "Was It Something I Said": 273740,
-        "Westworld": 296762,
-        "Wolf Hall": 281977,
-        "Would I Lie to You": 82548,
-        "Wynonna Earp": 305582,
-        "Yu-Gi-Oh - Duel Monsters": 0,
-        "iZombie": 281470
-    },
-    "subs": [
+    "files": [
         {
-            "text": "Battlestar Galactica 02x03 - Fragged.srt",
-            "value": "L:\\complete\\Battlestar Galactica 02x03 - Fragged.srt"
-        },
-        {
-            "text": "Battlestar Galactica 02x04 - Resistance.srt",
-            "value": "L:\\complete\\Battlestar Galactica 02x04 - Resistance.srt"
-        },
-        {
-            "text": "Battlestar Galactica 02x05 - The Farm.srt",
-            "value": "L:\\complete\\Battlestar Galactica 02x05 - The Farm.srt"
-        },
-        {
-            "text": "Battlestar Galactica 02x06 - Home Part 1.srt",
-            "value": "L:\\complete\\Battlestar Galactica 02x06 - Home Part 1.srt"
-        },
-        {
-            "text": "Harry Potter And The Philosopher's Stone_Eng2.idx",
-            "value": "L:\\complete\\Harry Potter And The Philosopher's Stone_Eng2.idx"
-        },
-        {
-            "text": "Harry Potter And The Philosopher's Stone_Eng2.sub",
-            "value": "L:\\complete\\Harry Potter And The Philosopher's Stone_Eng2.sub"
-        },
-        {
-            "text": "checkmate-monsieur.pierre.geht.online.sd-subs.idx",
-            "value": "L:\\complete\\Monsieur.Pierre.Geht.Online.German.2017.AC3.BDRip.x264-CHECKMATE\\Monsieur.Pierre.geht.online.German.2017.AC3.BDRip.x264-CHECKMATE\\subs\\checkmate-monsieur.pierre.geht.online.sd-subs.idx"
-        },
-        {
-            "text": "checkmate-monsieur.pierre.geht.online.sd-subs.sub",
-            "value": "L:\\complete\\Monsieur.Pierre.Geht.Online.German.2017.AC3.BDRip.x264-CHECKMATE\\Monsieur.Pierre.geht.online.German.2017.AC3.BDRip.x264-CHECKMATE\\subs\\checkmate-monsieur.pierre.geht.online.sd-subs.sub"
+            "anime_o": {
+                "o": [
+                    "Anime: No",
+                    "Anime: Yes"
+                ],
+                "s": "Anime: No"
+            },
+            "e_nr": 2,
+            "e_o": {
+                "o": [
+                    "Single",
+                    "Double",
+                    "Triple"
+                ],
+                "s": "Single"
+            },
+            "location": "\\13.Reasons.Why.S01E02.WEB.X264-DEFLATE[eztv].mkv",
+            "name_o": {
+                "o": [
+                    "Name required",
+                    "Name optional"
+                ],
+                "s": "Name required"
+            },
+            "new_series": false,
+            "override": false,
+            "s_nr": 1,
+            "series_name": "13 Reasons Why",
+            "show_subs": false,
+            "status_o": {
+                "o": [
+                    "Airing",
+                    "Hiatus",
+                    "Ended"
+                ],
+                "s": "Airing"
+            },
+            "subs": [],
+            "sync": false,
+            "t_o": {
+                "o": [
+                    "Series",
+                    "HD",
+                    "SD"
+                ],
+                "s": "Series"
+            },
+            "title": "",
+            "title2": "",
+            "title3": "",
+            "tvdb_id": ""
         }
-    ]
+    ],
+    "shows": {
+        "13 Reasons Why": {
+            "name_needed": false,
+            "tvdb_id": 323168
+        },
+        "24": {
+            "name_needed": true,
+            "tvdb_id": 76290
+        },
+        "8 Out of 10 Cats": {
+            "name_needed": false,
+            "tvdb_id": 79556
+        },
+        "8 Out of 10 Cats Does Countdown": {
+            "name_needed": false,
+            "tvdb_id": 272156
+        },
+        "Agent Carter": {
+            "name_needed": true,
+            "tvdb_id": 281485
+        },
+        "Agents of S.H.I.E.L.D": {
+            "name_needed": true,
+            "tvdb_id": 263365
+        },
+        "Agents of S.H.I.E.L.D2": {
+            "name_needed": false,
+            "tvdb_id": 0
+        },
+        "Angel": {
+            "name_needed": true,
+            "tvdb_id": 71035
+        },
+        "Arrow": {
+            "name_needed": true,
+            "tvdb_id": 257655
+        },
+        "Ashes to Ashes": {
+            "name_needed": false,
+            "tvdb_id": 81253
+        },
+        "Avatar - The Last Airbender": {
+            "name_needed": true,
+            "tvdb_id": 74852
+        },
+        "Battlestar Galactica": {
+            "name_needed": true,
+            "tvdb_id": 73545
+        },
+        "Better Call Saul": {
+            "name_needed": true,
+            "tvdb_id": 273181
+        },
+        "Black Lightning": {
+            "name_needed": false,
+            "tvdb_id": 332525
+        },
+        "Black Mirror": {
+            "name_needed": true,
+            "tvdb_id": 253463
+        },
+        "Black Sails": {
+            "name_needed": true,
+            "tvdb_id": 262407
+        },
+        "Blackadder": {
+            "name_needed": true,
+            "tvdb_id": 76736
+        },
+        "Blackpool": {
+            "name_needed": false,
+            "tvdb_id": 75350
+        },
+        "Blue Bloods": {
+            "name_needed": true,
+            "tvdb_id": 164981
+        },
+        "Bones": {
+            "name_needed": true,
+            "tvdb_id": 75682
+        },
+        "Boruto": {
+            "name_needed": true,
+            "tvdb_id": 0
+        },
+        "Breaking Bad": {
+            "name_needed": true,
+            "tvdb_id": 81189
+        },
+        "Broadchurch": {
+            "name_needed": false,
+            "tvdb_id": 266398
+        },
+        "Buffy": {
+            "name_needed": true,
+            "tvdb_id": 70327
+        },
+        "Bull": {
+            "name_needed": true,
+            "tvdb_id": 311945
+        },
+        "CSI New York": {
+            "name_needed": true,
+            "tvdb_id": 73696
+        },
+        "Casanova": {
+            "name_needed": false,
+            "tvdb_id": 75817
+        },
+        "Chance": {
+            "name_needed": true,
+            "tvdb_id": 311196
+        },
+        "Charmed": {
+            "name_needed": true,
+            "tvdb_id": 70626
+        },
+        "Chicago Fire": {
+            "name_needed": true,
+            "tvdb_id": 258541
+        },
+        "Chicago Justice": {
+            "name_needed": true,
+            "tvdb_id": 311896
+        },
+        "Chicago Med": {
+            "name_needed": true,
+            "tvdb_id": 295640
+        },
+        "Chicago P.D": {
+            "name_needed": true,
+            "tvdb_id": 269641
+        },
+        "Chuck": {
+            "name_needed": true,
+            "tvdb_id": 80348
+        },
+        "Class": {
+            "name_needed": true,
+            "tvdb_id": 309893
+        },
+        "Cloak & Dagger": {
+            "name_needed": true,
+            "tvdb_id": 341455
+        },
+        "Colony": {
+            "name_needed": true,
+            "tvdb_id": 284210
+        },
+        "Constantine": {
+            "name_needed": true,
+            "tvdb_id": 273690
+        },
+        "Constantine - City of Demons": {
+            "name_needed": false,
+            "tvdb_id": 336139
+        },
+        "Continuum": {
+            "name_needed": true,
+            "tvdb_id": 258171
+        },
+        "Criminal Minds": {
+            "name_needed": true,
+            "tvdb_id": 75710
+        },
+        "Crossing Lines": {
+            "name_needed": true,
+            "tvdb_id": 267970
+        },
+        "Da Vinci's Demons": {
+            "name_needed": true,
+            "tvdb_id": 259669
+        },
+        "Damien": {
+            "name_needed": true,
+            "tvdb_id": 282165
+        },
+        "Daredevil": {
+            "name_needed": true,
+            "tvdb_id": 281662
+        },
+        "Dark Angel": {
+            "name_needed": true,
+            "tvdb_id": 76148
+        },
+        "Dark Matter": {
+            "name_needed": true,
+            "tvdb_id": 292174
+        },
+        "Dexter": {
+            "name_needed": true,
+            "tvdb_id": 79349
+        },
+        "Doctor Who": {
+            "name_needed": true,
+            "tvdb_id": 78804
+        },
+        "Doctor Who Classic": {
+            "name_needed": true,
+            "tvdb_id": 76107
+        },
+        "Dollhouse": {
+            "name_needed": true,
+            "tvdb_id": 82046
+        },
+        "Dolphins - Spy in the Pod": {
+            "name_needed": false,
+            "tvdb_id": 276810
+        },
+        "Dragon Ball": {
+            "name_needed": true,
+            "tvdb_id": 0
+        },
+        "Emerald City": {
+            "name_needed": true,
+            "tvdb_id": 295779
+        },
+        "Eureka": {
+            "name_needed": true,
+            "tvdb_id": 79334
+        },
+        "Fargo": {
+            "name_needed": true,
+            "tvdb_id": 269613
+        },
+        "Farscape": {
+            "name_needed": true,
+            "tvdb_id": 70522
+        },
+        "Fast and Loose": {
+            "name_needed": false,
+            "tvdb_id": 221581
+        },
+        "Firefly": {
+            "name_needed": true,
+            "tvdb_id": 78874
+        },
+        "Friends": {
+            "name_needed": false,
+            "tvdb_id": 79168
+        },
+        "Fringe": {
+            "name_needed": true,
+            "tvdb_id": 82066
+        },
+        "Game of Thrones": {
+            "name_needed": true,
+            "tvdb_id": 121361
+        },
+        "Gilmore Girls": {
+            "name_needed": true,
+            "tvdb_id": 76568
+        },
+        "Gilmore Girls - A Year in the Life": {
+            "name_needed": true,
+            "tvdb_id": 311987
+        },
+        "Gotham": {
+            "name_needed": true,
+            "tvdb_id": 274431
+        },
+        "Gracepoint": {
+            "name_needed": false,
+            "tvdb_id": 276396
+        },
+        "Grey's Anatomy": {
+            "name_needed": true,
+            "tvdb_id": 73762
+        },
+        "Grimm": {
+            "name_needed": true,
+            "tvdb_id": 248736
+        },
+        "Gunpowder": {
+            "name_needed": false,
+            "tvdb_id": 334069
+        },
+        "Hannibal": {
+            "name_needed": true,
+            "tvdb_id": 259063
+        },
+        "Hard Sun": {
+            "name_needed": false,
+            "tvdb_id": 333402
+        },
+        "Hawaii Five-0": {
+            "name_needed": true,
+            "tvdb_id": 164541
+        },
+        "Heroes": {
+            "name_needed": true,
+            "tvdb_id": 79501
+        },
+        "Heroes Reborn": {
+            "name_needed": true,
+            "tvdb_id": 279201
+        },
+        "Houdini & Doyle": {
+            "name_needed": true,
+            "tvdb_id": 306313
+        },
+        "House": {
+            "name_needed": true,
+            "tvdb_id": 73255
+        },
+        "House of Cards": {
+            "name_needed": true,
+            "tvdb_id": 262980
+        },
+        "How I Met Your Mother": {
+            "name_needed": true,
+            "tvdb_id": 75760
+        },
+        "How to Get Away with Murder": {
+            "name_needed": true,
+            "tvdb_id": 281620
+        },
+        "Inhumans": {
+            "name_needed": true,
+            "tvdb_id": 320558
+        },
+        "Iron Fist": {
+            "name_needed": true,
+            "tvdb_id": 317953
+        },
+        "Jessica Jones": {
+            "name_needed": true,
+            "tvdb_id": 284190
+        },
+        "Killjoys": {
+            "name_needed": true,
+            "tvdb_id": 281534
+        },
+        "Last Week Tonight With John Oliver": {
+            "name_needed": true,
+            "tvdb_id": 278518
+        },
+        "Legends of Tomorrow": {
+            "name_needed": true,
+            "tvdb_id": 295760
+        },
+        "Legion": {
+            "name_needed": true,
+            "tvdb_id": 320724
+        },
+        "Lethal Weapon": {
+            "name_needed": true,
+            "tvdb_id": 311790
+        },
+        "Life on Mars": {
+            "name_needed": false,
+            "tvdb_id": 79177
+        },
+        "Lost": {
+            "name_needed": true,
+            "tvdb_id": 73739
+        },
+        "Lucifer": {
+            "name_needed": true,
+            "tvdb_id": 295685
+        },
+        "Luke Cage": {
+            "name_needed": true,
+            "tvdb_id": 304219
+        },
+        "Merlin": {
+            "name_needed": true,
+            "tvdb_id": 83123
+        },
+        "Minority Report": {
+            "name_needed": true,
+            "tvdb_id": 295680
+        },
+        "Mock the Week": {
+            "name_needed": false,
+            "tvdb_id": 79761
+        },
+        "Moonlight": {
+            "name_needed": true,
+            "tvdb_id": 80512
+        },
+        "Mr. Robot": {
+            "name_needed": true,
+            "tvdb_id": 289590
+        },
+        "NCIS": {
+            "name_needed": true,
+            "tvdb_id": 72108
+        },
+        "NCIS Los Angeles": {
+            "name_needed": true,
+            "tvdb_id": 95441
+        },
+        "NCIS New Orleans": {
+            "name_needed": true,
+            "tvdb_id": 278125
+        },
+        "Narcos": {
+            "name_needed": true,
+            "tvdb_id": 282670
+        },
+        "Naruto": {
+            "name_needed": true,
+            "tvdb_id": 0
+        },
+        "Naruto Shippuuden": {
+            "name_needed": true,
+            "tvdb_id": 0
+        },
+        "Numb3rs": {
+            "name_needed": true,
+            "tvdb_id": 73918
+        },
+        "Orphan Black": {
+            "name_needed": true,
+            "tvdb_id": 260315
+        },
+        "Penguins - Spy in the Huddle": {
+            "name_needed": false,
+            "tvdb_id": 266843
+        },
+        "Pillars of the Earth": {
+            "name_needed": true,
+            "tvdb_id": 159431
+        },
+        "Planet Earth": {
+            "name_needed": true,
+            "tvdb_id": 79257
+        },
+        "Planet Earth II": {
+            "name_needed": true,
+            "tvdb_id": 318408
+        },
+        "Please Like Me": {
+            "name_needed": true,
+            "tvdb_id": 267014
+        },
+        "Polar Bear - Spy on the Ice": {
+            "name_needed": false,
+            "tvdb_id": 274142
+        },
+        "Pretty Little Liars": {
+            "name_needed": true,
+            "tvdb_id": 146711
+        },
+        "Prison Break": {
+            "name_needed": true,
+            "tvdb_id": 75340
+        },
+        "QI": {
+            "name_needed": true,
+            "tvdb_id": 72716
+        },
+        "Quantum Leap": {
+            "name_needed": true,
+            "tvdb_id": 72248
+        },
+        "Queer as Folk": {
+            "name_needed": true,
+            "tvdb_id": 75367
+        },
+        "Rick and Morty": {
+            "name_needed": true,
+            "tvdb_id": 275274
+        },
+        "Ripper Street": {
+            "name_needed": true,
+            "tvdb_id": 260485
+        },
+        "Runaways": {
+            "name_needed": true,
+            "tvdb_id": 332027
+        },
+        "Sanctuary": {
+            "name_needed": true,
+            "tvdb_id": 80159
+        },
+        "Saving Hope": {
+            "name_needed": true,
+            "tvdb_id": 256111
+        },
+        "Scorpion": {
+            "name_needed": true,
+            "tvdb_id": 281630
+        },
+        "Scrubs": {
+            "name_needed": true,
+            "tvdb_id": 76156
+        },
+        "Sense8": {
+            "name_needed": true,
+            "tvdb_id": 268156
+        },
+        "Series Name": 0,
+        "Sherlock": {
+            "name_needed": true,
+            "tvdb_id": 176941
+        },
+        "Shingeki no Kyojin": {
+            "name_needed": true,
+            "tvdb_id": 0
+        },
+        "Single Father": {
+            "name_needed": false,
+            "tvdb_id": 183331
+        },
+        "Sleepy Hollow": {
+            "name_needed": true,
+            "tvdb_id": 269578
+        },
+        "Smallville": {
+            "name_needed": true,
+            "tvdb_id": 72218
+        },
+        "Spies of Warsaw": {
+            "name_needed": false,
+            "tvdb_id": 260313
+        },
+        "Spy in the Wild": {
+            "name_needed": true,
+            "tvdb_id": 322505
+        },
+        "Star Trek": {
+            "name_needed": true,
+            "tvdb_id": 77526
+        },
+        "Star Trek - Deep Space Nine": {
+            "name_needed": true,
+            "tvdb_id": 72073
+        },
+        "Star Trek - Discovery": {
+            "name_needed": true,
+            "tvdb_id": 328711
+        },
+        "Star Trek - Enterprise": {
+            "name_needed": true,
+            "tvdb_id": 73893
+        },
+        "Star Trek - The Animated Series": {
+            "name_needed": true,
+            "tvdb_id": 73566
+        },
+        "Star Trek - The Next Generation": {
+            "name_needed": true,
+            "tvdb_id": 71470
+        },
+        "Star Trek - Voyager": {
+            "name_needed": true,
+            "tvdb_id": 74550
+        },
+        "Stargate Atlantis": {
+            "name_needed": true,
+            "tvdb_id": 70851
+        },
+        "Stargate SG-1": {
+            "name_needed": true,
+            "tvdb_id": 72449
+        },
+        "Stargate Universe": {
+            "name_needed": true,
+            "tvdb_id": 83237
+        },
+        "Stranger Things": {
+            "name_needed": true,
+            "tvdb_id": 305288
+        },
+        "Supergirl": {
+            "name_needed": true,
+            "tvdb_id": 295759
+        },
+        "Supernatural": {
+            "name_needed": true,
+            "tvdb_id": 78901
+        },
+        "Terminator - The Sarah Connor Chronicles": {
+            "name_needed": true,
+            "tvdb_id": 80344
+        },
+        "The 100": {
+            "name_needed": true,
+            "tvdb_id": 268592
+        },
+        "The Avengers - Earth's Mightiest Heroes": {
+            "name_needed": true,
+            "tvdb_id": 192171
+        },
+        "The Blacklist": {
+            "name_needed": true,
+            "tvdb_id": 266189
+        },
+        "The Crown": {
+            "name_needed": true,
+            "tvdb_id": 305574
+        },
+        "The Defenders": {
+            "name_needed": true,
+            "tvdb_id": 326490
+        },
+        "The End of The Fucking World": {
+            "name_needed": false,
+            "tvdb_id": 336522
+        },
+        "The Expanse": {
+            "name_needed": true,
+            "tvdb_id": 280619
+        },
+        "The Fall": {
+            "name_needed": true,
+            "tvdb_id": 258107
+        },
+        "The Finder": {
+            "name_needed": true,
+            "tvdb_id": 248651
+        },
+        "The Flash": {
+            "name_needed": true,
+            "tvdb_id": 279121
+        },
+        "The Good Doctor": {
+            "name_needed": true,
+            "tvdb_id": 328634
+        },
+        "The Grand Tour": {
+            "name_needed": true,
+            "tvdb_id": 314087
+        },
+        "The Handmaid's Tale": {
+            "name_needed": true,
+            "tvdb_id": 321239
+        },
+        "The IT Crowd": {
+            "name_needed": true,
+            "tvdb_id": 79216
+        },
+        "The Legend of Korra": {
+            "name_needed": true,
+            "tvdb_id": 251085
+        },
+        "The Magicians": {
+            "name_needed": true,
+            "tvdb_id": 218401
+        },
+        "The Musketeers": {
+            "name_needed": true,
+            "tvdb_id": 299139
+        },
+        "The Night Manager": {
+            "name_needed": false,
+            "tvdb_id": 290508
+        },
+        "The Office": {
+            "name_needed": true,
+            "tvdb_id": 78107
+        },
+        "The Originals": {
+            "name_needed": true,
+            "tvdb_id": 266883
+        },
+        "The Orville": {
+            "name_needed": true,
+            "tvdb_id": 328487
+        },
+        "The Punisher": {
+            "name_needed": true,
+            "tvdb_id": 331980
+        },
+        "The Sarah Jane Adventures": {
+            "name_needed": true,
+            "tvdb_id": 79708
+        },
+        "The Shannara Chronicles": {
+            "name_needed": true,
+            "tvdb_id": 289096
+        },
+        "The Vampire Diaries": {
+            "name_needed": true,
+            "tvdb_id": 95491
+        },
+        "The Walking Dead": {
+            "name_needed": true,
+            "tvdb_id": 153021
+        },
+        "The X-Files": {
+            "name_needed": true,
+            "tvdb_id": 77398
+        },
+        "Tiger - Spy in the Jungle": {
+            "name_needed": false,
+            "tvdb_id": 81652
+        },
+        "Timeless": {
+            "name_needed": true,
+            "tvdb_id": 311713
+        },
+        "Top Gear": {
+            "name_needed": false,
+            "tvdb_id": 74608
+        },
+        "Torchwood": {
+            "name_needed": true,
+            "tvdb_id": 79511
+        },
+        "Travelers": {
+            "name_needed": true,
+            "tvdb_id": 314544
+        },
+        "True Detective": {
+            "name_needed": true,
+            "tvdb_id": 270633
+        },
+        "Turn - Washington's Spies": {
+            "name_needed": true,
+            "tvdb_id": 272135
+        },
+        "Two and a Half Men": {
+            "name_needed": true,
+            "tvdb_id": 72227
+        },
+        "Veronica Mars": {
+            "name_needed": true,
+            "tvdb_id": 73730
+        },
+        "Vikings": {
+            "name_needed": true,
+            "tvdb_id": 260449
+        },
+        "Warehouse 13": {
+            "name_needed": true,
+            "tvdb_id": 84676
+        },
+        "Was It Something I Said": {
+            "name_needed": false,
+            "tvdb_id": 273740
+        },
+        "Westworld": {
+            "name_needed": true,
+            "tvdb_id": 296762
+        },
+        "Wolf Hall": {
+            "name_needed": true,
+            "tvdb_id": 281977
+        },
+        "Would I Lie to You": {
+            "name_needed": false,
+            "tvdb_id": 82548
+        },
+        "Wynonna Earp": {
+            "name_needed": true,
+            "tvdb_id": 305582
+        },
+        "Yu-Gi-Oh - Duel Monsters": {
+            "name_needed": false,
+            "tvdb_id": 0
+        },
+        "iZombie": {
+            "name_needed": true,
+            "tvdb_id": 281470
+        }
+    },
+    "subs": []
 }

@@ -21,15 +21,22 @@ def main(args):
             if extention in SUBS:
                 subs.append({'text': name, 'value': os.path.join(root, name)})
 
+    series_names_words = []
     series_names = []
     series_n = shows.keys()
     for n in series_n:
-        n = n.lower().split(' ')
-        while 'The' in n:
-            n.remove('The')
-        while '-' in n:
-            n.remove('-')
+        n1 = clean_up(n)
+        series_names_words.append(n1)
         series_names.append(n)
+        if "'" in n:
+            print(n)
+        n2 = n.replace('\'', '')
+        n2 = n2.replace('.', '')
+        n2 = clean_up(n2)
+
+        if not set(n1) == set(n2):
+            series_names.append(n)
+            series_names_words.append(n2)
 
     locations = []
     multis = []
@@ -62,18 +69,15 @@ def main(args):
         if match:
             file.s_nr = int(match[0][1:3])
             file.e_nr = int(match[0][4:])
-        if file.s_nr == 1 and file.e_nr == 11:
-            pass
-        for name in series_names:
+        for name in series_names_words:
             if all(word in location for word in name):
-                index = series_names.index(name)
-                file.series_name = list(series_n)[index]
-                show = shows[file.series_name]
+                index = series_names_words.index(name)
+                file.series_name = series_names[index]
 
     n_series = {}
 
     for n in list(shows.keys()):
-        n_series[n] = shows[n].tvdb_id
+        n_series[n] = {'tvdb_id': shows[n].tvdb_id, 'name_needed': shows[n].name_needed}
 
     n_series['Series Name'] = 0
 
@@ -83,6 +87,18 @@ def main(args):
 
     io_utlis.save_json(json, os.environ['OUTPUT_FILE'])
     pass
+
+
+def clean_up(n):
+    n = n.lower().split(' ')
+    while 'the' in n:
+        n.remove('the')
+    while '-' in n:
+        n.remove('-')
+    while '&' in n:
+        n.remove('&')
+    return n
+
 
 
 if __name__ == '__main__':

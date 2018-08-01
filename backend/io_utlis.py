@@ -3,7 +3,7 @@ import pickle
 import os
 import getopt
 import sys
-
+from constants import *
 
 def save_json(data_json, file):
     with open(file, 'w', encoding='utf-8') as f:
@@ -17,6 +17,27 @@ def load_json(file):
     except FileNotFoundError:
         return {}
     return j_data
+
+
+def load_shows(reload=False):
+    if os.path.exists(LOCK_File):
+        return None
+    lock = open(LOCK_File, 'w+')
+    lock.close()
+    if reload:
+        return
+    return pickle_load('shows')
+
+
+def save_shows(shows):
+    meta = {}
+    for show in shows.keys():
+        meta.update(shows[show].save())
+    pickle_dump(shows, 'shows')
+    save_json(meta, 'data/metadata.json')
+    os.remove(LOCK_File)
+
+
 
 
 def pickle_dump(data, name):
@@ -46,6 +67,11 @@ def parse_args(args):
                 os.environ['OUTPUT_FILE'] = arg
             else:
                 os.environ['OUTPUT_FILE'] = os.path.join('data', arg)
+        if opt in ('-d', '--data'):
+            if os.path.isabs(arg):
+                os.environ['DATA_FILE'] = arg
+            else:
+                os.environ['DATA_FILE'] = os.path.join('data', arg)
 
 
 """

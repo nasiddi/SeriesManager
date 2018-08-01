@@ -16,6 +16,11 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 import Home from '@/components/Home';
 import Sync from '@/components/Sync';
+import Update from '@/components/Update';
+import UpdateNav from '@/components/UpdateNav';
+import SyncReport from '@/components/SyncReport';
+import BatchPrep from '@/components/BatchPrep';
+import BatchValidate from '@/components/BatchValidate';
 import Login from '@/components/Auth/Login';
 
 import FilesIndex from '@/components/Files/Index';
@@ -82,9 +87,37 @@ export default new Router({
       component: Home,
     },
     {
-      path: '/sync',
-      name: 'sync',
+      path: '/update',
+      name: 'update',
+      components: {
+        default: Update,
+        sidebarLeft: UpdateNav,
+      },
+      beforeEnter: Vue.prototype.$auth.requireAuth,
+    },
+    {
+      path: '/batch/prep',
+      name: 'batch.prep',
+      component: BatchPrep,
+      beforeEnter: Vue.prototype.$auth.requireAuth,
+    },
+    {
+      path: '/batch/validate',
+      name: 'batch.validate',
+      component: BatchValidate,
+      beforeEnter: Vue.prototype.$auth.requireAuth,
+    },
+    {
+      path: '/sync/prep',
+      name: 'sync.prep',
       component: Sync,
+      beforeEnter: Vue.prototype.$auth.requireAuth,
+    },
+    {
+      path: '/sync/report',
+      name: 'sync.report',
+      component: SyncReport,
+      beforeEnter: Vue.prototype.$auth.requireAuth,
     },
     {
       path: '/login',

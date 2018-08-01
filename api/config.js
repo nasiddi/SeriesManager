@@ -22,7 +22,7 @@ module.exports = {
   logging: {
     http: true,
   },
-  port: process.env.PORT || 3000,
+  port: process.env.PORT || 8778,
   tokenizers: {
     word: ['nltk', 'spacy', 'core'],
     sentence: ['nltk', 'spacy'],

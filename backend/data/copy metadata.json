@@ -1,0 +1,1318 @@
+{
+    "13 Reasons Why": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2017-03-31",
+        "status": "Hiatus",
+        "tvdb_id": 323168
+    },
+    "24": {
+        "final": "2014-07-14",
+        "name_needed": true,
+        "premiere": "2001-11-06",
+        "status": "Ended",
+        "tvdb_id": 76290
+    },
+    "8 Out of 10 Cats": {
+        "final": "",
+        "name_needed": false,
+        "premiere": "2006-10-20",
+        "status": "Airing",
+        "tvdb_id": 79556
+    },
+    "8 Out of 10 Cats Does Countdown": {
+        "final": "",
+        "name_needed": false,
+        "premiere": "2012-01-02",
+        "status": "Hiatus",
+        "tvdb_id": 272156
+    },
+    "Agent Carter": {
+        "final": "2016-03-01",
+        "name_needed": true,
+        "premiere": "2015-01-06",
+        "status": "Ended",
+        "tvdb_id": 281485
+    },
+    "Agents of S.H.I.E.L.D": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2013-09-24",
+        "status": "Hiatus",
+        "tvdb_id": 263365
+    },
+    "Angel": {
+        "final": "2004-05-19",
+        "name_needed": true,
+        "premiere": "1999-10-05",
+        "status": "Ended",
+        "tvdb_id": 71035
+    },
+    "Arrow": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2012-10-10",
+        "status": "Hiatus",
+        "tvdb_id": 257655
+    },
+    "Ashes to Ashes": {
+        "final": "2010-05-21",
+        "name_needed": false,
+        "premiere": "2008-02-07",
+        "status": "Ended",
+        "tvdb_id": 81253
+    },
+    "Avatar - The Last Airbender": {
+        "final": "2008-07-19",
+        "name_needed": true,
+        "premiere": "2005-02-21",
+        "status": "Ended",
+        "tvdb_id": 74852
+    },
+    "Battlestar Galactica": {
+        "final": "2009-03-20",
+        "name_needed": true,
+        "premiere": "2004-10-18",
+        "status": "Ended",
+        "tvdb_id": 73545
+    },
+    "Better Call Saul": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2015-02-08",
+        "status": "Hiatus",
+        "tvdb_id": 273181
+    },
+    "Black Lightning": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2018-01-16",
+        "status": "Hiatus",
+        "tvdb_id": 332525
+    },
+    "Black Mirror": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2011-12-04",
+        "status": "Hiatus",
+        "tvdb_id": 253463
+    },
+    "Black Sails": {
+        "final": "2017-04-02",
+        "name_needed": true,
+        "premiere": "2014-01-25",
+        "status": "Ended",
+        "tvdb_id": 262407
+    },
+    "Blackadder": {
+        "final": "1989-11-02",
+        "name_needed": true,
+        "premiere": "1983-06-15",
+        "status": "Ended",
+        "tvdb_id": 76736
+    },
+    "Blackpool": {
+        "final": "2004-12-16",
+        "name_needed": false,
+        "premiere": "2004-11-11",
+        "status": "Ended",
+        "tvdb_id": 75350
+    },
+    "Blue Bloods": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2010-09-24",
+        "status": "Hiatus",
+        "tvdb_id": 164981
+    },
+    "Bones": {
+        "final": "2017-03-28",
+        "name_needed": true,
+        "premiere": "2005-09-13",
+        "status": "Ended",
+        "tvdb_id": 75682
+    },
+    "Boruto": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2017-04-05",
+        "status": "Airing",
+        "tvdb_id": ""
+    },
+    "Breaking Bad": {
+        "final": "2013-09-29",
+        "name_needed": true,
+        "premiere": "2008-01-20",
+        "status": "Ended",
+        "tvdb_id": 81189
+    },
+    "Broadchurch": {
+        "final": "2017-04-17",
+        "name_needed": false,
+        "premiere": "2013-03-04",
+        "status": "Ended",
+        "tvdb_id": 266398
+    },
+    "Buffy": {
+        "final": "2003-05-20",
+        "name_needed": true,
+        "premiere": "1997-03-10",
+        "status": "Ended",
+        "tvdb_id": 70327
+    },
+    "Bull": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2016-09-20",
+        "status": "Hiatus",
+        "tvdb_id": 311945
+    },
+    "CSI New York": {
+        "final": "2013-02-22",
+        "name_needed": true,
+        "premiere": "2004-09-22",
+        "status": "Ended",
+        "tvdb_id": 73696
+    },
+    "Casanova": {
+        "final": "2005-03-27",
+        "name_needed": false,
+        "premiere": "2005-03-13",
+        "status": "Ended",
+        "tvdb_id": 75817
+    },
+    "Chance": {
+        "final": "2017-11-29",
+        "name_needed": true,
+        "premiere": "2016-10-19",
+        "status": "Ended",
+        "tvdb_id": 311196
+    },
+    "Charmed": {
+        "final": "2006-05-21",
+        "name_needed": true,
+        "premiere": "1998-10-07",
+        "status": "Ended",
+        "tvdb_id": 70626
+    },
+    "Chicago Fire": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2012-10-10",
+        "status": "Hiatus",
+        "tvdb_id": 258541
+    },
+    "Chicago Justice": {
+        "final": "2017-05-14",
+        "name_needed": true,
+        "premiere": "2017-03-01",
+        "status": "Ended",
+        "tvdb_id": 311896
+    },
+    "Chicago Med": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2015-11-17",
+        "status": "Hiatus",
+        "tvdb_id": 295640
+    },
+    "Chicago P.D": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2014-01-08",
+        "status": "Hiatus",
+        "tvdb_id": 269641
+    },
+    "Chuck": {
+        "final": "2012-09-27",
+        "name_needed": true,
+        "premiere": "2007-09-24",
+        "status": "Ended",
+        "tvdb_id": 80348
+    },
+    "Class": {
+        "final": "2016-12-03",
+        "name_needed": true,
+        "premiere": "2016-10-22",
+        "status": "Ended",
+        "tvdb_id": 309893
+    },
+    "Cloak & Dagger": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2018-06-07",
+        "status": "Airing",
+        "tvdb_id": 341455
+    },
+    "Colony": {
+        "final": "2018-07-25",
+        "name_needed": true,
+        "premiere": "2016-01-14",
+        "status": "Ended",
+        "tvdb_id": 284210
+    },
+    "Constantine": {
+        "final": "2015-02-13",
+        "name_needed": true,
+        "premiere": "2014-10-24",
+        "status": "Ended",
+        "tvdb_id": 273690
+    },
+    "Constantine - City of Demons": {
+        "final": "",
+        "name_needed": false,
+        "premiere": "2018-03-24",
+        "status": "Hiatus",
+        "tvdb_id": 336139
+    },
+    "Continuum": {
+        "final": "2015-10-09",
+        "name_needed": true,
+        "premiere": "2012-05-27",
+        "status": "Ended",
+        "tvdb_id": 258171
+    },
+    "Criminal Minds": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2005-09-22",
+        "status": "Hiatus",
+        "tvdb_id": 75710
+    },
+    "Crossing Lines": {
+        "final": "2015-12-04",
+        "name_needed": true,
+        "premiere": "2013-06-14",
+        "status": "Ended",
+        "tvdb_id": 267970
+    },
+    "Da Vinci's Demons": {
+        "final": "2015-12-26",
+        "name_needed": true,
+        "premiere": "2013-04-12",
+        "status": "Ended",
+        "tvdb_id": 259669
+    },
+    "Damien": {
+        "final": "2016-05-09",
+        "name_needed": true,
+        "premiere": "2016-03-07",
+        "status": "Ended",
+        "tvdb_id": 282165
+    },
+    "Daredevil": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2015-04-10",
+        "status": "Hiatus",
+        "tvdb_id": 281662
+    },
+    "Dark Angel": {
+        "final": "2002-05-03",
+        "name_needed": true,
+        "premiere": "2000-10-03",
+        "status": "Ended",
+        "tvdb_id": 76148
+    },
+    "Dark Matter": {
+        "final": "2017-08-25",
+        "name_needed": true,
+        "premiere": "2015-06-12",
+        "status": "Ended",
+        "tvdb_id": 292174
+    },
+    "Dexter": {
+        "final": "2013-09-22",
+        "name_needed": true,
+        "premiere": "2006-10-01",
+        "status": "Ended",
+        "tvdb_id": 79349
+    },
+    "Doctor Who": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2005-03-26",
+        "status": "Hiatus",
+        "tvdb_id": 78804
+    },
+    "Doctor Who Classic": {
+        "final": "1989-12-06",
+        "name_needed": true,
+        "premiere": "1963-11-23",
+        "status": "Ended",
+        "tvdb_id": 76107
+    },
+    "Dollhouse": {
+        "final": "2010-01-29",
+        "name_needed": true,
+        "premiere": "2009-02-13",
+        "status": "Ended",
+        "tvdb_id": 82046
+    },
+    "Dolphins - Spy in the Pod": {
+        "final": "2014-01-09",
+        "name_needed": false,
+        "premiere": "2014-01-02",
+        "status": "Ended",
+        "tvdb_id": 276810
+    },
+    "Dragon Ball": {
+        "final": "1996-03-04",
+        "name_needed": true,
+        "premiere": "1986-12-20",
+        "status": "Ended",
+        "tvdb_id": ""
+    },
+    "Emerald City": {
+        "final": "2017-03-03",
+        "name_needed": true,
+        "premiere": "2017-01-06",
+        "status": "Ended",
+        "tvdb_id": 295779
+    },
+    "Eureka": {
+        "final": "2012-07-16",
+        "name_needed": true,
+        "premiere": "2006-07-18",
+        "status": "Ended",
+        "tvdb_id": 79334
+    },
+    "Fargo": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2014-04-15",
+        "status": "Hiatus",
+        "tvdb_id": 269613
+    },
+    "Farscape": {
+        "final": "2003-03-21",
+        "name_needed": true,
+        "premiere": "1999-03-19",
+        "status": "Ended",
+        "tvdb_id": 70522
+    },
+    "Fast and Loose": {
+        "final": "2011-03-04",
+        "name_needed": false,
+        "premiere": "2011-01-14",
+        "status": "Ended",
+        "tvdb_id": 221581
+    },
+    "Firefly": {
+        "final": "2002-12-20",
+        "name_needed": true,
+        "premiere": "2002-09-20",
+        "status": "Ended",
+        "tvdb_id": 78874
+    },
+    "Friends": {
+        "final": "2004-05-06",
+        "name_needed": false,
+        "premiere": "1994-09-22",
+        "status": "Ended",
+        "tvdb_id": 79168
+    },
+    "Fringe": {
+        "final": "2013-01-18",
+        "name_needed": true,
+        "premiere": "2008-09-09",
+        "status": "Ended",
+        "tvdb_id": 82066
+    },
+    "Game of Thrones": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2011-04-17",
+        "status": "Hiatus",
+        "tvdb_id": 121361
+    },
+    "Gilmore Girls": {
+        "final": "2007-05-15",
+        "name_needed": true,
+        "premiere": "2000-10-05",
+        "status": "Ended",
+        "tvdb_id": 76568
+    },
+    "Gilmore Girls - A Year in the Life": {
+        "final": "2016-11-25",
+        "name_needed": true,
+        "premiere": "2016-11-25",
+        "status": "Ended",
+        "tvdb_id": 311987
+    },
+    "Gotham": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2014-09-22",
+        "status": "Hiatus",
+        "tvdb_id": 274431
+    },
+    "Gracepoint": {
+        "final": "2014-12-11",
+        "name_needed": false,
+        "premiere": "2014-10-02",
+        "status": "Ended",
+        "tvdb_id": 276396
+    },
+    "Grey's Anatomy": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2005-03-27",
+        "status": "Hiatus",
+        "tvdb_id": 73762
+    },
+    "Grimm": {
+        "final": "2017-03-31",
+        "name_needed": true,
+        "premiere": "2011-10-28",
+        "status": "Ended",
+        "tvdb_id": 248736
+    },
+    "Gunpowder": {
+        "final": "2017-11-04",
+        "name_needed": false,
+        "premiere": "2017-10-21",
+        "status": "Ended",
+        "tvdb_id": 334069
+    },
+    "Hannibal": {
+        "final": "2015-08-29",
+        "name_needed": true,
+        "premiere": "2013-04-04",
+        "status": "Ended",
+        "tvdb_id": 259063
+    },
+    "Hard Sun": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2018-01-06",
+        "status": "Hiatus",
+        "tvdb_id": 333402
+    },
+    "Hawaii Five-0": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2010-09-20",
+        "status": "Hiatus",
+        "tvdb_id": 164541
+    },
+    "Heroes": {
+        "final": "2010-02-08",
+        "name_needed": true,
+        "premiere": "2006-09-25",
+        "status": "Ended",
+        "tvdb_id": 79501
+    },
+    "Heroes Reborn": {
+        "final": "2016-01-21",
+        "name_needed": true,
+        "premiere": "2015-09-24",
+        "status": "Ended",
+        "tvdb_id": 279201
+    },
+    "Houdini & Doyle": {
+        "final": "2016-05-12",
+        "name_needed": true,
+        "premiere": "2016-03-13",
+        "status": "Ended",
+        "tvdb_id": 306313
+    },
+    "House": {
+        "final": "2012-05-21",
+        "name_needed": true,
+        "premiere": "2004-11-16",
+        "status": "Ended",
+        "tvdb_id": 73255
+    },
+    "House of Cards": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2013-02-01",
+        "status": "Hiatus",
+        "tvdb_id": 262980
+    },
+    "How I Met Your Mother": {
+        "final": "2014-03-31",
+        "name_needed": true,
+        "premiere": "2005-09-19",
+        "status": "Ended",
+        "tvdb_id": 75760
+    },
+    "How to Get Away with Murder": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2014-09-25",
+        "status": "Hiatus",
+        "tvdb_id": 281620
+    },
+    "Inhumans": {
+        "final": "2017-11-10",
+        "name_needed": true,
+        "premiere": "2017-09-29",
+        "status": "Ended",
+        "tvdb_id": 320558
+    },
+    "Iron Fist": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2017-03-17",
+        "status": "Hiatus",
+        "tvdb_id": 317953
+    },
+    "Jessica Jones": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2015-11-20",
+        "status": "Hiatus",
+        "tvdb_id": 284190
+    },
+    "Killjoys": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2015-06-19",
+        "status": "Hiatus",
+        "tvdb_id": 281534
+    },
+    "Last Week Tonight With John Oliver": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2014-04-27",
+        "status": "Airing",
+        "tvdb_id": 278518
+    },
+    "Legends of Tomorrow": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2016-01-21",
+        "status": "Hiatus",
+        "tvdb_id": 295760
+    },
+    "Legion": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2017-02-08",
+        "status": "Hiatus",
+        "tvdb_id": 320724
+    },
+    "Lethal Weapon": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2016-09-21",
+        "status": "Hiatus",
+        "tvdb_id": 311790
+    },
+    "Life on Mars": {
+        "final": "2007-04-10",
+        "name_needed": false,
+        "premiere": "2006-01-09",
+        "status": "Ended",
+        "tvdb_id": 79177
+    },
+    "Lost": {
+        "final": "2010-05-23",
+        "name_needed": true,
+        "premiere": "2004-09-22",
+        "status": "Ended",
+        "tvdb_id": 73739
+    },
+    "Lucifer": {
+        "final": "2018-05-14",
+        "name_needed": true,
+        "premiere": "2016-01-25",
+        "status": "Ended",
+        "tvdb_id": 295685
+    },
+    "Luke Cage": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2016-09-30",
+        "status": "Hiatus",
+        "tvdb_id": 304219
+    },
+    "Merlin": {
+        "final": "2012-12-24",
+        "name_needed": true,
+        "premiere": "2008-09-20",
+        "status": "Ended",
+        "tvdb_id": 83123
+    },
+    "Minority Report": {
+        "final": "2015-11-30",
+        "name_needed": true,
+        "premiere": "2015-09-21",
+        "status": "Ended",
+        "tvdb_id": 295680
+    },
+    "Mock the Week": {
+        "final": "2018-06-26",
+        "name_needed": false,
+        "premiere": "2005-06-05",
+        "status": "Ended",
+        "tvdb_id": 79761
+    },
+    "Moonlight": {
+        "final": "2008-05-16",
+        "name_needed": true,
+        "premiere": "2007-09-28",
+        "status": "Ended",
+        "tvdb_id": 80512
+    },
+    "Mr. Robot": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2015-06-24",
+        "status": "Hiatus",
+        "tvdb_id": 289590
+    },
+    "NCIS": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2003-09-23",
+        "status": "Hiatus",
+        "tvdb_id": 72108
+    },
+    "NCIS Los Angeles": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2009-09-22",
+        "status": "Hiatus",
+        "tvdb_id": 95441
+    },
+    "NCIS New Orleans": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2014-09-23",
+        "status": "Hiatus",
+        "tvdb_id": 278125
+    },
+    "Narcos": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2015-08-28",
+        "status": "Hiatus",
+        "tvdb_id": 282670
+    },
+    "Naruto": {
+        "final": "2007-02-08",
+        "name_needed": true,
+        "premiere": "2002-10-03",
+        "status": "Ended",
+        "tvdb_id": ""
+    },
+    "Naruto Shippuuden": {
+        "final": "2017-03-23",
+        "name_needed": true,
+        "premiere": "2007-02-15",
+        "status": "Ended",
+        "tvdb_id": ""
+    },
+    "Numb3rs": {
+        "final": "2010-03-12",
+        "name_needed": true,
+        "premiere": "2005-01-23",
+        "status": "Ended",
+        "tvdb_id": 73918
+    },
+    "Orphan Black": {
+        "final": "2017-08-12",
+        "name_needed": true,
+        "premiere": "2013-03-30",
+        "status": "Ended",
+        "tvdb_id": 260315
+    },
+    "Penguins - Spy in the Huddle": {
+        "final": "2013-02-25",
+        "name_needed": false,
+        "premiere": "2013-02-11",
+        "status": "Ended",
+        "tvdb_id": 266843
+    },
+    "Pillars of the Earth": {
+        "final": "2010-08-27",
+        "name_needed": true,
+        "premiere": "2010-07-23",
+        "status": "Ended",
+        "tvdb_id": 159431
+    },
+    "Planet Earth": {
+        "final": "2006-12-10",
+        "name_needed": true,
+        "premiere": "2006-03-05",
+        "status": "Ended",
+        "tvdb_id": 79257
+    },
+    "Planet Earth II": {
+        "final": "2016-12-11",
+        "name_needed": true,
+        "premiere": "2016-11-06",
+        "status": "Ended",
+        "tvdb_id": 318408
+    },
+    "Please Like Me": {
+        "final": "2016-12-14",
+        "name_needed": true,
+        "premiere": "2013-02-28",
+        "status": "Ended",
+        "tvdb_id": 267014
+    },
+    "Polar Bear - Spy on the Ice": {
+        "final": "2010-12-29",
+        "name_needed": false,
+        "premiere": "2010-12-29",
+        "status": "Ended",
+        "tvdb_id": 274142
+    },
+    "Pretty Little Liars": {
+        "final": "2017-06-27",
+        "name_needed": true,
+        "premiere": "2010-06-08",
+        "status": "Ended",
+        "tvdb_id": 146711
+    },
+    "Prison Break": {
+        "final": "2009-05-15",
+        "name_needed": true,
+        "premiere": "2005-08-29",
+        "status": "Ended",
+        "tvdb_id": 75340
+    },
+    "QI": {
+        "final": "2016-03-25",
+        "name_needed": true,
+        "premiere": "2003-09-11",
+        "status": "Ended",
+        "tvdb_id": 72716
+    },
+    "Quantum Leap": {
+        "final": "1993-05-05",
+        "name_needed": true,
+        "premiere": "1989-03-26",
+        "status": "Ended",
+        "tvdb_id": 72248
+    },
+    "Queer as Folk": {
+        "final": "2005-08-07",
+        "name_needed": true,
+        "premiere": "2000-12-03",
+        "status": "Ended",
+        "tvdb_id": 75367
+    },
+    "Rick and Morty": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2013-12-02",
+        "status": "Hiatus",
+        "tvdb_id": 275274
+    },
+    "Ripper Street": {
+        "final": "2016-10-12",
+        "name_needed": true,
+        "premiere": "2012-12-30",
+        "status": "Ended",
+        "tvdb_id": 260485
+    },
+    "Runaways": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2017-11-21",
+        "status": "Hiatus",
+        "tvdb_id": 332027
+    },
+    "Sanctuary": {
+        "final": "2011-12-30",
+        "name_needed": true,
+        "premiere": "2008-10-03",
+        "status": "Ended",
+        "tvdb_id": 80159
+    },
+    "Saving Hope": {
+        "final": "2017-08-03",
+        "name_needed": true,
+        "premiere": "2012-06-07",
+        "status": "Ended",
+        "tvdb_id": 256111
+    },
+    "Scorpion": {
+        "final": "2018-04-16",
+        "name_needed": true,
+        "premiere": "2014-09-22",
+        "status": "Ended",
+        "tvdb_id": 281630
+    },
+    "Scrubs": {
+        "final": "2010-03-17",
+        "name_needed": true,
+        "premiere": "2001-10-02",
+        "status": "Ended",
+        "tvdb_id": 76156
+    },
+    "Sense8": {
+        "final": "2018-06-08",
+        "name_needed": true,
+        "premiere": "2015-06-05",
+        "status": "Ended",
+        "tvdb_id": 268156
+    },
+    "Sherlock": {
+        "final": "2017-01-15",
+        "name_needed": true,
+        "premiere": "2010-07-25",
+        "status": "Ended",
+        "tvdb_id": 176941
+    },
+    "Shingeki no Kyojin": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2013-04-07",
+        "status": "Hiatus",
+        "tvdb_id": ""
+    },
+    "Single Father": {
+        "final": "2010-10-31",
+        "name_needed": false,
+        "premiere": "2010-10-10",
+        "status": "Ended",
+        "tvdb_id": 183331
+    },
+    "Sleepy Hollow": {
+        "final": "2017-03-31",
+        "name_needed": true,
+        "premiere": "2013-09-16",
+        "status": "Ended",
+        "tvdb_id": 269578
+    },
+    "Smallville": {
+        "final": "2011-05-13",
+        "name_needed": true,
+        "premiere": "2001-10-16",
+        "status": "Ended",
+        "tvdb_id": 72218
+    },
+    "Spies of Warsaw": {
+        "final": "2013-04-03",
+        "name_needed": false,
+        "premiere": "2013-04-03",
+        "status": "Ended",
+        "tvdb_id": 260313
+    },
+    "Spy in the Wild": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2017-01-12",
+        "status": "Hiatus",
+        "tvdb_id": 322505
+    },
+    "Star Trek": {
+        "final": "1969-06-03",
+        "name_needed": true,
+        "premiere": "1966-09-08",
+        "status": "Ended",
+        "tvdb_id": 77526
+    },
+    "Star Trek - Deep Space Nine": {
+        "final": "1999-06-02",
+        "name_needed": true,
+        "premiere": "1993-01-03",
+        "status": "Ended",
+        "tvdb_id": 72073
+    },
+    "Star Trek - Discovery": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2017-09-25",
+        "status": "Hiatus",
+        "tvdb_id": 328711
+    },
+    "Star Trek - Enterprise": {
+        "final": "2005-05-13",
+        "name_needed": true,
+        "premiere": "2001-09-26",
+        "status": "Ended",
+        "tvdb_id": 73893
+    },
+    "Star Trek - The Animated Series": {
+        "final": "1974-10-12",
+        "name_needed": true,
+        "premiere": "1973-09-08",
+        "status": "Ended",
+        "tvdb_id": 73566
+    },
+    "Star Trek - The Next Generation": {
+        "final": "1994-05-23",
+        "name_needed": true,
+        "premiere": "1987-09-28",
+        "status": "Ended",
+        "tvdb_id": 71470
+    },
+    "Star Trek - Voyager": {
+        "final": "2001-05-23",
+        "name_needed": true,
+        "premiere": "1995-01-16",
+        "status": "Ended",
+        "tvdb_id": 74550
+    },
+    "Stargate Atlantis": {
+        "final": "2009-01-09",
+        "name_needed": true,
+        "premiere": "2004-07-16",
+        "status": "Ended",
+        "tvdb_id": 70851
+    },
+    "Stargate SG-1": {
+        "final": "2007-03-13",
+        "name_needed": true,
+        "premiere": "1997-07-27",
+        "status": "Ended",
+        "tvdb_id": 72449
+    },
+    "Stargate Universe": {
+        "final": "2011-05-09",
+        "name_needed": true,
+        "premiere": "2009-10-02",
+        "status": "Ended",
+        "tvdb_id": 83237
+    },
+    "Stranger Things": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2016-07-15",
+        "status": "Hiatus",
+        "tvdb_id": 305288
+    },
+    "Supergirl": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2015-10-26",
+        "status": "Hiatus",
+        "tvdb_id": 295759
+    },
+    "Supernatural": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2005-09-13",
+        "status": "Hiatus",
+        "tvdb_id": 78901
+    },
+    "Terminator - The Sarah Connor Chronicles": {
+        "final": "2009-04-10",
+        "name_needed": true,
+        "premiere": "2008-01-13",
+        "status": "Ended",
+        "tvdb_id": 80344
+    },
+    "The 100": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2014-03-19",
+        "status": "Airing",
+        "tvdb_id": 268592
+    },
+    "The Avengers - Earth's Mightiest Heroes": {
+        "final": "2013-05-05",
+        "name_needed": true,
+        "premiere": "2010-09-22",
+        "status": "Ended",
+        "tvdb_id": 192171
+    },
+    "The Blacklist": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2013-09-23",
+        "status": "Hiatus",
+        "tvdb_id": 266189
+    },
+    "The Crown": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2016-11-04",
+        "status": "Hiatus",
+        "tvdb_id": 305574
+    },
+    "The Defenders": {
+        "final": "2017-08-18",
+        "name_needed": true,
+        "premiere": "2017-08-18",
+        "status": "Ended",
+        "tvdb_id": 326490
+    },
+    "The End of The Fucking World": {
+        "final": "",
+        "name_needed": false,
+        "premiere": "2017-10-24",
+        "status": "Hiatus",
+        "tvdb_id": 336522
+    },
+    "The Expanse": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2015-11-23",
+        "status": "Hiatus",
+        "tvdb_id": 280619
+    },
+    "The Fall": {
+        "final": "2016-10-28",
+        "name_needed": true,
+        "premiere": "2013-05-13",
+        "status": "Ended",
+        "tvdb_id": 258107
+    },
+    "The Finder": {
+        "final": "2012-05-11",
+        "name_needed": true,
+        "premiere": "2012-01-12",
+        "status": "Ended",
+        "tvdb_id": 248651
+    },
+    "The Flash": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2014-10-07",
+        "status": "Hiatus",
+        "tvdb_id": 279121
+    },
+    "The Good Doctor": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2017-09-25",
+        "status": "Hiatus",
+        "tvdb_id": 328634
+    },
+    "The Grand Tour": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2016-11-18",
+        "status": "Hiatus",
+        "tvdb_id": 314087
+    },
+    "The Handmaid's Tale": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2017-04-26",
+        "status": "Hiatus",
+        "tvdb_id": 321239
+    },
+    "The IT Crowd": {
+        "final": "2013-09-27",
+        "name_needed": true,
+        "premiere": "2006-02-03",
+        "status": "Ended",
+        "tvdb_id": 79216
+    },
+    "The Legend of Korra": {
+        "final": "2014-12-19",
+        "name_needed": true,
+        "premiere": "2012-04-14",
+        "status": "Ended",
+        "tvdb_id": 251085
+    },
+    "The Magicians": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2015-12-16",
+        "status": "Hiatus",
+        "tvdb_id": 218401
+    },
+    "The Musketeers": {
+        "final": "2016-08-01",
+        "name_needed": true,
+        "premiere": "2014-01-19",
+        "status": "Ended",
+        "tvdb_id": 299139
+    },
+    "The Night Manager": {
+        "final": "2016-03-27",
+        "name_needed": false,
+        "premiere": "2016-02-21",
+        "status": "Ended",
+        "tvdb_id": 290508
+    },
+    "The Office": {
+        "final": "2003-12-27",
+        "name_needed": true,
+        "premiere": "2001-07-09",
+        "status": "Ended",
+        "tvdb_id": 78107
+    },
+    "The Originals": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2013-10-03",
+        "status": "Airing",
+        "tvdb_id": 266883
+    },
+    "The Orville": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2017-09-11",
+        "status": "Hiatus",
+        "tvdb_id": 328487
+    },
+    "The Punisher": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2017-11-17",
+        "status": "Hiatus",
+        "tvdb_id": 331980
+    },
+    "The Sarah Jane Adventures": {
+        "final": "2011-10-18",
+        "name_needed": true,
+        "premiere": "2007-01-01",
+        "status": "Ended",
+        "tvdb_id": 79708
+    },
+    "The Shannara Chronicles": {
+        "final": "2018-01-20",
+        "name_needed": true,
+        "premiere": "2016-01-05",
+        "status": "Ended",
+        "tvdb_id": 289096
+    },
+    "The Vampire Diaries": {
+        "final": "2017-03-10",
+        "name_needed": true,
+        "premiere": "2009-09-10",
+        "status": "Ended",
+        "tvdb_id": 95491
+    },
+    "The Walking Dead": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2010-10-31",
+        "status": "Hiatus",
+        "tvdb_id": 153021
+    },
+    "The X-Files": {
+        "final": "2018-03-21",
+        "name_needed": true,
+        "premiere": "1993-09-10",
+        "status": "Ended",
+        "tvdb_id": 77398
+    },
+    "Tiger - Spy in the Jungle": {
+        "final": "2008-04-13",
+        "name_needed": false,
+        "premiere": "2008-04-13",
+        "status": "Ended",
+        "tvdb_id": 81652
+    },
+    "Timeless": {
+        "final": "2018-05-13",
+        "name_needed": true,
+        "premiere": "2016-10-03",
+        "status": "Ended",
+        "tvdb_id": 311713
+    },
+    "Top Gear": {
+        "final": "2015-06-28",
+        "name_needed": false,
+        "premiere": "2002-10-20",
+        "status": "Ended",
+        "tvdb_id": 74608
+    },
+    "Torchwood": {
+        "final": "2011-09-15",
+        "name_needed": true,
+        "premiere": "2006-10-22",
+        "status": "Ended",
+        "tvdb_id": 79511
+    },
+    "Travelers": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2016-10-17",
+        "status": "Hiatus",
+        "tvdb_id": 314544
+    },
+    "True Detective": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2014-01-12",
+        "status": "Hiatus",
+        "tvdb_id": 270633
+    },
+    "Turn - Washington's Spies": {
+        "final": "2017-08-12",
+        "name_needed": true,
+        "premiere": "2014-04-06",
+        "status": "Ended",
+        "tvdb_id": 272135
+    },
+    "Two and a Half Men": {
+        "final": "2015-02-19",
+        "name_needed": true,
+        "premiere": "2003-09-22",
+        "status": "Ended",
+        "tvdb_id": 72227
+    },
+    "Veronica Mars": {
+        "final": "2007-05-22",
+        "name_needed": true,
+        "premiere": "2004-09-22",
+        "status": "Ended",
+        "tvdb_id": 73730
+    },
+    "Vikings": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2013-03-03",
+        "status": "Hiatus",
+        "tvdb_id": 260449
+    },
+    "Warehouse 13": {
+        "final": "2014-05-19",
+        "name_needed": true,
+        "premiere": "2009-07-07",
+        "status": "Ended",
+        "tvdb_id": 84676
+    },
+    "Was It Something I Said": {
+        "final": "2013-11-24",
+        "name_needed": false,
+        "premiere": "2013-10-24",
+        "status": "Ended",
+        "tvdb_id": 273740
+    },
+    "Westworld": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2016-10-02",
+        "status": "Hiatus",
+        "tvdb_id": 296762
+    },
+    "Wolf Hall": {
+        "final": "2015-02-25",
+        "name_needed": true,
+        "premiere": "2015-01-21",
+        "status": "Ended",
+        "tvdb_id": 281977
+    },
+    "Would I Lie to You": {
+        "final": "",
+        "name_needed": false,
+        "premiere": "2007-06-16",
+        "status": "Hiatus",
+        "tvdb_id": 82548
+    },
+    "Wynonna Earp": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2016-04-01",
+        "status": "Airing",
+        "tvdb_id": 305582
+    },
+    "Yu-Gi-Oh - Duel Monsters": {
+        "final": "2006-11-25",
+        "name_needed": false,
+        "premiere": "2006-09-09",
+        "status": "Ended",
+        "tvdb_id": ""
+    },
+    "iZombie": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2015-03-17",
+        "status": "Hiatus",
+        "tvdb_id": 281470
+    }
+}

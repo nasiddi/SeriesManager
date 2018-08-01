@@ -1,0 +1,205 @@
+13 Reasons Why
+Arrow
+Black Mirror
+Blue Bloods
+Chicago Fire
+Chicago Med
+{ title: 'The National Anthem' }
+2018-07-29T09:46:37.343Z  [verbose]     POST /jobs/tvdb 200 1271.439 ms - 31
+Chicago P.D
+{ title: 'Tape 1, Side B' }
+2018-07-29T09:46:37.552Z  [verbose]     POST /jobs/tvdb 200 1511.609 ms - 26
+Criminal Minds
+{ title: 'This Is Now' }
+2018-07-29T09:46:37.601Z  [verbose]     POST /jobs/tvdb 200 1524.777 ms - 23
+Legends of Tomorrow
+{ title: 'Tale of Two Cities ' }
+2018-07-29T09:46:37.909Z  [verbose]     POST /jobs/tvdb 200 1836.709 ms - 31
+Gotham
+{ title: 'The Strongest Among Us' }
+2018-07-29T09:46:38.282Z  [verbose]     POST /jobs/tvdb 200 2207.705 ms - 34
+Grey's Anatomy
+{ title: 'Amazing Grace' }
+2018-07-29T09:46:38.783Z  [verbose]     POST /jobs/tvdb 200 1178.967 ms - 25
+Hawaii Five-0
+{ title: 'Life Sentence' }
+2018-07-29T09:46:38.957Z  [verbose]     POST /jobs/tvdb 200 2886.549 ms - 25
+Legion
+{ title: 'Profiles (1)' }
+2018-07-29T09:46:39.585Z  [verbose]     POST /jobs/tvdb 200 2238.739 ms - 24
+Lethal Weapon
+{ title: 'A Dark Knight: No Man\'s Land' }
+2018-07-29T09:46:39.601Z  [verbose]     POST /jobs/tvdb 200 1689.262 ms - 40
+Lost
+{ title: 'Chapter 13' }
+2018-07-29T09:46:39.996Z  [verbose]     POST /jobs/tvdb 200 1036.309 ms - 22
+Lucifer
+{ title: 'Kopi Wale No I Ka I\'a A \'Eu No Ka Ilo' }
+2018-07-29T09:46:40.492Z  [verbose]     POST /jobs/tvdb 200 1703.580 ms - 49
+Daredevil
+{ title: 'One Day More' }
+2018-07-29T09:46:40.805Z  [verbose]     POST /jobs/tvdb 200 1216.664 ms - 24
+Jessica Jones
+{ title: 'Once Upon A Time' }
+2018-07-29T09:46:41.239Z  [verbose]     POST /jobs/tvdb 200 1239.772 ms - 28
+Runaways
+{ title: 'Into the Ring' }
+2018-07-29T09:46:41.433Z  [verbose]     POST /jobs/tvdb 200 936.443 ms - 25
+NCIS Los Angeles
+{ title: 'AKA Freak Accident' }
+2018-07-29T09:46:41.859Z  [verbose]     POST /jobs/tvdb 200 1051.679 ms - 30
+NCIS New Orleans
+{ title: 'Reunion' }
+2018-07-29T09:46:42.013Z  [verbose]     POST /jobs/tvdb 200 770.772 ms - 19
+NCIS
+{ title: 'All You Can Eat' }
+2018-07-29T09:46:42.147Z  [verbose]     POST /jobs/tvdb 200 4590.563 ms - 27
+Stranger Things
+{ title: 'Pilot (1)' }
+2018-07-29T09:46:42.301Z  [verbose]     POST /jobs/tvdb 200 2691.724 ms - 21
+Supernatural
+{ title: 'Mind Games' }
+2018-07-29T09:46:42.648Z  [verbose]     POST /jobs/tvdb 200 784.699 ms - 22
+Supergirl
+{ title: 'All of Me' }
+2018-07-29T09:46:42.850Z  [verbose]     POST /jobs/tvdb 200 4566.563 ms - 21
+The Blacklist
+{ title: 'Chapter Two: Trick or Treat, Freak' }
+2018-07-29T09:46:43.187Z  [verbose]     POST /jobs/tvdb 200 1036.966 ms - 46
+The Expanse
+{ title: 'Battles Lost and Won' }
+2018-07-29T09:46:43.275Z  [verbose]     POST /jobs/tvdb 200 625.233 ms - 32
+The Flash
+{ title: 'Nicholas T. Moore' }
+2018-07-29T09:46:43.950Z  [verbose]     POST /jobs/tvdb 200 1096.825 ms - 29
+The Good Doctor
+{ title: 'Therefore She Is' }
+2018-07-29T09:46:44.172Z  [verbose]     POST /jobs/tvdb 200 894.327 ms - 28
+The Grand Tour
+{ title: 'Congregation' }
+2018-07-29T09:46:44.359Z  [verbose]     POST /jobs/tvdb 200 1170.119 ms - 24
+The Handmaid's Tale
+{ title: 'More' }
+2018-07-29T09:46:44.415Z  [verbose]     POST /jobs/tvdb 200 462.497 ms - 16
+Westworld
+{ title: 'Reentry' }
+2018-07-29T09:46:44.501Z  [verbose]     POST /jobs/tvdb 200 3066.030 ms - 19
+True Detective
+{ title: 'Feed the World' }
+2018-07-29T09:46:44.630Z  [verbose]     POST /jobs/tvdb 200 455.825 ms - 26
+Shingeki no Kyojin
+{ title: 'Beat the Devil' }
+2018-07-29T09:46:44.943Z  [verbose]     POST /jobs/tvdb 200 2639.413 ms - 26
+8 Out of 10 Cats
+{ Error: No results for your query: map[tve.seriesId:0]
+    at res.json.then (C:\Users\nadina\Documents\code\SeriesManager\api\node_modules\node-tvdb\index.js:554:23)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+  response:
+   { url: 'https://api.thetvdb.com/series/0/episodes',
+     status: 404,
+     statusText: 'Not Found' } }
+2018-07-29T09:46:45.405Z  [verbose]     POST /jobs/tvdb 200 772.742 ms - -
+{ title: 'After' }
+2018-07-29T09:46:45.409Z  [verbose]     POST /jobs/tvdb 200 1047.906 ms - 17
+Better Call Saul
+Bull
+{ title: 'The Long Bright Dark' }
+2018-07-29T09:46:45.433Z  [verbose]     POST /jobs/tvdb 200 929.882 ms - 32
+Doctor Who
+{ title: 'The Passenger' }
+2018-07-29T09:46:45.485Z  [verbose]     POST /jobs/tvdb 200 1067.968 ms - 25
+Fargo
+{ title: 'Death Sentence' }
+2018-07-29T09:46:45.802Z  [verbose]     POST /jobs/tvdb 200 389.844 ms - 26
+Game of Thrones
+{ title: 'Mabel' }
+2018-07-29T09:46:45.890Z  [verbose]     POST /jobs/tvdb 200 479.411 ms - 17
+Hard Sun
+{ title: 'The Law of Vacant Places' }
+2018-07-29T09:46:45.906Z  [verbose]     POST /jobs/tvdb 200 417.826 ms - 36
+QI
+{ title: 'The Sun, The Moon, The Truth' }
+2018-07-29T09:46:46.147Z  [verbose]     POST /jobs/tvdb 200 253.697 ms - 40
+How to Get Away with Murder
+{ title: 'One Step Forward' }
+2018-07-29T09:46:46.454Z  [verbose]     POST /jobs/tvdb 200 4438.899 ms - 28
+iZombie
+{ title: 'Krishnan Guru-Murthy, Phil Wang, Gabby Logan, Rosie Jones' }
+2018-07-29T09:46:46.783Z  [verbose]     POST /jobs/tvdb 200 1837.482 ms - 69
+Killjoys
+{ title: 'I Love Her' }
+2018-07-29T09:46:46.813Z  [verbose]     POST /jobs/tvdb 200 661.534 ms - 22
+Last Week Tonight With John Oliver
+{ title: 'Dragonstone' }
+2018-07-29T09:46:46.843Z  [verbose]     POST /jobs/tvdb 200 1037.775 ms - 23
+Agents of S.H.I.E.L.D
+{ title: 'Zombie Knows Best' }
+2018-07-29T09:46:46.973Z  [verbose]     POST /jobs/tvdb 200 517.333 ms - 29
+Cloak & Dagger
+{ title: 'Attack the Rack' }
+2018-07-29T09:46:47.239Z  [verbose]     POST /jobs/tvdb 200 453.439 ms - 27
+Iron Fist
+{ title: 'Snow Gives Way' }
+2018-07-29T09:46:47.499Z  [verbose]     POST /jobs/tvdb 200 257.461 ms - 26
+The Defenders
+{ title: 'Episode 119' }
+2018-07-29T09:46:47.691Z  [verbose]     POST /jobs/tvdb 200 876.301 ms - 23
+The Punisher
+{ title: 'The Pyramid at the End of the World' }
+2018-07-29T09:46:47.714Z  [verbose]     POST /jobs/tvdb 200 2277.863 ms - 47
+Mr. Robot
+{ title: 'The Defenders' }
+2018-07-29T09:46:47.733Z  [verbose]     POST /jobs/tvdb 200 232.216 ms - 25
+Narcos
+{ title: 'Back Breaker' }
+2018-07-29T09:46:47.982Z  [verbose]     POST /jobs/tvdb 200 1006.416 ms - 24
+NCIS
+{ title: '3AM' }
+2018-07-29T09:46:48.149Z  [verbose]     POST /jobs/tvdb 200 455.641 ms - 15
+Rick and Morty
+{ title: 'The Kingpin Strategy' }
+2018-07-29T09:46:48.199Z  [verbose]     POST /jobs/tvdb 200 461.375 ms - 32
+Star Trek - Discovery
+{ title: 'A Life Spent' }
+2018-07-29T09:46:48.216Z  [verbose]     POST /jobs/tvdb 200 1371.350 ms - 24
+The 100
+{ title: 'Albania' }
+2018-07-29T09:46:48.494Z  [verbose]     POST /jobs/tvdb 200 2585.699 ms - 19
+The Magicians
+{ title: 'What\'s Past is Prologue' }
+2018-07-29T09:46:48.616Z  [verbose]     POST /jobs/tvdb 200 414.729 ms - 35
+The Orville
+{ title: 'eps3.4_runtime-error.r00' }
+2018-07-29T09:46:48.648Z  [verbose]     POST /jobs/tvdb 200 930.143 ms - 36
+The Walking Dead
+{ title: 'Episode 1' }
+2018-07-29T09:46:48.751Z  [verbose]     POST /jobs/tvdb 200 255.033 ms - 21
+Travelers
+{ title: 'Praimfaya' }
+2018-07-29T09:46:48.772Z  [verbose]     POST /jobs/tvdb 200 553.747 ms - 21
+Vikings
+{ title: 'The ABC\'s of Beth' }
+2018-07-29T09:46:48.980Z  [verbose]     POST /jobs/tvdb 200 827.970 ms - 29
+Would I Lie to You
+{ title: '21C' }
+2018-07-29T09:46:48.995Z  [verbose]     POST /jobs/tvdb 200 240.434 ms - 15
+8 Out of 10 Cats Does Countdown
+{ title: 'Old Wounds' }
+2018-07-29T09:46:49.042Z  [verbose]     POST /jobs/tvdb 200 423.692 ms - 22
+The End of The Fucking World
+{ title: 'Episode 1' }
+2018-07-29T09:46:49.291Z  [verbose]     POST /jobs/tvdb 200 246.632 ms - 21
+Wynonna Earp
+{ title: 'When You Call My Name' }
+2018-07-29T09:46:49.755Z  [verbose]     POST /jobs/tvdb 200 461.851 ms - 33
+{ title: 'Moments of Vision' }
+2018-07-29T09:46:49.886Z  [verbose]     POST /jobs/tvdb 200 1110.222 ms - 29
+{ title: 'Worth' }
+2018-07-29T09:46:49.976Z  [verbose]     POST /jobs/tvdb 200 1327.098 ms - 17
+{ title: 'Katherine Ryan, Joe Wilkinson, John Cooper Clarke' }
+2018-07-29T09:46:50.014Z  [verbose]     POST /jobs/tvdb 200 1013.053 ms - 61
+{ title: 'Date with Destiny' }
+2018-07-29T09:46:50.810Z  [verbose]     POST /jobs/tvdb 200 2825.333 ms - 29
+{ title: 'Denise Lewis, Richard Osman, Judge Rinder, Katherine Ryan' }
+2018-07-29T09:46:50.960Z  [verbose]     POST /jobs/tvdb 200 1977.093 ms - 69

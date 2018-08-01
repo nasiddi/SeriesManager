@@ -1,0 +1,19 @@
+[
+    {
+        "select": true,
+        "text": "Outlander.S03E10.WEB.h264-CONVOY[eztv].mkv",
+        "value": []
+    },
+    {
+        "select": true,
+        "text": "Outlander.S03E12.WEB.H264-STRiFE[ettv]",
+        "value": [
+            "outlander.s03e12.web.h264-strife[ettv].mkv"
+        ]
+    },
+    {
+        "select": false,
+        "text": "Outlander.S03E13.WEB.H264-STRiFE[eztv].mkv",
+        "value": []
+    }
+]

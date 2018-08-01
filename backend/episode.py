@@ -2,32 +2,46 @@ import os
 import re
 import warnings
 from constants import *
+import shutil
 
 
 class Episode:
-    def __init__(self, location='', e_nr=999, s_nr=0):
+    def __init__(self, location='',
+                 e_nr=999,
+                 s_nr=0,
+                 episode_option=SINGLE,
+                 title='',
+                 title2='',
+                 title3=''):
         self.location = location
         self.file_name = os.path.basename(location)
-        self.format = ''
+        self.extention = ''
         self.s_nr = s_nr
         self.anime = False
         if os.path.normpath(location).split(os.path.sep)[1] == 'Anime':
             self.anime = True
-        self.double = False
-        self.triple = False
+        self.episode_option = episode_option
         self.e_nr = e_nr
         self.previous = None
         self.next = None
-        self.e_name = ''
-        self.e_name2 = ''
+        self.title = title
+        self.title2 = title2
+        self.title3 = title3
         if e_nr == 999:
             self.parse_episode_nr()
-        self.parse_episode_name_and_extention()
+        if self.extention == '':
+            self.parse_episode_name_and_extention()
+
+    def update_location(self, old_series_name, new_series_name):
+        old_loc = self.location.replace(old_series_name, new_series_name, 1)
+        self.location = self.location.replace(old_series_name, new_series_name, 2)
+        shutil.move(old_loc, self.location)
+        self.file_name = os.path.basename(self.location)
 
     def parse_episode_name_and_extention(self):
         file_name = self.file_name
         dot = file_name.rfind('.')
-        self.format = file_name[dot+1:]
+        self.extention = file_name[dot+1:]
         name = file_name[:dot]
         match = re.findall(re.compile(SERIES_PATTERN), name)
         if not match:
@@ -36,16 +50,16 @@ class Episode:
         if ' - ' not in name[pattern_index:]:
             return
         name = name[pattern_index:].split(' - ', 1)[1]
-        if self.double:
+        if self.episode_option == DOUBLE:
             if '&' in name:
                 name = name.split('&')
-                self.e_name = name[0]
-                self.e_name2 = name[1]
+                self.title = name[0]
+                self.title2 = name[1]
             else:
-                self.e_name = name
-                self.e_name2 = '++double++'
+                self.title = name
+                self.title2 = name
         else:
-            self.e_name = name
+            self.title = name
 
     def parse_episode_nr(self):
         if self.anime:
@@ -66,13 +80,13 @@ class Episode:
         if len(match) == 2:
             double_pattern = re.compile(single_pattern + '\s&\s' + single_pattern)
             if re.findall(double_pattern, self.file_name):
-                self.double = True
+                self.episode_option = DOUBLE
             return
 
         if len(match) == 3:
             triple_pattern = re.compile(single_pattern + '\s&\s' + single_pattern + '\s&\s' + single_pattern)
             if re.findall(triple_pattern, self.file_name):
-                self.triple = True
+                self.episode_option = TRIPLE
 
 
 

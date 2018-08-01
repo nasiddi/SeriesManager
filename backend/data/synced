@@ -1,0 +1,68 @@
+[
+    {
+        "error": [
+            "Copy failed"
+        ],
+        "file_name": "New Anime 2 04x022.mkv",
+        "info": [
+            "Series created"
+        ],
+        "success": []
+    },
+    {
+        "error": [
+            "File exists"
+        ],
+        "file_name": "Grey's Anatomy 14x24 - All of Me.mkv",
+        "info": [],
+        "success": []
+    },
+    {
+        "error": [
+            "File exists"
+        ],
+        "file_name": "Hawaii Five-0 08x22 - Kopi Wale No I Ka I'a A 'Eu No Ka Ilo.mkv",
+        "info": [],
+        "success": []
+    },
+    {
+        "error": [
+            "File exists"
+        ],
+        "file_name": "Lethal Weapon 02x22 - One Day More.mkv",
+        "info": [],
+        "success": []
+    },
+    {
+        "error": [
+            "File exists"
+        ],
+        "file_name": "Lucifer 03x26 - Once Upon A Time.mkv",
+        "info": [],
+        "success": []
+    },
+    {
+        "error": [
+            "File exists"
+        ],
+        "file_name": "Jessica Jones 02x02 - AKA Freak Accident.mkv",
+        "info": [],
+        "success": []
+    },
+    {
+        "error": [
+            "File exists"
+        ],
+        "file_name": "Runaways 01x01 - Reunion.mkv",
+        "info": [],
+        "success": []
+    },
+    {
+        "error": [
+            "File exists"
+        ],
+        "file_name": "NCIS Los Angeles 09x20 - Reentry.mkv",
+        "info": [],
+        "success": []
+    }
+]

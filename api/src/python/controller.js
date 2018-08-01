@@ -295,7 +295,7 @@ async function reloadSeries(res) {
     '',
     '',
     () => { },
-    async (code, signal) => { 
+    async (code, signal) => {
       if (code === 0){
         result = 'done'
       } else {
@@ -327,8 +327,92 @@ async function prepFiles(res) {
         winston.error(err);
         res.sendStatus(500).end();
       }
+      fs.unlink(outputFile)
       res.json(file);
   });
+    }
+  );
+}
+
+async function batchFiles(res) {
+  const outputFile = path.join(config.directories.storage, 'batchFiles');
+  console.log('hi there')
+  await run(
+    'batch_files',
+    '',
+    '',
+    '',
+    outputFile,
+    () => { },
+    async (code, signal) => { 
+      if (!fs.existsSync(outputFile)) {
+        res.sendStatus(204).end();
+        return;
+      }
+
+      fs.readJson(outputFile, (err, file) => {
+      if (err) {
+        winston.error(err);
+        res.sendStatus(500).end();
+      }
+      fs.unlink(outputFile)
+      res.json(file);
+  });
+    }
+  );
+}
+
+async function updatePrep(res) {
+  const outputFile = path.join(config.directories.storage, 'update_prep');
+  await run(
+    'update_prep',
+    '',
+    '',
+    '',
+    outputFile,
+    () => { },
+    async (code, signal) => { 
+      if (!fs.existsSync(outputFile)) {
+        res.sendStatus(204).end();
+        return;
+      }
+
+      fs.readJson(outputFile, (err, file) => {
+        if (err) {
+          winston.error(err);
+          res.sendStatus(500).end();
+        }
+      fs.unlink(outputFile)
+      res.json(file);
+      });
+    }
+  );
+}
+
+async function updateSave(body, res) {
+  const outputFile = path.join(config.directories.storage, 'update_save');
+  console.log(body[0])
+  await run(
+    'update_save',
+    '',
+    '',
+    body,
+    outputFile,
+    () => { },
+    async (code, signal) => { 
+      if (!fs.existsSync(outputFile)) {
+        res.sendStatus(204).end();
+        return;
+      }
+
+      fs.readJson(outputFile, (err, file) => {
+        if (err) {
+          winston.error(err);
+          res.sendStatus(500).end();
+        }
+      fs.unlink(outputFile)
+      res.json(file);
+      });
     }
   );
 }
@@ -338,18 +422,52 @@ async function syncFiles(body, res) {
   await run(
     'syncer',
     '',
-    '',
     body,
+    '',
     outputFile,
     () => { },
     async (code, signal) => { 
-      if (code === 0){
-        result = 'done'
-      } else {
-        result = 'failed'
+      if (!fs.existsSync(outputFile)) {
+        res.sendStatus(204).end();
+        return;
       }
-      res.send(result);
+
+      fs.readJson(outputFile, (err, file) => {
+        if (err) {
+          winston.error(err);
+          res.sendStatus(500).end();
+        }
+      fs.unlink(outputFile)
+      fs.unlink(body)
+      res.json(file);
+      });
+    }
+  );
+}
+
+async function batchMatch(body, res) {
+  const outputFile = path.join(config.directories.storage, 'batch_validate');
+  await run(
+    'batch_match',
+    '',
+    body,
+    '',
+    outputFile,
+    () => { },
+    async (code, signal) => { 
+      if (!fs.existsSync(outputFile)) {
+        res.sendStatus(204).end();
+        return;
       }
+
+      fs.readJson(outputFile, (err, file) => {
+        if (err) {
+          winston.error(err);
+          res.sendStatus(500).end();
+        }
+      res.json(file);
+      });
+    }
   );
 }
 
@@ -568,4 +686,8 @@ module.exports = {
   reloadSeries,
   prepFiles,
   syncFiles,
+  updatePrep,
+  updateSave,
+  batchFiles,
+  batchMatch,
 };

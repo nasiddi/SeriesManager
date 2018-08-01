@@ -4,6 +4,7 @@
       type="sync"
       variant="primary"
       size="lg"
+      class="mt-3"
       block
       @click.prevent="sync"
     >Sync</b-button>
@@ -19,7 +20,7 @@
       v-for="file in json.files"
       ref="card"
       :key="file.location"
-      :file="file"
+      :f="file"
       :shows="json.shows"
       :subs="json.subs"/>
 
@@ -71,6 +72,7 @@ export default {
           });
           this.json = body;
           this.series_options = this.json.shows;
+
           this.updateAll();
         },
         () => {
@@ -79,19 +81,6 @@ export default {
       );
   },
   methods: {
-    async checkData(file) {
-      const f = file;
-      let sync = false;
-      if (file.title === '') {
-        sync = false;
-      } else {
-        sync = true;
-      }
-      if (sync && file.sync) {
-        return;
-      }
-      f.sync = false;
-    },
     setColor(file) {
       if (file.override) {
         return 'outline-primary';
@@ -106,17 +95,65 @@ export default {
       }
       const promises = [];
       this.json.files.forEach((file) => {
-        this.checkData(file);
         if (file.series_name !== 'Series Name' && file.tvdb !== 0) {
-          promises.push(this.$refs.card.updateTitle(file));
+          promises.push(this.updateTitle(file));
         }
       });
       await Promise.all(promises);
       this.$snotify.remove(this.notifLoading.id);
       this.notifLoading = null;
     },
+    async updateTitle(f) {
+      return new Promise((resolve) => {
+        const file = f;
+        if (!(file.new_series)) {
+          file.tvdb_id = this.json.shows[file.series_name].tvdb_id;
+        }
+        this.$http.post('jobs/tvdb', file)
+          .then(
+            (res) => {
+              const body = _.defaults(res.body, {
+              });
+              if (!('title' in body)) {
+                this.$snotify.error(file.series_name, 'Title failed', { timeout: 5000 });
+              }
+              file.title = body.title;
+              if (file.e_o.s !== 'Single') {
+                if (!('title2' in body)) {
+                  this.$snotify.error(file.series_name, 'Title 2 failed', { timeout: 5000 });
+                }
+                file.title2 = body.title2;
+              }
+              if (file.e_o.s === 'Triple') {
+                if (!('title3' in body)) {
+                  this.$snotify.error(file.series_name, 'Title 3 failed', { timeout: 5000 });
+                }
+                file.title3 = body.title3;
+              }
+              resolve(true);
+            },
+            () => {
+              this.$snotify.error('Failed to load data', { timeout: 0 });
+              resolve(false);
+            },
+          );
+      });
+    },
     async sync() {
-      this.$http.post('jobs/sync/start', this.json.files);
+      this.$http
+        .post('jobs/sync/save', this.json.files)
+        .then(
+          (res) => {
+            this.$router.push({
+              name: 'sync.report',
+              paras: res.body,
+            });
+          },
+          (res) => {
+            this.hasSubmitError = true;
+            if (res.body) this.output = res.body;
+          },
+        );
     },
   },
 };

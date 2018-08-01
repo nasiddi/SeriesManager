@@ -69,43 +69,30 @@ def link_seasons_and_episodes(shows):
 def add_metadata(shows):
     meta = load_json(META_FILE)
     for show in shows.values():
+        if show.series_name not in meta:
+            continue
         info = meta[show.series_name]
         show.status = info[STATUS]
         show.name_needed = info[NAME_NEEDED]
         show.premiere = info[PREMIERE]
         show.final = info[FINAL]
-        if ID not in info:
-            info[ID] = 0
-        show.tvdb_id = info[ID]
-
-        for season in show.seasons.values():
-            s_names = {}
-            for ep in season.episodes.values():
-                s_names[str(ep.e_nr)] = ep.e_name
-                if ep.double:
-                    s_names[str(ep.e_nr + 1)] = ep.e_name2 if ep.e_name2 else '++double++'
-
-            if str(season.s_nr) not in meta[show.series_name][EP_NAMES]:
-                meta[show.series_name][EP_NAMES].update({str(season.s_nr): {}})
-            meta[show.series_name][EP_NAMES][str(season.s_nr)].update(s_names)
-        show.names = info[EP_NAMES]
-    save_json(meta, os.path.join('data', META_FILE))
+        if TVDB_ID not in info:
+            info[TVDB_ID] = ''
+        show.tvdb_id = info[TVDB_ID] if not info[TVDB_ID] == 0 else ''
 
 
-def main(args):
+def main():
     start = time.time()
     print('running')
-    if True:
-        shows = load_files(SERIES_DIR)
-        shows.update(load_files(ANIME_DIR))
-        add_metadata(shows)
-        pickle_dump(shows, 'shows')
-    else:
-        shows = pickle_load('shows')
-    link_seasons_and_episodes(shows)
+    load_shows(reload=True)
+    shows = load_files(SERIES_DIR)
+    shows.update(load_files(ANIME_DIR))
+    add_metadata(shows)
+    save_shows(shows)
+
     print(time.time() - start)
     return shows
 
 
 if __name__ == '__main__':
-    main(sys.argv[1:])
+    main()

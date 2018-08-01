@@ -27,17 +27,11 @@
       <b-navbar-nav v-if="loggedIn">
 
         <b-nav-item
-          :to="{ name: 'files.index' }"
-          :active="isRoutePrefix('files')">
-          <font-awesome-icon icon="hdd"/>
-          Files
+          :to="{ name: 'sync.prep' }"
+          :active="isRoutePrefix('sync')">
+          <font-awesome-icon icon="sync-alt"/>
+          Sync
         </b-nav-item>
-
-        <b-nav-item-dropdown>
-          <b-dropdown-item :to="{ name: 'files.upload' }">
-            <font-awesome-icon icon="upload" /> Upload
-          </b-dropdown-item>
-        </b-nav-item-dropdown>
 
         <b-nav-item
           :to="{ name: 'project.start' }"
