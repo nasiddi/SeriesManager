@@ -1,3 +1,22 @@
 {
-    "files": []
+    "files": [
+        {
+            "e_nr": 11,
+            "episode_option": "Single",
+            "location": "Outlander.S02E11.HDTV.x264-KILLERS[ettv]\\Outlander.S02E11.HDTV.x264-KILLERS[ettv].mkv",
+            "s_nr": 2,
+            "title": "",
+            "title2": "",
+            "title3": ""
+        },
+        {
+            "e_nr": 7,
+            "episode_option": "Single",
+            "location": "Outlander.S03E07.Cr\u00e8me.de.Menthe.720p.WEBRip.2CH.x265.HEVC-PSA.mkv",
+            "s_nr": 3,
+            "title": "",
+            "title2": "",
+            "title3": ""
+        }
+    ]
 }

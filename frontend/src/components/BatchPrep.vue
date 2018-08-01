@@ -9,100 +9,19 @@
       @click.prevent="start"
     >Start</b-button>
     <b-form-group>
-      <b-row class="mt-3">
-        <b-col
-          sm
-          class="px-2">
-          <b-input
-            v-model="series_name"
-            class="mt-2"
-            size="lg"
-            placeholder="Series Title" />
-        </b-col>
-      </b-row>
-      <b-row class="mt-2">
-        <b-col
-          sm
-          class="px-2">
-          <b-input
-            v-model.number="tvdb_id"
-            type="number"
-            class="mt-2"
-            placeholder="TVDB ID" />
-        </b-col>
-        <b-col
-          sm
-          class="px-2">
-          <b-input
-            v-model="premiere"
-            class="mt-2"
-            placeholder="Premiere" />
-        </b-col>
-        <b-col
-          sm
-          class="px-2">
-          <b-input
-            v-model="final"
-            class="mt-2"
-            placeholder="Final" />
-        </b-col>
-        <b-col
-          sm
-          class="px-2">
-          <b-form-select
-            v-model="status"
-            :options="status_option"
-            class="mt-2"/>
-        </b-col>
-        <b-col
-          sm
-          class="px-2">
-          <b-form-select
-            v-model="anime"
-            :options="anime_option"
-            class="mt-2"/>
-        </b-col>
-        <b-col
-          sm
-          class="px-2">
-          <b-form-select
-            v-model="name_needed"
-            :options="name_option"
-            class="mt-2"/>
-        </b-col>
-        <b-col
-          sm
-          class="px-2">
-          <b-button
-            :variant="'primary'"
-            :style="{width: '100%'}"
-            class="mt-2"
-            @click="update"
-          >Update Meta</b-button>
-        </b-col>
-      </b-row>
-      <b-row>
-        <b-col
-          sm
-          class="px-2">
-          <b-form-select
-            v-if="showSelect.length != 0"
-            v-model="tvdb_id"
-            :options="showSelect"
-            class="mt-2"/>
-        </b-col>
-      </b-row>
       <b-row class="mb-4">
         <b-col
-          v-for="r in reg"
-          :key="r.text"
           sm
           class="px-2">
           <b-input
-            v-model.lazy="r.value"
+            v-model.lazy="reg1"
             class="mt-2"
             placeholder="Regex" />
         </b-col>
+        <text-highlight
+          :queries="matchesSE1">
+          {{ matches1 }}
+        </text-highlight>
         <b-col
           sm
           class="px-2">
@@ -123,12 +42,7 @@
           <b-card
             v-if="u.value.length === 0"
             no-body
-            class="px-2 py-2 mt-2">
-            <text-highlight
-              :queries="matches">
-              {{ u.text }}
-            </text-highlight>
-          </b-card>
+            class="px-2 py-2 mt-2"/>
           <b-button
             v-b-toggle="u.text"
             v-if="u.value.length > 0"
@@ -144,7 +58,7 @@
               <text-highlight
                 v-for="f in u.value"
                 :key="f"
-                :queries="matches">
+                queries="S[0-9]{2}E[0-9]{2}">
                 {{ f }}
               </text-highlight>
             </b-card>
@@ -176,33 +90,15 @@ export default {
     TextHighlight,
   },
   data: () => ({
-    series_name: '',
-    tvdb_id: '',
-    premiere: '',
-    final: '',
-    showSelect: [],
-    matches: ['S14E24', 'S08E22'],
-    status_option: [
-      'Airing',
-      'Hiatus',
-      'Ended',
-    ],
+    reg1: 'S[0-9]{2}E[0-9]{2}',
+    matches1: '',
+    matchesSE1: [],
     units: [],
-    json: {},
-    name_option: [
-      { text: 'Name required', value: true },
-      { text: 'Name optional', value: false },
-    ],
-    anime_option: [
-      { text: 'Anime: Yes', value: true },
-      { text: 'Anime: No', value: false },
-    ],
-    status: null,
-    anime: false,
-    name_needed: true,
-    reg: [],
   }),
-  computed: {
+  watch: {
+    reg1: function r(val) {
+      this.updateRegex(val);
+    },
   },
   created() {
     this.$http.post('jobs/batch/files').then(
@@ -238,36 +134,36 @@ export default {
           },
         );
     },
-    async updateRegex() {
+    updateRegex(r) {
       if (this.units.length === 0) {
         setTimeout(this.updateRegex, 250);
-        return;
+        return '';
       }
+      let matches1 = '';
       this.matches = [];
-      this.reg.forEach((r) => {
-        if (r.value === '') { return; }
-        this.units.forEach((o) => {
-          if (o.value.length === 0) {
-            const matched = o.text.match(r.value);
+      this.units.forEach((o) => {
+        if (o.value.length === 0) {
+          const matched = o.text.match(r.value);
+          if (matched === null) { return; }
+          matched.forEach((m) => {
+            if (m !== null) {
+              this.matches.push(m);
+              matches1 = m;
+            }
+          });
+        } else {
+          o.value.forEach((v) => {
+            const matched = v.match(r.value);
             if (matched === null) { return; }
             matched.forEach((m) => {
               if (m !== null) {
                 this.matches.push(m);
               }
             });
-          } else {
-            o.value.forEach((v) => {
-              const matched = v.match(r.value);
-              if (matched === null) { return; }
-              matched.forEach((m) => {
-                if (m !== null) {
-                  this.matches.push(m);
-                }
-              });
-            });
-          }
-        });
+          });
+        }
       });
+      return matches1;
     },
     isValidDateWithDash(dateString) {
       const regEx = /^\d{4}-\d{2}-\d{2}$/;

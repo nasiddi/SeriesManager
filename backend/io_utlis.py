@@ -5,6 +5,7 @@ import getopt
 import sys
 from constants import *
 
+
 def save_json(data_json, file):
     with open(file, 'w', encoding='utf-8') as f:
         f.write(json.dumps(data_json, indent=4, sort_keys=True))
@@ -12,7 +13,7 @@ def save_json(data_json, file):
 
 def load_json(file):
     try:
-        with open(os.path.join('data', file), 'r', encoding='utf-8') as json_data:
+        with open(file, 'r', encoding='utf-8') as json_data:
             j_data = json.load(json_data)
     except FileNotFoundError:
         return {}

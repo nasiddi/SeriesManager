@@ -1,4 +1,8 @@
+import platform
+import os
+
 DEBUG = True
+
 
 # Status
 NONE = 'none'
@@ -12,16 +16,28 @@ DOUBLE = 'Double'
 TRIPLE = 'Triple'
 
 # Locations
-SERIES_DIR = 'L:\\Series' if DEBUG else 'V:\\Series'
-ANIME_DIR = 'L:\\Anime' if DEBUG else 'V:\\Anime'
-TREE = 'C:\\Users\\nadina\\Documents\\code\\FileManager\\assets\\tree\\Series'
-HD_Movies = 'L:\\HD' if DEBUG else 'V:\\HD'
-SD_MOVIES = 'L:\\SD' if DEBUG else 'V:\\SD'
-FILE_DIR = 'L:\\complete\\' if DEBUG else 'V:\\downloads\\'
-META_FILE = 'metadata.json'
-SUB_DIR = 'T:\\Subs'
+
 LOCK_File = 'data\\shows.lock'
 OUT_FILE = 'OUTPUT_FILE'
+
+if platform.system() == 'Windows':
+    SERIES_DIR = 'L:\\Series' if DEBUG else 'V:\\Series'
+    ANIME_DIR = 'L:\\Anime' if DEBUG else 'V:\\Anime'
+    HD_Movies = 'L:\\HD' if DEBUG else 'V:\\HD'
+    SD_MOVIES = 'L:\\SD' if DEBUG else 'V:\\SD'
+    FILE_DIR = 'L:\\complete\\' if DEBUG else 'V:\\downloads\\'
+    SUB_DIR = 'T:\\Subs'
+    META_FILE = 'data\\metadata.json'
+
+else:
+    SERIES_DIR = '/Volumes/Downloads/Series' if DEBUG else '/Volumes/Video/downloads/Series'
+    ANIME_DIR = '/Volumes/Downloads/Anime' if DEBUG else '/Volumes/Video/downloads/Anime'
+    HD_Movies = '/Volumes/Downloads/HD' if DEBUG else '/Volumes/Video/downloads/HD'
+    SD_MOVIES = '/Volumes/Downloads/SD' if DEBUG else '/Volumes/Video/downloads/SD'
+    FILE_DIR = '/Volumes/Downloads/complete/' if DEBUG else '/Volumes/Video/downloads/'
+    SUB_DIR = '/Volumes/Temp/Subs'
+    META_FILE = 'data/metadata.json'
+
 
 # Extentions
 
@@ -58,6 +74,16 @@ wrongSymbols = [
       '!',
       '@',
     ]
+
+print('meta', os.path.exists(META_FILE))
+print('series', os.path.exists(SERIES_DIR))
+print('anime', os.path.exists(ANIME_DIR))
+print('hd', os.path.exists(HD_Movies))
+print('sd', os.path.exists(SD_MOVIES))
+print('file', os.path.exists(FILE_DIR))
+print('subs', os.path.exists(SUB_DIR))
+
+
 
 
 
