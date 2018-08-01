@@ -11,6 +11,8 @@
           <b-input
             id="title"
             v-model="f.title"
+            :state="checkTitle(f.title
+            )"
             class="mt-2"
             placeholder="Title" />
         </b-col>
@@ -64,6 +66,7 @@
             v-if="f.episode_option !== 'Single'"
             id="checkTitle2"
             v-model="f.title2"
+            :state="checkTitle(f.title2)"
             class="mt-2"
             placeholder="Title 2" />
         </b-col>
@@ -76,6 +79,7 @@
             v-if="f.episode_option === 'Triple'"
             id="title3"
             v-model="f.title3"
+            :state="checkTitle(f.title3)"
             class="mt-2"
             placeholder="Title 3" />
         </b-col>
@@ -126,56 +130,18 @@ export default {
   computed: {
   },
   watch: {
-    f: {
-      handler(file) {
-        if (this.checkWrongSymbols(file.title)) {
-          return this.updateSync(false);
-        }
-        if (this.checkWrongSymbols(file.title2)) {
-          return this.updateSync(false);
-        }
-        if (this.checkWrongSymbols(file.title3)) {
-          return this.updateSync(false);
-        }
-        if (file.t_o.s !== 'Series') {
-          if (file.title === '') {
-            return this.updateSync(false);
-          }
-          return this.updateSync(true);
-        }
-        if (file.series_name === '' || file.series_name === 'Series Name') {
-          return this.updateSync(false);
-        }
-        if ((file.series_name in this.shows && this.shows[file.series_name].name_needed) || (file.new_series && file.name_o.s === 'Name required')) {
-          if (file.title === '') {
-            return this.updateSync(false);
-          }
-          if (file.title2 === '' && file.e_o.s !== 'Single') {
-            return this.updateSync(false);
-          }
-          if (file.title3 === '' && file.e_o.s === 'Triple') {
-            return this.updateSync(false);
-          }
-        }
-        if (file.s_nr === '' || file.e_nr === '') {
-          return this.updateSync(false);
-        }
-        return this.updateSync(true);
-      },
-      deep: true,
-    },
   },
   mounted() {
   },
   methods: {
-    checkWrongSymbols(val) {
-      let found = false;
+    checkTitle(val) {
+      let valid = null;
       this.wrongSymbols.forEach((sym) => {
         if (val.includes(sym)) {
-          found = true;
+          valid = false;
         }
       });
-      return found;
+      return valid;
     },
     updateSync(primary) {
       if (primary) {
