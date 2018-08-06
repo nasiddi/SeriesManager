@@ -3,15 +3,23 @@ from season import Season
 
 class Series:
 
-    def __init__(self, series_name='', season_count=0, name_needed=False, status=NONE, location='', tvdb_id='', anime=''):
+    def __init__(self, series_name='',
+                 season_count=0,
+                 name_needed=False,
+                 status=NONE,
+                 location='',
+                 tvdb_id='',
+                 anime='',
+                 premiere='',
+                 final=''):
         self.series_name = series_name
         self.name_needed = name_needed
         self.status = status
         self.location = location
         self.seasons = {}
         self.last_ep = None
-        self.premiere = ''
-        self.final = ''
+        self.premiere = premiere
+        self.final = final
         self.names = {}
         self.tvdb_id = tvdb_id if not tvdb_id == 0 else ''
         self.anime = self.is_anime(location) if anime is '' else anime

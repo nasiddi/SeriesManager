@@ -85,20 +85,43 @@ export default {
     ],
   }),
   created() {
-    this.$http.post('jobs/update/prep').then(
-      (res) => {
-        const body = _.defaults(res.body, {
-        });
-        this.json = body;
-      },
-      () => {
-        this.$snotify.error('Failed to load data', { timeout: 0 });
-      },
-    );
+    this.loadData();
   },
   mounted() {
   },
   methods: {
+    loadData() {
+      this.notifLoading = this.$snotify.info('Loading', { timeout: 0 });
+      this.$http.post('jobs/update/prep').then(
+        (res) => {
+          const body = _.defaults(res.body, {
+          });
+          this.json = body;
+          this.$snotify.remove(this.notifLoading.id);
+          if ('shows_locked' in body) {
+            this.notifLock = this.$snotify.confirm('', 'Shows locked', {
+              timeout: 0,
+              buttons: [
+                { text: 'Unlock', action: () => this.unlockShows(), bold: true },
+              ],
+            });
+          }
+        },
+        () => {
+          this.$snotify.error('Failed to load data', { timeout: 0 });
+        },
+      );
+    },
+    unlockShows() {
+      this.$snotify.remove(this.notifLock.id);
+      this.$http.post('jobs/unlock')
+        .then(
+          (res) => {
+            this.json = res;
+            this.loadData();
+          },
+        );
+    },
     async update() {
       this.notifLoading = this.$snotify.info('Updating', { timeout: 0 });
       this.$http.post('jobs/update/save', this.json)

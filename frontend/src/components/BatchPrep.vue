@@ -1,104 +1,124 @@
 <template>
   <div>
-    <b-button
-      type="start"
-      variant="primary"
-      size="lg"
-      class="mt-3"
-      block
-      @click.prevent="start"
-    >Start</b-button>
-    <b-form-group>
-      <b-row class="mb-4">
-        <b-col
-          sm
-          class="px-2">
-          <b-input
-            v-model.lazy="reg1"
-            class="mt-2"
-            placeholder="Regex" />
-        </b-col>
-        <text-highlight
-          :queries="matchesSE1">
-          {{ matches1 }}
-        </text-highlight>
-        <b-col
-          sm
-          class="px-2">
-          <b-button
-            :variant="'primary'"
-            :style="{width: '100%'}"
-            class="mt-2"
-            @click="updateRegex"
-          >Update Regex</b-button>
-        </b-col>
-      </b-row>
-      <b-row
-        v-for="u in units"
-        :key="u.text">
-        <b-col
-          sm="10"
-          class="px-2">
+    <b-row class="mb-4">
+      <b-col
+        sm=""
+        class="px-2">
+        <b-button
+          :style="{width: '100%'}"
+          type="start"
+          variant="primary"
+          size="lg"
+          class="mt-3"
+          block
+          @click.prevent="start"
+        >Start</b-button>
+      </b-col>
+    </b-row>
+    <RegexForm
+      v-for="r in reg"
+      v-if="r.key < counter"
+      :key="r.key"
+      :regex="r"/>
+    <b-row class="mb-4">
+      <b-col
+        sm=""
+        class="px-2">
+        <b-button
+          :disabled="disableButton()"
+          :style="{width: '100%'}"
+          type="add"
+          variant="primary"
+          class="mt-3"
+          block
+          @click.prevent="addRegex"
+        >Add Regex</b-button>
+      </b-col>
+    </b-row>
+    <b-row class="mb-4">
+      <b-col
+        sm=""
+        class="px-2">
+        <b-button
+          :style="{width: '100%'}"
+          type="update"
+          variant="primary"
+          class="mt-3"
+          block
+          @click.prevent="updateRegex"
+        >Update Regex</b-button>
+      </b-col>
+    </b-row>
+    <b-row
+      v-for="u in units"
+      :key="u.text">
+      <b-col
+        sm="10"
+        class="px-2">
+        <b-card
+          v-if="'files' in u && u.files.length === 0"
+          no-body
+          class="px-2 py-2 mt-2">
+          <text-highlight
+            :queries="matches">
+            {{ u.text }}
+          </text-highlight>
+        </b-card>
+        <b-button
+          v-b-toggle="u.text"
+          v-if="'files' in u && u.files.length > 0"
+          :pressed.sync="u.opened"
+          :variant="'outline-secondary'"
+          :style="{width: '100%'}"
+          class="mt-2"
+        >{{ u.text }}</b-button>
+        <b-collapse
+          :id="u.text">
           <b-card
-            v-if="u.value.length === 0"
             no-body
-            class="px-2 py-2 mt-2"/>
-          <b-button
-            v-b-toggle="u.text"
-            v-if="u.value.length > 0"
-            :variant="'outline-secondary'"
-            :style="{width: '100%'}"
-            class="mt-2"
-          >{{ u.text }}</b-button>
-          <b-collapse
-            :id="u.text">
-            <b-card
-              no-body
-              class="px-2 py-2 mt-2">
-              <text-highlight
-                v-for="f in u.value"
-                :key="f"
-                queries="S[0-9]{2}E[0-9]{2}">
-                {{ f }}
-              </text-highlight>
-            </b-card>
-          </b-collapse>
-        </b-col>
-        <b-col
-          sm
-          class="px-2">
-          <b-button
-            :pressed.sync="u.select"
-            :variant="'outline-primary'"
-            :style="{width: '100%'}"
-            class="mt-2"
-          >Select</b-button>
-
-        </b-col>
-      </b-row>
-    </b-form-group>
+            class="px-2 py-2 mt-2">
+            <text-highlight
+              v-for="f in u.files"
+              :key="f"
+              :queries="matches">
+              {{ f }}
+            </text-highlight>
+          </b-card>
+        </b-collapse>
+      </b-col>
+      <b-col
+        sm
+        class="px-2">
+        <b-button
+          :pressed.sync="u.select"
+          :variant="'outline-primary'"
+          :style="{width: '100%'}"
+          class="mt-2"
+        >Select</b-button>
+      </b-col>
+    </b-row>
   </div>
 </template>
 
 <script>
 import TextHighlight from 'vue-text-highlight';
+import RegexForm from './RegexForm';
+
 
 const _ = require('lodash');
 
 export default {
   components: {
     TextHighlight,
+    RegexForm,
   },
   data: () => ({
-    reg1: 'S[0-9]{2}E[0-9]{2}',
-    matches1: '',
-    matchesSE1: [],
+    reg: [],
     units: [],
+    counter: 1,
+    matches: [],
   }),
   watch: {
-    reg1: function r(val) {
-      this.updateRegex(val);
-    },
   },
   created() {
     this.$http.post('jobs/batch/files').then(
@@ -118,6 +138,9 @@ export default {
     this.updateRegex();
   },
   methods: {
+    disableButton() {
+      return this.counter === 10;
+    },
     async start() {
       this.$http
         .post('jobs/batch/match', this.json)
@@ -134,36 +157,51 @@ export default {
           },
         );
     },
-    updateRegex(r) {
+    updateRegex() {
       if (this.units.length === 0) {
         setTimeout(this.updateRegex, 250);
-        return '';
+        return;
       }
-      let matches1 = '';
       this.matches = [];
-      this.units.forEach((o) => {
-        if (o.value.length === 0) {
-          const matched = o.text.match(r.value);
-          if (matched === null) { return; }
-          matched.forEach((m) => {
-            if (m !== null) {
-              this.matches.push(m);
-              matches1 = m;
-            }
-          });
-        } else {
-          o.value.forEach((v) => {
-            const matched = v.match(r.value);
-            if (matched === null) { return; }
-            matched.forEach((m) => {
-              if (m !== null) {
-                this.matches.push(m);
+      this.reg.forEach((r) => {
+        const regex = r;
+        regex.matches = [];
+        regex.sxe = [];
+        if (r.regex === '') { return; }
+        this.units.forEach((u) => {
+          if (u.files.length > 0) {
+            u.files.forEach((f) => {
+              const match = f.match(r.regex);
+              if (match !== null) {
+                regex.matches = r.matches.concat(match);
+                this.matches = this.matches.concat(match);
+                match.forEach((m) => {
+                  if (r.s_start !== '' && r.s_end !== '') {
+                    r.sxe.push(m.slice(r.s_start, r.s_end));
+                  }
+                  if (r.e_start !== '' && r.e_end !== '') {
+                    r.sxe.push(m.slice(r.e_start, r.e_end));
+                  }
+                });
               }
             });
-          });
-        }
+          } else {
+            const match = u.text.match(r.regex);
+            if (match !== null) {
+              regex.matches = r.matches.concat(match);
+              this.matches = this.matches.concat(match);
+              match.forEach((m) => {
+                if (r.s_start !== '' && r.s_end !== '') {
+                  r.sxe.push(m.slice(r.s_start, r.s_end));
+                }
+                if (r.e_start !== '' && r.e_end !== '') {
+                  r.sxe.push(m.slice(r.e_start, r.e_end));
+                }
+              });
+            }
+          }
+        });
       });
-      return matches1;
     },
     isValidDateWithDash(dateString) {
       const regEx = /^\d{4}-\d{2}-\d{2}$/;
@@ -183,57 +221,9 @@ export default {
       }
       return '';
     },
-    update() {
-      if (this.tvdb_id === '') {
-        const reqBody = { series_name: this.series_name, tvdb_id: this.tvdb_id, new_series: true };
-        this.$http.post('jobs/tvdb', reqBody)
-          .then(
-            (res) => {
-              const body = _.defaults(res.body, {
-              });
-              if ('newShows' in body) {
-                this.showSelect = body.newShows;
-                const [s] = body.newShows;
-                this.tvdb_id = s.value;
-              }
-            },
-            () => {
-              this.$snotify.error('Failed to load data', { timeout: 0 });
-            },
-          );
-      } else {
-        if (this.isValidDateWithDash(this.premiere)) {
-          if (this.status !== 'Ended') {
-            if (this.final === '') {
-              return;
-            }
-            this.final = '';
-            return;
-          }
-        }
-        if (this.isValidDateWithDash(this.final)) { return; }
-        if (this.tvdb_id === '') {
-          return;
-        }
-        this.$http.post('jobs/tvdb/dates', { tvdb_id: this.tvdb_id })
-          .then(
-            (res) => {
-              const body = _.defaults(res.body, {
-              });
-              if ('premiere' in body) {
-                this.premiere = body.premiere;
-              }
-              if (this.status === 'Ended' && 'final' in body) {
-                this.final = body.final;
-              }
-              if (this.status !== 'Ended') {
-                this.final = '';
-              }
-            },
-            () => {
-              this.$snotify.error('Failed to load data', { timeout: 0 });
-            },
-          );
+    addRegex() {
+      if (this.counter <= 10) {
+        this.counter += 1;
       }
     },
   },

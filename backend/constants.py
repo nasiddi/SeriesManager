@@ -75,13 +75,13 @@ wrongSymbols = [
       '@',
     ]
 
-print('meta', os.path.exists(META_FILE))
-print('series', os.path.exists(SERIES_DIR))
-print('anime', os.path.exists(ANIME_DIR))
-print('hd', os.path.exists(HD_Movies))
-print('sd', os.path.exists(SD_MOVIES))
-print('file', os.path.exists(FILE_DIR))
-print('subs', os.path.exists(SUB_DIR))
+# print('meta', os.path.exists(META_FILE))
+# print('series', os.path.exists(SERIES_DIR))
+# print('anime', os.path.exists(ANIME_DIR))
+# print('hd', os.path.exists(HD_Movies))
+# print('sd', os.path.exists(SD_MOVIES))
+# print('file', os.path.exists(FILE_DIR))
+# print('subs', os.path.exists(SUB_DIR))
 
 
 

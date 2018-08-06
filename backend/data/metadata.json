@@ -720,6 +720,13 @@
         "status": "Ended",
         "tvdb_id": 260315
     },
+    "Outlander": {
+        "final": "",
+        "name_needed": true,
+        "premiere": "2014-08-09",
+        "status": "Hiatus",
+        "tvdb_id": 270408
+    },
     "Penguins - Spy in the Huddle": {
         "final": "2013-02-25",
         "name_needed": false,

@@ -1,6 +1,6 @@
 import json
 import pickle
-import os
+import time
 import getopt
 import sys
 from constants import *
@@ -28,6 +28,15 @@ def load_shows(reload=False):
     if reload:
         return
     return pickle_load('shows')
+
+
+def wait_on_creation(file_path):
+    start = time.time()
+    while not os.path.exists(file_path) and time.time() - start < 5:
+        pass
+    if os.path.exists(file_path):
+        return True
+    return False
 
 
 def save_shows(shows):

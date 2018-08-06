@@ -89,14 +89,14 @@ def sync_queue():
             print('rename', e)
             file.report['error'].append('Copy failed')
             continue
-        if wait_on_creation(file.new_location):
+        if io_utlis.wait_on_creation(file.new_location):
             file.report['success'].append('Copy successful')
         else:
             file.report['error'].append('Copy failed')
         if file.type_option == 'Series' and file.extention not in SUBS:
             show = SHOWS[file.series_name]
             if not show.status == file.status:
-                file.report['info'].append('Status changed')
+                file.report['info'].append('Status changed to ' + file.status)
             show.status = file.status
             episode = Episode(location=file.new_location,
                               episode_option=file.episode_option,
@@ -146,14 +146,14 @@ def delete_file(file):
         file.report['error'].append('Delete failed')
         print(e)
         return
-    if wait_on_creation:
+    if io_utlis.wait_on_creation:
         file.report['success'].append('Delete successful')
     else:
         file.report['error'].append('Delete failed')
 
 
 def create_new_series(file):
-    basepath = get_basepath(file).rsplit('\\',1)[0]
+    basepath = get_basepath(file).rsplit('\\', 1)[0]
     SHOWS.update({file.series_name: Series(series_name=file.series_name, status=file.status, tvdb_id=file.tvdb_id,
                   anime=file.anime, name_needed=file.name_needed, location=basepath)})
     file.report['info'].append('Series created')
@@ -190,17 +190,8 @@ def get_basepath(file):
     basepath = os.path.join(ANIME_DIR if file.anime else SERIES_DIR, file.series_name, 'Season {:02d}'.format(file.s_nr))
     if not os.path.exists(basepath):
         os.makedirs(basepath)
-    wait_on_creation(basepath)
+    io_utlis.wait_on_creation(basepath)
     return basepath
-
-
-def wait_on_creation(file_path):
-    start = time.time()
-    while not os.path.exists(file_path) and time.time() - start < 5:
-        pass
-    if os.path.exists(file_path):
-        return True
-    return False
 
 
 def single_format(file):

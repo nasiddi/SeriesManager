@@ -1,10 +1,156 @@
 {
+    "anime": false,
     "files": [
+        {
+            "e_nr": 1,
+            "episode_option": "Single",
+            "location": "Outlander Season 2\\Outlander Season 2 Episode 01- Through a Glass, Darkly.mp4",
+            "s_nr": 2,
+            "subs": false,
+            "sync": true,
+            "title": "",
+            "title2": "",
+            "title3": ""
+        },
+        {
+            "e_nr": "",
+            "episode_option": "Single",
+            "location": "Outlander Season 2\\Outlander Season 2 Episode 02 \u2013 Not in Scotland Anymore.mp4",
+            "s_nr": "",
+            "subs": false,
+            "sync": true,
+            "title": "",
+            "title2": "",
+            "title3": ""
+        },
+        {
+            "e_nr": "",
+            "episode_option": "Single",
+            "location": "Outlander Season 2\\Outlander Season 2 Episode 03- Useful Occupations and Deceptions.mp4",
+            "s_nr": "",
+            "subs": false,
+            "sync": true,
+            "title": "",
+            "title2": "",
+            "title3": ""
+        },
+        {
+            "e_nr": "",
+            "episode_option": "Single",
+            "location": "Outlander Season 2\\Outlander Season 2 Episode 04- La Dame Blanche.mp4",
+            "s_nr": "",
+            "subs": false,
+            "sync": true,
+            "title": "",
+            "title2": "",
+            "title3": ""
+        },
+        {
+            "e_nr": "",
+            "episode_option": "Single",
+            "location": "Outlander Season 2\\Outlander Season 2 Episode 05- Untimely Resurrection.mp4",
+            "s_nr": "",
+            "subs": false,
+            "sync": true,
+            "title": "",
+            "title2": "",
+            "title3": ""
+        },
+        {
+            "e_nr": "",
+            "episode_option": "Single",
+            "location": "Outlander Season 2\\Outlander Season 2 Episode 06- Best Laid Schemes\u2026.mp4",
+            "s_nr": "",
+            "subs": false,
+            "sync": true,
+            "title": "",
+            "title2": "",
+            "title3": ""
+        },
+        {
+            "e_nr": "",
+            "episode_option": "Single",
+            "location": "Outlander Season 2\\Outlander Season 2 Episode 07 \u2013 Faith.mp4",
+            "s_nr": "",
+            "subs": false,
+            "sync": true,
+            "title": "",
+            "title2": "",
+            "title3": ""
+        },
+        {
+            "e_nr": "",
+            "episode_option": "Single",
+            "location": "Outlander Season 2\\Outlander Season 2 Episode 08 \u2013 The Fox\u2019s Lair.mp4",
+            "s_nr": "",
+            "subs": false,
+            "sync": true,
+            "title": "",
+            "title2": "",
+            "title3": ""
+        },
+        {
+            "e_nr": "",
+            "episode_option": "Single",
+            "location": "Outlander Season 2\\Outlander Season 2 Episode 09- Je Suis Prest.mp4",
+            "s_nr": "",
+            "subs": false,
+            "sync": true,
+            "title": "",
+            "title2": "",
+            "title3": ""
+        },
+        {
+            "e_nr": "",
+            "episode_option": "Single",
+            "location": "Outlander Season 2\\Outlander Season 2 Episode 10- Prestonpans.mp4",
+            "s_nr": "",
+            "subs": false,
+            "sync": true,
+            "title": "",
+            "title2": "",
+            "title3": ""
+        },
+        {
+            "e_nr": "",
+            "episode_option": "Single",
+            "location": "Outlander Season 2\\Outlander Season 2 Episode 11- Vengeance Is Mine.mp4",
+            "s_nr": "",
+            "subs": false,
+            "sync": true,
+            "title": "",
+            "title2": "",
+            "title3": ""
+        },
+        {
+            "e_nr": "",
+            "episode_option": "Single",
+            "location": "Outlander Season 2\\Outlander Season 2 Episode 12- The Hail Mary.mp4",
+            "s_nr": "",
+            "subs": false,
+            "sync": true,
+            "title": "",
+            "title2": "",
+            "title3": ""
+        },
+        {
+            "e_nr": "",
+            "episode_option": "Single",
+            "location": "Outlander Season 2\\Outlander Season 2 Episode 13- Dragonfly in Amber.mp4",
+            "s_nr": "",
+            "subs": false,
+            "sync": true,
+            "title": "",
+            "title2": "",
+            "title3": ""
+        },
         {
             "e_nr": 11,
             "episode_option": "Single",
             "location": "Outlander.S02E11.HDTV.x264-KILLERS[ettv]\\Outlander.S02E11.HDTV.x264-KILLERS[ettv].mkv",
             "s_nr": 2,
+            "subs": false,
+            "sync": true,
             "title": "",
             "title2": "",
             "title3": ""
@@ -12,11 +158,30 @@
         {
             "e_nr": 7,
             "episode_option": "Single",
-            "location": "Outlander.S03E07.Cr\u00e8me.de.Menthe.720p.WEBRip.2CH.x265.HEVC-PSA.mkv",
+            "location": "Outlander.S03E07.Cr\u00e8me.de.Menthe.720p.WEBRip.2CH.x265.HEVC-PSA - Copy.mkv",
             "s_nr": 3,
+            "subs": null,
+            "sync": true,
+            "title": "",
+            "title2": "",
+            "title3": ""
+        },
+        {
+            "e_nr": 7,
+            "episode_option": "Single",
+            "location": "Outlander.S03E07.Cr\u00e8me.de.Menthe.720p.WEBRip.2CH.x265.HEVC-PSA.srt",
+            "s_nr": 3,
+            "subs": null,
+            "sync": true,
             "title": "",
             "title2": "",
             "title3": ""
         }
-    ]
+    ],
+    "final": "",
+    "name_needed": true,
+    "premiere": "",
+    "series_name": "",
+    "status": "",
+    "tvdb_id": ""
 }

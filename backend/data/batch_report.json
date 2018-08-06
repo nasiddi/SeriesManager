@@ -1,0 +1,30 @@
+{
+    "error": [
+        "Copy failed: L:\\Series\\Outlander\\Season 02\\Outlander 02x11 - Vengeance Is Mine.mkv"
+    ],
+    "info": [
+        "Series Name: Outlander",
+        "Status: Hiatus",
+        "Season 2 created",
+        "Season 3 created"
+    ],
+    "success": [
+        "Copy successful: L:\\Series\\Outlander\\Season 02\\Outlander 02x01 & 02x02 - Through a Glass, Darkly & Not in Scotland Anymore.mp4",
+        "Copy successful: L:\\Series\\Outlander\\Season 02\\Outlander 02x03 - Useful Occupations and Deceptions.mp4",
+        "Copy successful: L:\\Series\\Outlander\\Season 02\\Outlander 02x04 & 02x05 & 02x06 - La Dame Blanche & Untimely Resurrection & Best Laid Schemes....mp4",
+        "Copy successful: L:\\Series\\Outlander\\Season 02\\Outlander 02x07 - Faith.mp4",
+        "Copy successful: L:\\Series\\Outlander\\Season 02\\Outlander 02x08 - The Fox's Lair.mp4",
+        "Copy successful: L:\\Series\\Outlander\\Season 02\\Outlander 02x09 - Je Suis Prest.mp4",
+        "Copy successful: L:\\Series\\Outlander\\Season 02\\Outlander 02x10 - Prestonpans.mp4",
+        "Copy successful: L:\\Series\\Outlander\\Season 02\\Outlander 02x12 - The Hail Mary.mp4",
+        "Copy successful: L:\\Series\\Outlander\\Season 02\\Outlander 02x13 - Dragonfly in Amber.mp4",
+        "Copy successful: L:\\Series\\Outlander\\Season 03\\Outlander 03x07 - Creme De Menthe.mkv",
+        "Copy successful: T:\\Subs\\Outlander 03x07 - Creme De Menthe.srt"
+    ],
+    "summary": {
+        "2": "Season 2: 9 Files (12 Episodes) copied",
+        "3": "Season 3: 1 Files (1 Episodes) copied",
+        "subs": "1 Subtitles copied",
+        "total": "10 Files (13 Episodes) copied"
+    }
+}

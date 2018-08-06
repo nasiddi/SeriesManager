@@ -1,3 +1,7 @@
+/* eslint no-console: 0 */
+/* eslint no-undef: 0 */
+/* eslint max-len: 0 */
+/* eslint no-unused-vars: 0 */
 const winston = require('winston');
 const db = require('sqlite');
 const { spawn } = require('child_process');
@@ -38,19 +42,13 @@ function printOutput(child, uuid) {
 }
 
 async function getFromProjectId(id) {
-  const project = await db.get(
-    'SELECT * FROM projects WHERE id = $id',
-    {
-      $id: id,
-    },
-  );
+  const project = await db.get('SELECT * FROM projects WHERE id = $id', {
+    $id: id,
+  });
 
-  const file = await db.get(
-    'SELECT * FROM files WHERE id = $id',
-    {
-      $id: project.file_id,
-    },
-  );
+  const file = await db.get('SELECT * FROM files WHERE id = $id', {
+    $id: project.file_id,
+  });
 
   return {
     project,
@@ -59,12 +57,9 @@ async function getFromProjectId(id) {
 }
 
 async function getFromProject(uuid) {
-  const id = await db.get(
-    'SELECT id FROM projects WHERE uuid = $uuid',
-    {
-      $uuid: uuid,
-    },
-  );
+  const id = await db.get('SELECT id FROM projects WHERE uuid = $uuid', {
+    $uuid: uuid,
+  });
 
   const { project, file } = await getFromProjectId(id.id);
   return {
@@ -74,12 +69,9 @@ async function getFromProject(uuid) {
 }
 
 async function getFromJobId(id) {
-  const job = await db.get(
-    'SELECT * FROM jobs WHERE id = $id',
-    {
-      $id: id,
-    },
-  );
+  const job = await db.get('SELECT * FROM jobs WHERE id = $id', {
+    $id: id,
+  });
 
   const jobFiles = {
     data: false,
@@ -88,30 +80,21 @@ async function getFromJobId(id) {
   };
 
   if (job.file_id_data) {
-    jobFiles.data = await db.get(
-      'SELECT * FROM files WHERE id = $id',
-      {
-        $id: job.file_id_data,
-      },
-    );
+    jobFiles.data = await db.get('SELECT * FROM files WHERE id = $id', {
+      $id: job.file_id_data,
+    });
   }
 
   if (job.file_id_train) {
-    jobFiles.train = await db.get(
-      'SELECT * FROM files WHERE id = $id',
-      {
-        $id: job.file_id_train,
-      },
-    );
+    jobFiles.train = await db.get('SELECT * FROM files WHERE id = $id', {
+      $id: job.file_id_train,
+    });
   }
 
   if (job.file_id_test) {
-    jobFiles.test = await db.get(
-      'SELECT * FROM files WHERE id = $id',
-      {
-        $id: job.file_id_test,
-      },
-    );
+    jobFiles.test = await db.get('SELECT * FROM files WHERE id = $id', {
+      $id: job.file_id_test,
+    });
   }
 
   return {
@@ -121,16 +104,11 @@ async function getFromJobId(id) {
 }
 
 async function getFromJob(uuid) {
-  const id = await db.get(
-    'SELECT id FROM jobs WHERE uuid = $uuid',
-    {
-      $uuid: uuid,
-    },
-  );
+  const id = await db.get('SELECT id FROM jobs WHERE uuid = $uuid', {
+    $uuid: uuid,
+  });
 
-  const {
-    job, jobFiles,
-  } = await getFromJobId(id.id);
+  const { job, jobFiles } = await getFromJobId(id.id);
 
   return {
     job,
@@ -139,30 +117,19 @@ async function getFromJob(uuid) {
 }
 
 async function getFromProcess(processId) {
-  const process = await db.get(
-    'SELECT * FROM processes WHERE id = $id',
-    {
-      $id: processId,
-    },
-  );
+  const process = await db.get('SELECT * FROM processes WHERE id = $id', {
+    $id: processId,
+  });
 
-  const algorithmConfig = await db.get(
-    'SELECT * FROM algorithm_configs WHERE id = $id',
-    {
-      $id: process.algorithm_config_id,
-    },
-  );
+  const algorithmConfig = await db.get('SELECT * FROM algorithm_configs WHERE id = $id', {
+    $id: process.algorithm_config_id,
+  });
 
-  const algorithm = await db.get(
-    'SELECT * FROM algorithms WHERE id = $id',
-    {
-      $id: algorithmConfig.algorithm_id,
-    },
-  );
+  const algorithm = await db.get('SELECT * FROM algorithms WHERE id = $id', {
+    $id: algorithmConfig.algorithm_id,
+  });
 
-  const {
-    job, jobFiles,
-  } = await getFromJobId(process.job_id);
+  const { job, jobFiles } = await getFromJobId(process.job_id);
 
   return {
     process,
@@ -172,7 +139,6 @@ async function getFromProcess(processId) {
     jobFiles,
   };
 }
-
 
 async function run(
   what,
@@ -190,7 +156,9 @@ async function run(
   let args = '';
   if (_.isObject(dataFile)) {
     args = replaceConstants(
-      convertArguments(`["${what}.py", "--output=$output$", "--config=$config$", "--train=$train$", "--test=$test$"]`),
+      convertArguments(
+        `["${what}.py", "--output=$output$", "--config=$config$", "--train=$train$", "--test=$test$"]`,
+      ),
       {
         output: outputFile,
         config: configFile.name,
@@ -219,18 +187,12 @@ async function run(
 
   fs.writeFileSync(
     configFile.name,
-    _.isObject(configString)
-      ? JSON.stringify(configString)
-      : configString,
+    _.isObject(configString) ? JSON.stringify(configString) : configString,
   );
 
-  const child = spawn(
-    executable,
-    args, {
-      cwd,
-    },
-  );
-
+  const child = spawn(executable, args, {
+    cwd,
+  });
 
   winston.verbose(`started ${what} for ${uuid} with PID ${child.pid}`);
   winston.verbose(JSON.stringify(args));
@@ -273,15 +235,12 @@ async function corpusAnalysis(uuid) {
     file.filepath_parsed,
     project.corpus_analysis_config,
     outputFile,
-    () => { },
+    () => {},
     async (code) => {
       if (code === 0) {
-        await db.run(
-          'UPDATE projects SET is_corpus_analyzed = 1 WHERE uuid = $uuid',
-          {
-            $uuid: uuid,
-          },
-        );
+        await db.run('UPDATE projects SET is_corpus_analyzed = 1 WHERE uuid = $uuid', {
+          $uuid: uuid,
+        });
       }
     },
   );
@@ -294,71 +253,90 @@ async function reloadSeries(res) {
     '',
     '',
     '',
-    () => { },
+    () => {},
     async (code, signal) => {
-      if (code === 0){
-        result = 'done'
+      if (code === 0) {
+        result = 'done';
       } else {
-        result = 'failed'
+        result = 'failed';
       }
       res.send(result);
+    },
+  );
+}
+
+async function unlockShows(res) {
+  await run(
+    'unlock_shows',
+    'unlock_shows',
+    '',
+    '',
+    '',
+    () => {},
+    async (code, signal) => {
+      if (code === 0) {
+        result = 'done';
+      } else {
+        result = 'failed';
       }
+      res.send(result);
+    },
   );
 }
 
 async function prepFiles(res) {
   const outputFile = path.join(config.directories.storage, 'names');
-  console.log('hi there')
+  console.log('hi there');
   await run(
     'file_loader',
     '',
     '',
     '',
     outputFile,
-    () => { },
-    async (code, signal) => { 
+    () => {},
+    async (code, signal) => {
       if (!fs.existsSync(outputFile)) {
         res.sendStatus(204).end();
         return;
       }
 
       fs.readJson(outputFile, (err, file) => {
-      if (err) {
-        winston.error(err);
-        res.sendStatus(500).end();
-      }
-      fs.unlink(outputFile)
-      res.json(file);
-  });
-    }
+        if (err) {
+          winston.error(err);
+          res.sendStatus(500).end();
+        }
+        fs.unlink(outputFile);
+        res.json(file);
+      });
+    },
   );
 }
 
 async function batchFiles(res) {
   const outputFile = path.join(config.directories.storage, 'batchFiles');
-  console.log('hi there')
+  console.log('hi there');
   await run(
     'batch_files',
     '',
     '',
     '',
     outputFile,
-    () => { },
-    async (code, signal) => { 
+    () => {},
+    async (code, signal) => {
       if (!fs.existsSync(outputFile)) {
         res.sendStatus(204).end();
         return;
       }
 
       fs.readJson(outputFile, (err, file) => {
-      if (err) {
-        winston.error(err);
-        res.sendStatus(500).end();
-      }
-      fs.unlink(outputFile)
-      res.json(file);
-  });
-    }
+        if (err) {
+          winston.error(err);
+          res.sendStatus(500).end();
+        }
+        fs.unlink(outputFile);
+        res.json(file);
+      });
+    },
   );
 }
 
@@ -370,8 +348,8 @@ async function updatePrep(res) {
     '',
     '',
     outputFile,
-    () => { },
-    async (code, signal) => { 
+    () => {},
+    async (code, signal) => {
       if (!fs.existsSync(outputFile)) {
         res.sendStatus(204).end();
         return;
@@ -382,24 +360,24 @@ async function updatePrep(res) {
           winston.error(err);
           res.sendStatus(500).end();
         }
-      fs.unlink(outputFile)
-      res.json(file);
+        fs.unlink(outputFile);
+        res.json(file);
       });
-    }
+    },
   );
 }
 
 async function updateSave(body, res) {
   const outputFile = path.join(config.directories.storage, 'update_save');
-  console.log(body[0])
+  console.log(body[0]);
   await run(
     'update_save',
     '',
     '',
     body,
     outputFile,
-    () => { },
-    async (code, signal) => { 
+    () => {},
+    async (code, signal) => {
       if (!fs.existsSync(outputFile)) {
         res.sendStatus(204).end();
         return;
@@ -410,10 +388,10 @@ async function updateSave(body, res) {
           winston.error(err);
           res.sendStatus(500).end();
         }
-      fs.unlink(outputFile)
-      res.json(file);
+        fs.unlink(outputFile);
+        res.json(file);
       });
-    }
+    },
   );
 }
 
@@ -425,8 +403,8 @@ async function syncFiles(body, res) {
     body,
     '',
     outputFile,
-    () => { },
-    async (code, signal) => { 
+    () => {},
+    async (code, signal) => {
       if (!fs.existsSync(outputFile)) {
         res.sendStatus(204).end();
         return;
@@ -437,11 +415,11 @@ async function syncFiles(body, res) {
           winston.error(err);
           res.sendStatus(500).end();
         }
-      fs.unlink(outputFile)
-      fs.unlink(body)
-      res.json(file);
+        fs.unlink(outputFile);
+        fs.unlink(body);
+        res.json(file);
       });
-    }
+    },
   );
 }
 
@@ -453,8 +431,8 @@ async function batchMatch(body, res) {
     body,
     '',
     outputFile,
-    () => { },
-    async (code, signal) => { 
+    () => {},
+    async (code, signal) => {
       if (!fs.existsSync(outputFile)) {
         res.sendStatus(204).end();
         return;
@@ -465,9 +443,36 @@ async function batchMatch(body, res) {
           winston.error(err);
           res.sendStatus(500).end();
         }
-      res.json(file);
+        res.json(file);
       });
-    }
+    },
+  );
+}
+
+async function batchSync(body, res) {
+  const outputFile = path.join(config.directories.storage, 'batch_report');
+  console.log(body[0]);
+  await run(
+    'batch_sync',
+    '',
+    '',
+    body,
+    outputFile,
+    () => {},
+    async (code, signal) => {
+      if (!fs.existsSync(outputFile)) {
+        res.sendStatus(204).end();
+        return;
+      }
+
+      fs.readJson(outputFile, (err, file) => {
+        if (err) {
+          winston.error(err);
+          res.sendStatus(500).end();
+        }
+        res.json(file);
+      });
+    },
   );
 }
 
@@ -497,13 +502,16 @@ async function preprocess(uuid, exitCallback) {
       evaluate: 0,
     },
     outputFile,
-    () => { },
+    () => {},
     async (code, signal) => {
       if (code === 0) {
-        await db.run('UPDATE jobs SET filepath_preprocessed = $filepath_preprocessed WHERE uuid = $uuid', {
-          $filepath_preprocessed: outputFile,
-          $uuid: job.uuid,
-        });
+        await db.run(
+          'UPDATE jobs SET filepath_preprocessed = $filepath_preprocessed WHERE uuid = $uuid',
+          {
+            $filepath_preprocessed: outputFile,
+            $uuid: job.uuid,
+          },
+        );
       }
       exitCallback(code, signal);
     },
@@ -519,12 +527,9 @@ async function preprocessEvaluate(processId, evalId, input, exitCallback) {
   const isFile = input.type === 'file';
   let file;
   if (isFile) {
-    file = await db.get(
-      'SELECT * FROM files WHERE uuid = $uuid',
-      {
-        $uuid: input.value,
-      },
-    );
+    file = await db.get('SELECT * FROM files WHERE uuid = $uuid', {
+      $uuid: input.value,
+    });
   }
 
   run(
@@ -540,7 +545,7 @@ async function preprocessEvaluate(processId, evalId, input, exitCallback) {
       evaluate: 1,
     },
     outputFile,
-    () => { },
+    () => {},
     async (code, signal) => {
       exitCallback(code, signal);
     },
@@ -559,13 +564,10 @@ async function classification(processId, exitCallback) {
     'classification',
     job.uuid,
     job.filepath_preprocessed,
-    _.merge(
-      JSON.parse(algorithm.config_base),
-      {
-        columnMapping: JSON.parse(file.corpus_analysis_config).columnMapping,
-        evaluate: 0,
-      },
-    ),
+    _.merge(JSON.parse(algorithm.config_base), {
+      columnMapping: JSON.parse(file.corpus_analysis_config).columnMapping,
+      evaluate: 0,
+    }),
     outputFile,
     (child) => {
       queries.updateProcessStatus(processId, 'running');
@@ -592,27 +594,21 @@ async function classificationEvaluate(processId, evalId, input, exitCallback) {
   const isFile = input.type === 'file';
   let file;
   if (isFile) {
-    file = await db.get(
-      'SELECT * FROM files WHERE uuid = $uuid',
-      {
-        $uuid: input.value,
-      },
-    );
+    file = await db.get('SELECT * FROM files WHERE uuid = $uuid', {
+      $uuid: input.value,
+    });
   }
 
   run(
     'classification',
     job.uuid,
     outputFile,
-    _.merge(
-      JSON.parse(algorithm.config_base),
-      {
-        columnMapping: isFile ? JSON.parse(file.corpus_analysis_config).columnMapping : {},
-        evaluate: 1,
-      },
-    ),
+    _.merge(JSON.parse(algorithm.config_base), {
+      columnMapping: isFile ? JSON.parse(file.corpus_analysis_config).columnMapping : {},
+      evaluate: 1,
+    }),
     jsonOutput,
-    () => { },
+    () => {},
     (code, signal) => {
       fs.closeSync(fs.openSync(doneFile, 'w'));
       exitCallback(code, signal);
@@ -636,7 +632,7 @@ async function baseline(uuid, exitCallback) {
       classifier: 'base',
     },
     outputFile,
-    () => { },
+    () => {},
     (code, signal) => {
       exitCallback(code, signal, outputFile);
     },
@@ -644,14 +640,14 @@ async function baseline(uuid, exitCallback) {
 }
 
 async function reload(exitCallback) {
-  const outputFile = path.join(config.directories.classification, `/base`);
+  const outputFile = path.join(config.directories.classification, '/base');
   run(
     'classification',
     {
       reload: 0,
     },
     outputFile,
-    () => { },
+    () => {},
     (code, signal) => {
       exitCallback(code, signal, outputFile);
     },
@@ -668,7 +664,7 @@ async function compareClassifiers(uuid, baseDir, exitCallback) {
     dataFile,
     null,
     outputFile,
-    () => { },
+    () => {},
     (code, signal) => {
       exitCallback(code, signal, outputFile);
     },
@@ -690,4 +686,6 @@ module.exports = {
   updateSave,
   batchFiles,
   batchMatch,
+  batchSync,
+  unlockShows,
 };

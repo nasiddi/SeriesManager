@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-form @submit="onSubmit">
-      <b-row>
+      <b-row class="mt-5">
         <b-col>
           <b-form-group
             label-for="name"

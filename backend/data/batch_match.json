@@ -1,35 +1,221 @@
 {
     "regex": [
         {
-            "text": "A",
-            "value": "S[0-9]{2}E[0-9]{2}"
+            "e_end": 6,
+            "e_start": 4,
+            "key": 0,
+            "matches": [
+                "S02E11",
+                "S02E11",
+                "S02E11",
+                "S02E11",
+                "S03E07",
+                "S03E07",
+                "S03E07",
+                "S03E07",
+                "S03E07",
+                "S03E07"
+            ],
+            "regex": "S[0-9]{2}E[0-9]{2}",
+            "s_end": 3,
+            "s_start": 1,
+            "sxe": [
+                "02",
+                "11",
+                "02",
+                "11",
+                "02",
+                "11",
+                "02",
+                "11",
+                "03",
+                "07",
+                "03",
+                "07",
+                "03",
+                "07",
+                "03",
+                "07",
+                "03",
+                "07",
+                "03",
+                "07"
+            ]
         },
         {
-            "text": "B",
-            "value": "s[0-9]{2}e[0-9]{2}"
+            "e_end": 14,
+            "e_start": 12,
+            "key": 1,
+            "matches": [
+                "n 2 Episode 01",
+                "n 2 Episode 02",
+                "n 2 Episode 03",
+                "n 2 Episode 04",
+                "n 2 Episode 05",
+                "n 2 Episode 06",
+                "n 2 Episode 07",
+                "n 2 Episode 08",
+                "n 2 Episode 09",
+                "n 2 Episode 10",
+                "n 2 Episode 11",
+                "n 2 Episode 12",
+                "n 2 Episode 13",
+                "n 2 Episode 01",
+                "n 2 Episode 02",
+                "n 2 Episode 03",
+                "n 2 Episode 04",
+                "n 2 Episode 05",
+                "n 2 Episode 06",
+                "n 2 Episode 07",
+                "n 2 Episode 08",
+                "n 2 Episode 09",
+                "n 2 Episode 10",
+                "n 2 Episode 11",
+                "n 2 Episode 12",
+                "n 2 Episode 13"
+            ],
+            "regex": "n [0-9] Episode [0-9]{2}",
+            "s_end": 3,
+            "s_start": 2,
+            "sxe": [
+                "2",
+                "01",
+                "2",
+                "02",
+                "2",
+                "03",
+                "2",
+                "04",
+                "2",
+                "05",
+                "2",
+                "06",
+                "2",
+                "07",
+                "2",
+                "08",
+                "2",
+                "09",
+                "2",
+                "10",
+                "2",
+                "11",
+                "2",
+                "12",
+                "2",
+                "13",
+                "2",
+                "01",
+                "2",
+                "02",
+                "2",
+                "03",
+                "2",
+                "04",
+                "2",
+                "05",
+                "2",
+                "06",
+                "2",
+                "07",
+                "2",
+                "08",
+                "2",
+                "09",
+                "2",
+                "10",
+                "2",
+                "11",
+                "2",
+                "12",
+                "2",
+                "13"
+            ]
         },
         {
-            "text": "C",
-            "value": "[0-9]{2}X[0-9]{2}"
+            "e_end": "",
+            "e_start": "",
+            "key": 2,
+            "matches": [],
+            "regex": "",
+            "s_end": "",
+            "s_start": "",
+            "sxe": []
         },
         {
-            "text": "D",
-            "value": "[0-9]{2}x[0-9]{2}"
+            "e_end": "",
+            "e_start": "",
+            "key": 3,
+            "matches": [],
+            "regex": "",
+            "s_end": "",
+            "s_start": "",
+            "sxe": []
         },
         {
-            "text": "E",
-            "value": ""
+            "e_end": "",
+            "e_start": "",
+            "key": 4,
+            "matches": [],
+            "regex": "",
+            "s_end": "",
+            "s_start": "",
+            "sxe": []
         },
         {
-            "text": "F",
-            "value": ""
+            "e_end": "",
+            "e_start": "",
+            "key": 5,
+            "matches": [],
+            "regex": "",
+            "s_end": "",
+            "s_start": "",
+            "sxe": []
+        },
+        {
+            "e_end": "",
+            "e_start": "",
+            "key": 6,
+            "matches": [],
+            "regex": "",
+            "s_end": "",
+            "s_start": "",
+            "sxe": []
+        },
+        {
+            "e_end": "",
+            "e_start": "",
+            "key": 7,
+            "matches": [],
+            "regex": "",
+            "s_end": "",
+            "s_start": "",
+            "sxe": []
+        },
+        {
+            "e_end": "",
+            "e_start": "",
+            "key": 8,
+            "matches": [],
+            "regex": "",
+            "s_end": "",
+            "s_start": "",
+            "sxe": []
+        },
+        {
+            "e_end": "",
+            "e_start": "",
+            "key": 9,
+            "matches": [],
+            "regex": "",
+            "s_end": "",
+            "s_start": "",
+            "sxe": []
         }
     ],
     "units": [
         {
-            "select": false,
-            "text": "Outlander Season 2",
-            "value": [
+            "files": [
                 "Outlander Season 2 Episode 01- Through a Glass, Darkly.mp4",
                 "Outlander Season 2 Episode 02 \u2013 Not in Scotland Anymore.mp4",
                 "Outlander Season 2 Episode 03- Useful Occupations and Deceptions.mp4",
@@ -43,19 +229,92 @@
                 "Outlander Season 2 Episode 11- Vengeance Is Mine.mp4",
                 "Outlander Season 2 Episode 12- The Hail Mary.mp4",
                 "Outlander Season 2 Episode 13- Dragonfly in Amber.mp4"
-            ]
+            ],
+            "opened": true,
+            "select": true,
+            "text": "Outlander Season 2"
         },
         {
-            "select": true,
-            "text": "Outlander.S02E11.HDTV.x264-KILLERS[ettv]",
-            "value": [
+            "files": [
+                "Outlander Season 2 Episode 01- Through a Glass, Darkly.mp4",
+                "Outlander Season 2 Episode 02 \u2013 Not in Scotland Anymore.mp4",
+                "Outlander Season 2 Episode 03- Useful Occupations and Deceptions.mp4",
+                "Outlander Season 2 Episode 04- La Dame Blanche.mp4",
+                "Outlander Season 2 Episode 05- Untimely Resurrection.mp4",
+                "Outlander Season 2 Episode 06- Best Laid Schemes\u2026.mp4",
+                "Outlander Season 2 Episode 07 \u2013 Faith.mp4",
+                "Outlander Season 2 Episode 08 \u2013 The Fox\u2019s Lair.mp4",
+                "Outlander Season 2 Episode 09- Je Suis Prest.mp4",
+                "Outlander Season 2 Episode 10- Prestonpans.mp4",
+                "Outlander Season 2 Episode 11- Vengeance Is Mine.mp4",
+                "Outlander Season 2 Episode 12- The Hail Mary.mp4",
+                "Outlander Season 2 Episode 13- Dragonfly in Amber.mp4"
+            ],
+            "opened": false,
+            "select": false,
+            "text": "Outlander Season 2 - Copy"
+        },
+        {
+            "files": [
                 "Outlander.S02E11.HDTV.x264-KILLERS[ettv].mkv"
-            ]
+            ],
+            "opened": false,
+            "select": false,
+            "text": "Outlander.S02E11.HDTV .x264-KILLERS[ettv]"
         },
         {
+            "files": [
+                "Outlander.S02E11.HDTV.x264-KILLERS[ettv].mkv"
+            ],
+            "opened": false,
             "select": true,
-            "text": "Outlander.S03E07.Cr\u00e8me.de.Menthe.720p.WEBRip.2CH.x265.HEVC-PSA.mkv",
-            "value": []
+            "text": "Outlander.S02E11.HDTV.x264-KILLERS[ettv] - Copy - Copy"
+        },
+        {
+            "files": [
+                "Outlander.S02E11.HDTV.x264-KILLERS[ettv].mkv"
+            ],
+            "opened": false,
+            "select": false,
+            "text": "Outlander.S02E11.HDTV.x264-KILLERS[ettv] - Copy - Copy (2)"
+        },
+        {
+            "files": [
+                "Outlander.S02E11.HDTV.x264-KILLERS[ettv].mkv"
+            ],
+            "opened": false,
+            "select": false,
+            "text": "Outlander.S02E11.HDTV.x264-KILLERS[ettv] - Copy - Copy - Copy"
+        },
+        {
+            "files": [],
+            "select": true,
+            "text": "Outlander.S03E07.Cr\u00e8me.de.Menthe.720p.WEBRip.2CH.x265.HEVC-PSA - Copy  - Copy - Copy - Copy - Copy.mkv"
+        },
+        {
+            "files": [],
+            "select": false,
+            "text": "Outlander.S03E07.Cr\u00e8me.de.Menthe.720p.WEBRip.2CH.x265.HEVC-PSA - Copy  - Copy - Copy - Copy.mkv"
+        },
+        {
+            "files": [],
+            "select": false,
+            "text": "Outlander.S03E07.Cr\u00e8me.de.Menthe.720p.WEBRip.2CH.x265.HEVC-PSA - Copy - Copy - Copy - Copy - Copy (2).srt"
+        },
+        {
+            "files": [],
+            "select": true,
+            "text": "Outlander.S03E07.Cr\u00e8me.de.Menthe.720p.WEBRip.2CH.x265.HEVC-PSA - Copy - Copy - Copy - Copy - Copy - Copy.srt"
+        },
+        {
+            "files": [],
+            "select": false,
+            "text": "Outlander.S03E07.Cr\u00e8me.de.Menthe.720p.WEBRip.2CH.x265.HEVC-PSA - Copy.mkv"
+        },
+        {
+            "files": [],
+            "select": false,
+            "text": "Outlander.S03E07.Cr\u00e8me.de.Menthe.720p.WEBRip.2CH.x265.HEVC-PSA - Copy.srt"
         }
     ]
 }

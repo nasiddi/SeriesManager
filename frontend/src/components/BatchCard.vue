@@ -1,8 +1,12 @@
 <template>
   <div
-    v-if="f.length !== 0">
+    v-if="f.length !== 0"
+    sm
+    class="px-0">
     <b-card
       :header="f.location"
+      :header-border-variant="validateFile"
+      :border-variant="validateFile"
       class="mt-3">
       <b-row>
         <b-col
@@ -102,6 +106,14 @@ export default {
       type: Object,
       required: true,
     },
+    tvdb_id: {
+      type: String,
+      required: true,
+    },
+    name_needed: {
+      type: Boolean,
+      required: true,
+    },
   },
   data: () => ({
     episode_options: [
@@ -128,6 +140,23 @@ export default {
     ],
   }),
   computed: {
+    validateFile() {
+      // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+      this.f.sync = false;
+      let validated = 'danger';
+      if (this.name_needed) {
+        if (this.f.title === '') { return this.validated; }
+        if (this.f.episode_option !== 'Single' && this.f.title2 === '') { return validated; }
+        if (this.f.episode_option === 'Triple' && this.f.title3 === '') { return validated; }
+      }
+      if (this.f.s_nr === '' || this.f.e_nr === '') {
+        return validated;
+      }
+      // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+      this.f.sync = true;
+      validated = '';
+      return validated;
+    },
   },
   watch: {
   },
@@ -155,49 +184,38 @@ export default {
       }
     },
     async updateTitle(f) {
-      return new Promise((resolve) => {
-        const file = f;
-        if (!(file.new_series)) {
-          file.tvdb_id = this.shows[file.series_name].tvdb_id;
-        }
-        this.$http.post('jobs/tvdb', file)
-          .then(
-            (res) => {
-              const body = _.defaults(res.body, {
-              });
-              if ('newShows' in body) {
-                this.new_show.o = body.newShows;
-                const [s] = body.newShows;
-                this.f.tvdb_id = s.value;
-                return resolve(true);
+      if (this.tvdb_id === '' || this.file.s_nr === '' || this.file.e_nr === '') {
+        this.$snotify.error('Title failed', { timeout: 5000 });
+        return;
+      }
+      const file = f;
+      file.tvdb_id = this.tvdb_id;
+      this.$http.post('jobs/tvdb', file)
+        .then(
+          (res) => {
+            const body = _.defaults(res.body, {
+            });
+            if (!('title' in body)) {
+              this.$snotify.error('Title failed', { timeout: 5000 });
+            }
+            file.title = body.title;
+            if (file.episode_option !== 'Single') {
+              if (!('title2' in body)) {
+                this.$snotify.error('Title 2 failed', { timeout: 5000 });
               }
-              if (!('title' in body)) {
-                this.$snotify.error(file.series_name, 'Title failed', { timeout: 5000 });
-                return resolve(false);
+              file.title2 = body.title2;
+            }
+            if (file.episode_option === 'Triple') {
+              if (!('title3' in body)) {
+                this.$snotify.error('Title 3 failed', { timeout: 5000 });
               }
-              file.title = body.title;
-              if (file.e_o.s !== 'Single') {
-                if (!('title2' in body)) {
-                  this.$snotify.error(file.series_name, 'Title 2 failed', { timeout: 5000 });
-                  return resolve(false);
-                }
-                file.title2 = body.title2;
-              }
-              if (file.e_o.s === 'Triple') {
-                if (!('title3' in body)) {
-                  this.$snotify.error(file.series_name, 'Title 3 failed', { timeout: 5000 });
-                  return resolve(false);
-                }
-                file.title3 = body.title3;
-              }
-              return resolve(true);
-            },
-            () => {
-              this.$snotify.error('Failed to load data', { timeout: 0 });
-              resolve(false);
-            },
-          );
-      });
+              file.title3 = body.title3;
+            }
+          },
+          () => {
+            this.$snotify.error('Failed to load data', { timeout: 0 });
+          },
+        );
     },
   },
 };

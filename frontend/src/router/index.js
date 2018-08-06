@@ -21,6 +21,7 @@ import UpdateNav from '@/components/UpdateNav';
 import SyncReport from '@/components/SyncReport';
 import BatchPrep from '@/components/BatchPrep';
 import BatchValidate from '@/components/BatchValidate';
+import BatchReport from '@/components/BatchReport';
 import Login from '@/components/Auth/Login';
 
 import FilesIndex from '@/components/Files/Index';
@@ -105,6 +106,12 @@ export default new Router({
       path: '/batch/validate',
       name: 'batch.validate',
       component: BatchValidate,
+      beforeEnter: Vue.prototype.$auth.requireAuth,
+    },
+    {
+      path: '/batch/report',
+      name: 'batch.report',
+      component: BatchReport,
       beforeEnter: Vue.prototype.$auth.requireAuth,
     },
     {
