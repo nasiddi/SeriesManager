@@ -286,9 +286,35 @@ async function unlockShows(res) {
 
 async function prepFiles(res) {
   const outputFile = path.join(config.directories.storage, 'names');
-  console.log('hi there');
   await run(
     'file_loader',
+    '',
+    '',
+    '',
+    outputFile,
+    () => {},
+    async (code, signal) => {
+      if (!fs.existsSync(outputFile)) {
+        res.sendStatus(204).end();
+        return;
+      }
+
+      fs.readJson(outputFile, (err, file) => {
+        if (err) {
+          winston.error(err);
+          res.sendStatus(500).end();
+        }
+        fs.unlink(outputFile);
+        res.json(file);
+      });
+    },
+  );
+}
+
+async function getStats(res) {
+  const outputFile = path.join(config.directories.storage, 'stats');
+  await run(
+    'stats',
     '',
     '',
     '',
@@ -444,6 +470,7 @@ async function batchMatch(body, res) {
           res.sendStatus(500).end();
         }
         res.json(file);
+        fs.unlink(outputFile);
       });
     },
   );
@@ -454,6 +481,34 @@ async function batchSync(body, res) {
   console.log(body[0]);
   await run(
     'batch_sync',
+    '',
+    '',
+    body,
+    outputFile,
+    () => {},
+    async (code, signal) => {
+      if (!fs.existsSync(outputFile)) {
+        res.sendStatus(204).end();
+        return;
+      }
+
+      fs.readJson(outputFile, (err, file) => {
+        if (err) {
+          winston.error(err);
+          res.sendStatus(500).end();
+        }
+        res.json(file);
+        fs.unlink(outputFile);
+      });
+    },
+  );
+}
+
+async function fileTree(body, res) {
+  const outputFile = path.join(config.directories.storage, 'file_tree');
+  console.log(body[0]);
+  await run(
+    'file_tree',
     '',
     '',
     body,
@@ -688,4 +743,6 @@ module.exports = {
   batchMatch,
   batchSync,
   unlockShows,
+  getStats,
+  fileTree,
 };

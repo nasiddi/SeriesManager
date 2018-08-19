@@ -39,6 +39,14 @@
         sm
         class="px-2">
         <b-input
+          v-model="lang"
+          class="mt-2"
+          placeholder="Language" />
+      </b-col>
+      <b-col
+        sm
+        class="px-2">
+        <b-input
           v-model="json.premiere"
           class="mt-2"
           placeholder="Premiere" />
@@ -51,6 +59,8 @@
           class="mt-2"
           placeholder="Final" />
       </b-col>
+    </b-row>
+    <b-row class="mt-2">
       <b-col
         sm
         class="px-2">
@@ -75,6 +85,16 @@
           :options="name_option"
           class="mt-2"/>
       </b-col>
+      <b-col
+        sm
+        class="px-2">
+        <b-button
+          :variant="'primary'"
+          :style="{width: '100%'}"
+          class="mt-2 mb-3"
+          @click="update"
+        >Update Meta</b-button>
+      </b-col>
     </b-row>
     <b-row>
       <b-col
@@ -85,18 +105,6 @@
           v-model="json.tvdb_id"
           :options="showSelect"
           class="mt-2"/>
-      </b-col>
-    </b-row>
-    <b-row>
-      <b-col
-        sm
-        class="px-2">
-        <b-button
-          :variant="'primary'"
-          :style="{width: '100%'}"
-          class="mt-2 mb-3"
-          @click="update"
-        >Update Meta</b-button>
       </b-col>
     </b-row>
     <b-row>
@@ -171,6 +179,7 @@ export default {
     showSelect: [],
     tvdbEpisodes: [],
     eps: {},
+    lang: 'en',
     status_option: [
       'Airing',
       'Hiatus',

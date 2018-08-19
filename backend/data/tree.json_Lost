@@ -1,0 +1,869 @@
+{
+    "show": {
+        "seasons": [
+            {
+                "episodes": [
+                    {
+                        "edit": false,
+                        "file_name": "Lost 01x01 - Pilot Part I.avi",
+                        "key": 1,
+                        "location": "V:\\Series\\Lost\\Season 01\\Lost 01x01 - Pilot Part I.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 01x02 - Pilot Part II.avi",
+                        "key": 2,
+                        "location": "V:\\Series\\Lost\\Season 01\\Lost 01x02 - Pilot Part II.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 01x03 - Tabula Rasa.avi",
+                        "key": 3,
+                        "location": "V:\\Series\\Lost\\Season 01\\Lost 01x03 - Tabula Rasa.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 01x04 - Walkabout.avi",
+                        "key": 4,
+                        "location": "V:\\Series\\Lost\\Season 01\\Lost 01x04 - Walkabout.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 01x05 - White Rabbit.avi",
+                        "key": 5,
+                        "location": "V:\\Series\\Lost\\Season 01\\Lost 01x05 - White Rabbit.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 01x06 - House of the Rising Sun.avi",
+                        "key": 6,
+                        "location": "V:\\Series\\Lost\\Season 01\\Lost 01x06 - House of the Rising Sun.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 01x07 - The Moth.avi",
+                        "key": 7,
+                        "location": "V:\\Series\\Lost\\Season 01\\Lost 01x07 - The Moth.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 01x08 - Confidence Man.avi",
+                        "key": 8,
+                        "location": "V:\\Series\\Lost\\Season 01\\Lost 01x08 - Confidence Man.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 01x09 - Solitary.avi",
+                        "key": 9,
+                        "location": "V:\\Series\\Lost\\Season 01\\Lost 01x09 - Solitary.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 01x10 - Raised by Another.avi",
+                        "key": 10,
+                        "location": "V:\\Series\\Lost\\Season 01\\Lost 01x10 - Raised by Another.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 01x11 - All the Best Cowboys Have Daddy Issues.avi",
+                        "key": 11,
+                        "location": "V:\\Series\\Lost\\Season 01\\Lost 01x11 - All the Best Cowboys Have Daddy Issues.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 01x12 - Whatever the Case May Be.avi",
+                        "key": 12,
+                        "location": "V:\\Series\\Lost\\Season 01\\Lost 01x12 - Whatever the Case May Be.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 01x13 - Hearts and Minds.avi",
+                        "key": 13,
+                        "location": "V:\\Series\\Lost\\Season 01\\Lost 01x13 - Hearts and Minds.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 01x14 - Special.avi",
+                        "key": 14,
+                        "location": "V:\\Series\\Lost\\Season 01\\Lost 01x14 - Special.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 01x15 - Homecoming.avi",
+                        "key": 15,
+                        "location": "V:\\Series\\Lost\\Season 01\\Lost 01x15 - Homecoming.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 01x16 - Outlaws.avi",
+                        "key": 16,
+                        "location": "V:\\Series\\Lost\\Season 01\\Lost 01x16 - Outlaws.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 01x17 - ...In Translation.avi",
+                        "key": 17,
+                        "location": "V:\\Series\\Lost\\Season 01\\Lost 01x17 - ...In Translation.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 01x18 - Numbers.avi",
+                        "key": 18,
+                        "location": "V:\\Series\\Lost\\Season 01\\Lost 01x18 - Numbers.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 01x19 - Deus Ex Machina.avi",
+                        "key": 19,
+                        "location": "V:\\Series\\Lost\\Season 01\\Lost 01x19 - Deus Ex Machina.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 01x20 - Do No Harm.avi",
+                        "key": 20,
+                        "location": "V:\\Series\\Lost\\Season 01\\Lost 01x20 - Do No Harm.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 01x21 - The Greater Good.avi",
+                        "key": 21,
+                        "location": "V:\\Series\\Lost\\Season 01\\Lost 01x21 - The Greater Good.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 01x22 - Born to Run.avi",
+                        "key": 22,
+                        "location": "V:\\Series\\Lost\\Season 01\\Lost 01x22 - Born to Run.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 01x23 - Exodus Part I.avi",
+                        "key": 23,
+                        "location": "V:\\Series\\Lost\\Season 01\\Lost 01x23 - Exodus Part I.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 01x24 & 01x25 - Exodus Part II & Part III.avi",
+                        "key": 24,
+                        "location": "V:\\Series\\Lost\\Season 01\\Lost 01x24 & 01x25 - Exodus Part II & Part III.avi",
+                        "path": false
+                    }
+                ],
+                "key": 1,
+                "opened": false
+            },
+            {
+                "episodes": [
+                    {
+                        "edit": false,
+                        "file_name": "Lost 02x01 - Man of Science, Man of Faith.avi",
+                        "key": 1,
+                        "location": "V:\\Series\\Lost\\Season 02\\Lost 02x01 - Man of Science, Man of Faith.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 02x02 - Adrift.avi",
+                        "key": 2,
+                        "location": "V:\\Series\\Lost\\Season 02\\Lost 02x02 - Adrift.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 02x03 - Orientation.avi",
+                        "key": 3,
+                        "location": "V:\\Series\\Lost\\Season 02\\Lost 02x03 - Orientation.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 02x04 - Everybody Hates Hugo.avi",
+                        "key": 4,
+                        "location": "V:\\Series\\Lost\\Season 02\\Lost 02x04 - Everybody Hates Hugo.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 02x05 - ...And Found.avi",
+                        "key": 5,
+                        "location": "V:\\Series\\Lost\\Season 02\\Lost 02x05 - ...And Found.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 02x06 - Abandoned.avi",
+                        "key": 6,
+                        "location": "V:\\Series\\Lost\\Season 02\\Lost 02x06 - Abandoned.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 02x07 - The Other 48 Days.avi",
+                        "key": 7,
+                        "location": "V:\\Series\\Lost\\Season 02\\Lost 02x07 - The Other 48 Days.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 02x08 - Collision.avi",
+                        "key": 8,
+                        "location": "V:\\Series\\Lost\\Season 02\\Lost 02x08 - Collision.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 02x09 - What Kate Did.avi",
+                        "key": 9,
+                        "location": "V:\\Series\\Lost\\Season 02\\Lost 02x09 - What Kate Did.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 02x10 - The 23rd Psalm.avi",
+                        "key": 10,
+                        "location": "V:\\Series\\Lost\\Season 02\\Lost 02x10 - The 23rd Psalm.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 02x11 - The Hunting Party.avi",
+                        "key": 11,
+                        "location": "V:\\Series\\Lost\\Season 02\\Lost 02x11 - The Hunting Party.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 02x12 - Fire + Water.avi",
+                        "key": 12,
+                        "location": "V:\\Series\\Lost\\Season 02\\Lost 02x12 - Fire + Water.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 02x13 - The Long Con.avi",
+                        "key": 13,
+                        "location": "V:\\Series\\Lost\\Season 02\\Lost 02x13 - The Long Con.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 02x14 - One of Them.avi",
+                        "key": 14,
+                        "location": "V:\\Series\\Lost\\Season 02\\Lost 02x14 - One of Them.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 02x15 - Maternity Leave.avi",
+                        "key": 15,
+                        "location": "V:\\Series\\Lost\\Season 02\\Lost 02x15 - Maternity Leave.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 02x16 - The Whole Truth.avi",
+                        "key": 16,
+                        "location": "V:\\Series\\Lost\\Season 02\\Lost 02x16 - The Whole Truth.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 02x17 - Lockdown.avi",
+                        "key": 17,
+                        "location": "V:\\Series\\Lost\\Season 02\\Lost 02x17 - Lockdown.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 02x18 - Dave.avi",
+                        "key": 18,
+                        "location": "V:\\Series\\Lost\\Season 02\\Lost 02x18 - Dave.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 02x19 - S.O.S..avi",
+                        "key": 19,
+                        "location": "V:\\Series\\Lost\\Season 02\\Lost 02x19 - S.O.S..avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 02x20 - Two for the Road.avi",
+                        "key": 20,
+                        "location": "V:\\Series\\Lost\\Season 02\\Lost 02x20 - Two for the Road.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 02x21 - Questionmark.avi",
+                        "key": 21,
+                        "location": "V:\\Series\\Lost\\Season 02\\Lost 02x21 - Questionmark.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 02x22 - Three Minutes.avi",
+                        "key": 22,
+                        "location": "V:\\Series\\Lost\\Season 02\\Lost 02x22 - Three Minutes.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 02x23 & 02x24 - Live Together, Die Alone.avi",
+                        "key": 23,
+                        "location": "V:\\Series\\Lost\\Season 02\\Lost 02x23 & 02x24 - Live Together, Die Alone.avi",
+                        "path": false
+                    }
+                ],
+                "key": 2,
+                "opened": false
+            },
+            {
+                "episodes": [
+                    {
+                        "edit": false,
+                        "file_name": "Lost 03x01 - A Tale of Two Cities.avi",
+                        "key": 1,
+                        "location": "V:\\Series\\Lost\\Season 03\\Lost 03x01 - A Tale of Two Cities.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 03x02 - The Glass Ballerina.avi",
+                        "key": 2,
+                        "location": "V:\\Series\\Lost\\Season 03\\Lost 03x02 - The Glass Ballerina.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 03x03 - Further Instructions.avi",
+                        "key": 3,
+                        "location": "V:\\Series\\Lost\\Season 03\\Lost 03x03 - Further Instructions.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 03x04 - Every Man for Himself.avi",
+                        "key": 4,
+                        "location": "V:\\Series\\Lost\\Season 03\\Lost 03x04 - Every Man for Himself.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 03x05 - The Cost of Living.avi",
+                        "key": 5,
+                        "location": "V:\\Series\\Lost\\Season 03\\Lost 03x05 - The Cost of Living.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 03x06 - I Do.avi",
+                        "key": 6,
+                        "location": "V:\\Series\\Lost\\Season 03\\Lost 03x06 - I Do.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 03x07 - Not in Portland.avi",
+                        "key": 7,
+                        "location": "V:\\Series\\Lost\\Season 03\\Lost 03x07 - Not in Portland.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 03x08 - Flashes Before Your Eyes.avi",
+                        "key": 8,
+                        "location": "V:\\Series\\Lost\\Season 03\\Lost 03x08 - Flashes Before Your Eyes.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 03x09 - Stranger in a Strange Land.avi",
+                        "key": 9,
+                        "location": "V:\\Series\\Lost\\Season 03\\Lost 03x09 - Stranger in a Strange Land.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 03x10 - Tricia Tanaka Is Dead.avi",
+                        "key": 10,
+                        "location": "V:\\Series\\Lost\\Season 03\\Lost 03x10 - Tricia Tanaka Is Dead.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 03x11 - Enter 77.avi",
+                        "key": 11,
+                        "location": "V:\\Series\\Lost\\Season 03\\Lost 03x11 - Enter 77.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 03x12 - Par Avion.avi",
+                        "key": 12,
+                        "location": "V:\\Series\\Lost\\Season 03\\Lost 03x12 - Par Avion.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 03x13 - The Man from Tallahassee.avi",
+                        "key": 13,
+                        "location": "V:\\Series\\Lost\\Season 03\\Lost 03x13 - The Man from Tallahassee.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 03x14 - Expos\u00e9.avi",
+                        "key": 14,
+                        "location": "V:\\Series\\Lost\\Season 03\\Lost 03x14 - Expos\u00e9.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 03x15 - Left Behind.avi",
+                        "key": 15,
+                        "location": "V:\\Series\\Lost\\Season 03\\Lost 03x15 - Left Behind.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 03x16 - One of Us.avi",
+                        "key": 16,
+                        "location": "V:\\Series\\Lost\\Season 03\\Lost 03x16 - One of Us.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 03x17 - Catch-22.avi",
+                        "key": 17,
+                        "location": "V:\\Series\\Lost\\Season 03\\Lost 03x17 - Catch-22.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 03x18 - D.O.C.avi",
+                        "key": 18,
+                        "location": "V:\\Series\\Lost\\Season 03\\Lost 03x18 - D.O.C.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 03x19 - The Brig.avi",
+                        "key": 19,
+                        "location": "V:\\Series\\Lost\\Season 03\\Lost 03x19 - The Brig.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 03x20 - The Man Behind the Curtain.avi",
+                        "key": 20,
+                        "location": "V:\\Series\\Lost\\Season 03\\Lost 03x20 - The Man Behind the Curtain.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 03x21 - Greatest Hits.avi",
+                        "key": 21,
+                        "location": "V:\\Series\\Lost\\Season 03\\Lost 03x21 - Greatest Hits.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 03x22 - Through the Looking Glass Part I.avi",
+                        "key": 22,
+                        "location": "V:\\Series\\Lost\\Season 03\\Lost 03x22 - Through the Looking Glass Part I.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 03x23 - Through the Looking Glass Part II.avi",
+                        "key": 23,
+                        "location": "V:\\Series\\Lost\\Season 03\\Lost 03x23 - Through the Looking Glass Part II.avi",
+                        "path": false
+                    }
+                ],
+                "key": 3,
+                "opened": false
+            },
+            {
+                "episodes": [
+                    {
+                        "edit": false,
+                        "file_name": "Lost 04x01 - The Beginning of the End.avi",
+                        "key": 1,
+                        "location": "V:\\Series\\Lost\\Season 04\\Lost 04x01 - The Beginning of the End.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 04x02 - Confirmed Dead.avi",
+                        "key": 2,
+                        "location": "V:\\Series\\Lost\\Season 04\\Lost 04x02 - Confirmed Dead.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 04x03 - The Economist.avi",
+                        "key": 3,
+                        "location": "V:\\Series\\Lost\\Season 04\\Lost 04x03 - The Economist.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 04x04 - Eggtown.avi",
+                        "key": 4,
+                        "location": "V:\\Series\\Lost\\Season 04\\Lost 04x04 - Eggtown.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 04x05 - The Constant.avi",
+                        "key": 5,
+                        "location": "V:\\Series\\Lost\\Season 04\\Lost 04x05 - The Constant.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 04x06 - The Other Woman.avi",
+                        "key": 6,
+                        "location": "V:\\Series\\Lost\\Season 04\\Lost 04x06 - The Other Woman.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 04x07 - Ji Yeon.avi",
+                        "key": 7,
+                        "location": "V:\\Series\\Lost\\Season 04\\Lost 04x07 - Ji Yeon.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 04x08 - Meet Kevin Johnson.avi",
+                        "key": 8,
+                        "location": "V:\\Series\\Lost\\Season 04\\Lost 04x08 - Meet Kevin Johnson.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 04x09 - The Shape of Things to Come.avi",
+                        "key": 9,
+                        "location": "V:\\Series\\Lost\\Season 04\\Lost 04x09 - The Shape of Things to Come.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 04x10 - Something Nice Back Home.avi",
+                        "key": 10,
+                        "location": "V:\\Series\\Lost\\Season 04\\Lost 04x10 - Something Nice Back Home.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 04x11 - Cabin Fever.avi",
+                        "key": 11,
+                        "location": "V:\\Series\\Lost\\Season 04\\Lost 04x11 - Cabin Fever.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 04x12 - There's No Place Like Home Part I.avi",
+                        "key": 12,
+                        "location": "V:\\Series\\Lost\\Season 04\\Lost 04x12 - There's No Place Like Home Part I.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 04x13 - There's No Place Like Home Part II.avi",
+                        "key": 13,
+                        "location": "V:\\Series\\Lost\\Season 04\\Lost 04x13 - There's No Place Like Home Part II.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 04x14 - There's No Place Like Home Part III.avi",
+                        "key": 14,
+                        "location": "V:\\Series\\Lost\\Season 04\\Lost 04x14 - There's No Place Like Home Part III.avi",
+                        "path": false
+                    }
+                ],
+                "key": 4,
+                "opened": false
+            },
+            {
+                "episodes": [
+                    {
+                        "edit": false,
+                        "file_name": "Lost 05x01 - Because You Left.avi",
+                        "key": 1,
+                        "location": "V:\\Series\\Lost\\Season 05\\Lost 05x01 - Because You Left.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 05x02 - The Lie.avi",
+                        "key": 2,
+                        "location": "V:\\Series\\Lost\\Season 05\\Lost 05x02 - The Lie.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 05x03 - Jughead.avi",
+                        "key": 3,
+                        "location": "V:\\Series\\Lost\\Season 05\\Lost 05x03 - Jughead.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 05x04 - The Little Prince.avi",
+                        "key": 4,
+                        "location": "V:\\Series\\Lost\\Season 05\\Lost 05x04 - The Little Prince.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 05x05 - This Place Is Dead.avi",
+                        "key": 5,
+                        "location": "V:\\Series\\Lost\\Season 05\\Lost 05x05 - This Place Is Dead.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 05x06 - 316.avi",
+                        "key": 6,
+                        "location": "V:\\Series\\Lost\\Season 05\\Lost 05x06 - 316.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 05x07 - The Life and Death of Jeremy Bentham.avi",
+                        "key": 7,
+                        "location": "V:\\Series\\Lost\\Season 05\\Lost 05x07 - The Life and Death of Jeremy Bentham.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 05x08 - LaFleur.avi",
+                        "key": 8,
+                        "location": "V:\\Series\\Lost\\Season 05\\Lost 05x08 - LaFleur.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 05x09 - Namaste.avi",
+                        "key": 9,
+                        "location": "V:\\Series\\Lost\\Season 05\\Lost 05x09 - Namaste.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 05x10 - He's Our You.avi",
+                        "key": 10,
+                        "location": "V:\\Series\\Lost\\Season 05\\Lost 05x10 - He's Our You.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 05x11 - Whatever Happened, Happened.avi",
+                        "key": 11,
+                        "location": "V:\\Series\\Lost\\Season 05\\Lost 05x11 - Whatever Happened, Happened.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 05x12 - Dead Is Dead.avi",
+                        "key": 12,
+                        "location": "V:\\Series\\Lost\\Season 05\\Lost 05x12 - Dead Is Dead.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 05x13 - Some Like It Hoth.avi",
+                        "key": 13,
+                        "location": "V:\\Series\\Lost\\Season 05\\Lost 05x13 - Some Like It Hoth.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 05x14 - The Variable.avi",
+                        "key": 14,
+                        "location": "V:\\Series\\Lost\\Season 05\\Lost 05x14 - The Variable.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 05x15 - Follow the Leader.avi",
+                        "key": 15,
+                        "location": "V:\\Series\\Lost\\Season 05\\Lost 05x15 - Follow the Leader.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 05x16 - The Incident Part I.avi",
+                        "key": 16,
+                        "location": "V:\\Series\\Lost\\Season 05\\Lost 05x16 - The Incident Part I.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 05x17 - The Incident Part II.avi",
+                        "key": 17,
+                        "location": "V:\\Series\\Lost\\Season 05\\Lost 05x17 - The Incident Part II.avi",
+                        "path": false
+                    }
+                ],
+                "key": 5,
+                "opened": false
+            },
+            {
+                "episodes": [
+                    {
+                        "edit": false,
+                        "file_name": "Lost 06x01 & 06x02 - LAX.avi",
+                        "key": 1,
+                        "location": "V:\\Series\\Lost\\Season 06\\Lost 06x01 & 06x02 - LAX.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 06x03 - What Kate Does.avi",
+                        "key": 3,
+                        "location": "V:\\Series\\Lost\\Season 06\\Lost 06x03 - What Kate Does.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 06x04 - The Substitute.avi",
+                        "key": 4,
+                        "location": "V:\\Series\\Lost\\Season 06\\Lost 06x04 - The Substitute.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 06x05 - Lighthouse.avi",
+                        "key": 5,
+                        "location": "V:\\Series\\Lost\\Season 06\\Lost 06x05 - Lighthouse.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 06x06 - Sundown.avi",
+                        "key": 6,
+                        "location": "V:\\Series\\Lost\\Season 06\\Lost 06x06 - Sundown.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 06x07 - Dr. Linus.avi",
+                        "key": 7,
+                        "location": "V:\\Series\\Lost\\Season 06\\Lost 06x07 - Dr. Linus.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 06x08 - Recon.avi",
+                        "key": 8,
+                        "location": "V:\\Series\\Lost\\Season 06\\Lost 06x08 - Recon.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 06x09 - Ab Aeterno.avi",
+                        "key": 9,
+                        "location": "V:\\Series\\Lost\\Season 06\\Lost 06x09 - Ab Aeterno.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 06x10 - The Package.avi",
+                        "key": 10,
+                        "location": "V:\\Series\\Lost\\Season 06\\Lost 06x10 - The Package.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 06x11 - Happily Ever After.avi",
+                        "key": 11,
+                        "location": "V:\\Series\\Lost\\Season 06\\Lost 06x11 - Happily Ever After.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 06x12 - Everybody Loves Hugo.avi",
+                        "key": 12,
+                        "location": "V:\\Series\\Lost\\Season 06\\Lost 06x12 - Everybody Loves Hugo.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 06x13 - The Last Recruit.avi",
+                        "key": 13,
+                        "location": "V:\\Series\\Lost\\Season 06\\Lost 06x13 - The Last Recruit.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 06x14 - The Candidate.avi",
+                        "key": 14,
+                        "location": "V:\\Series\\Lost\\Season 06\\Lost 06x14 - The Candidate.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 06x15 - Across the Sea.avi",
+                        "key": 15,
+                        "location": "V:\\Series\\Lost\\Season 06\\Lost 06x15 - Across the Sea.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 06x16 - What They Died for.avi",
+                        "key": 16,
+                        "location": "V:\\Series\\Lost\\Season 06\\Lost 06x16 - What They Died for.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 06x17 - The End Part I.avi",
+                        "key": 17,
+                        "location": "V:\\Series\\Lost\\Season 06\\Lost 06x17 - The End Part I.avi",
+                        "path": false
+                    },
+                    {
+                        "edit": false,
+                        "file_name": "Lost 06x18 - The End Part II.avi",
+                        "key": 18,
+                        "location": "V:\\Series\\Lost\\Season 06\\Lost 06x18 - The End Part II.avi",
+                        "path": false
+                    }
+                ],
+                "key": 6,
+                "opened": false
+            }
+        ],
+        "series_name": "Lost"
+    }
+}

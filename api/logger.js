@@ -6,8 +6,7 @@ const {
   combine, timestamp, printf, colorize, align,
 } = format;
 
-winston.configure({
-});
+winston.configure({});
 
 const errorLogger = createLogger({
   format: format.json(),
@@ -21,14 +20,15 @@ const errorLogger = createLogger({
   ],
 });
 
-
 const prodLogger = createLogger({
   format: format.simple(),
-  transports: [new transports.Console({
-    level: 'info',
-    handleExceptions: true,
-    humanReadableUnhandledException: true,
-  })],
+  transports: [
+    new transports.Console({
+      level: 'info',
+      handleExceptions: true,
+      humanReadableUnhandledException: true,
+    }),
+  ],
 });
 
 const devLogger = createLogger({
@@ -36,13 +36,29 @@ const devLogger = createLogger({
     colorize(),
     timestamp(),
     align(),
-    printf(info => `${info.timestamp} ${info.label ? `[${info.label}]` : ''} [${info.level}] ${info.message}`),
+    printf(
+      info => `${info.timestamp} ${info.label ? `[${info.label}]` : ''} [${info.level}] ${info.message}`,
+    ),
   ),
-  transports: [new transports.Console({
-    level: 'debug',
-    handleExceptions: true,
-    humanReadableUnhandledException: true,
-  })],
+  transports: [
+    new transports.Console({
+      level: 'debug',
+      handleExceptions: true,
+      humanReadableUnhandledException: true,
+    }),
+  ],
+});
+
+const devLoggerFile = createLogger({
+  format: combine(format.json(), timestamp()),
+  transports: [
+    new transports.File({
+      filename: './log.log',
+      level: 'debug',
+      handleExceptions: true,
+      humanReadableUnhandledException: true,
+    }),
+  ],
 });
 
 winston.add(errorLogger);
@@ -53,6 +69,7 @@ if (process.env.NODE_ENV === 'production') {
 
 if (process.env.NODE_ENV === 'development') {
   winston.add(devLogger);
+  winston.add(devLoggerFile);
 }
 
 if (!process.env.NODE_ENV) {

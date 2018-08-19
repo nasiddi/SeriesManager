@@ -12,7 +12,13 @@ class Episode:
                  episode_option=SINGLE,
                  title='',
                  title2='',
-                 title3=''):
+                 title3='',
+                 duration=0,
+                 height=0,
+                 width=0,
+                 size=0,
+                 ratio=0,
+                 quality=''):
         self.location = location
         self.file_name = os.path.basename(location)
         self.extention = ''
@@ -27,10 +33,31 @@ class Episode:
         self.title = title
         self.title2 = title2
         self.title3 = title3
+        self.duration = duration
+        self.height = height
+        self.width = width
+        self.size = size
+        self.ratio = ratio
+        self.quality = quality
         if e_nr == 999:
             self.parse_episode_nr()
         if self.extention == '':
             self.parse_episode_name_and_extention()
+
+    def save(self):
+        return {'duration': self.duration,
+                'height': self.height,
+                'width': self.width,
+                'size': self.size,
+                'ratio': self.ratio,
+                'quality': self.quality}
+
+    def set_file_meta(self, data):
+        self.height = data[0]
+        self.width = data[1]
+        self.size = data[2]
+        self.duration = data[3]
+        self.aspect = data[4]
 
     def update_location(self, old_series_name, new_series_name):
         old_loc = self.location.replace(old_series_name, new_series_name, 1)

@@ -1,7 +1,7 @@
 import platform
 import os
 
-DEBUG = True
+DEBUG = False
 
 
 # Status
@@ -52,11 +52,14 @@ PREMIERE = 'premiere'
 FINAL = 'final'
 TVDB_ID = 'tvdb_id'
 SERIES_NAME = 'series_name'
+LOCATION = 'location'
 
 
 # Pattern
 ANIME_PATTERN = '[0-9]{2}x[0-9]{3}'
 SERIES_PATTERN = '[0-9]{2}x[0-9]{2}'
+ASPECT_RATIOS = {1.25: '5:4', 1.33333: '4:3', 1.5: '3:2', 1.77777: '16:9'}
+QUALITY = {360: 'SD', 720: 'HD', 1080: 'FullHD', 2160: '4K'}
 
 wrongSymbols = [
       ':',

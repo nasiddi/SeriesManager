@@ -71,6 +71,7 @@ def add_metadata(shows):
     for show in shows.values():
         if show.series_name not in meta:
             continue
+
         info = meta[show.series_name]
         show.status = info[STATUS]
         show.name_needed = info[NAME_NEEDED]
@@ -80,6 +81,18 @@ def add_metadata(shows):
             info[TVDB_ID] = ''
         show.tvdb_id = info[TVDB_ID] if not info[TVDB_ID] == 0 else ''
 
+        for season in show.seasons.values():
+            for e in season.episodes.values():
+                try:
+                    file_meta = info['seasons'][str(e.s_nr)][str(e.e_nr)]
+                    e.duration = file_meta['duration']
+                    e.size = file_meta['size']
+                    e.ratio = file_meta['ratio']
+                    e.width = file_meta['width']
+                    e.height = file_meta['height']
+                    e.quality = file_meta['quality']
+                except:
+                    print(e.location)
 
 def main():
     start = time.time()

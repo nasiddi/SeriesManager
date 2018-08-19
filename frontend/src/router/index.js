@@ -22,6 +22,9 @@ import SyncReport from '@/components/SyncReport';
 import BatchPrep from '@/components/BatchPrep';
 import BatchValidate from '@/components/BatchValidate';
 import BatchReport from '@/components/BatchReport';
+import Stats from '@/components/Stats';
+import FileTree from '@/components/FileTree';
+
 import Login from '@/components/Auth/Login';
 
 import FilesIndex from '@/components/Files/Index';
@@ -103,6 +106,12 @@ export default new Router({
       beforeEnter: Vue.prototype.$auth.requireAuth,
     },
     {
+      path: '/filetree',
+      name: 'filetree',
+      component: FileTree,
+      beforeEnter: Vue.prototype.$auth.requireAuth,
+    },
+    {
       path: '/batch/validate',
       name: 'batch.validate',
       component: BatchValidate,
@@ -124,6 +133,12 @@ export default new Router({
       path: '/sync/report',
       name: 'sync.report',
       component: SyncReport,
+      beforeEnter: Vue.prototype.$auth.requireAuth,
+    },
+    {
+      path: '/stats',
+      name: 'stats',
+      component: Stats,
       beforeEnter: Vue.prototype.$auth.requireAuth,
     },
     {

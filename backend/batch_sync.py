@@ -3,9 +3,7 @@ from constants import *
 import json
 import sys
 import os
-import series_loader
 import shutil
-import update_prep
 from series import Series
 from file import File
 from syncer import single_format, double_format, triple_format
@@ -27,7 +25,7 @@ def main(args):
     io_utlis.save_json(data, 'data/batch_sync.json')
 
     if SHOWS is None:
-        # io_utlis.save_json({'error': 'Shows locked'}, os.environ['OUTPUT_FILE'])
+        io_utlis.save_json({'error': 'Shows locked'}, os.environ['OUTPUT_FILE'])
         print('shows locked')
         return
     start = time.time()

@@ -7,7 +7,6 @@ import VuePromiseBtn from 'vue-promise-btn';
 import App from './App';
 import router from './router';
 
-
 const _ = require('lodash');
 const md5 = require('md5');
 const config = require('./config');
@@ -21,7 +20,9 @@ const shared = {
 
 shared.install = () => {
   Object.defineProperty(Vue.prototype, '$globalData', {
-    get() { return shared; },
+    get() {
+      return shared;
+    },
   });
 };
 
@@ -65,7 +66,20 @@ Vue.mixin({
 
         return distance;
       };
-      const colors = ['e6194b', '3cb44b', 'ffe119', '0082c8', 'f58231', '911eb4', '46f0f0', 'f032e6', 'd2f53c', 'fabebe', '008080', 'e6beff', 'aa6e28', 'fffac8', '800000', 'aaffc3', '808000', 'ffd8b1', '000080', '808080'];
+      const colors = [
+        '001f3f',
+        '0074D9',
+        '7FDBFF',
+        '3D9970',
+        '2ECC40',
+        '01FF70',
+        'FFDC00',
+        'FF851B',
+        'FF4136',
+        '85144b',
+        'F012BE',
+        'B10DC9',
+      ];
 
       return _.chain(strs)
         .map(str => md5(str))
@@ -79,9 +93,9 @@ Vue.mixin({
             .value();
 
           if (_.size(distances) > 0) {
-            const color = Object
-              .keys(distances)
-              .reduce((a, b) => (distances[a] < distances[b] ? a : b));
+            const color = Object.keys(distances).reduce(
+              (a, b) => (distances[a] < distances[b] ? a : b),
+            );
 
             _.remove(colors, val => val === color);
             return color;
@@ -107,7 +121,8 @@ Vue.http.interceptors.push((request) => {
 
 Vue.use(Vuex);
 
-const store = new Vuex.Store({ /* eslint-disable no-param-reassign */
+const store = new Vuex.Store({
+  /* eslint-disable no-param-reassign */
   state: {
     searchQuery: null,
     settings: {},
@@ -138,7 +153,6 @@ const store = new Vuex.Store({ /* eslint-disable no-param-reassign */
       state.settings[key] = { value };
       window.vm.$eventHub.$emit('settings-update');
     },
-
   },
   actions: {
     saveSetting: (state, payload) => {
@@ -151,7 +165,6 @@ const store = new Vuex.Store({ /* eslint-disable no-param-reassign */
 });
 
 Vue.prototype.$eventHub = new Vue(); // Global event bus
-
 
 // eslint-disable-next-line
 const vm = new Vue({

@@ -1,0 +1,4682 @@
+{
+    "extentions": [
+        "mkv",
+        "mp4",
+        "avi",
+        "flv",
+        "m4v",
+        "divx",
+        "webm"
+    ],
+    "shows": [
+        {
+            "avg_duration": 56.8,
+            "avg_size": 414.32,
+            "duration": 24.61,
+            "episodes": 26,
+            "extention": {
+                "mkv": 26
+            },
+            "final": "",
+            "premiere": "2017-03-31",
+            "quality": {
+                "SD": 26
+            },
+            "ratio": {
+                "16:9": 1,
+                "3:2": 25
+            },
+            "seasons": 2,
+            "series_name": "13 Reasons Why",
+            "size": 10.52,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 42.23,
+            "avg_size": 139.66,
+            "duration": 143.58,
+            "episodes": 204,
+            "extention": {
+                "mkv": 180,
+                "mp4": 24
+            },
+            "final": "2014-07-14",
+            "premiere": "2001-11-06",
+            "quality": {
+                "SD": 204
+            },
+            "ratio": {
+                "16:9": 204
+            },
+            "seasons": 9,
+            "series_name": "24",
+            "size": 27.82,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 31.41,
+            "avg_size": 249.98,
+            "duration": 95.82,
+            "episodes": 183,
+            "extention": {
+                "avi": 114,
+                "mkv": 47,
+                "mp4": 22
+            },
+            "final": "",
+            "premiere": "2006-10-20",
+            "quality": {
+                "HD": 15,
+                "SD": 168
+            },
+            "ratio": {
+                "16:9": 181,
+                "3:2": 2
+            },
+            "seasons": 20,
+            "series_name": "8 Out of 10 Cats",
+            "size": 44.67,
+            "status": {
+                "Airing": 1
+            }
+        },
+        {
+            "avg_duration": 46.84,
+            "avg_size": 503.27,
+            "duration": 64.02,
+            "episodes": 82,
+            "extention": {
+                "avi": 5,
+                "flv": 1,
+                "mkv": 28,
+                "mp4": 48
+            },
+            "final": "",
+            "premiere": "2012-01-02",
+            "quality": {
+                "HD": 45,
+                "SD": 37
+            },
+            "ratio": {
+                "16:9": 81,
+                "3:2": 1
+            },
+            "seasons": 10,
+            "series_name": "8 Out of 10 Cats Does Countdown",
+            "size": 40.3,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 41.68,
+            "avg_size": 847.69,
+            "duration": 12.5,
+            "episodes": 18,
+            "extention": {
+                "mkv": 17,
+                "mp4": 1
+            },
+            "final": "2016-02-23",
+            "premiere": "2015-01-06",
+            "quality": {
+                "HD": 17,
+                "SD": 1
+            },
+            "ratio": {
+                "16:9": 18
+            },
+            "seasons": 2,
+            "series_name": "Agent Carter",
+            "size": 14.9,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 42.12,
+            "avg_size": 254.27,
+            "duration": 77.23,
+            "episodes": 110,
+            "extention": {
+                "avi": 5,
+                "mkv": 63,
+                "mp4": 42
+            },
+            "final": "",
+            "premiere": "2013-09-24",
+            "quality": {
+                "HD": 3,
+                "SD": 107
+            },
+            "ratio": {
+                "16:9": 108,
+                "4:3": 2
+            },
+            "seasons": 5,
+            "series_name": "Agents of S.H.I.E.L.D",
+            "size": 27.31,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 42.59,
+            "avg_size": 338.81,
+            "duration": 78.08,
+            "episodes": 110,
+            "extention": {
+                "avi": 110
+            },
+            "final": "2004-05-19",
+            "premiere": "1999-10-05",
+            "quality": {
+                "SD": 110
+            },
+            "ratio": {
+                "16:9": 88,
+                "4:3": 22
+            },
+            "seasons": 5,
+            "series_name": "Angel",
+            "size": 36.39,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 42.11,
+            "avg_size": 260.83,
+            "duration": 96.87,
+            "episodes": 138,
+            "extention": {
+                "avi": 5,
+                "mkv": 80,
+                "mp4": 53
+            },
+            "final": "",
+            "premiere": "2012-10-10",
+            "quality": {
+                "HD": 1,
+                "SD": 137
+            },
+            "ratio": {
+                "16:9": 138
+            },
+            "seasons": 6,
+            "series_name": "Arrow",
+            "size": 35.15,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 58.59,
+            "avg_size": 572.13,
+            "duration": 23.43,
+            "episodes": 24,
+            "extention": {
+                "avi": 24
+            },
+            "final": "2010-05-21",
+            "premiere": "2008-02-07",
+            "quality": {
+                "SD": 24
+            },
+            "ratio": {
+                "16:9": 24
+            },
+            "seasons": 3,
+            "series_name": "Ashes to Ashes",
+            "size": 13.4,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 24.46,
+            "avg_size": 57.72,
+            "duration": 23.64,
+            "episodes": 58,
+            "extention": {
+                "m4v": 2,
+                "mp4": 56
+            },
+            "final": "2008-07-19",
+            "premiere": "2005-02-21",
+            "quality": {
+                "HD": 2,
+                "SD": 56
+            },
+            "ratio": {
+                "4:3": 58
+            },
+            "seasons": 3,
+            "series_name": "Avatar - The Last Airbender",
+            "size": 3.26,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 45.49,
+            "avg_size": 563.35,
+            "duration": 56.1,
+            "episodes": 74,
+            "extention": {
+                "mkv": 74
+            },
+            "final": "2009-03-20",
+            "premiere": "2003-12-08",
+            "quality": {
+                "HD": 74
+            },
+            "ratio": {
+                "16:9": 74
+            },
+            "seasons": 4,
+            "series_name": "Battlestar Galactica",
+            "size": 40.71,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 47.52,
+            "avg_size": 264.26,
+            "duration": 23.76,
+            "episodes": 30,
+            "extention": {
+                "avi": 1,
+                "mkv": 21,
+                "mp4": 8
+            },
+            "final": "",
+            "premiere": "2015-02-08",
+            "quality": {
+                "SD": 30
+            },
+            "ratio": {
+                "16:9": 30
+            },
+            "seasons": 3,
+            "series_name": "Better Call Saul",
+            "size": 7.74,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 41.3,
+            "avg_size": 265.33,
+            "duration": 8.94,
+            "episodes": 13,
+            "extention": {
+                "mkv": 13
+            },
+            "final": "",
+            "premiere": "2018-01-16",
+            "quality": {
+                "SD": 13
+            },
+            "ratio": {
+                "16:9": 13
+            },
+            "seasons": 1,
+            "series_name": "Black Lightning",
+            "size": 3.36,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 57.51,
+            "avg_size": 997.34,
+            "duration": 18.21,
+            "episodes": 19,
+            "extention": {
+                "mkv": 19
+            },
+            "final": "",
+            "premiere": "2011-12-04",
+            "quality": {
+                "FullHD": 8,
+                "HD": 11
+            },
+            "ratio": {
+                "16:9": 19
+            },
+            "seasons": 4,
+            "series_name": "Black Mirror",
+            "size": 18.5,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 56.62,
+            "avg_size": 3631.98,
+            "duration": 35.86,
+            "episodes": 38,
+            "extention": {
+                "mkv": 38
+            },
+            "final": "2017-04-02",
+            "premiere": "2014-01-25",
+            "quality": {
+                "FullHD": 38
+            },
+            "ratio": {
+                "16:9": 38
+            },
+            "seasons": 4,
+            "series_name": "Black Sails",
+            "size": 134.78,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 29.94,
+            "avg_size": 132.95,
+            "duration": 11.97,
+            "episodes": 24,
+            "extention": {
+                "avi": 3,
+                "mkv": 21
+            },
+            "final": "1989-11-02",
+            "premiere": "1983-06-15",
+            "quality": {
+                "SD": 24
+            },
+            "ratio": {
+                "4:3": 24
+            },
+            "seasons": 4,
+            "series_name": "Blackadder",
+            "size": 3.11,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 58.5,
+            "avg_size": 498.59,
+            "duration": 5.85,
+            "episodes": 6,
+            "extention": {
+                "avi": 1,
+                "mp4": 5
+            },
+            "final": "2004-12-16",
+            "premiere": "2004-11-11",
+            "quality": {
+                "SD": 6
+            },
+            "ratio": {
+                "16:9": 1,
+                "5:4": 5
+            },
+            "seasons": 1,
+            "series_name": "Blackpool",
+            "size": 2.92,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 42.23,
+            "avg_size": 283.84,
+            "duration": 124.6,
+            "episodes": 177,
+            "extention": {
+                "avi": 37,
+                "mkv": 47,
+                "mp4": 93
+            },
+            "final": "",
+            "premiere": "2010-09-24",
+            "quality": {
+                "SD": 177
+            },
+            "ratio": {
+                "16:9": 174,
+                "4:3": 3
+            },
+            "seasons": 8,
+            "series_name": "Blue Bloods",
+            "size": 49.06,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 42.98,
+            "avg_size": 234.27,
+            "duration": 176.23,
+            "episodes": 246,
+            "extention": {
+                "avi": 19,
+                "mkv": 184,
+                "mp4": 43
+            },
+            "final": "2017-03-28",
+            "premiere": "2005-09-13",
+            "quality": {
+                "SD": 246
+            },
+            "ratio": {
+                "16:9": 246
+            },
+            "seasons": 12,
+            "series_name": "Bones",
+            "size": 56.28,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 47.56,
+            "avg_size": 768.9,
+            "duration": 49.15,
+            "episodes": 62,
+            "extention": {
+                "mp4": 62
+            },
+            "final": "2013-09-29",
+            "premiere": "2008-01-20",
+            "quality": {
+                "HD": 62
+            },
+            "ratio": {
+                "16:9": 62
+            },
+            "seasons": 5,
+            "series_name": "Breaking Bad",
+            "size": 46.55,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 46.13,
+            "avg_size": 698.09,
+            "duration": 18.45,
+            "episodes": 24,
+            "extention": {
+                "mkv": 15,
+                "mp4": 9
+            },
+            "final": "2017-04-17",
+            "premiere": "2013-03-04",
+            "quality": {
+                "HD": 15,
+                "SD": 9
+            },
+            "ratio": {
+                "16:9": 18,
+                "4:3": 6
+            },
+            "seasons": 3,
+            "series_name": "Broadchurch",
+            "size": 16.36,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 42.17,
+            "avg_size": 452.73,
+            "duration": 101.22,
+            "episodes": 144,
+            "extention": {
+                "mkv": 144
+            },
+            "final": "2003-05-20",
+            "premiere": "1997-03-10",
+            "quality": {
+                "HD": 144
+            },
+            "ratio": {
+                "16:9": 2,
+                "5:4": 142
+            },
+            "seasons": 7,
+            "series_name": "Buffy",
+            "size": 63.66,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 42.99,
+            "avg_size": 257.14,
+            "duration": 32.24,
+            "episodes": 45,
+            "extention": {
+                "avi": 8,
+                "mkv": 37
+            },
+            "final": "",
+            "premiere": "2016-09-20",
+            "quality": {
+                "SD": 45
+            },
+            "ratio": {
+                "16:9": 43,
+                "4:3": 2
+            },
+            "seasons": 2,
+            "series_name": "Bull",
+            "size": 11.3,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 57.57,
+            "avg_size": 469.31,
+            "duration": 2.87,
+            "episodes": 3,
+            "extention": {
+                "avi": 3
+            },
+            "final": "2005-03-27",
+            "premiere": "2005-03-23",
+            "quality": {
+                "SD": 3
+            },
+            "ratio": {
+                "16:9": 3
+            },
+            "seasons": 1,
+            "series_name": "Casanova",
+            "size": 1.37,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 47.62,
+            "avg_size": 362.16,
+            "duration": 15.87,
+            "episodes": 20,
+            "extention": {
+                "mkv": 20
+            },
+            "final": "2017-11-29",
+            "premiere": "2016-10-19",
+            "quality": {
+                "HD": 8,
+                "SD": 12
+            },
+            "ratio": {
+                "16:9": 20
+            },
+            "seasons": 2,
+            "series_name": "Chance",
+            "size": 7.07,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 41.81,
+            "avg_size": 349.48,
+            "duration": 124.06,
+            "episodes": 178,
+            "extention": {
+                "avi": 178
+            },
+            "final": "2006-05-21",
+            "premiere": "1998-10-07",
+            "quality": {
+                "SD": 178
+            },
+            "ratio": {
+                "4:3": 176,
+                "5:4": 2
+            },
+            "seasons": 8,
+            "series_name": "Charmed",
+            "size": 60.74,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 41.63,
+            "avg_size": 308.26,
+            "duration": 95.07,
+            "episodes": 137,
+            "extention": {
+                "mkv": 73,
+                "mp4": 64
+            },
+            "final": "",
+            "premiere": "2012-10-10",
+            "quality": {
+                "HD": 3,
+                "SD": 134
+            },
+            "ratio": {
+                "16:9": 137
+            },
+            "seasons": 6,
+            "series_name": "Chicago Fire",
+            "size": 41.24,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 41.79,
+            "avg_size": 223.19,
+            "duration": 9.05,
+            "episodes": 13,
+            "extention": {
+                "mkv": 13
+            },
+            "final": "2017-05-14",
+            "premiere": "2017-03-07",
+            "quality": {
+                "SD": 13
+            },
+            "ratio": {
+                "16:9": 13
+            },
+            "seasons": 1,
+            "series_name": "Chicago Justice",
+            "size": 2.83,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 41.63,
+            "avg_size": 266.88,
+            "duration": 42.33,
+            "episodes": 61,
+            "extention": {
+                "avi": 1,
+                "mkv": 48,
+                "mp4": 12
+            },
+            "final": "",
+            "premiere": "2015-11-17",
+            "quality": {
+                "SD": 61
+            },
+            "ratio": {
+                "16:9": 60,
+                "4:3": 1
+            },
+            "seasons": 3,
+            "series_name": "Chicago Med",
+            "size": 15.89,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 42.28,
+            "avg_size": 282.71,
+            "duration": 74.7,
+            "episodes": 106,
+            "extention": {
+                "mkv": 47,
+                "mp4": 59
+            },
+            "final": "",
+            "premiere": "2014-01-08",
+            "quality": {
+                "HD": 1,
+                "SD": 105
+            },
+            "ratio": {
+                "16:9": 106
+            },
+            "seasons": 5,
+            "series_name": "Chicago P.D",
+            "size": 29.26,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 42.87,
+            "avg_size": 190.05,
+            "duration": 65.02,
+            "episodes": 91,
+            "extention": {
+                "mp4": 91
+            },
+            "final": "2012-01-27",
+            "premiere": "2007-09-24",
+            "quality": {
+                "SD": 91
+            },
+            "ratio": {
+                "16:9": 91
+            },
+            "seasons": 5,
+            "series_name": "Chuck",
+            "size": 16.88,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 44.81,
+            "avg_size": 306.79,
+            "duration": 5.97,
+            "episodes": 8,
+            "extention": {
+                "mkv": 7,
+                "mp4": 1
+            },
+            "final": "2016-12-03",
+            "premiere": "2016-10-22",
+            "quality": {
+                "SD": 8
+            },
+            "ratio": {
+                "16:9": 8
+            },
+            "seasons": 1,
+            "series_name": "Class",
+            "size": 2.39,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 42.28,
+            "avg_size": 316.11,
+            "duration": 7.04,
+            "episodes": 10,
+            "extention": {
+                "mkv": 10
+            },
+            "final": "",
+            "premiere": "2018-06-07",
+            "quality": {
+                "HD": 6,
+                "SD": 4
+            },
+            "ratio": {
+                "16:9": 10
+            },
+            "seasons": 1,
+            "series_name": "Cloak & Dagger",
+            "size": 3.08,
+            "status": {
+                "Airing": 1
+            }
+        },
+        {
+            "avg_duration": 42.09,
+            "avg_size": 268.81,
+            "duration": 25.25,
+            "episodes": 36,
+            "extention": {
+                "mkv": 26,
+                "mp4": 10
+            },
+            "final": "2018-07-25",
+            "premiere": "2016-01-14",
+            "quality": {
+                "HD": 1,
+                "SD": 35
+            },
+            "ratio": {
+                "16:9": 35,
+                "4:3": 1
+            },
+            "seasons": 3,
+            "series_name": "Colony",
+            "size": 9.45,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 42.78,
+            "avg_size": 301.01,
+            "duration": 9.26,
+            "episodes": 13,
+            "extention": {
+                "avi": 1,
+                "mkv": 1,
+                "mp4": 11
+            },
+            "final": "2015-02-13",
+            "premiere": "2014-10-24",
+            "quality": {
+                "HD": 1,
+                "SD": 12
+            },
+            "ratio": {
+                "16:9": 13
+            },
+            "seasons": 1,
+            "series_name": "Constantine",
+            "size": 3.82,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 6.06,
+            "avg_size": 362.14,
+            "duration": 0.5,
+            "episodes": 5,
+            "extention": {
+                "mkv": 5
+            },
+            "final": "",
+            "premiere": "2017-10-09",
+            "quality": {
+                "FullHD": 5
+            },
+            "ratio": {
+                "16:9": 5
+            },
+            "seasons": 1,
+            "series_name": "Constantine - City of Demons",
+            "size": 1.76,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 43.46,
+            "avg_size": 222.51,
+            "duration": 30.42,
+            "episodes": 42,
+            "extention": {
+                "avi": 10,
+                "mkv": 13,
+                "mp4": 19
+            },
+            "final": "2015-10-09",
+            "premiere": "2012-05-27",
+            "quality": {
+                "SD": 42
+            },
+            "ratio": {
+                "16:9": 42
+            },
+            "seasons": 4,
+            "series_name": "Continuum",
+            "size": 9.12,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 42.21,
+            "avg_size": 304.25,
+            "duration": 210.36,
+            "episodes": 299,
+            "extention": {
+                "avi": 162,
+                "mkv": 67,
+                "mp4": 70
+            },
+            "final": "",
+            "premiere": "2005-09-22",
+            "quality": {
+                "HD": 4,
+                "SD": 295
+            },
+            "ratio": {
+                "16:9": 297,
+                "4:3": 2
+            },
+            "seasons": 13,
+            "series_name": "Criminal Minds",
+            "size": 88.83,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 44.63,
+            "avg_size": 482.59,
+            "duration": 25.29,
+            "episodes": 34,
+            "extention": {
+                "mkv": 10,
+                "mp4": 24
+            },
+            "final": "2015-12-04",
+            "premiere": "2013-06-23",
+            "quality": {
+                "HD": 10,
+                "SD": 24
+            },
+            "ratio": {
+                "16:9": 34
+            },
+            "seasons": 3,
+            "series_name": "Crossing Lines",
+            "size": 16.02,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 41.46,
+            "avg_size": 381.5,
+            "duration": 136.13,
+            "episodes": 197,
+            "extention": {
+                "avi": 176,
+                "mkv": 11,
+                "mp4": 10
+            },
+            "final": "2013-02-22",
+            "premiere": "2004-09-22",
+            "quality": {
+                "SD": 197
+            },
+            "ratio": {
+                "16:9": 197
+            },
+            "seasons": 9,
+            "series_name": "CSI New York",
+            "size": 73.39,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 55.25,
+            "avg_size": 1064.43,
+            "duration": 25.78,
+            "episodes": 28,
+            "extention": {
+                "mkv": 28
+            },
+            "final": "2015-12-26",
+            "premiere": "2013-04-22",
+            "quality": {
+                "FullHD": 8,
+                "HD": 15,
+                "SD": 5
+            },
+            "ratio": {
+                "16:9": 27,
+                "4:3": 1
+            },
+            "seasons": 3,
+            "series_name": "Da Vinci's Demons",
+            "size": 29.1,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 42.15,
+            "avg_size": 246.4,
+            "duration": 7.02,
+            "episodes": 10,
+            "extention": {
+                "mkv": 5,
+                "mp4": 5
+            },
+            "final": "2016-05-09",
+            "premiere": "2016-03-07",
+            "quality": {
+                "SD": 10
+            },
+            "ratio": {
+                "16:9": 10
+            },
+            "seasons": 1,
+            "series_name": "Damien",
+            "size": 2.4,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 53.94,
+            "avg_size": 2872.84,
+            "duration": 23.37,
+            "episodes": 26,
+            "extention": {
+                "mkv": 25,
+                "mp4": 1
+            },
+            "final": "",
+            "premiere": "2015-04-10",
+            "quality": {
+                "FullHD": 13,
+                "HD": 12,
+                "SD": 1
+            },
+            "ratio": {
+                "16:9": 26
+            },
+            "seasons": 2,
+            "series_name": "Daredevil",
+            "size": 72.94,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 45.35,
+            "avg_size": 267.0,
+            "duration": 31.74,
+            "episodes": 42,
+            "extention": {
+                "mkv": 42
+            },
+            "final": "2002-05-03",
+            "premiere": "2000-10-03",
+            "quality": {
+                "SD": 42
+            },
+            "ratio": {
+                "3:2": 42
+            },
+            "seasons": 2,
+            "series_name": "Dark Angel",
+            "size": 10.95,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 42.77,
+            "avg_size": 232.71,
+            "duration": 27.8,
+            "episodes": 39,
+            "extention": {
+                "mkv": 26,
+                "mp4": 13
+            },
+            "final": "2017-08-25",
+            "premiere": "2015-06-12",
+            "quality": {
+                "SD": 39
+            },
+            "ratio": {
+                "16:9": 39
+            },
+            "seasons": 3,
+            "series_name": "Dark Matter",
+            "size": 8.86,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 52.64,
+            "avg_size": 455.86,
+            "duration": 84.22,
+            "episodes": 96,
+            "extention": {
+                "avi": 84,
+                "mp4": 12
+            },
+            "final": "2013-09-22",
+            "premiere": "2006-10-01",
+            "quality": {
+                "SD": 96
+            },
+            "ratio": {
+                "16:9": 95,
+                "4:3": 1
+            },
+            "seasons": 8,
+            "series_name": "Dexter",
+            "size": 42.73,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 47.97,
+            "avg_size": 472.99,
+            "duration": 115.14,
+            "episodes": 144,
+            "extention": {
+                "avi": 90,
+                "mkv": 34,
+                "mp4": 20
+            },
+            "final": "",
+            "premiere": "2005-03-26",
+            "quality": {
+                "FullHD": 4,
+                "HD": 9,
+                "SD": 131
+            },
+            "ratio": {
+                "16:9": 135,
+                "3:2": 8,
+                "4:3": 1
+            },
+            "seasons": 11,
+            "series_name": "Doctor Who",
+            "size": 66.51,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 26.67,
+            "avg_size": 337.98,
+            "duration": 70.25,
+            "episodes": 158,
+            "extention": {
+                "avi": 154,
+                "divx": 1,
+                "mp4": 3
+            },
+            "final": "1982-01-18",
+            "premiere": "1963-11-23",
+            "quality": {
+                "SD": 158
+            },
+            "ratio": {
+                "3:2": 3,
+                "4:3": 150,
+                "5:4": 5
+            },
+            "seasons": 26,
+            "series_name": "Doctor Who Classic",
+            "size": 52.15,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 46.19,
+            "avg_size": 357.57,
+            "duration": 20.78,
+            "episodes": 27,
+            "extention": {
+                "avi": 27
+            },
+            "final": "2010-01-29",
+            "premiere": "2009-02-13",
+            "quality": {
+                "SD": 27
+            },
+            "ratio": {
+                "16:9": 27
+            },
+            "seasons": 2,
+            "series_name": "Dollhouse",
+            "size": 9.42,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 52.14,
+            "avg_size": 5302.92,
+            "duration": 1.73,
+            "episodes": 2,
+            "extention": {
+                "mkv": 1,
+                "mp4": 1
+            },
+            "final": "2014-01-09",
+            "premiere": "2014-01-02",
+            "quality": {
+                "FullHD": 2
+            },
+            "ratio": {
+                "16:9": 2
+            },
+            "seasons": 1,
+            "series_name": "Dolphins - Spy in the Pod",
+            "size": 10.35,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 41.3,
+            "avg_size": 263.37,
+            "duration": 6.88,
+            "episodes": 10,
+            "extention": {
+                "mkv": 10
+            },
+            "final": "2017-03-03",
+            "premiere": "2017-01-06",
+            "quality": {
+                "SD": 10
+            },
+            "ratio": {
+                "16:9": 9,
+                "4:3": 1
+            },
+            "seasons": 1,
+            "series_name": "Emerald City",
+            "size": 2.57,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 43.73,
+            "avg_size": 355.24,
+            "duration": 56.12,
+            "episodes": 77,
+            "extention": {
+                "avi": 67,
+                "mkv": 2,
+                "mp4": 8
+            },
+            "final": "2012-07-16",
+            "premiere": "2006-07-18",
+            "quality": {
+                "SD": 77
+            },
+            "ratio": {
+                "16:9": 77
+            },
+            "seasons": 5,
+            "series_name": "Eureka",
+            "size": 26.71,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 52.69,
+            "avg_size": 2359.91,
+            "duration": 26.34,
+            "episodes": 30,
+            "extention": {
+                "mkv": 30
+            },
+            "final": "",
+            "premiere": "2014-04-15",
+            "quality": {
+                "HD": 20,
+                "SD": 10
+            },
+            "ratio": {
+                "16:9": 30
+            },
+            "seasons": 3,
+            "series_name": "Fargo",
+            "size": 69.13,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 47.04,
+            "avg_size": 159.06,
+            "duration": 68.99,
+            "episodes": 88,
+            "extention": {
+                "mkv": 87,
+                "mp4": 1
+            },
+            "final": "2004-10-18",
+            "premiere": "1999-03-19",
+            "quality": {
+                "SD": 88
+            },
+            "ratio": {
+                "16:9": 22,
+                "4:3": 66
+            },
+            "seasons": 4,
+            "series_name": "Farscape",
+            "size": 13.66,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 29.21,
+            "avg_size": 235.0,
+            "duration": 3.89,
+            "episodes": 8,
+            "extention": {
+                "avi": 8
+            },
+            "final": "2011-03-04",
+            "premiere": "2011-01-14",
+            "quality": {
+                "SD": 8
+            },
+            "ratio": {
+                "16:9": 8
+            },
+            "seasons": 1,
+            "series_name": "Fast and Loose",
+            "size": 1.83,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 46.58,
+            "avg_size": 366.45,
+            "duration": 10.86,
+            "episodes": 14,
+            "extention": {
+                "avi": 14
+            },
+            "final": "2003-07-28",
+            "premiere": "2002-09-20",
+            "quality": {
+                "SD": 14
+            },
+            "ratio": {
+                "16:9": 14
+            },
+            "seasons": 1,
+            "series_name": "Firefly",
+            "size": 5.01,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 22.71,
+            "avg_size": 143.16,
+            "duration": 89.36,
+            "episodes": 236,
+            "extention": {
+                "mkv": 236
+            },
+            "final": "2004-05-06",
+            "premiere": "1994-09-22",
+            "quality": {
+                "HD": 236
+            },
+            "ratio": {
+                "16:9": 236
+            },
+            "seasons": 10,
+            "series_name": "Friends",
+            "size": 32.99,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 45.17,
+            "avg_size": 145.62,
+            "duration": 75.28,
+            "episodes": 100,
+            "extention": {
+                "mp4": 100
+            },
+            "final": "2013-01-18",
+            "premiere": "2008-09-09",
+            "quality": {
+                "SD": 100
+            },
+            "ratio": {
+                "16:9": 100
+            },
+            "seasons": 5,
+            "series_name": "Fringe",
+            "size": 14.22,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 56.86,
+            "avg_size": 1677.73,
+            "duration": 63.5,
+            "episodes": 67,
+            "extention": {
+                "avi": 10,
+                "mkv": 56,
+                "mp4": 1
+            },
+            "final": "",
+            "premiere": "2010-12-05",
+            "quality": {
+                "FullHD": 12,
+                "HD": 54,
+                "SD": 1
+            },
+            "ratio": {
+                "16:9": 66,
+                "3:2": 1
+            },
+            "seasons": 7,
+            "series_name": "Game of Thrones",
+            "size": 109.77,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 41.38,
+            "avg_size": 514.71,
+            "duration": 105.53,
+            "episodes": 153,
+            "extention": {
+                "mkv": 153
+            },
+            "final": "2007-02-27",
+            "premiere": "2000-10-05",
+            "quality": {
+                "HD": 153
+            },
+            "ratio": {
+                "4:3": 153
+            },
+            "seasons": 7,
+            "series_name": "Gilmore Girls",
+            "size": 76.9,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 91.97,
+            "avg_size": 809.48,
+            "duration": 6.13,
+            "episodes": 4,
+            "extention": {
+                "mp4": 4
+            },
+            "final": "2016-11-25",
+            "premiere": "2016-11-25",
+            "quality": {
+                "HD": 4
+            },
+            "ratio": {
+                "16:9": 4
+            },
+            "seasons": 1,
+            "series_name": "Gilmore Girls - A Year in the Life",
+            "size": 3.16,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 43.7,
+            "avg_size": 233.56,
+            "duration": 64.1,
+            "episodes": 88,
+            "extention": {
+                "mkv": 49,
+                "mp4": 39
+            },
+            "final": "",
+            "premiere": "2014-09-22",
+            "quality": {
+                "HD": 1,
+                "SD": 87
+            },
+            "ratio": {
+                "16:9": 84,
+                "4:3": 4
+            },
+            "seasons": 4,
+            "series_name": "Gotham",
+            "size": 20.07,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 43.76,
+            "avg_size": 1148.46,
+            "duration": 7.29,
+            "episodes": 10,
+            "extention": {
+                "mkv": 8,
+                "mp4": 2
+            },
+            "final": "2014-12-11",
+            "premiere": "2014-10-02",
+            "quality": {
+                "HD": 9,
+                "SD": 1
+            },
+            "ratio": {
+                "16:9": 10
+            },
+            "seasons": 1,
+            "series_name": "Gracepoint",
+            "size": 11.21,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 42.75,
+            "avg_size": 227.81,
+            "duration": 225.16,
+            "episodes": 316,
+            "extention": {
+                "avi": 73,
+                "mkv": 169,
+                "mp4": 74
+            },
+            "final": "",
+            "premiere": "2005-03-27",
+            "quality": {
+                "HD": 5,
+                "SD": 311
+            },
+            "ratio": {
+                "16:9": 315,
+                "4:3": 1
+            },
+            "seasons": 14,
+            "series_name": "Grey's Anatomy",
+            "size": 70.3,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 42.33,
+            "avg_size": 250.36,
+            "duration": 86.79,
+            "episodes": 123,
+            "extention": {
+                "mkv": 29,
+                "mp4": 94
+            },
+            "final": "2017-03-31",
+            "premiere": "2011-10-28",
+            "quality": {
+                "SD": 123
+            },
+            "ratio": {
+                "16:9": 122,
+                "4:3": 1
+            },
+            "seasons": 6,
+            "series_name": "Grimm",
+            "size": 30.07,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 58.69,
+            "avg_size": 233.38,
+            "duration": 2.93,
+            "episodes": 3,
+            "extention": {
+                "mkv": 3
+            },
+            "final": "2017-11-04",
+            "premiere": "2017-10-21",
+            "quality": {
+                "SD": 3
+            },
+            "ratio": {
+                "16:9": 3
+            },
+            "seasons": 1,
+            "series_name": "Gunpowder",
+            "size": 0.68,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 42.56,
+            "avg_size": 347.39,
+            "duration": 27.66,
+            "episodes": 39,
+            "extention": {
+                "avi": 1,
+                "mkv": 23,
+                "mp4": 15
+            },
+            "final": "2015-08-29",
+            "premiere": "2013-04-04",
+            "quality": {
+                "HD": 9,
+                "SD": 30
+            },
+            "ratio": {
+                "16:9": 39
+            },
+            "seasons": 3,
+            "series_name": "Hannibal",
+            "size": 13.23,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 56.21,
+            "avg_size": 388.76,
+            "duration": 5.62,
+            "episodes": 6,
+            "extention": {
+                "mp4": 6
+            },
+            "final": "",
+            "premiere": "2018-01-06",
+            "quality": {
+                "HD": 6
+            },
+            "ratio": {
+                "16:9": 6
+            },
+            "seasons": 1,
+            "series_name": "Hard Sun",
+            "size": 2.27,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 43.39,
+            "avg_size": 336.17,
+            "duration": 139.6,
+            "episodes": 193,
+            "extention": {
+                "avi": 19,
+                "mkv": 114,
+                "mp4": 60
+            },
+            "final": "",
+            "premiere": "2010-09-20",
+            "quality": {
+                "HD": 1,
+                "SD": 192
+            },
+            "ratio": {
+                "16:9": 189,
+                "4:3": 4
+            },
+            "seasons": 8,
+            "series_name": "Hawaii Five-0",
+            "size": 63.36,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 42.51,
+            "avg_size": 366.37,
+            "duration": 55.27,
+            "episodes": 78,
+            "extention": {
+                "avi": 78
+            },
+            "final": "2010-02-08",
+            "premiere": "2006-09-25",
+            "quality": {
+                "SD": 78
+            },
+            "ratio": {
+                "16:9": 78
+            },
+            "seasons": 4,
+            "series_name": "Heroes",
+            "size": 27.9,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 42.01,
+            "avg_size": 311.74,
+            "duration": 9.1,
+            "episodes": 13,
+            "extention": {
+                "mkv": 1,
+                "mp4": 12
+            },
+            "final": "2016-01-21",
+            "premiere": "2015-09-24",
+            "quality": {
+                "SD": 13
+            },
+            "ratio": {
+                "16:9": 13
+            },
+            "seasons": 1,
+            "series_name": "Heroes Reborn",
+            "size": 3.95,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 44.87,
+            "avg_size": 859.15,
+            "duration": 7.47,
+            "episodes": 10,
+            "extention": {
+                "mkv": 9,
+                "mp4": 1
+            },
+            "final": "2016-05-12",
+            "premiere": "2016-03-13",
+            "quality": {
+                "HD": 10
+            },
+            "ratio": {
+                "16:9": 10
+            },
+            "seasons": 1,
+            "series_name": "Houdini & Doyle",
+            "size": 8.39,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 44.0,
+            "avg_size": 347.7,
+            "duration": 129.07,
+            "episodes": 176,
+            "extention": {
+                "avi": 171,
+                "mp4": 5
+            },
+            "final": "2012-05-21",
+            "premiere": "2004-11-16",
+            "quality": {
+                "SD": 176
+            },
+            "ratio": {
+                "16:9": 176
+            },
+            "seasons": 8,
+            "series_name": "House",
+            "size": 59.76,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 50.27,
+            "avg_size": 220.17,
+            "duration": 54.46,
+            "episodes": 65,
+            "extention": {
+                "mkv": 39,
+                "mp4": 26
+            },
+            "final": "",
+            "premiere": "2013-02-01",
+            "quality": {
+                "SD": 65
+            },
+            "ratio": {
+                "16:9": 65
+            },
+            "seasons": 5,
+            "series_name": "House of Cards",
+            "size": 13.97,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 21.23,
+            "avg_size": 105.77,
+            "duration": 73.61,
+            "episodes": 208,
+            "extention": {
+                "mkv": 136,
+                "mp4": 72
+            },
+            "final": "2014-03-31",
+            "premiere": "2005-09-19",
+            "quality": {
+                "SD": 208
+            },
+            "ratio": {
+                "16:9": 208
+            },
+            "seasons": 9,
+            "series_name": "How I Met Your Mother",
+            "size": 21.48,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 42.51,
+            "avg_size": 248.05,
+            "duration": 42.51,
+            "episodes": 60,
+            "extention": {
+                "mkv": 30,
+                "mp4": 30
+            },
+            "final": "",
+            "premiere": "2014-09-25",
+            "quality": {
+                "SD": 60
+            },
+            "ratio": {
+                "16:9": 58,
+                "4:3": 2
+            },
+            "seasons": 4,
+            "series_name": "How to Get Away with Murder",
+            "size": 14.53,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 41.54,
+            "avg_size": 277.22,
+            "duration": 5.53,
+            "episodes": 8,
+            "extention": {
+                "mkv": 8
+            },
+            "final": "2017-11-10",
+            "premiere": "2017-09-29",
+            "quality": {
+                "SD": 8
+            },
+            "ratio": {
+                "16:9": 7,
+                "4:3": 1
+            },
+            "seasons": 1,
+            "series_name": "Inhumans",
+            "size": 2.16,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 54.94,
+            "avg_size": 2852.28,
+            "duration": 11.9,
+            "episodes": 13,
+            "extention": {
+                "mkv": 13
+            },
+            "final": "",
+            "premiere": "2017-03-17",
+            "quality": {
+                "HD": 13
+            },
+            "ratio": {
+                "16:9": 13
+            },
+            "seasons": 1,
+            "series_name": "Iron Fist",
+            "size": 36.21,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 42.08,
+            "avg_size": 256.13,
+            "duration": 40.68,
+            "episodes": 58,
+            "extention": {
+                "mkv": 28,
+                "mp4": 30
+            },
+            "final": "",
+            "premiere": "2015-03-17",
+            "quality": {
+                "SD": 58
+            },
+            "ratio": {
+                "16:9": 57,
+                "4:3": 1
+            },
+            "seasons": 4,
+            "series_name": "iZombie",
+            "size": 14.5,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 51.67,
+            "avg_size": 1015.62,
+            "duration": 22.39,
+            "episodes": 26,
+            "extention": {
+                "mkv": 25,
+                "mp4": 1
+            },
+            "final": "",
+            "premiere": "2015-11-20",
+            "quality": {
+                "HD": 26
+            },
+            "ratio": {
+                "16:9": 26
+            },
+            "seasons": 2,
+            "series_name": "Jessica Jones",
+            "size": 25.78,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 42.52,
+            "avg_size": 282.38,
+            "duration": 24.09,
+            "episodes": 34,
+            "extention": {
+                "mkv": 23,
+                "mp4": 11
+            },
+            "final": "",
+            "premiere": "2015-06-19",
+            "quality": {
+                "SD": 34
+            },
+            "ratio": {
+                "16:9": 33,
+                "4:3": 1
+            },
+            "seasons": 4,
+            "series_name": "Killjoys",
+            "size": 9.37,
+            "status": {
+                "Airing": 1
+            }
+        },
+        {
+            "avg_duration": 30.62,
+            "avg_size": 297.97,
+            "duration": 69.92,
+            "episodes": 137,
+            "extention": {
+                "mkv": 73,
+                "mp4": 64
+            },
+            "final": "",
+            "premiere": "2014-04-27",
+            "quality": {
+                "HD": 16,
+                "SD": 121
+            },
+            "ratio": {
+                "16:9": 126,
+                "4:3": 11
+            },
+            "seasons": 5,
+            "series_name": "Last Week Tonight With John Oliver",
+            "size": 39.86,
+            "status": {
+                "Airing": 1
+            }
+        },
+        {
+            "avg_duration": 42.17,
+            "avg_size": 295.78,
+            "duration": 35.84,
+            "episodes": 51,
+            "extention": {
+                "mkv": 41,
+                "mp4": 10
+            },
+            "final": "",
+            "premiere": "2016-01-21",
+            "quality": {
+                "SD": 51
+            },
+            "ratio": {
+                "16:9": 47,
+                "4:3": 4
+            },
+            "seasons": 3,
+            "series_name": "Legends of Tomorrow",
+            "size": 14.73,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 48.32,
+            "avg_size": 254.16,
+            "duration": 15.3,
+            "episodes": 19,
+            "extention": {
+                "mkv": 19
+            },
+            "final": "",
+            "premiere": "2017-02-08",
+            "quality": {
+                "HD": 1,
+                "SD": 18
+            },
+            "ratio": {
+                "16:9": 16,
+                "3:2": 1,
+                "4:3": 2
+            },
+            "seasons": 2,
+            "series_name": "Legion",
+            "size": 4.71,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 43.74,
+            "avg_size": 280.94,
+            "duration": 29.16,
+            "episodes": 40,
+            "extention": {
+                "mkv": 40
+            },
+            "final": "",
+            "premiere": "2016-09-21",
+            "quality": {
+                "HD": 3,
+                "SD": 37
+            },
+            "ratio": {
+                "16:9": 36,
+                "4:3": 4
+            },
+            "seasons": 2,
+            "series_name": "Lethal Weapon",
+            "size": 10.97,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 59.66,
+            "avg_size": 236.51,
+            "duration": 15.91,
+            "episodes": 16,
+            "extention": {
+                "avi": 1,
+                "mp4": 15
+            },
+            "final": "2007-04-10",
+            "premiere": "2006-01-09",
+            "quality": {
+                "SD": 16
+            },
+            "ratio": {
+                "16:9": 16
+            },
+            "seasons": 2,
+            "series_name": "Life on Mars",
+            "size": 3.69,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 42.25,
+            "avg_size": 355.4,
+            "duration": 85.22,
+            "episodes": 121,
+            "extention": {
+                "avi": 121
+            },
+            "final": "2010-05-23",
+            "premiere": "2004-09-22",
+            "quality": {
+                "SD": 121
+            },
+            "ratio": {
+                "16:9": 121
+            },
+            "seasons": 6,
+            "series_name": "Lost",
+            "size": 41.99,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 43.59,
+            "avg_size": 270.25,
+            "duration": 41.41,
+            "episodes": 57,
+            "extention": {
+                "mkv": 45,
+                "mp4": 12
+            },
+            "final": "2018-05-28",
+            "premiere": "2016-01-25",
+            "quality": {
+                "HD": 6,
+                "SD": 51
+            },
+            "ratio": {
+                "16:9": 54,
+                "4:3": 3
+            },
+            "seasons": 3,
+            "series_name": "Lucifer",
+            "size": 15.04,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 56.11,
+            "avg_size": 897.69,
+            "duration": 24.31,
+            "episodes": 26,
+            "extention": {
+                "mkv": 26
+            },
+            "final": "",
+            "premiere": "2016-09-30",
+            "quality": {
+                "HD": 11,
+                "SD": 15
+            },
+            "ratio": {
+                "16:9": 13,
+                "3:2": 13
+            },
+            "seasons": 2,
+            "series_name": "Luke Cage",
+            "size": 22.79,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 43.61,
+            "avg_size": 429.33,
+            "duration": 37.79,
+            "episodes": 52,
+            "extention": {
+                "avi": 51,
+                "mp4": 1
+            },
+            "final": "2012-12-24",
+            "premiere": "2008-09-20",
+            "quality": {
+                "SD": 52
+            },
+            "ratio": {
+                "16:9": 52
+            },
+            "seasons": 4,
+            "series_name": "Merlin",
+            "size": 21.8,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 42.39,
+            "avg_size": 350.57,
+            "duration": 7.06,
+            "episodes": 10,
+            "extention": {
+                "mp4": 10
+            },
+            "final": "2015-11-30",
+            "premiere": "2015-09-21",
+            "quality": {
+                "SD": 10
+            },
+            "ratio": {
+                "16:9": 10
+            },
+            "seasons": 1,
+            "series_name": "Minority Report",
+            "size": 3.42,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 30.09,
+            "avg_size": 217.67,
+            "duration": 72.73,
+            "episodes": 145,
+            "extention": {
+                "avi": 120,
+                "mkv": 7,
+                "mp4": 17,
+                "webm": 1
+            },
+            "final": "2018-07-12",
+            "premiere": "2006-01-20",
+            "quality": {
+                "HD": 3,
+                "SD": 142
+            },
+            "ratio": {
+                "16:9": 144,
+                "4:3": 1
+            },
+            "seasons": 14,
+            "series_name": "Mock the Week",
+            "size": 30.82,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 41.52,
+            "avg_size": 497.73,
+            "duration": 11.07,
+            "episodes": 16,
+            "extention": {
+                "avi": 16
+            },
+            "final": "2008-05-16",
+            "premiere": "2007-09-28",
+            "quality": {
+                "SD": 16
+            },
+            "ratio": {
+                "16:9": 16
+            },
+            "seasons": 1,
+            "series_name": "Moonlight",
+            "size": 7.77,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 48.86,
+            "avg_size": 383.72,
+            "duration": 26.06,
+            "episodes": 32,
+            "extention": {
+                "mkv": 31,
+                "mp4": 1
+            },
+            "final": "",
+            "premiere": "2015-06-24",
+            "quality": {
+                "HD": 23,
+                "SD": 9
+            },
+            "ratio": {
+                "16:9": 32
+            },
+            "seasons": 3,
+            "series_name": "Mr. Robot",
+            "size": 11.99,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 51.78,
+            "avg_size": 341.67,
+            "duration": 25.89,
+            "episodes": 30,
+            "extention": {
+                "mkv": 20,
+                "mp4": 10
+            },
+            "final": "",
+            "premiere": "2015-08-28",
+            "quality": {
+                "HD": 10,
+                "SD": 20
+            },
+            "ratio": {
+                "16:9": 20,
+                "3:2": 10
+            },
+            "seasons": 3,
+            "series_name": "Narcos",
+            "size": 10.0,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 42.94,
+            "avg_size": 301.32,
+            "duration": 252.63,
+            "episodes": 353,
+            "extention": {
+                "avi": 208,
+                "mkv": 76,
+                "mp4": 69
+            },
+            "final": "",
+            "premiere": "2003-04-22",
+            "quality": {
+                "HD": 1,
+                "SD": 352
+            },
+            "ratio": {
+                "16:9": 353
+            },
+            "seasons": 15,
+            "series_name": "NCIS",
+            "size": 103.87,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 42.75,
+            "avg_size": 316.8,
+            "duration": 153.92,
+            "episodes": 216,
+            "extention": {
+                "avi": 68,
+                "mkv": 74,
+                "mp4": 74
+            },
+            "final": "",
+            "premiere": "2009-09-22",
+            "quality": {
+                "HD": 4,
+                "SD": 212
+            },
+            "ratio": {
+                "16:9": 215,
+                "4:3": 1
+            },
+            "seasons": 9,
+            "series_name": "NCIS Los Angeles",
+            "size": 66.82,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 42.36,
+            "avg_size": 371.06,
+            "duration": 67.07,
+            "episodes": 95,
+            "extention": {
+                "avi": 3,
+                "mkv": 53,
+                "mp4": 39
+            },
+            "final": "",
+            "premiere": "2014-09-23",
+            "quality": {
+                "HD": 2,
+                "SD": 93
+            },
+            "ratio": {
+                "16:9": 91,
+                "4:3": 4
+            },
+            "seasons": 4,
+            "series_name": "NCIS New Orleans",
+            "size": 34.42,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 42.16,
+            "avg_size": 460.05,
+            "duration": 82.93,
+            "episodes": 118,
+            "extention": {
+                "avi": 101,
+                "mkv": 16,
+                "mp4": 1
+            },
+            "final": "2010-03-12",
+            "premiere": "2005-01-23",
+            "quality": {
+                "HD": 16,
+                "SD": 102
+            },
+            "ratio": {
+                "16:9": 118
+            },
+            "seasons": 6,
+            "series_name": "Numb3rs",
+            "size": 53.01,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 43.21,
+            "avg_size": 312.53,
+            "duration": 36.01,
+            "episodes": 50,
+            "extention": {
+                "mkv": 50
+            },
+            "final": "2017-08-12",
+            "premiere": "2013-03-30",
+            "quality": {
+                "HD": 30,
+                "SD": 20
+            },
+            "ratio": {
+                "16:9": 50
+            },
+            "seasons": 5,
+            "series_name": "Orphan Black",
+            "size": 15.26,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 58.93,
+            "avg_size": 699.5,
+            "duration": 2.94,
+            "episodes": 3,
+            "extention": {
+                "mp4": 3
+            },
+            "final": "2013-02-25",
+            "premiere": "2013-02-11",
+            "quality": {
+                "SD": 3
+            },
+            "ratio": {
+                "16:9": 3
+            },
+            "seasons": 1,
+            "series_name": "Penguins - Spy in the Huddle",
+            "size": 2.04,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 52.65,
+            "avg_size": 549.83,
+            "duration": 7.02,
+            "episodes": 8,
+            "extention": {
+                "avi": 7,
+                "mp4": 1
+            },
+            "final": "2010-08-30",
+            "premiere": "2010-07-23",
+            "quality": {
+                "SD": 8
+            },
+            "ratio": {
+                "16:9": 8
+            },
+            "seasons": 1,
+            "series_name": "Pillars of the Earth",
+            "size": 4.29,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 52.58,
+            "avg_size": 4477.64,
+            "duration": 9.63,
+            "episodes": 11,
+            "extention": {
+                "mkv": 11
+            },
+            "final": "2006-12-10",
+            "premiere": "2006-03-05",
+            "quality": {
+                "FullHD": 11
+            },
+            "ratio": {
+                "16:9": 11
+            },
+            "seasons": 1,
+            "series_name": "Planet Earth",
+            "size": 48.09,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 58.29,
+            "avg_size": 3153.6,
+            "duration": 5.82,
+            "episodes": 6,
+            "extention": {
+                "mkv": 6
+            },
+            "final": "2016-12-11",
+            "premiere": "2016-11-06",
+            "quality": {
+                "FullHD": 3,
+                "HD": 3
+            },
+            "ratio": {
+                "16:9": 6
+            },
+            "seasons": 1,
+            "series_name": "Planet Earth II",
+            "size": 18.47,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 25.68,
+            "avg_size": 227.76,
+            "duration": 13.69,
+            "episodes": 32,
+            "extention": {
+                "mkv": 9,
+                "mp4": 23
+            },
+            "final": "2016-12-14",
+            "premiere": "2013-02-28",
+            "quality": {
+                "HD": 3,
+                "SD": 29
+            },
+            "ratio": {
+                "16:9": 29,
+                "4:3": 3
+            },
+            "seasons": 4,
+            "series_name": "Please Like Me",
+            "size": 7.11,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 100.7,
+            "avg_size": 12575.18,
+            "duration": 1.67,
+            "episodes": 1,
+            "extention": {
+                "mkv": 1
+            },
+            "final": "2010-12-29",
+            "premiere": "2010-12-29",
+            "quality": {
+                "FullHD": 1
+            },
+            "ratio": {
+                "16:9": 1
+            },
+            "seasons": 1,
+            "series_name": "Polar Bear - Spy on the Ice",
+            "size": 12.28,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 43.06,
+            "avg_size": 351.8,
+            "duration": 114.12,
+            "episodes": 159,
+            "extention": {
+                "avi": 44,
+                "mkv": 68,
+                "mp4": 47
+            },
+            "final": "2017-06-27",
+            "premiere": "2010-06-08",
+            "quality": {
+                "HD": 25,
+                "SD": 134
+            },
+            "ratio": {
+                "16:9": 159
+            },
+            "seasons": 7,
+            "series_name": "Pretty Little Liars",
+            "size": 54.62,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 42.68,
+            "avg_size": 368.92,
+            "duration": 63.31,
+            "episodes": 89,
+            "extention": {
+                "avi": 80,
+                "mkv": 9
+            },
+            "final": "2017-05-30",
+            "premiere": "2005-08-29",
+            "quality": {
+                "SD": 89
+            },
+            "ratio": {
+                "16:9": 89
+            },
+            "seasons": 5,
+            "series_name": "Prison Break",
+            "size": 32.06,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 36.85,
+            "avg_size": 228.38,
+            "duration": 121.63,
+            "episodes": 198,
+            "extention": {
+                "avi": 2,
+                "mkv": 2,
+                "mp4": 194
+            },
+            "final": "2018-03-02",
+            "premiere": "2003-09-11",
+            "quality": {
+                "HD": 46,
+                "SD": 152
+            },
+            "ratio": {
+                "16:9": 198
+            },
+            "seasons": 13,
+            "series_name": "QI",
+            "size": 44.15,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 47.22,
+            "avg_size": 349.82,
+            "duration": 76.34,
+            "episodes": 97,
+            "extention": {
+                "avi": 97
+            },
+            "final": "1993-05-05",
+            "premiere": "1989-03-26",
+            "quality": {
+                "SD": 97
+            },
+            "ratio": {
+                "4:3": 97
+            },
+            "seasons": 5,
+            "series_name": "Quantum Leap",
+            "size": 33.13,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 48.54,
+            "avg_size": 364.94,
+            "duration": 67.15,
+            "episodes": 83,
+            "extention": {
+                "avi": 82,
+                "mp4": 1
+            },
+            "final": "2005-08-07",
+            "premiere": "2000-12-03",
+            "quality": {
+                "SD": 83
+            },
+            "ratio": {
+                "16:9": 83
+            },
+            "seasons": 5,
+            "series_name": "Queer as Folk",
+            "size": 29.58,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 21.69,
+            "avg_size": 283.04,
+            "duration": 11.21,
+            "episodes": 31,
+            "extention": {
+                "mkv": 31
+            },
+            "final": "",
+            "premiere": "2013-12-02",
+            "quality": {
+                "FullHD": 31
+            },
+            "ratio": {
+                "16:9": 31
+            },
+            "seasons": 3,
+            "series_name": "Rick and Morty",
+            "size": 8.56,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 65.27,
+            "avg_size": 474.84,
+            "duration": 39.16,
+            "episodes": 36,
+            "extention": {
+                "mkv": 6,
+                "mp4": 30
+            },
+            "final": "2016-10-12",
+            "premiere": "2012-12-30",
+            "quality": {
+                "HD": 7,
+                "SD": 29
+            },
+            "ratio": {
+                "16:9": 36
+            },
+            "seasons": 5,
+            "series_name": "Ripper Street",
+            "size": 16.69,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 49.5,
+            "avg_size": 294.09,
+            "duration": 8.25,
+            "episodes": 10,
+            "extention": {
+                "mkv": 9,
+                "mp4": 1
+            },
+            "final": "",
+            "premiere": "2017-11-21",
+            "quality": {
+                "SD": 10
+            },
+            "ratio": {
+                "16:9": 9,
+                "4:3": 1
+            },
+            "seasons": 1,
+            "series_name": "Runaways",
+            "size": 2.87,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 43.58,
+            "avg_size": 881.49,
+            "duration": 42.85,
+            "episodes": 59,
+            "extention": {
+                "avi": 46,
+                "mkv": 13
+            },
+            "final": "2011-12-30",
+            "premiere": "2007-05-14",
+            "quality": {
+                "FullHD": 13,
+                "SD": 46
+            },
+            "ratio": {
+                "16:9": 59
+            },
+            "seasons": 4,
+            "series_name": "Sanctuary",
+            "size": 50.78,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 43.01,
+            "avg_size": 310.59,
+            "duration": 60.94,
+            "episodes": 85,
+            "extention": {
+                "mkv": 30,
+                "mp4": 55
+            },
+            "final": "2017-08-03",
+            "premiere": "2012-06-07",
+            "quality": {
+                "SD": 85
+            },
+            "ratio": {
+                "16:9": 85
+            },
+            "seasons": 5,
+            "series_name": "Saving Hope",
+            "size": 25.78,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 42.22,
+            "avg_size": 276.88,
+            "duration": 65.44,
+            "episodes": 93,
+            "extention": {
+                "avi": 1,
+                "mkv": 51,
+                "mp4": 41
+            },
+            "final": "2018-04-16",
+            "premiere": "2014-09-22",
+            "quality": {
+                "SD": 93
+            },
+            "ratio": {
+                "16:9": 91,
+                "4:3": 2
+            },
+            "seasons": 4,
+            "series_name": "Scorpion",
+            "size": 25.14,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 21.48,
+            "avg_size": 85.83,
+            "duration": 64.81,
+            "episodes": 181,
+            "extention": {
+                "mkv": 181
+            },
+            "final": "2010-03-17",
+            "premiere": "2001-10-02",
+            "quality": {
+                "SD": 181
+            },
+            "ratio": {
+                "16:9": 31,
+                "4:3": 150
+            },
+            "seasons": 9,
+            "series_name": "Scrubs",
+            "size": 15.17,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 60.63,
+            "avg_size": 475.08,
+            "duration": 24.25,
+            "episodes": 24,
+            "extention": {
+                "mkv": 1,
+                "mp4": 23
+            },
+            "final": "2018-06-08",
+            "premiere": "2015-06-05",
+            "quality": {
+                "SD": 24
+            },
+            "ratio": {
+                "16:9": 23,
+                "3:2": 1
+            },
+            "seasons": 2,
+            "series_name": "Sense8",
+            "size": 11.13,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 82.58,
+            "avg_size": 2507.08,
+            "duration": 19.27,
+            "episodes": 14,
+            "extention": {
+                "mkv": 9,
+                "mp4": 5
+            },
+            "final": "2017-01-15",
+            "premiere": "2010-07-25",
+            "quality": {
+                "FullHD": 6,
+                "HD": 8
+            },
+            "ratio": {
+                "16:9": 14
+            },
+            "seasons": 4,
+            "series_name": "Sherlock",
+            "size": 34.27,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 58.05,
+            "avg_size": 550.5,
+            "duration": 3.87,
+            "episodes": 4,
+            "extention": {
+                "avi": 4
+            },
+            "final": "2010-10-31",
+            "premiere": "2010-10-10",
+            "quality": {
+                "SD": 4
+            },
+            "ratio": {
+                "16:9": 4
+            },
+            "seasons": 1,
+            "series_name": "Single Father",
+            "size": 2.15,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 42.86,
+            "avg_size": 286.72,
+            "duration": 44.29,
+            "episodes": 62,
+            "extention": {
+                "avi": 1,
+                "mkv": 24,
+                "mp4": 37
+            },
+            "final": "2017-03-31",
+            "premiere": "2013-09-16",
+            "quality": {
+                "SD": 62
+            },
+            "ratio": {
+                "16:9": 61,
+                "4:3": 1
+            },
+            "seasons": 4,
+            "series_name": "Sleepy Hollow",
+            "size": 17.36,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 42.43,
+            "avg_size": 338.92,
+            "duration": 153.45,
+            "episodes": 217,
+            "extention": {
+                "avi": 193,
+                "mp4": 24
+            },
+            "final": "2011-05-13",
+            "premiere": "2001-10-16",
+            "quality": {
+                "SD": 217
+            },
+            "ratio": {
+                "16:9": 217
+            },
+            "seasons": 10,
+            "series_name": "Smallville",
+            "size": 71.82,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 92.79,
+            "avg_size": 1036.76,
+            "duration": 3.09,
+            "episodes": 2,
+            "extention": {
+                "mp4": 2
+            },
+            "final": "2013-01-16",
+            "premiere": "2013-01-09",
+            "quality": {
+                "HD": 2
+            },
+            "ratio": {
+                "16:9": 2
+            },
+            "seasons": 1,
+            "series_name": "Spies of Warsaw",
+            "size": 2.02,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 58.15,
+            "avg_size": 4475.56,
+            "duration": 4.84,
+            "episodes": 5,
+            "extention": {
+                "mkv": 5
+            },
+            "final": "",
+            "premiere": "2017-01-12",
+            "quality": {
+                "FullHD": 5
+            },
+            "ratio": {
+                "16:9": 5
+            },
+            "seasons": 1,
+            "series_name": "Spy in the Wild",
+            "size": 21.85,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 50.46,
+            "avg_size": 276.19,
+            "duration": 66.44,
+            "episodes": 79,
+            "extention": {
+                "mp4": 79
+            },
+            "final": "1969-06-03",
+            "premiere": "1988-10-15",
+            "quality": {
+                "SD": 79
+            },
+            "ratio": {
+                "4:3": 79
+            },
+            "seasons": 3,
+            "series_name": "Star Trek",
+            "size": 21.3,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 42.7,
+            "avg_size": 172.02,
+            "duration": 125.27,
+            "episodes": 176,
+            "extention": {
+                "avi": 176
+            },
+            "final": "1993-01-03",
+            "premiere": "1993-01-03",
+            "quality": {
+                "SD": 176
+            },
+            "ratio": {
+                "4:3": 78,
+                "5:4": 98
+            },
+            "seasons": 7,
+            "series_name": "Star Trek - Deep Space Nine",
+            "size": 29.56,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 45.57,
+            "avg_size": 308.3,
+            "duration": 11.39,
+            "episodes": 15,
+            "extention": {
+                "mkv": 15
+            },
+            "final": "",
+            "premiere": "2017-09-24",
+            "quality": {
+                "HD": 1,
+                "SD": 14
+            },
+            "ratio": {
+                "16:9": 9,
+                "4:3": 6
+            },
+            "seasons": 1,
+            "series_name": "Star Trek - Discovery",
+            "size": 4.51,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 41.41,
+            "avg_size": 100.28,
+            "duration": 67.65,
+            "episodes": 98,
+            "extention": {
+                "mkv": 98
+            },
+            "final": "2001-09-26",
+            "premiere": "2001-09-26",
+            "quality": {
+                "SD": 98
+            },
+            "ratio": {
+                "5:4": 98
+            },
+            "seasons": 4,
+            "series_name": "Star Trek - Enterprise",
+            "size": 9.59,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 23.4,
+            "avg_size": 320.45,
+            "duration": 8.58,
+            "episodes": 22,
+            "extention": {
+                "avi": 8,
+                "mkv": 13,
+                "mp4": 1
+            },
+            "final": "1974-10-12",
+            "premiere": "1973-09-08",
+            "quality": {
+                "SD": 22
+            },
+            "ratio": {
+                "4:3": 22
+            },
+            "seasons": 2,
+            "series_name": "Star Trek - The Animated Series",
+            "size": 6.88,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 45.46,
+            "avg_size": 197.88,
+            "duration": 134.87,
+            "episodes": 178,
+            "extention": {
+                "mkv": 178
+            },
+            "final": "1994-05-23",
+            "premiere": "1987-09-28",
+            "quality": {
+                "HD": 2,
+                "SD": 176
+            },
+            "ratio": {
+                "4:3": 83,
+                "5:4": 95
+            },
+            "seasons": 7,
+            "series_name": "Star Trek - The Next Generation",
+            "size": 34.39,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 44.71,
+            "avg_size": 348.69,
+            "duration": 128.17,
+            "episodes": 172,
+            "extention": {
+                "avi": 172
+            },
+            "final": "1995-01-16",
+            "premiere": "1995-01-16",
+            "quality": {
+                "SD": 172
+            },
+            "ratio": {
+                "3:2": 2,
+                "4:3": 170
+            },
+            "seasons": 7,
+            "series_name": "Star Trek - Voyager",
+            "size": 58.56,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 43.07,
+            "avg_size": 423.25,
+            "duration": 71.78,
+            "episodes": 100,
+            "extention": {
+                "mp4": 100
+            },
+            "final": "2009-01-09",
+            "premiere": "2004-07-16",
+            "quality": {
+                "HD": 100
+            },
+            "ratio": {
+                "16:9": 99,
+                "3:2": 1
+            },
+            "seasons": 5,
+            "series_name": "Stargate Atlantis",
+            "size": 41.33,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 43.98,
+            "avg_size": 416.74,
+            "duration": 156.86,
+            "episodes": 214,
+            "extention": {
+                "m4v": 212,
+                "mp4": 2
+            },
+            "final": "2007-06-22",
+            "premiere": "1997-07-27",
+            "quality": {
+                "HD": 60,
+                "SD": 154
+            },
+            "ratio": {
+                "16:9": 60,
+                "3:2": 154
+            },
+            "seasons": 10,
+            "series_name": "Stargate SG-1",
+            "size": 87.09,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 42.42,
+            "avg_size": 350.03,
+            "duration": 28.28,
+            "episodes": 40,
+            "extention": {
+                "avi": 38,
+                "mp4": 2
+            },
+            "final": "2011-05-09",
+            "premiere": "2009-10-02",
+            "quality": {
+                "SD": 40
+            },
+            "ratio": {
+                "16:9": 40
+            },
+            "seasons": 2,
+            "series_name": "Stargate Universe",
+            "size": 13.67,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 50.73,
+            "avg_size": 870.24,
+            "duration": 14.37,
+            "episodes": 17,
+            "extention": {
+                "mkv": 16,
+                "mp4": 1
+            },
+            "final": "",
+            "premiere": "2016-07-15",
+            "quality": {
+                "HD": 8,
+                "SD": 9
+            },
+            "ratio": {
+                "16:9": 9,
+                "3:2": 8
+            },
+            "seasons": 2,
+            "series_name": "Stranger Things",
+            "size": 14.44,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 42.78,
+            "avg_size": 280.98,
+            "duration": 46.35,
+            "episodes": 65,
+            "extention": {
+                "mkv": 47,
+                "mp4": 18
+            },
+            "final": "",
+            "premiere": "2015-10-26",
+            "quality": {
+                "SD": 65
+            },
+            "ratio": {
+                "16:9": 63,
+                "4:3": 2
+            },
+            "seasons": 3,
+            "series_name": "Supergirl",
+            "size": 17.83,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 41.41,
+            "avg_size": 288.58,
+            "duration": 198.11,
+            "episodes": 287,
+            "extention": {
+                "avi": 144,
+                "mkv": 64,
+                "mp4": 79
+            },
+            "final": "",
+            "premiere": "2005-09-13",
+            "quality": {
+                "HD": 2,
+                "SD": 285
+            },
+            "ratio": {
+                "16:9": 283,
+                "4:3": 4
+            },
+            "seasons": 13,
+            "series_name": "Supernatural",
+            "size": 80.88,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 44.49,
+            "avg_size": 206.72,
+            "duration": 22.98,
+            "episodes": 31,
+            "extention": {
+                "mp4": 31
+            },
+            "final": "2009-04-10",
+            "premiere": "2008-01-13",
+            "quality": {
+                "SD": 31
+            },
+            "ratio": {
+                "16:9": 31
+            },
+            "seasons": 2,
+            "series_name": "Terminator - The Sarah Connor Chronicles",
+            "size": 6.25,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 41.82,
+            "avg_size": 279.46,
+            "duration": 49.49,
+            "episodes": 71,
+            "extention": {
+                "mkv": 48,
+                "mp4": 23
+            },
+            "final": "",
+            "premiere": "2014-03-19",
+            "quality": {
+                "HD": 1,
+                "SD": 70
+            },
+            "ratio": {
+                "16:9": 68,
+                "4:3": 3
+            },
+            "seasons": 5,
+            "series_name": "The 100",
+            "size": 19.37,
+            "status": {
+                "Airing": 1
+            }
+        },
+        {
+            "avg_duration": 22.19,
+            "avg_size": 193.23,
+            "duration": 19.23,
+            "episodes": 52,
+            "extention": {
+                "mp4": 52
+            },
+            "final": "2012-11-11",
+            "premiere": "2010-10-20",
+            "quality": {
+                "HD": 52
+            },
+            "ratio": {
+                "16:9": 52
+            },
+            "seasons": 2,
+            "series_name": "The Avengers - Earth's Mightiest Heroes",
+            "size": 9.81,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 42.34,
+            "avg_size": 249.9,
+            "duration": 78.32,
+            "episodes": 111,
+            "extention": {
+                "avi": 1,
+                "mkv": 50,
+                "mp4": 60
+            },
+            "final": "",
+            "premiere": "2013-09-23",
+            "quality": {
+                "HD": 1,
+                "SD": 110
+            },
+            "ratio": {
+                "16:9": 108,
+                "4:3": 3
+            },
+            "seasons": 5,
+            "series_name": "The Blacklist",
+            "size": 27.08,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 57.7,
+            "avg_size": 1072.25,
+            "duration": 9.61,
+            "episodes": 10,
+            "extention": {
+                "mkv": 10
+            },
+            "final": "",
+            "premiere": "2016-11-04",
+            "quality": {
+                "HD": 10
+            },
+            "ratio": {
+                "16:9": 10
+            },
+            "seasons": 1,
+            "series_name": "The Crown",
+            "size": 10.47,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 50.26,
+            "avg_size": 1253.06,
+            "duration": 6.7,
+            "episodes": 8,
+            "extention": {
+                "mkv": 8
+            },
+            "final": "2017-08-18",
+            "premiere": "2017-08-18",
+            "quality": {
+                "FullHD": 1,
+                "HD": 7
+            },
+            "ratio": {
+                "16:9": 8
+            },
+            "seasons": 1,
+            "series_name": "The Defenders",
+            "size": 9.78,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 21.15,
+            "avg_size": 120.15,
+            "duration": 2.82,
+            "episodes": 8,
+            "extention": {
+                "mkv": 8
+            },
+            "final": "",
+            "premiere": "2017-10-24",
+            "quality": {
+                "HD": 8
+            },
+            "ratio": {
+                "16:9": 8
+            },
+            "seasons": 1,
+            "series_name": "The End of The Fucking World",
+            "size": 0.93,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 43.6,
+            "avg_size": 293.31,
+            "duration": 25.43,
+            "episodes": 35,
+            "extention": {
+                "mkv": 25,
+                "mp4": 10
+            },
+            "final": "",
+            "premiere": "2015-12-14",
+            "quality": {
+                "HD": 1,
+                "SD": 34
+            },
+            "ratio": {
+                "16:9": 31,
+                "3:2": 1,
+                "4:3": 3
+            },
+            "seasons": 3,
+            "series_name": "The Expanse",
+            "size": 10.02,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 60.54,
+            "avg_size": 1164.58,
+            "duration": 17.15,
+            "episodes": 17,
+            "extention": {
+                "avi": 1,
+                "mkv": 16
+            },
+            "final": "2016-10-30",
+            "premiere": "2013-05-12",
+            "quality": {
+                "HD": 17
+            },
+            "ratio": {
+                "16:9": 12,
+                "4:3": 5
+            },
+            "seasons": 3,
+            "series_name": "The Fall",
+            "size": 19.33,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 42.91,
+            "avg_size": 311.08,
+            "duration": 9.29,
+            "episodes": 13,
+            "extention": {
+                "avi": 6,
+                "mkv": 2,
+                "mp4": 5
+            },
+            "final": "2012-05-11",
+            "premiere": "2012-01-12",
+            "quality": {
+                "SD": 13
+            },
+            "ratio": {
+                "16:9": 13
+            },
+            "seasons": 1,
+            "series_name": "The Finder",
+            "size": 3.94,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 42.28,
+            "avg_size": 261.91,
+            "duration": 64.83,
+            "episodes": 92,
+            "extention": {
+                "mkv": 52,
+                "mp4": 40
+            },
+            "final": "",
+            "premiere": "2014-10-07",
+            "quality": {
+                "HD": 2,
+                "SD": 90
+            },
+            "ratio": {
+                "16:9": 90,
+                "4:3": 2
+            },
+            "seasons": 4,
+            "series_name": "The Flash",
+            "size": 23.53,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 42.15,
+            "avg_size": 228.62,
+            "duration": 12.64,
+            "episodes": 18,
+            "extention": {
+                "mkv": 18
+            },
+            "final": "",
+            "premiere": "2017-09-25",
+            "quality": {
+                "HD": 2,
+                "SD": 16
+            },
+            "ratio": {
+                "16:9": 15,
+                "4:3": 3
+            },
+            "seasons": 1,
+            "series_name": "The Good Doctor",
+            "size": 4.01,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 62.32,
+            "avg_size": 2269.09,
+            "duration": 24.92,
+            "episodes": 24,
+            "extention": {
+                "mkv": 22,
+                "mp4": 2
+            },
+            "final": "",
+            "premiere": "2016-11-18",
+            "quality": {
+                "HD": 15,
+                "SD": 9
+            },
+            "ratio": {
+                "16:9": 17,
+                "3:2": 2,
+                "4:3": 5
+            },
+            "seasons": 2,
+            "series_name": "The Grand Tour",
+            "size": 53.18,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 54.18,
+            "avg_size": 207.59,
+            "duration": 20.77,
+            "episodes": 23,
+            "extention": {
+                "mkv": 21,
+                "mp4": 2
+            },
+            "final": "",
+            "premiere": "2017-04-26",
+            "quality": {
+                "HD": 3,
+                "SD": 20
+            },
+            "ratio": {
+                "16:9": 15,
+                "4:3": 8
+            },
+            "seasons": 2,
+            "series_name": "The Handmaid's Tale",
+            "size": 4.66,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 23.49,
+            "avg_size": 277.02,
+            "duration": 9.39,
+            "episodes": 24,
+            "extention": {
+                "avi": 23,
+                "mp4": 1
+            },
+            "final": "2010-07-30",
+            "premiere": "2006-02-03",
+            "quality": {
+                "SD": 24
+            },
+            "ratio": {
+                "16:9": 24
+            },
+            "seasons": 4,
+            "series_name": "The IT Crowd",
+            "size": 6.49,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 23.59,
+            "avg_size": 902.98,
+            "duration": 20.83,
+            "episodes": 53,
+            "extention": {
+                "mkv": 53
+            },
+            "final": "2014-12-18",
+            "premiere": "2012-04-14",
+            "quality": {
+                "FullHD": 53
+            },
+            "ratio": {
+                "16:9": 43,
+                "4:3": 10
+            },
+            "seasons": 4,
+            "series_name": "The Legend of Korra",
+            "size": 46.73,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 43.22,
+            "avg_size": 249.33,
+            "duration": 28.09,
+            "episodes": 39,
+            "extention": {
+                "mkv": 27,
+                "mp4": 12
+            },
+            "final": "",
+            "premiere": "2011-01-01",
+            "quality": {
+                "SD": 39
+            },
+            "ratio": {
+                "16:9": 39
+            },
+            "seasons": 3,
+            "series_name": "The Magicians",
+            "size": 9.49,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 56.02,
+            "avg_size": 2926.44,
+            "duration": 28.01,
+            "episodes": 30,
+            "extention": {
+                "mkv": 30
+            },
+            "final": "2018-04-04",
+            "premiere": "2015-12-16",
+            "quality": {
+                "FullHD": 30
+            },
+            "ratio": {
+                "16:9": 30
+            },
+            "seasons": 3,
+            "series_name": "The Musketeers",
+            "size": 85.73,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 57.62,
+            "avg_size": 4475.94,
+            "duration": 5.76,
+            "episodes": 6,
+            "extention": {
+                "mkv": 5,
+                "mp4": 1
+            },
+            "final": "2016-03-27",
+            "premiere": "2016-02-21",
+            "quality": {
+                "FullHD": 6
+            },
+            "ratio": {
+                "16:9": 6
+            },
+            "seasons": 1,
+            "series_name": "The Night Manager",
+            "size": 26.22,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 29.3,
+            "avg_size": 232.98,
+            "duration": 5.86,
+            "episodes": 12,
+            "extention": {
+                "avi": 12
+            },
+            "final": "2002-11-04",
+            "premiere": "2001-07-09",
+            "quality": {
+                "SD": 12
+            },
+            "ratio": {
+                "16:9": 12
+            },
+            "seasons": 2,
+            "series_name": "The Office",
+            "size": 2.73,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 42.17,
+            "avg_size": 196.22,
+            "duration": 64.66,
+            "episodes": 92,
+            "extention": {
+                "avi": 1,
+                "mkv": 71,
+                "mp4": 20
+            },
+            "final": "",
+            "premiere": "2013-10-03",
+            "quality": {
+                "HD": 3,
+                "SD": 89
+            },
+            "ratio": {
+                "16:9": 89,
+                "4:3": 3
+            },
+            "seasons": 5,
+            "series_name": "The Originals",
+            "size": 17.62,
+            "status": {
+                "Airing": 1
+            }
+        },
+        {
+            "avg_duration": 43.08,
+            "avg_size": 417.29,
+            "duration": 8.61,
+            "episodes": 12,
+            "extention": {
+                "mkv": 12
+            },
+            "final": "",
+            "premiere": "2017-09-10",
+            "quality": {
+                "FullHD": 1,
+                "HD": 2,
+                "SD": 9
+            },
+            "ratio": {
+                "16:9": 12
+            },
+            "seasons": 1,
+            "series_name": "The Orville",
+            "size": 4.89,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 53.07,
+            "avg_size": 786.28,
+            "duration": 11.49,
+            "episodes": 13,
+            "extention": {
+                "mkv": 13
+            },
+            "final": "",
+            "premiere": "2017-11-17",
+            "quality": {
+                "HD": 13
+            },
+            "ratio": {
+                "16:9": 13
+            },
+            "seasons": 1,
+            "series_name": "The Punisher",
+            "size": 9.98,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 27.93,
+            "avg_size": 236.08,
+            "duration": 24.67,
+            "episodes": 53,
+            "extention": {
+                "avi": 47,
+                "mp4": 6
+            },
+            "final": "2011-10-18",
+            "premiere": "2007-09-24",
+            "quality": {
+                "SD": 53
+            },
+            "ratio": {
+                "16:9": 53
+            },
+            "seasons": 5,
+            "series_name": "The Sarah Jane Adventures",
+            "size": 12.21,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 41.38,
+            "avg_size": 337.85,
+            "duration": 13.79,
+            "episodes": 20,
+            "extention": {
+                "mkv": 20
+            },
+            "final": "2017-11-22",
+            "premiere": "2016-01-05",
+            "quality": {
+                "HD": 10,
+                "SD": 10
+            },
+            "ratio": {
+                "16:9": 19,
+                "4:3": 1
+            },
+            "seasons": 2,
+            "series_name": "The Shannara Chronicles",
+            "size": 6.59,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 42.08,
+            "avg_size": 155.33,
+            "duration": 119.95,
+            "episodes": 171,
+            "extention": {
+                "mkv": 130,
+                "mp4": 41
+            },
+            "final": "2017-03-10",
+            "premiere": "2009-09-10",
+            "quality": {
+                "SD": 171
+            },
+            "ratio": {
+                "16:9": 171
+            },
+            "seasons": 8,
+            "series_name": "The Vampire Diaries",
+            "size": 25.93,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 45.76,
+            "avg_size": 433.17,
+            "duration": 87.71,
+            "episodes": 115,
+            "extention": {
+                "avi": 24,
+                "mkv": 43,
+                "mp4": 48
+            },
+            "final": "",
+            "premiere": "2010-10-31",
+            "quality": {
+                "HD": 3,
+                "SD": 112
+            },
+            "ratio": {
+                "16:9": 112,
+                "4:3": 3
+            },
+            "seasons": 8,
+            "series_name": "The Walking Dead",
+            "size": 48.64,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 44.77,
+            "avg_size": 435.25,
+            "duration": 162.69,
+            "episodes": 218,
+            "extention": {
+                "mkv": 216,
+                "mp4": 2
+            },
+            "final": "2018-03-21",
+            "premiere": "1993-09-10",
+            "quality": {
+                "FullHD": 1,
+                "HD": 209,
+                "SD": 8
+            },
+            "ratio": {
+                "16:9": 217,
+                "4:3": 1
+            },
+            "seasons": 11,
+            "series_name": "The X-Files",
+            "size": 92.66,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 59.01,
+            "avg_size": 1865.87,
+            "duration": 2.95,
+            "episodes": 3,
+            "extention": {
+                "mkv": 3
+            },
+            "final": "2008-04-13",
+            "premiere": "2008-03-30",
+            "quality": {
+                "HD": 3
+            },
+            "ratio": {
+                "16:9": 3
+            },
+            "seasons": 1,
+            "series_name": "Tiger - Spy in the Jungle",
+            "size": 5.46,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 42.21,
+            "avg_size": 219.74,
+            "duration": 18.29,
+            "episodes": 26,
+            "extention": {
+                "mkv": 26
+            },
+            "final": "2018-05-13",
+            "premiere": "2016-10-03",
+            "quality": {
+                "HD": 1,
+                "SD": 25
+            },
+            "ratio": {
+                "16:9": 26
+            },
+            "seasons": 2,
+            "series_name": "Timeless",
+            "size": 5.57,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 60.21,
+            "avg_size": 849.79,
+            "duration": 176.62,
+            "episodes": 176,
+            "extention": {
+                "avi": 10,
+                "mkv": 164,
+                "mp4": 2
+            },
+            "final": "2018-04-01",
+            "premiere": "2002-10-20",
+            "quality": {
+                "HD": 62,
+                "SD": 114
+            },
+            "ratio": {
+                "16:9": 137,
+                "3:2": 28,
+                "4:3": 11
+            },
+            "seasons": 22,
+            "series_name": "Top Gear",
+            "size": 146.05,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 50.82,
+            "avg_size": 423.99,
+            "duration": 34.73,
+            "episodes": 41,
+            "extention": {
+                "avi": 40,
+                "mp4": 1
+            },
+            "final": "2011-09-09",
+            "premiere": "2006-10-22",
+            "quality": {
+                "SD": 41
+            },
+            "ratio": {
+                "16:9": 41
+            },
+            "seasons": 4,
+            "series_name": "Torchwood",
+            "size": 16.97,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 44.56,
+            "avg_size": 256.43,
+            "duration": 17.82,
+            "episodes": 24,
+            "extention": {
+                "mkv": 19,
+                "mp4": 5
+            },
+            "final": "",
+            "premiere": "2016-10-17",
+            "quality": {
+                "HD": 2,
+                "SD": 22
+            },
+            "ratio": {
+                "16:9": 23,
+                "4:3": 1
+            },
+            "seasons": 2,
+            "series_name": "Travelers",
+            "size": 6.01,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 60.44,
+            "avg_size": 1325.9,
+            "duration": 16.11,
+            "episodes": 16,
+            "extention": {
+                "mkv": 8,
+                "mp4": 8
+            },
+            "final": "",
+            "premiere": "2014-01-12",
+            "quality": {
+                "HD": 16
+            },
+            "ratio": {
+                "16:9": 16
+            },
+            "seasons": 2,
+            "series_name": "True Detective",
+            "size": 20.71,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 44.04,
+            "avg_size": 300.37,
+            "duration": 29.36,
+            "episodes": 40,
+            "extention": {
+                "mkv": 22,
+                "mp4": 18
+            },
+            "final": "2017-08-12",
+            "premiere": "2014-04-06",
+            "quality": {
+                "SD": 40
+            },
+            "ratio": {
+                "16:9": 40
+            },
+            "seasons": 4,
+            "series_name": "Turn - Washington's Spies",
+            "size": 11.73,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 21.02,
+            "avg_size": 166.36,
+            "duration": 91.79,
+            "episodes": 262,
+            "extention": {
+                "avi": 202,
+                "mkv": 24,
+                "mp4": 36
+            },
+            "final": "2015-02-19",
+            "premiere": "2003-09-22",
+            "quality": {
+                "SD": 262
+            },
+            "ratio": {
+                "16:9": 262
+            },
+            "seasons": 12,
+            "series_name": "Two and a Half Men",
+            "size": 42.56,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 42.43,
+            "avg_size": 308.84,
+            "duration": 45.25,
+            "episodes": 64,
+            "extention": {
+                "mkv": 64
+            },
+            "final": "2007-05-22",
+            "premiere": "2004-09-22",
+            "quality": {
+                "HD": 64
+            },
+            "ratio": {
+                "16:9": 64
+            },
+            "seasons": 3,
+            "series_name": "Veronica Mars",
+            "size": 19.3,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 45.63,
+            "avg_size": 686.82,
+            "duration": 44.87,
+            "episodes": 59,
+            "extention": {
+                "avi": 10,
+                "mkv": 49
+            },
+            "final": "",
+            "premiere": "2013-03-03",
+            "quality": {
+                "FullHD": 10,
+                "HD": 39,
+                "SD": 10
+            },
+            "ratio": {
+                "16:9": 59
+            },
+            "seasons": 5,
+            "series_name": "Vikings",
+            "size": 39.57,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 44.01,
+            "avg_size": 506.32,
+            "duration": 46.95,
+            "episodes": 64,
+            "extention": {
+                "mkv": 63,
+                "mp4": 1
+            },
+            "final": "2014-05-19",
+            "premiere": "2009-07-07",
+            "quality": {
+                "SD": 64
+            },
+            "ratio": {
+                "16:9": 64
+            },
+            "seasons": 5,
+            "series_name": "Warehouse 13",
+            "size": 31.64,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 36.0,
+            "avg_size": 361.95,
+            "duration": 4.8,
+            "episodes": 8,
+            "extention": {
+                "mp4": 8
+            },
+            "final": "2013-11-24",
+            "premiere": "2013-10-06",
+            "quality": {
+                "HD": 8
+            },
+            "ratio": {
+                "16:9": 8
+            },
+            "seasons": 1,
+            "series_name": "Was It Something I Said",
+            "size": 2.82,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 63.96,
+            "avg_size": 2989.18,
+            "duration": 21.32,
+            "episodes": 20,
+            "extention": {
+                "mkv": 20
+            },
+            "final": "",
+            "premiere": "2016-10-02",
+            "quality": {
+                "FullHD": 10,
+                "SD": 10
+            },
+            "ratio": {
+                "16:9": 20
+            },
+            "seasons": 2,
+            "series_name": "Westworld",
+            "size": 58.38,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 59.96,
+            "avg_size": 2708.76,
+            "duration": 5.99,
+            "episodes": 6,
+            "extention": {
+                "mkv": 6
+            },
+            "final": "2015-02-25",
+            "premiere": "2015-01-21",
+            "quality": {
+                "HD": 6
+            },
+            "ratio": {
+                "16:9": 6
+            },
+            "seasons": 1,
+            "series_name": "Wolf Hall",
+            "size": 15.87,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 28.96,
+            "avg_size": 219.76,
+            "duration": 47.3,
+            "episodes": 98,
+            "extention": {
+                "avi": 23,
+                "mkv": 25,
+                "mp4": 50
+            },
+            "final": "",
+            "premiere": "2008-07-11",
+            "quality": {
+                "HD": 22,
+                "SD": 76
+            },
+            "ratio": {
+                "16:9": 96,
+                "4:3": 2
+            },
+            "seasons": 11,
+            "series_name": "Would I Lie to You",
+            "size": 21.03,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 42.79,
+            "avg_size": 306.84,
+            "duration": 20.68,
+            "episodes": 29,
+            "extention": {
+                "mkv": 27,
+                "mp4": 2
+            },
+            "final": "",
+            "premiere": "2016-04-01",
+            "quality": {
+                "SD": 29
+            },
+            "ratio": {
+                "16:9": 29
+            },
+            "seasons": 3,
+            "series_name": "Wynonna Earp",
+            "size": 8.68,
+            "status": {
+                "Airing": 1
+            }
+        },
+        {
+            "avg_duration": 23.89,
+            "avg_size": 589.61,
+            "duration": 25.48,
+            "episodes": 64,
+            "extention": {
+                "mkv": 64
+            },
+            "final": "",
+            "premiere": "2017-04-05",
+            "quality": {
+                "FullHD": 64
+            },
+            "ratio": {
+                "16:9": 64
+            },
+            "seasons": 1,
+            "series_name": "Boruto",
+            "size": 36.85,
+            "status": {
+                "Airing": 1
+            }
+        },
+        {
+            "avg_duration": 24.19,
+            "avg_size": 237.68,
+            "duration": 61.7,
+            "episodes": 153,
+            "extention": {
+                "mkv": 153
+            },
+            "final": "1996-03-04",
+            "premiere": "1986-12-20",
+            "quality": {
+                "SD": 153
+            },
+            "ratio": {
+                "4:3": 153
+            },
+            "seasons": 1,
+            "series_name": "Dragon Ball",
+            "size": 35.51,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 22.96,
+            "avg_size": 171.22,
+            "duration": 84.22,
+            "episodes": 220,
+            "extention": {
+                "avi": 217,
+                "mp4": 3
+            },
+            "final": "2007-02-08",
+            "premiere": "2002-10-03",
+            "quality": {
+                "SD": 220
+            },
+            "ratio": {
+                "4:3": 220
+            },
+            "seasons": 1,
+            "series_name": "Naruto",
+            "size": 36.78,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 23.37,
+            "avg_size": 381.82,
+            "duration": 194.79,
+            "episodes": 500,
+            "extention": {
+                "mkv": 494,
+                "mp4": 6
+            },
+            "final": "2017-03-23",
+            "premiere": "2007-02-15",
+            "quality": {
+                "FullHD": 227,
+                "HD": 55,
+                "SD": 218
+            },
+            "ratio": {
+                "16:9": 282,
+                "3:2": 218
+            },
+            "seasons": 1,
+            "series_name": "Naruto Shippuuden",
+            "size": 186.44,
+            "status": {
+                "Ended": 1
+            }
+        },
+        {
+            "avg_duration": 24.2,
+            "avg_size": 657.41,
+            "duration": 14.92,
+            "episodes": 37,
+            "extention": {
+                "mkv": 36,
+                "mp4": 1
+            },
+            "final": "",
+            "premiere": "2013-04-07",
+            "quality": {
+                "FullHD": 36,
+                "HD": 1
+            },
+            "ratio": {
+                "16:9": 37
+            },
+            "seasons": 2,
+            "series_name": "Shingeki no Kyojin",
+            "size": 23.75,
+            "status": {
+                "Hiatus": 1
+            }
+        },
+        {
+            "avg_duration": 23.39,
+            "avg_size": 89.68,
+            "duration": 87.32,
+            "episodes": 224,
+            "extention": {
+                "mkv": 224
+            },
+            "final": "2000-11-25",
+            "premiere": "2000-04-18",
+            "quality": {
+                "SD": 224
+            },
+            "ratio": {
+                "4:3": 224
+            },
+            "seasons": 1,
+            "series_name": "Yu-Gi-Oh - Duel Monsters",
+            "size": 19.61,
+            "status": {
+                "Ended": 1
+            }
+        }
+    ],
+    "total": {
+        "avg_duration_ep": 39.97,
+        "avg_duration_show": 49.81,
+        "avg_ep_sea": 17.39,
+        "avg_ep_show": 74.76,
+        "avg_gb_show": 27.21,
+        "avg_mb_ep": 372.75,
+        "avg_sea_show": 4.29,
+        "days": 390.19,
+        "eps": 14056,
+        "extention": {
+            "avi": 4060,
+            "mkv": 6706,
+            "mp4": 3073,
+            "other": 217
+        },
+        "gb": 5116.62,
+        "hours": 9364.75,
+        "quality": {
+            "FullHD": 599,
+            "HD": 2037,
+            "SD": 11420
+        },
+        "ratio": {
+            "16:9": 11016,
+            "3:2": 521,
+            "4:3": 2074,
+            "5:4": 445
+        },
+        "seas": 808,
+        "shows": 188,
+        "status": {
+            "Airing": 8,
+            "Ended": 119,
+            "Hiatus": 61
+        },
+        "tb": 4.99
+    }
+}

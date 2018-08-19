@@ -76,10 +76,10 @@ export default {
   overflow-x: scroll;
 }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .td-no-border td {
@@ -101,26 +101,19 @@ input[type=number]::-webkit-outer-spin-button {
 @import "node_modules/bootstrap/scss/mixins";
 
 $random-colors: (
-  "e6194b": #e6194b,
-  "3cb44b": #3cb44b,
-  "ffe119": #ffe119,
-  "0082c8": #0082c8,
-  "f58231": #f58231,
-  "911eb4": #911eb4,
-  "46f0f0": #46f0f0,
-  "f032e6": #f032e6,
-  "d2f53c": #d2f53c,
-  "fabebe": #fabebe,
-  "008080": #008080,
-  "e6beff": #e6beff,
-  "aa6e28": #aa6e28,
-  "fffac8": #fffac8,
-  "800000": #800000,
-  "aaffc3": #aaffc3,
-  "808000": #808000,
-  "ffd8b1": #ffd8b1,
-  "000080": #000080,
-  "808080": #808080
+  "001f3f": #001f3f,
+  "0074D9": #0074d9,
+  "7FDBFF": #7fdbff,
+  "39CCCC": #39cccc,
+  "3D9970": #3d9970,
+  "2ECC40": #2ecc40,
+  "01FF70": #01ff70,
+  "FFDC00": #ffdc00,
+  "FF851B": #ff851b,
+  "FF4136": #ff4136,
+  "85144b": #85144b,
+  "F012BE": #f012be,
+  "B10DC9": #b10dc9
 );
 
 @each $color, $value in $random-colors {

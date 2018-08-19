@@ -9,7 +9,7 @@ class Series:
                  status=NONE,
                  location='',
                  tvdb_id='',
-                 anime='',
+                 anime=False,
                  premiere='',
                  final=''):
         self.series_name = series_name
@@ -17,15 +17,10 @@ class Series:
         self.status = status
         self.location = location
         self.seasons = {}
-        self.last_ep = None
         self.premiere = premiere
         self.final = final
-        self.names = {}
         self.tvdb_id = tvdb_id if not tvdb_id == 0 else ''
-        self.anime = self.is_anime(location) if anime is '' else anime
-
-    def is_anime(self, location):
-        return 'Anime' in location
+        self.anime = True if 'Anime' in self.location else False
 
     def __str__(self):
         return ('Name:\t\t' + self.series_name +
@@ -42,8 +37,15 @@ class Series:
             'status': self.status,
             'premiere': self.premiere,
             'final': self.final,
-            'tvdb_id': self.tvdb_id
+            'tvdb_id': self.tvdb_id,
+            'seasons': self.save_seasons()
         }}
+
+    def save_seasons(self):
+        seasons = {}
+        for season in self.seasons.keys():
+            seasons[season] = self.seasons[season].save()
+        return seasons
 
     def add_season(self, location='', number=0):
         if number == 0:

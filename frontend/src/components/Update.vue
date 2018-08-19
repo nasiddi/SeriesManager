@@ -136,7 +136,6 @@ export default {
             }
             this.json = body;
             this.$emit('dates');
-            this.$snotify.success('done', { timeout: 5000 });
           },
           () => {
             this.$snotify.error('Failed to load data', { timeout: 0 });

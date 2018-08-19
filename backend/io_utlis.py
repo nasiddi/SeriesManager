@@ -45,7 +45,10 @@ def save_shows(shows):
         meta.update(shows[show].save())
     pickle_dump(shows, 'shows')
     save_json(meta, 'data/metadata.json')
-    os.remove(LOCK_File)
+    try:
+        os.remove(LOCK_File)
+    except:
+        pass
 
 
 

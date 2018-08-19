@@ -1456,20 +1456,6 @@
         "tvdb_id_unchanged": 260315
     },
     {
-        "final": "",
-        "final_unchanged": "",
-        "name_needed": true,
-        "name_needed_unchanged": true,
-        "premiere": "2014-08-09",
-        "premiere_unchanged": "2014-08-09",
-        "series_name": "Outlander",
-        "series_name_unchanged": "Outlander",
-        "status": "Hiatus",
-        "status_unchanged": "Hiatus",
-        "tvdb_id": 270408,
-        "tvdb_id_unchanged": 270408
-    },
-    {
         "final": "2013-02-25",
         "final_unchanged": "2013-02-25",
         "name_needed": false,
@@ -2632,11 +2618,11 @@
         "tvdb_id_unchanged": 305582
     },
     {
-        "final": "",
+        "final": "2000-11-25",
         "final_unchanged": "",
         "name_needed": false,
         "name_needed_unchanged": false,
-        "premiere": "",
+        "premiere": "2000-04-18",
         "premiere_unchanged": "",
         "series_name": "Yu-Gi-Oh - Duel Monsters",
         "series_name_unchanged": "Yu-Gi-Oh - Duel Monsters",

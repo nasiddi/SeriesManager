@@ -1,1 +1,585 @@
-{}
+[
+    {
+        "anime_o": {
+            "o": [
+                "Anime: No",
+                "Anime: Yes"
+            ],
+            "s": "Anime: No"
+        },
+        "e_nr": 7,
+        "e_o": {
+            "o": [
+                "Single",
+                "Double",
+                "Triple"
+            ],
+            "s": "Single"
+        },
+        "location": "Outlander.S03E07.Cr\u00e8me.de.Menthe.720p.WEBRip.2CH.x265.HEVC-PSA.mkv",
+        "name_o": {
+            "o": [
+                "Name required",
+                "Name optional"
+            ],
+            "s": "Name required"
+        },
+        "new_series": false,
+        "override": false,
+        "s_nr": 3,
+        "series_name": "Series Name",
+        "show_subs": false,
+        "status_o": {
+            "o": [
+                "Airing",
+                "Hiatus",
+                "Ended"
+            ],
+            "s": "Airing"
+        },
+        "subs": [],
+        "sync": false,
+        "t_o": {
+            "o": [
+                "Series",
+                "HD",
+                "SD"
+            ],
+            "s": "Series"
+        },
+        "title": "",
+        "title2": "",
+        "title3": "",
+        "tvdb_id": ""
+    },
+    {
+        "anime_o": {
+            "o": [
+                "Anime: No",
+                "Anime: Yes"
+            ],
+            "s": "Anime: No"
+        },
+        "e_nr": "",
+        "e_o": {
+            "o": [
+                "Single",
+                "Double",
+                "Triple"
+            ],
+            "s": "Single"
+        },
+        "location": "Das Leben ist ein Fest BluRay\\Das.Leben.ist.ein.Fest.2017.German.1080p.BluRay.x264-Pl3X\\pl3x-lebenfest-1080p.mkv",
+        "name_o": {
+            "o": [
+                "Name required",
+                "Name optional"
+            ],
+            "s": "Name required"
+        },
+        "new_series": false,
+        "override": false,
+        "s_nr": "",
+        "series_name": "Series Name",
+        "show_subs": false,
+        "status_o": {
+            "o": [
+                "Airing",
+                "Hiatus",
+                "Ended"
+            ],
+            "s": "Airing"
+        },
+        "subs": [],
+        "sync": false,
+        "t_o": {
+            "o": [
+                "Series",
+                "HD",
+                "SD"
+            ],
+            "s": "Series"
+        },
+        "title": "",
+        "title2": "",
+        "title3": "",
+        "tvdb_id": ""
+    },
+    {
+        "anime_o": {
+            "o": [
+                "Anime: No",
+                "Anime: Yes"
+            ],
+            "s": "Anime: No"
+        },
+        "e_nr": "",
+        "e_o": {
+            "o": [
+                "Single",
+                "Double",
+                "Triple"
+            ],
+            "s": "Single"
+        },
+        "location": "fsdrgtujzhsgeahzusd\\Monsieur.Pierre.geht.online.2017.German.1080p.BluRay.x264-CHECKMATE\\checkmate-monsieur.pierre.geht.online.1080p.mkv",
+        "name_o": {
+            "o": [
+                "Name required",
+                "Name optional"
+            ],
+            "s": "Name required"
+        },
+        "new_series": false,
+        "override": false,
+        "s_nr": "",
+        "series_name": "Series Name",
+        "show_subs": false,
+        "status_o": {
+            "o": [
+                "Airing",
+                "Hiatus",
+                "Ended"
+            ],
+            "s": "Airing"
+        },
+        "subs": [],
+        "sync": false,
+        "t_o": {
+            "o": [
+                "Series",
+                "HD",
+                "SD"
+            ],
+            "s": "Series"
+        },
+        "title": "",
+        "title2": "",
+        "title3": "",
+        "tvdb_id": ""
+    },
+    {
+        "anime_o": {
+            "o": [
+                "Anime: No",
+                "Anime: Yes"
+            ],
+            "s": "Anime: No"
+        },
+        "e_nr": 4,
+        "e_o": {
+            "o": [
+                "Single",
+                "Double",
+                "Triple"
+            ],
+            "s": "Single"
+        },
+        "location": "Killjoys.S04E04.720p.HDTV.x264-KILLERS\\nSMi5vPkHrksb89us1ZWeK.mkv",
+        "name_o": {
+            "o": [
+                "Name required",
+                "Name optional"
+            ],
+            "s": "Name required"
+        },
+        "new_series": false,
+        "override": false,
+        "s_nr": 4,
+        "series_name": "Killjoys",
+        "show_subs": false,
+        "status_o": {
+            "o": [
+                "Airing",
+                "Hiatus",
+                "Ended"
+            ],
+            "s": "Airing"
+        },
+        "subs": [],
+        "sync": false,
+        "t_o": {
+            "o": [
+                "Series",
+                "HD",
+                "SD"
+            ],
+            "s": "Series"
+        },
+        "title": "What to Expect When You're Expecting... An Alien Parasite",
+        "title2": "",
+        "title3": "",
+        "tvdb_id": 281534
+    },
+    {
+        "anime_o": {
+            "o": [
+                "Anime: No",
+                "Anime: Yes"
+            ],
+            "s": "Anime: No"
+        },
+        "e_nr": 5,
+        "e_o": {
+            "o": [
+                "Single",
+                "Double",
+                "Triple"
+            ],
+            "s": "Single"
+        },
+        "location": "Killjoys.S04E05.WEBRip.x264-PBS[ettv]\\Killjoys.S04E05.WEBRip.x264-PBS[ettv].mkv",
+        "name_o": {
+            "o": [
+                "Name required",
+                "Name optional"
+            ],
+            "s": "Name required"
+        },
+        "new_series": false,
+        "override": false,
+        "s_nr": 4,
+        "series_name": "Killjoys",
+        "show_subs": false,
+        "status_o": {
+            "o": [
+                "Airing",
+                "Hiatus",
+                "Ended"
+            ],
+            "s": "Airing"
+        },
+        "subs": [],
+        "sync": true,
+        "t_o": {
+            "o": [
+                "Series",
+                "HD",
+                "SD"
+            ],
+            "s": "Series"
+        },
+        "title": "Greening Pains",
+        "title2": "",
+        "title3": "",
+        "tvdb_id": 281534
+    },
+    {
+        "anime_o": {
+            "o": [
+                "Anime: No",
+                "Anime: Yes"
+            ],
+            "s": "Anime: No"
+        },
+        "e_nr": 11,
+        "e_o": {
+            "o": [
+                "Single",
+                "Double",
+                "Triple"
+            ],
+            "s": "Single"
+        },
+        "location": "Outlander.S02E11.HDTV.x264-KILLERS[ettv]\\Outlander.S02E11.HDTV.x264-KILLERS[ettv].mkv",
+        "name_o": {
+            "o": [
+                "Name required",
+                "Name optional"
+            ],
+            "s": "Name required"
+        },
+        "new_series": false,
+        "override": false,
+        "s_nr": 2,
+        "series_name": "Series Name",
+        "show_subs": false,
+        "status_o": {
+            "o": [
+                "Airing",
+                "Hiatus",
+                "Ended"
+            ],
+            "s": "Airing"
+        },
+        "subs": [],
+        "sync": false,
+        "t_o": {
+            "o": [
+                "Series",
+                "HD",
+                "SD"
+            ],
+            "s": "Series"
+        },
+        "title": "",
+        "title2": "",
+        "title3": "",
+        "tvdb_id": ""
+    },
+    {
+        "anime_o": {
+            "o": [
+                "Anime: No",
+                "Anime: Yes"
+            ],
+            "s": "Anime: No"
+        },
+        "e_nr": 13,
+        "e_o": {
+            "o": [
+                "Single",
+                "Double",
+                "Triple"
+            ],
+            "s": "Single"
+        },
+        "location": "The.100.S05E13.720p.HDTV.x264-KILLERS[ettv]\\The.100.S05E13.720p.HDTV.x264-KILLERS[ettv].mkv",
+        "name_o": {
+            "o": [
+                "Name required",
+                "Name optional"
+            ],
+            "s": "Name required"
+        },
+        "new_series": false,
+        "override": false,
+        "s_nr": 5,
+        "series_name": "The 100",
+        "show_subs": false,
+        "status_o": {
+            "o": [
+                "Airing",
+                "Hiatus",
+                "Ended"
+            ],
+            "s": "Airing"
+        },
+        "subs": [],
+        "sync": false,
+        "t_o": {
+            "o": [
+                "Series",
+                "HD",
+                "SD"
+            ],
+            "s": "Series"
+        },
+        "title": "Damocles (2)",
+        "title2": "",
+        "title3": "",
+        "tvdb_id": 268592
+    },
+    {
+        "anime_o": {
+            "o": [
+                "Anime: No",
+                "Anime: Yes"
+            ],
+            "s": "Anime: No"
+        },
+        "e_nr": "",
+        "e_o": {
+            "o": [
+                "Single",
+                "Double",
+                "Triple"
+            ],
+            "s": "Single"
+        },
+        "location": "Wein18p\\Der.Wein.und.der.Wind.2017.German.1080p.BluRay.x264-CHECKMATE\\checkmate-der.wein.und.der.wind.2017.german.1080p.bluray.x264.mkv",
+        "name_o": {
+            "o": [
+                "Name required",
+                "Name optional"
+            ],
+            "s": "Name required"
+        },
+        "new_series": false,
+        "override": false,
+        "s_nr": "",
+        "series_name": "Series Name",
+        "show_subs": false,
+        "status_o": {
+            "o": [
+                "Airing",
+                "Hiatus",
+                "Ended"
+            ],
+            "s": "Airing"
+        },
+        "subs": [],
+        "sync": false,
+        "t_o": {
+            "o": [
+                "Series",
+                "HD",
+                "SD"
+            ],
+            "s": "Series"
+        },
+        "title": "",
+        "title2": "",
+        "title3": "",
+        "tvdb_id": ""
+    },
+    {
+        "anime_o": {
+            "o": [
+                "Anime: No",
+                "Anime: Yes"
+            ],
+            "s": "Anime: No"
+        },
+        "e_nr": 4,
+        "e_o": {
+            "o": [
+                "Single",
+                "Double",
+                "Triple"
+            ],
+            "s": "Single"
+        },
+        "location": "Wynonna.Earp.S03E04.720p.HDTV.x264-KILLERS\\1t1xZTwvUiGafhWWcrtx5tMhH7ZbvAR1sr3d7s.mkv",
+        "name_o": {
+            "o": [
+                "Name required",
+                "Name optional"
+            ],
+            "s": "Name required"
+        },
+        "new_series": false,
+        "override": false,
+        "s_nr": 3,
+        "series_name": "Wynonna Earp",
+        "show_subs": false,
+        "status_o": {
+            "o": [
+                "Airing",
+                "Hiatus",
+                "Ended"
+            ],
+            "s": "Airing"
+        },
+        "subs": [],
+        "sync": false,
+        "t_o": {
+            "o": [
+                "Series",
+                "HD",
+                "SD"
+            ],
+            "s": "Series"
+        },
+        "title": "No Cure For Crazy",
+        "title2": "",
+        "title3": "",
+        "tvdb_id": 305582
+    },
+    {
+        "anime_o": {
+            "o": [
+                "Anime: No",
+                "Anime: Yes"
+            ],
+            "s": "Anime: No"
+        },
+        "e_nr": 5,
+        "e_o": {
+            "o": [
+                "Single",
+                "Double",
+                "Triple"
+            ],
+            "s": "Single"
+        },
+        "location": "Wynonna.Earp.S03E05.720p.HDTV.x264-KILLERS\\Cr4zjqVRG0MZObZYeq.mkv",
+        "name_o": {
+            "o": [
+                "Name required",
+                "Name optional"
+            ],
+            "s": "Name required"
+        },
+        "new_series": false,
+        "override": false,
+        "s_nr": 3,
+        "series_name": "Wynonna Earp",
+        "show_subs": false,
+        "status_o": {
+            "o": [
+                "Airing",
+                "Hiatus",
+                "Ended"
+            ],
+            "s": "Airing"
+        },
+        "subs": [],
+        "sync": false,
+        "t_o": {
+            "o": [
+                "Series",
+                "HD",
+                "SD"
+            ],
+            "s": "Series"
+        },
+        "title": "Jolene",
+        "title2": "",
+        "title3": "",
+        "tvdb_id": 305582
+    },
+    {
+        "anime_o": {
+            "o": [
+                "Anime: No",
+                "Anime: Yes"
+            ],
+            "s": "Anime: No"
+        },
+        "e_nr": 5,
+        "e_o": {
+            "o": [
+                "Single",
+                "Double",
+                "Triple"
+            ],
+            "s": "Single"
+        },
+        "location": "Wynonna.Earp.S03E05.HDTV.x264-KILLERS[ettv]\\Wynonna.Earp.S03E05.HDTV.x264-KILLERS[ettv].mkv",
+        "name_o": {
+            "o": [
+                "Name required",
+                "Name optional"
+            ],
+            "s": "Name required"
+        },
+        "new_series": false,
+        "override": false,
+        "s_nr": 3,
+        "series_name": "Wynonna Earp",
+        "show_subs": false,
+        "status_o": {
+            "o": [
+                "Airing",
+                "Hiatus",
+                "Ended"
+            ],
+            "s": "Airing"
+        },
+        "subs": [],
+        "sync": true,
+        "t_o": {
+            "o": [
+                "Series",
+                "HD",
+                "SD"
+            ],
+            "s": "Series"
+        },
+        "title": "Jolene",
+        "title2": "",
+        "title3": "",
+        "tvdb_id": 305582
+    }
+]

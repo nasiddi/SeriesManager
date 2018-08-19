@@ -36,6 +36,14 @@ routes.post('/reload', async (req, res) => {
   python.reloadSeries(res);
 });
 
+routes.post('/filetree', async (req, res) => {
+  python.fileTree(req.body, res);
+});
+
+routes.post('/stats', async (req, res) => {
+  python.getStats(res);
+});
+
 routes.post('/sync/start', async (req, res) => {
   const inputFile = path.join(config.directories.storage, 'sync');
   python.syncFiles(inputFile, res);

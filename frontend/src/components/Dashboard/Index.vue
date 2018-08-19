@@ -23,6 +23,14 @@
         size="lg"
         class="mt-3"
         block
+        @click.prevent="files"
+      >Verify Files</b-button>
+      <b-button
+        type="batch"
+        variant="primary"
+        size="lg"
+        class="mt-3"
+        block
         @click.prevent="batch"
       >BatchSync</b-button>
       <b-button
@@ -33,6 +41,14 @@
         block
         @click.prevent="update"
       >Update Series</b-button>
+      <b-button
+        type="stats"
+        variant="primary"
+        size="lg"
+        class="mt-3"
+        block
+        @click.prevent="stats"
+      >Statistics</b-button>
     </b-form>
   </div>
 </template>
@@ -58,6 +74,11 @@ export default {
         name: 'sync.prep',
       });
     },
+    async stats() {
+      this.$router.push({
+        name: 'stats',
+      });
+    },
     async update() {
       this.$router.push({
         name: 'update',
@@ -66,6 +87,11 @@ export default {
     async batch() {
       this.$router.push({
         name: 'batch.prep',
+      });
+    },
+    async files() {
+      this.$router.push({
+        name: 'filetree',
       });
     },
   },
