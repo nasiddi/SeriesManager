@@ -1,0 +1,85 @@
+[
+    {
+        "error": [
+            "File exists"
+        ],
+        "file_name": "The Crown 02x01 - Misadventure.mkv",
+        "info": [],
+        "success": []
+    },
+    {
+        "error": [
+            "File exists"
+        ],
+        "file_name": "The Crown 02x02 - A Company of Men.mkv",
+        "info": [],
+        "success": []
+    },
+    {
+        "error": [
+            "File exists"
+        ],
+        "file_name": "The Crown 02x03 - Lisbon.mkv",
+        "info": [],
+        "success": []
+    },
+    {
+        "error": [],
+        "file_name": "The Crown 02x04 - Beryl.mkv",
+        "info": [
+            "Status changed to Airing",
+            "Season created"
+        ],
+        "success": [
+            "Copy successful"
+        ]
+    },
+    {
+        "error": [],
+        "file_name": "The Crown 02x05 - Marionettes.mkv",
+        "info": [],
+        "success": [
+            "Copy successful"
+        ]
+    },
+    {
+        "error": [],
+        "file_name": "The Crown 02x06 - Vergangenheit.mkv",
+        "info": [],
+        "success": [
+            "Copy successful"
+        ]
+    },
+    {
+        "error": [],
+        "file_name": "The Crown 02x07 - Matrimonium.mkv",
+        "info": [],
+        "success": [
+            "Copy successful"
+        ]
+    },
+    {
+        "error": [],
+        "file_name": "The Crown 02x08 - Dear Mrs. Kennedy.mkv",
+        "info": [],
+        "success": [
+            "Copy successful"
+        ]
+    },
+    {
+        "error": [],
+        "file_name": "The Crown 02x09 - Paterfamilias.mkv",
+        "info": [],
+        "success": [
+            "Copy successful"
+        ]
+    },
+    {
+        "error": [],
+        "file_name": "The Crown 02x10 - Mystery Man.mkv",
+        "info": [],
+        "success": [
+            "Copy successful"
+        ]
+    }
+]

@@ -4,7 +4,7 @@
       <b-col>
         <b-form-select
           v-model="selected"
-          :options="Object.values(json.shows).map(s => s.series_name)"
+          :options="Object.values(json.shows).map(s => s.series_name).sort()"
           :style="{width: '100%'}"
           selected="Series"/>
       </b-col>
@@ -15,14 +15,15 @@
       class="mt-3">
       <b-col>
         <b-button
-          v-b-toggle="'s' + s.key.toString()"
-          :pressed.sync="s.opened"
-          :variant="'outline-secondary'"
+          :class="s.opened ? 'collapsed' : null"
+          :aria-expanded="s.opened ? 'true' : 'false'"
           :style="{width: '100%'}"
-          class="mt-2"
+          aria-controls="'s' + s.key.toString()"
+          @click="s.opened = !s.opened"
         >Season {{ s.key }}</b-button>
         <b-collapse
-          :id="'s' + s.key.toString()">
+          :id="'s' + s.key.toString()"
+          v-model="s.opened">
           <b-row
             v-for="e in s.episodes"
             :key="e.key"
@@ -32,17 +33,20 @@
               no-body
               class="px-2 py-2 mt-2">
               <b-row>
-                <b-col sm="10">
-                  {{ (e.path) ? e.location : e.file_name }}
-                </b-col>
                 <b-col>
                   <b-button
-                    v-b-toggle="'e' + e.key.toString()"
-                    :pressed.sync="e.opened"
-                    :variant="'outline-primary'"
+                    :class="e.opened ? 'collapsed' : null"
+                    :aria-expanded="e.opened ? 'true' : 'false'"
                     :style="{width: '100%'}"
-                    class="mt-2"
-                  >Edit</b-button>
+                    aria-controls="'e' + e.key.toString()"
+                    variant="outline-primary"
+                    @click="e.opened = !e.opened"
+                  >{{ e.key }}</b-button>
+                </b-col>
+                <b-col
+                  sm="11"
+                  class="mt-2">
+                  {{ (e.path) ? e.location : e.file_name }}
                 </b-col>
               </b-row>
             </b-card>
@@ -65,6 +69,17 @@ export default {
     show: {},
     selected: null,
   }),
+  computed: {
+    opened(sea) {
+      const season = sea;
+      if (season.opened === true) {
+        season.opened = false;
+        return false;
+      }
+      season.opened = true;
+      return true;
+    },
+  },
   watch: {
     selected: {
       handler() {
@@ -80,6 +95,9 @@ export default {
         const body = _.defaults(res.body, {
         });
         this.json = body;
+        // eslint-disable-next-line prefer-destructuring
+        this.selected = Object.values(body.shows)
+          .map(s => s.series_name).sort()[0];
         this.$snotify.remove(this.notifLoading.id);
       },
       () => {

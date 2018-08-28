@@ -60,6 +60,536 @@
             ],
             "s": "Anime: No"
         },
+        "e_nr": 1,
+        "e_o": {
+            "o": [
+                "Single",
+                "Double",
+                "Triple"
+            ],
+            "s": "Single"
+        },
+        "location": "The Crown S02E01-Misadventure.mkv",
+        "name_o": {
+            "o": [
+                "Name required",
+                "Name optional"
+            ],
+            "s": "Name required"
+        },
+        "new_series": false,
+        "override": false,
+        "s_nr": 2,
+        "series_name": "The Crown",
+        "show_subs": false,
+        "status_o": {
+            "o": [
+                "Airing",
+                "Hiatus",
+                "Ended"
+            ],
+            "s": "Airing"
+        },
+        "subs": [],
+        "sync": true,
+        "t_o": {
+            "o": [
+                "Series",
+                "HD",
+                "SD"
+            ],
+            "s": "Series"
+        },
+        "title": "Misadventure",
+        "title2": "",
+        "title3": "",
+        "tvdb_id": 305574
+    },
+    {
+        "anime_o": {
+            "o": [
+                "Anime: No",
+                "Anime: Yes"
+            ],
+            "s": "Anime: No"
+        },
+        "e_nr": 2,
+        "e_o": {
+            "o": [
+                "Single",
+                "Double",
+                "Triple"
+            ],
+            "s": "Single"
+        },
+        "location": "The Crown S02E02-A Company of Men.mkv",
+        "name_o": {
+            "o": [
+                "Name required",
+                "Name optional"
+            ],
+            "s": "Name required"
+        },
+        "new_series": false,
+        "override": false,
+        "s_nr": 2,
+        "series_name": "The Crown",
+        "show_subs": false,
+        "status_o": {
+            "o": [
+                "Airing",
+                "Hiatus",
+                "Ended"
+            ],
+            "s": "Airing"
+        },
+        "subs": [],
+        "sync": true,
+        "t_o": {
+            "o": [
+                "Series",
+                "HD",
+                "SD"
+            ],
+            "s": "Series"
+        },
+        "title": "A Company of Men",
+        "title2": "",
+        "title3": "",
+        "tvdb_id": 305574
+    },
+    {
+        "anime_o": {
+            "o": [
+                "Anime: No",
+                "Anime: Yes"
+            ],
+            "s": "Anime: No"
+        },
+        "e_nr": 3,
+        "e_o": {
+            "o": [
+                "Single",
+                "Double",
+                "Triple"
+            ],
+            "s": "Single"
+        },
+        "location": "The Crown S02E03-Lisbon.mkv",
+        "name_o": {
+            "o": [
+                "Name required",
+                "Name optional"
+            ],
+            "s": "Name required"
+        },
+        "new_series": false,
+        "override": false,
+        "s_nr": 2,
+        "series_name": "The Crown",
+        "show_subs": false,
+        "status_o": {
+            "o": [
+                "Airing",
+                "Hiatus",
+                "Ended"
+            ],
+            "s": "Airing"
+        },
+        "subs": [],
+        "sync": true,
+        "t_o": {
+            "o": [
+                "Series",
+                "HD",
+                "SD"
+            ],
+            "s": "Series"
+        },
+        "title": "Lisbon",
+        "title2": "",
+        "title3": "",
+        "tvdb_id": 305574
+    },
+    {
+        "anime_o": {
+            "o": [
+                "Anime: No",
+                "Anime: Yes"
+            ],
+            "s": "Anime: No"
+        },
+        "e_nr": 4,
+        "e_o": {
+            "o": [
+                "Single",
+                "Double",
+                "Triple"
+            ],
+            "s": "Single"
+        },
+        "location": "The Crown S02E04-Beryl.mkv",
+        "name_o": {
+            "o": [
+                "Name required",
+                "Name optional"
+            ],
+            "s": "Name required"
+        },
+        "new_series": false,
+        "override": false,
+        "s_nr": 2,
+        "series_name": "The Crown",
+        "show_subs": false,
+        "status_o": {
+            "o": [
+                "Airing",
+                "Hiatus",
+                "Ended"
+            ],
+            "s": "Airing"
+        },
+        "subs": [],
+        "sync": true,
+        "t_o": {
+            "o": [
+                "Series",
+                "HD",
+                "SD"
+            ],
+            "s": "Series"
+        },
+        "title": "Beryl",
+        "title2": "",
+        "title3": "",
+        "tvdb_id": 305574
+    },
+    {
+        "anime_o": {
+            "o": [
+                "Anime: No",
+                "Anime: Yes"
+            ],
+            "s": "Anime: No"
+        },
+        "e_nr": 5,
+        "e_o": {
+            "o": [
+                "Single",
+                "Double",
+                "Triple"
+            ],
+            "s": "Single"
+        },
+        "location": "The Crown S02E05-Marionettes.mkv",
+        "name_o": {
+            "o": [
+                "Name required",
+                "Name optional"
+            ],
+            "s": "Name required"
+        },
+        "new_series": false,
+        "override": false,
+        "s_nr": 2,
+        "series_name": "The Crown",
+        "show_subs": false,
+        "status_o": {
+            "o": [
+                "Airing",
+                "Hiatus",
+                "Ended"
+            ],
+            "s": "Airing"
+        },
+        "subs": [],
+        "sync": true,
+        "t_o": {
+            "o": [
+                "Series",
+                "HD",
+                "SD"
+            ],
+            "s": "Series"
+        },
+        "title": "Marionettes",
+        "title2": "",
+        "title3": "",
+        "tvdb_id": 305574
+    },
+    {
+        "anime_o": {
+            "o": [
+                "Anime: No",
+                "Anime: Yes"
+            ],
+            "s": "Anime: No"
+        },
+        "e_nr": 6,
+        "e_o": {
+            "o": [
+                "Single",
+                "Double",
+                "Triple"
+            ],
+            "s": "Single"
+        },
+        "location": "The Crown S02E06-Vergangenheit.mkv",
+        "name_o": {
+            "o": [
+                "Name required",
+                "Name optional"
+            ],
+            "s": "Name required"
+        },
+        "new_series": false,
+        "override": false,
+        "s_nr": 2,
+        "series_name": "The Crown",
+        "show_subs": false,
+        "status_o": {
+            "o": [
+                "Airing",
+                "Hiatus",
+                "Ended"
+            ],
+            "s": "Airing"
+        },
+        "subs": [],
+        "sync": true,
+        "t_o": {
+            "o": [
+                "Series",
+                "HD",
+                "SD"
+            ],
+            "s": "Series"
+        },
+        "title": "Vergangenheit",
+        "title2": "",
+        "title3": "",
+        "tvdb_id": 305574
+    },
+    {
+        "anime_o": {
+            "o": [
+                "Anime: No",
+                "Anime: Yes"
+            ],
+            "s": "Anime: No"
+        },
+        "e_nr": 7,
+        "e_o": {
+            "o": [
+                "Single",
+                "Double",
+                "Triple"
+            ],
+            "s": "Single"
+        },
+        "location": "The Crown S02E07-Matrimonium.mkv",
+        "name_o": {
+            "o": [
+                "Name required",
+                "Name optional"
+            ],
+            "s": "Name required"
+        },
+        "new_series": false,
+        "override": false,
+        "s_nr": 2,
+        "series_name": "The Crown",
+        "show_subs": false,
+        "status_o": {
+            "o": [
+                "Airing",
+                "Hiatus",
+                "Ended"
+            ],
+            "s": "Airing"
+        },
+        "subs": [],
+        "sync": true,
+        "t_o": {
+            "o": [
+                "Series",
+                "HD",
+                "SD"
+            ],
+            "s": "Series"
+        },
+        "title": "Matrimonium",
+        "title2": "",
+        "title3": "",
+        "tvdb_id": 305574
+    },
+    {
+        "anime_o": {
+            "o": [
+                "Anime: No",
+                "Anime: Yes"
+            ],
+            "s": "Anime: No"
+        },
+        "e_nr": 8,
+        "e_o": {
+            "o": [
+                "Single",
+                "Double",
+                "Triple"
+            ],
+            "s": "Single"
+        },
+        "location": "The Crown S02E08-Dear Mrs. Kennedy.mkv",
+        "name_o": {
+            "o": [
+                "Name required",
+                "Name optional"
+            ],
+            "s": "Name required"
+        },
+        "new_series": false,
+        "override": false,
+        "s_nr": 2,
+        "series_name": "The Crown",
+        "show_subs": false,
+        "status_o": {
+            "o": [
+                "Airing",
+                "Hiatus",
+                "Ended"
+            ],
+            "s": "Airing"
+        },
+        "subs": [],
+        "sync": true,
+        "t_o": {
+            "o": [
+                "Series",
+                "HD",
+                "SD"
+            ],
+            "s": "Series"
+        },
+        "title": "Dear Mrs. Kennedy",
+        "title2": "",
+        "title3": "",
+        "tvdb_id": 305574
+    },
+    {
+        "anime_o": {
+            "o": [
+                "Anime: No",
+                "Anime: Yes"
+            ],
+            "s": "Anime: No"
+        },
+        "e_nr": 9,
+        "e_o": {
+            "o": [
+                "Single",
+                "Double",
+                "Triple"
+            ],
+            "s": "Single"
+        },
+        "location": "The Crown S02E09-Paterfamilias.mkv",
+        "name_o": {
+            "o": [
+                "Name required",
+                "Name optional"
+            ],
+            "s": "Name required"
+        },
+        "new_series": false,
+        "override": false,
+        "s_nr": 2,
+        "series_name": "The Crown",
+        "show_subs": false,
+        "status_o": {
+            "o": [
+                "Airing",
+                "Hiatus",
+                "Ended"
+            ],
+            "s": "Airing"
+        },
+        "subs": [],
+        "sync": true,
+        "t_o": {
+            "o": [
+                "Series",
+                "HD",
+                "SD"
+            ],
+            "s": "Series"
+        },
+        "title": "Paterfamilias",
+        "title2": "",
+        "title3": "",
+        "tvdb_id": 305574
+    },
+    {
+        "anime_o": {
+            "o": [
+                "Anime: No",
+                "Anime: Yes"
+            ],
+            "s": "Anime: No"
+        },
+        "e_nr": 10,
+        "e_o": {
+            "o": [
+                "Single",
+                "Double",
+                "Triple"
+            ],
+            "s": "Single"
+        },
+        "location": "The Crown S02E10-Mystery Man.mkv",
+        "name_o": {
+            "o": [
+                "Name required",
+                "Name optional"
+            ],
+            "s": "Name required"
+        },
+        "new_series": false,
+        "override": false,
+        "s_nr": 2,
+        "series_name": "The Crown",
+        "show_subs": false,
+        "status_o": {
+            "o": [
+                "Airing",
+                "Hiatus",
+                "Ended"
+            ],
+            "s": "Airing"
+        },
+        "subs": [],
+        "sync": true,
+        "t_o": {
+            "o": [
+                "Series",
+                "HD",
+                "SD"
+            ],
+            "s": "Series"
+        },
+        "title": "Mystery Man",
+        "title2": "",
+        "title3": "",
+        "tvdb_id": 305574
+    },
+    {
+        "anime_o": {
+            "o": [
+                "Anime: No",
+                "Anime: Yes"
+            ],
+            "s": "Anime: No"
+        },
         "e_nr": "",
         "e_o": {
             "o": [
@@ -219,7 +749,7 @@
             ],
             "s": "Anime: No"
         },
-        "e_nr": 5,
+        "e_nr": 1,
         "e_o": {
             "o": [
                 "Single",
@@ -228,7 +758,7 @@
             ],
             "s": "Single"
         },
-        "location": "Killjoys.S04E05.WEBRip.x264-PBS[ettv]\\Killjoys.S04E05.WEBRip.x264-PBS[ettv].mkv",
+        "location": "Money.Heist.S01E01.proper.1080p.web.x264-skgtv\\oMQaf4qkcKGhYWgcrMBSCEpap19.mkv",
         "name_o": {
             "o": [
                 "Name required",
@@ -238,8 +768,8 @@
         },
         "new_series": false,
         "override": false,
-        "s_nr": 4,
-        "series_name": "Killjoys",
+        "s_nr": 1,
+        "series_name": "Series Name",
         "show_subs": false,
         "status_o": {
             "o": [
@@ -250,7 +780,7 @@
             "s": "Airing"
         },
         "subs": [],
-        "sync": true,
+        "sync": false,
         "t_o": {
             "o": [
                 "Series",
@@ -259,10 +789,646 @@
             ],
             "s": "Series"
         },
-        "title": "Greening Pains",
+        "title": "",
         "title2": "",
         "title3": "",
-        "tvdb_id": 281534
+        "tvdb_id": ""
+    },
+    {
+        "anime_o": {
+            "o": [
+                "Anime: No",
+                "Anime: Yes"
+            ],
+            "s": "Anime: No"
+        },
+        "e_nr": 2,
+        "e_o": {
+            "o": [
+                "Single",
+                "Double",
+                "Triple"
+            ],
+            "s": "Single"
+        },
+        "location": "Money.Heist.S01E02.proper.1080p.web.x264-skgtv\\DKwoFb3zP1Abw55PyjnhDFvCdFBFX.mkv",
+        "name_o": {
+            "o": [
+                "Name required",
+                "Name optional"
+            ],
+            "s": "Name required"
+        },
+        "new_series": false,
+        "override": false,
+        "s_nr": 1,
+        "series_name": "Series Name",
+        "show_subs": false,
+        "status_o": {
+            "o": [
+                "Airing",
+                "Hiatus",
+                "Ended"
+            ],
+            "s": "Airing"
+        },
+        "subs": [],
+        "sync": false,
+        "t_o": {
+            "o": [
+                "Series",
+                "HD",
+                "SD"
+            ],
+            "s": "Series"
+        },
+        "title": "",
+        "title2": "",
+        "title3": "",
+        "tvdb_id": ""
+    },
+    {
+        "anime_o": {
+            "o": [
+                "Anime: No",
+                "Anime: Yes"
+            ],
+            "s": "Anime: No"
+        },
+        "e_nr": 3,
+        "e_o": {
+            "o": [
+                "Single",
+                "Double",
+                "Triple"
+            ],
+            "s": "Single"
+        },
+        "location": "Money.Heist.S01E03.proper.1080p.web.x264-skgtv\\muGnYu0tOSPCb4tyQ.mkv",
+        "name_o": {
+            "o": [
+                "Name required",
+                "Name optional"
+            ],
+            "s": "Name required"
+        },
+        "new_series": false,
+        "override": false,
+        "s_nr": 1,
+        "series_name": "Series Name",
+        "show_subs": false,
+        "status_o": {
+            "o": [
+                "Airing",
+                "Hiatus",
+                "Ended"
+            ],
+            "s": "Airing"
+        },
+        "subs": [],
+        "sync": false,
+        "t_o": {
+            "o": [
+                "Series",
+                "HD",
+                "SD"
+            ],
+            "s": "Series"
+        },
+        "title": "",
+        "title2": "",
+        "title3": "",
+        "tvdb_id": ""
+    },
+    {
+        "anime_o": {
+            "o": [
+                "Anime: No",
+                "Anime: Yes"
+            ],
+            "s": "Anime: No"
+        },
+        "e_nr": 4,
+        "e_o": {
+            "o": [
+                "Single",
+                "Double",
+                "Triple"
+            ],
+            "s": "Single"
+        },
+        "location": "Money.Heist.S01E04.proper.1080p.web.x264.1-skgtv\\af4fe0b99a87425ba91561dc84047e69.mkv",
+        "name_o": {
+            "o": [
+                "Name required",
+                "Name optional"
+            ],
+            "s": "Name required"
+        },
+        "new_series": false,
+        "override": false,
+        "s_nr": 1,
+        "series_name": "Series Name",
+        "show_subs": false,
+        "status_o": {
+            "o": [
+                "Airing",
+                "Hiatus",
+                "Ended"
+            ],
+            "s": "Airing"
+        },
+        "subs": [],
+        "sync": false,
+        "t_o": {
+            "o": [
+                "Series",
+                "HD",
+                "SD"
+            ],
+            "s": "Series"
+        },
+        "title": "",
+        "title2": "",
+        "title3": "",
+        "tvdb_id": ""
+    },
+    {
+        "anime_o": {
+            "o": [
+                "Anime: No",
+                "Anime: Yes"
+            ],
+            "s": "Anime: No"
+        },
+        "e_nr": 5,
+        "e_o": {
+            "o": [
+                "Single",
+                "Double",
+                "Triple"
+            ],
+            "s": "Single"
+        },
+        "location": "Money.Heist.S01E05.proper.720p.web.x264-skgtv\\byPicfBVbMsyy6ngodWXdApNaFgtH5Y0DnijYn.mkv",
+        "name_o": {
+            "o": [
+                "Name required",
+                "Name optional"
+            ],
+            "s": "Name required"
+        },
+        "new_series": false,
+        "override": false,
+        "s_nr": 1,
+        "series_name": "Series Name",
+        "show_subs": false,
+        "status_o": {
+            "o": [
+                "Airing",
+                "Hiatus",
+                "Ended"
+            ],
+            "s": "Airing"
+        },
+        "subs": [],
+        "sync": false,
+        "t_o": {
+            "o": [
+                "Series",
+                "HD",
+                "SD"
+            ],
+            "s": "Series"
+        },
+        "title": "",
+        "title2": "",
+        "title3": "",
+        "tvdb_id": ""
+    },
+    {
+        "anime_o": {
+            "o": [
+                "Anime: No",
+                "Anime: Yes"
+            ],
+            "s": "Anime: No"
+        },
+        "e_nr": 6,
+        "e_o": {
+            "o": [
+                "Single",
+                "Double",
+                "Triple"
+            ],
+            "s": "Single"
+        },
+        "location": "Money.Heist.S01E06.proper.1080p.web.x264.1-skgtv\\d58435846dd6484b949da6e7097635af.mkv",
+        "name_o": {
+            "o": [
+                "Name required",
+                "Name optional"
+            ],
+            "s": "Name required"
+        },
+        "new_series": false,
+        "override": false,
+        "s_nr": 1,
+        "series_name": "Series Name",
+        "show_subs": false,
+        "status_o": {
+            "o": [
+                "Airing",
+                "Hiatus",
+                "Ended"
+            ],
+            "s": "Airing"
+        },
+        "subs": [],
+        "sync": false,
+        "t_o": {
+            "o": [
+                "Series",
+                "HD",
+                "SD"
+            ],
+            "s": "Series"
+        },
+        "title": "",
+        "title2": "",
+        "title3": "",
+        "tvdb_id": ""
+    },
+    {
+        "anime_o": {
+            "o": [
+                "Anime: No",
+                "Anime: Yes"
+            ],
+            "s": "Anime: No"
+        },
+        "e_nr": 7,
+        "e_o": {
+            "o": [
+                "Single",
+                "Double",
+                "Triple"
+            ],
+            "s": "Single"
+        },
+        "location": "Money.Heist.S01E07.proper.1080p.web.x264.1-skgtv\\0cf468fd7c2948eb996d1521790a5738.mkv",
+        "name_o": {
+            "o": [
+                "Name required",
+                "Name optional"
+            ],
+            "s": "Name required"
+        },
+        "new_series": false,
+        "override": false,
+        "s_nr": 1,
+        "series_name": "Series Name",
+        "show_subs": false,
+        "status_o": {
+            "o": [
+                "Airing",
+                "Hiatus",
+                "Ended"
+            ],
+            "s": "Airing"
+        },
+        "subs": [],
+        "sync": false,
+        "t_o": {
+            "o": [
+                "Series",
+                "HD",
+                "SD"
+            ],
+            "s": "Series"
+        },
+        "title": "",
+        "title2": "",
+        "title3": "",
+        "tvdb_id": ""
+    },
+    {
+        "anime_o": {
+            "o": [
+                "Anime: No",
+                "Anime: Yes"
+            ],
+            "s": "Anime: No"
+        },
+        "e_nr": 8,
+        "e_o": {
+            "o": [
+                "Single",
+                "Double",
+                "Triple"
+            ],
+            "s": "Single"
+        },
+        "location": "Money.Heist.S01E08.proper.720p.web.x264-skgtv\\3bOj0W1hpT5iNEfEy1.mkv",
+        "name_o": {
+            "o": [
+                "Name required",
+                "Name optional"
+            ],
+            "s": "Name required"
+        },
+        "new_series": false,
+        "override": false,
+        "s_nr": 1,
+        "series_name": "Series Name",
+        "show_subs": false,
+        "status_o": {
+            "o": [
+                "Airing",
+                "Hiatus",
+                "Ended"
+            ],
+            "s": "Airing"
+        },
+        "subs": [],
+        "sync": false,
+        "t_o": {
+            "o": [
+                "Series",
+                "HD",
+                "SD"
+            ],
+            "s": "Series"
+        },
+        "title": "",
+        "title2": "",
+        "title3": "",
+        "tvdb_id": ""
+    },
+    {
+        "anime_o": {
+            "o": [
+                "Anime: No",
+                "Anime: Yes"
+            ],
+            "s": "Anime: No"
+        },
+        "e_nr": 9,
+        "e_o": {
+            "o": [
+                "Single",
+                "Double",
+                "Triple"
+            ],
+            "s": "Single"
+        },
+        "location": "Money.Heist.S01E09.proper.720p.web.x264-skgtv\\idfTWp29OsEE53Pss9BnVPobztYj.mkv",
+        "name_o": {
+            "o": [
+                "Name required",
+                "Name optional"
+            ],
+            "s": "Name required"
+        },
+        "new_series": false,
+        "override": false,
+        "s_nr": 1,
+        "series_name": "Series Name",
+        "show_subs": false,
+        "status_o": {
+            "o": [
+                "Airing",
+                "Hiatus",
+                "Ended"
+            ],
+            "s": "Airing"
+        },
+        "subs": [],
+        "sync": false,
+        "t_o": {
+            "o": [
+                "Series",
+                "HD",
+                "SD"
+            ],
+            "s": "Series"
+        },
+        "title": "",
+        "title2": "",
+        "title3": "",
+        "tvdb_id": ""
+    },
+    {
+        "anime_o": {
+            "o": [
+                "Anime: No",
+                "Anime: Yes"
+            ],
+            "s": "Anime: No"
+        },
+        "e_nr": 10,
+        "e_o": {
+            "o": [
+                "Single",
+                "Double",
+                "Triple"
+            ],
+            "s": "Single"
+        },
+        "location": "Money.Heist.S01E10.proper.720p.web.x264-skgtv\\ksUGya9oxESFMMj5Y0MWy9Mb2a2To0jzcMQ.mkv",
+        "name_o": {
+            "o": [
+                "Name required",
+                "Name optional"
+            ],
+            "s": "Name required"
+        },
+        "new_series": false,
+        "override": false,
+        "s_nr": 1,
+        "series_name": "Series Name",
+        "show_subs": false,
+        "status_o": {
+            "o": [
+                "Airing",
+                "Hiatus",
+                "Ended"
+            ],
+            "s": "Airing"
+        },
+        "subs": [],
+        "sync": false,
+        "t_o": {
+            "o": [
+                "Series",
+                "HD",
+                "SD"
+            ],
+            "s": "Series"
+        },
+        "title": "",
+        "title2": "",
+        "title3": "",
+        "tvdb_id": ""
+    },
+    {
+        "anime_o": {
+            "o": [
+                "Anime: No",
+                "Anime: Yes"
+            ],
+            "s": "Anime: No"
+        },
+        "e_nr": 11,
+        "e_o": {
+            "o": [
+                "Single",
+                "Double",
+                "Triple"
+            ],
+            "s": "Single"
+        },
+        "location": "Money.Heist.S01E11.proper.1080p.web.x264.1-skgtv\\de43d5a2fa994af1b979457a54526234.mkv",
+        "name_o": {
+            "o": [
+                "Name required",
+                "Name optional"
+            ],
+            "s": "Name required"
+        },
+        "new_series": false,
+        "override": false,
+        "s_nr": 1,
+        "series_name": "Series Name",
+        "show_subs": false,
+        "status_o": {
+            "o": [
+                "Airing",
+                "Hiatus",
+                "Ended"
+            ],
+            "s": "Airing"
+        },
+        "subs": [],
+        "sync": false,
+        "t_o": {
+            "o": [
+                "Series",
+                "HD",
+                "SD"
+            ],
+            "s": "Series"
+        },
+        "title": "",
+        "title2": "",
+        "title3": "",
+        "tvdb_id": ""
+    },
+    {
+        "anime_o": {
+            "o": [
+                "Anime: No",
+                "Anime: Yes"
+            ],
+            "s": "Anime: No"
+        },
+        "e_nr": 12,
+        "e_o": {
+            "o": [
+                "Single",
+                "Double",
+                "Triple"
+            ],
+            "s": "Single"
+        },
+        "location": "Money.Heist.S01E12.proper.1080p.web.x264.1-skgtv\\2a8f1c4c5536493f9d540ae4a7314083.mkv",
+        "name_o": {
+            "o": [
+                "Name required",
+                "Name optional"
+            ],
+            "s": "Name required"
+        },
+        "new_series": false,
+        "override": false,
+        "s_nr": 1,
+        "series_name": "Series Name",
+        "show_subs": false,
+        "status_o": {
+            "o": [
+                "Airing",
+                "Hiatus",
+                "Ended"
+            ],
+            "s": "Airing"
+        },
+        "subs": [],
+        "sync": false,
+        "t_o": {
+            "o": [
+                "Series",
+                "HD",
+                "SD"
+            ],
+            "s": "Series"
+        },
+        "title": "",
+        "title2": "",
+        "title3": "",
+        "tvdb_id": ""
+    },
+    {
+        "anime_o": {
+            "o": [
+                "Anime: No",
+                "Anime: Yes"
+            ],
+            "s": "Anime: No"
+        },
+        "e_nr": 13,
+        "e_o": {
+            "o": [
+                "Single",
+                "Double",
+                "Triple"
+            ],
+            "s": "Single"
+        },
+        "location": "Money.Heist.S01E13.proper.1080p.web.x264.1-skgtv\\fdad6a7c2f634ee493785237f037f0f6.mkv",
+        "name_o": {
+            "o": [
+                "Name required",
+                "Name optional"
+            ],
+            "s": "Name required"
+        },
+        "new_series": false,
+        "override": false,
+        "s_nr": 1,
+        "series_name": "Series Name",
+        "show_subs": false,
+        "status_o": {
+            "o": [
+                "Airing",
+                "Hiatus",
+                "Ended"
+            ],
+            "s": "Airing"
+        },
+        "subs": [],
+        "sync": false,
+        "t_o": {
+            "o": [
+                "Series",
+                "HD",
+                "SD"
+            ],
+            "s": "Series"
+        },
+        "title": "",
+        "title2": "",
+        "title3": "",
+        "tvdb_id": ""
     },
     {
         "anime_o": {
@@ -516,59 +1682,6 @@
         },
         "subs": [],
         "sync": false,
-        "t_o": {
-            "o": [
-                "Series",
-                "HD",
-                "SD"
-            ],
-            "s": "Series"
-        },
-        "title": "Jolene",
-        "title2": "",
-        "title3": "",
-        "tvdb_id": 305582
-    },
-    {
-        "anime_o": {
-            "o": [
-                "Anime: No",
-                "Anime: Yes"
-            ],
-            "s": "Anime: No"
-        },
-        "e_nr": 5,
-        "e_o": {
-            "o": [
-                "Single",
-                "Double",
-                "Triple"
-            ],
-            "s": "Single"
-        },
-        "location": "Wynonna.Earp.S03E05.HDTV.x264-KILLERS[ettv]\\Wynonna.Earp.S03E05.HDTV.x264-KILLERS[ettv].mkv",
-        "name_o": {
-            "o": [
-                "Name required",
-                "Name optional"
-            ],
-            "s": "Name required"
-        },
-        "new_series": false,
-        "override": false,
-        "s_nr": 3,
-        "series_name": "Wynonna Earp",
-        "show_subs": false,
-        "status_o": {
-            "o": [
-                "Airing",
-                "Hiatus",
-                "Ended"
-            ],
-            "s": "Airing"
-        },
-        "subs": [],
-        "sync": true,
         "t_o": {
             "o": [
                 "Series",

@@ -61,9 +61,10 @@ class Series:
     def add_episode(self, episode):
         new_season = False
         if episode.s_nr not in self.seasons:
-            self.add_season(location=episode.location.split('\\')[-1:], number=episode.s_nr)
+            print('\\'.join(episode.location.split('\\')[:-1]))
+            self.add_season(location='\\'.join(episode.location.split('\\')[:-1]), number=episode.s_nr)
             new_season = True
-        self.seasons[episode.s_nr].episodes.update({episode.e_nr: episode})
+        self.seasons[episode.s_nr].update_episodes()
         return new_season
 
 

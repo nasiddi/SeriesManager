@@ -1,4 +1,5 @@
-
+import os
+from episode import Episode
 
 class Season:
     def __init__(self, s_nr=0, episodes={}, episode_count=0, location=''):
@@ -16,3 +17,13 @@ class Season:
             episodes[episode] = self.episodes[episode].save()
         return episodes
 
+    def update_episodes(self):
+        self.episodes = {}
+        files = os.listdir(self.location)
+        for file in files:
+            episode = Episode(location=os.path.join(self.location, file), s_nr=self.s_nr)
+            if episode.e_nr in self.episodes:
+                episode.e_nr = 777
+            while episode.e_nr in self.episodes:
+                episode.e_nr += 1
+            self.episodes[episode.e_nr] = episode
