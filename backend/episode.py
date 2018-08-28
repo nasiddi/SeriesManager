@@ -68,7 +68,8 @@ class Episode:
     def parse_episode_name_and_extention(self):
         file_name = self.file_name
         dot = file_name.rfind('.')
-        self.extention = file_name[dot+1:]
+        if dot >= 0:
+            self.extention = file_name[dot+1:]
         name = file_name[:dot]
         match = re.findall(re.compile(SERIES_PATTERN), name)
         if not match:

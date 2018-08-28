@@ -5,6 +5,7 @@ import time
 import sys
 from constants import *
 
+
 def main(args):
     global SHOWS
     SHOWS = io_utlis.load_shows()
@@ -41,13 +42,26 @@ def get_show_data(show):
     for season in show.seasons.values():
         sea = {'key': season.s_nr, 'episodes': [], 'opened': False}
         for episode in season.episodes.values():
+            checkForMultipleFiles(show, episode)
+
             sea['episodes'].append({LOCATION: episode.location,
                                     'file_name': episode.file_name,
                                     'path': False,
                                     'edit': False,
                                     'key': episode.e_nr})
+
         seasons.append(sea)
     return {SERIES_NAME: show.series_name, 'seasons': seasons}
+
+
+def checkForMultipleFiles(show, e):
+    if show.series_name == 'Doctor Who Classic':
+        return False
+    if e.e_nr == 999:
+        return False
+    if e.e_nr < 777:
+        return False
+    print(e.location)
 
 
 if __name__ == '__main__':

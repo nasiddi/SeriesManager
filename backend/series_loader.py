@@ -27,12 +27,7 @@ def load_files(top):
 
     for show in shows.values():
         for season in show.seasons.values():
-            episodes = {}
-            files = os.listdir(season.location)
-            for file in files:
-                episode = Episode(location=os.path.join(season.location, file), s_nr=season.s_nr)
-                episodes[episode.e_nr] = episode
-            season.episodes = episodes
+            season.update_episodes()
     return shows
 
 
@@ -92,7 +87,7 @@ def add_metadata(shows):
                     e.height = file_meta['height']
                     e.quality = file_meta['quality']
                 except:
-                    print(e.location)
+                    print('*load metadata*', e.location)
 
 def main():
     start = time.time()
