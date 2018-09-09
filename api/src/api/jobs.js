@@ -45,26 +45,11 @@ routes.post('/stats', async (req, res) => {
 });
 
 routes.post('/sync/start', async (req, res) => {
-  const inputFile = path.join(config.directories.storage, 'sync');
-  python.syncFiles(inputFile, res);
+  python.syncFiles(req.body, res);
 });
 
 routes.post('/update/save', async (req, res) => {
   python.updateSave(req.body, res);
-});
-
-routes.post('/sync/save', async (req, res) => {
-  const outputFile = path.join(config.directories.storage, 'sync');
-
-  fs.writeJSON(outputFile, req.body, (err) => {
-    console.log('req.body');
-    console.log(req.body);
-    if (err) {
-      winston.error(err);
-      res.sendStatus(500).end();
-    }
-    res.json(outputFile);
-  });
 });
 
 routes.post('/batch/match', async (req, res) => {
@@ -86,7 +71,7 @@ routes.post('/batch/start', async (req, res) => {
   python.batchMatch(inputFile, res);
 });
 
-routes.get('/names', async (req, res) => {
+routes.get('/sync/prep', async (req, res) => {
   python.prepFiles(res);
 });
 

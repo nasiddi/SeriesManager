@@ -426,8 +426,8 @@ async function syncFiles(body, res) {
   await run(
     'syncer',
     '',
-    body,
     '',
+    body,
     outputFile,
     () => {},
     async (code, signal) => {

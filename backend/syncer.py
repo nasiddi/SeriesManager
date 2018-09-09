@@ -17,7 +17,7 @@ CLEAN_UP = []
 def main(args):
     global SHOWS
     io_utlis.parse_args(args)
-    data = io_utlis.load_json(os.environ["DATA_FILE"])
+    data = io_utlis.load_json(os.environ["CONF_FILE"])
 
     SHOWS = io_utlis.load_shows()
 

@@ -75,7 +75,7 @@ export default {
         );
     },
     loadData() {
-      this.$http.post('jobs/sync/start').then(
+      this.$http.post('jobs/sync/start', this.$route.params).then(
         (res) => {
           const body = _.defaults(res.body, {
           });

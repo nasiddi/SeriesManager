@@ -65,7 +65,7 @@ export default {
       timeout: 0,
     });
     this.$http
-      .get('jobs/names')
+      .get('jobs/sync/prep')
       .then(
         (res) => {
           const body = _.defaults(res.body, {
@@ -140,20 +140,10 @@ export default {
       });
     },
     async sync() {
-      this.$http
-        .post('jobs/sync/save', this.json.files)
-        .then(
-          (res) => {
-            this.$router.push({
-              name: 'sync.report',
-              paras: res.body,
-            });
-          },
-          (res) => {
-            this.hasSubmitError = true;
-            if (res.body) this.output = res.body;
-          },
-        );
+      this.$router.push({
+        name: 'sync.report',
+        params: this.json.files,
+      });
     },
   },
 };
