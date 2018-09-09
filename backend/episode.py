@@ -24,7 +24,7 @@ class Episode:
         self.extention = ''
         self.s_nr = s_nr
         self.anime = False
-        if os.path.normpath(location).split(os.path.sep)[1] == 'Anime':
+        if os.path.normpath(location).split(os.path.sep)[1 + MAC_OFFSET] == 'Anime':
             self.anime = True
         self.episode_option = episode_option
         self.e_nr = e_nr
