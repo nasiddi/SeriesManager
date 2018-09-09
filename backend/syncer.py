@@ -209,7 +209,7 @@ def ignore_file(file):
     if os.path.isdir(loc):
         new_loc = ' '.join([loc, '[ignore]'])
     else:
-        split_loc = file.location.rsplit(SEPERATOR, 1)
+        split_loc = file.location.rsplit('.', 1)
         split_loc[0] = ' '.join([split_loc[0], '[ignore]'])
         new_loc = SEPERATOR.join(split_loc)
     print(loc)
