@@ -53,18 +53,18 @@
           sm
           class="pl-2 pr-2">
           <b-button
-            :pressed.sync="f.sync"
-            :variant="syncColor"
+            :pressed.sync="f.delete"
+            :variant="'outline-warning'"
             :style="{width: '100%'}"
             class="mt-2"
-          >Sync</b-button>
+          >Delete</b-button>
         </b-col>
         <b-col
           sm
           class="pl-2 pr-2">
           <b-button
-            :pressed.sync="f.delete"
-            :variant="outline-warning"
+            :pressed.sync="f.sync"
+            :variant="syncColor"
             :style="{width: '100%'}"
             class="mt-2"
           >Sync</b-button>
@@ -73,7 +73,7 @@
       <b-row
         v-if="'t_o' in f && f.t_o.s === 'Series'">
         <b-col
-          sm="6"
+          sm="4"
           class="pl-2 pr-2">
           <b-input
             v-if="f.new_series === true"
