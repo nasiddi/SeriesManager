@@ -13,7 +13,7 @@ def main(args):
     conf = io_utlis.load_json(os.environ["CONF_FILE"])
     tree_file = io_utlis.load_json(os.environ['OUTPUT_FILE'])
     if SHOWS is None:
-        io_utlis.save_json({'error': 'Shows locked'}, os.environ['OUTPUT_FILE'])
+        io_utlis.save_json({'shows_locked': True}, os.environ['OUTPUT_FILE'])
         print('shows locked')
         return
     unlock_shows.main()
