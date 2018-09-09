@@ -61,7 +61,7 @@ def check_for_multiple_files(show, e):
         return False
     if e.e_nr < 777:
         return False
-    print(e.filename, e.e_nr)
+    print(e)
 
 
 
