@@ -121,23 +121,55 @@ export default {
   watch: {
   },
   created() {
-    this.$http.post('jobs/batch/files').then(
-      (res) => {
-        const body = _.defaults(res.body, {
-        });
-        this.json = body;
-        this.units = body.units;
-        this.reg = body.regex;
-      },
-      () => {
-        this.$snotify.error('Failed to load data', { timeout: 0 });
-      },
-    );
+    this.loadData();
   },
   mounted() {
     this.updateRegex();
   },
   methods: {
+    loadData() {
+      this.$http.post('jobs/batch/files').then(
+        (res) => {
+          const body = _.defaults(res.body, {
+          });
+          if ('shows_locked' in body) {
+            this.notifLock = this.$snotify.confirm('', 'Shows locked', {
+              timeout: 0,
+              buttons: [
+                { text: 'Unlock', action: () => this.unlockShows(), bold: true },
+              ],
+            });
+          } else {
+            this.json = body;
+            this.units = body.units;
+            this.reg = body.regex;
+          }
+        },
+        () => {
+          this.$snotify.error('Failed to load data', { timeout: 0 });
+        },
+      );
+    },
+    unlockShows() {
+      this.$snotify.remove(this.notifLock.id);
+      this.$http.post('jobs/unlock')
+        .then(
+          (res) => {
+            this.json = res;
+            this.loadData();
+          },
+        );
+    },
+    unlockShowsStart() {
+      this.$snotify.remove(this.notifLock.id);
+      this.$http.post('jobs/unlock')
+        .then(
+          (res) => {
+            this.json = res;
+            this.start();
+          },
+        );
+    },
     disableButton() {
       return this.counter === 10;
     },
@@ -146,10 +178,19 @@ export default {
         .post('jobs/batch/match', this.json)
         .then(
           (res) => {
-            this.$router.push({
-              name: 'batch.validate',
-              paras: res.body,
-            });
+            if ('shows_locked' in res.body) {
+              this.notifLock = this.$snotify.confirm('', 'Shows locked', {
+                timeout: 0,
+                buttons: [
+                  { text: 'Unlock', action: () => this.unlockShowsStart(), bold: true },
+                ],
+              });
+            } else {
+              this.$router.push({
+                name: 'batch.validate',
+                paras: res.body,
+              });
+            }
           },
           (res) => {
             this.hasSubmitError = true;

@@ -279,20 +279,42 @@ export default {
     },
   },
   created() {
-    this.$http.post('jobs/batch/start').then(
-      (res) => {
-        const body = _.defaults(res.body, {
-        });
-        this.json = body;
-      },
-      () => {
-        this.$snotify.error('Failed to load data', { timeout: 0 });
-      },
-    );
+    this.loadData();
   },
   mounted() {
   },
   methods: {
+    unlockShows() {
+      this.$snotify.remove(this.notifLock.id);
+      this.$http.post('jobs/unlock')
+        .then(
+          (res) => {
+            this.json = res;
+            this.loadData();
+          },
+        );
+    },
+    loadData() {
+      this.$http.post('jobs/batch/start').then(
+        (res) => {
+          const body = _.defaults(res.body, {
+          });
+          if ('shows_locked' in body) {
+            this.notifLock = this.$snotify.confirm('', 'Shows locked', {
+              timeout: 0,
+              buttons: [
+                { text: 'Unlock', action: () => this.unlockShows(), bold: true },
+              ],
+            });
+          } else {
+            this.json = body;
+          }
+        },
+        () => {
+          this.$snotify.error('Failed to load data', { timeout: 0 });
+        },
+      );
+    },
     async sync() {
       this.$router.push({
         name: 'batch.report',
