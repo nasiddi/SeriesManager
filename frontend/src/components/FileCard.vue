@@ -20,7 +20,7 @@
             selected="Series"/>
         </b-col>
         <b-col
-          sm="6"
+          sm="4"
           class="pl-2 pr-2">
           <b-input
             id="title"
@@ -55,6 +55,16 @@
           <b-button
             :pressed.sync="f.sync"
             :variant="syncColor"
+            :style="{width: '100%'}"
+            class="mt-2"
+          >Sync</b-button>
+        </b-col>
+        <b-col
+          sm
+          class="pl-2 pr-2">
+          <b-button
+            :pressed.sync="f.delete"
+            :variant="outline-warning"
             :style="{width: '100%'}"
             class="mt-2"
           >Sync</b-button>
@@ -134,6 +144,17 @@
             :style="{width: '100%'}"
             class="mt-2"
           >New Series</b-button>
+        </b-col>
+        <b-col
+          sm
+          class="pl-2 pr-2">
+          <b-button
+            v-if="'t_o' in f && f.t_o.s === 'Series'"
+            :variant="'success'"
+            :style="{width: '100%'}"
+            class="mt-2"
+            @click="updateTitle(f)"
+          >Update</b-button>
         </b-col>
       </b-row>
       <b-row
@@ -217,19 +238,6 @@
             button-variant="outline-primary"
             class="mt-2"
             stacked/>
-        </b-col>
-      </b-row>
-      <b-row>
-        <b-col
-          sm
-          class="pl-2 pr-2">
-          <b-button
-            v-if="'t_o' in f && f.t_o.s === 'Series'"
-            :variant="'success'"
-            :style="{width: '100%'}"
-            class="mt-2"
-            @click="updateTitle(f)"
-          >Update</b-button>
         </b-col>
       </b-row>
     </b-card>
