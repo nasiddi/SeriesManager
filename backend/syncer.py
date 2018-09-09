@@ -205,16 +205,16 @@ def get_basepath(file):
 
 def ignore_file(file):
     split_loc = file.location.split(SEPERATOR)
-    loc0 = SEPERATOR.join(split_loc[:3 + MAC_OFFSET])
-    loc1 = SEPERATOR.join(split_loc[3 + MAC_OFFSET:])
-    print(file.location)
-    print(loc0)
-    print(loc1)
-    if os.path.isdir(loc0):
-        loc0 = ''.join([loc0, ' [ignore]'])
-        new_loc = SEPERATOR.join([loc0, loc1])
-        print(new_loc)
-
+    loc = SEPERATOR.join(split_loc[:3 + MAC_OFFSET])
+    if os.path.isdir(loc):
+        new_loc = ' '.join([loc, '[ignore]'])
+    else:
+        split_loc = file.location.rsplit(SEPERATOR, 1)
+        split_loc[0] = ' '.join([split_loc[0], '[ignore]'])
+        new_loc = SEPERATOR.join(split_loc)
+    print(loc)
+    print(new_loc)
+    #os.rename(loc, new_loc)
 
 
 def single_format(file):
