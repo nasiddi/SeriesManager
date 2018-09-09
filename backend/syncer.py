@@ -203,10 +203,12 @@ def ignore_file(file):
     split_loc = SEPERATOR.join(file.location.split(SEPERATOR))
     loc0 = split_loc[:3 + MAC_OFFSET]
     loc1 = split_loc[3 + MAC_OFFSET:]
+    print(file.location)
+    print(loc0)
+    print(loc1)
     if os.path.isdir(loc0):
         loc0 = ''.join([loc0, ' [ignore]'])
         new_loc = SEPERATOR.join([loc0, loc1])
-        print(file.location)
         print(new_loc)
 
 
