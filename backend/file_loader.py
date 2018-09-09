@@ -13,6 +13,8 @@ def main(args):
     subs = []
     for root, dirs, files in os.walk(FILE_DIR):
         for name in files:
+            if '[ignore]' in root or '[ignore]' in name:
+                continue
             extention = name.split('.')[-1].lower()
             if extention in EXTENTIONS:
                 if 'sample' in name.lower():
