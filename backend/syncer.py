@@ -211,7 +211,7 @@ def ignore_file(file):
     else:
         split_loc = file.location.rsplit('.', 1)
         split_loc[0] = ' '.join([split_loc[0], '[ignore]'])
-        new_loc = SEPERATOR.join(split_loc)
+        new_loc = '.'.join(split_loc)
     print(loc)
     print(new_loc)
     os.rename(loc, new_loc)
