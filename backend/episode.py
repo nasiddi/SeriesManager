@@ -142,8 +142,10 @@ class Episode:
         #     self.parse_episode_nr()
         # if self.extention == '':
         #     self.parse_episode_name_and_extention()
-        return 'Show: ' + self.location.split(SEPERATOR)[3 + MAC_OFFSET] + ' SNr: ' + str(self.s_nr) + ' ENr: ' + str(self.e_nr)
-                #'\nSeasons:\t' + str(len(self.seasons.keys())) +
+        return ('***' + 
+                'Show: ' + self.location.split(SEPERATOR)[2 + MAC_OFFSET] + ' SNr: ' + str(self.s_nr) + ' ENr: ' + str(self.e_nr) +
+                '\nFilename: ' + self.file_name +
+                '\nDuration: ' + str(self.duration) + ' Size: ' + str(self.size))
 
 
 
