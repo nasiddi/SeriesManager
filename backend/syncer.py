@@ -28,10 +28,9 @@ def main(args):
     io_utlis.save_json(data, 'data/sync')
     files = []
     for f in data:
-        if not f['sync']:
-            continue
 
         f = File(location=os.path.join(FILE_DIR, f['location']),
+                 sync=f['sync'],
                  s_nr=f['s_nr'],
                  e_nr=f['e_nr'],
                  series_name=f['series_name'],
@@ -56,14 +55,19 @@ def main(args):
     for file in files:
         if file.delete:
             CLEAN_UP.append(SEPERATOR.join(file.location.split(SEPERATOR)[:3 + MAC_OFFSET]))
+            continue
+        if file.type_option == '[ignore]':
+            ignore_file(file)
+            continue
+        if not file.sync:
+            continue
         if file.type_option in ['HD', 'SD']:
             queue_movie(file)
             continue
         if file.type_option == 'Series':
             queue_episode(file)
             continue
-        if file.type_option == '[ignore]':
-            ignore_file(file)
+
 
     sync_queue()
     clean_up()

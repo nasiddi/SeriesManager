@@ -3,6 +3,7 @@ from constants import *
 
 class File:
     def __init__(self,
+                 sync=False,
                  location='',
                  s_nr='',
                  e_nr='',
@@ -23,6 +24,7 @@ class File:
                  delete=False,
                  ):
         self.location = location
+        self.sync = sync
         self.s_nr = s_nr
         self.e_nr = e_nr
         self.e_nr2 = int(e_nr) + 1 if type(e_nr) == int else ''
