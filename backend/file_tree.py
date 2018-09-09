@@ -42,7 +42,7 @@ def get_show_data(show):
     for season in show.seasons.values():
         sea = {'key': season.s_nr, 'episodes': [], 'opened': False}
         for episode in season.episodes.values():
-            checkForMultipleFiles(show, episode)
+            check_for_multiple_files(show, episode)
 
             sea['episodes'].append({LOCATION: episode.location,
                                     'file_name': episode.file_name,
@@ -54,14 +54,15 @@ def get_show_data(show):
     return {SERIES_NAME: show.series_name, 'seasons': seasons}
 
 
-def checkForMultipleFiles(show, e):
+def check_for_multiple_files(show, e):
     if show.series_name == 'Doctor Who Classic':
         return False
     if e.e_nr == 999:
         return False
     if e.e_nr < 777:
         return False
-    print(e.location)
+    print(e.filename, e.e_nr)
+
 
 
 if __name__ == '__main__':
