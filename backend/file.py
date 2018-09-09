@@ -20,6 +20,7 @@ class File:
                  tvdb_id=0,
                  name_needed=True,
                  anime=False,
+                 delete=False,
                  ):
         self.location = location
         self.s_nr = s_nr
@@ -42,6 +43,7 @@ class File:
         self.tvdb_id = tvdb_id
         self.name_needed = name_needed
         self.anime = anime
+        self.delete = delete
         self.report = {'info': [], 'error': [], 'success': []}
 
     def __str__(self):

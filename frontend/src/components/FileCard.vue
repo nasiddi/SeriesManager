@@ -54,7 +54,7 @@
           class="pl-2 pr-2">
           <b-button
             :pressed.sync="f.delete"
-            :variant="'outline-warning'"
+            :variant="'outline-danger'"
             :style="{width: '100%'}"
             class="mt-2"
           >Delete</b-button>

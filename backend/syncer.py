@@ -14,10 +14,6 @@ SHOWS = None
 CLEAN_UP = []
 
 
-def sync_series():
-    pass
-
-
 def main(args):
     global SHOWS
     io_utlis.parse_args(args)
@@ -44,6 +40,7 @@ def main(args):
                  title3=f['title3'],
                  episode_option=f['e_o']['s'],
                  override=f['override'],
+                 delete=f['delete'],
                  subs=f['subs'],
                  type_option=f['t_o']['s'],
                  status=f['status_o']['s'],
@@ -57,12 +54,16 @@ def main(args):
         files.append(f)
 
     for file in files:
+        if file.delete:
+            CLEAN_UP.append(SEPERATOR.join(file.location.split(SEPERATOR)[:3 + MAC_OFFSET]))
         if file.type_option in ['HD', 'SD']:
             queue_movie(file)
             continue
         if file.type_option == 'Series':
             queue_episode(file)
             continue
+        if file.type_option == '[ignore]':
+            ignore_file(file)
 
     sync_queue()
     clean_up()
@@ -72,6 +73,7 @@ def main(args):
     io_utlis.save_json(report, os.environ['OUTPUT_FILE'])
     print(json.dumps(report, indent=4, sort_keys=True))
     io_utlis.save_shows(SHOWS)
+
 
 
 def sync_queue():
@@ -116,7 +118,10 @@ def sync_queue():
 
 def clean_up():
     for loc in CLEAN_UP:
-        shutil.rmtree(loc)
+        if os.path.isdir(loc):
+            shutil.rmtree(loc)
+        else:
+            os.remove(loc)
 
 
 def delete_file(file):
@@ -192,6 +197,18 @@ def get_basepath(file):
         os.makedirs(basepath)
     io_utlis.wait_on_creation(basepath)
     return basepath
+
+
+def ignore_file(file):
+    split_loc = SEPERATOR.join(file.location.split(SEPERATOR))
+    loc0 = split_loc[:3 + MAC_OFFSET]
+    loc1 = split_loc[3 + MAC_OFFSET:]
+    if os.path.isdir(loc0):
+        loc0 = ''.join([loc0, ' [ignore]'])
+        new_loc = SEPERATOR.join([loc0, loc1])
+        print(file.location)
+        print(new_loc)
+
 
 
 def single_format(file):
