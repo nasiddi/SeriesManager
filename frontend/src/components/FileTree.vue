@@ -120,10 +120,10 @@ export default {
             });
           } else {
             this.json = body;
+            // eslint-disable-next-line prefer-destructuring
+            this.selected = Object.values(body.shows)
+              .map(s => s.series_name).sort()[0];
           }
-          // eslint-disable-next-line prefer-destructuring
-          this.selected = Object.values(body.shows)
-            .map(s => s.series_name).sort()[0];
           this.$snotify.remove(this.notifLoading.id);
         },
         () => {
