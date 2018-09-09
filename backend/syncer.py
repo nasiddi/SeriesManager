@@ -214,7 +214,7 @@ def ignore_file(file):
         new_loc = SEPERATOR.join(split_loc)
     print(loc)
     print(new_loc)
-    #os.rename(loc, new_loc)
+    os.rename(loc, new_loc)
 
 
 def single_format(file):
