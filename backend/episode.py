@@ -116,6 +116,34 @@ class Episode:
             if re.findall(triple_pattern, self.file_name):
                 self.episode_option = TRIPLE
 
+    def __str__(self):
+
+        # self.location = location
+        # self.file_name = os.path.basename(location)
+        # self.extention = ''
+        # self.s_nr = s_nr
+        # self.anime = False
+        # if os.path.normpath(location).split(os.path.sep)[1] == 'Anime':
+        #     self.anime = True
+        # self.episode_option = episode_option
+        # self.e_nr = e_nr
+        # self.previous = None
+        # self.next = None
+        # self.title = title
+        # self.title2 = title2
+        # self.title3 = title3
+        # self.duration = duration
+        # self.height = height
+        # self.width = width
+        # self.size = size
+        # self.ratio = ratio
+        # self.quality = quality
+        # if e_nr == 999:
+        #     self.parse_episode_nr()
+        # if self.extention == '':
+        #     self.parse_episode_name_and_extention()
+        return 'Show: ' + self.location.split(SEPERATOR)[3 + MAC_OFFSET] + ' SNr: ' + str(self.s_nr) + ' ENr: ' + str(self.e_nr)
+                #'\nSeasons:\t' + str(len(self.seasons.keys())) +
 
 
 
