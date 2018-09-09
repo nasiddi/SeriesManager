@@ -28,15 +28,19 @@ if platform.system() == 'Windows':
     FILE_DIR = 'L:\\complete\\' if DEBUG else 'V:\\downloads\\'
     SUB_DIR = 'T:\\Subs'
     META_FILE = 'data\\metadata.json'
+    MAC_OFFSET = 0
+    SEPERATOR = '\\'
 
 else:
-    SERIES_DIR = '/Volumes/Downloads/Series' if DEBUG else '/Volumes/Video/downloads/Series'
-    ANIME_DIR = '/Volumes/Downloads/Anime' if DEBUG else '/Volumes/Video/downloads/Anime'
-    HD_Movies = '/Volumes/Downloads/HD' if DEBUG else '/Volumes/Video/downloads/HD'
-    SD_MOVIES = '/Volumes/Downloads/SD' if DEBUG else '/Volumes/Video/downloads/SD'
+    SERIES_DIR = '/Volumes/Downloads/Series' if DEBUG else '/Volumes/Video/Series'
+    ANIME_DIR = '/Volumes/Downloads/Anime' if DEBUG else '/Volumes/Video/Anime'
+    HD_Movies = '/Volumes/Downloads/HD' if DEBUG else '/Volumes/Video/HD'
+    SD_MOVIES = '/Volumes/Downloads/SD' if DEBUG else '/Volumes/Video/SD'
     FILE_DIR = '/Volumes/Downloads/complete/' if DEBUG else '/Volumes/Video/downloads/'
     SUB_DIR = '/Volumes/Temp/Subs'
     META_FILE = 'data/metadata.json'
+    MAC_OFFSET = 2
+    SEPERATOR = '/'
 
 
 # Extentions

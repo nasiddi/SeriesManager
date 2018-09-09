@@ -108,7 +108,7 @@ def sync_queue():
 
             if show.add_episode(episode):
                 file.report['info'].append('Season created')
-        loc = '\\'.join(file.location.split('\\')[:3])
+        loc = SEPERATOR.join(file.location.split(SEPERATOR)[:3 + MAC_OFFSET])
         if os.path.isdir(loc):
             if loc not in CLEAN_UP:
                 CLEAN_UP.append(loc)
@@ -153,7 +153,7 @@ def delete_file(file):
 
 
 def create_new_series(file):
-    basepath = get_basepath(file).rsplit('\\', 1)[0]
+    basepath = get_basepath(file).rsplit(SEPERATOR, 1)[0 + MAC_OFFSET]
     SHOWS.update({file.series_name: Series(series_name=file.series_name, status=file.status, tvdb_id=file.tvdb_id,
                   anime=file.anime, name_needed=file.name_needed, location=basepath)})
     file.report['info'].append('Series created')

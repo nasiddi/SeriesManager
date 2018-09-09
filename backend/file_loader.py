@@ -42,7 +42,7 @@ def main(args):
     multis = []
     delete = []
     for file in file_list:
-        loc = file.location.split('\\')[2]
+        loc = file.location.split(SEPERATOR)[2 + MAC_OFFSET]
         if loc in locations:
             if loc not in multis:
                 multis.append(loc)
@@ -50,7 +50,7 @@ def main(args):
             locations.append(loc)
 
     for file in file_list:
-        loc = file.location.split('\\')[2]
+        loc = file.location.split(SEPERATOR)[2 + MAC_OFFSET]
         if loc in multis:
             delete.append(file)
 

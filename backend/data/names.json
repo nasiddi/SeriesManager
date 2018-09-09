@@ -1,4826 +1,860 @@
 {
-    "files": [
-        {
-            "e_name": "",
-            "e_nr": 1,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S01 (360p re-blurip)\\Agents of SHIELD S01E01 Pilot.mp4",
-            "s_nr": 1,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 2,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S01 (360p re-blurip)\\Agents of SHIELD S01E02 0-8-4.mp4",
-            "s_nr": 1,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 3,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S01 (360p re-blurip)\\Agents of SHIELD S01E03 The Asset.mp4",
-            "s_nr": 1,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 4,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S01 (360p re-blurip)\\Agents of SHIELD S01E04 Eye Spy.mp4",
-            "s_nr": 1,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 5,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S01 (360p re-blurip)\\Agents of SHIELD S01E05 Girl in the Flower Dress.mp4",
-            "s_nr": 1,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 6,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S01 (360p re-blurip)\\Agents of SHIELD S01E06 FZZT.mp4",
-            "s_nr": 1,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 7,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S01 (360p re-blurip)\\Agents of SHIELD S01E07 The Hub.mp4",
-            "s_nr": 1,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 8,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S01 (360p re-blurip)\\Agents of SHIELD S01E08 The Well.mp4",
-            "s_nr": 1,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 9,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S01 (360p re-blurip)\\Agents of SHIELD S01E09 Repairs.mp4",
-            "s_nr": 1,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 10,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S01 (360p re-blurip)\\Agents of SHIELD S01E10 The Bridge.mp4",
-            "s_nr": 1,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 11,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S01 (360p re-blurip)\\Agents of SHIELD S01E11 The Magical Place.mp4",
-            "s_nr": 1,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 12,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S01 (360p re-blurip)\\Agents of SHIELD S01E12 Seeds.mp4",
-            "s_nr": 1,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 13,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S01 (360p re-blurip)\\Agents of SHIELD S01E13 TRACKS.mp4",
-            "s_nr": 1,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 14,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S01 (360p re-blurip)\\Agents of SHIELD S01E14 TAHITI.mp4",
-            "s_nr": 1,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 15,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S01 (360p re-blurip)\\Agents of SHIELD S01E15 Yes Men.mp4",
-            "s_nr": 1,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 16,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S01 (360p re-blurip)\\Agents of SHIELD S01E16 End of the Beginning.mp4",
-            "s_nr": 1,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 17,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S01 (360p re-blurip)\\Agents of SHIELD S01E17 Turn, Turn, Turn.mp4",
-            "s_nr": 1,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 18,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S01 (360p re-blurip)\\Agents of SHIELD S01E18 Providence.mp4",
-            "s_nr": 1,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 19,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S01 (360p re-blurip)\\Agents of SHIELD S01E19 The Only Light in the Darkness.mp4",
-            "s_nr": 1,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 20,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S01 (360p re-blurip)\\Agents of SHIELD S01E20 Nothing Personal.mp4",
-            "s_nr": 1,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 21,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S01 (360p re-blurip)\\Agents of SHIELD S01E21 Ragtag.mp4",
-            "s_nr": 1,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 22,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S01 (360p re-blurip)\\Agents of SHIELD S01E22 Beginning of the End.mp4",
-            "s_nr": 1,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 1,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S02 (360p re-blurip)\\Agents of SHIELD S02E01 Shadows.mp4",
-            "s_nr": 2,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 2,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S02 (360p re-blurip)\\Agents of SHIELD S02E02 Heavy Is the Head.mp4",
-            "s_nr": 2,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 3,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S02 (360p re-blurip)\\Agents of SHIELD S02E03 Making Friends and Influencing People.mp4",
-            "s_nr": 2,
-            "series_name": "Friends",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 4,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S02 (360p re-blurip)\\Agents of SHIELD S02E04 Face My Enemy.mp4",
-            "s_nr": 2,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 5,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S02 (360p re-blurip)\\Agents of SHIELD S02E05 A Hen in the Wolf House.mp4",
-            "s_nr": 2,
-            "series_name": "House",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 6,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S02 (360p re-blurip)\\Agents of SHIELD S02E06 A Fractured House.mp4",
-            "s_nr": 2,
-            "series_name": "House",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 7,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S02 (360p re-blurip)\\Agents of SHIELD S02E07 The Writing on the Wall.mp4",
-            "s_nr": 2,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 8,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S02 (360p re-blurip)\\Agents of SHIELD S02E08 The Things We Bury.mp4",
-            "s_nr": 2,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 9,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S02 (360p re-blurip)\\Agents of SHIELD S02E09 Ye Who Enter Here.mp4",
-            "s_nr": 2,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 10,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S02 (360p re-blurip)\\Agents of SHIELD S02E10 What They Become.mp4",
-            "s_nr": 2,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 11,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S02 (360p re-blurip)\\Agents of SHIELD S02E11 Aftershocks.mp4",
-            "s_nr": 2,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 12,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S02 (360p re-blurip)\\Agents of SHIELD S02E12 Who You Really Are.mp4",
-            "s_nr": 2,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 13,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S02 (360p re-blurip)\\Agents of SHIELD S02E13 One of Us.mp4",
-            "s_nr": 2,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 14,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S02 (360p re-blurip)\\Agents of SHIELD S02E14 Love in the Time of HYDRA.mp4",
-            "s_nr": 2,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 15,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S02 (360p re-blurip)\\Agents of SHIELD S02E15 One Door Closes.mp4",
-            "s_nr": 2,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 16,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S02 (360p re-blurip)\\Agents of SHIELD S02E16 Afterlife.mp4",
-            "s_nr": 2,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 17,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S02 (360p re-blurip)\\Agents of SHIELD S02E17 Melinda.mp4",
-            "s_nr": 2,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 18,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S02 (360p re-blurip)\\Agents of SHIELD S02E18 Frenemy of My Enemy.mp4",
-            "s_nr": 2,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 19,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S02 (360p re-blurip)\\Agents of SHIELD S02E19 The Dirty Half Dozen.mp4",
-            "s_nr": 2,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 20,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S02 (360p re-blurip)\\Agents of SHIELD S02E20 Scars.mp4",
-            "s_nr": 2,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 21,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S02 (360p re-blurip)\\Agents of SHIELD S02E21 SOS Pt 1.mp4",
-            "s_nr": 2,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 22,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S02 (360p re-blurip)\\Agents of SHIELD S02E22 SOS Pt 2.mp4",
-            "s_nr": 2,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 1,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S03 (360p re-blurip)\\Agents of SHIELD S03E01 Laws of Nature.mp4",
-            "s_nr": 3,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 2,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S03 (360p re-blurip)\\Agents of SHIELD S03E02 Purpose in the Machine.mp4",
-            "s_nr": 3,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 3,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S03 (360p re-blurip)\\Agents of SHIELD S03E03 A Wanted (Inhu)Man.mp4",
-            "s_nr": 3,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 4,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S03 (360p re-blurip)\\Agents of SHIELD S03E04 Devils You Know.mp4",
-            "s_nr": 3,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 5,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S03 (360p re-blurip)\\Agents of SHIELD S03E05 4722 Hours.mp4",
-            "s_nr": 3,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 6,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S03 (360p re-blurip)\\Agents of SHIELD S03E06 Among Us Hide....mp4",
-            "s_nr": 3,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 7,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S03 (360p re-blurip)\\Agents of SHIELD S03E07 Chaos Theory.mp4",
-            "s_nr": 3,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 8,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S03 (360p re-blurip)\\Agents of SHIELD S03E08 Many Heads, One Tale.mp4",
-            "s_nr": 3,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 9,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S03 (360p re-blurip)\\Agents of SHIELD S03E09 Closure.mp4",
-            "s_nr": 3,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 10,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S03 (360p re-blurip)\\Agents of SHIELD S03E10 Maveth.mp4",
-            "s_nr": 3,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 11,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S03 (360p re-blurip)\\Agents of SHIELD S03E11 Bouncing Back.mp4",
-            "s_nr": 3,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 12,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S03 (360p re-blurip)\\Agents of SHIELD S03E12 The Inside Man.mp4",
-            "s_nr": 3,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 13,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S03 (360p re-blurip)\\Agents of SHIELD S03E13 Parting Shot.mp4",
-            "s_nr": 3,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 14,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S03 (360p re-blurip)\\Agents of SHIELD S03E14 Watchdogs.mp4",
-            "s_nr": 3,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 15,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S03 (360p re-blurip)\\Agents of SHIELD S03E15 Spacetime.mp4",
-            "s_nr": 3,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 16,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S03 (360p re-blurip)\\Agents of SHIELD S03E16 Paradise Lost.mp4",
-            "s_nr": 3,
-            "series_name": "Lost",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 17,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S03 (360p re-blurip)\\Agents of SHIELD S03E17 The Team.mp4",
-            "s_nr": 3,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 18,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S03 (360p re-blurip)\\Agents of SHIELD S03E18 The Singularity.mp4",
-            "s_nr": 3,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 19,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S03 (360p re-blurip)\\Agents of SHIELD S03E19 Failed Experiments.mp4",
-            "s_nr": 3,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 20,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S03 (360p re-blurip)\\Agents of SHIELD S03E20 Emancipation.mp4",
-            "s_nr": 3,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 21,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S03 (360p re-blurip)\\Agents of SHIELD S03E21 Absolution.mp4",
-            "s_nr": 3,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 22,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S03 (360p re-blurip)\\Agents of SHIELD S03E22 Ascension.mp4",
-            "s_nr": 3,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 1,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S04 (360p re-webrip)\\Agents of SHIELD S04E01 The Ghost.mp4",
-            "s_nr": 4,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 2,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S04 (360p re-webrip)\\Agents of SHIELD S04E02 Meet the New Boss.mp4",
-            "s_nr": 4,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 3,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S04 (360p re-webrip)\\Agents of SHIELD S04E03 Uprising.mp4",
-            "s_nr": 4,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 4,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S04 (360p re-webrip)\\Agents of SHIELD S04E04 Let Me Stand Next to Your Fire.mp4",
-            "s_nr": 4,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 5,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S04 (360p re-webrip)\\Agents of SHIELD S04E05 Lockup.mp4",
-            "s_nr": 4,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 6,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S04 (360p re-webrip)\\Agents of SHIELD S04E06 The Good Samaritan.mp4",
-            "s_nr": 4,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 7,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S04 (360p re-webrip)\\Agents of SHIELD S04E07 Deal with Our Devils.mp4",
-            "s_nr": 4,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 8,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S04 (360p re-webrip)\\Agents of SHIELD S04E08 The Laws of Inferno Dynamics.mp4",
-            "s_nr": 4,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 9,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S04 (360p re-webrip)\\Agents of SHIELD S04E09 Broken Promises.mp4",
-            "s_nr": 4,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 10,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S04 (360p re-webrip)\\Agents of SHIELD S04E10 The Patriot.mp4",
-            "s_nr": 4,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 11,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S04 (360p re-webrip)\\Agents of SHIELD S04E11 Wake Up.mp4",
-            "s_nr": 4,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 12,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S04 (360p re-webrip)\\Agents of SHIELD S04E12 Hot Potato Soup.mp4",
-            "s_nr": 4,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 13,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S04 (360p re-webrip)\\Agents of SHIELD S04E13 BOOM.mp4",
-            "s_nr": 4,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 14,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S04 (360p re-webrip)\\Agents of SHIELD S04E14 The Man Behind the Shield.mp4",
-            "s_nr": 4,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 15,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S04 (360p re-webrip)\\Agents of SHIELD S04E15 Self Control.mp4",
-            "s_nr": 4,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 16,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S04 (360p re-webrip)\\Agents of SHIELD S04E16 What If....mp4",
-            "s_nr": 4,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 17,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S04 (360p re-webrip)\\Agents of SHIELD S04E17 Identity and Change.mp4",
-            "s_nr": 4,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 18,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S04 (360p re-webrip)\\Agents of SHIELD S04E18 No Regrets.mp4",
-            "s_nr": 4,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 19,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S04 (360p re-webrip)\\Agents of SHIELD S04E19 All the Madame's Men.mp4",
-            "s_nr": 4,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 20,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S04 (360p re-webrip)\\Agents of SHIELD S04E20 Farewell, Cruel World!.mp4",
-            "s_nr": 4,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 21,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S04 (360p re-webrip)\\Agents of SHIELD S04E21 The Return.mp4",
-            "s_nr": 4,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 22,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S04 (360p re-webrip)\\Agents of SHIELD S04E22 World's End.mp4",
-            "s_nr": 4,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": -1,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S04 (360p re-webrip)\\Agents of SHIELD S04X01 Slingshot\\Agents of SHIELD Slingshot E01 Vendetta.mp4",
-            "s_nr": -1,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": -1,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S04 (360p re-webrip)\\Agents of SHIELD S04X01 Slingshot\\Agents of SHIELD Slingshot E02 John Hancock.mp4",
-            "s_nr": -1,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": -1,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S04 (360p re-webrip)\\Agents of SHIELD S04X01 Slingshot\\Agents of SHIELD Slingshot E03 Progress.mp4",
-            "s_nr": -1,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": -1,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S04 (360p re-webrip)\\Agents of SHIELD S04X01 Slingshot\\Agents of SHIELD Slingshot E04 Reunion.mp4",
-            "s_nr": -1,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": -1,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S04 (360p re-webrip)\\Agents of SHIELD S04X01 Slingshot\\Agents of SHIELD Slingshot E05 Deal Breaker.mp4",
-            "s_nr": -1,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": -1,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Agents of SHIELD S01-S04 (2013-)\\Agents of SHIELD S04 (360p re-webrip)\\Agents of SHIELD S04X01 Slingshot\\Agents of SHIELD Slingshot E06 Justicia.mp4",
-            "s_nr": -1,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 1,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\American Gods\\American.Gods.S01E01.1080p.AMZN.WEBRip.DDP5.1.x264-NTB\\3e7293310bd74ebbbebed8c5dabf9382.mkv",
-            "s_nr": 1,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 2,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\American Gods\\American.Gods.S01E02.The.Secret.of.Spoons.REPACK.1080p.AMZN.WEBRip.DD5.1.x264-NTB\\b96be36f8e1a465da318bfa4e594dd05.mkv",
-            "s_nr": 1,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 3,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\American Gods\\American.Gods.S01E03.Head.Full.of.Snow.1080p.AMZN.WEBRip.DD5.1.x264-NTB\\e91d36b61723423891502deab4354eda.mkv",
-            "s_nr": 1,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 4,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\American Gods\\American.Gods.S01E04.Git.Gone.1080p.AMZN.WEBRip.DD5.1.x264-NTb\\Ee3VGMk8RoivVO80DSbsPpm.mkv",
-            "s_nr": 1,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 5,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\American Gods\\American.Gods.S01E05.Lemon.Scented.You.1080p.AMZN.WEBRip.DD5.1.x264-NTB\\a3c6a129bcf445238fad7f7f9673dc54.mkv",
-            "s_nr": 1,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 6,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\American Gods\\American.Gods.S01E06.A.Murder.of.Gods.1080p.AMZN.WEBRip.DD5.1.x264-NTB\\ec1e09634ce44ed9998f5828debd530c.mkv",
-            "s_nr": 1,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 7,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\American Gods\\American.Gods.S01E07.A.Prayer.For.Mad.Sweeney.1080p.AMZN.WEBRip.DD5.1.x264-NTB\\869e0a91f9ac46adab84d8a3af7517f8.mkv",
-            "s_nr": 1,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 8,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\American Gods\\American.Gods.S01E08.Come.To.Jesus.1080p.AMZN.WEBRip.DD5.1.x264-NTB\\0fffd79e21ad414aa715d0dd9e89d1a3.mkv",
-            "s_nr": 1,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": -1,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Avengers.Infinity.War.2018.720p.English.HDTS.x264.MP3.Mcr\\Avengers.Infinity.War.2018.720p.English.HDTS.x264.MP3-MCR\\Avengers.Infinity.War.2018.720p.English.HDTS.x264.MP3.MCR.mkv",
-            "s_nr": -1,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 1,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S01E01.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s01e01.720p.hdtv.x264-regret.mkv",
-            "s_nr": 1,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 2,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S01E02.720p.HDTV.x264-regret\\TCePBXzOPj8nGh8i1WCg1AHJXx8q.mkv",
-            "s_nr": 1,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 3,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S01E03.720p.HDTV.x264-regret\\CwrYB9j80o6MYxUjOBq6qP6FqqDaFjpV2Y4.mkv",
-            "s_nr": 1,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 4,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S01E04.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s01e04.720p.hdtv.x264-regret.mkv",
-            "s_nr": 1,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 5,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S01E05.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s01e05.720p.hdtv.x264-regret.mkv",
-            "s_nr": 1,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 6,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S01E06.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s01e06.720p.hdtv.x264-regret.mkv",
-            "s_nr": 1,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 7,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S01E07.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s01e07.720p.hdtv.x264-regret.mkv",
-            "s_nr": 1,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 9,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S01E09.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s01e09.720p.hdtv.x264-regret.mkv",
-            "s_nr": 1,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 10,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S01E10.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s01e10.720p.hdtv.x264-regret.mkv",
-            "s_nr": 1,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 1,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S02E01.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s02e01.720p.hdtv.x264-regret.mkv",
-            "s_nr": 2,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 2,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S02E02.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s02e02.720p.hdtv.x264-regret.mkv",
-            "s_nr": 2,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 3,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S02E03.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s02e03.720p.hdtv.x264-regret.mkv",
-            "s_nr": 2,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 4,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S02E04.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s02e04.720p.hdtv.x264-regret.mkv",
-            "s_nr": 2,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 5,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S02E05.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s02e05.720p.hdtv.x264-regret.mkv",
-            "s_nr": 2,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 6,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S02E06.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s02e06.720p.hdtv.x264-regret.mkv",
-            "s_nr": 2,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 7,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S02E07.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s02e07.720p.hdtv.x264-regret.mkv",
-            "s_nr": 2,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 8,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S02E08.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s02e08.720p.hdtv.x264-regret.mkv",
-            "s_nr": 2,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 10,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S02E10.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s02e10.720p.hdtv.x264-regret.mkv",
-            "s_nr": 2,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 11,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S02E11.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s02e11.720p.hdtv.x264-regret.mkv",
-            "s_nr": 2,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 12,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S02E12.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s02e12.720p.hdtv.x264-regret.mkv",
-            "s_nr": 2,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 13,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S02E13.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s02e13.720p.hdtv.x264-regret.mkv",
-            "s_nr": 2,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 14,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S02E14.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s02e14.720p.hdtv.x264-regret.mkv",
-            "s_nr": 2,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 15,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S02E15.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s02e15.720p.hdtv.x264-regret.mkv",
-            "s_nr": 2,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 16,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S02E16.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s02e16.720p.hdtv.x264-regret.mkv",
-            "s_nr": 2,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 17,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S02E17.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s02e17.720p.hdtv.x264-regret.mkv",
-            "s_nr": 2,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 18,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S02E18.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s02e18.720p.hdtv.x264-regret.mkv",
-            "s_nr": 2,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 19,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S02E19.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s02e19.720p.hdtv.x264-regret.mkv",
-            "s_nr": 2,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 20,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S02E20.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s02e20.720p.hdtv.x264-regret.mkv",
-            "s_nr": 2,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 21,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S02E21.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s02e21.720p.hdtv.x264-regret.mkv",
-            "s_nr": 2,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 22,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S02E22.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s02e22.720p.hdtv.x264-regret.mkv",
-            "s_nr": 2,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 3,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S04E03.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s04e03.720p.hdtv.x264-regret.mkv",
-            "s_nr": 4,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 4,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S04E04.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s04e04.720p.hdtv.x264-regret.mkv",
-            "s_nr": 4,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 5,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S04E05.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s04e05.720p.hdtv.x264-regret.mkv",
-            "s_nr": 4,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 7,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S04E07.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s04e07.720p.hdtv.x264-regret.mkv",
-            "s_nr": 4,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 10,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S04E10.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s04e10.720p.hdtv.x264-regret.mkv",
-            "s_nr": 4,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 11,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S04E11.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s04e11.720p.hdtv.x264-regret.mkv",
-            "s_nr": 4,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 12,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S04E12.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s04e12.720p.hdtv.x264-regret.mkv",
-            "s_nr": 4,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 13,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S04E13.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s04e13.720p.hdtv.x264-regret.mkv",
-            "s_nr": 4,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 15,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S04E15.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s04e15.720p.hdtv.x264-regret.mkv",
-            "s_nr": 4,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 17,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S04E17.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s04e17.720p.hdtv.x264-regret.mkv",
-            "s_nr": 4,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 19,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S04E19.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s04e19.720p.hdtv.x264-regret.mkv",
-            "s_nr": 4,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 1,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S05E01.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s05e01.720p.hdtv.x264-regret.mkv",
-            "s_nr": 5,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 2,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S05E02.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s05e02.720p.hdtv.x264-regret.mkv",
-            "s_nr": 5,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 5,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S05E05.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s05e05.720p.hdtv.x264-regret.mkv",
-            "s_nr": 5,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 6,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S05E06.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s05e06.720p.hdtv.x264-regret.mkv",
-            "s_nr": 5,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 7,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S05E07.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s05e07.720p.hdtv.x264-regret.mkv",
-            "s_nr": 5,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 9,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S05E09.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s05e09.720p.hdtv.x264-regret.mkv",
-            "s_nr": 5,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 10,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S05E10.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s05e10.720p.hdtv.x264-regret.mkv",
-            "s_nr": 5,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 11,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S05E11.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s05e11.720p.hdtv.x264-regret.mkv",
-            "s_nr": 5,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 12,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S05E12.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s05e12.720p.hdtv.x264-regret.mkv",
-            "s_nr": 5,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 13,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S05E13.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s05e13.720p.hdtv.x264-regret.mkv",
-            "s_nr": 5,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 14,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S05E14.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s05e14.720p.hdtv.x264-regret.mkv",
-            "s_nr": 5,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 15,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S05E15.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s05e15.720p.hdtv.x264-regret.mkv",
-            "s_nr": 5,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 17,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S05E17.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s05e17.720p.hdtv.x264-regret.mkv",
-            "s_nr": 5,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 19,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S05E19.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s05e19.720p.hdtv.x264-regret.mkv",
-            "s_nr": 5,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 20,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S05E20.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s05e20.720p.hdtv.x264-regret.mkv",
-            "s_nr": 5,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 21,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S05E21.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s05e21.720p.hdtv.x264-regret.mkv",
-            "s_nr": 5,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 3,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S06E03.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s06e03.720p.hdtv.x264-regret.mkv",
-            "s_nr": 6,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 4,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S06E04.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s06e04.720p.hdtv.x264-regret.mkv",
-            "s_nr": 6,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 5,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S06E05.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s06e05.720p.hdtv.x264-regret.mkv",
-            "s_nr": 6,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 6,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S06E06.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s06e06.720p.hdtv.x264-regret.mkv",
-            "s_nr": 6,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 7,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S06E07.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s06e07.720p.hdtv.x264-regret.mkv",
-            "s_nr": 6,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 9,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S06E09.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s06e09.720p.hdtv.x264-regret.mkv",
-            "s_nr": 6,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 10,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S06E10.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s06e10.720p.hdtv.x264-regret.mkv",
-            "s_nr": 6,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 11,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S06E11.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s06e11.720p.hdtv.x264-regret.mkv",
-            "s_nr": 6,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 12,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S06E12.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s06e12.720p.hdtv.x264-regret.mkv",
-            "s_nr": 6,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 13,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S06E13.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s06e13.720p.hdtv.x264-regret.mkv",
-            "s_nr": 6,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 14,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S06E14.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s06e14.720p.hdtv.x264-regret.mkv",
-            "s_nr": 6,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 15,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S06E15.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s06e15.720p.hdtv.x264-regret.mkv",
-            "s_nr": 6,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 16,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S06E16.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s06e16.720p.hdtv.x264-regret.mkv",
-            "s_nr": 6,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 17,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S06E17.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s06e17.720p.hdtv.x264-regret.mkv",
-            "s_nr": 6,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 18,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S06E18.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s06e18.720p.hdtv.x264-regret.mkv",
-            "s_nr": 6,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 19,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S06E19.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s06e19.720p.hdtv.x264-regret.mkv",
-            "s_nr": 6,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 20,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S06E20.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s06e20.720p.hdtv.x264-regret.mkv",
-            "s_nr": 6,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 21,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S06E21.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s06e21.720p.hdtv.x264-regret.mkv",
-            "s_nr": 6,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 22,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S06E22.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s06e22.720p.hdtv.x264-regret.mkv",
-            "s_nr": 6,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 1,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S07E01.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s07e01.720p.hdtv.x264-regret.mkv",
-            "s_nr": 7,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 2,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S07E02.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s07e02.720p.hdtv.x264-regret.mkv",
-            "s_nr": 7,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 2,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S07E02.720p.HDTV.x264-REGRET.1\\buffy.the.vampire.slayer.s07e02.720p.hdtv.x264-regret.mkv",
-            "s_nr": 7,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 3,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S07E03.720p.HDTV.x264-REGRET\\buffy.the.vampire.slayer.s07e03.720p.hdtv.x264-regret.mkv",
-            "s_nr": 7,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 17,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Buffy\\Buffy.the.Vampire.Slayer.S07E17.720p.HDTV.x264-PLUTONiUM\\buffy.the.vampire.slayer.s07e17.720p.hdtv.x264-plutonium.mkv",
-            "s_nr": 7,
-            "series_name": "Buffy",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": -1,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Kedi.2016.1080p.BluRay.x264.1-NODLABS\\48f344ad36754e9b8df510f1e12d903f.mkv",
-            "s_nr": -1,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": -1,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\La.Melodie.2017.FRENCH.1080p.WEB.H264-SiGeRiS\\La.Melodie.2017.FRENCH.1080p.WEB.H264-SiGeRiS.mkv",
-            "s_nr": -1,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": -1,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Lady.Bird.2017.BluRay.1080p.DTS-HD.MA.5.1.x264.1-LEGi0N\\c7ae1aa80031401ba5e63645ebcb86b9.mkv",
-            "s_nr": -1,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": -1,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Le.Sens.De.La.Fete.2017.FRENCH.1080p.WEB.H264-SiGeRiS\\Le.Sens.De.La.Fete.2017.FRENCH.1080p.WEB.H264-SiGeRiS.mkv",
-            "s_nr": -1,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": -1,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Monsieur.Pierre.Geht.Online.German.2017.AC3.BDRip.x264-CHECKMATE\\Monsieur.Pierre.geht.online.German.2017.AC3.BDRip.x264-CHECKMATE\\checkmate-monsieur.pierre.geht.online.sd.mkv",
-            "s_nr": -1,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": -1,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Monsieur.Pierre.Geht.Online.German.2017.AC3.BDRip.x264-CHECKMATE\\Monsieur.Pierre.geht.online.German.2017.AC3.BDRip.x264-CHECKMATE\\subs\\checkmate-monsieur.pierre.geht.online.sd-subs.idx",
-            "s_nr": -1,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": -1,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\Monsieur.Pierre.Geht.Online.German.2017.AC3.BDRip.x264-CHECKMATE\\Monsieur.Pierre.geht.online.German.2017.AC3.BDRip.x264-CHECKMATE\\subs\\checkmate-monsieur.pierre.geht.online.sd-subs.sub",
-            "s_nr": -1,
-            "series_name": "",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 21,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\ncis.los.angeles.s09e21.spanish.hdtv.x264-fcc\\ncis.los.angeles.s09e21.spanish.hdtv.x264-fcc.mp4",
-            "s_nr": 9,
-            "series_name": "NCIS Los Angeles",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
-        },
-        {
-            "e_name": "",
-            "e_nr": 24,
-            "episode_option": {
-                "options": [
-                    "Single",
-                    "Double",
-                    "Triple"
-                ],
-                "selected": "Single"
-            },
-            "field_selector": "selectable",
-            "location": "L:\\complete\\NCIS.S15E24.720p.web.x264-tbs\\nPDnVDeWRswSueqhJM5jtYs47ieWhbE4G.mkv",
-            "s_nr": 15,
-            "series_name": "NCIS",
-            "type_option": {
-                "options": [
-                    "Series",
-                    "HD",
-                    "SD"
-                ],
-                "selected": "Series"
-            }
+    "files": [],
+    "shows": {
+        "13 Reasons Why": {
+            "name_needed": true,
+            "tvdb_id": 323168
+        },
+        "24": {
+            "name_needed": true,
+            "tvdb_id": 76290
+        },
+        "8 Out of 10 Cats": {
+            "name_needed": false,
+            "tvdb_id": 79556
+        },
+        "8 Out of 10 Cats Does Countdown": {
+            "name_needed": false,
+            "tvdb_id": 272156
+        },
+        "Agent Carter": {
+            "name_needed": true,
+            "tvdb_id": 281485
+        },
+        "Agents of S.H.I.E.L.D": {
+            "name_needed": true,
+            "tvdb_id": 263365
+        },
+        "Angel": {
+            "name_needed": true,
+            "tvdb_id": 71035
+        },
+        "Arrow": {
+            "name_needed": true,
+            "tvdb_id": 257655
+        },
+        "Ashes to Ashes": {
+            "name_needed": false,
+            "tvdb_id": 81253
+        },
+        "Avatar - The Last Airbender": {
+            "name_needed": true,
+            "tvdb_id": 74852
+        },
+        "Battlestar Galactica": {
+            "name_needed": true,
+            "tvdb_id": 73545
+        },
+        "Better Call Saul": {
+            "name_needed": true,
+            "tvdb_id": 273181
+        },
+        "Black Lightning": {
+            "name_needed": true,
+            "tvdb_id": 332525
+        },
+        "Black Mirror": {
+            "name_needed": true,
+            "tvdb_id": 253463
+        },
+        "Black Sails": {
+            "name_needed": true,
+            "tvdb_id": 262407
+        },
+        "Blackadder": {
+            "name_needed": true,
+            "tvdb_id": 76736
+        },
+        "Blackpool": {
+            "name_needed": false,
+            "tvdb_id": 75350
+        },
+        "Blue Bloods": {
+            "name_needed": true,
+            "tvdb_id": 164981
+        },
+        "Bones": {
+            "name_needed": true,
+            "tvdb_id": 75682
+        },
+        "Boruto": {
+            "name_needed": true,
+            "tvdb_id": ""
+        },
+        "Breaking Bad": {
+            "name_needed": true,
+            "tvdb_id": 81189
+        },
+        "Broadchurch": {
+            "name_needed": false,
+            "tvdb_id": 266398
+        },
+        "Buffy": {
+            "name_needed": true,
+            "tvdb_id": 70327
+        },
+        "Bull": {
+            "name_needed": true,
+            "tvdb_id": 311945
+        },
+        "CSI New York": {
+            "name_needed": true,
+            "tvdb_id": 73696
+        },
+        "Casanova": {
+            "name_needed": false,
+            "tvdb_id": 75817
+        },
+        "Chance": {
+            "name_needed": true,
+            "tvdb_id": 311196
+        },
+        "Charmed": {
+            "name_needed": true,
+            "tvdb_id": 70626
+        },
+        "Chicago Fire": {
+            "name_needed": true,
+            "tvdb_id": 258541
+        },
+        "Chicago Justice": {
+            "name_needed": true,
+            "tvdb_id": 311896
+        },
+        "Chicago Med": {
+            "name_needed": true,
+            "tvdb_id": 295640
+        },
+        "Chicago P.D": {
+            "name_needed": true,
+            "tvdb_id": 269641
+        },
+        "Chuck": {
+            "name_needed": true,
+            "tvdb_id": 80348
+        },
+        "Class": {
+            "name_needed": true,
+            "tvdb_id": 309893
+        },
+        "Cloak & Dagger": {
+            "name_needed": true,
+            "tvdb_id": 341455
+        },
+        "Colony": {
+            "name_needed": true,
+            "tvdb_id": 284210
+        },
+        "Constantine": {
+            "name_needed": true,
+            "tvdb_id": 273690
+        },
+        "Constantine - City of Demons": {
+            "name_needed": false,
+            "tvdb_id": 336139
+        },
+        "Continuum": {
+            "name_needed": true,
+            "tvdb_id": 258171
+        },
+        "Criminal Minds": {
+            "name_needed": true,
+            "tvdb_id": 75710
+        },
+        "Crossing Lines": {
+            "name_needed": true,
+            "tvdb_id": 267970
+        },
+        "Da Vinci's Demons": {
+            "name_needed": true,
+            "tvdb_id": 259669
+        },
+        "Damien": {
+            "name_needed": true,
+            "tvdb_id": 282165
+        },
+        "Daredevil": {
+            "name_needed": true,
+            "tvdb_id": 281662
+        },
+        "Dark Angel": {
+            "name_needed": true,
+            "tvdb_id": 76148
+        },
+        "Dark Matter": {
+            "name_needed": true,
+            "tvdb_id": 292174
+        },
+        "Dexter": {
+            "name_needed": true,
+            "tvdb_id": 79349
+        },
+        "Doctor Who": {
+            "name_needed": true,
+            "tvdb_id": 78804
+        },
+        "Doctor Who Classic": {
+            "name_needed": true,
+            "tvdb_id": 76107
+        },
+        "Dollhouse": {
+            "name_needed": true,
+            "tvdb_id": 82046
+        },
+        "Dolphins - Spy in the Pod": {
+            "name_needed": false,
+            "tvdb_id": 276810
+        },
+        "Dragon Ball": {
+            "name_needed": true,
+            "tvdb_id": ""
+        },
+        "Emerald City": {
+            "name_needed": true,
+            "tvdb_id": 295779
+        },
+        "Eureka": {
+            "name_needed": true,
+            "tvdb_id": 79334
+        },
+        "Fargo": {
+            "name_needed": true,
+            "tvdb_id": 269613
+        },
+        "Farscape": {
+            "name_needed": true,
+            "tvdb_id": 70522
+        },
+        "Fast and Loose": {
+            "name_needed": false,
+            "tvdb_id": 221581
+        },
+        "Firefly": {
+            "name_needed": true,
+            "tvdb_id": 78874
+        },
+        "Friends": {
+            "name_needed": false,
+            "tvdb_id": 79168
+        },
+        "Fringe": {
+            "name_needed": true,
+            "tvdb_id": 82066
+        },
+        "Game of Thrones": {
+            "name_needed": true,
+            "tvdb_id": 121361
+        },
+        "Gilmore Girls": {
+            "name_needed": true,
+            "tvdb_id": 76568
+        },
+        "Gilmore Girls - A Year in the Life": {
+            "name_needed": true,
+            "tvdb_id": 311987
+        },
+        "Gotham": {
+            "name_needed": true,
+            "tvdb_id": 274431
+        },
+        "Gracepoint": {
+            "name_needed": false,
+            "tvdb_id": 276396
+        },
+        "Grey's Anatomy": {
+            "name_needed": true,
+            "tvdb_id": 73762
+        },
+        "Grimm": {
+            "name_needed": true,
+            "tvdb_id": 248736
+        },
+        "Gunpowder": {
+            "name_needed": false,
+            "tvdb_id": 334069
+        },
+        "Hannibal": {
+            "name_needed": true,
+            "tvdb_id": 259063
+        },
+        "Hard Sun": {
+            "name_needed": true,
+            "tvdb_id": 333402
+        },
+        "Hawaii Five-0": {
+            "name_needed": true,
+            "tvdb_id": 164541
+        },
+        "Heroes": {
+            "name_needed": true,
+            "tvdb_id": 79501
+        },
+        "Heroes Reborn": {
+            "name_needed": true,
+            "tvdb_id": 279201
+        },
+        "Houdini & Doyle": {
+            "name_needed": true,
+            "tvdb_id": 306313
+        },
+        "House": {
+            "name_needed": true,
+            "tvdb_id": 73255
+        },
+        "House of Cards": {
+            "name_needed": true,
+            "tvdb_id": 262980
+        },
+        "How I Met Your Mother": {
+            "name_needed": true,
+            "tvdb_id": 75760
+        },
+        "How to Get Away with Murder": {
+            "name_needed": true,
+            "tvdb_id": 281620
+        },
+        "Inhumans": {
+            "name_needed": true,
+            "tvdb_id": 320558
+        },
+        "Iron Fist": {
+            "name_needed": true,
+            "tvdb_id": 317953
+        },
+        "Jessica Jones": {
+            "name_needed": true,
+            "tvdb_id": 284190
+        },
+        "Killjoys": {
+            "name_needed": true,
+            "tvdb_id": 281534
+        },
+        "Last Week Tonight With John Oliver": {
+            "name_needed": true,
+            "tvdb_id": 278518
+        },
+        "Legends of Tomorrow": {
+            "name_needed": true,
+            "tvdb_id": 295760
+        },
+        "Legion": {
+            "name_needed": true,
+            "tvdb_id": 320724
+        },
+        "Lethal Weapon": {
+            "name_needed": true,
+            "tvdb_id": 311790
+        },
+        "Life on Mars": {
+            "name_needed": false,
+            "tvdb_id": 79177
+        },
+        "Lost": {
+            "name_needed": true,
+            "tvdb_id": 73739
+        },
+        "Lucifer": {
+            "name_needed": true,
+            "tvdb_id": 295685
+        },
+        "Luke Cage": {
+            "name_needed": true,
+            "tvdb_id": 304219
+        },
+        "Merlin": {
+            "name_needed": true,
+            "tvdb_id": 83123
+        },
+        "Minority Report": {
+            "name_needed": true,
+            "tvdb_id": 295680
+        },
+        "Mock the Week": {
+            "name_needed": false,
+            "tvdb_id": 79761
+        },
+        "Moonlight": {
+            "name_needed": true,
+            "tvdb_id": 80512
+        },
+        "Mr. Robot": {
+            "name_needed": true,
+            "tvdb_id": 289590
+        },
+        "NCIS": {
+            "name_needed": true,
+            "tvdb_id": 72108
+        },
+        "NCIS Los Angeles": {
+            "name_needed": true,
+            "tvdb_id": 95441
+        },
+        "NCIS New Orleans": {
+            "name_needed": true,
+            "tvdb_id": 278125
+        },
+        "Narcos": {
+            "name_needed": true,
+            "tvdb_id": 282670
+        },
+        "Naruto": {
+            "name_needed": true,
+            "tvdb_id": ""
+        },
+        "Naruto Shippuuden": {
+            "name_needed": true,
+            "tvdb_id": ""
+        },
+        "Numb3rs": {
+            "name_needed": true,
+            "tvdb_id": 73918
+        },
+        "Orphan Black": {
+            "name_needed": true,
+            "tvdb_id": 260315
+        },
+        "Penguins - Spy in the Huddle": {
+            "name_needed": false,
+            "tvdb_id": 266843
+        },
+        "Pillars of the Earth": {
+            "name_needed": true,
+            "tvdb_id": 159431
+        },
+        "Planet Earth": {
+            "name_needed": true,
+            "tvdb_id": 79257
+        },
+        "Planet Earth II": {
+            "name_needed": true,
+            "tvdb_id": 318408
+        },
+        "Please Like Me": {
+            "name_needed": true,
+            "tvdb_id": 267014
+        },
+        "Polar Bear - Spy on the Ice": {
+            "name_needed": false,
+            "tvdb_id": 274142
+        },
+        "Pretty Little Liars": {
+            "name_needed": true,
+            "tvdb_id": 146711
+        },
+        "Prison Break": {
+            "name_needed": true,
+            "tvdb_id": 75340
+        },
+        "QI": {
+            "name_needed": true,
+            "tvdb_id": 72716
+        },
+        "Quantum Leap": {
+            "name_needed": true,
+            "tvdb_id": 72248
+        },
+        "Queer as Folk": {
+            "name_needed": true,
+            "tvdb_id": 75367
+        },
+        "Rick and Morty": {
+            "name_needed": true,
+            "tvdb_id": 275274
+        },
+        "Ripper Street": {
+            "name_needed": true,
+            "tvdb_id": 260485
+        },
+        "Runaways": {
+            "name_needed": true,
+            "tvdb_id": 332027
+        },
+        "Sanctuary": {
+            "name_needed": true,
+            "tvdb_id": 80159
+        },
+        "Saving Hope": {
+            "name_needed": true,
+            "tvdb_id": 256111
+        },
+        "Scorpion": {
+            "name_needed": true,
+            "tvdb_id": 281630
+        },
+        "Scrubs": {
+            "name_needed": true,
+            "tvdb_id": 76156
+        },
+        "Sense8": {
+            "name_needed": true,
+            "tvdb_id": 268156
+        },
+        "Series Name": 0,
+        "Sherlock": {
+            "name_needed": true,
+            "tvdb_id": 176941
+        },
+        "Shingeki no Kyojin": {
+            "name_needed": true,
+            "tvdb_id": ""
+        },
+        "Single Father": {
+            "name_needed": false,
+            "tvdb_id": 183331
+        },
+        "Sleepy Hollow": {
+            "name_needed": true,
+            "tvdb_id": 269578
+        },
+        "Smallville": {
+            "name_needed": true,
+            "tvdb_id": 72218
+        },
+        "Spies of Warsaw": {
+            "name_needed": false,
+            "tvdb_id": 260313
+        },
+        "Spy in the Wild": {
+            "name_needed": true,
+            "tvdb_id": 322505
+        },
+        "Star Trek": {
+            "name_needed": true,
+            "tvdb_id": 77526
+        },
+        "Star Trek - Deep Space Nine": {
+            "name_needed": true,
+            "tvdb_id": 72073
+        },
+        "Star Trek - Discovery": {
+            "name_needed": true,
+            "tvdb_id": 328711
+        },
+        "Star Trek - Enterprise": {
+            "name_needed": true,
+            "tvdb_id": 73893
+        },
+        "Star Trek - The Animated Series": {
+            "name_needed": true,
+            "tvdb_id": 73566
+        },
+        "Star Trek - The Next Generation": {
+            "name_needed": true,
+            "tvdb_id": 71470
+        },
+        "Star Trek - Voyager": {
+            "name_needed": true,
+            "tvdb_id": 74550
+        },
+        "Stargate Atlantis": {
+            "name_needed": true,
+            "tvdb_id": 70851
+        },
+        "Stargate SG-1": {
+            "name_needed": true,
+            "tvdb_id": 72449
+        },
+        "Stargate Universe": {
+            "name_needed": true,
+            "tvdb_id": 83237
+        },
+        "Stranger Things": {
+            "name_needed": true,
+            "tvdb_id": 305288
+        },
+        "Supergirl": {
+            "name_needed": true,
+            "tvdb_id": 295759
+        },
+        "Supernatural": {
+            "name_needed": true,
+            "tvdb_id": 78901
+        },
+        "Terminator - The Sarah Connor Chronicles": {
+            "name_needed": true,
+            "tvdb_id": 80344
+        },
+        "The 100": {
+            "name_needed": true,
+            "tvdb_id": 268592
+        },
+        "The Avengers - Earth's Mightiest Heroes": {
+            "name_needed": true,
+            "tvdb_id": 192171
+        },
+        "The Blacklist": {
+            "name_needed": true,
+            "tvdb_id": 266189
+        },
+        "The Crown": {
+            "name_needed": true,
+            "tvdb_id": 305574
+        },
+        "The Defenders": {
+            "name_needed": true,
+            "tvdb_id": 326490
+        },
+        "The End of The Fucking World": {
+            "name_needed": false,
+            "tvdb_id": 336522
+        },
+        "The Expanse": {
+            "name_needed": true,
+            "tvdb_id": 280619
+        },
+        "The Fall": {
+            "name_needed": true,
+            "tvdb_id": 258107
+        },
+        "The Finder": {
+            "name_needed": true,
+            "tvdb_id": 248651
+        },
+        "The Flash": {
+            "name_needed": true,
+            "tvdb_id": 279121
+        },
+        "The Good Doctor": {
+            "name_needed": true,
+            "tvdb_id": 328634
+        },
+        "The Grand Tour": {
+            "name_needed": true,
+            "tvdb_id": 314087
+        },
+        "The Handmaid's Tale": {
+            "name_needed": true,
+            "tvdb_id": 321239
+        },
+        "The IT Crowd": {
+            "name_needed": true,
+            "tvdb_id": 79216
+        },
+        "The Legend of Korra": {
+            "name_needed": true,
+            "tvdb_id": 251085
+        },
+        "The Magicians": {
+            "name_needed": true,
+            "tvdb_id": 218401
+        },
+        "The Musketeers": {
+            "name_needed": true,
+            "tvdb_id": 299139
+        },
+        "The Night Manager": {
+            "name_needed": false,
+            "tvdb_id": 290508
+        },
+        "The Office": {
+            "name_needed": true,
+            "tvdb_id": 78107
+        },
+        "The Originals": {
+            "name_needed": true,
+            "tvdb_id": 266883
+        },
+        "The Orville": {
+            "name_needed": true,
+            "tvdb_id": 328487
+        },
+        "The Punisher": {
+            "name_needed": true,
+            "tvdb_id": 331980
+        },
+        "The Sarah Jane Adventures": {
+            "name_needed": true,
+            "tvdb_id": 79708
+        },
+        "The Shannara Chronicles": {
+            "name_needed": true,
+            "tvdb_id": 289096
+        },
+        "The Vampire Diaries": {
+            "name_needed": true,
+            "tvdb_id": 95491
+        },
+        "The Walking Dead": {
+            "name_needed": true,
+            "tvdb_id": 153021
+        },
+        "The X-Files": {
+            "name_needed": true,
+            "tvdb_id": 77398
+        },
+        "Tiger - Spy in the Jungle": {
+            "name_needed": false,
+            "tvdb_id": 81652
+        },
+        "Timeless": {
+            "name_needed": true,
+            "tvdb_id": 311713
+        },
+        "Top Gear": {
+            "name_needed": false,
+            "tvdb_id": 74608
+        },
+        "Torchwood": {
+            "name_needed": true,
+            "tvdb_id": 79511
+        },
+        "Travelers": {
+            "name_needed": true,
+            "tvdb_id": 314544
+        },
+        "True Detective": {
+            "name_needed": true,
+            "tvdb_id": 270633
+        },
+        "Turn - Washington's Spies": {
+            "name_needed": true,
+            "tvdb_id": 272135
+        },
+        "Two and a Half Men": {
+            "name_needed": true,
+            "tvdb_id": 72227
+        },
+        "Veronica Mars": {
+            "name_needed": true,
+            "tvdb_id": 73730
+        },
+        "Vikings": {
+            "name_needed": true,
+            "tvdb_id": 260449
+        },
+        "Warehouse 13": {
+            "name_needed": true,
+            "tvdb_id": 84676
+        },
+        "Was It Something I Said": {
+            "name_needed": false,
+            "tvdb_id": 273740
+        },
+        "Westworld": {
+            "name_needed": true,
+            "tvdb_id": 296762
+        },
+        "Wolf Hall": {
+            "name_needed": true,
+            "tvdb_id": 281977
+        },
+        "Would I Lie to You": {
+            "name_needed": false,
+            "tvdb_id": 82548
+        },
+        "Wynonna Earp": {
+            "name_needed": true,
+            "tvdb_id": 305582
+        },
+        "Yu-Gi-Oh - Duel Monsters": {
+            "name_needed": false,
+            "tvdb_id": ""
+        },
+        "iZombie": {
+            "name_needed": true,
+            "tvdb_id": 281470
         }
-    ],
-    "shows": [
-        "13 Reasons Why",
-        "24",
-        "8 Out of 10 Cats",
-        "8 Out of 10 Cats Does Countdown",
-        "Agent Carter",
-        "Agents of S.H.I.E.L.D",
-        "Angel",
-        "Arrow",
-        "Ashes to Ashes",
-        "Avatar - The Last Airbender",
-        "Battlestar Galactica",
-        "Better Call Saul",
-        "Black Lightning",
-        "Black Mirror",
-        "Black Sails",
-        "Blackadder",
-        "Blackpool",
-        "Blue Bloods",
-        "Bones",
-        "Breaking Bad",
-        "Broadchurch",
-        "Buffy",
-        "Bull",
-        "Casanova",
-        "Chance",
-        "Charmed",
-        "Chicago Fire",
-        "Chicago Justice",
-        "Chicago Med",
-        "Chicago P.D",
-        "Chuck",
-        "Class",
-        "Cloak & Dagger",
-        "Colony",
-        "Constantine",
-        "Constantine - City of Demons",
-        "Continuum",
-        "Criminal Minds",
-        "Crossing Lines",
-        "CSI New York",
-        "Da Vinci's Demons",
-        "Damien",
-        "Daredevil",
-        "Dark Angel",
-        "Dark Matter",
-        "Dexter",
-        "Doctor Who",
-        "Doctor Who Classic",
-        "Dollhouse",
-        "Dolphins - Spy in the Pod",
-        "Emerald City",
-        "Eureka",
-        "Fargo",
-        "Farscape",
-        "Fast and Loose",
-        "Firefly",
-        "Friends",
-        "Fringe",
-        "Game of Thrones",
-        "Gilmore Girls",
-        "Gilmore Girls - A Year in the Life",
-        "Gotham",
-        "Gracepoint",
-        "Grey's Anatomy",
-        "Grimm",
-        "Gunpowder",
-        "Hannibal",
-        "Hard Sun",
-        "Hawaii Five-0",
-        "Heroes",
-        "Heroes Reborn",
-        "Houdini & Doyle",
-        "House",
-        "House of Cards",
-        "How I Met Your Mother",
-        "How to Get Away with Murder",
-        "Inhumans",
-        "Iron Fist",
-        "iZombie",
-        "Jessica Jones",
-        "Killjoys",
-        "Last Week Tonight With John Oliver",
-        "Legends of Tomorrow",
-        "Legion",
-        "Lethal Weapon",
-        "Life on Mars",
-        "Lost",
-        "Lucifer",
-        "Luke Cage",
-        "Merlin",
-        "Minority Report",
-        "Mock the Week",
-        "Moonlight",
-        "Mr. Robot",
-        "Narcos",
-        "NCIS",
-        "NCIS Los Angeles",
-        "NCIS New Orleans",
-        "Numb3rs",
-        "Orphan Black",
-        "Penguins - Spy in the Huddle",
-        "Pillars of the Earth",
-        "Planet Earth",
-        "Planet Earth II",
-        "Please Like Me",
-        "Polar Bear - Spy on the Ice",
-        "Pretty Little Liars",
-        "Prison Break",
-        "QI",
-        "Quantum Leap",
-        "Queer as Folk",
-        "Rick and Morty",
-        "Ripper Street",
-        "Runaways",
-        "Sanctuary",
-        "Saving Hope",
-        "Scorpion",
-        "Scrubs",
-        "Sense8",
-        "Sherlock",
-        "Single Father",
-        "Sleepy Hollow",
-        "Smallville",
-        "Spies of Warsaw",
-        "Spy in the Wild",
-        "Star Trek",
-        "Star Trek - Deep Space Nine",
-        "Star Trek - Discovery",
-        "Star Trek - Enterprise",
-        "Star Trek - The Animated Series",
-        "Star Trek - The Next Generation",
-        "Star Trek - Voyager",
-        "Stargate Atlantis",
-        "Stargate SG-1",
-        "Stargate Universe",
-        "Stranger Things",
-        "Supergirl",
-        "Supernatural",
-        "Terminator - The Sarah Connor Chronicles",
-        "The 100",
-        "The Avengers - Earth's Mightiest Heroes",
-        "The Blacklist",
-        "The Crown",
-        "The Defenders",
-        "The End of The Fucking World",
-        "The Expanse",
-        "The Fall",
-        "The Finder",
-        "The Flash",
-        "The Good Doctor",
-        "The Grand Tour",
-        "The Handmaid's Tale",
-        "The IT Crowd",
-        "The Legend of Korra",
-        "The Magicians",
-        "The Musketeers",
-        "The Night Manager",
-        "The Office",
-        "The Originals",
-        "The Orville",
-        "The Punisher",
-        "The Sarah Jane Adventures",
-        "The Shannara Chronicles",
-        "The Vampire Diaries",
-        "The Walking Dead",
-        "The X-Files",
-        "Tiger - Spy in the Jungle",
-        "Timeless",
-        "Top Gear",
-        "Torchwood",
-        "Travelers",
-        "True Detective",
-        "Turn - Washington's Spies",
-        "Two and a Half Men",
-        "Veronica Mars",
-        "Vikings",
-        "Warehouse 13",
-        "Was It Something I Said",
-        "Westworld",
-        "Wolf Hall",
-        "Would I Lie to You",
-        "Wynonna Earp",
-        "Boruto",
-        "Dragon Ball",
-        "Naruto",
-        "Naruto Shippuuden",
-        "Shingeki no Kyojin",
-        "Yu-Gi-Oh - Duel Monsters"
+    },
+    "subs": [
+        {
+            "text": "Spectre.srt",
+            "value": "/Volumes/Video/downloads/Spectre 2015 1080p BluRay x264 DTS-JYK/Subs/Spectre.srt"
+        },
+        {
+            "text": "English(SDH).srt",
+            "value": "/Volumes/Video/downloads/Spectre 2015 1080p BluRay x264 DTS-JYK/Subs/English(SDH).srt"
+        },
+        {
+            "text": "The.Expanse.S01E03.1080p.BluRay.x264-ROVERS.srt",
+            "value": "/Volumes/Video/downloads/The.Expanse.S01.1080p.BluRay.x264-ROVERS[rartv]/Subs/The.Expanse.S01E03.1080p.BluRay.x264-ROVERS.srt"
+        },
+        {
+            "text": "The.Expanse.S01E07.1080p.BluRay.x264-ROVERS.srt",
+            "value": "/Volumes/Video/downloads/The.Expanse.S01.1080p.BluRay.x264-ROVERS[rartv]/Subs/The.Expanse.S01E07.1080p.BluRay.x264-ROVERS.srt"
+        },
+        {
+            "text": "The.Expanse.S01E09E10.1080p.BluRay.x264-ROVERS.srt",
+            "value": "/Volumes/Video/downloads/The.Expanse.S01.1080p.BluRay.x264-ROVERS[rartv]/Subs/The.Expanse.S01E09E10.1080p.BluRay.x264-ROVERS.srt"
+        },
+        {
+            "text": "The.Expanse.S01E08.1080p.BluRay.x264-ROVERS.srt",
+            "value": "/Volumes/Video/downloads/The.Expanse.S01.1080p.BluRay.x264-ROVERS[rartv]/Subs/The.Expanse.S01E08.1080p.BluRay.x264-ROVERS.srt"
+        },
+        {
+            "text": "The.Expanse.S01E05.1080p.BluRay.x264-ROVERS.srt",
+            "value": "/Volumes/Video/downloads/The.Expanse.S01.1080p.BluRay.x264-ROVERS[rartv]/Subs/The.Expanse.S01E05.1080p.BluRay.x264-ROVERS.srt"
+        },
+        {
+            "text": "The.Expanse.S01E02.1080p.BluRay.x264-ROVERS.srt",
+            "value": "/Volumes/Video/downloads/The.Expanse.S01.1080p.BluRay.x264-ROVERS[rartv]/Subs/The.Expanse.S01E02.1080p.BluRay.x264-ROVERS.srt"
+        },
+        {
+            "text": "The.Expanse.S01E06.Rerip.1080p.BluRay.x264-ROVERS.srt",
+            "value": "/Volumes/Video/downloads/The.Expanse.S01.1080p.BluRay.x264-ROVERS[rartv]/Subs/The.Expanse.S01E06.Rerip.1080p.BluRay.x264-ROVERS.srt"
+        },
+        {
+            "text": "The.Expanse.S01E01.1080p.BluRay.x264-ROVERS.srt",
+            "value": "/Volumes/Video/downloads/The.Expanse.S01.1080p.BluRay.x264-ROVERS[rartv]/Subs/The.Expanse.S01E01.1080p.BluRay.x264-ROVERS.srt"
+        },
+        {
+            "text": "The.Expanse.S01E04.1080p.BluRay.x264-ROVERS.srt",
+            "value": "/Volumes/Video/downloads/The.Expanse.S01.1080p.BluRay.x264-ROVERS[rartv]/Subs/The.Expanse.S01E04.1080p.BluRay.x264-ROVERS.srt"
+        },
+        {
+            "text": "crcl-so.ist.paris.xvid-cd2.idx",
+            "value": "/Volumes/Video/downloads/So ist Paris German AC3 DVDRip/So.ist.Paris.German.AC3.DVDRip.XviD/Subs/crcl-so.ist.paris.xvid-cd2.idx"
+        },
+        {
+            "text": "crcl-so.ist.paris.xvid-cd1.idx",
+            "value": "/Volumes/Video/downloads/So ist Paris German AC3 DVDRip/So.ist.Paris.German.AC3.DVDRip.XviD/Subs/crcl-so.ist.paris.xvid-cd1.idx"
+        },
+        {
+            "text": "crcl-so.ist.paris.xvid-cd2.sub",
+            "value": "/Volumes/Video/downloads/So ist Paris German AC3 DVDRip/So.ist.Paris.German.AC3.DVDRip.XviD/Subs/crcl-so.ist.paris.xvid-cd2.sub"
+        },
+        {
+            "text": "crcl-so.ist.paris.xvid-cd1.sub",
+            "value": "/Volumes/Video/downloads/So ist Paris German AC3 DVDRip/So.ist.Paris.German.AC3.DVDRip.XviD/Subs/crcl-so.ist.paris.xvid-cd1.sub"
+        },
+        {
+            "text": "checkmate-monsieur.pierre.geht.online.1080p-subs.idx",
+            "value": "/Volumes/Video/downloads/fsdrgtujzhsgeahzusd/Monsieur.Pierre.geht.online.2017.German.1080p.BluRay.x264-CHECKMATE/Subs/checkmate-monsieur.pierre.geht.online.1080p-subs.idx"
+        },
+        {
+            "text": "checkmate-monsieur.pierre.geht.online.1080p-subs.sub",
+            "value": "/Volumes/Video/downloads/fsdrgtujzhsgeahzusd/Monsieur.Pierre.geht.online.2017.German.1080p.BluRay.x264-CHECKMATE/Subs/checkmate-monsieur.pierre.geht.online.1080p-subs.sub"
+        },
+        {
+            "text": "pl3x-lebenfest-1080p.idx",
+            "value": "/Volumes/Video/downloads/Das Leben ist ein Fest BluRay/Das.Leben.ist.ein.Fest.2017.German.1080p.BluRay.x264-Pl3X/Subs/pl3x-lebenfest-1080p.idx"
+        },
+        {
+            "text": "pl3x-lebenfest-1080p-forced.idx",
+            "value": "/Volumes/Video/downloads/Das Leben ist ein Fest BluRay/Das.Leben.ist.ein.Fest.2017.German.1080p.BluRay.x264-Pl3X/Subs/pl3x-lebenfest-1080p-forced.idx"
+        },
+        {
+            "text": "pl3x-lebenfest-1080p.sub",
+            "value": "/Volumes/Video/downloads/Das Leben ist ein Fest BluRay/Das.Leben.ist.ein.Fest.2017.German.1080p.BluRay.x264-Pl3X/Subs/pl3x-lebenfest-1080p.sub"
+        },
+        {
+            "text": "pl3x-lebenfest-1080p-forced.sub",
+            "value": "/Volumes/Video/downloads/Das Leben ist ein Fest BluRay/Das.Leben.ist.ein.Fest.2017.German.1080p.BluRay.x264-Pl3X/Subs/pl3x-lebenfest-1080p-forced.sub"
+        },
+        {
+            "text": "checkmate-Der.Wein.und.der.Wind.2017.German.1080p.BluRay.x264.sub",
+            "value": "/Volumes/Video/downloads/Wein18p/Der.Wein.und.der.Wind.2017.German.1080p.BluRay.x264-CHECKMATE/Subs/checkmate-Der.Wein.und.der.Wind.2017.German.1080p.BluRay.x264.sub"
+        },
+        {
+            "text": "checkmate-Der.Wein.und.der.Wind.2017.German.1080p.BluRay.x264.idx",
+            "value": "/Volumes/Video/downloads/Wein18p/Der.Wein.und.der.Wind.2017.German.1080p.BluRay.x264-CHECKMATE/Subs/checkmate-Der.Wein.und.der.Wind.2017.German.1080p.BluRay.x264.idx"
+        },
+        {
+            "text": "checkmate-Der.Wein.und.der.Wind.2017.German.1080p.BluRay.x264-forced.idx",
+            "value": "/Volumes/Video/downloads/Wein18p/Der.Wein.und.der.Wind.2017.German.1080p.BluRay.x264-CHECKMATE/Subs/checkmate-Der.Wein.und.der.Wind.2017.German.1080p.BluRay.x264-forced.idx"
+        },
+        {
+            "text": "checkmate-Der.Wein.und.der.Wind.2017.German.1080p.BluRay.x264-forced.sub",
+            "value": "/Volumes/Video/downloads/Wein18p/Der.Wein.und.der.Wind.2017.German.1080p.BluRay.x264-CHECKMATE/Subs/checkmate-Der.Wein.und.der.Wind.2017.German.1080p.BluRay.x264-forced.sub"
+        }
     ]
 }

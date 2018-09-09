@@ -160,7 +160,7 @@ def sync_queue(show):
 
         if show.add_episode(episode):
             REPORT['info'].append('Season ' + str(file.s_nr) + ' created')
-        loc = '\\'.join(file.location.split('\\')[:3])
+        loc = SEPERATOR.join(file.location.split(SEPERATOR)[:3 + MAC_OFFSET])
         if os.path.isdir(loc):
             if loc not in CLEAN_UP:
                 CLEAN_UP.append(loc)

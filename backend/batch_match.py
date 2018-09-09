@@ -50,7 +50,7 @@ def main(args):
     output = {'files': []}
     for f in file_list:
         output['files'].append({
-            'location': f.location.split('\\', 2)[2],
+            'location': f.location.split(SEPERATOR, 2)[2 + MAC_OFFSET],
             'title': '',
             'title2': '',
             'title3': '',
