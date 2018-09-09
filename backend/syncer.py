@@ -204,9 +204,9 @@ def get_basepath(file):
 
 
 def ignore_file(file):
-    split_loc = SEPERATOR.join(file.location.split(SEPERATOR))
-    loc0 = split_loc[:3 + MAC_OFFSET]
-    loc1 = split_loc[3 + MAC_OFFSET:]
+    split_loc = file.location.split(SEPERATOR)
+    loc0 = SEPERATOR.join(split_loc[:3 + MAC_OFFSET])
+    loc1 = SEPERATOR.join(split_loc[3 + MAC_OFFSET:])
     print(file.location)
     print(loc0)
     print(loc1)
