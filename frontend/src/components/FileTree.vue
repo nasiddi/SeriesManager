@@ -89,25 +89,48 @@ export default {
     },
   },
   created() {
-    this.notifLoading = this.$snotify.info('loading', { timeout: 0 });
-    this.$http.post('jobs/filetree', { series_name: '*' }).then(
-      (res) => {
-        const body = _.defaults(res.body, {
-        });
-        this.json = body;
-        // eslint-disable-next-line prefer-destructuring
-        this.selected = Object.values(body.shows)
-          .map(s => s.series_name).sort()[0];
-        this.$snotify.remove(this.notifLoading.id);
-      },
-      () => {
-        this.$snotify.error('Failed to load data', { timeout: 0 });
-      },
-    );
+    this.loadData();
   },
   mounted() {
   },
   methods: {
+    unlockShows() {
+      this.$snotify.remove(this.notifLock.id);
+      this.$http.post('jobs/unlock')
+        .then(
+          (res) => {
+            this.json = res;
+            this.loadData();
+          },
+        );
+    },
+    loadData() {
+      this.notifLoading = this.$snotify.info('loading', { timeout: 0 });
+      this.$http.post('jobs/filetree', { series_name: '*' }).then(
+        (res) => {
+          const body = _.defaults(res.body, {
+          });
+
+          if ('shows_locked' in body) {
+            this.notifLock = this.$snotify.confirm('', 'Shows locked', {
+              timeout: 0,
+              buttons: [
+                { text: 'Unlock', action: () => this.unlockShows(), bold: true },
+              ],
+            });
+          } else {
+            this.json = body;
+          }
+          // eslint-disable-next-line prefer-destructuring
+          this.selected = Object.values(body.shows)
+            .map(s => s.series_name).sort()[0];
+          this.$snotify.remove(this.notifLoading.id);
+        },
+        () => {
+          this.$snotify.error('Failed to load data', { timeout: 0 });
+        },
+      );
+    },
   },
 };
 </script>
