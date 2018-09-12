@@ -41,8 +41,10 @@ def get_show_data(show):
     seasons = []
     for season in show.seasons.values():
         sea = {'key': season.s_nr, 'episodes': [], 'opened': False}
-        for episode in season.episodes.values():
+        for episode in season.episodes.values().sort(key=lambda x: x.e_nr):
+            print(episode)
             check_for_multiple_files(show, episode)
+            check_for_missing_episode(show, episode)
 
             sea['episodes'].append({LOCATION: episode.location,
                                     'file_name': episode.file_name,
@@ -52,6 +54,10 @@ def get_show_data(show):
 
         seasons.append(sea)
     return {SERIES_NAME: show.series_name, 'seasons': seasons}
+
+
+def check_for_missing_episode(show, episode):
+    pass
 
 
 def check_for_multiple_files(show, e):
