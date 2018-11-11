@@ -52,11 +52,11 @@
 </template>
 
 <script>
-const _ = require("lodash");
+const _ = require('lodash');
 
 export default {
   data: () => ({
-    json: {}
+    json: {},
   }),
   created() {
     this.loadData();
@@ -64,19 +64,19 @@ export default {
   mounted() {},
   methods: {
     loadData() {
-      this.$http.post("jobs/synclog").then(
-        res => {
+      this.$http.post('jobs/synclog').then(
+        (res) => {
           const body = _.defaults(res.body, {});
           this.json = body;
         },
         () => {
-          this.$snotify.error("Failed to load data", { timeout: 0 });
-        }
+          this.$snotify.error('Failed to load data', { timeout: 0 });
+        },
       );
     },
     async dashboard() {
-      this.$router.push({ name: "dashboard" });
-    }
-  }
+      this.$router.push({ name: 'dashboard' });
+    },
+  },
 };
 </script>
