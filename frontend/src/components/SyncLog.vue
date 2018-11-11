@@ -64,7 +64,7 @@ export default {
   mounted() {},
   methods: {
     loadData() {
-      this.$http.post("jobs/log").then(
+      this.$http.post("jobs/synclog").then(
         res => {
           const body = _.defaults(res.body, {});
           this.json = body;
