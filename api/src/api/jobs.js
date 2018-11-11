@@ -12,8 +12,6 @@ const processModel = require('./../models/process');
 const config = require('../../config');
 const python = require('../python/controller');
 
-const tvdb = new TVDB('C9BPCUYZ8GFT2BZL');
-
 const routes = express.Router();
 
 routes.post('/unlock', async (req, res) => {
@@ -77,6 +75,7 @@ routes.get('/sync/prep', async (req, res) => {
 
 // TVDB
 routes.post('/tvdb', async (req, res) => {
+  const tvdb = new TVDB('C9BPCUYZ8GFT2BZL');
   console.log(req.body.series_name);
   if (req.body.new_series && req.body.tvdb_id === '') {
     console.log('New Series');
@@ -138,6 +137,7 @@ routes.post('/tvdb', async (req, res) => {
 });
 
 routes.post('/tvdb/dates', async (req, res) => {
+  const tvdb = new TVDB('C9BPCUYZ8GFT2BZL');
   res.send(
     await tvdb
       .getEpisodesBySeriesId(req.body.tvdb_id)

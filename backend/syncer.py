@@ -162,7 +162,9 @@ def delete_file(file):
 
 
 def create_new_series(file):
-    basepath = get_basepath(file).rsplit(SEPERATOR, 1)[0 + MAC_OFFSET]
+    print(get_basepath(file))
+    print(get_basepath(file).rsplit(SEPERATOR, 1))
+    basepath = get_basepath(file).rsplit(SEPERATOR, 1)[0]
     SHOWS.update({file.series_name: Series(series_name=file.series_name, status=file.status, tvdb_id=file.tvdb_id,
                   anime=file.anime, name_needed=file.name_needed, location=basepath)})
     file.report['info'].append('Series created')

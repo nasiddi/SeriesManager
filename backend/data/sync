@@ -7,7 +7,8 @@
             ],
             "s": "Anime: No"
         },
-        "e_nr": 72,
+        "delete": false,
+        "e_nr": 7,
         "e_o": {
             "o": [
                 "Single",
@@ -16,7 +17,7 @@
             ],
             "s": "Single"
         },
-        "location": "Naruto 01x072 - Mitsuji's Will.mkv",
+        "location": "Hawaii.Five-0.2010.S09E07.720p.WEB.x265-MiNX[eztv].mkv",
         "name_o": {
             "o": [
                 "Name required",
@@ -26,8 +27,8 @@
         },
         "new_series": false,
         "override": false,
-        "s_nr": 1,
-        "series_name": "Boruto",
+        "s_nr": 9,
+        "series_name": "Hawaii Five-0",
         "show_subs": false,
         "status_o": {
             "o": [
@@ -43,14 +44,15 @@
             "o": [
                 "Series",
                 "HD",
-                "SD"
+                "SD",
+                "[ignore]"
             ],
             "s": "Series"
         },
-        "title": "Mitsuki's Will",
+        "title": "Pua a'e la ka uwahi o ka moe",
         "title2": "",
         "title3": "",
-        "tvdb_id": ""
+        "tvdb_id": 164541
     },
     {
         "anime_o": {
@@ -60,6 +62,7 @@
             ],
             "s": "Anime: No"
         },
+        "delete": false,
         "e_nr": 7,
         "e_o": {
             "o": [
@@ -69,7 +72,7 @@
             ],
             "s": "Single"
         },
-        "location": "Outlander.S03E07.Cre\u0300me.de.Menthe.720p.WEBRip.2CH.x265.HEVC-PSA.mkv",
+        "location": "Blue.Bloods.S09E07.720p.WEB.x265-MiNX[eztv].mkv",
         "name_o": {
             "o": [
                 "Name required",
@@ -79,8 +82,8 @@
         },
         "new_series": false,
         "override": false,
-        "s_nr": 3,
-        "series_name": "Series Name",
+        "s_nr": 9,
+        "series_name": "Blue Bloods",
         "show_subs": false,
         "status_o": {
             "o": [
@@ -91,19 +94,20 @@
             "s": "Airing"
         },
         "subs": [],
-        "sync": false,
+        "sync": true,
         "t_o": {
             "o": [
                 "Series",
                 "HD",
-                "SD"
+                "SD",
+                "[ignore]"
             ],
             "s": "Series"
         },
-        "title": "",
+        "title": "By Hook or By Crook",
         "title2": "",
         "title3": "",
-        "tvdb_id": ""
+        "tvdb_id": 164981
     },
     {
         "anime_o": {
@@ -113,6 +117,7 @@
             ],
             "s": "Anime: No"
         },
+        "delete": false,
         "e_nr": 4,
         "e_o": {
             "o": [
@@ -122,7 +127,7 @@
             ],
             "s": "Single"
         },
-        "location": "Wynonna.Earp.S03E04.720p.HDTV.x264-KILLERS/1t1xZTwvUiGafhWWcrtx5tMhH7ZbvAR1sr3d7s.mkv",
+        "location": "Would.I.Lie.to.You.S12E04.720p.iP.WEB-DL.AAC2.0.H.264-BTW/nFoysj0MTeaUNvtFhEccz.mkv",
         "name_o": {
             "o": [
                 "Name required",
@@ -132,8 +137,8 @@
         },
         "new_series": false,
         "override": false,
-        "s_nr": 3,
-        "series_name": "Wynonna Earp",
+        "s_nr": 12,
+        "series_name": "Would I Lie to You",
         "show_subs": false,
         "status_o": {
             "o": [
@@ -149,14 +154,15 @@
             "o": [
                 "Series",
                 "HD",
-                "SD"
+                "SD",
+                "[ignore]"
             ],
             "s": "Series"
         },
-        "title": "No Cure For Crazy",
+        "title": "Prue Leith, Big Narstie, Scarlett Moffatt, Tomasz Schafernaker",
         "title2": "",
         "title3": "",
-        "tvdb_id": 305582
+        "tvdb_id": 82548
     },
     {
         "anime_o": {
@@ -166,6 +172,62 @@
             ],
             "s": "Anime: No"
         },
+        "delete": false,
+        "e_nr": 5,
+        "e_o": {
+            "o": [
+                "Single",
+                "Double",
+                "Triple"
+            ],
+            "s": "Single"
+        },
+        "location": "Titans.2018.S01E05.WEBRip.x264-PBS[ettv]/Titans.2018.S01E05.WEBRip.x264-PBS[ettv].mkv",
+        "name_o": {
+            "o": [
+                "Name required",
+                "Name optional"
+            ],
+            "s": "Name required"
+        },
+        "new_series": false,
+        "override": false,
+        "s_nr": 1,
+        "series_name": "Titans",
+        "show_subs": false,
+        "status_o": {
+            "o": [
+                "Airing",
+                "Hiatus",
+                "Ended"
+            ],
+            "s": "Airing"
+        },
+        "subs": [],
+        "sync": true,
+        "t_o": {
+            "o": [
+                "Series",
+                "HD",
+                "SD",
+                "[ignore]"
+            ],
+            "s": "Series"
+        },
+        "title": "Together",
+        "title2": "",
+        "title3": "",
+        "tvdb_id": 341663
+    },
+    {
+        "anime_o": {
+            "o": [
+                "Anime: No",
+                "Anime: Yes"
+            ],
+            "s": "Anime: No"
+        },
+        "delete": false,
         "e_nr": 1,
         "e_o": {
             "o": [
@@ -175,7 +237,7 @@
             ],
             "s": "Single"
         },
-        "location": "Money.Heist.S01E01.proper.1080p.web.x264-skgtv/oMQaf4qkcKGhYWgcrMBSCEpap19.mkv",
+        "location": "Would.I.Lie.to.You.S12E01.720p.HDTV.x264-QPEL/6389VPjPV1C8Y8GUBxRqWzyrxyeRKYY8.mkv",
         "name_o": {
             "o": [
                 "Name required",
@@ -185,8 +247,8 @@
         },
         "new_series": false,
         "override": false,
-        "s_nr": 1,
-        "series_name": "Series Name",
+        "s_nr": 12,
+        "series_name": "Would I Lie to You",
         "show_subs": false,
         "status_o": {
             "o": [
@@ -202,14 +264,15 @@
             "o": [
                 "Series",
                 "HD",
-                "SD"
+                "SD",
+                "[ignore]"
             ],
             "s": "Series"
         },
-        "title": "",
+        "title": "Dion Dublin, Debbie McGee, Bob Mortimer, Lucy Porter",
         "title2": "",
         "title3": "",
-        "tvdb_id": ""
+        "tvdb_id": 82548
     },
     {
         "anime_o": {
@@ -219,7 +282,8 @@
             ],
             "s": "Anime: No"
         },
-        "e_nr": 12,
+        "delete": false,
+        "e_nr": 5,
         "e_o": {
             "o": [
                 "Single",
@@ -228,7 +292,7 @@
             ],
             "s": "Single"
         },
-        "location": "Money.Heist.S01E12.proper.1080p.web.x264.1-skgtv/2a8f1c4c5536493f9d540ae4a7314083.mkv",
+        "location": "Would.I.Lie.to.You.S12E05.720p.iP.WEB-DL.AAC2.0.H.264-BTW/6Zi3OR9WGeJy9h5g6.mkv",
         "name_o": {
             "o": [
                 "Name required",
@@ -238,8 +302,8 @@
         },
         "new_series": false,
         "override": false,
-        "s_nr": 1,
-        "series_name": "Series Name",
+        "s_nr": 12,
+        "series_name": "Would I Lie to You",
         "show_subs": false,
         "status_o": {
             "o": [
@@ -255,14 +319,15 @@
             "o": [
                 "Series",
                 "HD",
-                "SD"
+                "SD",
+                "[ignore]"
             ],
             "s": "Series"
         },
-        "title": "",
+        "title": "Jonnie Peacock, Shaun Williamson, Jo Brand, Emma Bunton",
         "title2": "",
         "title3": "",
-        "tvdb_id": ""
+        "tvdb_id": 82548
     },
     {
         "anime_o": {
@@ -272,59 +337,7 @@
             ],
             "s": "Anime: No"
         },
-        "e_nr": 9,
-        "e_o": {
-            "o": [
-                "Single",
-                "Double",
-                "Triple"
-            ],
-            "s": "Single"
-        },
-        "location": "Money.Heist.S01E09.proper.720p.web.x264-skgtv/idfTWp29OsEE53Pss9BnVPobztYj.mkv",
-        "name_o": {
-            "o": [
-                "Name required",
-                "Name optional"
-            ],
-            "s": "Name required"
-        },
-        "new_series": false,
-        "override": false,
-        "s_nr": 1,
-        "series_name": "Series Name",
-        "show_subs": false,
-        "status_o": {
-            "o": [
-                "Airing",
-                "Hiatus",
-                "Ended"
-            ],
-            "s": "Airing"
-        },
-        "subs": [],
-        "sync": false,
-        "t_o": {
-            "o": [
-                "Series",
-                "HD",
-                "SD"
-            ],
-            "s": "Series"
-        },
-        "title": "",
-        "title2": "",
-        "title3": "",
-        "tvdb_id": ""
-    },
-    {
-        "anime_o": {
-            "o": [
-                "Anime: No",
-                "Anime: Yes"
-            ],
-            "s": "Anime: No"
-        },
+        "delete": false,
         "e_nr": 3,
         "e_o": {
             "o": [
@@ -334,7 +347,7 @@
             ],
             "s": "Single"
         },
-        "location": "Money.Heist.S01E03.proper.1080p.web.x264-skgtv/muGnYu0tOSPCb4tyQ.mkv",
+        "location": "Would.I.Lie.to.You.S12E03.720p.iP.WEB-DL.AAC2.0.H.264-BTW/FBWP7Oz849HRXSehTksk1pmZCaQ2Ca1Cq.mkv",
         "name_o": {
             "o": [
                 "Name required",
@@ -344,8 +357,8 @@
         },
         "new_series": false,
         "override": false,
-        "s_nr": 1,
-        "series_name": "Series Name",
+        "s_nr": 12,
+        "series_name": "Would I Lie to You",
         "show_subs": false,
         "status_o": {
             "o": [
@@ -361,14 +374,15 @@
             "o": [
                 "Series",
                 "HD",
-                "SD"
+                "SD",
+                "[ignore]"
             ],
             "s": "Series"
         },
-        "title": "",
+        "title": "Olivia Colman, Aston Merrygold, Jon Richardson, Michaela Strachan",
         "title2": "",
         "title3": "",
-        "tvdb_id": ""
+        "tvdb_id": 82548
     },
     {
         "anime_o": {
@@ -378,271 +392,7 @@
             ],
             "s": "Anime: No"
         },
-        "e_nr": 7,
-        "e_o": {
-            "o": [
-                "Single",
-                "Double",
-                "Triple"
-            ],
-            "s": "Single"
-        },
-        "location": "Killjoys.S04E07.720p.HDTV.x264-AVS/Apg33VKwQgGW.mkv",
-        "name_o": {
-            "o": [
-                "Name required",
-                "Name optional"
-            ],
-            "s": "Name required"
-        },
-        "new_series": false,
-        "override": false,
-        "s_nr": 4,
-        "series_name": "Killjoys",
-        "show_subs": false,
-        "status_o": {
-            "o": [
-                "Airing",
-                "Hiatus",
-                "Ended"
-            ],
-            "s": "Airing"
-        },
-        "subs": [],
-        "sync": false,
-        "t_o": {
-            "o": [
-                "Series",
-                "HD",
-                "SD"
-            ],
-            "s": "Series"
-        },
-        "title": "O Mother, Where Art Thou?",
-        "title2": "",
-        "title3": "",
-        "tvdb_id": 281534
-    },
-    {
-        "anime_o": {
-            "o": [
-                "Anime: No",
-                "Anime: Yes"
-            ],
-            "s": "Anime: No"
-        },
-        "e_nr": 4,
-        "e_o": {
-            "o": [
-                "Single",
-                "Double",
-                "Triple"
-            ],
-            "s": "Single"
-        },
-        "location": "Killjoys.S04E04.720p.HDTV.x264-KILLERS/nSMi5vPkHrksb89us1ZWeK.mkv",
-        "name_o": {
-            "o": [
-                "Name required",
-                "Name optional"
-            ],
-            "s": "Name required"
-        },
-        "new_series": false,
-        "override": false,
-        "s_nr": 4,
-        "series_name": "Killjoys",
-        "show_subs": false,
-        "status_o": {
-            "o": [
-                "Airing",
-                "Hiatus",
-                "Ended"
-            ],
-            "s": "Airing"
-        },
-        "subs": [],
-        "sync": false,
-        "t_o": {
-            "o": [
-                "Series",
-                "HD",
-                "SD"
-            ],
-            "s": "Series"
-        },
-        "title": "What to Expect When You're Expecting... An Alien Parasite",
-        "title2": "",
-        "title3": "",
-        "tvdb_id": 281534
-    },
-    {
-        "anime_o": {
-            "o": [
-                "Anime: No",
-                "Anime: Yes"
-            ],
-            "s": "Anime: No"
-        },
-        "e_nr": 10,
-        "e_o": {
-            "o": [
-                "Single",
-                "Double",
-                "Triple"
-            ],
-            "s": "Single"
-        },
-        "location": "Money.Heist.S01E10.proper.720p.web.x264-skgtv/ksUGya9oxESFMMj5Y0MWy9Mb2a2To0jzcMQ.mkv",
-        "name_o": {
-            "o": [
-                "Name required",
-                "Name optional"
-            ],
-            "s": "Name required"
-        },
-        "new_series": false,
-        "override": false,
-        "s_nr": 1,
-        "series_name": "Series Name",
-        "show_subs": false,
-        "status_o": {
-            "o": [
-                "Airing",
-                "Hiatus",
-                "Ended"
-            ],
-            "s": "Airing"
-        },
-        "subs": [],
-        "sync": false,
-        "t_o": {
-            "o": [
-                "Series",
-                "HD",
-                "SD"
-            ],
-            "s": "Series"
-        },
-        "title": "",
-        "title2": "",
-        "title3": "",
-        "tvdb_id": ""
-    },
-    {
-        "anime_o": {
-            "o": [
-                "Anime: No",
-                "Anime: Yes"
-            ],
-            "s": "Anime: No"
-        },
-        "e_nr": 7,
-        "e_o": {
-            "o": [
-                "Single",
-                "Double",
-                "Triple"
-            ],
-            "s": "Single"
-        },
-        "location": "Wynonna.Earp.S03E07.1080p.WEB.x264-TBS/yoHpQyeYABfHEu7MyajA999ycDMFx.mkv",
-        "name_o": {
-            "o": [
-                "Name required",
-                "Name optional"
-            ],
-            "s": "Name required"
-        },
-        "new_series": false,
-        "override": false,
-        "s_nr": 3,
-        "series_name": "Wynonna Earp",
-        "show_subs": false,
-        "status_o": {
-            "o": [
-                "Airing",
-                "Hiatus",
-                "Ended"
-            ],
-            "s": "Airing"
-        },
-        "subs": [],
-        "sync": false,
-        "t_o": {
-            "o": [
-                "Series",
-                "HD",
-                "SD"
-            ],
-            "s": "Series"
-        },
-        "title": "I Fall To Pieces",
-        "title2": "",
-        "title3": "",
-        "tvdb_id": 305582
-    },
-    {
-        "anime_o": {
-            "o": [
-                "Anime: No",
-                "Anime: Yes"
-            ],
-            "s": "Anime: No"
-        },
-        "e_nr": 5,
-        "e_o": {
-            "o": [
-                "Single",
-                "Double",
-                "Triple"
-            ],
-            "s": "Single"
-        },
-        "location": "Money.Heist.S01E05.proper.720p.web.x264-skgtv/byPicfBVbMsyy6ngodWXdApNaFgtH5Y0DnijYn.mkv",
-        "name_o": {
-            "o": [
-                "Name required",
-                "Name optional"
-            ],
-            "s": "Name required"
-        },
-        "new_series": false,
-        "override": false,
-        "s_nr": 1,
-        "series_name": "Series Name",
-        "show_subs": false,
-        "status_o": {
-            "o": [
-                "Airing",
-                "Hiatus",
-                "Ended"
-            ],
-            "s": "Airing"
-        },
-        "subs": [],
-        "sync": false,
-        "t_o": {
-            "o": [
-                "Series",
-                "HD",
-                "SD"
-            ],
-            "s": "Series"
-        },
-        "title": "",
-        "title2": "",
-        "title3": "",
-        "tvdb_id": ""
-    },
-    {
-        "anime_o": {
-            "o": [
-                "Anime: No",
-                "Anime: Yes"
-            ],
-            "s": "Anime: No"
-        },
+        "delete": false,
         "e_nr": 8,
         "e_o": {
             "o": [
@@ -652,7 +402,7 @@
             ],
             "s": "Single"
         },
-        "location": "Money.Heist.S01E08.proper.720p.web.x264-skgtv/3bOj0W1hpT5iNEfEy1.mkv",
+        "location": "Would.I.Lie.to.You.S11E08.720p.iP.WEB-DL.AAC2.0.H.264-BTW/KQtyTGw6UACtVhThHEGcn5fB9WpK5rkiHWEp.mkv",
         "name_o": {
             "o": [
                 "Name required",
@@ -662,8 +412,8 @@
         },
         "new_series": false,
         "override": false,
-        "s_nr": 1,
-        "series_name": "Series Name",
+        "s_nr": 11,
+        "series_name": "Would I Lie to You",
         "show_subs": false,
         "status_o": {
             "o": [
@@ -679,14 +429,15 @@
             "o": [
                 "Series",
                 "HD",
-                "SD"
+                "SD",
+                "[ignore]"
             ],
             "s": "Series"
         },
-        "title": "",
+        "title": "Denise Lewis, Richard Osman, Judge Rinder, Katherine Ryan",
         "title2": "",
         "title3": "",
-        "tvdb_id": ""
+        "tvdb_id": 82548
     },
     {
         "anime_o": {
@@ -696,112 +447,7 @@
             ],
             "s": "Anime: No"
         },
-        "e_nr": 8,
-        "e_o": {
-            "o": [
-                "Single",
-                "Double",
-                "Triple"
-            ],
-            "s": "Single"
-        },
-        "location": "Killjoys.S04E08.720p.HDTV.x264-AVS[rarbg]/Killjoys.S04E08.720p.HDTV.x264-AVS.mkv",
-        "name_o": {
-            "o": [
-                "Name required",
-                "Name optional"
-            ],
-            "s": "Name required"
-        },
-        "new_series": false,
-        "override": false,
-        "s_nr": 4,
-        "series_name": "Killjoys",
-        "show_subs": false,
-        "status_o": {
-            "o": [
-                "Airing",
-                "Hiatus",
-                "Ended"
-            ],
-            "s": "Airing"
-        },
-        "subs": [],
-        "sync": false,
-        "t_o": {
-            "o": [
-                "Series",
-                "HD",
-                "SD"
-            ],
-            "s": "Series"
-        },
-        "title": "It Takes a Pillage",
-        "title2": "",
-        "title3": "",
-        "tvdb_id": 281534
-    },
-    {
-        "anime_o": {
-            "o": [
-                "Anime: No",
-                "Anime: Yes"
-            ],
-            "s": "Anime: No"
-        },
-        "e_nr": 11,
-        "e_o": {
-            "o": [
-                "Single",
-                "Double",
-                "Triple"
-            ],
-            "s": "Single"
-        },
-        "location": "Money.Heist.S01E11.proper.1080p.web.x264.1-skgtv/de43d5a2fa994af1b979457a54526234.mkv",
-        "name_o": {
-            "o": [
-                "Name required",
-                "Name optional"
-            ],
-            "s": "Name required"
-        },
-        "new_series": false,
-        "override": false,
-        "s_nr": 1,
-        "series_name": "Series Name",
-        "show_subs": false,
-        "status_o": {
-            "o": [
-                "Airing",
-                "Hiatus",
-                "Ended"
-            ],
-            "s": "Airing"
-        },
-        "subs": [],
-        "sync": false,
-        "t_o": {
-            "o": [
-                "Series",
-                "HD",
-                "SD"
-            ],
-            "s": "Series"
-        },
-        "title": "",
-        "title2": "",
-        "title3": "",
-        "tvdb_id": ""
-    },
-    {
-        "anime_o": {
-            "o": [
-                "Anime: No",
-                "Anime: Yes"
-            ],
-            "s": "Anime: No"
-        },
+        "delete": true,
         "e_nr": 6,
         "e_o": {
             "o": [
@@ -811,7 +457,7 @@
             ],
             "s": "Single"
         },
-        "location": "Money.Heist.S01E06.proper.1080p.web.x264.1-skgtv/d58435846dd6484b949da6e7097635af.mkv",
+        "location": "Criminal.Minds.S14E06.720p.WEB.x264-TBS/KrzvXnFOo1HpfHOa.mkv",
         "name_o": {
             "o": [
                 "Name required",
@@ -821,8 +467,8 @@
         },
         "new_series": false,
         "override": false,
-        "s_nr": 1,
-        "series_name": "Series Name",
+        "s_nr": 14,
+        "series_name": "Criminal Minds",
         "show_subs": false,
         "status_o": {
             "o": [
@@ -838,14 +484,15 @@
             "o": [
                 "Series",
                 "HD",
-                "SD"
+                "SD",
+                "[ignore]"
             ],
             "s": "Series"
         },
-        "title": "",
+        "title": "Luke",
         "title2": "",
         "title3": "",
-        "tvdb_id": ""
+        "tvdb_id": 75710
     },
     {
         "anime_o": {
@@ -855,7 +502,8 @@
             ],
             "s": "Anime: No"
         },
-        "e_nr": 11,
+        "delete": false,
+        "e_nr": 9,
         "e_o": {
             "o": [
                 "Single",
@@ -864,7 +512,7 @@
             ],
             "s": "Single"
         },
-        "location": "Outlander.S02E11.HDTV.x264-KILLERS[ettv]/Outlander.S02E11.HDTV.x264-KILLERS[ettv].mkv",
+        "location": "Would.I.Lie.to.You.S11E09.720p.iP.WEB-DL.AAC2.0.H.264-BTW/tFKXUFj53bkQ2uxV6g4pegWqcGFegqQhHm.mkv",
         "name_o": {
             "o": [
                 "Name required",
@@ -874,8 +522,8 @@
         },
         "new_series": false,
         "override": false,
-        "s_nr": 2,
-        "series_name": "Series Name",
+        "s_nr": 11,
+        "series_name": "Would I Lie to You",
         "show_subs": false,
         "status_o": {
             "o": [
@@ -891,649 +539,14 @@
             "o": [
                 "Series",
                 "HD",
-                "SD"
+                "SD",
+                "[ignore]"
             ],
             "s": "Series"
         },
-        "title": "",
+        "title": null,
         "title2": "",
         "title3": "",
-        "tvdb_id": ""
-    },
-    {
-        "anime_o": {
-            "o": [
-                "Anime: No",
-                "Anime: Yes"
-            ],
-            "s": "Anime: No"
-        },
-        "e_nr": 8,
-        "e_o": {
-            "o": [
-                "Single",
-                "Double",
-                "Triple"
-            ],
-            "s": "Single"
-        },
-        "location": "Wynonna.Earp.S03E08.720p.HDTV.x264-AVS[ettv]/Wynonna.Earp.S03E08.720p.HDTV.x264-AVS[ettv].mkv",
-        "name_o": {
-            "o": [
-                "Name required",
-                "Name optional"
-            ],
-            "s": "Name required"
-        },
-        "new_series": false,
-        "override": false,
-        "s_nr": 3,
-        "series_name": "Wynonna Earp",
-        "show_subs": false,
-        "status_o": {
-            "o": [
-                "Airing",
-                "Hiatus",
-                "Ended"
-            ],
-            "s": "Airing"
-        },
-        "subs": [],
-        "sync": false,
-        "t_o": {
-            "o": [
-                "Series",
-                "HD",
-                "SD"
-            ],
-            "s": "Series"
-        },
-        "title": "Waiting Forever For You",
-        "title2": "",
-        "title3": "",
-        "tvdb_id": 305582
-    },
-    {
-        "anime_o": {
-            "o": [
-                "Anime: No",
-                "Anime: Yes"
-            ],
-            "s": "Anime: No"
-        },
-        "e_nr": 4,
-        "e_o": {
-            "o": [
-                "Single",
-                "Double",
-                "Triple"
-            ],
-            "s": "Single"
-        },
-        "location": "Marvels.Iron.Fist.S02E04.720p.WEB.x264-STRiFE/D6xE7wiHHaMN0BMuebWEp7Bz851.mkv",
-        "name_o": {
-            "o": [
-                "Name required",
-                "Name optional"
-            ],
-            "s": "Name required"
-        },
-        "new_series": false,
-        "override": false,
-        "s_nr": 2,
-        "series_name": "Iron Fist",
-        "show_subs": false,
-        "status_o": {
-            "o": [
-                "Airing",
-                "Hiatus",
-                "Ended"
-            ],
-            "s": "Hiatus"
-        },
-        "subs": [],
-        "sync": true,
-        "t_o": {
-            "o": [
-                "Series",
-                "HD",
-                "SD"
-            ],
-            "s": "Series"
-        },
-        "title": "Target - Iron Fist",
-        "title2": "",
-        "title3": "",
-        "tvdb_id": 317953
-    },
-    {
-        "anime_o": {
-            "o": [
-                "Anime: No",
-                "Anime: Yes"
-            ],
-            "s": "Anime: No"
-        },
-        "e_nr": 13,
-        "e_o": {
-            "o": [
-                "Single",
-                "Double",
-                "Triple"
-            ],
-            "s": "Single"
-        },
-        "location": "Money.Heist.S01E13.proper.1080p.web.x264.1-skgtv/fdad6a7c2f634ee493785237f037f0f6.mkv",
-        "name_o": {
-            "o": [
-                "Name required",
-                "Name optional"
-            ],
-            "s": "Name required"
-        },
-        "new_series": false,
-        "override": false,
-        "s_nr": 1,
-        "series_name": "Series Name",
-        "show_subs": false,
-        "status_o": {
-            "o": [
-                "Airing",
-                "Hiatus",
-                "Ended"
-            ],
-            "s": "Airing"
-        },
-        "subs": [],
-        "sync": false,
-        "t_o": {
-            "o": [
-                "Series",
-                "HD",
-                "SD"
-            ],
-            "s": "Series"
-        },
-        "title": "",
-        "title2": "",
-        "title3": "",
-        "tvdb_id": ""
-    },
-    {
-        "anime_o": {
-            "o": [
-                "Anime: No",
-                "Anime: Yes"
-            ],
-            "s": "Anime: No"
-        },
-        "e_nr": "",
-        "e_o": {
-            "o": [
-                "Single",
-                "Double",
-                "Triple"
-            ],
-            "s": "Single"
-        },
-        "location": "fsdrgtujzhsgeahzusd/Monsieur.Pierre.geht.online.2017.German.1080p.BluRay.x264-CHECKMATE/checkmate-monsieur.pierre.geht.online.1080p.mkv",
-        "name_o": {
-            "o": [
-                "Name required",
-                "Name optional"
-            ],
-            "s": "Name required"
-        },
-        "new_series": false,
-        "override": false,
-        "s_nr": "",
-        "series_name": "Series Name",
-        "show_subs": false,
-        "status_o": {
-            "o": [
-                "Airing",
-                "Hiatus",
-                "Ended"
-            ],
-            "s": "Airing"
-        },
-        "subs": [],
-        "sync": false,
-        "t_o": {
-            "o": [
-                "Series",
-                "HD",
-                "SD"
-            ],
-            "s": "Series"
-        },
-        "title": "",
-        "title2": "",
-        "title3": "",
-        "tvdb_id": ""
-    },
-    {
-        "anime_o": {
-            "o": [
-                "Anime: No",
-                "Anime: Yes"
-            ],
-            "s": "Anime: No"
-        },
-        "e_nr": 2,
-        "e_o": {
-            "o": [
-                "Single",
-                "Double",
-                "Triple"
-            ],
-            "s": "Single"
-        },
-        "location": "Money.Heist.S01E02.proper.1080p.web.x264-skgtv/DKwoFb3zP1Abw55PyjnhDFvCdFBFX.mkv",
-        "name_o": {
-            "o": [
-                "Name required",
-                "Name optional"
-            ],
-            "s": "Name required"
-        },
-        "new_series": false,
-        "override": false,
-        "s_nr": 1,
-        "series_name": "Series Name",
-        "show_subs": false,
-        "status_o": {
-            "o": [
-                "Airing",
-                "Hiatus",
-                "Ended"
-            ],
-            "s": "Airing"
-        },
-        "subs": [],
-        "sync": false,
-        "t_o": {
-            "o": [
-                "Series",
-                "HD",
-                "SD"
-            ],
-            "s": "Series"
-        },
-        "title": "",
-        "title2": "",
-        "title3": "",
-        "tvdb_id": ""
-    },
-    {
-        "anime_o": {
-            "o": [
-                "Anime: No",
-                "Anime: Yes"
-            ],
-            "s": "Anime: No"
-        },
-        "e_nr": "",
-        "e_o": {
-            "o": [
-                "Single",
-                "Double",
-                "Triple"
-            ],
-            "s": "Single"
-        },
-        "location": "Das Leben ist ein Fest BluRay/Das.Leben.ist.ein.Fest.2017.German.1080p.BluRay.x264-Pl3X/pl3x-lebenfest-1080p.mkv",
-        "name_o": {
-            "o": [
-                "Name required",
-                "Name optional"
-            ],
-            "s": "Name required"
-        },
-        "new_series": false,
-        "override": false,
-        "s_nr": "",
-        "series_name": "Series Name",
-        "show_subs": false,
-        "status_o": {
-            "o": [
-                "Airing",
-                "Hiatus",
-                "Ended"
-            ],
-            "s": "Airing"
-        },
-        "subs": [],
-        "sync": false,
-        "t_o": {
-            "o": [
-                "Series",
-                "HD",
-                "SD"
-            ],
-            "s": "Series"
-        },
-        "title": "",
-        "title2": "",
-        "title3": "",
-        "tvdb_id": ""
-    },
-    {
-        "anime_o": {
-            "o": [
-                "Anime: No",
-                "Anime: Yes"
-            ],
-            "s": "Anime: No"
-        },
-        "e_nr": 13,
-        "e_o": {
-            "o": [
-                "Single",
-                "Double",
-                "Triple"
-            ],
-            "s": "Single"
-        },
-        "location": "The.100.S05E13.720p.HDTV.x264-KILLERS[ettv]/The.100.S05E13.720p.HDTV.x264-KILLERS[ettv].mkv",
-        "name_o": {
-            "o": [
-                "Name required",
-                "Name optional"
-            ],
-            "s": "Name required"
-        },
-        "new_series": false,
-        "override": false,
-        "s_nr": 5,
-        "series_name": "The 100",
-        "show_subs": false,
-        "status_o": {
-            "o": [
-                "Airing",
-                "Hiatus",
-                "Ended"
-            ],
-            "s": "Airing"
-        },
-        "subs": [],
-        "sync": false,
-        "t_o": {
-            "o": [
-                "Series",
-                "HD",
-                "SD"
-            ],
-            "s": "Series"
-        },
-        "title": "Damocles (2)",
-        "title2": "",
-        "title3": "",
-        "tvdb_id": 268592
-    },
-    {
-        "anime_o": {
-            "o": [
-                "Anime: No",
-                "Anime: Yes"
-            ],
-            "s": "Anime: No"
-        },
-        "e_nr": "",
-        "e_o": {
-            "o": [
-                "Single",
-                "Double",
-                "Triple"
-            ],
-            "s": "Single"
-        },
-        "location": "Wein18p/Der.Wein.und.der.Wind.2017.German.1080p.BluRay.x264-CHECKMATE/checkmate-der.wein.und.der.wind.2017.german.1080p.bluray.x264.mkv",
-        "name_o": {
-            "o": [
-                "Name required",
-                "Name optional"
-            ],
-            "s": "Name required"
-        },
-        "new_series": false,
-        "override": false,
-        "s_nr": "",
-        "series_name": "Series Name",
-        "show_subs": false,
-        "status_o": {
-            "o": [
-                "Airing",
-                "Hiatus",
-                "Ended"
-            ],
-            "s": "Airing"
-        },
-        "subs": [],
-        "sync": false,
-        "t_o": {
-            "o": [
-                "Series",
-                "HD",
-                "SD"
-            ],
-            "s": "Series"
-        },
-        "title": "",
-        "title2": "",
-        "title3": "",
-        "tvdb_id": ""
-    },
-    {
-        "anime_o": {
-            "o": [
-                "Anime: No",
-                "Anime: Yes"
-            ],
-            "s": "Anime: No"
-        },
-        "e_nr": 7,
-        "e_o": {
-            "o": [
-                "Single",
-                "Double",
-                "Triple"
-            ],
-            "s": "Single"
-        },
-        "location": "Killjoys.S04E07.720p.HDTV.x264.Avs.Uksubs/Killjoys.S04E07.720p.HDTV.x264.AVS.UKSubs.mkv",
-        "name_o": {
-            "o": [
-                "Name required",
-                "Name optional"
-            ],
-            "s": "Name required"
-        },
-        "new_series": false,
-        "override": false,
-        "s_nr": 4,
-        "series_name": "Killjoys",
-        "show_subs": false,
-        "status_o": {
-            "o": [
-                "Airing",
-                "Hiatus",
-                "Ended"
-            ],
-            "s": "Airing"
-        },
-        "subs": [],
-        "sync": false,
-        "t_o": {
-            "o": [
-                "Series",
-                "HD",
-                "SD"
-            ],
-            "s": "Series"
-        },
-        "title": "O Mother, Where Art Thou?",
-        "title2": "",
-        "title3": "",
-        "tvdb_id": 281534
-    },
-    {
-        "anime_o": {
-            "o": [
-                "Anime: No",
-                "Anime: Yes"
-            ],
-            "s": "Anime: No"
-        },
-        "e_nr": 4,
-        "e_o": {
-            "o": [
-                "Single",
-                "Double",
-                "Triple"
-            ],
-            "s": "Single"
-        },
-        "location": "Money.Heist.S01E04.proper.1080p.web.x264.1-skgtv/af4fe0b99a87425ba91561dc84047e69.mkv",
-        "name_o": {
-            "o": [
-                "Name required",
-                "Name optional"
-            ],
-            "s": "Name required"
-        },
-        "new_series": false,
-        "override": false,
-        "s_nr": 1,
-        "series_name": "Series Name",
-        "show_subs": false,
-        "status_o": {
-            "o": [
-                "Airing",
-                "Hiatus",
-                "Ended"
-            ],
-            "s": "Airing"
-        },
-        "subs": [],
-        "sync": false,
-        "t_o": {
-            "o": [
-                "Series",
-                "HD",
-                "SD"
-            ],
-            "s": "Series"
-        },
-        "title": "",
-        "title2": "",
-        "title3": "",
-        "tvdb_id": ""
-    },
-    {
-        "anime_o": {
-            "o": [
-                "Anime: No",
-                "Anime: Yes"
-            ],
-            "s": "Anime: No"
-        },
-        "e_nr": 5,
-        "e_o": {
-            "o": [
-                "Single",
-                "Double",
-                "Triple"
-            ],
-            "s": "Single"
-        },
-        "location": "Wynonna.Earp.S03E05.720p.HDTV.x264-KILLERS/Cr4zjqVRG0MZObZYeq.mkv",
-        "name_o": {
-            "o": [
-                "Name required",
-                "Name optional"
-            ],
-            "s": "Name required"
-        },
-        "new_series": false,
-        "override": false,
-        "s_nr": 3,
-        "series_name": "Wynonna Earp",
-        "show_subs": false,
-        "status_o": {
-            "o": [
-                "Airing",
-                "Hiatus",
-                "Ended"
-            ],
-            "s": "Airing"
-        },
-        "subs": [],
-        "sync": false,
-        "t_o": {
-            "o": [
-                "Series",
-                "HD",
-                "SD"
-            ],
-            "s": "Series"
-        },
-        "title": "Jolene",
-        "title2": "",
-        "title3": "",
-        "tvdb_id": 305582
-    },
-    {
-        "anime_o": {
-            "o": [
-                "Anime: No",
-                "Anime: Yes"
-            ],
-            "s": "Anime: No"
-        },
-        "e_nr": 7,
-        "e_o": {
-            "o": [
-                "Single",
-                "Double",
-                "Triple"
-            ],
-            "s": "Single"
-        },
-        "location": "Money.Heist.S01E07.proper.1080p.web.x264.1-skgtv/0cf468fd7c2948eb996d1521790a5738.mkv",
-        "name_o": {
-            "o": [
-                "Name required",
-                "Name optional"
-            ],
-            "s": "Name required"
-        },
-        "new_series": false,
-        "override": false,
-        "s_nr": 1,
-        "series_name": "Series Name",
-        "show_subs": false,
-        "status_o": {
-            "o": [
-                "Airing",
-                "Hiatus",
-                "Ended"
-            ],
-            "s": "Airing"
-        },
-        "subs": [],
-        "sync": false,
-        "t_o": {
-            "o": [
-                "Series",
-                "HD",
-                "SD"
-            ],
-            "s": "Series"
-        },
-        "title": "",
-        "title2": "",
-        "title3": "",
-        "tvdb_id": ""
+        "tvdb_id": 82548
     }
 ]

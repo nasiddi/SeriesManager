@@ -43,9 +43,8 @@ def get_show_data(show):
         sea = {'key': season.s_nr, 'episodes': [], 'opened': False}
         episodes = sorted(list(season.episodes.values()), key=lambda x: x.e_nr)
         for episode in episodes:
-            print(episode)
             check_for_multiple_files(show, episode)
-            check_for_missing_episode(show, episode)
+            check_for_missing_episode(show, episode, episodes)
 
             sea['episodes'].append({LOCATION: episode.location,
                                     'file_name': episode.file_name,
@@ -57,8 +56,23 @@ def get_show_data(show):
     return {SERIES_NAME: show.series_name, 'seasons': seasons}
 
 
-def check_for_missing_episode(show, episode):
-    pass
+def check_for_missing_episode(show, e, episodes):
+    if e.e_nr >= 777:
+        return False
+    index = episodes.index(e)
+    if index <= 0:
+        return False
+    last = episodes[index-1]
+    last_e_nr = last.e_nr
+    if last.episode_option == DOUBLE:
+        last_e_nr += 1
+    elif last.episode_option == TRIPLE:
+        last_e_nr += 2
+
+    if e.e_nr - last_e_nr > 1:
+        print('missing')
+        print(e)
+
 
 
 def check_for_multiple_files(show, e):
@@ -68,7 +82,6 @@ def check_for_multiple_files(show, e):
         return False
     if e.e_nr < 777:
         return False
-    print(e)
 
 
 
