@@ -1,4 +1,4 @@
 module.exports = {
-  rootUrl: 'http://skyship.zapto.org:8778/',
+  rootUrl: 'http://skyship.space:8778/',
   authTokenCookie: 'token',
 };
