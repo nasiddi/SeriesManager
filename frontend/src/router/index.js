@@ -24,6 +24,7 @@ import BatchValidate from '@/components/BatchValidate';
 import BatchReport from '@/components/BatchReport';
 import Stats from '@/components/Stats';
 import FileTree from '@/components/FileTree';
+import SyncLog from '@/components/SyncLog';
 
 import Login from '@/components/Auth/Login';
 
@@ -97,6 +98,12 @@ export default new Router({
         default: Update,
         sidebarLeft: UpdateNav,
       },
+      beforeEnter: Vue.prototype.$auth.requireAuth,
+    },
+    {
+      path: '/synclog',
+      name: 'synclog',
+      component: SyncLog,
       beforeEnter: Vue.prototype.$auth.requireAuth,
     },
     {
