@@ -2,13 +2,13 @@
   <div>
     <div>
       <b-button
-        type="dashboard"
+        type="clearlog"
         variant="primary"
         size="lg"
         class="mt-3"
         block
-        @click.prevent="dashboard"
-      >Dashboard</b-button>
+        @click.prevent="clearlog"
+      >Clear Log</b-button>
     </div>
     <div v-if="json.length !== 0">
       <b-card
