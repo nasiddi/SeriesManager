@@ -2,60 +2,60 @@
   <div>
     <b-form>
       <b-button
-        type="reload"
-        variant="primary"
-        size="lg"
-        class="mt-3"
+        type='reload'
+        variant='primary'
+        size='lg'
+        class='mt-3'
         block
-        @click.prevent="reload"
+        @click.prevent='reload'
       >Reload</b-button>
       <b-button
-        type="sync"
-        variant="primary"
-        size="lg"
-        class="mt-3"
+        type='sync'
+        variant='primary'
+        size='lg'
+        class='mt-3'
         block
-        @click.prevent="sync"
+        @click.prevent='sync'
       >Sync</b-button>
       <b-button
-        type="batch"
-        variant="primary"
-        size="lg"
-        class="mt-3"
+        type='batch'
+        variant='primary'
+        size='lg'
+        class='mt-3'
         block
-        @click.prevent="files"
+        @click.prevent='files'
       >Verify Files</b-button>
       <b-button
-        type="batch"
-        variant="primary"
-        size="lg"
-        class="mt-3"
+        type='batch'
+        variant='primary'
+        size='lg'
+        class='mt-3'
         block
-        @click.prevent="batch"
+        @click.prevent='batch'
       >BatchSync</b-button>
       <b-button
-        type="update"
-        variant="primary"
-        size="lg"
-        class="mt-3"
+        type='update'
+        variant='primary'
+        size='lg'
+        class='mt-3'
         block
-        @click.prevent="update"
+        @click.prevent='update'
       >Update Series</b-button>
       <b-button
-        type="stats"
-        variant="primary"
-        size="lg"
-        class="mt-3"
+        type='stats'
+        variant='primary'
+        size='lg'
+        class='mt-3'
         block
-        @click.prevent="stats"
+        @click.prevent='stats'
       >Statistics</b-button>
       <b-button
-        type="stats"
-        variant="primary"
-        size="lg"
-        class="mt-3"
+        type='stats'
+        variant='primary'
+        size='lg'
+        class='mt-3'
         block
-        @click.prevent="synclog"
+        @click.prevent='synclog'
       >Sync Log</b-button>
     </b-form>
   </div>
