@@ -50,7 +50,6 @@ routes.post('/update/save', async (req, res) => {
   python.updateSave(req.body, res);
 });
 
-
 routes.post('/synclog', async (req, res) => {
   const outputFile = path.join(config.directories.storage, 'synclog');
   fs.readJson(outputFile, (err, file) => {
@@ -62,6 +61,16 @@ routes.post('/synclog', async (req, res) => {
   });
 });
 
+routes.post('/clearlog', async (req, res) => {
+  const outputFile = path.join(config.directories.storage, 'synclog');
+  fs.writeJSON(outputFile, [], (err) => {
+    if (err) {
+      winston.error(err);
+      res.sendStatus(500).end();
+    }
+    res.json([]);
+  });
+});
 
 routes.post('/batch/match', async (req, res) => {
   const outputFile = path.join(config.directories.storage, 'batch_match');
@@ -207,7 +216,7 @@ routes.get('/:uuid/processes', async (req, res) => {
 routes.get('/:uuid/download_comparison/:set', async (req, res) => {
   const file = `${path.join(config.directories.classification, req.params.uuid)}/comparison_${
     req.params.set
-    }`;
+  }`;
   if (!fs.existsSync(file)) {
     res.sendStatus(404);
     return;

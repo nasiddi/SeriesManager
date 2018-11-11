@@ -45,8 +45,8 @@
         size="lg"
         class="mt-3"
         block
-        @click.prevent="dashboard"
-      >Dashboard</b-button>
+        @click.prevent="clear"
+      >Clear Log</b-button>
     </div>
   </div>
 </template>
@@ -74,8 +74,15 @@ export default {
         },
       );
     },
-    async dashboard() {
-      this.$router.push({ name: 'dashboard' });
+    async clear() {
+      this.$http.post('jobs/clearlog').then(
+        (res) => {
+          this.json = _.defaults(res.body, {});
+          this.$router.push({ name: 'dashboard' });
+        },
+        () => {
+        },
+      );
     },
   },
 };
