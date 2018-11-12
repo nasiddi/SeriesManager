@@ -63,14 +63,7 @@ routes.post('/synclog', async (req, res) => {
 
 routes.post('/clearlog', async (req, res) => {
   const outputFile = path.join(config.directories.storage, 'synclog');
-  const out = [
-    {
-      error: [],
-      file_name: 'Log is empty',
-      info: [],
-      success: [],
-    },
-  ];
+  const out = [];
   fs.writeJSON(outputFile, out, (err) => {
     if (err) {
       winston.error(err);
