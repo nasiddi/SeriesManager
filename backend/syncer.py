@@ -74,12 +74,10 @@ def main(args):
     report = []
     for file in QUEUE:
         report.append(file.get_report())
-    log = io_utlis.load_json('data/synclog')
+    log = io_utlis.load_json(os.path.join(os.environ['OUTPUT_FILE'], 'synclog'))
     log.extend(report)
     io_utlis.save_json(report, os.environ['OUTPUT_FILE'])
-    io_utlis.save_json(log, 'data/synclog')
-    print('log', log)
-    print('file', io_utlis.load_json('data/synclog'))
+    io_utlis.save_json(log, os.path.join(os.environ['OUTPUT_FILE'], 'synclog'))
     print(json.dumps(report, indent=4, sort_keys=True))
     io_utlis.save_shows(SHOWS)
 
