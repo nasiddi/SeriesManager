@@ -83,8 +83,11 @@ def main(args):
 
         keys = list(show_stats['ratio'].keys())
         for key in keys:
-            show_stats['ratio'][ASPECT_RATIOS[key]] = show_stats['ratio'][key]
-            show_stats['ratio'].pop(key, None)
+            try:
+                show_stats['ratio'][ASPECT_RATIOS[key]] = show_stats['ratio'][key]
+                show_stats['ratio'].pop(key, None)
+            except:
+                pass
 
         show_stats['avg_duration'] = int(show_stats['duration'] / show_stats['episodes'] * 100) / 100.0
         show_stats['avg_size'] = int(show_stats['size'] / show_stats['episodes'] * 100) / 100.0
