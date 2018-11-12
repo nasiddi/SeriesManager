@@ -75,6 +75,7 @@ def main(args):
     for file in QUEUE:
         report.append(file.get_report())
     log = io_utlis.load_json(os.path.join(os.environ['OUTPUT_FILE'], 'synclog'))
+    print(log)
     log.extend(report)
     io_utlis.save_json(report, os.environ['OUTPUT_FILE'])
     io_utlis.save_json(log, os.path.join(os.environ['OUTPUT_FILE'], 'synclog'))
