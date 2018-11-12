@@ -7,7 +7,7 @@
         size="lg"
         class="mt-3"
         block
-        @click.prevent="clearlog"
+        @click.prevent="clear"
       >Clear Log</b-button>
     </div>
     <div v-if="json.length !== 0">

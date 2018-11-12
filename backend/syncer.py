@@ -78,6 +78,8 @@ def main(args):
     log.extend(report)
     io_utlis.save_json(report, os.environ['OUTPUT_FILE'])
     io_utlis.save_json(log, 'data/synclog')
+    print('log', log)
+    print('file', io_utlis.load_json('data/synclog'))
     print(json.dumps(report, indent=4, sort_keys=True))
     io_utlis.save_shows(SHOWS)
 
