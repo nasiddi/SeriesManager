@@ -27,6 +27,8 @@ def main(args):
     series_names = []
     series_n = shows.keys()
     for n in series_n:
+        if shows[n].status == ENDED:
+            continue
         n1 = clean_up(n)
         series_names_words.append(n1)
         series_names.append(n)

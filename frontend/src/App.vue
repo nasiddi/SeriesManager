@@ -45,7 +45,7 @@ export default {
     this.loadSettings();
   },
   metaInfo: {
-    title: 'Series Manager',
+    title: 'Atlantis',
     titleTemplate: (titleChunk) => {
       const suffix = '';
       return titleChunk ? `${titleChunk} ${suffix}` : suffix;

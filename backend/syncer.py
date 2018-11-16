@@ -54,8 +54,7 @@ def main(args):
 
     for file in files:
         if file.delete:
-            CLEAN_UP.append(SEPERATOR.join(
-                file.location.split(SEPERATOR)[:3 + MAC_OFFSET]))
+            CLEAN_UP.append(file)
             continue
         if file.type_option == '[ignore]':
             ignore_file(file)
@@ -87,9 +86,14 @@ def main(args):
 
 def sync_queue():
     for file in QUEUE:
+        if file.delete:
+            if recursive_delete(SEPERATOR.join(file.location.split(SEPERATOR)[:3 + MAC_OFFSET])):
+                file.report['info'].append('Delete successful')
+                file.report['danger'].append('Delete failed')
+            continue
         if file.override:
             delete_file(file)
-        if os.path.exists(file.new_location):
+        if file_exists(file):
             file.report['error'].append('File exists')
             continue
         try:
@@ -125,12 +129,26 @@ def sync_queue():
                 CLEAN_UP.append(loc)
 
 
+def file_exists(file):
+    if SHOWS[file.series_name].get_episode_by_sxe(file.s_nr, file.e_nr):
+        return True
+    return False
+
+
 def clean_up():
     for loc in CLEAN_UP:
-        if os.path.isdir(loc):
-            shutil.rmtree(loc)
-        else:
-            os.remove(loc)
+        recursive_delete(loc)
+
+
+def recursive_delete(location):
+    if os.path.isdir(location):
+        shutil.rmtree(location)
+    else:
+        os.remove(location)
+
+    if os.path.exists(location):
+        return False
+    return  True
 
 
 def delete_file(file):

@@ -26,54 +26,37 @@
     >
       <b-navbar-nav v-if="loggedIn">
 
+        <b-nav-form>
+          <b-button size="sm" class="my-2 my-sm-0" type="submit" @click="reload"><font-awesome-icon icon="sync-alt"/></b-button>
+        </b-nav-form>
+
         <b-nav-item
           :to="{ name: 'sync.prep' }"
           :active="isRoutePrefix('sync')">
-          <font-awesome-icon icon="sync-alt"/>
+          <font-awesome-icon icon="cloud-upload-alt"/>
+          Reload
+        </b-nav-item>
+
+        <b-nav-item
+          :to="{ name: 'sync.prep' }"
+          :active="isRoutePrefix('sync')">
+          <font-awesome-icon icon="cloud-upload-alt"/>
           Sync
         </b-nav-item>
 
-        <b-nav-item
-          :to="{ name: 'project.start' }"
-          :active="isRoutePrefix('corpus-analysis')">
-          <font-awesome-icon icon="play" /> Corpus Analysis
-        </b-nav-item>
-
         <b-nav-item-dropdown>
-          <b-dropdown-item :to="{ name: 'corpus.choose' }">
-            <font-awesome-icon icon="folder" /> Corpus
+          <b-dropdown-item :to="{ name: 'batch.prep' }">
+            <font-awesome-icon icon="th" /> Batch
           </b-dropdown-item>
         </b-nav-item-dropdown>
 
-        <b-nav-item
-          :to="{ name: 'job.start' }"
-          :active="isRoutePrefix('classification')">
-          <font-awesome-icon icon="play"/>
-          Classification
-        </b-nav-item>
-
         <b-nav-item-dropdown>
-          <b-dropdown-item :to="{ name: 'job.start' }">
-            <font-awesome-icon icon="play"/>
-            Start
-          </b-dropdown-item>
-          <b-dropdown-item :to="{ name: 'monitor.choose' }">
-            <font-awesome-icon icon="terminal"/>
-            Monitor
-          </b-dropdown-item>
-          <b-dropdown-item :to="{ name: 'evaluate.choose' }">
-            <font-awesome-icon icon="check"/>
-            Evaluate
+          <b-dropdown-item :to="{ name: 'synclog' }">
+            <font-awesome-icon icon="th" /> Log
           </b-dropdown-item>
         </b-nav-item-dropdown>
 
       </b-navbar-nav>
-
-      <b-navbar-nav v-else>
-        <b-nav-item :to="{ name: 'about' }">About</b-nav-item>
-      </b-navbar-nav>
-
-      <the-search v-if="false" />
 
       <b-navbar-nav
         v-if="loggedIn"

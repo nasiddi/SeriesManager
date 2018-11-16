@@ -1,7 +1,7 @@
 <template>
   <b-row>
     <b-col>
-      <p>series manager</p>
+      <p>Atlantis</p>
     </b-col>
   </b-row>
 </template>

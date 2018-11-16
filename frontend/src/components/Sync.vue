@@ -114,20 +114,11 @@ export default {
             (res) => {
               const body = _.defaults(res.body, {
               });
-              if (!('title' in body)) {
-                this.$snotify.error(file.series_name, 'Title failed', { timeout: 5000 });
-              }
               file.title = body.title;
               if (file.e_o.s !== 'Single') {
-                if (!('title2' in body)) {
-                  this.$snotify.error(file.series_name, 'Title 2 failed', { timeout: 5000 });
-                }
                 file.title2 = body.title2;
               }
               if (file.e_o.s === 'Triple') {
-                if (!('title3' in body)) {
-                  this.$snotify.error(file.series_name, 'Title 3 failed', { timeout: 5000 });
-                }
                 file.title3 = body.title3;
               }
               resolve(true);

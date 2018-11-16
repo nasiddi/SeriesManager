@@ -2,7 +2,7 @@
   <div>
     <div>
       <b-jumbotron
-        header="series manager"
+        header="Atlantis"
       />
     </div>
     <div>
