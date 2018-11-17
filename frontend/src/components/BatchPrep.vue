@@ -186,6 +186,7 @@ export default {
                 ],
               });
             } else {
+              this.$snotify.error('res.body', { timeout: 0 });
               this.$router.push({
                 name: 'batch.validate',
                 paras: res.body,
