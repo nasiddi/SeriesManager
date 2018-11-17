@@ -28,11 +28,12 @@
 
         <b-nav-form>
           <b-button
-          size="sm"
-          class="my-2 my-sm-0"
-          type="submit"
-          @click="reload">
-          <font-awesome-icon icon="sync-alt"/></b-button>
+            size="sm"
+            class="my-2 my-sm-0"
+            type="submit"
+            @click="reload">
+            <font-awesome-icon icon="sync-alt"/>
+          </b-button>
         </b-nav-form>
 
         <b-nav-item
@@ -53,13 +54,11 @@
           <b-dropdown-item :to="{ name: 'batch.prep' }">
             <font-awesome-icon icon="th" /> Batch
           </b-dropdown-item>
-        </b-nav-item-dropdown>
-
-        <b-nav-item-dropdown>
           <b-dropdown-item :to="{ name: 'synclog' }">
             <font-awesome-icon icon="th" /> Log
           </b-dropdown-item>
         </b-nav-item-dropdown>
+
 
       </b-navbar-nav>
 
@@ -94,10 +93,8 @@
 </template>
 
 <script>
-import TheSearch from './TheSearch';
 
 export default {
-  components: { TheSearch },
   computed: {
     loggedIn() {
       return this.$auth.isLoggedIn();
