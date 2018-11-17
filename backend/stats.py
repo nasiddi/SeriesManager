@@ -28,7 +28,6 @@ def main(args):
     size = 0
     for show in SHOWS.values():
         show_count += 1
-        print(show.series_name)
         show_stats = {'series_name': show.series_name, 'status': {show.status: 1}, 'premiere': show.premiere, 'final': show.final, 'ratio': {}, 'extention': {}, 'duration': 0, 'episodes': 0, 'seasons': 0, 'size': 0, 'quality': {}}
 
         if show.status in stats['total']['status']:
@@ -88,6 +87,7 @@ def main(args):
                 show_stats['ratio'].pop(key, None)
             except:
                 pass
+        print(show.series_name)
 
         show_stats['avg_duration'] = int(show_stats['duration'] / show_stats['episodes'] * 100) / 100.0
         show_stats['avg_size'] = int(show_stats['size'] / show_stats['episodes'] * 100) / 100.0
@@ -130,7 +130,6 @@ def main(args):
     stats['total']['avg_gb_show'] = int(size / show_count / 1024 * 100.0) / 100.0
     # print(json.dumps(stats, indent=4, sort_keys=True))
 
-    print(json.dumps(stats['total'], indent=4, sort_keys=True))
 
     io_utlis.save_json(stats, os.environ['OUTPUT_FILE'])
 
@@ -138,7 +137,6 @@ def main(args):
 
 
 def update_file_meta(episode):
-    print(os.path.basename(episode.location))
     data = findVideoMetada(episode.location)
     if data:
         episode.set_file_meta(data)
