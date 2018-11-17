@@ -32,8 +32,7 @@
           class="my-2 my-sm-0"
           type="submit"
           @click="reload">
-          <font-awesome-icon icon="sync-alt"/>
-          </b-button>
+          <font-awesome-icon icon="sync-alt"/></b-button>
         </b-nav-form>
 
         <b-nav-item
@@ -95,7 +94,7 @@
 </template>
 
 <script>
-import TheSearch from "./TheSearch";
+import TheSearch from './TheSearch';
 
 export default {
   components: { TheSearch },
@@ -107,11 +106,11 @@ export default {
       return this.$auth.getTokenDecoded();
     },
     navbarType() {
-      return this.$store.getters.setting("navbar.type", "dark");
+      return this.$store.getters.setting('navbar.type', 'dark');
     },
     navbarVariant() {
-      return this.$store.getters.setting("navbar.variant", "dark");
-    }
+      return this.$store.getters.setting('navbar.variant', 'dark');
+    },
   },
   created() {
     this.$router.afterEach(() => {
@@ -123,8 +122,8 @@ export default {
       this.$auth.logoutHard();
     },
     isRoutePrefix(prefix) {
-      return this.$router.currentRoute.path.split("/")[1] === prefix;
-    }
-  }
+      return this.$router.currentRoute.path.split('/')[1] === prefix;
+    },
+  },
 };
 </script>
