@@ -54,7 +54,7 @@ def main(args):
 
     for file in files:
         if file.delete:
-            CLEAN_UP.append(file)
+            QUEUE.append(file)
             continue
         if file.type_option == '[ignore]':
             ignore_file(file)
