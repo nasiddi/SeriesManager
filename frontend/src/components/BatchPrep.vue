@@ -178,6 +178,7 @@ export default {
         .post('jobs/batch/match', this.json)
         .then(
           (res) => {
+            this.$snotify.error('res.body', { timeout: 0 });
             if ('shows_locked' in res.body) {
               this.notifLock = this.$snotify.confirm('', 'Shows locked', {
                 timeout: 0,
