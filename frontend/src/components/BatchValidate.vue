@@ -299,6 +299,7 @@ export default {
         (res) => {
           const body = _.defaults(res.body, {
           });
+          this.$snotify.error(body, { timeout: 0 });
           if ('shows_locked' in body) {
             this.notifLock = this.$snotify.confirm('', 'Shows locked', {
               timeout: 0,
