@@ -178,7 +178,7 @@ export default {
         .post('jobs/batch/match', this.json)
         .then(
           (res) => {
-            if ('shows_locked' in res.body) {
+            if (res.body.includes('shows_locked')) {
               this.notifLock = this.$snotify.confirm('', 'Shows locked', {
                 timeout: 0,
                 buttons: [
@@ -186,13 +186,11 @@ export default {
                 ],
               });
             } else {
-              this.$snotify.error('res.body', { timeout: 0 });
               this.$router.push({
                 name: 'batch.validate',
                 paras: res.body,
               });
             }
-            this.$snotify.error(res.body, { timeout: 0 });
           },
           (res) => {
             this.hasSubmitError = true;
