@@ -131,7 +131,7 @@ def sync_queue():
 
 
 def file_exists(file):
-    if SHOWS[file.series_name].get_episode_by_sxe(file.s_nr, file.e_nr):
+    if os.path.exists(SHOWS[file.series_name].get_episode_by_sxe(file.s_nr, file.e_nr).location):
         return True
     return False
 
