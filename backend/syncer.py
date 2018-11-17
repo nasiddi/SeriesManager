@@ -89,7 +89,8 @@ def sync_queue():
         if file.delete:
             if recursive_delete(SEPERATOR.join(file.location.split(SEPERATOR)[:3 + MAC_OFFSET])):
                 file.report['info'].append('Delete successful')
-                file.report['danger'].append('Delete failed')
+            else:
+                file.report['error'].append('Delete failed')
             continue
         if file.override:
             delete_file(file)
