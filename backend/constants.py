@@ -1,7 +1,7 @@
 import platform
 import os
 
-DEBUG = True
+DEBUG = False
 
 
 # Status
