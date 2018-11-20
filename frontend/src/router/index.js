@@ -28,6 +28,7 @@ import BatchReport from '@/components/BatchReport';
 import Stats from '@/components/Stats';
 import FileTree from '@/components/FileTree';
 import SyncLog from '@/components/SyncLog';
+import MissingFiles from '@/components/MissingFiles';
 
 import Login from '@/components/Auth/Login';
 
@@ -120,6 +121,12 @@ export default new Router({
       path: '/filetree',
       name: 'filetree',
       component: FileTree,
+      beforeEnter: Vue.prototype.$auth.requireAuth,
+    },
+    {
+      path: '/missing',
+      name: 'filetree.missing',
+      component: MissingFiles,
       beforeEnter: Vue.prototype.$auth.requireAuth,
     },
     {

@@ -54,6 +54,10 @@ routes.post('/update/save', async (req, res) => {
   python.updateSave(req.body, res);
 });
 
+routes.post('/filetree/missing', async (req, res) => {
+  python.missingFiles(req.body, res);
+});
+
 routes.post('/synclog', async (req, res) => {
   const outputFile = path.join(config.directories.storage, 'synclog');
   fs.readJson(outputFile, (err, file) => {

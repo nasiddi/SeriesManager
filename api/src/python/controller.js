@@ -558,6 +558,33 @@ async function saveFileTree(body, res) {
   );
 }
 
+async function missingFiles(body, res) {
+  const outputFile = path.join(config.directories.storage, 'missing_files');
+  console.log(body[0]);
+  await run(
+    'missing_files',
+    '',
+    '',
+    '',
+    outputFile,
+    () => {},
+    async (code, signal) => {
+      if (!fs.existsSync(outputFile)) {
+        res.sendStatus(204).end();
+        return;
+      }
+
+      fs.readJson(outputFile, (err, file) => {
+        if (err) {
+          winston.error(err);
+          res.sendStatus(500).end();
+        }
+        res.json(file);
+      });
+    },
+  );
+}
+
 async function preprocess(uuid, exitCallback) {
   const { job, jobFiles } = await getFromJob(uuid);
   const file = jobFiles.data ? jobFiles.data : jobFiles.test;
@@ -773,4 +800,5 @@ module.exports = {
   getStats,
   fileTree,
   saveFileTree,
+  missingFiles,
 };

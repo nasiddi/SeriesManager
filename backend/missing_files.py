@@ -46,10 +46,10 @@ def check_for_missing_season(show, s, seasons):
         if s.s_nr <= 1:
             return
         for nr in range(1, s.s_nr):
-            MISSING.append({SERIES_NAME: show.series_name, 's_nr': nr, 'e_nr': '*'})
+            MISSING.append({'key': len(MISSING), SERIES_NAME: show.series_name, 's_nr': nr, 'e_nr': '*'})
     last = seasons[index-1]
     for nr in range(last.s_nr + 1, s.s_nr):
-        MISSING.append({SERIES_NAME: show.series_name, 's_nr': nr, 'e_nr': '*'})
+        MISSING.append({'key': len(MISSING), SERIES_NAME: show.series_name, 's_nr': nr, 'e_nr': '*'})
 
 
 def check_for_missing_episode(show, e, episodes):
@@ -60,7 +60,7 @@ def check_for_missing_episode(show, e, episodes):
         if e.e_nr <= 1:
             return
         for nr in range(1, e.e_nr):
-            MISSING.append({SERIES_NAME: show.series_name, 's_nr': e.s_nr, 'e_nr': nr})
+            MISSING.append({'key': len(MISSING), SERIES_NAME: show.series_name, 's_nr': e.s_nr, 'e_nr': nr})
     last = episodes[index-1]
     last_e_nr = last.e_nr
     if last.episode_option == DOUBLE:
@@ -69,7 +69,7 @@ def check_for_missing_episode(show, e, episodes):
         last_e_nr += 2
 
     for nr in range(last_e_nr + 1, e.e_nr):
-        MISSING.append({SERIES_NAME: show.series_name, 's_nr': e.s_nr, 'e_nr': nr})
+        MISSING.append({'key': len(MISSING), SERIES_NAME: show.series_name, 's_nr': e.s_nr, 'e_nr': nr})
 
 
 if __name__ == '__main__':
