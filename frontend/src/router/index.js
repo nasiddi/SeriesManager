@@ -11,11 +11,14 @@ import { library as faLibrary } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import Snotify, { SnotifyPosition } from 'vue-snotify';
 import VueLodash from 'vue-lodash';
+import Meta from 'vue-meta';
+
 
 import 'vue-snotify/styles/material.scss';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
+import DashboardIndex from '@/components/Dashboard/Index';
 import About from '@/components/About';
 import Home from '@/components/Home';
 import Sync from '@/components/Sync';
@@ -31,26 +34,6 @@ import SyncLog from '@/components/SyncLog';
 import MissingFiles from '@/components/MissingFiles';
 
 import Login from '@/components/Auth/Login';
-
-import FilesIndex from '@/components/Files/Index';
-import FilesParse from '@/components/Files/Parse';
-import FilesUpload from '@/components/Files/Upload';
-
-import JobsStart from '@/components/Jobs/Start';
-import EvaluateChoose from '@/components/Evaluate/Choose';
-import EvaluateJob from '@/components/Evaluate/Job';
-import MonitorChoose from '@/components/Monitor/Choose';
-import MonitorJob from '@/components/Monitor/Job';
-import Meta from 'vue-meta';
-
-import DashboardIndex from '@/components/Dashboard/Index';
-import CorpusProject from '@/components/Corpus/Project';
-import CorpusChoose from '@/components/Corpus/Choose';
-import ProjectStart from '@/components/Project/Start';
-import CorpusSidebarLeft from '@/components/Corpus/SidebarLeft';
-import CorpusSidebarRight from '@/components/Corpus/SidebarRight';
-import SettingsIndex from '@/components/Settings/Index';
-
 import Auth from '@/components/Auth/utils';
 
 const VueMoment = require('vue-moment');
@@ -174,94 +157,6 @@ export default new Router({
       path: '/dashboard',
       name: 'dashboard',
       component: DashboardIndex,
-      beforeEnter: Vue.prototype.$auth.requireAuth,
-    },
-    {
-      path: '/files',
-      name: 'files.index',
-      component: FilesIndex,
-      beforeEnter: Vue.prototype.$auth.requireAuth,
-    },
-    {
-      path: '/files/upload',
-      name: 'files.upload',
-      component: FilesUpload,
-      beforeEnter: Vue.prototype.$auth.requireAuth,
-    },
-    {
-      path: '/files/parse/:file_uuid',
-      name: 'files.parse',
-      component: FilesParse,
-      beforeEnter: Vue.prototype.$auth.requireAuth,
-    },
-    {
-      path: '/corpus-analysis/start',
-      name: 'project.start',
-      component: ProjectStart,
-      beforeEnter: Vue.prototype.$auth.requireAuth,
-    },
-    {
-      path: '/corpus-analysis/start/:file_uuid',
-      name: 'project.start_from_file',
-      component: ProjectStart,
-      beforeEnter: Vue.prototype.$auth.requireAuth,
-    },
-    {
-      path: '/corpus-analysis/corpus',
-      name: 'corpus.choose',
-      component: CorpusChoose,
-      beforeEnter: Vue.prototype.$auth.requireAuth,
-    },
-    {
-      path: '/corpus-analysis/corpus/:project_uuid',
-      name: 'corpus.project',
-      components: {
-        default: CorpusProject,
-        sidebarLeft: CorpusSidebarLeft,
-        sidebarRight: CorpusSidebarRight,
-      },
-      beforeEnter: Vue.prototype.$auth.requireAuth,
-    },
-    {
-      path: '/classification/jobs/start',
-      name: 'job.start',
-      component: JobsStart,
-      beforeEnter: Vue.prototype.$auth.requireAuth,
-    },
-    {
-      path: '/classification/jobs/start/:file_uuid',
-      name: 'job.start_from_file',
-      component: JobsStart,
-      beforeEnter: Vue.prototype.$auth.requireAuth,
-    },
-    {
-      path: '/classification/monitor',
-      name: 'monitor.choose',
-      component: MonitorChoose,
-      beforeEnter: Vue.prototype.$auth.requireAuth,
-    },
-    {
-      path: '/classification/monitor/:job_uuid',
-      name: 'reload.job',
-      component: MonitorJob,
-      beforeEnter: Vue.prototype.$auth.requireAuth,
-    },
-    {
-      path: '/classification/evaluate',
-      name: 'evaluate.choose',
-      component: EvaluateChoose,
-      beforeEnter: Vue.prototype.$auth.requireAuth,
-    },
-    {
-      path: '/classification/evaluate/:job_uuid',
-      name: 'evaluate.job',
-      component: EvaluateJob,
-      beforeEnter: Vue.prototype.$auth.requireAuth,
-    },
-    {
-      path: '/settings',
-      name: 'settings',
-      component: SettingsIndex,
       beforeEnter: Vue.prototype.$auth.requireAuth,
     },
   ],

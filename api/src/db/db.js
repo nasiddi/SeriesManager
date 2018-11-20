@@ -1,11 +1,6 @@
 const Promise = require('bluebird');
 const db = require('sqlite');
-const _ = require('lodash');
 const fs = require('fs-extra');
-const path = require('path');
-const winston = require('winston');
-
-const config = require('./../../config');
 
 fs.ensureDirSync('./db');
 
