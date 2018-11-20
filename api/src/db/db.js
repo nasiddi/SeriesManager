@@ -11,47 +11,7 @@ fs.ensureDirSync('./db');
 
 Promise.resolve()
   .then(() => db.open('./db/database.sqlite'))
-  .then(() => db.migrate()) // { force: 'last' }
-  .then(async () => {
-    await db.run('PRAGMA foreign_keys = ON');
-  })
-  .then(async () => {
-    const projects = await db.all('SELECT uuid FROM projects');
-    const jobs = await db.all('SELECT uuid FROM jobs');
-    const files = await db.all('SELECT uuid FROM files');
-
-    const projectUuids = _.chain(projects)
-      .map(project => project.uuid)
-      .value();
-    const jobUuids = _.chain(jobs)
-      .map(job => job.uuid)
-      .value();
-    const fileUuids = _.chain(files)
-      .map(file => file.uuid)
-      .value();
-
-    const uuids = _.union(projectUuids, jobUuids, fileUuids);
-    _.chain([
-      config.directories.classification,
-      config.directories.corpusAnalysis,
-      config.directories.evaluation,
-      config.directories.models,
-      config.directories.output,
-      config.directories.parsed,
-      config.directories.preprocess,
-      config.directories.uploads,
-    ])
-      .each((dir) => {
-        fs.readdirSync(dir).forEach((file) => {
-          if (!uuids.includes(file.substr(0, 36))) {
-            const p = path.join(dir, file);
-            if (config.cleanup) fs.removeSync(p);
-            winston.verbose(`${!config.cleanup ? 'PRETEND ' : ''}removed stale ${p}`);
-          }
-        });
-      })
-      .value();
-  });
+  .then(() => db.migrate()); // { force: 'last' }
 
 /*
 async function setup() {
@@ -62,4 +22,3 @@ async function setup() {
 }
 setup();
 */
-

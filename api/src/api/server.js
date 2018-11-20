@@ -8,14 +8,9 @@ const compression = require('compression');
 
 const config = require('./../../config');
 
-const algorithms = require('./algorithms');
 const auth = require('./auth');
 const authMiddleware = require('./auth-middleware');
-const evaluate = require('./evaluate');
-const files = require('./files');
 const jobs = require('./jobs');
-const processes = require('./processes');
-const projects = require('./projects');
 const settings = require('./settings');
 
 const { port } = config;
@@ -62,13 +57,8 @@ app.use(authMiddleware.middleware);
 // BELOW: authed API
 //
 
-app.use('/algorithms', algorithms.routes);
 app.use('/auth', auth.routesAuthed);
-app.use('/evaluate', evaluate.routes);
-app.use('/files', files.routes);
 app.use('/jobs', jobs.routes);
-app.use('/processes', processes.routes);
-app.use('/projects', projects.routes);
 app.use('/settings', settings.routes);
 
 app.get('/dashboard', (req, res) => {
