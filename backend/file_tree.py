@@ -5,13 +5,22 @@ import time
 import sys
 from constants import *
 
-
+SHOWS = None
 MISSING = []
 
+def load_tree():
+    global SHOWS
+    SHOWS = io_utlis.load_shows()
+    if SHOWS is None:
+        print('shows locked')
+        return {'shows_locked': True}
+    tree_file = {}
+    tree_file['shows'] = load_all()
+    io_utlis.save_shows(SHOWS)
+    return tree_file
 
 def main(args):
     global SHOWS
-    unlock_shows.main()
     SHOWS = io_utlis.load_shows()
     io_utlis.parse_args(args)
     conf = io_utlis.load_json(os.environ["CONF_FILE"])
@@ -44,18 +53,26 @@ def load_all():
 def get_show_data(show):
     seasons = []
     for season in show.seasons.values():
-        check_for_missing_season(show, season, sorted(show.seasons.values(), key=lambda x: x.s_nr))
+        #check_for_missing_season(show, season, sorted(show.seasons.values(), key=lambda x: x.s_nr))
         sea = {'key': season.s_nr, 'episodes': [], 'opened': False}
         episodes = sorted(list(season.episodes.values()), key=lambda x: x.e_nr)
         for episode in episodes:
-            check_for_multiple_files(show, episode)
-            check_for_missing_episode(show, episode, episodes)
-
             sea['episodes'].append({LOCATION: episode.location,
                                     'file_name': episode.file_name,
-                                    'path': False,
-                                    'edit': False,
-                                    'key': episode.e_nr})
+                                    'e_nr': episode.e_nr,
+                                    's_nr':episode.s_nr,
+                                    'title': episode.title,
+                                    'title2': episode.title2,
+                                    'title3': episode.title3,
+                                    'extension': episode.extension,
+                                    'save': False,
+                                    'delete': False,
+                                    'episode_option': episode.episode_option,
+                                    'size': episode.size,
+                                    'duration': episode.duration,
+                                    'quality': episode.quality,
+                                    'tvdb_id': show.tvdb_id,
+                                    'name_needed': show.name_needed})
 
         seasons.append(sea)
     return {SERIES_NAME: show.series_name, 'seasons': seasons}

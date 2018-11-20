@@ -2,14 +2,6 @@
   <div>
     <b-form>
       <b-button
-        type="reload"
-        variant="primary"
-        size="lg"
-        class="mt-3"
-        block
-        @click.prevent="reload"
-      >Reload</b-button>
-      <b-button
         type="sync"
         variant="primary"
         size="lg"
@@ -18,21 +10,13 @@
         @click.prevent="sync"
       >Sync</b-button>
       <b-button
-        type="batch"
+        type="update"
         variant="primary"
         size="lg"
         class="mt-3"
         block
         @click.prevent="files"
-      >Verify Files</b-button>
-      <b-button
-        type="batch"
-        variant="primary"
-        size="lg"
-        class="mt-3"
-        block
-        @click.prevent="batch"
-      >BatchSync</b-button>
+      >FileTree</b-button>
       <b-button
         type="update"
         variant="primary"
@@ -49,14 +33,6 @@
         block
         @click.prevent="stats"
       >Statistics</b-button>
-      <b-button
-        type="stats"
-        variant="primary"
-        size="lg"
-        class="mt-3"
-        block
-        @click.prevent="synclog"
-      >Sync Log</b-button>
     </b-form>
   </div>
 </template>
@@ -93,19 +69,9 @@ export default {
         name: 'update',
       });
     },
-    async batch() {
-      this.$router.push({
-        name: 'batch.prep',
-      });
-    },
     async files() {
       this.$router.push({
         name: 'filetree',
-      });
-    },
-    async synclog() {
-      this.$router.push({
-        name: 'synclog',
       });
     },
   },

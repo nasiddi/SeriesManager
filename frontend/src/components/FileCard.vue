@@ -1,245 +1,114 @@
 <template>
   <div
-    v-if="f.length !== 0">
+    v-if="e.length !== 0">
     <b-card
-      :header="f.location"
-      class="mt-3">
+      :style="{width: '100%'}"
+      no-body
+      class="px-2 py-2 mt-2">
       <b-row>
         <b-col
-          sm
-          class="pl-2 pr-2">
-          <label
-            class="sr-only"
-            for="fc">Name</label>
-          <b-form-select
-            v-if="'t_o' in f"
-            v-model="f.t_o.s"
-            :options="f.t_o.o"
+          class="px-2">
+          <b-button
+            :aria-expanded="edit ? 'true' : 'false'"
             :style="{width: '100%'}"
-            class="mt-2"
-            selected="Series"/>
+            :variant="buttonColor"
+            aria-controls="'e' + e.key.toString()"
+            @click="edit = !edit"
+          >{{ enr }}</b-button>
         </b-col>
         <b-col
-          sm="4"
-          class="pl-2 pr-2">
+          class="px-2"
+          sm="9">
           <b-input
             id="title"
-            v-model="f.title"
-            class="mt-2"
-            placeholder="Title" />
+            :disabled="isEdit"
+            v-model="e.title"/>
         </b-col>
         <b-col
-          sm
-          class="pl-2 pr-2">
+          v-if="edit"
+          sm>
           <b-button
-            :pressed.sync="f.override"
-            :variant="'outline-primary'"
-            :style="{width: '100%'}"
-            class="mt-2"
-          >Override</b-button>
-        </b-col>
-        <b-col
-          sm
-          class="pl-2 pr-2">
-          <b-button
-            :pressed.sync="f.show_subs"
-            :variant="'outline-primary'"
-            :disabled="subs.length === 0"
-            :style="{width: '100%'}"
-            class="mt-2"
-          >Subtitles</b-button>
-        </b-col>
-        <b-col
-          sm
-          class="pl-2 pr-2">
-          <b-button
-            :pressed.sync="f.delete"
-            :variant="'outline-danger'"
-            :style="{width: '100%'}"
-            class="mt-2"
-          >Delete</b-button>
-        </b-col>
-        <b-col
-          sm
-          class="pl-2 pr-2">
-          <b-button
-            :pressed.sync="f.sync"
-            :variant="syncColor"
-            :style="{width: '100%'}"
-            class="mt-2"
-          >Sync</b-button>
-        </b-col>
-      </b-row>
-      <b-row
-        v-if="'t_o' in f && f.t_o.s === 'Series'">
-        <b-col
-          sm="4"
-          class="pl-2 pr-2">
-          <b-input
-            v-if="f.new_series === true"
-            id="series-new_series"
-            v-model="f.series_name"
-            :style="{width: '100%'}"
-            class="mt-2"
-            placeholder="Series Name"/>
-          <b-form-select
-            v-if="f.new_series === false"
-            id="series-selector"
-            v-model="f.series_name"
-            :options="Object.keys(shows)"
-            :style="{width: '100%'}"
-            selected="f.series_name"
-            class="mt-2"/>
-        </b-col>
-        <b-col
-          sm
-          class="pl-2 pr-2">
-          <label
-            class="sr-only"
-            for="series-form">Username</label>
-          <b-input-group
-            :style="{width: '100%'}"
-            left="@"
-            class="mt-2">
-            <b-input
-              id="season"
-              v-model.number="f.s_nr"
-              type="number"
-              placeholder="S" />
-            <b-input
-              id="episode"
-              v-model.number="f.e_nr"
-              type="number"
-              placeholder="E" />
-          </b-input-group>
-        </b-col>
-        <b-col
-          sm
-          class="pl-2 pr-2">
-          <b-form-select
-            v-if="'e_o' in f"
-            v-model="f.e_o.s"
-            :options="f.e_o.o"
-            :style="{width: '100%'}"
-            selected="Single"
-            class="mt-2"/>
-        </b-col>
-        <b-col
-          sm
-          class="pl-2 pr-2">
-          <b-form-select
-            v-if="'status_o' in f"
-            v-model="f.status_o.s"
-            :options="f.status_o.o"
-            :style="{width: '100%'}"
-            selected="Airing"
-            class="mt-2"/>
-        </b-col>
-        <b-col
-          sm
-          class="pl-2 pr-2">
-          <b-button
-            :pressed.sync="f.new_series"
-            :variant="'outline-primary'"
-            :style="{width: '100%'}"
-            class="mt-2"
-          >New Series</b-button>
-        </b-col>
-        <b-col
-          sm
-          class="pl-2 pr-2">
-          <b-button
-            v-if="'t_o' in f && f.t_o.s === 'Series'"
             :variant="'success'"
             :style="{width: '100%'}"
-            class="mt-2"
-            @click="updateTitle(f)"
+            @click="updateTitle"
           >Update</b-button>
         </b-col>
+
       </b-row>
-      <b-row
-        v-if="'t_o' in f && f.t_o.s ==='Series' && f.new_series === true">
-        <b-col
-          sm
-          class="pl-2 pr-2">
-          <b-form-select
-            v-if="'anime_o' in f"
-            v-model="f.anime_o.s"
-            :options="f.anime_o.o"
-            selected="Anime: No"
-            class="mt-2"/>
-        </b-col>
-        <b-col
-          sm
-          class="pl-2 pr-2">
-          <b-form-select
-            v-if="'name_o' in f"
-            v-model="f.name_o.s"
-            :options="f.name_o.o"
-            selected="Anime: Name required"
-            class="mt-2"/>
-        </b-col>
-        <b-col
-          sm
-          class="pl-2 pr-2">
-          <b-input
-            id="tvdb"
-            v-model="f.tvdb_id"
-            class="mt-2"
-            placeholder="TVDB ID"/>
-        </b-col>
-      </b-row>
-      <b-row>
-        <b-col
-          sm
-          class="pl-2 pr-2">
-          <b-form-select
-            v-if="new_show.o.length != 0"
-            v-model="f.tvdb_id"
-            :options="new_show.o"
-            :selected="f.tvdb_id"
-            class="mt-2"/>
-        </b-col>
-      </b-row>
-      <b-row>
-        <b-col
-          sm
-          class="pl-2 pr-2">
-          <b-input
-            v-if="'t_o' in f && 'e_o' in f && f.e_o.s !== 'Single' && f.t_o.s === 'Series'"
-            id="checkTitle2"
-            v-model="f.title2"
-            class="mt-2"
-            placeholder="Title 2" />
-        </b-col>
-      </b-row>
-      <b-row>
-        <b-col
-          sm
-          class="pl-2 pr-2">
-          <b-input
-            v-if="'t_o' in f && 'e_o' in f && f.e_o.s === 'Triple' && f.t_o.s === 'Series'"
-            id="title3"
-            v-model="f.title3"
-            class="mt-2"
-            placeholder="Title 3" />
-        </b-col>
-      </b-row>
-      <b-row>
-        <b-col
-          sm
-          class="pl-2 pr-2">
-          <b-form-checkbox-group
-            v-if="f.show_subs === true"
-            v-model="f.subs"
-            :options="subs"
-            :style="{width: '100%'}"
-            buttons
-            button-variant="outline-primary"
-            class="mt-2"
-            stacked/>
-        </b-col>
-      </b-row>
+      <div
+        v-if="edit">
+        <b-row
+          class="mt-2">
+          <b-col
+            class="px-2">
+            <b-input-group
+              :style="{width: '100%'}"
+              left="@">
+              <b-input
+                id="season"
+                v-model.number="e.s_nr"
+                type="number"
+                placeholder="S" />
+              <b-input
+                id="episode"
+                v-model.number="e.e_nr"
+                type="number"
+                placeholder="E" />
+            </b-input-group>
+          </b-col>
+          <b-col
+            class="px-2"
+            sm>
+            <b-form-select
+              v-model="e.episode_option"
+              :options="episode_options"
+              :style="{width: '100%'}"
+              selected="Single"/>
+          </b-col>
+          <b-col
+            class="px-2"
+            sm>
+            <b-button
+              :pressed.sync="e.save"
+              :variant="saveColor"
+              :style="{width: '100%'}"
+            >Save</b-button>
+          </b-col>
+          <b-col
+            class="px-2"
+            sm>
+            <b-button
+              :pressed.sync="e.delete"
+              :variant="'outline-danger'"
+              :style="{width: '100%'}"
+            >Delete</b-button>
+          </b-col>
+        </b-row>
+        <b-row
+          v-if="e.episode_option !== 'Single'"
+          class="mt-2">
+          <b-col
+            sm
+            class="px-2">
+            <b-input
+              id="checkTitle2"
+              v-model="e.title2"
+              placeholder="Title 2" />
+          </b-col>
+        </b-row>
+        <b-row
+          v-if="e.episode_option === 'Triple'"
+          class="mt-2">
+          <b-col
+            sm
+            class="px-2">
+            <b-input
+              id="title3"
+              v-model="e.title3"
+              placeholder="Title 3" />
+          </b-col>
+        </b-row>
+      </div>
     </b-card>
   </div>
 </template>
@@ -254,22 +123,21 @@ export default {
   components: {
   },
   props: {
-    f: {
+    e: {
       type: Object,
-      required: true,
-    },
-    shows: {
-      type: Object,
-      required: true,
-    },
-    subs: {
-      type: Array,
       required: true,
     },
   },
   data: () => ({
-    syncColor: 'outline-danger',
-    new_show: { o: [], s: 0 },
+    episode_options: [
+      'Single',
+      'Double',
+      'Triple',
+    ],
+    original: {},
+    updated: {},
+    edit: false,
+    saveColor: 'outline-primary',
     wrongSymbols: [
       ':',
       '/',
@@ -288,50 +156,116 @@ export default {
     ],
   }),
   computed: {
+    isEdit() {
+      return !this.edit;
+    },
+    buttonColor() {
+      return this.edit ? 'secondary' : 'outline-secondary';
+    },
+    title() {
+      if (this.e.title === '') {
+        return '';
+      }
+      const eo = this.e.episode_option;
+      if (eo === 'Double' && this.e.title2 !== '') {
+        return `${this.e.title} & ${this.e.title2}`;
+      }
+      if (eo === 'Triple' && this.e.title3 !== '') {
+        return `${this.e.title} & ${this.e.title2} & ${this.e.title3}`;
+      }
+      return this.e.title;
+    },
+    enr() {
+      const eo = this.e.episode_option;
+      if (eo === 'Single') {
+        return this.pad2(this.e.e_nr);
+      }
+      if (eo === 'Double') {
+        return `${this.pad2(this.e.e_nr)} & ${this.pad2(this.e.e_nr + 1)}`;
+      }
+      return `${this.pad2(this.e.e_nr)} & ${this.pad2(this.e.e_nr + 1)} & ${this.pad2(this.e.e_nr + 2)}`;
+    },
   },
   watch: {
-    f: {
-      handler(file) {
-        if (this.checkWrongSymbols(file.title)) {
-          return this.updateSync(false);
+    e: {
+      handler(e) {
+        const o = this.original;
+
+        // const u = this.updated;
+        if (this.checkWrongSymbols(e.title)) {
+          return this.updateSave(false);
         }
-        if (this.checkWrongSymbols(file.title2)) {
-          return this.updateSync(false);
+        if (this.checkWrongSymbols(e.title2)) {
+          return this.updateSave(false);
         }
-        if (this.checkWrongSymbols(file.title3)) {
-          return this.updateSync(false);
+        if (this.checkWrongSymbols(e.title3)) {
+          return this.updateSave(false);
         }
-        if (file.t_o.s !== 'Series') {
-          if (file.title === '') {
-            return this.updateSync(false);
-          }
-          return this.updateSync(true);
-        }
-        if (file.series_name === '' || file.series_name === 'Series Name') {
-          return this.updateSync(false);
-        }
-        if ((file.series_name in this.shows && this.shows[file.series_name].name_needed) || (file.new_series && file.name_o.s === 'Name required')) {
-          if (file.title === '') {
-            return this.updateSync(false);
-          }
-          if (file.title2 === '' && file.e_o.s !== 'Single') {
-            return this.updateSync(false);
-          }
-          if (file.title3 === '' && file.e_o.s === 'Triple') {
-            return this.updateSync(false);
+        if (e.name_needed) {
+          if (e.title === '') {
+            return this.updateSave(false);
           }
         }
-        if (file.s_nr === '' || file.e_nr === '') {
-          return this.updateSync(false);
+        if (e.s_nr === '' || e.e_nr === '') {
+          return this.updateSave(false);
         }
-        return this.updateSync(true);
+        this.updateSave(true);
+
+        if (e.delete) {
+          e.save = false;
+          return true;
+        }
+
+        if (!this.hasChanged(e)) {
+          e.save = false;
+          o.save = e.save;
+          return true;
+        }
+        if (e.save !== o.save) {
+          o.save = e.save;
+          return e.save;
+        }
+
+        e.save = true;
+        o.save = e.save;
+        return e.save;
       },
       deep: true,
     },
   },
   mounted() {
+    this.original = _.cloneDeep(this.e);
+    this.updated = _.cloneDeep(this.e);
   },
   methods: {
+    hasChanged(e) {
+      const o = this.original;
+      if (e.title !== o.title) {
+        return true;
+      }
+      if (e.title !== o.title) {
+        return true;
+      }
+      if (e.title2 !== o.title2) {
+        return true;
+      }
+      if (e.title3 !== o.title3) {
+        return true;
+      }
+      if (e.e_nr !== o.e_nr) {
+        return true;
+      }
+      if (e.s_nr !== o.s_nr) {
+        return true;
+      }
+      if (e.episode_option !== o.episode_option) {
+        return true;
+      }
+      return false;
+    },
+    pad2(number) {
+      return (number < 10 ? '0' : '') + number;
+    },
     checkWrongSymbols(val) {
       let found = false;
       this.wrongSymbols.forEach((sym) => {
@@ -341,47 +275,36 @@ export default {
       });
       return found;
     },
-    updateSync(primary) {
+    updateSave(primary) {
       if (primary) {
-        if (this.syncColor === 'outline-danger') {
-          this.f.sync = true;
-        }
-        this.syncColor = 'outline-primary';
+        this.saveColor = 'outline-primary';
       } else {
-        this.syncColor = 'outline-danger';
-        this.f.sync = false;
+        this.saveColor = 'outline-danger';
+        this.e.save = false;
+        this.original.save = false;
       }
     },
-    async updateTitle(f) {
+    async updateTitle() {
       return new Promise((resolve) => {
-        const file = f;
-        if (!(file.new_series)) {
-          file.tvdb_id = this.shows[file.series_name].tvdb_id;
-        }
+        const file = this.e;
         this.$http.post('jobs/tvdb', file)
           .then(
             (res) => {
               const body = _.defaults(res.body, {
               });
-              if ('newShows' in body) {
-                this.new_show.o = body.newShows;
-                const [s] = body.newShows;
-                this.f.tvdb_id = s.value;
-                return resolve(true);
-              }
               if (!('title' in body)) {
                 this.$snotify.error(file.series_name, 'Title failed', { timeout: 5000 });
                 return resolve(false);
               }
               file.title = body.title;
-              if (file.e_o.s !== 'Single') {
+              if (file.episode_option !== 'Single') {
                 if (!('title2' in body)) {
                   this.$snotify.error(file.series_name, 'Title 2 failed', { timeout: 5000 });
                   return resolve(false);
                 }
                 file.title2 = body.title2;
               }
-              if (file.e_o.s === 'Triple') {
+              if (file.episode_option === 'Triple') {
                 if (!('title3' in body)) {
                   this.$snotify.error(file.series_name, 'Title 3 failed', { timeout: 5000 });
                   return resolve(false);

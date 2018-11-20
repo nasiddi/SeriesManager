@@ -129,7 +129,7 @@
             <h4
               class="mt-3">Extentions</h4>
             <pie-chart
-              :chart-data="getPieData(json.total.extention)"
+              :chart-data="getPieData(json.total.extension)"
               :options="chartOptions"
               :style="{display: 'inline-block'}"
               :width="230"
@@ -210,7 +210,7 @@
                 stacked
                 buttons
                 button-variant="outline-primary"
-                name="extention"/>
+                name="extension"/>
             </b-col>
             <b-col>
               <b-form-checkbox-group
@@ -220,7 +220,7 @@
                 stacked
                 buttons
                 button-variant="outline-primary"
-                name="extention"/>
+                name="extension"/>
             </b-col>
           </b-row>
           <b-row class="mt-3">
@@ -444,7 +444,7 @@ export default {
       this.shows = [];
       series = series.concat(this.filterGroup(_.keys(this.json.total.status), 'status'));
       series = series.concat(this.filterGroup(_.keys(this.json.total.ratio), 'ratio'));
-      series = series.concat(this.filterGroup(this.json.extentions, 'extention'));
+      series = series.concat(this.filterGroup(this.json.extensions, 'extension'));
       series = series.concat(this.filterGroup(_.keys(this.json.total.quality), 'quality'));
 
 
@@ -487,7 +487,7 @@ export default {
     selectAllFilters() {
       this.selected = [];
       if (this.all) {
-        this.selected = this.json.extentions;
+        this.selected = this.json.extensions;
         this.selected = this.selected.concat(_.keys(this.json.total.status));
         this.selected = this.selected.concat(_.keys(this.json.total.ratio));
         this.selected = this.selected.concat(_.keys(this.json.total.quality));
@@ -498,10 +498,10 @@ export default {
         return [];
       }
       const ext = [];
-      this.json.extentions.forEach((e) => {
-        if (primary && e in this.json.total.extention) {
+      this.json.extensions.forEach((e) => {
+        if (primary && e in this.json.total.extension) {
           ext.push(e);
-        } else if (!primary && !(e in this.json.total.extention)) { ext.push(e); }
+        } else if (!primary && !(e in this.json.total.extension)) { ext.push(e); }
       });
       return ext;
     },

@@ -80,12 +80,12 @@ def main(args):
 
 
 def prepFile(name, root):
-    extention = name.split('.')[-1].lower()
-    if extention in EXTENTIONS:
+    extension = name.split('.')[-1].lower()
+    if extension in EXTENSIONS:
         if 'sample' in name.lower():
             return None
         return File(location=os.path.join(root, name), subs=False)
-    if extention in SUBS:
+    if extension in SUBS:
         return File(location=os.path.join(root, name), subs=True)
 
 

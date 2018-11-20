@@ -15,12 +15,12 @@ def main(args):
         for name in files:
             if '[ignore]' in root or '[ignore]' in name:
                 continue
-            extention = name.split('.')[-1].lower()
-            if extention in EXTENTIONS:
+            extension = name.split('.')[-1].lower()
+            if extension in EXTENSIONS:
                 if 'sample' in name.lower():
                     continue
                 file_list.append(File(location=os.path.join(root, name)))
-            if extention in SUBS:
+            if extension in SUBS:
                 subs.append({'text': name, 'value': os.path.join(root, name)})
 
     series_names_words = []

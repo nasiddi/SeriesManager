@@ -18,12 +18,12 @@ def main(args):
         file_list = []
         for root, dirs, files in os.walk(d):
             for name in files:
-                extention = name.split('.')[-1].lower()
-                if extention in EXTENTIONS:
+                extension = name.split('.')[-1].lower()
+                if extension in EXTENSIONS:
                     if 'sample' in name.lower():
                         continue
                     file_list.append(name)
-                if extention in SUBS:
+                if extension in SUBS:
                     file_list.append(name)
         if file_list:
             units.append({'text': dl, 'files': file_list, 'select': False, 'opened': False})

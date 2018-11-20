@@ -20,7 +20,7 @@ def main(args):
         print('shows locked')
         return
 
-    stats = {'shows': [], 'total': {'status': {}, 'extention': {}, 'ratio': {}, 'quality': {}}}
+    stats = {'shows': [], 'total': {'status': {}, 'extension': {}, 'ratio': {}, 'quality': {}}}
     duration = 0
     show_count = 0
     sea_count = 0
@@ -28,7 +28,7 @@ def main(args):
     size = 0
     for show in SHOWS.values():
         show_count += 1
-        show_stats = {'series_name': show.series_name, 'status': {show.status: 1}, 'premiere': show.premiere, 'final': show.final, 'ratio': {}, 'extention': {}, 'duration': 0, 'episodes': 0, 'seasons': 0, 'size': 0, 'quality': {}}
+        show_stats = {'series_name': show.series_name, 'status': {show.status: 1}, 'premiere': show.premiere, 'final': show.final, 'ratio': {}, 'extension': {}, 'duration': 0, 'episodes': 0, 'seasons': 0, 'size': 0, 'quality': {}}
 
         if show.status in stats['total']['status']:
             stats['total']['status'][show.status] += 1
@@ -52,14 +52,14 @@ def main(args):
                 size += episode.size
                 show_stats['size'] += episode.size
 
-                if episode.extention in stats['total']['extention']:
-                    stats['total']['extention'][episode.extention] += episode_option
+                if episode.extension in stats['total']['extension']:
+                    stats['total']['extension'][episode.extension] += episode_option
                 else:
-                    stats['total']['extention'][episode.extention] = episode_option
-                if episode.extention in show_stats['extention']:
-                    show_stats['extention'][episode.extention] += episode_option
+                    stats['total']['extension'][episode.extension] = episode_option
+                if episode.extension in show_stats['extension']:
+                    show_stats['extension'][episode.extension] += episode_option
                 else:
-                    show_stats['extention'][episode.extention] = episode_option
+                    show_stats['extension'][episode.extension] = episode_option
 
                 if episode.quality in stats['total']['quality']:
                     stats['total']['quality'][episode.quality] += episode_option
@@ -100,13 +100,13 @@ def main(args):
         stats['total']['ratio'][ASPECT_RATIOS[key]] = stats['total']['ratio'][key]
         stats['total']['ratio'].pop(key, None)
 
-    keys = list(stats['total']['extention'].keys())
-    stats['extentions'] = keys
-    stats['total']['extention'].update({'other': 0})
+    keys = list(stats['total']['extension'].keys())
+    stats['extensions'] = keys
+    stats['total']['extension'].update({'other': 0})
     for key in keys:
-        if stats['total']['extention'][key] < 1000:
-            stats['total']['extention']['other'] += stats['total']['extention'][key]
-            stats['total']['extention'].pop(key, None)
+        if stats['total']['extension'][key] < 1000:
+            stats['total']['extension']['other'] += stats['total']['extension'][key]
+            stats['total']['extension'].pop(key, None)
 
     stats['total']['days'] = int(duration / 60.0 / 24.0 * 100) / 100.0
     stats['total']['hours'] = int(duration / 60.0 * 100) / 100.0

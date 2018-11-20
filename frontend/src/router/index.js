@@ -4,7 +4,9 @@ import Router from 'vue-router';
 import BootstrapVue from 'bootstrap-vue';
 import VueResource from 'vue-resource';
 import VueCharts from 'vue-chartjs';
-import fas from '@fortawesome/fontawesome-free-solid';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+
 import { library as faLibrary } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import Snotify, { SnotifyPosition } from 'vue-snotify';
@@ -14,6 +16,7 @@ import 'vue-snotify/styles/material.scss';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
+import About from '@/components/About';
 import Home from '@/components/Home';
 import Sync from '@/components/Sync';
 import Update from '@/components/Update';
@@ -55,6 +58,7 @@ const VueCookie = require('vue-cookie');
 const config = require('./../config');
 
 faLibrary.add(fas);
+faLibrary.add(fab);
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 
 Vue.use(Router);
@@ -116,6 +120,12 @@ export default new Router({
       path: '/filetree',
       name: 'filetree',
       component: FileTree,
+      beforeEnter: Vue.prototype.$auth.requireAuth,
+    },
+    {
+      path: '/reroute',
+      name: 'reroute',
+      component: About,
       beforeEnter: Vue.prototype.$auth.requireAuth,
     },
     {

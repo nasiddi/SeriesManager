@@ -32,13 +32,15 @@ if (config.logging.http) {
   app.use(morgan('dev', { stream: winston.stream }));
 }
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+app.use(bodyParser.json({ limit: '100mb' }));
 app.use(cookieParser());
 app.use(compression());
 
-app.use(cors({
-  exposedHeaders: ['X-Access-Token', 'X-Access-Token-Expiry', 'X-File-Hash'].join(','),
-}));
+app.use(
+  cors({
+    exposedHeaders: ['X-Access-Token', 'X-Access-Token-Expiry', 'X-File-Hash'].join(','),
+  }),
+);
 
 // https://github.com/scotch-io/node-token-authentication
 

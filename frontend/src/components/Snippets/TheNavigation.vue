@@ -26,22 +26,13 @@
     >
       <b-navbar-nav v-if="loggedIn">
 
-        <b-nav-form>
-          <b-button
-            size="sm"
-            class="my-2 my-sm-0"
-            type="submit"
-            @click="reload">
-            <font-awesome-icon icon="sync-alt"/>
-          </b-button>
-        </b-nav-form>
-
-        <b-nav-item
-          :to="{ name: 'sync.prep' }"
-          :active="isRoutePrefix('sync')">
-          <font-awesome-icon icon="cloud-upload-alt"/>
-          Reload
-        </b-nav-item>
+        <b-button
+          size="sm"
+          class="my-2 my-sm-0"
+          type="submit"
+          @click="reload">
+          <font-awesome-icon icon="sync-alt"/>
+        </b-button>
 
         <b-nav-item
           :to="{ name: 'sync.prep' }"
@@ -55,7 +46,26 @@
             <font-awesome-icon icon="th" /> Batch
           </b-dropdown-item>
           <b-dropdown-item :to="{ name: 'synclog' }">
-            <font-awesome-icon icon="th" /> Log
+            <font-awesome-icon icon="list" /> Log
+          </b-dropdown-item>
+        </b-nav-item-dropdown>
+
+        <b-nav-item
+          :to="{ name: 'filetree' }"
+          :active="isRoutePrefix('filetree')">
+          <font-awesome-icon :icon="['fab', 'elementor']"/>
+          FileTree
+        </b-nav-item>
+
+        <b-nav-item-dropdown>
+          <b-dropdown-item :to="{ name: 'filetree.errorsearch' }">
+            <font-awesome-icon icon="exclamation-circle" /> ErrorSearch
+          </b-dropdown-item>
+          <b-dropdown-item :to="{ name: 'filetree.dictionary' }">
+            <font-awesome-icon icon="atlas" /> Dictionary
+          </b-dropdown-item>
+          <b-dropdown-item :to="{ name: 'filetree.missing' }">
+            <font-awesome-icon icon="ghost" /> Missing Files
           </b-dropdown-item>
         </b-nav-item-dropdown>
 
@@ -120,6 +130,23 @@ export default {
     },
     isRoutePrefix(prefix) {
       return this.$router.currentRoute.path.split('/')[1] === prefix;
+    },
+    async reload() {
+      let notifLoading = null;
+      this.$http
+        .post('jobs/reload')
+        .then((notifLoading = this.$snotify.info('Reloading', { timeout: 0 })))
+        .then((res) => {
+          this.$snotify.remove(notifLoading.id);
+          if (res.body === 'failed') {
+            this.$snotify.error('Loading failed');
+          } else {
+            this.$snotify.success(res.body);
+            this.$router.push({
+              name: 'dashboard',
+            });
+          }
+        });
     },
   },
 };

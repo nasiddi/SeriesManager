@@ -1,7 +1,7 @@
 import platform
 import os
 
-DEBUG = False
+DEBUG = True
 
 
 # Status
@@ -45,7 +45,7 @@ else:
 
 # Extentions
 
-EXTENTIONS = ['mp4', 'mkv', 'avi', 'flv', 'm4v', 'divx', 'webm']
+EXTENSIONS = ['mp4', 'mkv', 'avi', 'flv', 'm4v', 'divx', 'webm']
 SUBS = ['idx', 'sub', 'srt']
 
 

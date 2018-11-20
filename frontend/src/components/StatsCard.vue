@@ -50,7 +50,7 @@
         <b-col class="text-center">
           <h6 class="mt-3">Extentions</h6>
           <pie-chart
-            :chart-data="getPieData(show.extention)"
+            :chart-data="getPieData(show.extension)"
             :options="chartOptions"
             :style="{display: 'inline-block'}"
             :width="150"

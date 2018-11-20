@@ -16,7 +16,7 @@
       class="mt-3"
       @click.prevent="updateAll"
     >Update All</b-button>
-    <FileCard
+    <SyncCard
       v-for="file in json.files"
       ref="card"
       :key="file.location"
@@ -44,14 +44,14 @@
 </template>
 
 <script>
-import FileCard from './FileCard';
+import SyncCard from './SyncCard';
 
 const _ = require('lodash');
 
 
 export default {
   components: {
-    FileCard,
+    SyncCard,
   },
   data: () => ({
     json: {},

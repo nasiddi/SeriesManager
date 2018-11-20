@@ -38,6 +38,10 @@ routes.post('/filetree', async (req, res) => {
   python.fileTree(req.body, res);
 });
 
+routes.post('/filetree/save', async (req, res) => {
+  python.saveFileTree(req.body, res);
+});
+
 routes.post('/stats', async (req, res) => {
   python.getStats(res);
 });

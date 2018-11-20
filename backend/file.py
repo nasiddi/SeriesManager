@@ -38,7 +38,7 @@ class File:
         self.subs = subs
         self.type_option = type_option
         self.new_location = new_location
-        self.extention = location.split('.')[-1]
+        self.extension = location.split('.')[-1]
         self.status = status
         self.anime = False
         self.new_series = new_series

@@ -21,7 +21,7 @@ class Episode:
                  quality=''):
         self.location = location
         self.file_name = os.path.basename(location)
-        self.extention = ''
+        self.extension = ''
         self.s_nr = s_nr
         self.anime = False
         if os.path.normpath(location).split(os.path.sep)[1 + MAC_OFFSET] == 'Anime':
@@ -41,8 +41,8 @@ class Episode:
         self.quality = quality
         if e_nr == 999:
             self.parse_episode_nr()
-        if self.extention == '':
-            self.parse_episode_name_and_extention()
+        if self.extension == '':
+            self.parse_episode_name_and_extension()
 
     def save(self):
         return {'duration': self.duration,
@@ -65,11 +65,11 @@ class Episode:
         shutil.move(old_loc, self.location)
         self.file_name = os.path.basename(self.location)
 
-    def parse_episode_name_and_extention(self):
+    def parse_episode_name_and_extension(self):
         file_name = self.file_name
         dot = file_name.rfind('.')
         if dot >= 0:
-            self.extention = file_name[dot+1:]
+            self.extension = file_name[dot + 1:]
         name = file_name[:dot]
         match = re.findall(re.compile(SERIES_PATTERN), name)
         if not match:

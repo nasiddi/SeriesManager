@@ -1,5 +1,12 @@
 <template>
   <div v-if="json.length !== 0 && 'shows' in json">
+    <b-button
+      variant="success"
+      size="lg"
+      block
+      class="mt-3"
+      @click.prevent="save"
+    >Save Changes</b-button>
     <b-row class="mt-3">
       <b-col>
         <b-form-select
@@ -24,33 +31,12 @@
         <b-collapse
           :id="'s' + s.key.toString()"
           v-model="s.opened">
-          <b-row
+          <FileCard
             v-for="e in s.episodes"
-            :key="e.key"
-            class="mt-2 px-3">
-            <b-card
-              :style="{width: '100%'}"
-              no-body
-              class="px-2 py-2 mt-2">
-              <b-row>
-                <b-col>
-                  <b-button
-                    :class="e.opened ? 'collapsed' : null"
-                    :aria-expanded="e.opened ? 'true' : 'false'"
-                    :style="{width: '100%'}"
-                    aria-controls="'e' + e.key.toString()"
-                    variant="outline-primary"
-                    @click="e.opened = !e.opened"
-                  >{{ e.key }}</b-button>
-                </b-col>
-                <b-col
-                  sm="11"
-                  class="mt-2">
-                  {{ (e.path) ? e.location : e.file_name }}
-                </b-col>
-              </b-row>
-            </b-card>
-          </b-row>
+            ref="card"
+            :key="e.e_enr"
+            :e="e"
+            class="mt-2 px-3"/>
         </b-collapse>
       </b-col>
     </b-row>
@@ -59,10 +45,14 @@
 
 <script>
 
+import FileCard from './FileCard';
+
 const _ = require('lodash');
+
 
 export default {
   components: {
+    FileCard,
   },
   data: () => ({
     json: {},
@@ -120,14 +110,48 @@ export default {
             });
           } else {
             this.json = body;
+
+            if ('selected' in this.$route.params) {
+              this.selected = this.$route.params.selected;
+            } else {
             // eslint-disable-next-line prefer-destructuring
-            this.selected = Object.values(body.shows)
-              .map(s => s.series_name).sort()[0];
+              this.selected = Object.values(body.shows)
+                .map(s => s.series_name).sort()[0];
+            }
           }
           this.$snotify.remove(this.notifLoading.id);
         },
         () => {
           this.$snotify.error('Failed to load data', { timeout: 0 });
+        },
+      );
+    },
+    save() {
+      this.notifLoading = this.$snotify.info('Saving', { timeout: 0 });
+      this.$http.post('jobs/filetree/save', this.json).then(
+        (res) => {
+          const body = _.defaults(res.body, {
+          });
+
+          if ('shows_locked' in body) {
+            this.notifLock = this.$snotify.confirm('', 'Shows locked', {
+              timeout: 0,
+              buttons: [
+                { text: 'Unlock', action: () => this.unlockShows(), bold: true },
+              ],
+            });
+          } else {
+            this.json = body;
+          }
+          this.$snotify.remove(this.notifLoading.id);
+          this.$snotify.success('Done', { timeout: 500 });
+          this.$router.push({
+            name: 'reroute',
+            params: { selected: this.selected },
+          });
+        },
+        () => {
+          this.$snotify.error('Failed to save data', { timeout: 0 });
         },
       );
     },
