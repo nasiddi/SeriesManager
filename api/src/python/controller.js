@@ -454,6 +454,60 @@ async function missingFiles(body, res) {
   );
 }
 
+async function wordSearch(body, res) {
+  const outputFile = path.join(config.directories.storage, 'word_search');
+  console.log(body[0]);
+  await run(
+    'word_search',
+    '',
+    '',
+    '',
+    outputFile,
+    () => {},
+    async (code, signal) => {
+      if (!fs.existsSync(outputFile)) {
+        res.sendStatus(204).end();
+        return;
+      }
+
+      fs.readJson(outputFile, (err, file) => {
+        if (err) {
+          winston.error(err);
+          res.sendStatus(500).end();
+        }
+        res.json(file);
+      });
+    },
+  );
+}
+
+async function saveWords(body, res) {
+  const outputFile = path.join(config.directories.storage, 'save_words');
+  console.log(body[0]);
+  await run(
+    'save_words',
+    '',
+    '',
+    body,
+    outputFile,
+    () => {},
+    async (code, signal) => {
+      if (!fs.existsSync(outputFile)) {
+        res.sendStatus(204).end();
+        return;
+      }
+
+      fs.readJson(outputFile, (err, file) => {
+        if (err) {
+          winston.error(err);
+          res.sendStatus(500).end();
+        }
+        res.json(file);
+      });
+    },
+  );
+}
+
 module.exports = {
   reloadSeries,
   prepFiles,
@@ -468,4 +522,6 @@ module.exports = {
   fileTree,
   saveFileTree,
   missingFiles,
+  wordSearch,
+  saveWords,
 };

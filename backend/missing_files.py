@@ -26,10 +26,8 @@ def main(args):
 
 
 def load_all():
-    tree = {}
     for show in SHOWS.values():
-        tree[show.series_name] = get_show_data(show)
-    return tree
+        get_show_data(show)
 
 
 def get_show_data(show):

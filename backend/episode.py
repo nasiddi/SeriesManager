@@ -85,9 +85,20 @@ class Episode:
                 self.title2 = name[1]
             else:
                 self.title = name
-                self.title2 = name
         else:
             self.title = name
+
+    def get_title(self):
+        if not self.title:
+            return ''
+        if self.episode_option == DOUBLE:
+            if self.title2:
+                return '&'.join([self.title, self.title2])
+        elif self.episode_option == TRIPLE:
+            if self.title2 and self.title3:
+                return '&'.join([self.title, self.title2, self.title3])
+        return self.title
+
 
     def parse_episode_nr(self):
         if self.anime:

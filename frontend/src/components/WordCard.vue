@@ -2,154 +2,64 @@
   <div
     v-if="e.length !== 0">
     <b-card
-      :style="{width: '100%'}"
       no-body
-      class="px-3 py-2 mt-2">
+      class="px-3 pt-1 pb-2 mt-2">
       <b-row>
         <b-col
-          class="px-2 mb-1">
+          class="px-1 mt-1"
+          sm="1"
+          order="3"
+          order-md="1">
           <b-button
-            :aria-expanded="edit ? 'true' : 'false'"
+            :disabled="setInput(e.words[0])"
+            :pressed.sync="e.words[0].add"
+            :variant="'outline-success'"
             :style="{width: '100%'}"
-            :variant="buttonColor"
-            aria-controls="'e' + e.key.toString()"
-            @click="edit = !edit"
-          >{{ enr }}</b-button>
+          >Add</b-button>
         </b-col>
         <b-col
-          class="px-2 mb-1"
-          sm="9">
+          class="px-1 mt-1"
+          sm="3"
+          order="2"
+          order-md="2">
           <b-input
-            id="title"
-            :disabled="isEdit"
-            v-model="e.title"/>
+            v-model="e.words[0].word"
+            :state="wordState(e.words[0])"/>
         </b-col>
         <b-col
-          v-if="edit"
-          class="px-2 mb-1"
-          sm>
-          <b-button
-            :variant="'success'"
-            :style="{width: '100%'}"
-            @click="updateTitle"
-          >Update</b-button>
+          class="px-1 mt-1"
+          sm="8"
+          order="1"
+          order-md="3">
+          <b-input
+            v-model="e.file"
+            disabled/>
         </b-col>
       </b-row>
-      <div
-        v-if="edit">
-        <b-row>
-          <b-col
-            class="px-2 mt-1">
-            <b-input-group
-              :style="{width: '100%'}"
-              left="@">
-              <b-input
-                id="season"
-                v-model.number="e.s_nr"
-                type="number"
-                placeholder="S" />
-              <b-input
-                id="episode"
-                v-model.number="e.e_nr"
-                type="number"
-                placeholder="E" />
-            </b-input-group>
-          </b-col>
-          <b-col
-            class="px-2 mt-1"
-            sm>
-            <b-form-select
-              v-model="e.episode_option"
-              :options="episode_options"
-              :style="{width: '100%'}"
-              selected="Single"/>
-          </b-col>
-          <b-col
-            class="px-2 mt-1"
-            sm>
-            <b-button
-              :pressed.sync="e.save"
-              :variant="saveColor"
-              :style="{width: '100%'}"
-            >Save</b-button>
-          </b-col>
-          <b-col
-            class="px-2 mt-1"
-            sm>
-            <b-button
-              :pressed.sync="e.delete"
-              :variant="'outline-danger'"
-              :style="{width: '100%'}"
-            >Delete</b-button>
-          </b-col>
-        </b-row>
-        <b-row
-          v-if="e.episode_option !== 'Single'"
-          class="mt-2">
-          <b-col
-            sm
-            class="px-2">
-            <b-input
-              id="checkTitle2"
-              v-model="e.title2"
-              placeholder="Title 2" />
-          </b-col>
-        </b-row>
-        <b-row
-          v-if="e.episode_option === 'Triple'"
-          class="mt-2">
-          <b-col
-            sm
-            class="px-2">
-            <b-input
-              id="title3"
-              v-model="e.title3"
-              placeholder="Title 3" />
-          </b-col>
-        </b-row>
-        <b-row class="text-center mt-1">
-          <b-col
-            class="px-2"
-            sm>
-            <b-card
-              :style="{width: '100%'}"
-              class="text-center py-1 mt-1"
-              no-body>
-              {{ e.duration }} min
-            </b-card>
-          </b-col>
-          <b-col
-            class="px-2"
-            sm>
-            <b-card
-              :style="{width: '100%'}"
-              class="text-center py-1 mt-1"
-              no-body>
-              {{ e.size }} MB
-            </b-card>
-          </b-col>
-          <b-col
-            class="px-2"
-            sm>
-            <b-card
-              :style="{width: '100%'}"
-              class="text-center py-1 mt-1"
-              no-body>
-              {{ e.quality }} res
-            </b-card>
-          </b-col>
-          <b-col
-            class="px-2"
-            sm>
-            <b-card
-              :style="{width: '100%'}"
-              class="text-center py-1 mt-1"
-              no-body>
-              {{ e.extension }}
-            </b-card>
-          </b-col>
-        </b-row>
-      </div>
+      <b-row
+        v-for="w in e.words.slice(1)"
+        :key="w.key">
+        <b-col
+          class="px-1 mt-1"
+          sm="1"
+          order="2"
+          order-md="1">
+          <b-button
+            :pressed.sync="w.add"
+            :variant="'outline-success'"
+            :style="{width: '100%'}"
+          >Add</b-button>
+        </b-col>
+        <b-col
+          class="px-1 mt-1"
+          sm="3"
+          order="1"
+          order-md="2">
+          <b-input
+            v-model="w.word"
+            :state="wordState(w)"/>
+        </b-col>
+      </b-row>
     </b-card>
   </div>
 </template>
@@ -279,6 +189,38 @@ export default {
     this.updated = _.cloneDeep(this.e);
   },
   methods: {
+    setInput(w) {
+      if (w.lastInput === '') {
+        // eslint-disable-next-line no-param-reassign
+        w.lastInput = null;
+      }
+      return false;
+    },
+    wordState(w) {
+      if (this.checkWrongSymbols(w.word)) {
+        // eslint-disable-next-line no-param-reassign
+        w.add = false;
+        // eslint-disable-next-line no-param-reassign
+        w.lastInput = false;
+        return false;
+      }
+
+      let state = null;
+      if (w.key !== w.word) {
+        state = true;
+        // eslint-disable-next-line no-param-reassign
+        w.changed = true;
+      } else {
+        state = null;
+        // eslint-disable-next-line no-param-reassign
+        w.changed = false;
+      }
+      if (w.lastInput === false) {
+        // eslint-disable-next-line no-param-reassign
+        w.add = true;
+      }
+      return state;
+    },
     hasChanged(e) {
       const o = this.original;
       if (e.title !== o.title) {

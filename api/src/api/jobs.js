@@ -39,6 +39,14 @@ routes.post('/filetree/save', async (req, res) => {
   python.saveFileTree(req.body, res);
 });
 
+routes.post('/filetree/dictionary', async (req, res) => {
+  python.wordSearch(req.body, res);
+});
+
+routes.post('/filetree/savedictionary', async (req, res) => {
+  python.saveWords(req.body, res);
+});
+
 routes.post('/stats', async (req, res) => {
   python.getStats(res);
 });

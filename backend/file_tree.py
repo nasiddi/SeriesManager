@@ -53,7 +53,6 @@ def load_all():
 def get_show_data(show):
     seasons = []
     for season in show.seasons.values():
-        #check_for_missing_season(show, season, sorted(show.seasons.values(), key=lambda x: x.s_nr))
         sea = {'key': season.s_nr, 'episodes': [], 'opened': False}
         episodes = sorted(list(season.episodes.values()), key=lambda x: x.e_nr)
         for episode in episodes:

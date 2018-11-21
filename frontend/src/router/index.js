@@ -13,7 +13,6 @@ import Snotify, { SnotifyPosition } from 'vue-snotify';
 import VueLodash from 'vue-lodash';
 import Meta from 'vue-meta';
 
-
 import 'vue-snotify/styles/material.scss';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -32,6 +31,7 @@ import Stats from '@/components/Stats';
 import FileTree from '@/components/FileTree';
 import SyncLog from '@/components/SyncLog';
 import MissingFiles from '@/components/MissingFiles';
+import Dictionary from '@/components/Dictionary';
 
 import Login from '@/components/Auth/Login';
 import Auth from '@/components/Auth/utils';
@@ -53,7 +53,6 @@ Vue.use(Meta);
 Vue.use(VueMoment);
 Vue.use(VueCookie);
 
-
 Vue.use(VueLodash, { name: '_' });
 
 Vue.http.options.root = config.rootUrl;
@@ -63,13 +62,11 @@ Vue.http.interceptors.push((request) => {
 
 Vue.use(Auth);
 
-
 Vue.use(Snotify, {
   toast: {
     position: SnotifyPosition.rightTop,
   },
 });
-
 
 export default new Router({
   mode: 'history',
@@ -107,9 +104,15 @@ export default new Router({
       beforeEnter: Vue.prototype.$auth.requireAuth,
     },
     {
-      path: '/missing',
+      path: '/filetree/missing',
       name: 'filetree.missing',
       component: MissingFiles,
+      beforeEnter: Vue.prototype.$auth.requireAuth,
+    },
+    {
+      path: '/filetree/dictionary',
+      name: 'filetree.dictionary',
+      component: Dictionary,
       beforeEnter: Vue.prototype.$auth.requireAuth,
     },
     {
