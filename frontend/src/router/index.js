@@ -35,6 +35,7 @@ import Dictionary from '@/components/Dictionary';
 
 import Login from '@/components/Auth/Login';
 import Auth from '@/components/Auth/utils';
+import SettingsIndex from '@/components/Settings/Index';
 
 const VueMoment = require('vue-moment');
 const VueCookie = require('vue-cookie');
@@ -160,6 +161,12 @@ export default new Router({
       path: '/dashboard',
       name: 'dashboard',
       component: DashboardIndex,
+      beforeEnter: Vue.prototype.$auth.requireAuth,
+    },
+    {
+      path: '/settings',
+      name: 'settings',
+      component: SettingsIndex,
       beforeEnter: Vue.prototype.$auth.requireAuth,
     },
   ],

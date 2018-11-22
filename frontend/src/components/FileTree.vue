@@ -73,8 +73,12 @@ export default {
   watch: {
     selected: {
       handler() {
-        // eslint-disable-next-line prefer-destructuring
-        this.show = Object.values(this.json.shows).filter(s => s.series_name === this.selected)[0];
+        this.show = { loader: { seasons: [], series_name: 'loader' } };
+        this.sleep(10).then(() => {
+          // eslint-disable-next-line prefer-destructuring
+          this.show = Object.values(this.json.shows)
+            .filter(s => s.series_name === this.selected)[0];
+        });
       },
     },
   },
@@ -84,6 +88,9 @@ export default {
   mounted() {
   },
   methods: {
+    sleep(milliseconds) {
+      return new Promise(resolve => setTimeout(resolve, milliseconds));
+    },
     unlockShows() {
       this.$snotify.remove(this.notifLock.id);
       this.$http.post('jobs/unlock')

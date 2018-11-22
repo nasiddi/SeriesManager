@@ -149,6 +149,18 @@
             </b-card>
           </b-col>
         </b-row>
+        <b-row class="text-center mt-1">
+          <b-col
+            class="px-2"
+            sm>
+            <b-card
+              :style="{width: '100%'}"
+              class="text-center py-1 mt-1"
+              no-body>
+              {{ e.duration }} min
+            </b-card>
+          </b-col>
+        </b-row>
       </div>
     </b-card>
   </div>

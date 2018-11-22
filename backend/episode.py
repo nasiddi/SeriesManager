@@ -76,6 +76,7 @@ class Episode:
             return
         pattern_index = name.find(match[-1])
         if ' - ' not in name[pattern_index:]:
+            self.title = file_name
             return
         name = name[pattern_index:].split(' - ', 1)[1]
         if self.episode_option == DOUBLE:

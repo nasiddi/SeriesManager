@@ -28,7 +28,7 @@
         v-else
         :style="{width: '100%'}"
         :title="json.info"
-        class="text-center mt-4"/>
+        class="text-center py-1 mt-4"/>
     </div>
   </div>
 </template>
