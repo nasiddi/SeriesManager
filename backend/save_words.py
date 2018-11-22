@@ -21,7 +21,7 @@ def main(args):
     # io_utlis.save_json(data, 'data/save_words.json')
 
     SHOWS = io_utlis.load_shows()
-    dictionary = io_utlis.load_json('data/dictionary.json')
+    dictionary = io_utlis.load_json(DICT_FILE)
 
     if SHOWS is None:
         io_utlis.save_json({'shows_locked': True}, os.environ['OUTPUT_FILE'])
@@ -49,7 +49,7 @@ def main(args):
             except Exception as e:
                 print('rename', e)
 
-    io_utlis.save_json(dictionary, 'data/dictionary.json')
+    io_utlis.save_json(dictionary, DICT_FILE)
     io_utlis.save_shows(SHOWS)
 
 

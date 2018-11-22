@@ -8,6 +8,8 @@ __pycache__/
 
 .idea
 
+backend/assets/shows*
+backend/assets/metadata.json
 # Distribution / packaging
 .Python
 develop-eggs/

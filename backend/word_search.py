@@ -13,14 +13,6 @@ WORDS = []
 MISSING = []
 
 def main(args):
-    # d = io_utlis.load_json('data/dictionary.json')
-    #
-    # with open('data/smallE.txt', 'r') as fh:
-    #     words = [line.rstrip() for line in fh]
-    # d['small']
-    # io_utlis.save_json(d, 'data/dictionary.json')
-    # return
-
     global SHOWS, DICTIONARY
     SHOWS = io_utlis.load_shows()
     io_utlis.parse_args(args)
@@ -29,10 +21,10 @@ def main(args):
         print('shows locked')
         return
 
-    DICTIONARY = io_utlis.load_json('data/dictionary.json')
+    DICTIONARY = io_utlis.load_json(DICT_FILE)
     load_all()
     new_dict = sorted(list(set(NEW_DICT)))
-    io_utlis.save_json(new_dict, 'data/dictionary.json')
+    io_utlis.save_json(new_dict, DICT_FILE)
 
     for l in WORDS:
         print(l)

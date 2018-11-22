@@ -27,7 +27,7 @@ def load_shows(reload=False):
     lock.close()
     if reload:
         return
-    return pickle_load('shows')
+    return pickle_load(SHOWS_FILE)
 
 
 def wait_on_creation(file_path):
@@ -43,8 +43,8 @@ def save_shows(shows):
     meta = {}
     for show in shows.keys():
         meta.update(shows[show].save())
-    pickle_dump(shows, 'shows')
-    save_json(meta, 'data/metadata.json')
+    pickle_dump(shows, SHOWS_FILE)
+    save_json(meta, META_FILE)
     try:
         os.remove(LOCK_File)
     except:
@@ -53,12 +53,12 @@ def save_shows(shows):
 
 
 
-def pickle_dump(data, name):
-    pickle.dump(data, open(os.path.join('data', name + '.pkl'), 'wb'))
+def pickle_dump(data, file):
+    pickle.dump(data, open(file, 'wb'))
 
 
-def pickle_load(name):
-    return pickle.load(open(os.path.join('data', name + '.pkl'), 'rb'))
+def pickle_load(file):
+    return pickle.load(open(file, 'rb'))
 
 
 def parse_args(args):

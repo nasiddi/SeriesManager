@@ -1,7 +1,7 @@
 import platform
 import os
 
-DEBUG = False
+DEBUG = True
 
 
 # Status
@@ -17,8 +17,11 @@ TRIPLE = 'Triple'
 
 # Locations
 
-LOCK_File = 'data\\shows.lock'
+LOCK_File = 'assets/shows.lock'
 OUT_FILE = 'OUTPUT_FILE'
+META_FILE = 'assets/metadata.json'
+DICT_FILE = 'assets/dictionary.json'
+SHOWS_FILE = 'assets/shows.pkl'
 
 if platform.system() == 'Windows':
     SERIES_DIR = 'L:\\Series' if DEBUG else 'V:\\Series'
@@ -27,7 +30,6 @@ if platform.system() == 'Windows':
     SD_MOVIES = 'L:\\SD' if DEBUG else 'V:\\SD'
     FILE_DIR = 'L:\\complete\\' if DEBUG else 'V:\\downloads\\'
     SUB_DIR = 'T:\\Subs'
-    META_FILE = 'data\\metadata.json'
     MAC_OFFSET = 0
     SEPERATOR = '\\'
 
@@ -38,7 +40,6 @@ else:
     SD_MOVIES = '/Volumes/Downloads/SD' if DEBUG else '/Volumes/Video/SD'
     FILE_DIR = '/Volumes/Downloads/complete/' if DEBUG else '/Volumes/Video/downloads/'
     SUB_DIR = '/Volumes/Temp/Subs'
-    META_FILE = 'data/metadata.json'
     MAC_OFFSET = 2
     SEPERATOR = '/'
 
