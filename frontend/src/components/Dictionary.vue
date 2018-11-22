@@ -1,26 +1,35 @@
 <template>
 
-  <div v-if="json.length !== 0">
-    <b-button
-      variant="success"
-      size="lg"
-      block
-      class="my-3"
-      @click.prevent="save"
-    >Save Changes</b-button>
-    <WordCard
-      v-for="e in json"
-      ref="card"
-      :key="e.location"
-      :e="e"
-      class="mt-2 px-3"/>
-    <b-button
-      variant="success"
-      size="lg"
-      block
-      class="mt-3"
-      @click.prevent="save"
-    >Save Changes</b-button>
+  <div>
+    <div v-if="Object.keys(json).length !== 0">
+      <div v-if="json.words.length !== 0">
+        <b-button
+          variant="success"
+          size="lg"
+          block
+          class="my-3"
+          @click.prevent="save"
+        >Save Changes</b-button>
+        <WordCard
+          v-for="e in json.words"
+          ref="card"
+          :key="e.location"
+          :e="e"
+          class="mt-2 px-3"/>
+        <b-button
+          variant="success"
+          size="lg"
+          block
+          class="mt-3"
+          @click.prevent="save"
+        >Save Changes</b-button>
+      </div>
+      <b-card
+        v-else
+        :style="{width: '100%'}"
+        :title="json.info"
+        class="text-center mt-4"/>
+    </div>
   </div>
 </template>
 
@@ -121,10 +130,11 @@ export default {
               ],
             });
           } else {
-            this.json = body;
+            this.$snotify.remove(this.notifLoading.id);
+            this.loadData();
+            this.$snotify.success('Done', { timeout: 500 });
           }
           this.$snotify.remove(this.notifLoading.id);
-          this.$snotify.success('Done', { timeout: 500 });
         },
         () => {
           this.$snotify.error('Failed to save data', { timeout: 0 });

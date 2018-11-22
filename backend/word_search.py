@@ -4,6 +4,7 @@ import unlock_shows
 import time
 import sys
 from constants import *
+import re
 
 SHOWS = None
 DICTIONARY = {}
@@ -30,12 +31,13 @@ def main(args):
 
     DICTIONARY = io_utlis.load_json('data/dictionary.json')
     load_all()
-    io_utlis.save_json(sorted(NEW_DICT), 'data/dictionary.json')
+    new_dict = sorted(list(set(NEW_DICT)))
+    io_utlis.save_json(new_dict, 'data/dictionary.json')
 
     for l in WORDS:
         print(l)
     print(len(MISSING))
-    io_utlis.save_json(WORDS, os.environ['OUTPUT_FILE'])
+    io_utlis.save_json({'words': WORDS, 'info': 'Dictionary is up to date'}, os.environ['OUTPUT_FILE'])
     io_utlis.save_shows(SHOWS)
 
 
@@ -62,8 +64,8 @@ def search_for_new_words(e):
         w = words[i]
         if w == '':
             continue
+
         if w in DICTIONARY:
-            if w not in NEW_DICT:
                 NEW_DICT.append(w)
 
         else:
