@@ -95,7 +95,7 @@ def parse_args(args):
 
     with open("C:\\Users\\nadina\\Documents\\code\\FileManager\\assets\\names.txt") as f:
         names = f.readlines()
-        
+
     for line_s, line_n in zip(status, names):
         line_s = line_s.rstrip('\n')
         line_s = line_s.split(';')
