@@ -7,6 +7,8 @@ class File:
                  location='',
                  s_nr='',
                  e_nr='',
+                 s_nr_old='',
+                 e_nr_old='',
                  series_name='Series Name',
                  title='',
                  title2='',
@@ -27,6 +29,8 @@ class File:
         self.sync = sync
         self.s_nr = s_nr
         self.e_nr = e_nr
+        self.s_nr_old = s_nr_old
+        self.e_nr_old = e_nr_old
         self.e_nr2 = int(e_nr) + 1 if type(e_nr) == int else ''
         self.e_nr3 = int(e_nr) + 2 if type(e_nr) == int else ''
         self.series_name = series_name

@@ -8,6 +8,7 @@ from constants import *
 SHOWS = None
 MISSING = []
 
+
 def load_tree():
     global SHOWS
     SHOWS = io_utlis.load_shows()
@@ -18,6 +19,7 @@ def load_tree():
     tree_file['shows'] = load_all()
     io_utlis.save_shows(SHOWS)
     return tree_file
+
 
 def main(args):
     global SHOWS
@@ -56,12 +58,11 @@ def get_show_data(show):
         sea = {'key': season.s_nr, 'episodes': [], 'opened': False}
         episodes = sorted(list(season.episodes.values()), key=lambda x: x.e_nr)
         for episode in episodes:
+            check_for_spaces(show, episode)
             sea['episodes'].append({LOCATION: episode.location,
                                     'file_name': episode.file_name,
                                     'e_nr': episode.e_nr,
                                     's_nr': episode.s_nr,
-                                    'e_nr_old': episode.e_nr,
-                                    's_nr_old': episode.s_nr,
                                     'title': episode.title,
                                     'title2': episode.title2,
                                     'title3': episode.title3,
@@ -91,28 +92,6 @@ def check_for_missing_season(show, s, seasons):
         MISSING.append({SERIES_NAME: show.series_name, 's_nr': nr, 'e_nr': '*'})
 
 
-def check_for_missing_episode(show, e, episodes):
-    if e.e_nr >= 777:
-        return
-    index = episodes.index(e)
-    if index <= 0:
-        if e.e_nr <= 1:
-            return
-        for nr in range(1, e.e_nr):
-            MISSING.append({SERIES_NAME: show.series_name, 's_nr': e.s_nr, 'e_nr': nr})
-    last = episodes[index-1]
-    last_e_nr = last.e_nr
-    if last.episode_option == DOUBLE:
-        last_e_nr += 1
-    elif last.episode_option == TRIPLE:
-        last_e_nr += 2
-
-    for nr in range(last_e_nr + 1, e.e_nr):
-        MISSING.append({SERIES_NAME: show.series_name, 's_nr': e.s_nr, 'e_nr': nr})
-
-
-
-
 def check_for_multiple_files(show, e):
     if show.series_name == 'Doctor Who Classic':
         return False
@@ -121,6 +100,17 @@ def check_for_multiple_files(show, e):
     if e.e_nr < 777:
         return False
 
+
+def check_for_spaces(show, e):
+    if '  ' in e.file_name:
+        print(e)
+        print('Double Space')
+    name = e.file_name.rsplit('.', 1)
+    if not name:
+        return False
+    if name[0][-1] == ' ':
+        print(e)
+        print('Space at End')
 
 
 if __name__ == '__main__':

@@ -97,7 +97,7 @@ def sync_queue(queue=None):
             continue
         if file.override:
             delete_file(file)
-        if file_exists(file):
+        if file_exists(file, SHOWS):
             file.report['error'].append('File exists')
             continue
         try:
@@ -133,9 +133,9 @@ def sync_queue(queue=None):
                 CLEAN_UP.append(loc)
 
 
-def file_exists(file):
-    if SHOWS[file.series_name].get_episode_by_sxe(file.s_nr, file.e_nr):
-        if os.path.exists(SHOWS[file.series_name].get_episode_by_sxe(file.s_nr, file.e_nr).location):
+def file_exists(file, shows):
+    if shows[file.series_name].get_episode_by_sxe(file.s_nr, file.e_nr):
+        if os.path.exists(shows[file.series_name].get_episode_by_sxe(file.s_nr, file.e_nr).location):
             return True
     return False
 

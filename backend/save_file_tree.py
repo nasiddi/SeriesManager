@@ -52,6 +52,8 @@ def main(args):
                     e = File(location=e['location'],
                              s_nr=e['s_nr'],
                              e_nr=e['e_nr'],
+                             s_nr_old=e['s_nr_old'],
+                             e_nr_old=e['e_nr_old'],
                              series_name=n,
                              title=e['title'],
                              title2=e['title2'],
@@ -74,6 +76,8 @@ def save_queue(queue):
         if file.delete:
             os.remove(file.location)
             SHOWS[file.series_name].seasons[file.s_nr].update_episodes()
+        if syncer.file_exists(file, SHOWS):
+            continue
         try:
             shutil.move(file.location, file.new_location)
         except Exception as e:
@@ -86,6 +90,11 @@ def save_queue(queue):
             file.report['error'].append('Copy failed')
         if file.type_option == 'Series' and file.extension not in SUBS:
             show = SHOWS[file.series_name]
+            if not file.e_nr == file.e_nr_old or not file.s_nr == file.s_nr_old:
+                try:
+                    del show.seasons[file.s_nr_old].episodes[file.e_nr_old]
+                except:
+                    pass
             episode = Episode(location=file.new_location,
                               episode_option=file.episode_option,
                               title=file.title,
