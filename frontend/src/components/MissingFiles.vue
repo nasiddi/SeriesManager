@@ -6,7 +6,14 @@
       :variant="color(line.e_nr)"
       show
       class="mt-2 mx-2 mb-0">
+      <a
+        :href="getLink(line)"
+        target="_blank"
+        class="alert-link">
+        <font-awesome-icon icon="download"/>
+      </a>
       {{ message(line) }}
+
     </b-alert>
   </div>
 </template>
@@ -21,6 +28,8 @@ export default {
   },
   data: () => ({
     json: {},
+    baseLink: 'http://thepiratebay.org/search/',
+    endLink: '/0/3/0',
   }),
   computed: {
   },
@@ -37,6 +46,12 @@ export default {
         return 'danger';
       }
       return 'warning';
+    },
+    getLink(line) {
+      if (line.e_nr === '*') {
+        return `${this.baseLink}${line.series_name} season ${this.pad2(line.s_nr)}${this.endLink}`;
+      }
+      return `${this.baseLink}${line.series_name} s${this.pad2(line.s_nr)}e${this.pad2(line.e_nr)}${this.endLink}`;
     },
     message(line) {
       if (line.e_nr === '*') {
