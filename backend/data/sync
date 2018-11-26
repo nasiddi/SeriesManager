@@ -8,116 +8,6 @@
             "s": "Anime: No"
         },
         "delete": false,
-        "e_nr": 7,
-        "e_o": {
-            "o": [
-                "Single",
-                "Double",
-                "Triple"
-            ],
-            "s": "Single"
-        },
-        "location": "Hawaii.Five-0.2010.S09E07.720p.WEB.x265-MiNX[eztv].mkv",
-        "name_o": {
-            "o": [
-                "Name required",
-                "Name optional"
-            ],
-            "s": "Name required"
-        },
-        "new_series": false,
-        "override": false,
-        "s_nr": 9,
-        "series_name": "Hawaii Five-0",
-        "show_subs": false,
-        "status_o": {
-            "o": [
-                "Airing",
-                "Hiatus",
-                "Ended"
-            ],
-            "s": "Airing"
-        },
-        "subs": [],
-        "sync": true,
-        "t_o": {
-            "o": [
-                "Series",
-                "HD",
-                "SD",
-                "[ignore]"
-            ],
-            "s": "Series"
-        },
-        "title": "Pua a'e la ka uwahi o ka moe",
-        "title2": "",
-        "title3": "",
-        "tvdb_id": 164541
-    },
-    {
-        "anime_o": {
-            "o": [
-                "Anime: No",
-                "Anime: Yes"
-            ],
-            "s": "Anime: No"
-        },
-        "delete": false,
-        "e_nr": 7,
-        "e_o": {
-            "o": [
-                "Single",
-                "Double",
-                "Triple"
-            ],
-            "s": "Single"
-        },
-        "location": "Blue.Bloods.S09E07.720p.WEB.x265-MiNX[eztv].mkv",
-        "name_o": {
-            "o": [
-                "Name required",
-                "Name optional"
-            ],
-            "s": "Name required"
-        },
-        "new_series": false,
-        "override": false,
-        "s_nr": 9,
-        "series_name": "Blue Bloods",
-        "show_subs": false,
-        "status_o": {
-            "o": [
-                "Airing",
-                "Hiatus",
-                "Ended"
-            ],
-            "s": "Airing"
-        },
-        "subs": [],
-        "sync": true,
-        "t_o": {
-            "o": [
-                "Series",
-                "HD",
-                "SD",
-                "[ignore]"
-            ],
-            "s": "Series"
-        },
-        "title": "By Hook or By Crook",
-        "title2": "",
-        "title3": "",
-        "tvdb_id": 164981
-    },
-    {
-        "anime_o": {
-            "o": [
-                "Anime: No",
-                "Anime: Yes"
-            ],
-            "s": "Anime: No"
-        },
-        "delete": false,
         "e_nr": 4,
         "e_o": {
             "o": [
@@ -127,7 +17,7 @@
             ],
             "s": "Single"
         },
-        "location": "Would.I.Lie.to.You.S12E04.720p.iP.WEB-DL.AAC2.0.H.264-BTW/nFoysj0MTeaUNvtFhEccz.mkv",
+        "location": "Lethal.Weapon.S03E04.HDTV.x264-CRAVERS[eztv].mkv",
         "name_o": {
             "o": [
                 "Name required",
@@ -137,8 +27,63 @@
         },
         "new_series": false,
         "override": false,
-        "s_nr": 12,
-        "series_name": "Would I Lie to You",
+        "s_nr": 3,
+        "series_name": "Lethal Weapon",
+        "show_subs": false,
+        "status_o": {
+            "o": [
+                "Airing",
+                "Hiatus",
+                "Ended"
+            ],
+            "s": "Airing"
+        },
+        "subs": [],
+        "sync": true,
+        "t_o": {
+            "o": [
+                "Series",
+                "HD",
+                "SD",
+                "[ignore]"
+            ],
+            "s": "Series"
+        },
+        "title": "Leo Getz Justice",
+        "title2": "",
+        "title3": "",
+        "tvdb_id": 311790
+    },
+    {
+        "anime_o": {
+            "o": [
+                "Anime: No",
+                "Anime: Yes"
+            ],
+            "s": "Anime: No"
+        },
+        "delete": false,
+        "e_nr": 7,
+        "e_o": {
+            "o": [
+                "Single",
+                "Double",
+                "Triple"
+            ],
+            "s": "Single"
+        },
+        "location": "Titans.2018.S01E07.Asylum.720p.DCU.WEB-DL.AAC2.0.H264-NTb/ZHP23wsn4ndRFe4JZHjwi353w.mkv",
+        "name_o": {
+            "o": [
+                "Name required",
+                "Name optional"
+            ],
+            "s": "Name required"
+        },
+        "new_series": false,
+        "override": false,
+        "s_nr": 1,
+        "series_name": "Titans",
         "show_subs": false,
         "status_o": {
             "o": [
@@ -159,10 +104,10 @@
             ],
             "s": "Series"
         },
-        "title": "Prue Leith, Big Narstie, Scarlett Moffatt, Tomasz Schafernaker",
+        "title": "Asylum",
         "title2": "",
         "title3": "",
-        "tvdb_id": 82548
+        "tvdb_id": 341663
     },
     {
         "anime_o": {
@@ -173,7 +118,7 @@
             "s": "Anime: No"
         },
         "delete": false,
-        "e_nr": 5,
+        "e_nr": 7,
         "e_o": {
             "o": [
                 "Single",
@@ -182,7 +127,7 @@
             ],
             "s": "Single"
         },
-        "location": "Titans.2018.S01E05.WEBRip.x264-PBS[ettv]/Titans.2018.S01E05.WEBRip.x264-PBS[ettv].mkv",
+        "location": "Titans.2018.S01E07.720p.WEB.x265-MiNX[TGx]/Titans.2018.S01E07.720p.WEB.x265-MiNX.mkv",
         "name_o": {
             "o": [
                 "Name required",
@@ -214,120 +159,10 @@
             ],
             "s": "Series"
         },
-        "title": "Together",
+        "title": "Asylum",
         "title2": "",
         "title3": "",
         "tvdb_id": 341663
-    },
-    {
-        "anime_o": {
-            "o": [
-                "Anime: No",
-                "Anime: Yes"
-            ],
-            "s": "Anime: No"
-        },
-        "delete": false,
-        "e_nr": 1,
-        "e_o": {
-            "o": [
-                "Single",
-                "Double",
-                "Triple"
-            ],
-            "s": "Single"
-        },
-        "location": "Would.I.Lie.to.You.S12E01.720p.HDTV.x264-QPEL/6389VPjPV1C8Y8GUBxRqWzyrxyeRKYY8.mkv",
-        "name_o": {
-            "o": [
-                "Name required",
-                "Name optional"
-            ],
-            "s": "Name required"
-        },
-        "new_series": false,
-        "override": false,
-        "s_nr": 12,
-        "series_name": "Would I Lie to You",
-        "show_subs": false,
-        "status_o": {
-            "o": [
-                "Airing",
-                "Hiatus",
-                "Ended"
-            ],
-            "s": "Airing"
-        },
-        "subs": [],
-        "sync": false,
-        "t_o": {
-            "o": [
-                "Series",
-                "HD",
-                "SD",
-                "[ignore]"
-            ],
-            "s": "Series"
-        },
-        "title": "Dion Dublin, Debbie McGee, Bob Mortimer, Lucy Porter",
-        "title2": "",
-        "title3": "",
-        "tvdb_id": 82548
-    },
-    {
-        "anime_o": {
-            "o": [
-                "Anime: No",
-                "Anime: Yes"
-            ],
-            "s": "Anime: No"
-        },
-        "delete": false,
-        "e_nr": 5,
-        "e_o": {
-            "o": [
-                "Single",
-                "Double",
-                "Triple"
-            ],
-            "s": "Single"
-        },
-        "location": "Would.I.Lie.to.You.S12E05.720p.iP.WEB-DL.AAC2.0.H.264-BTW/6Zi3OR9WGeJy9h5g6.mkv",
-        "name_o": {
-            "o": [
-                "Name required",
-                "Name optional"
-            ],
-            "s": "Name required"
-        },
-        "new_series": false,
-        "override": false,
-        "s_nr": 12,
-        "series_name": "Would I Lie to You",
-        "show_subs": false,
-        "status_o": {
-            "o": [
-                "Airing",
-                "Hiatus",
-                "Ended"
-            ],
-            "s": "Airing"
-        },
-        "subs": [],
-        "sync": false,
-        "t_o": {
-            "o": [
-                "Series",
-                "HD",
-                "SD",
-                "[ignore]"
-            ],
-            "s": "Series"
-        },
-        "title": "Jonnie Peacock, Shaun Williamson, Jo Brand, Emma Bunton",
-        "title2": "",
-        "title3": "",
-        "tvdb_id": 82548
     },
     {
         "anime_o": {
@@ -347,7 +182,7 @@
             ],
             "s": "Single"
         },
-        "location": "Would.I.Lie.to.You.S12E03.720p.iP.WEB-DL.AAC2.0.H.264-BTW/FBWP7Oz849HRXSehTksk1pmZCaQ2Ca1Cq.mkv",
+        "location": "The.Walking.Dead.S09E03.HDTV.x264-SVA[rarbg]/The.Walking.Dead.S09E03.HDTV.x264-SVA.mkv",
         "name_o": {
             "o": [
                 "Name required",
@@ -357,8 +192,8 @@
         },
         "new_series": false,
         "override": false,
-        "s_nr": 12,
-        "series_name": "Would I Lie to You",
+        "s_nr": 9,
+        "series_name": "The Walking Dead",
         "show_subs": false,
         "status_o": {
             "o": [
@@ -369,7 +204,7 @@
             "s": "Airing"
         },
         "subs": [],
-        "sync": false,
+        "sync": true,
         "t_o": {
             "o": [
                 "Series",
@@ -379,174 +214,9 @@
             ],
             "s": "Series"
         },
-        "title": "Olivia Colman, Aston Merrygold, Jon Richardson, Michaela Strachan",
+        "title": "Warning Signs",
         "title2": "",
         "title3": "",
-        "tvdb_id": 82548
-    },
-    {
-        "anime_o": {
-            "o": [
-                "Anime: No",
-                "Anime: Yes"
-            ],
-            "s": "Anime: No"
-        },
-        "delete": false,
-        "e_nr": 8,
-        "e_o": {
-            "o": [
-                "Single",
-                "Double",
-                "Triple"
-            ],
-            "s": "Single"
-        },
-        "location": "Would.I.Lie.to.You.S11E08.720p.iP.WEB-DL.AAC2.0.H.264-BTW/KQtyTGw6UACtVhThHEGcn5fB9WpK5rkiHWEp.mkv",
-        "name_o": {
-            "o": [
-                "Name required",
-                "Name optional"
-            ],
-            "s": "Name required"
-        },
-        "new_series": false,
-        "override": false,
-        "s_nr": 11,
-        "series_name": "Would I Lie to You",
-        "show_subs": false,
-        "status_o": {
-            "o": [
-                "Airing",
-                "Hiatus",
-                "Ended"
-            ],
-            "s": "Airing"
-        },
-        "subs": [],
-        "sync": false,
-        "t_o": {
-            "o": [
-                "Series",
-                "HD",
-                "SD",
-                "[ignore]"
-            ],
-            "s": "Series"
-        },
-        "title": "Denise Lewis, Richard Osman, Judge Rinder, Katherine Ryan",
-        "title2": "",
-        "title3": "",
-        "tvdb_id": 82548
-    },
-    {
-        "anime_o": {
-            "o": [
-                "Anime: No",
-                "Anime: Yes"
-            ],
-            "s": "Anime: No"
-        },
-        "delete": true,
-        "e_nr": 6,
-        "e_o": {
-            "o": [
-                "Single",
-                "Double",
-                "Triple"
-            ],
-            "s": "Single"
-        },
-        "location": "Criminal.Minds.S14E06.720p.WEB.x264-TBS/KrzvXnFOo1HpfHOa.mkv",
-        "name_o": {
-            "o": [
-                "Name required",
-                "Name optional"
-            ],
-            "s": "Name required"
-        },
-        "new_series": false,
-        "override": false,
-        "s_nr": 14,
-        "series_name": "Criminal Minds",
-        "show_subs": false,
-        "status_o": {
-            "o": [
-                "Airing",
-                "Hiatus",
-                "Ended"
-            ],
-            "s": "Airing"
-        },
-        "subs": [],
-        "sync": false,
-        "t_o": {
-            "o": [
-                "Series",
-                "HD",
-                "SD",
-                "[ignore]"
-            ],
-            "s": "Series"
-        },
-        "title": "Luke",
-        "title2": "",
-        "title3": "",
-        "tvdb_id": 75710
-    },
-    {
-        "anime_o": {
-            "o": [
-                "Anime: No",
-                "Anime: Yes"
-            ],
-            "s": "Anime: No"
-        },
-        "delete": false,
-        "e_nr": 9,
-        "e_o": {
-            "o": [
-                "Single",
-                "Double",
-                "Triple"
-            ],
-            "s": "Single"
-        },
-        "location": "Would.I.Lie.to.You.S11E09.720p.iP.WEB-DL.AAC2.0.H.264-BTW/tFKXUFj53bkQ2uxV6g4pegWqcGFegqQhHm.mkv",
-        "name_o": {
-            "o": [
-                "Name required",
-                "Name optional"
-            ],
-            "s": "Name required"
-        },
-        "new_series": false,
-        "override": false,
-        "s_nr": 11,
-        "series_name": "Would I Lie to You",
-        "show_subs": false,
-        "status_o": {
-            "o": [
-                "Airing",
-                "Hiatus",
-                "Ended"
-            ],
-            "s": "Airing"
-        },
-        "subs": [],
-        "sync": false,
-        "t_o": {
-            "o": [
-                "Series",
-                "HD",
-                "SD",
-                "[ignore]"
-            ],
-            "s": "Series"
-        },
-        "title": null,
-        "title2": "",
-        "title3": "",
-        "tvdb_id": 82548
+        "tvdb_id": 153021
     }
 ]

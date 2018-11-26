@@ -8,7 +8,7 @@ import sys
 
 def main(args):
     io_utlis.parse_args(args)
-    shows = io_utlis.pickle_load('shows')
+    shows = io_utlis.load_shows()
     file_list = []
     subs = []
     for root, dirs, files in os.walk(FILE_DIR):

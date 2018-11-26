@@ -5,255 +5,142 @@
             "e_start": 4,
             "key": 0,
             "matches": [
-                "S17E01",
-                "S17E02",
-                "S17E03",
-                "S17E04",
-                "S17E05",
-                "S17E06",
-                "S17E07",
-                "S17E09",
-                "S02E11",
-                "S03E07",
-                "S01E01",
-                "S01E02",
-                "S01E03",
+                "S01E08",
                 "S01E04",
-                "S01E05",
+                "S01E03",
+                "S01E09",
                 "S01E06",
+                "S01E01",
+                "S01E10",
+                "S01E02",
                 "S01E07",
+                "S01E05",
+                "S01E04",
+                "S01E07",
+                "S01E01",
+                "S01E06",
+                "S01E02",
                 "S01E08",
                 "S01E09",
-                "S05E13",
+                "S01E05",
+                "S01E03",
+                "S01E10",
+                "S01E06",
+                "S01E03",
+                "S01E09",
+                "S01E04",
+                "S01E07",
                 "S01E01",
                 "S01E02",
-                "S01E03",
-                "S01E04",
                 "S01E05",
-                "S01E06",
-                "S01E07",
                 "S01E08",
+                "S01E10",
+                "S01E08",
+                "S01E04",
+                "S01E03",
                 "S01E09",
-                "S02E01",
-                "S02E01",
-                "S02E02",
-                "S02E02",
-                "S02E03",
-                "S02E03",
-                "S02E04",
-                "S02E04",
-                "S02E05",
-                "S02E05",
-                "S02E06",
-                "S02E06",
-                "S02E07",
-                "S02E07",
-                "S02E08",
-                "S02E08",
-                "S02E09",
-                "S02E09",
-                "S02E10",
-                "S02E10",
-                "S02E11",
-                "S02E11",
-                "S02E12",
-                "S02E12",
-                "S02E13",
-                "S02E13"
+                "S01E06",
+                "S01E01",
+                "S01E10",
+                "S01E02",
+                "S01E07",
+                "S01E05"
             ],
             "regex": "S[0-9]{2}E[0-9]{2}",
             "s_end": 3,
             "s_start": 1,
             "sxe": [
-                "17",
-                "01",
-                "17",
-                "02",
-                "17",
-                "03",
-                "17",
-                "04",
-                "17",
-                "05",
-                "17",
-                "06",
-                "17",
-                "07",
-                "17",
-                "09",
-                "02",
-                "11",
-                "03",
-                "07",
-                "01",
-                "01",
-                "01",
-                "02",
-                "01",
-                "03",
-                "01",
-                "04",
-                "01",
-                "05",
-                "01",
-                "06",
-                "01",
-                "07",
                 "01",
                 "08",
                 "01",
-                "09",
-                "05",
-                "13",
-                "01",
-                "01",
-                "01",
-                "02",
+                "04",
                 "01",
                 "03",
                 "01",
-                "04",
-                "01",
-                "05",
+                "09",
                 "01",
                 "06",
                 "01",
-                "07",
                 "01",
-                "08",
                 "01",
-                "09",
-                "02",
-                "01",
-                "02",
-                "01",
-                "02",
-                "02",
-                "02",
-                "02",
-                "02",
-                "03",
-                "02",
-                "03",
-                "02",
-                "04",
-                "02",
-                "04",
-                "02",
-                "05",
-                "02",
-                "05",
-                "02",
-                "06",
-                "02",
-                "06",
-                "02",
-                "07",
-                "02",
-                "07",
-                "02",
-                "08",
-                "02",
-                "08",
-                "02",
-                "09",
-                "02",
-                "09",
-                "02",
                 "10",
+                "01",
                 "02",
+                "01",
+                "07",
+                "01",
+                "05",
+                "01",
+                "04",
+                "01",
+                "07",
+                "01",
+                "01",
+                "01",
+                "06",
+                "01",
+                "02",
+                "01",
+                "08",
+                "01",
+                "09",
+                "01",
+                "05",
+                "01",
+                "03",
+                "01",
                 "10",
+                "01",
+                "06",
+                "01",
+                "03",
+                "01",
+                "09",
+                "01",
+                "04",
+                "01",
+                "07",
+                "01",
+                "01",
+                "01",
                 "02",
-                "11",
+                "01",
+                "05",
+                "01",
+                "08",
+                "01",
+                "10",
+                "01",
+                "08",
+                "01",
+                "04",
+                "01",
+                "03",
+                "01",
+                "09",
+                "01",
+                "06",
+                "01",
+                "01",
+                "01",
+                "10",
+                "01",
                 "02",
-                "11",
-                "02",
-                "12",
-                "02",
-                "12",
-                "02",
-                "13",
-                "02",
-                "13"
+                "01",
+                "07",
+                "01",
+                "05"
             ]
         },
         {
-            "e_end": 6,
-            "e_start": 4,
+            "e_end": "",
+            "e_start": "",
             "key": 1,
-            "matches": [
-                "s01e01",
-                "s01e02",
-                "s01e03",
-                "s01e04",
-                "s01e05",
-                "s01e06",
-                "s01e07",
-                "s01e08",
-                "s01e09",
-                "s02e01",
-                "s02e02",
-                "s02e03",
-                "s02e04",
-                "s02e05",
-                "s02e06",
-                "s02e07",
-                "s02e08",
-                "s02e09",
-                "s02e10",
-                "s02e11",
-                "s02e12",
-                "s02e13"
-            ],
-            "regex": "s[0-9]{2}e[0-9]{2}",
-            "s_end": 3,
-            "s_start": 1,
-            "sxe": [
-                "01",
-                "01",
-                "01",
-                "02",
-                "01",
-                "03",
-                "01",
-                "04",
-                "01",
-                "05",
-                "01",
-                "06",
-                "01",
-                "07",
-                "01",
-                "08",
-                "01",
-                "09",
-                "02",
-                "01",
-                "02",
-                "02",
-                "02",
-                "03",
-                "02",
-                "04",
-                "02",
-                "05",
-                "02",
-                "06",
-                "02",
-                "07",
-                "02",
-                "08",
-                "02",
-                "09",
-                "02",
-                "10",
-                "02",
-                "11",
-                "02",
-                "12",
-                "02",
-                "13"
-            ]
+            "matches": [],
+            "regex": "",
+            "s_end": "",
+            "s_start": "",
+            "sxe": []
         },
         {
             "e_end": "",
@@ -339,15 +226,37 @@
     "units": [
         {
             "files": [
-                "pl3x-lebenfest-1080p.mkv",
-                "pl3x-lebenfest-1080p-forced.idx",
-                "pl3x-lebenfest-1080p-forced.sub",
-                "pl3x-lebenfest-1080p.idx",
-                "pl3x-lebenfest-1080p.sub"
+                "Lost.in.Space.S01E08.Trajectory.720p.NF.WEBRip.x265-HETeam.mkv",
+                "Lost.in.Space.S01E04.The.Robinsons.Were.Here.720p.NF.WEBRip.x265-HETeam.mkv",
+                "Lost.in.Space.S01E03.Infestation.720p.NF.WEBRip.x265-HETeam.mkv",
+                "Lost.in.Space.S01E09.Resurrection.720p.NF.WEBRip.x265-HETeam.mkv",
+                "Lost.in.Space.S01E06.Eulogy.720p.NF.WEBRip.x265-HETeam.mkv",
+                "Lost.in.Space.S01E01.Impact.720p.NF.WEBRip.x265-HETeam.mkv",
+                "Lost.in.Space.S01E10.Danger.Will.Robinson.720p.NF.WEBRip.x265-HETeam.mkv",
+                "Lost.in.Space.S01E02.Diamonds.In.The.Sky.720p.NF.WEBRip.x265-HETeam.mkv",
+                "Lost.in.Space.S01E07.Pressurized.720p.NF.WEBRip.x265-HETeam.mkv",
+                "Lost.in.Space.S01E05.Transmission.720p.NF.WEBRip.x265-HETeam.mkv"
+            ],
+            "opened": false,
+            "select": true,
+            "text": "Lost in Space"
+        },
+        {
+            "files": [
+                "Altered.Carbon.S01E04.Force.of.Evil.720p.NF.WEB-DL.DDP5.1.x264-NTb.mkv",
+                "Altered.Carbon.S01E07.Nora.Inu.720p.NF.WEB-DL.DDP5.1.x264-NTb.mkv",
+                "Altered.Carbon.S01E01.Out.of.the.Past.720p.NF.WEB-DL.DDP5.1.x264-NTb.mkv",
+                "Altered.Carbon.S01E06.Man.with.My.Face.720p.NF.WEB-DL.DDP5.1.x264-NTb.mkv",
+                "Altered.Carbon.S01E02.Fallen.Angel.720p.NF.WEB-DL.DDP5.1.x264-NTb.mkv",
+                "Altered.Carbon.S01E08.Clash.by.Night.720p.NF.WEB-DL.DDP5.1.x264-NTb.mkv",
+                "Altered.Carbon.S01E09.Rage.in.Heaven.720p.NF.WEB-DL.DDP5.1.x264-NTb.mkv",
+                "Altered.Carbon.S01E05.The.Wrong.Man.720p.NF.WEB-DL.DDP5.1.x264-NTb.mkv",
+                "Altered.Carbon.S01E03.In.a.Lonely.Place.720p.NF.WEB-DL.DDP5.1.x264-NTb.mkv",
+                "Altered.Carbon.S01E10.The.Killers.720p.NF.WEB-DL.DDP5.1.x264-NTb.mkv"
             ],
             "opened": false,
             "select": false,
-            "text": "Das Leben ist ein Fest BluRay"
+            "text": "Altered.Carbon.S01.720p.NF.WEB-DL.DDP5.1.x264-NTb[ettv]"
         },
         {
             "files": [
@@ -357,308 +266,78 @@
             ],
             "opened": false,
             "select": false,
-            "text": "fsdrgtujzhsgeahzusd"
+            "text": "fsdrgtujzhsgeahzusd [ignore]"
         },
         {
             "files": [
-                "nSMi5vPkHrksb89us1ZWeK.mkv"
+                "pl3x-lebenfest-1080p.mkv",
+                "pl3x-lebenfest-1080p.idx",
+                "pl3x-lebenfest-1080p-forced.idx",
+                "pl3x-lebenfest-1080p.sub",
+                "pl3x-lebenfest-1080p-forced.sub"
             ],
             "opened": false,
             "select": false,
-            "text": "Killjoys.S04E04.720p.HDTV.x264-KILLERS"
-        },
-        {
-            "files": [
-                "Kuestenwache.S17E01.Die.Hand.des.Teufels.WS.HDTV.x264-pbw.mkv",
-                "Kuestenwache.S17E02.Starkstrom.WS.HDTV.x264-pbw.mkv",
-                "Kuestenwache.S17E03.Teuflische.List.WS.HDTV.x264-pbw.mkv",
-                "Kuestenwache.S17E04.Ein.schmutziges.Spiel.WS.HDTV.x264-pbw.mkv",
-                "Kuestenwache.S17E05.Die.Pforte.zum.Jenseits.WS.HDTV.x264-pbw.mkv",
-                "Kuestenwache.S17E06.Wink.des.Schicksals.WS.HDTV.x264-pbw.mkv",
-                "Kuestenwache.S17E07.Taeuschungsmanoever.WS.HDTV.x264-pbw.mkv",
-                "Kuestenwache.S17E09.Ehlers.grosse.Entscheidung.WS.HDTV.x264-pbw.mkv"
-            ],
-            "opened": false,
-            "select": false,
-            "text": "kuwa-S16"
-        },
-        {
-            "files": [
-                "oMQaf4qkcKGhYWgcrMBSCEpap19.mkv"
-            ],
-            "opened": false,
-            "select": false,
-            "text": "Money.Heist.S01E01.proper.1080p.web.x264-skgtv"
-        },
-        {
-            "files": [
-                "DKwoFb3zP1Abw55PyjnhDFvCdFBFX.mkv"
-            ],
-            "opened": false,
-            "select": false,
-            "text": "Money.Heist.S01E02.proper.1080p.web.x264-skgtv"
-        },
-        {
-            "files": [
-                "muGnYu0tOSPCb4tyQ.mkv"
-            ],
-            "opened": false,
-            "select": false,
-            "text": "Money.Heist.S01E03.proper.1080p.web.x264-skgtv"
-        },
-        {
-            "files": [
-                "af4fe0b99a87425ba91561dc84047e69.mkv"
-            ],
-            "opened": false,
-            "select": false,
-            "text": "Money.Heist.S01E04.proper.1080p.web.x264.1-skgtv"
-        },
-        {
-            "files": [
-                "byPicfBVbMsyy6ngodWXdApNaFgtH5Y0DnijYn.mkv"
-            ],
-            "opened": false,
-            "select": false,
-            "text": "Money.Heist.S01E05.proper.720p.web.x264-skgtv"
-        },
-        {
-            "files": [
-                "d58435846dd6484b949da6e7097635af.mkv"
-            ],
-            "opened": false,
-            "select": false,
-            "text": "Money.Heist.S01E06.proper.1080p.web.x264.1-skgtv"
-        },
-        {
-            "files": [
-                "0cf468fd7c2948eb996d1521790a5738.mkv"
-            ],
-            "opened": false,
-            "select": false,
-            "text": "Money.Heist.S01E07.proper.1080p.web.x264.1-skgtv"
-        },
-        {
-            "files": [
-                "3bOj0W1hpT5iNEfEy1.mkv"
-            ],
-            "opened": false,
-            "select": false,
-            "text": "Money.Heist.S01E08.proper.720p.web.x264-skgtv"
-        },
-        {
-            "files": [
-                "idfTWp29OsEE53Pss9BnVPobztYj.mkv"
-            ],
-            "opened": false,
-            "select": false,
-            "text": "Money.Heist.S01E09.proper.720p.web.x264-skgtv"
-        },
-        {
-            "files": [
-                "ksUGya9oxESFMMj5Y0MWy9Mb2a2To0jzcMQ.mkv"
-            ],
-            "opened": false,
-            "select": false,
-            "text": "Money.Heist.S01E10.proper.720p.web.x264-skgtv"
-        },
-        {
-            "files": [
-                "de43d5a2fa994af1b979457a54526234.mkv"
-            ],
-            "opened": false,
-            "select": false,
-            "text": "Money.Heist.S01E11.proper.1080p.web.x264.1-skgtv"
-        },
-        {
-            "files": [
-                "2a8f1c4c5536493f9d540ae4a7314083.mkv"
-            ],
-            "opened": false,
-            "select": false,
-            "text": "Money.Heist.S01E12.proper.1080p.web.x264.1-skgtv"
-        },
-        {
-            "files": [
-                "fdad6a7c2f634ee493785237f037f0f6.mkv"
-            ],
-            "opened": false,
-            "select": false,
-            "text": "Money.Heist.S01E13.proper.1080p.web.x264.1-skgtv"
-        },
-        {
-            "files": [
-                "Outlander Season 2 Episode 01- Through a Glass, Darkly.mp4",
-                "Outlander Season 2 Episode 02 \u2013 Not in Scotland Anymore.mp4",
-                "Outlander Season 2 Episode 03- Useful Occupations and Deceptions.mp4",
-                "Outlander Season 2 Episode 04- La Dame Blanche.mp4",
-                "Outlander Season 2 Episode 05- Untimely Resurrection.mp4",
-                "Outlander Season 2 Episode 06- Best Laid Schemes\u2026.mp4",
-                "Outlander Season 2 Episode 07 \u2013 Faith.mp4",
-                "Outlander Season 2 Episode 08 \u2013 The Fox\u2019s Lair.mp4",
-                "Outlander Season 2 Episode 09- Je Suis Prest.mp4",
-                "Outlander Season 2 Episode 10- Prestonpans.mp4",
-                "Outlander Season 2 Episode 11- Vengeance Is Mine.mp4",
-                "Outlander Season 2 Episode 12- The Hail Mary.mp4",
-                "Outlander Season 2 Episode 13- Dragonfly in Amber.mp4"
-            ],
-            "opened": false,
-            "select": false,
-            "text": "Outlander Season 2"
-        },
-        {
-            "files": [
-                "Outlander.S02E11.HDTV.x264-KILLERS[ettv].mkv"
-            ],
-            "opened": false,
-            "select": false,
-            "text": "Outlander.S02E11.HDTV.x264-KILLERS[ettv]"
-        },
-        {
-            "files": [],
-            "select": false,
-            "text": "Outlander.S03E07.Cr\u00e8me.de.Menthe.720p.WEBRip.2CH.x265.HEVC-PSA.mkv"
+            "text": "Das Leben ist ein Fest BluRay [ignore]"
         },
         {
             "files": [
                 "crcl-so.ist.paris.xvid-cd1.avi",
                 "crcl-so.ist.paris.xvid-cd2.avi",
-                "crcl-so.ist.paris.xvid-cd1.idx",
-                "crcl-so.ist.paris.xvid-cd1.sub",
                 "crcl-so.ist.paris.xvid-cd2.idx",
-                "crcl-so.ist.paris.xvid-cd2.sub"
+                "crcl-so.ist.paris.xvid-cd1.idx",
+                "crcl-so.ist.paris.xvid-cd2.sub",
+                "crcl-so.ist.paris.xvid-cd1.sub"
             ],
             "opened": false,
             "select": false,
             "text": "So ist Paris German AC3 DVDRip"
         },
         {
-            "files": [],
-            "select": false,
-            "text": "The Black Eyed Peas-I Gotta Feeling.mp3"
-        },
-        {
             "files": [
-                "expanse S01E01.mkv",
-                "The.Expanse.S01E02.1080p.BluRay.x264-ROVERS.mkv",
-                "The.Expanse.S01E03.1080p.BluRay.x264-ROVERS.mkv",
-                "The.Expanse.S01E04.1080p.BluRay.x264-ROVERS.mkv",
-                "The.Expanse.S01E05.1080p.BluRay.x264-ROVERS.mkv",
-                "The.Expanse.S01E06.RERIP.1080p.BluRay.x264-ROVERS.mkv",
-                "The.Expanse.S01E07.1080p.BluRay.x264-ROVERS.mkv",
-                "The.Expanse.S01E08.1080p.BluRay.x264-ROVERS.mkv",
-                "The.Expanse.S01E09-E10.1080p.BluRay.x264-ROVERS.mkv"
-            ],
-            "opened": true,
-            "select": true,
-            "text": "The Expanse Season 1 S01 1080p BluRay x264-ROVERS [RiCK]"
-        },
-        {
-            "files": [
-                "The.100.S05E13.720p.HDTV.x264-KILLERS[ettv].mkv"
+                "[TorrentCouch.com].Lost.in.Space.S01E06.720p.WEB-HD.x264.ESubs.mkv",
+                "[TorrentCouch.com].Lost.in.Space.S01E03.720p.WEB-HD.x264.ESubs.mkv",
+                "[TorrentCouch.com].Lost.in.Space.S01E09.720p.WEB-HD.x264.ESubs.mkv",
+                "[TorrentCouch.com].Lost.in.Space.S01E04.720p.WEB-HD.x264.ESubs.mkv",
+                "[TorrentCouch.com].Lost.in.Space.S01E07.720p.WEB-HD.x264.ESubs.mkv",
+                "[TorrentCouch.com].Lost.in.Space.S01E01.720p.WEB-HD.x264.ESubs.mkv",
+                "[TorrentCouch.com].Lost.in.Space.S01E02.720p.WEB-HD.x264.ESubs.mkv",
+                "[TorrentCouch.com].Lost.in.Space.S01E05.720p.WEB-HD.x264.ESubs.mkv",
+                "[TorrentCouch.com].Lost.in.Space.S01E08.720p.WEB-HD.x264.ESubs.mkv",
+                "[TorrentCouch.com].Lost.in.Space.S01E10.720p.WEB-HD.x264.ESubs.mkv"
             ],
             "opened": false,
             "select": false,
-            "text": "The.100.S05E13.720p.HDTV.x264-KILLERS[ettv]"
-        },
-        {
-            "files": [
-                "the.expanse.s01e01.1080p.bluray.x264-rovers.mkv",
-                "the.expanse.s01e02.1080p.bluray.x264-rovers.mkv",
-                "the.expanse.s01e03.1080p.bluray.x264-rovers.mkv",
-                "the.expanse.s01e04.1080p.bluray.x264-rovers.mkv",
-                "the.expanse.s01e05.1080p.bluray.x264-rovers.mkv",
-                "the.expanse.s01e06.rerip.1080p.bluray.x264-rovers.mkv",
-                "the.expanse.s01e07.1080p.bluray.x264-rovers.mkv",
-                "the.expanse.s01e08.1080p.bluray.x264-rovers.mkv",
-                "the.expanse.s01e09e10.1080p.bluray.x264-rovers.mkv",
-                "The.Expanse.S01E01.1080p.BluRay.x264-ROVERS.srt",
-                "The.Expanse.S01E02.1080p.BluRay.x264-ROVERS.srt",
-                "The.Expanse.S01E03.1080p.BluRay.x264-ROVERS.srt",
-                "The.Expanse.S01E04.1080p.BluRay.x264-ROVERS.srt",
-                "The.Expanse.S01E05.1080p.BluRay.x264-ROVERS.srt",
-                "The.Expanse.S01E06.Rerip.1080p.BluRay.x264-ROVERS.srt",
-                "The.Expanse.S01E07.1080p.BluRay.x264-ROVERS.srt",
-                "The.Expanse.S01E08.1080p.BluRay.x264-ROVERS.srt",
-                "The.Expanse.S01E09E10.1080p.BluRay.x264-ROVERS.srt"
-            ],
-            "opened": false,
-            "select": false,
-            "text": "The.Expanse.S01.1080p.BluRay.x264-ROVERS[rartv]"
-        },
-        {
-            "files": [
-                "the.expanse.s02e01.1080p.bluray.x264-rovers.mkv",
-                "the.expanse.s02e02.1080p.bluray.x264-rovers.mkv",
-                "the.expanse.s02e03.1080p.bluray.x264-rovers.mkv",
-                "the.expanse.s02e04.1080p.bluray.x264-rovers.mkv",
-                "the.expanse.s02e05.1080p.bluray.x264-rovers.mkv",
-                "the.expanse.s02e06.1080p.bluray.x264-rovers.mkv",
-                "the.expanse.s02e07.1080p.bluray.x264-rovers.mkv",
-                "the.expanse.s02e08.1080p.bluray.x264-rovers.mkv",
-                "the.expanse.s02e09.1080p.bluray.x264-rovers.mkv",
-                "the.expanse.s02e10.1080p.bluray.x264-rovers.mkv",
-                "the.expanse.s02e11.1080p.bluray.x264-rovers.mkv",
-                "the.expanse.s02e12.1080p.bluray.x264-rovers.mkv",
-                "the.expanse.s02e13.1080p.bluray.x264-rovers.mkv",
-                "The.Expanse.S02E01.1080p.BluRay.x264-ROVERS.idx",
-                "The.Expanse.S02E01.1080p.BluRay.x264-ROVERS.sub",
-                "The.Expanse.S02E02.1080p.BluRay.x264-ROVERS.idx",
-                "The.Expanse.S02E02.1080p.BluRay.x264-ROVERS.sub",
-                "The.Expanse.S02E03.1080p.BluRay.x264-ROVERS.idx",
-                "The.Expanse.S02E03.1080p.BluRay.x264-ROVERS.sub",
-                "The.Expanse.S02E04.1080p.BluRay.x264-ROVERS.idx",
-                "The.Expanse.S02E04.1080p.BluRay.x264-ROVERS.sub",
-                "The.Expanse.S02E05.1080p.BluRay.x264-ROVERS.idx",
-                "The.Expanse.S02E05.1080p.BluRay.x264-ROVERS.sub",
-                "The.Expanse.S02E06.1080p.BluRay.x264-ROVERS.idx",
-                "The.Expanse.S02E06.1080p.BluRay.x264-ROVERS.sub",
-                "The.Expanse.S02E07.1080p.BluRay.x264-ROVERS.idx",
-                "The.Expanse.S02E07.1080p.BluRay.x264-ROVERS.sub",
-                "The.Expanse.S02E08.1080p.BluRay.x264-ROVERS.idx",
-                "The.Expanse.S02E08.1080p.BluRay.x264-ROVERS.sub",
-                "The.Expanse.S02E09.1080p.BluRay.x264-ROVERS.idx",
-                "The.Expanse.S02E09.1080p.BluRay.x264-ROVERS.sub",
-                "The.Expanse.S02E10.1080p.BluRay.x264-ROVERS.idx",
-                "The.Expanse.S02E10.1080p.BluRay.x264-ROVERS.sub",
-                "The.Expanse.S02E11.1080p.BluRay.x264-ROVERS.idx",
-                "The.Expanse.S02E11.1080p.BluRay.x264-ROVERS.sub",
-                "The.Expanse.S02E12.1080p.BluRay.x264-ROVERS.idx",
-                "The.Expanse.S02E12.1080p.BluRay.x264-ROVERS.sub",
-                "The.Expanse.S02E13.1080p.BluRay.x264-ROVERS.idx",
-                "The.Expanse.S02E13.1080p.BluRay.x264-ROVERS.sub"
-            ],
-            "opened": true,
-            "select": true,
-            "text": "The.Expanse.S02.1080p.BluRay.x264-ROVERS[rartv]"
+            "text": "[TorrentCouch.com].Lost.in.Space.S01.Complete.720p.WEB-HD.x264.ESubs.[4GB].[Season.1.Full]"
         },
         {
             "files": [
                 "checkmate-der.wein.und.der.wind.2017.german.1080p.bluray.x264.mkv",
-                "checkmate-Der.Wein.und.der.Wind.2017.German.1080p.BluRay.x264-forced.idx",
-                "checkmate-Der.Wein.und.der.Wind.2017.German.1080p.BluRay.x264-forced.sub",
+                "checkmate-Der.Wein.und.der.Wind.2017.German.1080p.BluRay.x264.sub",
                 "checkmate-Der.Wein.und.der.Wind.2017.German.1080p.BluRay.x264.idx",
-                "checkmate-Der.Wein.und.der.Wind.2017.German.1080p.BluRay.x264.sub"
+                "checkmate-Der.Wein.und.der.Wind.2017.German.1080p.BluRay.x264-forced.idx",
+                "checkmate-Der.Wein.und.der.Wind.2017.German.1080p.BluRay.x264-forced.sub"
             ],
             "opened": false,
             "select": false,
-            "text": "Wein18p"
+            "text": "Wein18p [ignore]"
         },
         {
             "files": [
-                "1t1xZTwvUiGafhWWcrtx5tMhH7ZbvAR1sr3d7s.mkv"
+                "Lost.in.Space.S01E08.Trajectory.720p.NF.WEBRip.x265-HETeam.mkv",
+                "Lost.in.Space.S01E04.The.Robinsons.Were.Here.720p.NF.WEBRip.x265-HETeam.mkv",
+                "Lost.in.Space.S01E03.Infestation.720p.NF.WEBRip.x265-HETeam.mkv",
+                "Lost.in.Space.S01E09.Resurrection.720p.NF.WEBRip.x265-HETeam.mkv",
+                "Lost.in.Space.S01E06.Eulogy.720p.NF.WEBRip.x265-HETeam.mkv",
+                "Lost.in.Space.S01E01.Impact.720p.NF.WEBRip.x265-HETeam.mkv",
+                "Lost.in.Space.S01E10.Danger.Will.Robinson.720p.NF.WEBRip.x265-HETeam.mkv",
+                "Lost.in.Space.S01E02.Diamonds.In.The.Sky.720p.NF.WEBRip.x265-HETeam.mkv",
+                "Lost.in.Space.S01E07.Pressurized.720p.NF.WEBRip.x265-HETeam.mkv",
+                "Lost.in.Space.S01E05.Transmission.720p.NF.WEBRip.x265-HETeam.mkv"
             ],
             "opened": false,
             "select": false,
-            "text": "Wynonna.Earp.S03E04.720p.HDTV.x264-KILLERS"
-        },
-        {
-            "files": [
-                "Cr4zjqVRG0MZObZYeq.mkv"
-            ],
-            "opened": false,
-            "select": false,
-            "text": "Wynonna.Earp.S03E05.720p.HDTV.x264-KILLERS"
+            "text": "Crazy4TV.com - Lost.In.Space.Season.1.S01.720p.NF.WEBRip.x265-HETeam"
         }
     ]
 }
