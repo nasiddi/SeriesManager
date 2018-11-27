@@ -66,6 +66,32 @@ class Series:
         self.seasons[episode.s_nr].update_episodes()
         return new_season
 
+    def get_next(self, episode):
+        e_keys = sorted(self.seasons[episode.s_nr].episodes.keys())
+        index = e_keys.index(episode.e_nr)
+        if len(e_keys) > index + 1:
+            return self.seasons[episode.s_nr].episodes[e_keys[index + 1]]
+        s_keys = sorted(self.seasons.keys())
+        index = s_keys.index(episode.s_nr)
+        if len(s_keys) == index + 1:
+            return None
+        season = self.seasons[s_keys[index + 1]]
+        e = min(season.episodes.keys())
+        return season.episodes[e]
+
+    def get_previous(self, episode):
+        e_keys = sorted(self.seasons[episode.s_nr].episodes.keys())
+        index = e_keys.index(episode.e_nr)
+        if index > 0:
+            return self.seasons[episode.s_nr].episodes[e_keys[index - 1]]
+        s_keys = sorted(self.seasons.keys())
+        index = s_keys.index(episode.s_nr)
+        if index == 0:
+            return None
+        season = self.seasons[s_keys[index - 1]]
+        e = max(season.episodes.keys())
+        return season.episodes[e]
+
 
 
 

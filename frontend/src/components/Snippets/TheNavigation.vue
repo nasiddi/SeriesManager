@@ -58,7 +58,7 @@
         </b-nav-item>
 
         <b-nav-item-dropdown>
-          <b-dropdown-item :to="{ name: 'filetree.errorsearch' }">
+          <b-dropdown-item :to="{ name: 'reroute', params: {errors: true} }">
             <font-awesome-icon icon="exclamation-circle" /> ErrorSearch
           </b-dropdown-item>
           <b-dropdown-item :to="{ name: 'filetree.dictionary' }">

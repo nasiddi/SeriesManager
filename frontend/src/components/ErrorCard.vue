@@ -2,18 +2,17 @@
   <div
     v-if="e.length !== 0">
     <b-card
+      :title="e.message"
       :style="{width: '100%'}"
-      no-body
-      class="px-3 py-2 mt-2">
+      :header="e.header"
+      class="mt-2 text-center">
       <b-row>
         <b-col
           class="px-2 mb-1">
           <b-button
-            :aria-expanded="edit ? 'true' : 'false'"
             :style="{width: '100%'}"
             :variant="buttonColor"
             aria-controls="'e' + e.key.toString()"
-            @click="edit = !edit"
           >{{ enr }}</b-button>
         </b-col>
         <b-col
@@ -21,22 +20,21 @@
           sm="9">
           <b-input
             id="title"
-            :disabled="isEdit"
             v-model="e.title"/>
         </b-col>
         <b-col
-          v-if="edit"
           class="px-2 mb-1"
           sm>
-          <b-button
-            :variant="'success'"
-            :style="{width: '100%'}"
-            @click="updateTitle"
-          >Update</b-button>
+          <b-col
+            class="px-2 mb-1"
+            sm>
+            <b-input
+              v-model="e.extension"
+              :disabled="true"/>
+          </b-col>
         </b-col>
       </b-row>
-      <div
-        v-if="edit">
+      <div>
         <b-row>
           <b-col
             class="px-2 mt-1">
@@ -58,11 +56,11 @@
           <b-col
             class="px-2 mt-1"
             sm>
-            <b-form-select
-              v-model="e.episode_option"
-              :options="episode_options"
+            <b-button
+              :variant="'success'"
               :style="{width: '100%'}"
-              selected="Single"/>
+              @click="updateTitle"
+            >Update</b-button>
           </b-col>
           <b-col
             class="px-2 mt-1"
@@ -83,30 +81,6 @@
             >Delete</b-button>
           </b-col>
         </b-row>
-        <b-row
-          v-if="e.episode_option !== 'Single'"
-          class="mt-2">
-          <b-col
-            sm
-            class="px-2">
-            <b-input
-              id="checkTitle2"
-              v-model="e.title2"
-              placeholder="Title 2" />
-          </b-col>
-        </b-row>
-        <b-row
-          v-if="e.episode_option === 'Triple'"
-          class="mt-2">
-          <b-col
-            sm
-            class="px-2">
-            <b-input
-              id="title3"
-              v-model="e.title3"
-              placeholder="Title 3" />
-          </b-col>
-        </b-row>
         <b-row class="text-center mt-1">
           <b-col
             class="px-2"
@@ -115,49 +89,7 @@
               :style="{width: '100%'}"
               class="text-center py-1 mt-1"
               no-body>
-              {{ e.duration }} min
-            </b-card>
-          </b-col>
-          <b-col
-            class="px-2"
-            sm>
-            <b-card
-              :style="{width: '100%'}"
-              class="text-center py-1 mt-1"
-              no-body>
-              {{ e.size }} MB
-            </b-card>
-          </b-col>
-          <b-col
-            class="px-2"
-            sm>
-            <b-card
-              :style="{width: '100%'}"
-              class="text-center py-1 mt-1"
-              no-body>
-              {{ e.quality }} res
-            </b-card>
-          </b-col>
-          <b-col
-            class="px-2"
-            sm>
-            <b-card
-              :style="{width: '100%'}"
-              class="text-center py-1 mt-1"
-              no-body>
-              {{ e.extension }}
-            </b-card>
-          </b-col>
-        </b-row>
-        <b-row class="text-center mt-1">
-          <b-col
-            class="px-2"
-            sm>
-            <b-card
-              :style="{width: '100%'}"
-              class="text-center py-1 mt-1"
-              no-body>
-              {{ e.location }}
+              {{ e.old_location }}
             </b-card>
           </b-col>
         </b-row>
@@ -189,7 +121,6 @@ export default {
     ],
     original: {},
     updated: {},
-    edit: false,
     saveColor: 'outline-primary',
     wrongSymbols: [
       ':',
@@ -209,24 +140,8 @@ export default {
     ],
   }),
   computed: {
-    isEdit() {
-      return !this.edit;
-    },
     buttonColor() {
-      return this.edit ? 'secondary' : 'outline-secondary';
-    },
-    title() {
-      if (this.e.title === '') {
-        return '';
-      }
-      const eo = this.e.episode_option;
-      if (eo === 'Double' && this.e.title2 !== '') {
-        return `${this.e.title} & ${this.e.title2}`;
-      }
-      if (eo === 'Triple' && this.e.title3 !== '') {
-        return `${this.e.title} & ${this.e.title2} & ${this.e.title3}`;
-      }
-      return this.e.title;
+      return 'danger';
     },
     enr() {
       const eo = this.e.episode_option;
@@ -248,12 +163,6 @@ export default {
         if (this.checkWrongSymbols(e.title)) {
           return this.updateSave(false);
         }
-        if (this.checkWrongSymbols(e.title2)) {
-          return this.updateSave(false);
-        }
-        if (this.checkWrongSymbols(e.title3)) {
-          return this.updateSave(false);
-        }
         if (e.name_needed) {
           if (e.title === '') {
             return this.updateSave(false);
@@ -269,11 +178,6 @@ export default {
           return true;
         }
 
-        if (!this.hasChanged(e)) {
-          e.save = false;
-          o.save = e.save;
-          return true;
-        }
         if (e.save !== o.save) {
           o.save = e.save;
           return e.save;
@@ -291,31 +195,6 @@ export default {
     this.updated = _.cloneDeep(this.e);
   },
   methods: {
-    hasChanged(e) {
-      const o = this.original;
-      if (e.title !== o.title) {
-        return true;
-      }
-      if (e.title !== o.title) {
-        return true;
-      }
-      if (e.title2 !== o.title2) {
-        return true;
-      }
-      if (e.title3 !== o.title3) {
-        return true;
-      }
-      if (e.e_nr !== o.e_nr) {
-        return true;
-      }
-      if (e.s_nr !== o.s_nr) {
-        return true;
-      }
-      if (e.episode_option !== o.episode_option) {
-        return true;
-      }
-      return false;
-    },
     pad2(number) {
       return (number < 10 ? '0' : '') + number;
     },

@@ -89,6 +89,7 @@ def add_metadata(shows):
                 except:
                     print('*load metadata*', e.location)
 
+
 def main():
     start = time.time()
     print('running')

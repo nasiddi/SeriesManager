@@ -1,7 +1,7 @@
 import platform
 import os
 
-DEBUG = False
+DEBUG = True
 
 
 # Status
@@ -82,6 +82,8 @@ wrongSymbols = [
       '!',
       '@',
     ]
+
+NUMERALS = ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX']
 
 # print('meta', os.path.exists(META_FILE))
 # print('series', os.path.exists(SERIES_DIR))

@@ -20,11 +20,12 @@ def load_json(file):
     return j_data
 
 
-def load_shows(reload=False):
-    if os.path.exists(LOCK_File):
+def load_shows(reload=False, read_only=False):
+    if os.path.exists(LOCK_File) and not read_only:
         return None
-    lock = open(LOCK_File, 'w+')
-    lock.close()
+    if not read_only:
+        lock = open(LOCK_File, 'w+')
+        lock.close()
     if reload:
         return
     return pickle_load(SHOWS_FILE)

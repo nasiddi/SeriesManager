@@ -1,95 +1,85 @@
-import io_utlis
-import os
-import unlock_shows
-import time
-import sys
 from constants import *
 
-SHOWS = None
-MISSING = []
+
+def generate_error(message, e, show,
+                   title='',
+                   e_nr='',
+                   s_nr='',
+                   s_nr_old='',
+                   e_nr_old='',
+                   update=False,
+                   delete=False,
+                   ):
+    return {
+        'message': message,
+        'old_location': e.location,
+        'title': title if title else e.get_title(),
+        'series_name': show.series_name,
+        'e_nr': e_nr if e_nr else e.e_nr,
+        's_nr': s_nr if s_nr else e.s_nr,
+        's_nr_old': s_nr_old if s_nr_old else e.s_nr,
+        'e_nr_old': e_nr_old if e_nr_old else e.e_nr,
+        'save': update,
+        'delete': delete,
+        'extension': e.extension,
+        'header': e.file_name,
+        'tvdb_id': show.tvdb_id,
+        'name_needed': show.name_needed,
+        'episode_option': e.episode_option,
+        'anime': show.anime
+    }
 
 
-def load_tree():
-    global SHOWS
-    SHOWS = io_utlis.load_shows()
-    if SHOWS is None:
-        print('shows locked')
-        return {'shows_locked': True}
-    tree_file = {}
-    tree_file['shows'] = load_all()
-    io_utlis.save_shows(SHOWS)
-    return tree_file
+def check_part_number(show, e):
+    substring = None
+    t = e.get_title().split('Part ')
+    if len(t) == 0:
+        return False
+    if len(t) == 2:
+        prev_title = ''
+        next_title = ''
+        previous = show.get_previous(e)
+        following = show.get_next(e)
+        if previous:
+            prev_title = previous.get_title()
+        if following:
+            next_title = following.get_title()
+        if 'Part ' not in prev_title and 'Part ' not in next_title:
+            if next_title or show.status == ENDED:
+                return generate_error(message='Unnecessary Part Number', e=e, show=show)
+        if ' ' in t[-1]:
+            substring = t[-1].split(' ', 1)
+            t[-1] = substring[0]
+        if t[-1] in NUMERALS:
+            return False
+        if t[-1].isdigit():
+            t[-1] = NUMERALS[int(t[-1])]
+            if substring:
+                substring[0] = t[-1]
+                t[-1] = ' '.join(substring)
+            title = 'Part '.join(t)
+            return generate_error(message='Part Number Integer Error', e=e, show=show, title=title)
+        if len(set(t[-1])) == 1:
+            t[-1] = NUMERALS[len(t[-1])]
+            title = 'Part '.join(t)
+            return generate_error(message='Part Number Roman Error', e=e, show=show, title=title)
+        return generate_error(message='Part Number Parse Error', e=e, show=show)
+    if len(t) > 2:
+        return generate_error(message='Unnecessary Part Numbers', e=e, show=show)
+    return False
 
 
-def main(args):
-    global SHOWS
-    SHOWS = io_utlis.load_shows()
-    io_utlis.parse_args(args)
-    conf = io_utlis.load_json(os.environ["CONF_FILE"])
-    tree_file = io_utlis.load_json(os.environ['OUTPUT_FILE'])
-    if SHOWS is None:
-        io_utlis.save_json({'shows_locked': True}, os.environ['OUTPUT_FILE'])
-        print('shows locked')
-        return
-    series_name = conf[SERIES_NAME]
-
-    if series_name == '*':
-        tree_file = {}
-        tree_file['shows'] = load_all()
-    else:
-        show = SHOWS[series_name]
-        tree_file['shows'][series_name] = get_show_data(show)
-    for l in MISSING:
-        print(l)
-    io_utlis.save_json(tree_file, os.environ['OUTPUT_FILE'])
-    io_utlis.save_shows(SHOWS)
-
-
-def load_all():
-    tree = {}
-    for show in SHOWS.values():
-        tree[show.series_name] = get_show_data(show)
-    return tree
-
-
-def get_show_data(show):
-    seasons = []
-    for season in show.seasons.values():
-        sea = {'key': season.s_nr, 'episodes': [], 'opened': False}
-        episodes = sorted(list(season.episodes.values()), key=lambda x: x.e_nr)
-        for episode in episodes:
-            check_for_spaces(show, episode)
-            sea['episodes'].append({LOCATION: episode.location,
-                                    'file_name': episode.file_name,
-                                    'e_nr': episode.e_nr,
-                                    's_nr': episode.s_nr,
-                                    'title': episode.title,
-                                    'title2': episode.title2,
-                                    'title3': episode.title3,
-                                    'extension': episode.extension,
-                                    'save': False,
-                                    'delete': False,
-                                    'episode_option': episode.episode_option,
-                                    'size': episode.size,
-                                    'duration': episode.duration,
-                                    'quality': episode.quality,
-                                    'tvdb_id': show.tvdb_id,
-                                    'name_needed': show.name_needed})
-
-        seasons.append(sea)
-    return {SERIES_NAME: show.series_name, 'seasons': seasons}
-
-
-def check_for_missing_season(show, s, seasons):
-    index = seasons.index(s)
-    if index <= 0:
-        if s.s_nr <= 1:
-            return
-        for nr in range(1, s.s_nr):
-            MISSING.append({SERIES_NAME: show.series_name, 's_nr': nr, 'e_nr': '*'})
-    last = seasons[index-1]
-    for nr in range(last.s_nr + 1, s.s_nr):
-        MISSING.append({SERIES_NAME: show.series_name, 's_nr': nr, 'e_nr': '*'})
+def check_for_spaces(show, e):
+    if '  ' in e.get_title():
+        title = e.get_title().replace(' f ', ' ')
+        return generate_error(message='Double Space', e=e, show=show, title=title)
+    name = e.file_name.rsplit('.', 1)
+    if not name:
+        return False
+    if name[0][-1] == ' ':
+        title = e.get_title().strip()
+        return generate_error(message='Space Before Extension', e=e, show=show, title=title)
+    return False
 
 
 def check_for_multiple_files(show, e):
@@ -99,21 +89,3 @@ def check_for_multiple_files(show, e):
         return False
     if e.e_nr < 777:
         return False
-
-
-def check_for_spaces(show, e):
-    if '  ' in e.file_name:
-        print(e)
-        print('Double Space')
-    name = e.file_name.rsplit('.', 1)
-    if not name:
-        return False
-    if name[0][-1] == ' ':
-        print(e)
-        print('Space at End')
-
-
-if __name__ == '__main__':
-    start = time.time()
-    main(sys.argv[1:])
-    print(time.time() - start)
