@@ -39,9 +39,6 @@ def load_all():
 
 
 def get_show_data(show):
-    # pilot = show.get_episode_by_sxe(1 ,1)
-    # if pilot:
-    #     search_for_new_words(pilot)
     for season in show.seasons.values():
         episodes = sorted(list(season.episodes.values()), key=lambda x: x.e_nr)
         for e in episodes:

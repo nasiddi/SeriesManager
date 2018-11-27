@@ -32,12 +32,11 @@ def main(args=None, series_name='*', out_file='data/treefile_comb'):
                 if error:
                     tree_file['errors'][i] = error
                 else:
-                    del tree_file['errors'][series_name]
+                    del tree_file['errors'][i]
                 break
         tree_file['shows'][series_name] = show
     io_utlis.save_json(tree_file, out_file)
     io_utlis.save_shows(SHOWS)
-    print(series_name)
 
 
 def load_all():
@@ -52,6 +51,11 @@ def load_all():
 
 
 def get_show_data(show):
+    print('*')
+    for l in EXCEPTIONS['part']:
+        print(l)
+    print('*')
+
     seasons = []
     error = None
     for season in show.seasons.values():
@@ -62,6 +66,8 @@ def get_show_data(show):
                 error = check_for_spaces(show, episode)
             if not error:
                 error = check_part_number(show, episode)
+            if not error:
+                error = check_words(show, episode)
 
             sea['episodes'].append({LOCATION: episode.location,
                                     'file_name': episode.file_name,

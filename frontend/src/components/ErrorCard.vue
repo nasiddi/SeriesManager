@@ -65,11 +65,11 @@
           <b-col
             class="px-2 mt-1"
             sm>
-            <b-button
-              :pressed.sync="e.save"
-              :variant="saveColor"
+            <b-form-select
+              v-model="e.exception"
+              :options="exceptions"
               :style="{width: '100%'}"
-            >Save</b-button>
+              selected="false"/>
           </b-col>
           <b-col
             class="px-2 mt-1"
@@ -114,6 +114,14 @@ export default {
     },
   },
   data: () => ({
+    exceptions: [
+      { value: false, text: 'Exception' },
+      { value: 'part', text: 'Part' },
+      { value: 'lower', text: 'lowerCase' },
+      { value: 'upper', text: 'upperCase' },
+      { value: 'double', text: 'DoubleTitle' },
+
+    ],
     episode_options: [
       'Single',
       'Double',

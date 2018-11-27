@@ -402,7 +402,6 @@ async function fileTree(body, res) {
 
 async function saveFileTree(body, res) {
   const outputFile = path.join(config.directories.storage, 'file_tree');
-  console.log(body[0]);
   await run(
     'save_file_tree',
     '',

@@ -134,6 +134,9 @@ class Episode:
                 '\nFilename: ' + self.file_name +
                 '\nDuration: ' + str(self.duration) + ' Size: ' + str(self.size))
 
+    def id(self):
+        return ' '.join([self.location.split(SEPERATOR)[2 + MAC_OFFSET], str(self.s_nr), str(self.e_nr)])
+
 
 
 

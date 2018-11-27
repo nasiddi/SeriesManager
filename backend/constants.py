@@ -1,7 +1,7 @@
 import platform
 import os
 
-DEBUG = True
+DEBUG = False
 
 
 # Status
@@ -22,6 +22,7 @@ OUT_FILE = 'OUTPUT_FILE'
 META_FILE = 'assets/metadata.json'
 DICT_FILE = 'assets/dictionary.json'
 SHOWS_FILE = 'assets/shows.pkl'
+EXCEPTIONS_FILE = 'assets/exceptions.json'
 
 if platform.system() == 'Windows':
     SERIES_DIR = 'L:\\Series' if DEBUG else 'V:\\Series'

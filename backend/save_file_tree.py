@@ -10,19 +10,19 @@ import time
 import json
 import unlock_shows
 import syncer
-import file_tree
 
 SHOWS = None
-
+EXCEPTIONS = {}
 
 def main(args):
     start = time.time()
-    global SHOWS
+    global SHOWS, EXCEPTIONS
     unlock_shows.main()
     io_utlis.parse_args(args)
     error = io_utlis.load_json(os.environ["CONF_FILE"])
     tree_file = io_utlis.load_json(os.environ['OUTPUT_FILE'])
     SHOWS = io_utlis.load_shows()
+    EXCEPTIONS = io_utlis.load_json(EXCEPTIONS_FILE)
 
     if SHOWS is None:
         io_utlis.save_json({'shows_locked': True}, os.environ['OUTPUT_FILE'])
@@ -34,29 +34,42 @@ def main(args):
     if error:
         series_name = load_show(error, tree_file, queue)
     else:
-        series_name = load_all()
-
+        series_name = load_all(tree_file, queue)
+    print(EXCEPTIONS)
+    io_utlis.save_json(EXCEPTIONS, EXCEPTIONS_FILE)
     save_queue(queue)
     report = []
     for file in queue:
         report.append(file.get_report())
     print(json.dumps(report, indent=4, sort_keys=True))
     io_utlis.save_shows(SHOWS)
+
+    import file_tree
     file_tree.main(series_name=series_name if not error else error['series_name'], out_file=os.environ['OUTPUT_FILE'])
     print(time.time() - start)
 
 
 def load_show(error, tree_file, queue):
+    series_name = error['series_name']
+    if error['exception']:
+        e_id = series_name + ' ' + str(error['s_nr']) + ' ' + str(error['e_nr'])
+        if error['exception'] not in ['part', 'double']:
+            if e_id not in EXCEPTIONS[error['exception']]:
+                EXCEPTIONS[error['exception']][e_id] = []
+            EXCEPTIONS[error['exception']][e_id].append(error['word'])
+        else:
+            EXCEPTIONS[error['exception']].append(e_id)
+        return series_name
     if error['delete']:
         err = File(location=error['old_location'],
                    s_nr=error['s_nr'],
                    e_nr=error['e_nr'],
-                   series_name=error['series_name'],
+                   series_name=series_name,
                    title=error['title'],
                    episode_option=error['episode_option'],
                    name_needed=error[NAME_NEEDED],
                    delete=True,
-                   anime=SHOWS[error['series_name']].anime)
+                   anime=SHOWS[series_name].anime)
         queue.append(err)
     elif error['save']:
         err = File(location=error['old_location'],
@@ -64,27 +77,27 @@ def load_show(error, tree_file, queue):
                    e_nr=error['e_nr'],
                    s_nr_old=error['s_nr_old'],
                    e_nr_old=error['e_nr_old'],
-                   series_name=error['series_name'],
+                   series_name=series_name,
                    title=error['title'],
                    episode_option=error['episode_option'],
                    name_needed=error[NAME_NEEDED],
-                   anime=SHOWS[error['series_name']].anime)
+                   anime=SHOWS[series_name].anime)
         syncer.queue_episode(err)
 
-    for s in tree_file['shows'][error['series_name']]['seasons']:
+    for s in tree_file['shows'][series_name]['seasons']:
         for e in s['episodes']:
             if e['delete']:
                 e = File(location=e['location'],
                          s_nr=e['s_nr'],
                          e_nr=e['e_nr'],
-                         series_name=error['series_name'],
+                         series_name=series_name,
                          title=e['title'],
                          title2=e['title2'],
                          title3=e['title3'],
                          episode_option=e['episode_option'],
                          name_needed=e[NAME_NEEDED],
                          delete=True,
-                         anime=SHOWS[error['series_name']].anime)
+                         anime=SHOWS[series_name].anime)
                 queue.append(e)
             elif e['save']:
                 e = File(location=e['location'],
@@ -92,15 +105,15 @@ def load_show(error, tree_file, queue):
                          e_nr=e['e_nr'],
                          s_nr_old=e['s_nr_old'],
                          e_nr_old=e['e_nr_old'],
-                         series_name=error['series_name'],
+                         series_name=series_name,
                          title=e['title'],
                          title2=e['title2'],
                          title3=e['title3'],
                          episode_option=e['episode_option'],
                          name_needed=e[NAME_NEEDED],
-                         anime=SHOWS[error['series_name']].anime)
+                         anime=SHOWS[series_name].anime)
                 syncer.queue_episode(e)
-    return error['series_name']
+    return series_name
 
 
 def load_all(tree_file, queue):
