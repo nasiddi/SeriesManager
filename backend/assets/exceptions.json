@@ -1,6 +1,19 @@
 {
     "double": [],
-    "lower": {},
+    "lower": {
+        "Criminal Minds 8 23": [
+            "the"
+        ],
+        "Killjoys 3 4": [
+            "the"
+        ],
+        "NCIS Los Angeles 4 22": [
+            "the"
+        ],
+        "Scorpion 2 18": [
+            "the"
+        ]
+    },
     "lower_general": [
         "a",
         "and",
@@ -36,6 +49,16 @@
         "und",
         "an"
     ],
-    "part": [],
+    "part": [
+        "NCIS 13 12",
+        "NCIS 14 15",
+        "Chuck 3 19",
+        "Lost 1 24",
+        "Lost 1 24",
+        "NCIS New Orleans 2 12",
+        "NCIS New Orleans 3 14",
+        "Sanctuary 2 12",
+        "Sanctuary 2 12"
+    ],
     "upper": {}
 }
