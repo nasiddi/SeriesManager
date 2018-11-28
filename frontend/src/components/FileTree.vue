@@ -21,7 +21,7 @@
           class="px-2 mb-1">
           <b-button
             :style="{width: '100%'}"
-            variant="success"
+            :variant="saveColor"
             @click.prevent="save">
             Save
           </b-button>
@@ -46,7 +46,7 @@
     <div v-if="json.length !== 0 && 'shows' in json">
       <b-button
         v-if="_.isEmpty(error)"
-        variant="success"
+        variant="save"
         size="lg"
         block
         class="mt-3"
@@ -113,6 +113,25 @@ export default {
     shows: [],
     forwardDisable: false,
     backDisable: false,
+    original: {},
+    updated: {},
+    saveColor: 'success',
+    wrongSymbols: [
+      ':',
+      '/',
+      '{',
+      '}',
+      '(',
+      ')',
+      '\\',
+      '<',
+      '>',
+      '*',
+      '?',
+      '$',
+      '!',
+      '@',
+    ],
   }),
   computed: {
     opened(sea) {
@@ -126,6 +145,38 @@ export default {
     },
   },
   watch: {
+    error: {
+      handler(e) {
+        if (this.error.delete) {
+          return this.updateSave(true);
+        }
+
+        const o = this.original;
+
+        if (this.checkWrongSymbols(e.title)) {
+          return this.updateSave(false);
+        }
+        if (e.name_needed) {
+          if (e.title === '') {
+            return this.updateSave(false);
+          }
+        }
+        if (e.s_nr === '' || e.e_nr === '') {
+          return this.updateSave(false);
+        }
+        this.updateSave(true);
+
+        if (e.save !== o.save) {
+          o.save = e.save;
+          return e.save;
+        }
+
+        e.save = true;
+        o.save = e.save;
+        return e.save;
+      },
+      deep: true,
+    },
     selected: {
       handler() {
         this.show = { loader: { seasons: [], series_name: 'loader' } };
@@ -154,6 +205,24 @@ export default {
   mounted() {
   },
   methods: {
+    checkWrongSymbols(val) {
+      let found = false;
+      this.wrongSymbols.forEach((sym) => {
+        if (val.includes(sym)) {
+          found = true;
+        }
+      });
+      return found;
+    },
+    updateSave(primary) {
+      if (primary) {
+        this.saveColor = 'success';
+      } else {
+        this.saveColor = 'outline-danger';
+        this.error.save = false;
+        this.original.save = false;
+      }
+    },
     async displayError() {
       const promises = [];
       let name = '*';
@@ -177,6 +246,10 @@ export default {
           .map(s => s.series_name).sort()[0];
       }
 
+      if (this.errors.length === 0) {
+        return;
+      }
+
       if ('skip' in this.$route.params) {
         // eslint-disable-next-line prefer-destructuring
         const skip = this.$route.params.skip;
@@ -188,11 +261,14 @@ export default {
           this.error = this.errors[skip];
           this.error.save = true;
         }
-      } else if (this.errors.length > 0) {
+      } else {
         // eslint-disable-next-line prefer-destructuring
         this.error = this.errors[0];
         this.error.save = true;
       }
+      this.selected = this.error.series_name;
+      this.original = _.cloneDeep(this.error);
+      this.updated = _.cloneDeep(this.error);
     },
     async move(dir) {
       const current = this.errors.indexOf(this.error);
@@ -242,6 +318,10 @@ export default {
       });
     },
     save() {
+      if (this.saveColor === 'outline-danger') {
+        this.$snotify.error('Can\'t Save with Errors', { timeout: 1000 });
+        return;
+      }
       this.notifErrors = this.$snotify.info('Saving', { timeout: 0 });
       this.$http.post('jobs/filetree/save', this.error).then(
         (res) => {
@@ -262,7 +342,11 @@ export default {
           this.$snotify.success('Done', { timeout: 500 });
           this.$router.push({
             name: 'reroute',
-            params: { json: this.json, skip: this.errors.indexOf(this.error) },
+            params: {
+              json: this.json,
+              skip: this.errors.indexOf(this.error),
+              selected: this.selected,
+            },
           });
         },
         () => {

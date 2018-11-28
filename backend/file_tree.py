@@ -51,23 +51,36 @@ def load_all():
 
 
 def get_show_data(show):
-    print('*')
-    for l in EXCEPTIONS['part']:
-        print(l)
-    print('*')
-
     seasons = []
     error = None
     for season in show.seasons.values():
+        if not error:
+            error = check_for_empty_season(show, season)
         sea = {'key': season.s_nr, 'episodes': [], 'opened': False}
         episodes = sorted(list(season.episodes.values()), key=lambda x: x.e_nr)
         for episode in episodes:
             if not error:
                 error = check_for_spaces(show, episode)
             if not error:
+                error = check_extension(show, episode)
+            if not error:
                 error = check_part_number(show, episode)
             if not error:
                 error = check_words(show, episode)
+            if not error:
+                error = check_symbols(show, episode)
+            if not error:
+                error = check_series_name_and_numbers(show, episode)
+            if not error:
+                error = check_for_missing_title(show, episode)
+            if not error:
+                error = check_for_multiple_files(show, episode)
+            if not error:
+                error = check_for_name_used_twice(show, episode)
+
+
+            if not error:
+                error = check_against_compiled(show, episode)
 
             sea['episodes'].append({LOCATION: episode.location,
                                     'file_name': episode.file_name,

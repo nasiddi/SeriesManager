@@ -47,7 +47,7 @@ else:
 
 # Extentions
 
-EXTENSIONS = ['mp4', 'mkv', 'avi', 'flv', 'm4v', 'divx', 'webm']
+EXTENSIONS = ['mp4', 'mkv', 'avi', 'flv', 'm4v', 'divx', 'webm', 'mpg']
 SUBS = ['idx', 'sub', 'srt']
 
 
@@ -62,18 +62,16 @@ LOCATION = 'location'
 
 
 # Pattern
-ANIME_PATTERN = '[0-9]{2}x[0-9]{3}'
-SERIES_PATTERN = '[0-9]{2}x[0-9]{2}'
+ANIME_PATTERN = '\s[0-9]{2}x[0-9]{3}[.\s]'
+SERIES_PATTERN = '\s[0-9]{2}x[0-9]{2}[.\s]'
 ASPECT_RATIOS = {1.25: '5:4', 1.33333: '4:3', 1.5: '3:2', 1.77777: '16:9'}
 QUALITY = {360: 'SD', 720: 'HD', 1080: 'FullHD', 2160: '4K'}
 
-wrongSymbols = [
+WRONG_SYMBOLS = [
       ':',
       '/',
       '{',
       '}',
-      '(',
-      ')',
       '\\',
       '<',
       '>',

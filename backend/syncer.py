@@ -153,7 +153,7 @@ def recursive_delete(location):
 
     if os.path.exists(location):
         return False
-    return  True
+    return True
 
 
 def delete_file(file):
@@ -200,12 +200,7 @@ def create_new_series(file):
 
 
 def queue_episode(file):
-    if file.episode_option == 'Single':
-        name = single_format(file)
-    elif file.episode_option == 'Double':
-        name = double_format(file)
-    else:
-        name = triple_format(file)
+    name = compile_file_name(file)
 
     basepath = get_basepath(file)
     file.new_location = os.path.join(basepath, name)
@@ -218,6 +213,37 @@ def queue_episode(file):
                                   SUB_DIR, '{}.{}'.format(name.rsplit('.', 1)[0], sub.rsplit('.', 1)[1]))))
     QUEUE.append(file)
     return QUEUE
+
+
+def compile_file_name(file, series_name=''):
+    if not series_name:
+        series_name = file.series_name
+    if file.episode_option == 'Single':
+        if file.title == '':
+            return f'{series_name} {file.s_nr:02d}x{file.e_nr:0{3 if file.anime else 2}d}.{file.extension}'
+        return f'{series_name} {file.s_nr:02d}x{file.e_nr:0{3 if file.anime else 2}d} - {file.title}.{file.extension}'
+    elif file.episode_option == 'Double':
+        if file.title == '' and file.title2 == '':
+            return f'{series_name} {file.s_nr:02d}x{file.e_nr:0{3 if file.anime else 2}d} & {file.s_nr:02d}x{file.e_nr + 1:0{3 if file.anime else 2}d}.{file.extension}'
+        if not file.title == file.title2 and not (file.title == '' or file.title2 == ''):
+            return f'{series_name} {file.s_nr:02d}x{file.e_nr:0{3 if file.anime else 2}d} & {file.s_nr:02d}x{file.e_nr + 1:0{3 if file.anime else 2}d} - {file.title} & {file.title2}.{file.extension}'
+        return f'{series_name} {file.s_nr:02d}x{file.e_nr:0{3 if file.anime else 2}d} & {file.s_nr:02d}x{file.e_nr + 1:0{3 if file.anime else 2}d} - {file.title if not file.title == "" else file.title2}.{file.extension}'
+    else:
+        # no title
+        if file.title == '' and file.title2 == '' and file.title3 == '':
+            return f'{series_name} {file.s_nr:02d}x{file.e_nr:0{3 if file.anime else 2}d} & {file.s_nr:02d}x{file.e_nr + 1:0{3 if file.anime else 2}d} & {file.s_nr:02d}x{file.e_nr + 2:0{3 if file.anime else 2}d}.{file.extension}'
+        # all titles
+        if not file.title == file.title2 and not file.title == file.title3 and not (
+                    file.title == '' or file.title2 == '' or file.title3 == ''):
+            return f'{series_name} {file.s_nr:02d}x{file.e_nr:0{3 if file.anime else 2}d} & {file.s_nr:02d}x{file.e_nr + 1:0{3 if file.anime else 2}d} & {file.s_nr:02d}x{file.e_nr + 2:0{3 if file.anime else 2}d} - {file.title} & {file.title2} & {file.title3}.{file.extension}'
+        title_set = list(
+            filter(None, list({file.title, file.title2, file.title3})))
+        # one title
+        if len(title_set) == 1:
+            return f'{series_name} {file.s_nr:02d}x{file.e_nr:0{3 if file.anime else 2}d} & {file.s_nr:02d}x{file.e_nr + 1:0{3 if file.anime else 2}d} & {file.s_nr:02d}x{file.e_nr + 2:0{3 if file.anime else 2}d} - {title_set[0]}.{file.extension}'
+        # two titles
+        return f'{series_name} {file.s_nr:02d}x{file.e_nr:0{3 if file.anime else 2}d} & {file.s_nr:02d}x{file.e_nr + 1:0{3 if file.anime else 2}d} & {file.s_nr:02d}x{file.e_nr + 2:0{3 if file.anime else 2}d} - {title_set[0]} & {title_set[1]}.{file.extension}'
+
 
 def queue_movie(file):
     file.new_location = os.path.join(
@@ -248,41 +274,7 @@ def ignore_file(file):
     os.rename(loc, new_loc)
 
 
-def single_format(file):
-    if file.title == '':
-        return '{f.series_name} {f.s_nr:02d}x{f.e_nr:0{p}d}.{f.extension}'.format(f=file, p=3 if file.anime else 2)
-    return '{f.series_name} {f.s_nr:02d}x{f.e_nr:0{p}d} - {f.title}.{f.extension}'.format(f=file, p=3 if file.anime else 2)
 
-
-def double_format(file):
-    if file.title == '' and file.title2 == '':
-        return '{f.series_name} {f.s_nr:02d}x{f.e_nr:0{p}d} & {f.s_nr:02d}x{f.e_nr2:0{p}d}.{f.extension}' \
-            .format(f=file, p=3 if file.anime else 2)
-    if not file.title == file.title2 and not (file.title == '' or file.title2 == ''):
-        return '{f.series_name} {f.s_nr:02d}x{f.e_nr:0{p}d} & {f.s_nr:02d}x{f.e_nr2:0{p}d} - {f.title} & {f.title2}.{f.extension}'\
-               .format(f=file, p=3 if file.anime else 2)
-    return '{f.series_name} {f.s_nr:02d}x{f.e_nr:0{p}d} & {f.s_nr:02d}x{f.e_nr2:0{p}d} - {t}.{f.extension}' \
-        .format(f=file, p=3 if file.anime else 2, t=file.title if not file.title == '' else file.title2)
-
-
-def triple_format(file):
-    # no title
-    if file.title == '' and file.title2 == '' and file.title3 == '':
-        return '{f.series_name} {f.s_nr:02d}x{f.e_nr:0{p}d} & {f.s_nr:02d}x{f.e_nr2:0{p}d} & {f.s_nr:02d}x{f.e_nr3:0{p}d}.{f.extension}' \
-            .format(f=file, p=3 if file.anime else 2)
-    # all titles
-    if not file.title == file.title2 and not file.title == file.title3 and not (file.title == '' or file.title2 == '' or file.title3 == ''):
-        return '{f.series_name} {f.s_nr:02d}x{f.e_nr:0{p}d} & {f.s_nr:02d}x{f.e_nr2:0{p}d} & {f.s_nr:02d}x{f.e_nr3:0{p}d} - {f.title} & {f.title2} & {f.title3}.{f.extension}'\
-               .format(f=file, p=3 if file.anime else 2)
-    title_set = list(
-        filter(None, list({file.title, file.title2, file.title3})))
-    # one title
-    if len(title_set) == 1:
-        return '{f.series_name} {f.s_nr:02d}x{f.e_nr:0{p}d} & {f.s_nr:02d}x{f.e_nr2:0{p}d} & {f.s_nr:02d}x{f.e_nr3:0{p}d} - {t}.{f.extension}' \
-            .format(f=file, p=3 if file.anime else 2, t=title_set[0])
-    # two titles
-    return '{f.series_name} {f.s_nr:02d}x{f.e_nr:0{p}d} & {f.s_nr:02d}x{f.e_nr2:0{p}d} & {f.s_nr:02d}x{f.e_nr3:0{p}d} - {t[0]} & {t[1]}.{f.extension}' \
-        .format(f=file, p=3 if file.anime else 2, t=title_set)
 
 
 if __name__ == '__main__':

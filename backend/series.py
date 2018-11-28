@@ -50,7 +50,9 @@ class Series:
     def add_season(self, location='', number=0):
         if number == 0:
             number = int(location[-2:])
-        self.seasons[number] = Season(location=location, s_nr=number)
+        season = Season(location=location, s_nr=number)
+        self.seasons[number] = season
+        return season
 
     def get_episode_by_sxe(self, s_nr, e_nr):
         try:

@@ -1,64 +1,83 @@
 {
-    "double": [],
-    "lower": {
-        "Criminal Minds 8 23": [
-            "the"
-        ],
-        "Killjoys 3 4": [
-            "the"
-        ],
-        "NCIS Los Angeles 4 22": [
-            "the"
-        ],
-        "Scorpion 2 18": [
-            "the"
-        ]
-    },
-    "lower_general": [
-        "a",
-        "and",
-        "the",
-        "to",
-        "in",
-        "of",
-        "on",
-        "with",
-        "a",
-        "by",
-        "or",
-        "v.",
-        "at",
-        "from",
-        "too",
-        "en",
-        "el",
-        "for",
-        "vs.",
-        "as",
-        "into",
-        "de",
-        "la",
-        "if",
-        "kHz",
-        "d'Arthur",
-        "du",
-        "x100",
-        "unto",
-        "d'Etat",
-        "aka",
-        "und",
-        "an"
-    ],
-    "part": [
-        "NCIS 13 12",
-        "NCIS 14 15",
-        "Chuck 3 19",
-        "Lost 1 24",
-        "Lost 1 24",
-        "NCIS New Orleans 2 12",
-        "NCIS New Orleans 3 14",
-        "Sanctuary 2 12",
-        "Sanctuary 2 12"
-    ],
-    "upper": {}
+  "double": {
+    "24": [
+      "08.00 AM - 09.00 AM",
+      "09.00 AM - 10.00 AM",
+      "10.00 AM - 11.00 AM",
+      "11.00 AM - 12.00 PM",
+      "12.00 PM - 01.00 PM",
+      "01.00 PM - 02.00 PM",
+      "02.00 PM - 03.00 PM",
+      "03.00 PM - 04.00 PM",
+      "04.00 PM - 05.00 PM",
+      "05.00 PM - 06.00 PM",
+      "06.00 PM - 07.00 PM",
+      "07.00 PM - 08.00 PM",
+      "08.00 PM - 09.00 PM",
+      "09.00 PM - 10.00 PM",
+      "10.00 PM - 11.00 PM",
+      "11.00 PM - 12.00 AM",
+      "12.00 AM - 01.00 AM",
+      "01.00 AM - 02.00 AM",
+      "02.00 AM - 03.00 AM",
+      "03.00 AM - 04.00 AM",
+      "04.00 AM - 05.00 AM",
+      "05.00 AM - 06.00 AM",
+      "06.00 AM - 07.00 AM",
+      "07.00 AM - 08.00 AM"
+    ]
+  },
+  "lower": {
+    "Agents of S.H.I.E.L.D 1 5": ["in"],
+    "NCIS Los Angeles 4 22": ["the"],
+    "Scorpion 2 18": ["the"]
+  },
+  "lower_general": [
+    "a",
+    "\u00e0",
+    "and",
+    "the",
+    "to",
+    "in",
+    "of",
+    "on",
+    "with",
+    "a",
+    "by",
+    "or",
+    "v.",
+    "at",
+    "from",
+    "too",
+    "en",
+    "el",
+    "for",
+    "vs.",
+    "as",
+    "into",
+    "de",
+    "la",
+    "if",
+    "kHz",
+    "d'Arthur",
+    "du",
+    "x100",
+    "unto",
+    "d'Etat",
+    "aka",
+    "und",
+    "an"
+  ],
+  "part": [
+    "NCIS 13 12",
+    "NCIS 14 15",
+    "Chuck 3 19",
+    "Lost 1 24",
+    "Lost 1 24",
+    "NCIS New Orleans 2 12",
+    "NCIS New Orleans 3 14",
+    "Sanctuary 2 12",
+    "Sanctuary 2 12"
+  ],
+  "upper": {}
 }
