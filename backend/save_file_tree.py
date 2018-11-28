@@ -1,10 +1,8 @@
 import io_utlis
-import os
 import sys
 import shutil
 from constants import *
 from file import File
-from series import Series
 from episode import Episode
 import time
 import json
@@ -13,6 +11,7 @@ import syncer
 
 SHOWS = None
 EXCEPTIONS = {}
+
 
 def main(args):
     start = time.time()
@@ -57,9 +56,14 @@ def load_show(error, tree_file, queue):
             if e_id not in EXCEPTIONS[error['exception']]:
                 EXCEPTIONS[error['exception']][e_id] = []
             EXCEPTIONS[error['exception']][e_id].append(error['word'])
+        elif error['exception'] == 'double':
+            if series_name not in EXCEPTIONS[error['exception']]:
+                EXCEPTIONS[error['exception']][series_name] = []
+            EXCEPTIONS[error['exception']][series_name].append(error['title'])
         else:
             EXCEPTIONS[error['exception']].append(e_id)
         return series_name
+
     if error['delete']:
         err = File(location=error['old_location'],
                    s_nr=error['s_nr'],
@@ -157,11 +161,17 @@ def load_all(tree_file, queue):
 def save_queue(queue):
     for file in queue:
         if file.delete:
-            os.remove(file.location)
-            SHOWS[file.series_name].seasons[file.s_nr].update_episodes()
-        if syncer.file_exists(file, SHOWS) and not file.s_nr == file.s_nr_old and not file.e_nr == file.e_nr_old:
+            syncer.recursive_delete(file.location)
+            try:
+                SHOWS[file.series_name].seasons[file.s_nr].update_episodes()
+            except FileNotFoundError:
+                del SHOWS[file.series_name].seasons[file.s_nr]
+            continue
+        if syncer.file_exists(file, SHOWS) and not file.s_nr == file.s_nr_old and not file.e_nr == file.e_nr_old and not file.e_nr_old >= 999:
             continue
         try:
+            if file.location == file.new_location:
+                return
             shutil.move(file.location, file.new_location)
         except Exception as e:
             print('rename', e)

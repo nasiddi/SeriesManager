@@ -128,24 +128,6 @@ export default {
       'Triple',
     ],
     original: {},
-    updated: {},
-    saveColor: 'outline-primary',
-    wrongSymbols: [
-      ':',
-      '/',
-      '{',
-      '}',
-      '(',
-      ')',
-      '\\',
-      '<',
-      '>',
-      '*',
-      '?',
-      '$',
-      '!',
-      '@',
-    ],
   }),
   computed: {
     buttonColor() {
@@ -163,40 +145,6 @@ export default {
     },
   },
   watch: {
-    e: {
-      handler(e) {
-        const o = this.original;
-
-        // const u = this.updated;
-        if (this.checkWrongSymbols(e.title)) {
-          return this.updateSave(false);
-        }
-        if (e.name_needed) {
-          if (e.title === '') {
-            return this.updateSave(false);
-          }
-        }
-        if (e.s_nr === '' || e.e_nr === '') {
-          return this.updateSave(false);
-        }
-        this.updateSave(true);
-
-        if (e.delete) {
-          e.save = false;
-          return true;
-        }
-
-        if (e.save !== o.save) {
-          o.save = e.save;
-          return e.save;
-        }
-
-        e.save = true;
-        o.save = e.save;
-        return e.save;
-      },
-      deep: true,
-    },
   },
   mounted() {
     this.original = _.cloneDeep(this.e);
@@ -205,24 +153,6 @@ export default {
   methods: {
     pad2(number) {
       return (number < 10 ? '0' : '') + number;
-    },
-    checkWrongSymbols(val) {
-      let found = false;
-      this.wrongSymbols.forEach((sym) => {
-        if (val.includes(sym)) {
-          found = true;
-        }
-      });
-      return found;
-    },
-    updateSave(primary) {
-      if (primary) {
-        this.saveColor = 'outline-primary';
-      } else {
-        this.saveColor = 'outline-danger';
-        this.e.save = false;
-        this.original.save = false;
-      }
     },
     async updateTitle() {
       return new Promise((resolve) => {

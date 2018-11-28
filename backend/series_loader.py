@@ -1,11 +1,4 @@
-from constants import *
-import os
-import shutil
 from series import Series
-from episode import Episode
-import time
-import getopt
-import sys
 from io_utlis import *
 
 sys.setrecursionlimit(10000)
@@ -13,7 +6,9 @@ sys.setrecursionlimit(10000)
 
 def load_files(top):
     shows = {}
+    len_top = len(top.split(os.sep))
     for root, dirs, _ in os.walk(top):
+
         for name in dirs:
             if root == top:
                 shows[name] = Series(location=os.path.join(root, name), series_name=name)
@@ -23,11 +18,13 @@ def load_files(top):
                 continue
 
             show = os.path.basename(root)
-            shows[show].add_season(location=os.path.join(root, name))
 
-    for show in shows.values():
-        for season in show.seasons.values():
+            if len(root.split(os.sep)) - len_top > 1:
+                continue
+
+            season = shows[show].add_season(location=os.path.join(root, name))
             season.update_episodes()
+
     return shows
 
 

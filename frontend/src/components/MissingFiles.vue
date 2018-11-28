@@ -1,20 +1,27 @@
 <template>
   <div v-if="json.length !== 0">
-    <b-alert
-      v-for="line in json"
-      :key="line.key"
-      :variant="color(line.e_nr)"
-      show
-      class="mt-2 mx-2 mb-0">
-      <a
-        :href="getLink(line)"
-        target="_blank"
-        class="alert-link">
-        <font-awesome-icon icon="download"/>
-      </a>
-      {{ message(line) }}
+    <div v-if="'files' in json && json.files.length !== 0">
+      <b-alert
+        v-for="line in json.files"
+        :key="line.key"
+        :variant="color(line.e_nr)"
+        show
+        class="mt-2 mx-2 mb-0">
+        <a
+          :href="getLink(line)"
+          target="_blank"
+          class="alert-link">
+          <font-awesome-icon icon="download"/>
+        </a>
+        {{ message(line) }}
 
-    </b-alert>
+      </b-alert>
+    </div>
+    <b-card
+      v-else
+      :style="{width: '100%'}"
+      :title="json.info"
+      class="text-center py-1 mt-4"/>
   </div>
 </template>
 

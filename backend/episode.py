@@ -66,22 +66,24 @@ class Episode:
         self.file_name = os.path.basename(self.location)
 
     def parse_episode_name_and_extension(self):
+        if 'Yu-Gi-Oh' in self.location:
+            print(self.location)
         file_name = self.file_name
         dot = file_name.rfind('.')
         if dot >= 0:
             self.extension = file_name[dot + 1:]
         name = file_name[:dot]
-        match = re.findall(re.compile(SERIES_PATTERN), name)
+        match = re.findall(re.compile(ANIME_PATTERN if self.anime else SERIES_PATTERN), name)
         if not match:
             return
-        pattern_index = name.find(match[-1])
+        pattern_index = name.find(match[-1]) - 1
         if ' - ' not in name[pattern_index:]:
-            self.title = file_name
+            self.title = ''
             return
         name = name[pattern_index:].split(' - ', 1)[1]
         if self.episode_option == DOUBLE:
-            if '&' in name:
-                name = name.split('&')
+            if ' & ' in name:
+                name = name.split(' & ')
                 self.title = name[0]
                 self.title2 = name[1]
             else:
@@ -100,7 +102,6 @@ class Episode:
                 return '&'.join([self.title, self.title2, self.title3])
         return self.title
 
-
     def parse_episode_nr(self):
         if self.anime:
             single_pattern = ANIME_PATTERN
@@ -109,22 +110,21 @@ class Episode:
         pattern = re.compile(single_pattern)
 
         match = re.findall(pattern, self.file_name)
-        self.e_nr = int(match[0][3:]) if match else 999
-
+        self.e_nr = int(match[0][4:-1]) if match else 999
         if self.e_nr == 999:
             warnings.warn('cannot parse episode nr of\n' + self.location)
 
-        if len(match) == 1:
+        if len(match) <= 1:
             return
 
         if len(match) == 2:
-            double_pattern = re.compile(single_pattern + '\s&\s' + single_pattern)
+            double_pattern = re.compile(single_pattern + '&' + single_pattern)
             if re.findall(double_pattern, self.file_name):
                 self.episode_option = DOUBLE
             return
 
         if len(match) == 3:
-            triple_pattern = re.compile(single_pattern + '\s&\s' + single_pattern + '\s&\s' + single_pattern)
+            triple_pattern = re.compile(single_pattern + '&' + single_pattern + '&' + single_pattern)
             if re.findall(triple_pattern, self.file_name):
                 self.episode_option = TRIPLE
 

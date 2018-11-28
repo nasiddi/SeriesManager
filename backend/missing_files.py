@@ -21,7 +21,7 @@ def main(args):
 
     for l in MISSING:
         print(l)
-    io_utlis.save_json(MISSING, os.environ['OUTPUT_FILE'])
+    io_utlis.save_json({'files': MISSING, 'info': 'No Missing Files'}, os.environ['OUTPUT_FILE'])
     io_utlis.save_shows(SHOWS)
 
 

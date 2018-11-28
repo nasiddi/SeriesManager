@@ -25,7 +25,8 @@ class Season:
             if episode.anime:
                 print(episode)
             if episode.e_nr in self.episodes:
-                episode.e_nr = 777
+                if not episode.e_nr == 999:
+                    episode.e_nr = 777
             while episode.e_nr in self.episodes:
                 episode.e_nr += 1
             self.episodes[episode.e_nr] = episode
