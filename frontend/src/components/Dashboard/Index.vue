@@ -40,20 +40,6 @@
 <script>
 export default {
   methods: {
-    async reload() {
-      let notifLoading = null;
-      this.$http
-        .post('jobs/reload')
-        .then((notifLoading = this.$snotify.info('Reloading', { timeout: 0 })))
-        .then((res) => {
-          this.$snotify.remove(notifLoading.id);
-          if (res.body === 'failed') {
-            this.$snotify.error('Loading failed');
-          } else {
-            this.$snotify.success(res.body);
-          }
-        });
-    },
     async sync() {
       this.$router.push({
         name: 'sync.prep',

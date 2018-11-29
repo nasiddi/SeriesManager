@@ -412,27 +412,53 @@ export default {
     },
   },
   created() {
-    this.notifLoading = this.$snotify.info('Loading', {
-      timeout: 0,
-    });
-    this.$http
-      .post('jobs/stats')
-      .then(
-        (res) => {
-          const body = _.defaults(res.body, {
-          });
-          this.json = body;
-          this.shows = body.shows;
-          this.selectAllFilters();
-
-          this.$snotify.remove(this.notifLoading.id);
-        },
-        () => {
-          this.$snotify.error('Failed to load data', { timeout: 0 });
-        },
-      );
+    this.loadData();
   },
   methods: {
+    unlockShows() {
+      this.$snotify.remove(this.notifLock.id);
+      this.$http.post('jobs/unlock')
+        .then(
+          (res) => {
+            this.json = res;
+            this.loadData();
+          },
+        );
+    },
+    loadData() {
+      this.notifLoading = this.$snotify.info('Loading', {
+        timeout: 0,
+      });
+      this.$http
+        .post('jobs/stats')
+        .then(
+          (res) => {
+            const body = _.defaults(res.body, {
+            });
+            if (res.body === 'failed') {
+              this.$snotify.remove(this.notifLoading.id);
+              this.$snotify.error('Python failed', { timeout: 0 });
+              return;
+            }
+            if ('shows_locked' in body) {
+              this.notifLock = this.$snotify.confirm('', 'Shows locked', {
+                timeout: 0,
+                buttons: [
+                  { text: 'Unlock', action: () => this.unlockShows(), bold: true },
+                ],
+              });
+            } else {
+              this.json = body;
+              this.shows = body.shows;
+              this.selectAllFilters();
+            }
+            this.$snotify.remove(this.notifLoading.id);
+          },
+          () => {
+            this.$snotify.error('Failed to load data', { timeout: 0 });
+          },
+        );
+    },
     switchView() {
       if (this.cards) {
         this.cards = false;

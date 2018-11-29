@@ -96,6 +96,11 @@ export default {
         (res) => {
           const body = _.defaults(res.body, {
           });
+          if (res.body === 'failed') {
+            this.$snotify.remove(this.notifLoading.id);
+            this.$snotify.error('Python failed', { timeout: 0 });
+            return;
+          }
           this.json = body;
           this.$snotify.remove(this.notifLoading.id);
           if ('shows_locked' in body) {
@@ -129,6 +134,11 @@ export default {
           (res) => {
             const body = _.defaults(res.body, {
             });
+            if (res.body === 'failed') {
+              this.$snotify.remove(this.notifLoading.id);
+              this.$snotify.error('Python failed', { timeout: 0 });
+              return;
+            }
             this.$snotify.remove(this.notifLoading.id);
             if ('error' in body) {
               this.$snotify.error(body.error, { timeout: 5000 });

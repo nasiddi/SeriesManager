@@ -139,11 +139,13 @@ export default {
                 { text: 'Unlock', action: () => this.unlockShows(), bold: true },
               ],
             });
-          } else {
-            this.json = body;
-            this.units = body.units;
-            this.reg = body.regex;
+          } else if (res.body === 'failed') {
+            this.$snotify.error('Python failed', { timeout: 0 });
+            return;
           }
+          this.json = body;
+          this.units = body.units;
+          this.reg = body.regex;
         },
         () => {
           this.$snotify.error('Failed to load data', { timeout: 0 });
@@ -178,6 +180,10 @@ export default {
         .post('jobs/batch/match', this.json)
         .then(
           (res) => {
+            if (res.body === 'failed') {
+              this.$snotify.error('Python failed', { timeout: 0 });
+              return;
+            }
             if (res.body.includes('shows_locked')) {
               this.notifLock = this.$snotify.confirm('', 'Shows locked', {
                 timeout: 0,

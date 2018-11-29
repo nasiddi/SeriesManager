@@ -12,7 +12,7 @@ import time
 
 def main(args):
     global SHOWS
-    SHOWS = io_utlis.load_shows()
+    SHOWS = io_utlis.load_shows(read_only=True)
     io_utlis.parse_args(args)
 
     if SHOWS is None:
