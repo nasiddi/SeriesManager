@@ -54,7 +54,7 @@ class File:
 
     def __str__(self):
         return {'location': self.location.replace(FILE_DIR, ''),
-                'series_name': self.series_name,
+                SERIES_NAME: self.series_name,
                 's_nr': self.s_nr,
                 'e_nr': self.e_nr,
                 'title': self.title,

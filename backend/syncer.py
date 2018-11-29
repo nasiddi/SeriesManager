@@ -1,13 +1,13 @@
-import io_utlis
-import os
-import sys
+import json
 import shutil
+import sys
+import time
+
+import io_utlis
 from constants import *
+from episode import Episode
 from file import File
 from series import Series
-from episode import Episode
-import time
-import json
 
 QUEUE = []
 SHOWS = None
@@ -33,7 +33,7 @@ def main(args):
                  sync=f['sync'],
                  s_nr=f['s_nr'],
                  e_nr=f['e_nr'],
-                 series_name=f['series_name'],
+                 series_name=f[SERIES_NAME],
                  title=f['title'],
                  title2=f['title2'],
                  title3=f['title3'],
@@ -76,6 +76,8 @@ def main(args):
         report.append(file.get_report())
     log = io_utlis.load_json(os.path.join(
         os.path.dirname(os.environ['OUTPUT_FILE']), 'synclog'))
+    if not log:
+        log = []
     print(log)
     log.extend(report)
     io_utlis.save_json(report, os.environ['OUTPUT_FILE'])
@@ -200,7 +202,7 @@ def create_new_series(file):
 
 
 def queue_episode(file):
-    name = compile_file_name(file)
+    name = Episode.compile_file_name(file)
 
     basepath = get_basepath(file)
     file.new_location = os.path.join(basepath, name)
@@ -213,36 +215,6 @@ def queue_episode(file):
                                   SUB_DIR, '{}.{}'.format(name.rsplit('.', 1)[0], sub.rsplit('.', 1)[1]))))
     QUEUE.append(file)
     return QUEUE
-
-
-def compile_file_name(file, series_name=''):
-    if not series_name:
-        series_name = file.series_name
-    if file.episode_option == 'Single':
-        if file.title == '':
-            return f'{series_name} {file.s_nr:02d}x{file.e_nr:0{3 if file.anime else 2}d}.{file.extension}'
-        return f'{series_name} {file.s_nr:02d}x{file.e_nr:0{3 if file.anime else 2}d} - {file.title}.{file.extension}'
-    elif file.episode_option == 'Double':
-        if file.title == '' and file.title2 == '':
-            return f'{series_name} {file.s_nr:02d}x{file.e_nr:0{3 if file.anime else 2}d} & {file.s_nr:02d}x{file.e_nr + 1:0{3 if file.anime else 2}d}.{file.extension}'
-        if not file.title == file.title2 and not (file.title == '' or file.title2 == ''):
-            return f'{series_name} {file.s_nr:02d}x{file.e_nr:0{3 if file.anime else 2}d} & {file.s_nr:02d}x{file.e_nr + 1:0{3 if file.anime else 2}d} - {file.title} & {file.title2}.{file.extension}'
-        return f'{series_name} {file.s_nr:02d}x{file.e_nr:0{3 if file.anime else 2}d} & {file.s_nr:02d}x{file.e_nr + 1:0{3 if file.anime else 2}d} - {file.title if not file.title == "" else file.title2}.{file.extension}'
-    else:
-        # no title
-        if file.title == '' and file.title2 == '' and file.title3 == '':
-            return f'{series_name} {file.s_nr:02d}x{file.e_nr:0{3 if file.anime else 2}d} & {file.s_nr:02d}x{file.e_nr + 1:0{3 if file.anime else 2}d} & {file.s_nr:02d}x{file.e_nr + 2:0{3 if file.anime else 2}d}.{file.extension}'
-        # all titles
-        if not file.title == file.title2 and not file.title == file.title3 and not (
-                    file.title == '' or file.title2 == '' or file.title3 == ''):
-            return f'{series_name} {file.s_nr:02d}x{file.e_nr:0{3 if file.anime else 2}d} & {file.s_nr:02d}x{file.e_nr + 1:0{3 if file.anime else 2}d} & {file.s_nr:02d}x{file.e_nr + 2:0{3 if file.anime else 2}d} - {file.title} & {file.title2} & {file.title3}.{file.extension}'
-        title_set = list(
-            filter(None, list({file.title, file.title2, file.title3})))
-        # one title
-        if len(title_set) == 1:
-            return f'{series_name} {file.s_nr:02d}x{file.e_nr:0{3 if file.anime else 2}d} & {file.s_nr:02d}x{file.e_nr + 1:0{3 if file.anime else 2}d} & {file.s_nr:02d}x{file.e_nr + 2:0{3 if file.anime else 2}d} - {title_set[0]}.{file.extension}'
-        # two titles
-        return f'{series_name} {file.s_nr:02d}x{file.e_nr:0{3 if file.anime else 2}d} & {file.s_nr:02d}x{file.e_nr + 1:0{3 if file.anime else 2}d} & {file.s_nr:02d}x{file.e_nr + 2:0{3 if file.anime else 2}d} - {title_set[0]} & {title_set[1]}.{file.extension}'
 
 
 def queue_movie(file):

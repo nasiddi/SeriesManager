@@ -66,7 +66,7 @@ def update_summary():
 
 
 def prep(data):
-    base = create_location(data['series_name'], data['anime'])
+    base = create_location(data[SERIES_NAME], data['anime'])
     if not base:
         return False
     show = Series(

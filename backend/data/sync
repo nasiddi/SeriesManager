@@ -7,173 +7,8 @@
             ],
             "s": "Anime: No"
         },
-        "delete": true,
-        "e_nr": 1,
-        "e_o": {
-            "o": [
-                "Single",
-                "Double",
-                "Triple"
-            ],
-            "s": "Single"
-        },
-        "location": "Marvels.Runaways.S01E01.720p.HDTV.x264-AVS/Ti0d0dCGgUKS1Z.mkv",
-        "name_o": {
-            "o": [
-                "Name required",
-                "Name optional"
-            ],
-            "s": "Name required"
-        },
-        "new_series": false,
-        "override": false,
-        "s_nr": 1,
-        "series_name": "Runaways",
-        "show_subs": false,
-        "status_o": {
-            "o": [
-                "Airing",
-                "Hiatus",
-                "Ended"
-            ],
-            "s": "Airing"
-        },
-        "subs": [],
-        "sync": false,
-        "t_o": {
-            "o": [
-                "Series",
-                "HD",
-                "SD",
-                "[ignore]"
-            ],
-            "s": "Series"
-        },
-        "title": "Reunion",
-        "title2": "",
-        "title3": "",
-        "tvdb_id": 332027
-    },
-    {
-        "anime_o": {
-            "o": [
-                "Anime: No",
-                "Anime: Yes"
-            ],
-            "s": "Anime: No"
-        },
-        "delete": true,
-        "e_nr": 5,
-        "e_o": {
-            "o": [
-                "Single",
-                "Double",
-                "Triple"
-            ],
-            "s": "Single"
-        },
-        "location": "Marvels.Runaways.S01E05.720p.HDTV.x264-HebTV/Marvels.Runaways.S01E05.720p.HDTV.x264-HebTV.mkv",
-        "name_o": {
-            "o": [
-                "Name required",
-                "Name optional"
-            ],
-            "s": "Name required"
-        },
-        "new_series": false,
-        "override": false,
-        "s_nr": 1,
-        "series_name": "Runaways",
-        "show_subs": false,
-        "status_o": {
-            "o": [
-                "Airing",
-                "Hiatus",
-                "Ended"
-            ],
-            "s": "Airing"
-        },
-        "subs": [],
-        "sync": false,
-        "t_o": {
-            "o": [
-                "Series",
-                "HD",
-                "SD",
-                "[ignore]"
-            ],
-            "s": "Series"
-        },
-        "title": "Kingdom",
-        "title2": "",
-        "title3": "",
-        "tvdb_id": 332027
-    },
-    {
-        "anime_o": {
-            "o": [
-                "Anime: No",
-                "Anime: Yes"
-            ],
-            "s": "Anime: No"
-        },
-        "delete": true,
-        "e_nr": 2,
-        "e_o": {
-            "o": [
-                "Single",
-                "Double",
-                "Triple"
-            ],
-            "s": "Single"
-        },
-        "location": "Marvels.Runaways.S01E02.720p.HDTV.x264-AVS/D6XUNOcZTEiPQ5uZG.mkv",
-        "name_o": {
-            "o": [
-                "Name required",
-                "Name optional"
-            ],
-            "s": "Name required"
-        },
-        "new_series": false,
-        "override": false,
-        "s_nr": 1,
-        "series_name": "Runaways",
-        "show_subs": false,
-        "status_o": {
-            "o": [
-                "Airing",
-                "Hiatus",
-                "Ended"
-            ],
-            "s": "Airing"
-        },
-        "subs": [],
-        "sync": false,
-        "t_o": {
-            "o": [
-                "Series",
-                "HD",
-                "SD",
-                "[ignore]"
-            ],
-            "s": "Series"
-        },
-        "title": "Rewind",
-        "title2": "",
-        "title3": "",
-        "tvdb_id": 332027
-    },
-    {
-        "anime_o": {
-            "o": [
-                "Anime: No",
-                "Anime: Yes"
-            ],
-            "s": "Anime: No"
-        },
         "delete": false,
-        "e_nr": 7,
+        "e_nr": 3,
         "e_o": {
             "o": [
                 "Single",
@@ -182,172 +17,7 @@
             ],
             "s": "Single"
         },
-        "location": "The.Flash.2014.S05E07.HDTV.x264-SVA/DF1EsVwKPVuTO3iF7Kd0.mkv",
-        "name_o": {
-            "o": [
-                "Name required",
-                "Name optional"
-            ],
-            "s": "Name required"
-        },
-        "new_series": false,
-        "override": false,
-        "s_nr": 5,
-        "series_name": "The Flash",
-        "show_subs": false,
-        "status_o": {
-            "o": [
-                "Airing",
-                "Hiatus",
-                "Ended"
-            ],
-            "s": "Airing"
-        },
-        "subs": [],
-        "sync": true,
-        "t_o": {
-            "o": [
-                "Series",
-                "HD",
-                "SD",
-                "[ignore]"
-            ],
-            "s": "Series"
-        },
-        "title": "O Come, All Ye Thankful",
-        "title2": "",
-        "title3": "",
-        "tvdb_id": 279121
-    },
-    {
-        "anime_o": {
-            "o": [
-                "Anime: No",
-                "Anime: Yes"
-            ],
-            "s": "Anime: No"
-        },
-        "delete": true,
-        "e_nr": 10,
-        "e_o": {
-            "o": [
-                "Single",
-                "Double",
-                "Triple"
-            ],
-            "s": "Single"
-        },
-        "location": "Marvels.Runaways.S01E10.720p.HDTV.x264-HebTV/Marvels.Runaways.S01E10.720p.HDTV.x264-HebTV.mkv",
-        "name_o": {
-            "o": [
-                "Name required",
-                "Name optional"
-            ],
-            "s": "Name required"
-        },
-        "new_series": false,
-        "override": false,
-        "s_nr": 1,
-        "series_name": "Runaways",
-        "show_subs": false,
-        "status_o": {
-            "o": [
-                "Airing",
-                "Hiatus",
-                "Ended"
-            ],
-            "s": "Airing"
-        },
-        "subs": [],
-        "sync": false,
-        "t_o": {
-            "o": [
-                "Series",
-                "HD",
-                "SD",
-                "[ignore]"
-            ],
-            "s": "Series"
-        },
-        "title": "Hostile",
-        "title2": "",
-        "title3": "",
-        "tvdb_id": 332027
-    },
-    {
-        "anime_o": {
-            "o": [
-                "Anime: No",
-                "Anime: Yes"
-            ],
-            "s": "Anime: No"
-        },
-        "delete": false,
-        "e_nr": 7,
-        "e_o": {
-            "o": [
-                "Single",
-                "Double",
-                "Triple"
-            ],
-            "s": "Single"
-        },
-        "location": "The.Flash.2014.S05E07.720p.HDTV.x264-SVA/XOoh4DDvOEcxNzOr7CiY1jBxT1GUxZfV9xP.mkv",
-        "name_o": {
-            "o": [
-                "Name required",
-                "Name optional"
-            ],
-            "s": "Name required"
-        },
-        "new_series": false,
-        "override": false,
-        "s_nr": 5,
-        "series_name": "The Flash",
-        "show_subs": false,
-        "status_o": {
-            "o": [
-                "Airing",
-                "Hiatus",
-                "Ended"
-            ],
-            "s": "Airing"
-        },
-        "subs": [],
-        "sync": false,
-        "t_o": {
-            "o": [
-                "Series",
-                "HD",
-                "SD",
-                "[ignore]"
-            ],
-            "s": "Series"
-        },
-        "title": "O Come, All Ye Thankful",
-        "title2": "",
-        "title3": "",
-        "tvdb_id": 279121
-    },
-    {
-        "anime_o": {
-            "o": [
-                "Anime: No",
-                "Anime: Yes"
-            ],
-            "s": "Anime: No"
-        },
-        "delete": false,
-        "e_nr": 7,
-        "e_o": {
-            "o": [
-                "Single",
-                "Double",
-                "Triple"
-            ],
-            "s": "Single"
-        },
-        "location": "Black.Lightning.S02E07.720p.HDTV.x265-MiNX[TGx]/Black.Lightning.S02E07.720p.HDTV.x265-MiNX.mkv",
+        "location": "Agent Carter 02x03 - Better Angels.mkv",
         "name_o": {
             "o": [
                 "Name required",
@@ -358,7 +28,7 @@
         "new_series": false,
         "override": false,
         "s_nr": 2,
-        "series_name": "Black Lightning",
+        "series_name": "Wolf Hall",
         "show_subs": false,
         "status_o": {
             "o": [
@@ -379,395 +49,10 @@
             ],
             "s": "Series"
         },
-        "title": "The Book of Blood - Chapter Three - The Sange",
+        "title": "Christ Is Enough",
         "title2": "",
         "title3": "",
-        "tvdb_id": 332525
-    },
-    {
-        "anime_o": {
-            "o": [
-                "Anime: No",
-                "Anime: Yes"
-            ],
-            "s": "Anime: No"
-        },
-        "delete": true,
-        "e_nr": 4,
-        "e_o": {
-            "o": [
-                "Single",
-                "Double",
-                "Triple"
-            ],
-            "s": "Single"
-        },
-        "location": "Marvels.Runaways.S01E04.720p.HDTV.x264-HebTV/Marvels.Runaways.S01E04.720p.HDTV.x264-HebTV.mkv",
-        "name_o": {
-            "o": [
-                "Name required",
-                "Name optional"
-            ],
-            "s": "Name required"
-        },
-        "new_series": false,
-        "override": false,
-        "s_nr": 1,
-        "series_name": "Runaways",
-        "show_subs": false,
-        "status_o": {
-            "o": [
-                "Airing",
-                "Hiatus",
-                "Ended"
-            ],
-            "s": "Airing"
-        },
-        "subs": [],
-        "sync": false,
-        "t_o": {
-            "o": [
-                "Series",
-                "HD",
-                "SD",
-                "[ignore]"
-            ],
-            "s": "Series"
-        },
-        "title": "Fifteen",
-        "title2": "",
-        "title3": "",
-        "tvdb_id": 332027
-    },
-    {
-        "anime_o": {
-            "o": [
-                "Anime: No",
-                "Anime: Yes"
-            ],
-            "s": "Anime: No"
-        },
-        "delete": true,
-        "e_nr": 9,
-        "e_o": {
-            "o": [
-                "Single",
-                "Double",
-                "Triple"
-            ],
-            "s": "Single"
-        },
-        "location": "Marvels.Runaways.S01E09.720p.HDTV.x264-HebTV/Marvels.Runaways.S01E09.720p.HDTV.x264-HebTV.mkv",
-        "name_o": {
-            "o": [
-                "Name required",
-                "Name optional"
-            ],
-            "s": "Name required"
-        },
-        "new_series": false,
-        "override": false,
-        "s_nr": 1,
-        "series_name": "Runaways",
-        "show_subs": false,
-        "status_o": {
-            "o": [
-                "Airing",
-                "Hiatus",
-                "Ended"
-            ],
-            "s": "Airing"
-        },
-        "subs": [],
-        "sync": false,
-        "t_o": {
-            "o": [
-                "Series",
-                "HD",
-                "SD",
-                "[ignore]"
-            ],
-            "s": "Series"
-        },
-        "title": "Doomsday",
-        "title2": "",
-        "title3": "",
-        "tvdb_id": 332027
-    },
-    {
-        "anime_o": {
-            "o": [
-                "Anime: No",
-                "Anime: Yes"
-            ],
-            "s": "Anime: No"
-        },
-        "delete": true,
-        "e_nr": 7,
-        "e_o": {
-            "o": [
-                "Single",
-                "Double",
-                "Triple"
-            ],
-            "s": "Single"
-        },
-        "location": "Marvels.Runaways.S01E07.720p.HDTV.x264-HebTV/Marvels.Runaways.S01E07.720p.HDTV.x264-HebTV.mkv",
-        "name_o": {
-            "o": [
-                "Name required",
-                "Name optional"
-            ],
-            "s": "Name required"
-        },
-        "new_series": false,
-        "override": false,
-        "s_nr": 1,
-        "series_name": "Runaways",
-        "show_subs": false,
-        "status_o": {
-            "o": [
-                "Airing",
-                "Hiatus",
-                "Ended"
-            ],
-            "s": "Airing"
-        },
-        "subs": [],
-        "sync": false,
-        "t_o": {
-            "o": [
-                "Series",
-                "HD",
-                "SD",
-                "[ignore]"
-            ],
-            "s": "Series"
-        },
-        "title": "Refraction",
-        "title2": "",
-        "title3": "",
-        "tvdb_id": 332027
-    },
-    {
-        "anime_o": {
-            "o": [
-                "Anime: No",
-                "Anime: Yes"
-            ],
-            "s": "Anime: No"
-        },
-        "delete": true,
-        "e_nr": 3,
-        "e_o": {
-            "o": [
-                "Single",
-                "Double",
-                "Triple"
-            ],
-            "s": "Single"
-        },
-        "location": "Marvels.Runaways.S01E03.720p.HDTV.x264-HebTV/Marvels.Runaways.S01E03.720p.HDTV.x264-HebTV.mkv",
-        "name_o": {
-            "o": [
-                "Name required",
-                "Name optional"
-            ],
-            "s": "Name required"
-        },
-        "new_series": false,
-        "override": false,
-        "s_nr": 1,
-        "series_name": "Runaways",
-        "show_subs": false,
-        "status_o": {
-            "o": [
-                "Airing",
-                "Hiatus",
-                "Ended"
-            ],
-            "s": "Airing"
-        },
-        "subs": [],
-        "sync": false,
-        "t_o": {
-            "o": [
-                "Series",
-                "HD",
-                "SD",
-                "[ignore]"
-            ],
-            "s": "Series"
-        },
-        "title": "Destiny",
-        "title2": "",
-        "title3": "",
-        "tvdb_id": 332027
-    },
-    {
-        "anime_o": {
-            "o": [
-                "Anime: No",
-                "Anime: Yes"
-            ],
-            "s": "Anime: No"
-        },
-        "delete": true,
-        "e_nr": 6,
-        "e_o": {
-            "o": [
-                "Single",
-                "Double",
-                "Triple"
-            ],
-            "s": "Single"
-        },
-        "location": "Marvels.Runaways.S01E06.720p.HDTV.x264-HebTV/Marvels.Runaways.S01E06.720p.HDTV.x264-HebTV.mkv",
-        "name_o": {
-            "o": [
-                "Name required",
-                "Name optional"
-            ],
-            "s": "Name required"
-        },
-        "new_series": false,
-        "override": false,
-        "s_nr": 1,
-        "series_name": "Runaways",
-        "show_subs": false,
-        "status_o": {
-            "o": [
-                "Airing",
-                "Hiatus",
-                "Ended"
-            ],
-            "s": "Airing"
-        },
-        "subs": [],
-        "sync": false,
-        "t_o": {
-            "o": [
-                "Series",
-                "HD",
-                "SD",
-                "[ignore]"
-            ],
-            "s": "Series"
-        },
-        "title": "Metamorphosis",
-        "title2": "",
-        "title3": "",
-        "tvdb_id": 332027
-    },
-    {
-        "anime_o": {
-            "o": [
-                "Anime: No",
-                "Anime: Yes"
-            ],
-            "s": "Anime: No"
-        },
-        "delete": true,
-        "e_nr": 8,
-        "e_o": {
-            "o": [
-                "Single",
-                "Double",
-                "Triple"
-            ],
-            "s": "Single"
-        },
-        "location": "Marvels.Runaways.S01E08.720p.HDTV.x264-HebTV/Marvels.Runaways.S01E08.720p.HDTV.x264-HebTV.mkv",
-        "name_o": {
-            "o": [
-                "Name required",
-                "Name optional"
-            ],
-            "s": "Name required"
-        },
-        "new_series": false,
-        "override": false,
-        "s_nr": 1,
-        "series_name": "Runaways",
-        "show_subs": false,
-        "status_o": {
-            "o": [
-                "Airing",
-                "Hiatus",
-                "Ended"
-            ],
-            "s": "Airing"
-        },
-        "subs": [],
-        "sync": false,
-        "t_o": {
-            "o": [
-                "Series",
-                "HD",
-                "SD",
-                "[ignore]"
-            ],
-            "s": "Series"
-        },
-        "title": "Tsunami",
-        "title2": "",
-        "title3": "",
-        "tvdb_id": 332027
-    },
-    {
-        "anime_o": {
-            "o": [
-                "Anime: No",
-                "Anime: Yes"
-            ],
-            "s": "Anime: No"
-        },
-        "delete": true,
-        "e_nr": 8,
-        "e_o": {
-            "o": [
-                "Single",
-                "Double",
-                "Triple"
-            ],
-            "s": "Single"
-        },
-        "location": "Lethal.Weapon.S03E08.720p.WEB.x264-TBS/vbMvdgEhDOqHmjjVOiu8rER.mkv",
-        "name_o": {
-            "o": [
-                "Name required",
-                "Name optional"
-            ],
-            "s": "Name required"
-        },
-        "new_series": false,
-        "override": false,
-        "s_nr": 3,
-        "series_name": "Lethal Weapon",
-        "show_subs": false,
-        "status_o": {
-            "o": [
-                "Airing",
-                "Hiatus",
-                "Ended"
-            ],
-            "s": "Airing"
-        },
-        "subs": [],
-        "sync": false,
-        "t_o": {
-            "o": [
-                "Series",
-                "HD",
-                "SD",
-                "[ignore]"
-            ],
-            "s": "Series"
-        },
-        "title": "What the Puck",
-        "title2": "",
-        "title3": "",
-        "tvdb_id": 311790
+        "tvdb_id": ""
     },
     {
         "anime_o": {
@@ -778,7 +63,7 @@
             "s": "Anime: No"
         },
         "delete": false,
-        "e_nr": 8,
+        "e_nr": "",
         "e_o": {
             "o": [
                 "Single",
@@ -787,7 +72,7 @@
             ],
             "s": "Single"
         },
-        "location": "Lethal.Weapon.S03E08.WEB.x264-TBS/S3Epyf9bj5DDf1kegD7O2jydTJeZmkDy8atG.mkv",
+        "location": "Agent Carter 02x04 - Smoke & Mirrors.mp4",
         "name_o": {
             "o": [
                 "Name required",
@@ -797,8 +82,8 @@
         },
         "new_series": false,
         "override": false,
-        "s_nr": 3,
-        "series_name": "Lethal Weapon",
+        "s_nr": "",
+        "series_name": "Series Name",
         "show_subs": false,
         "status_o": {
             "o": [
@@ -809,7 +94,7 @@
             "s": "Airing"
         },
         "subs": [],
-        "sync": true,
+        "sync": false,
         "t_o": {
             "o": [
                 "Series",
@@ -819,9 +104,174 @@
             ],
             "s": "Series"
         },
-        "title": "What the Puck",
+        "title": "",
         "title2": "",
         "title3": "",
-        "tvdb_id": 311790
+        "tvdb_id": ""
+    },
+    {
+        "anime_o": {
+            "o": [
+                "Anime: No",
+                "Anime: Yes"
+            ],
+            "s": "Anime: No"
+        },
+        "delete": false,
+        "e_nr": "",
+        "e_o": {
+            "o": [
+                "Single",
+                "Double",
+                "Triple"
+            ],
+            "s": "Single"
+        },
+        "location": "Agent Carter 02x05 - The Atomic Job.mkv",
+        "name_o": {
+            "o": [
+                "Name required",
+                "Name optional"
+            ],
+            "s": "Name required"
+        },
+        "new_series": false,
+        "override": false,
+        "s_nr": "",
+        "series_name": "Series Name",
+        "show_subs": false,
+        "status_o": {
+            "o": [
+                "Airing",
+                "Hiatus",
+                "Ended"
+            ],
+            "s": "Airing"
+        },
+        "subs": [],
+        "sync": false,
+        "t_o": {
+            "o": [
+                "Series",
+                "HD",
+                "SD",
+                "[ignore]"
+            ],
+            "s": "Series"
+        },
+        "title": "",
+        "title2": "",
+        "title3": "",
+        "tvdb_id": ""
+    },
+    {
+        "anime_o": {
+            "o": [
+                "Anime: No",
+                "Anime: Yes"
+            ],
+            "s": "Anime: No"
+        },
+        "delete": false,
+        "e_nr": "",
+        "e_o": {
+            "o": [
+                "Single",
+                "Double",
+                "Triple"
+            ],
+            "s": "Single"
+        },
+        "location": "Agent Carter 02x06 - Life of the Party.mkv",
+        "name_o": {
+            "o": [
+                "Name required",
+                "Name optional"
+            ],
+            "s": "Name required"
+        },
+        "new_series": false,
+        "override": false,
+        "s_nr": "",
+        "series_name": "Series Name",
+        "show_subs": false,
+        "status_o": {
+            "o": [
+                "Airing",
+                "Hiatus",
+                "Ended"
+            ],
+            "s": "Airing"
+        },
+        "subs": [],
+        "sync": false,
+        "t_o": {
+            "o": [
+                "Series",
+                "HD",
+                "SD",
+                "[ignore]"
+            ],
+            "s": "Series"
+        },
+        "title": "",
+        "title2": "",
+        "title3": "",
+        "tvdb_id": ""
+    },
+    {
+        "anime_o": {
+            "o": [
+                "Anime: No",
+                "Anime: Yes"
+            ],
+            "s": "Anime: No"
+        },
+        "delete": false,
+        "e_nr": "",
+        "e_o": {
+            "o": [
+                "Single",
+                "Double",
+                "Triple"
+            ],
+            "s": "Single"
+        },
+        "location": "Agent Carter 02x07 - Monsters.mkv",
+        "name_o": {
+            "o": [
+                "Name required",
+                "Name optional"
+            ],
+            "s": "Name required"
+        },
+        "new_series": false,
+        "override": false,
+        "s_nr": "",
+        "series_name": "Series Name",
+        "show_subs": false,
+        "status_o": {
+            "o": [
+                "Airing",
+                "Hiatus",
+                "Ended"
+            ],
+            "s": "Airing"
+        },
+        "subs": [],
+        "sync": false,
+        "t_o": {
+            "o": [
+                "Series",
+                "HD",
+                "SD",
+                "[ignore]"
+            ],
+            "s": "Series"
+        },
+        "title": "",
+        "title2": "",
+        "title3": "",
+        "tvdb_id": ""
     }
 ]

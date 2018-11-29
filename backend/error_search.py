@@ -1,6 +1,5 @@
 from constants import *
 import io_utlis
-from syncer import compile_file_name
 from episode import Episode
 
 EXCEPTIONS = io_utlis.load_json(EXCEPTIONS_FILE)
@@ -29,7 +28,7 @@ def generate_error(message, e, show,
         'message': message,
         'old_location': e.location,
         'title': title if title else e.get_title(),
-        'series_name': show.series_name,
+        SERIES_NAME: show.series_name,
         'e_nr': e_nr if not e_nr is None else e.e_nr,
         's_nr': s_nr if s_nr else e.s_nr,
         's_nr_old': e.s_nr,
@@ -171,7 +170,7 @@ def check_for_multiple_files(show, e):
 def check_against_compiled(show, e):
     if show.series_name == 'Doctor Who Classic':
         return False
-    if not e.file_name == compile_file_name(e, series_name=show.series_name):
+    if not e.file_name == e.compile_file_name():
         return generate_error(message='Compilation Mismatch', e=e, show=show)
     return False
 

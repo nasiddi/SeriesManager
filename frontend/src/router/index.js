@@ -18,24 +18,29 @@ import 'bootstrap-vue/dist/bootstrap-vue.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
 import DashboardIndex from '@/components/Dashboard/Index';
-import About from '@/components/About';
 import Home from '@/components/Home';
-import Sync from '@/components/Sync';
-import Update from '@/components/Update';
-import UpdateNav from '@/components/UpdateNav';
-import SyncReport from '@/components/SyncReport';
-import BatchPrep from '@/components/BatchPrep';
-import BatchValidate from '@/components/BatchValidate';
-import BatchReport from '@/components/BatchReport';
-import Stats from '@/components/Stats';
-import FileTree from '@/components/FileTree';
-import SyncLog from '@/components/SyncLog';
-import MissingFiles from '@/components/MissingFiles';
-import Dictionary from '@/components/Dictionary';
-
 import Login from '@/components/Auth/Login';
 import Auth from '@/components/Auth/utils';
 import SettingsIndex from '@/components/Settings/Index';
+
+import FileTree from '@/components/FileTree/FileTree';
+import Reroute from '@/components/FileTree/Reroute';
+import Dictionary from '@/components/FileTree/Dictionary';
+import MissingFiles from '@/components/FileTree/MissingFiles';
+
+import Sync from '@/components/Sync/Sync';
+import SyncReport from '@/components/Sync/SyncReport';
+import SyncLog from '@/components/Sync/SyncLog';
+
+import Update from '@/components/Update/Update';
+import UpdateNav from '@/components/Update/UpdateNav';
+
+import BatchPrep from '@/components/Batch/BatchPrep';
+import BatchValidate from '@/components/Batch/BatchValidate';
+import BatchReport from '@/components/Batch/BatchReport';
+
+import Stats from '@/components/Stats/Stats';
+
 
 const VueMoment = require('vue-moment');
 const VueCookie = require('vue-cookie');
@@ -119,7 +124,7 @@ export default new Router({
     {
       path: '/reroute',
       name: 'reroute',
-      component: About,
+      component: Reroute,
       beforeEnter: Vue.prototype.$auth.requireAuth,
     },
     {

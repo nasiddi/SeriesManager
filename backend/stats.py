@@ -28,7 +28,7 @@ def main(args):
     size = 0
     for show in SHOWS.values():
         show_count += 1
-        show_stats = {'series_name': show.series_name, 'status': {show.status: 1}, 'premiere': show.premiere, 'final': show.final, 'ratio': {}, 'extension': {}, 'duration': 0, 'episodes': 0, 'seasons': 0, 'size': 0, 'quality': {}}
+        show_stats = {SERIES_NAME: show.series_name, 'status': {show.status: 1}, 'premiere': show.premiere, 'final': show.final, 'ratio': {}, 'extension': {}, 'duration': 0, 'episodes': 0, 'seasons': 0, 'size': 0, 'quality': {}}
 
         if show.status in stats['total']['status']:
             stats['total']['status'][show.status] += 1

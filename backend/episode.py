@@ -9,6 +9,7 @@ class Episode:
     def __init__(self, location='',
                  e_nr=999,
                  s_nr=0,
+                 series_name='',
                  episode_option=SINGLE,
                  title='',
                  title2='',
@@ -20,6 +21,7 @@ class Episode:
                  ratio=0,
                  quality=''):
         self.location = location
+        self.series_name = self.location.split(SEPERATOR)[2 + MAC_OFFSET] if series_name == '' else series_name
         self.file_name = os.path.basename(location)
         self.extension = ''
         self.s_nr = s_nr
@@ -66,8 +68,6 @@ class Episode:
         self.file_name = os.path.basename(self.location)
 
     def parse_episode_name_and_extension(self):
-        if 'Yu-Gi-Oh' in self.location:
-            print(self.location)
         file_name = self.file_name
         dot = file_name.rfind('.')
         if dot >= 0:
@@ -135,15 +135,44 @@ class Episode:
                 '\nDuration: ' + str(self.duration) + ' Size: ' + str(self.size))
 
     def id(self):
-        return ' '.join([self.location.split(SEPERATOR)[2 + MAC_OFFSET], str(self.s_nr), str(self.e_nr)])
+        return ' '.join([self.series_name, str(self.s_nr), str(self.e_nr)])
 
-
-
-
-
-
-
-
-
-
-
+    def compile_file_name(self, file=None):
+        if not file:
+            file = self
+        pad = 3 if self.anime else 2
+        if file.episode_option == 'Single':
+            if file.title == '':
+                return f'{self.series_name} {self.s_nr:02d}x{self.e_nr:0{pad}d}.{self.extension}'
+            return f'{self.series_name} {self.s_nr:02d}x{self.e_nr:0{pad}d} - {self.title}.{self.extension}'
+        elif file.episode_option == 'Double':
+            if file.title == '' and file.title2 == '':
+                return f'{self.series_name} {self.s_nr:02d}x{self.e_nr:0{pad}d}' \
+                       f' & {self.s_nr:02d}x{self.e_nr + 1:0{pad}d}.{self.extension}'
+            if not file.title == file.title2 and not (file.title == '' or file.title2 == ''):
+                return f'{self.series_name} {self.s_nr:02d}x{self.e_nr:0{pad}d}' \
+                       f' & {self.s_nr:02d}x{self.e_nr + 1:0{pad}d} - {self.title} & {self.title2}.{self.extension}'
+            return f'{self.series_name} {self.s_nr:02d}x{self.e_nr:0{pad}d} & ' \
+                   f'{self.s_nr:02d}x{self.e_nr + 1:0{pad}d}' \
+                   f' - {self.title if not self.title == "" else self.title2}.{self.extension}'
+        else:
+            # no title
+            if file.title == '' and file.title2 == '' and file.title3 == '':
+                return f'{self.series_name} {self.s_nr:02d}x{self.e_nr:0{pad}d} & {self.s_nr:02d}' \
+                       f'x{self.e_nr + 1:0{pad}d} & {self.s_nr:02d}x{self.e_nr + 2:0{pad}d}.{self.extension}'
+            # all titles
+            if not file.title == file.title2 and not file.title == file.title3 and not (
+                                file.title == '' or file.title2 == '' or file.title3 == ''):
+                return f'{self.series_name} {self.s_nr:02d}x{self.e_nr:0{pad}d} & {self.s_nr:02d}' \
+                       f'x{self.e_nr + 1:0{pad}d} & {self.s_nr:02d}x{self.e_nr + 2:0{pad}d}' \
+                       f' - {self.title} & {self.title2} & {self.title3}.{self.extension}'
+            title_set = list(filter(None, list({file.title, file.title2, file.title3})))
+            # one title
+            if len(title_set) == 1:
+                return f'{self.series_name} {self.s_nr:02d}x{self.e_nr:0{pad}d} & ' \
+                       f'{self.s_nr:02d}x{self.e_nr + 1:0{pad}d} & ' \
+                       f'{self.s_nr:02d}x{self.e_nr + 2:0{pad}d} - {title_set[0]}.{self.extension}'
+            # two titles
+            return f'{self.series_name} {self.s_nr:02d}x{self.e_nr:0{pad}d} & ' \
+                   f'{self.s_nr:02d}x{self.e_nr + 1:0{pad}d} & {self.s_nr:02d}x{self.e_nr + 2:0{pad}d}' \
+                   f' - {title_set[0]} & {title_set[1]}.{self.extension}'

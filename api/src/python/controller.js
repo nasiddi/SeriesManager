@@ -311,7 +311,6 @@ async function syncFiles(body, res) {
           res.sendStatus(500).end();
         }
         fs.unlink(outputFile);
-        fs.unlink(body);
         res.json(file);
       });
     },

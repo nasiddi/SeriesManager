@@ -44,12 +44,12 @@ def main(args):
     io_utlis.save_shows(SHOWS)
 
     import file_tree
-    file_tree.main(series_name=series_name if not error else error['series_name'], out_file=os.environ['OUTPUT_FILE'])
+    file_tree.main(series_name=series_name if not error else error[SERIES_NAME], out_file=os.environ['OUTPUT_FILE'])
     print(time.time() - start)
 
 
 def load_show(error, tree_file, queue):
-    series_name = error['series_name']
+    series_name = error[SERIES_NAME]
     if error['exception']:
         e_id = series_name + ' ' + str(error['s_nr']) + ' ' + str(error['e_nr'])
         if error['exception'] not in ['part', 'double']:

@@ -28,7 +28,7 @@ def main(args=None, series_name='*', out_file='data/treefile_comb'):
 
         show, error = get_show_data(SHOWS[series_name])
         for i in range(len(tree_file['errors'])):
-            if tree_file['errors'][i]['series_name'] == series_name:
+            if tree_file['errors'][i][SERIES_NAME] == series_name:
                 if error:
                     tree_file['errors'][i] = error
                 else:
