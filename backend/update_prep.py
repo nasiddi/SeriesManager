@@ -1,6 +1,5 @@
 import io_utlis
 from constants import *
-import json
 import sys
 import os
 

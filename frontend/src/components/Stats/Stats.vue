@@ -271,7 +271,7 @@
 
 <script>
 import PieChart from '@/components/Snippets/PieChart';
-import StatsCard from '@/components/StatsCard';
+import StatsCard from './StatsCard';
 
 
 const _ = require('lodash');

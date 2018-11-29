@@ -163,6 +163,9 @@ async function prepFiles(res) {
     outputFile,
     () => {},
     async (code, signal) => {
+      if (code === 0) {
+        result = 'done';
+      }
       if (!fs.existsSync(outputFile)) {
         res.sendStatus(204).end();
         return;

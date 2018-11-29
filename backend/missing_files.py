@@ -1,6 +1,4 @@
 import io_utlis
-import os
-import unlock_shows
 import time
 import sys
 from constants import *
