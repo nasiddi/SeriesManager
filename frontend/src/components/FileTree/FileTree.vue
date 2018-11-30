@@ -327,7 +327,7 @@ export default {
         return;
       }
       this.notifErrors = this.$snotify.info('Saving', { timeout: 0 });
-      this.$http.post('jobs/filetree/save', this.error).then(
+      this.$http.post('jobs/filetree/save', { error: this.error, tree: this.json }).then(
         (res) => {
           const body = _.defaults(res.body, {
           });

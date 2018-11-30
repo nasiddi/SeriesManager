@@ -67,6 +67,9 @@
           <b-dropdown-item :to="{ name: 'filetree.missing' }">
             <font-awesome-icon icon="ghost" /> Missing Files
           </b-dropdown-item>
+          <b-dropdown-item :to="{ name: 'filetree.infofiles' }">
+            <font-awesome-icon icon="info" /> Info Files
+          </b-dropdown-item>
         </b-nav-item-dropdown>
 
 

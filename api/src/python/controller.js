@@ -164,7 +164,6 @@ async function prepFiles(res) {
     () => {},
     async (code, signal) => {
       if (code !== 0) {
-        console.log(code);
         res.send('failed');
         return;
       }
@@ -195,6 +194,10 @@ async function getStats(res) {
     outputFile,
     () => {},
     async (code, signal) => {
+      if (code !== 0) {
+        res.send('failed');
+        return;
+      }
       if (!fs.existsSync(outputFile)) {
         res.sendStatus(204).end();
         return;
@@ -223,6 +226,10 @@ async function batchFiles(res) {
     outputFile,
     () => {},
     async (code, signal) => {
+      if (code !== 0) {
+        res.send('failed');
+        return;
+      }
       if (!fs.existsSync(outputFile)) {
         res.sendStatus(204).end();
         return;
@@ -250,6 +257,10 @@ async function updatePrep(res) {
     outputFile,
     () => {},
     async (code, signal) => {
+      if (code !== 0) {
+        res.send('failed');
+        return;
+      }
       if (!fs.existsSync(outputFile)) {
         res.sendStatus(204).end();
         return;
@@ -278,6 +289,10 @@ async function updateSave(body, res) {
     outputFile,
     () => {},
     async (code, signal) => {
+      if (code !== 0) {
+        res.send('failed');
+        return;
+      }
       if (!fs.existsSync(outputFile)) {
         res.sendStatus(204).end();
         return;
@@ -305,6 +320,10 @@ async function syncFiles(body, res) {
     outputFile,
     () => {},
     async (code, signal) => {
+      if (code !== 0) {
+        res.send('failed');
+        return;
+      }
       if (!fs.existsSync(outputFile)) {
         res.sendStatus(204).end();
         return;
@@ -332,6 +351,10 @@ async function batchMatch(body, res) {
     outputFile,
     () => {},
     async (code, signal) => {
+      if (code !== 0) {
+        res.send('failed');
+        return;
+      }
       if (!fs.existsSync(outputFile)) {
         res.sendStatus(204).end();
         return;
@@ -360,6 +383,10 @@ async function batchSync(body, res) {
     outputFile,
     () => {},
     async (code, signal) => {
+      if (code !== 0) {
+        res.send('failed');
+        return;
+      }
       if (!fs.existsSync(outputFile)) {
         res.sendStatus(204).end();
         return;
@@ -379,7 +406,6 @@ async function batchSync(body, res) {
 
 async function fileTree(body, res) {
   const outputFile = path.join(config.directories.storage, 'file_tree');
-  console.log(body[0]);
   await run(
     'file_tree',
     '',
@@ -388,6 +414,10 @@ async function fileTree(body, res) {
     outputFile,
     () => {},
     async (code, signal) => {
+      if (code !== 0) {
+        res.send('failed');
+        return;
+      }
       if (!fs.existsSync(outputFile)) {
         res.sendStatus(204).end();
         return;
@@ -406,14 +436,23 @@ async function fileTree(body, res) {
 
 async function saveFileTree(body, res) {
   const outputFile = path.join(config.directories.storage, 'file_tree');
+  fs.writeJSON(outputFile, body.tree, (err) => {
+    if (err) {
+      winston.error(err);
+    }
+  });
   await run(
     'save_file_tree',
     '',
     '',
-    body,
+    body.error,
     outputFile,
     () => {},
     async (code, signal) => {
+      if (code !== 0) {
+        res.send('failed');
+        return;
+      }
       if (!fs.existsSync(outputFile)) {
         res.sendStatus(204).end();
         return;
@@ -441,6 +480,10 @@ async function missingFiles(body, res) {
     outputFile,
     () => {},
     async (code, signal) => {
+      if (code !== 0) {
+        res.send('failed');
+        return;
+      }
       if (!fs.existsSync(outputFile)) {
         res.sendStatus(204).end();
         return;
@@ -468,6 +511,10 @@ async function wordSearch(body, res) {
     outputFile,
     () => {},
     async (code, signal) => {
+      if (code !== 0) {
+        res.send('failed');
+        return;
+      }
       if (!fs.existsSync(outputFile)) {
         res.sendStatus(204).end();
         return;
@@ -495,6 +542,10 @@ async function saveWords(body, res) {
     outputFile,
     () => {},
     async (code, signal) => {
+      if (code !== 0) {
+        res.send('failed');
+        return;
+      }
       if (!fs.existsSync(outputFile)) {
         res.sendStatus(204).end();
         return;
@@ -522,6 +573,10 @@ async function errorSearch(body, res) {
     outputFile,
     () => {},
     async (code, signal) => {
+      if (code !== 0) {
+        res.send('failed');
+        return;
+      }
       if (!fs.existsSync(outputFile)) {
         res.sendStatus(204).end();
         return;
@@ -534,6 +589,56 @@ async function errorSearch(body, res) {
         }
         res.json(file);
       });
+    },
+  );
+}
+
+async function editInfoFiles(res) {
+  const outputFile = path.join(config.directories.storage, 'edit_infofiles');
+  await run(
+    'edit_infofiles',
+    '',
+    '',
+    '',
+    outputFile,
+    () => {},
+    async (code, signal) => {
+      if (code !== 0) {
+        res.send('failed');
+        return;
+      }
+      if (!fs.existsSync(outputFile)) {
+        res.sendStatus(204).end();
+        return;
+      }
+
+      fs.readJson(outputFile, (err, file) => {
+        if (err) {
+          winston.error(err);
+          res.sendStatus(500).end();
+        }
+        fs.unlink(outputFile);
+        res.json(file);
+      });
+    },
+  );
+}
+
+async function saveInfoFiles(body, res) {
+  await run(
+    'save_infofiles',
+    '',
+    '',
+    body,
+    '',
+    () => {},
+    async (code, signal) => {
+      if (code !== 0) {
+        res.send('failed');
+        return;
+      }
+
+      res.send('done');
     },
   );
 }
@@ -555,4 +660,6 @@ module.exports = {
   wordSearch,
   saveWords,
   errorSearch,
+  editInfoFiles,
+  saveInfoFiles,
 };

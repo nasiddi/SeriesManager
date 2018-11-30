@@ -1,16 +1,7 @@
 import io_utlis
-import os
 import sys
 import shutil
 from constants import *
-from file import File
-from series import Series
-from episode import Episode
-import time
-import json
-import unlock_shows
-import syncer
-import file_tree
 SHOWS = None
 
 

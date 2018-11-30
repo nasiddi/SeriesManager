@@ -19,6 +19,7 @@ def main(args):
     unlock_shows.main()
     io_utlis.parse_args(args)
     error = io_utlis.load_json(os.environ["CONF_FILE"])
+
     tree_file = io_utlis.load_json(os.environ['OUTPUT_FILE'])
     SHOWS = io_utlis.load_shows()
     EXCEPTIONS = io_utlis.load_json(EXCEPTIONS_FILE)
@@ -34,7 +35,6 @@ def main(args):
         series_name = load_show(error, tree_file, queue)
     else:
         series_name = load_all(tree_file, queue)
-    print(EXCEPTIONS)
     io_utlis.save_json(EXCEPTIONS, EXCEPTIONS_FILE)
     save_queue(queue)
     report = []
@@ -159,7 +159,9 @@ def load_all(tree_file, queue):
 
 
 def save_queue(queue):
+    print(len(queue))
     for file in queue:
+        print(file.location)
         if file.delete:
             syncer.recursive_delete(file.location)
             try:
@@ -171,7 +173,7 @@ def save_queue(queue):
             continue
         try:
             if file.location == file.new_location:
-                return
+                continue
             shutil.move(file.location, file.new_location)
         except Exception as e:
             print('rename', e)

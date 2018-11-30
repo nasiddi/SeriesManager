@@ -39,6 +39,8 @@ import BatchPrep from '@/components/Batch/BatchPrep';
 import BatchValidate from '@/components/Batch/BatchValidate';
 import BatchReport from '@/components/Batch/BatchReport';
 
+import InfoFiles from '@/components/InfoFiles/InfoFiles';
+
 import Stats from '@/components/Stats/Stats';
 
 
@@ -149,6 +151,12 @@ export default new Router({
       path: '/sync/report',
       name: 'sync.report',
       component: SyncReport,
+      beforeEnter: Vue.prototype.$auth.requireAuth,
+    },
+    {
+      path: '/filetree/infofiles',
+      name: 'filetree.infofiles',
+      component: InfoFiles,
       beforeEnter: Vue.prototype.$auth.requireAuth,
     },
     {

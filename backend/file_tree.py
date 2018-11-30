@@ -16,11 +16,6 @@ def main(args=None, series_name='*', out_file='data/treefile_comb'):
         series_name = conf[SERIES_NAME]
         out_file = os.environ['OUTPUT_FILE']
 
-    if SHOWS is None:
-        io_utlis.save_json({'shows_locked': True}, out_file)
-        print('shows locked')
-        return
-
     if series_name == '*':
         tree_file = load_all()
     else:

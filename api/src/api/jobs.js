@@ -15,6 +15,14 @@ routes.post('/unlock', async (req, res) => {
   python.unlockShows(res);
 });
 
+routes.post('/infofiles/load', async (req, res) => {
+  python.editInfoFiles(res);
+});
+
+routes.post('/infofiles/save', async (req, res) => {
+  python.saveInfoFiles(req.body, res);
+});
+
 routes.post('/update/prep', async (req, res) => {
   python.updatePrep(res);
 });
