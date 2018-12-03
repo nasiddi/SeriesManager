@@ -275,8 +275,6 @@ export default {
       '/',
       '{',
       '}',
-      '(',
-      ')',
       '\\',
       '<',
       '>',
@@ -349,6 +347,9 @@ export default {
         this.syncColor = 'outline-primary';
       } else {
         this.syncColor = 'outline-danger';
+        this.f.sync = false;
+      }
+      if (this.f.delete) {
         this.f.sync = false;
       }
     },

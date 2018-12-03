@@ -94,8 +94,6 @@ export default {
       '/',
       '{',
       '}',
-      '(',
-      ')',
       '\\',
       '<',
       '>',
@@ -143,15 +141,11 @@ export default {
         const o = this.original;
 
         // const u = this.updated;
-        if (this.checkWrongSymbols(e.title)) {
-          return this.updateSave(false);
-        }
-        if (this.checkWrongSymbols(e.title2)) {
-          return this.updateSave(false);
-        }
-        if (this.checkWrongSymbols(e.title3)) {
-          return this.updateSave(false);
-        }
+        e.words.forEach((w) => {
+          if (this.checkWrongSymbols(w.word)) {
+            this.updateSave(false);
+          }
+        });
         if (e.name_needed) {
           if (e.title === '') {
             return this.updateSave(false);

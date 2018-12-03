@@ -39,10 +39,10 @@ import BatchPrep from '@/components/Batch/BatchPrep';
 import BatchValidate from '@/components/Batch/BatchValidate';
 import BatchReport from '@/components/Batch/BatchReport';
 
-import InfoFiles from '@/components/InfoFiles/InfoFiles';
+import ExceptionFile from '@/components/ExceptionFile/ExceptionFile';
+import BackUp from '@/components/BackUp';
 
 import Stats from '@/components/Stats/Stats';
-
 
 const VueMoment = require('vue-moment');
 const VueCookie = require('vue-cookie');
@@ -154,9 +154,15 @@ export default new Router({
       beforeEnter: Vue.prototype.$auth.requireAuth,
     },
     {
-      path: '/filetree/infofiles',
-      name: 'filetree.infofiles',
-      component: InfoFiles,
+      path: '/filetree/exceptionfile',
+      name: 'filetree.exceptionfile',
+      component: ExceptionFile,
+      beforeEnter: Vue.prototype.$auth.requireAuth,
+    },
+    {
+      path: '/backup',
+      name: 'backup',
+      component: BackUp,
       beforeEnter: Vue.prototype.$auth.requireAuth,
     },
     {

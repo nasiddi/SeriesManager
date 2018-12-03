@@ -44,7 +44,7 @@
 </div></template>
 
 <script>
-import InfoCard from './InfoCard';
+import InfoCard from './ExceptionCard';
 
 const _ = require('lodash');
 
@@ -94,7 +94,7 @@ export default {
     },
     loadData() {
       this.notifLoading = this.$snotify.info('loading', { timeout: 0 });
-      this.$http.post('jobs/infofiles/load', { series_name: '*' }).then(
+      this.$http.post('jobs/exceptionfile/load', { series_name: '*' }).then(
         (res) => {
           const body = _.defaults(res.body, {
           });
@@ -125,7 +125,7 @@ export default {
     },
     save() {
       this.notifLoading = this.$snotify.info('Saving', { timeout: 0 });
-      this.$http.post('jobs/infofiles/save', this.json).then(
+      this.$http.post('jobs/exceptionfile/save', this.json).then(
         (res) => {
           const body = _.defaults(res.body, {
           });

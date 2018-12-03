@@ -1,10 +1,8 @@
 import subprocess
 import shlex
 import json
-import os
 import io_utlis
 import sys
-import unlock_shows
 from math import gcd
 from constants import *
 import time
@@ -14,11 +12,6 @@ def main(args):
     global SHOWS
     SHOWS = io_utlis.load_shows(read_only=True)
     io_utlis.parse_args(args)
-
-    if SHOWS is None:
-        io_utlis.save_json({'error': 'Shows locked'}, os.environ['OUTPUT_FILE'])
-        print('shows locked')
-        return
 
     stats = {'shows': [], 'total': {'status': {}, 'extension': {}, 'ratio': {}, 'quality': {}}}
     duration = 0
@@ -84,9 +77,12 @@ def main(args):
         for key in keys:
             try:
                 show_stats['ratio'][ASPECT_RATIOS[key]] = show_stats['ratio'][key]
-                show_stats['ratio'].pop(key, None)
+
             except:
                 pass
+            finally:
+                show_stats['ratio'].pop(key, None)
+
         print(show.series_name)
 
         show_stats['avg_duration'] = int(show_stats['duration'] / show_stats['episodes'] * 100) / 100.0

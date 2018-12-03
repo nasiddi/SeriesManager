@@ -62,7 +62,7 @@
         </b-col>
       </b-row>
       <b-row
-        v-for="s in show.seasons"
+        v-for="s in orderedSeasons"
         :key="s.key"
         class="mt-3">
         <b-col>
@@ -121,8 +121,6 @@ export default {
       '/',
       '{',
       '}',
-      '(',
-      ')',
       '\\',
       '<',
       '>',
@@ -134,6 +132,9 @@ export default {
     ],
   }),
   computed: {
+    orderedSeasons() {
+      return _.orderBy(this.show.seasons, 'key');
+    },
     opened(sea) {
       const season = sea;
       if (season.opened === true) {

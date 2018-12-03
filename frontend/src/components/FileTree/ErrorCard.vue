@@ -118,9 +118,9 @@ export default {
       { value: false, text: 'Exception' },
       { value: 'part', text: 'Part' },
       { value: 'lower', text: 'lowerCase' },
-      { value: 'upper', text: 'upperCase' },
+      { value: 'upper', text: 'UpperCase' },
       { value: 'double', text: 'DoubleTitle' },
-
+      { value: 'lower_general', text: 'lowerGeneral' },
     ],
     episode_options: [
       'Single',

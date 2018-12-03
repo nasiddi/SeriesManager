@@ -15,12 +15,24 @@ routes.post('/unlock', async (req, res) => {
   python.unlockShows(res);
 });
 
-routes.post('/infofiles/load', async (req, res) => {
-  python.editInfoFiles(res);
+routes.post('/exceptionfile/load', async (req, res) => {
+  python.editExceptionFile(res);
 });
 
-routes.post('/infofiles/save', async (req, res) => {
-  python.saveInfoFiles(req.body, res);
+routes.post('/exceptionfile/save', async (req, res) => {
+  python.saveExceptionFile(req.body, res);
+});
+
+routes.post('/backup', async (req, res) => {
+  python.backUp(res);
+});
+
+routes.post('/getbackup', async (req, res) => {
+  python.getBackUp(res);
+});
+
+routes.post('/restorebackup', async (req, res) => {
+  python.restoreBackUp(req.body, res);
 });
 
 routes.post('/update/prep', async (req, res) => {
@@ -49,10 +61,6 @@ routes.post('/filetree/save', async (req, res) => {
 
 routes.post('/filetree/dictionary', async (req, res) => {
   python.wordSearch(req.body, res);
-});
-
-routes.post('/filetree/errors', async (req, res) => {
-  python.errorSearch(req.body, res);
 });
 
 routes.post('/filetree/savedictionary', async (req, res) => {

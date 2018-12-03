@@ -115,7 +115,7 @@ export default {
   data: () => ({
     reg: [],
     units: [],
-    counter: 1,
+    counter: 2,
     matches: [],
   }),
   watch: {

@@ -33,6 +33,14 @@
         block
         @click.prevent="stats"
       >Statistics</b-button>
+      <b-button
+        type="stats"
+        variant="primary"
+        size="lg"
+        class="mt-3"
+        block
+        @click.prevent="backup"
+      >BackUp</b-button>
     </b-form>
   </div>
 </template>
@@ -58,6 +66,11 @@ export default {
     async files() {
       this.$router.push({
         name: 'filetree',
+      });
+    },
+    async backup() {
+      this.$router.push({
+        name: 'backup',
       });
     },
   },

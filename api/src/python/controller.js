@@ -217,7 +217,6 @@ async function getStats(res) {
 
 async function batchFiles(res) {
   const outputFile = path.join(config.directories.storage, 'batchFiles');
-  console.log('hi there');
   await run(
     'batch_files',
     '',
@@ -280,7 +279,6 @@ async function updatePrep(res) {
 
 async function updateSave(body, res) {
   const outputFile = path.join(config.directories.storage, 'update_save');
-  console.log(body[0]);
   await run(
     'update_save',
     '',
@@ -365,8 +363,8 @@ async function batchMatch(body, res) {
           winston.error(err);
           res.sendStatus(500).end();
         }
-        res.json(file);
         fs.unlink(outputFile);
+        res.json(file);
       });
     },
   );
@@ -374,7 +372,6 @@ async function batchMatch(body, res) {
 
 async function batchSync(body, res) {
   const outputFile = path.join(config.directories.storage, 'batch_report');
-  console.log(body[0]);
   await run(
     'batch_sync',
     '',
@@ -397,8 +394,8 @@ async function batchSync(body, res) {
           winston.error(err);
           res.sendStatus(500).end();
         }
-        res.json(file);
         fs.unlink(outputFile);
+        res.json(file);
       });
     },
   );
@@ -428,6 +425,7 @@ async function fileTree(body, res) {
           winston.error(err);
           res.sendStatus(500).end();
         }
+        fs.unlink(outputFile);
         res.json(file);
       });
     },
@@ -463,6 +461,7 @@ async function saveFileTree(body, res) {
           winston.error(err);
           res.sendStatus(500).end();
         }
+        fs.unlink(outputFile);
         res.json(file);
       });
     },
@@ -471,7 +470,6 @@ async function saveFileTree(body, res) {
 
 async function missingFiles(body, res) {
   const outputFile = path.join(config.directories.storage, 'missing_files');
-  console.log(body[0]);
   await run(
     'missing_files',
     '',
@@ -494,6 +492,7 @@ async function missingFiles(body, res) {
           winston.error(err);
           res.sendStatus(500).end();
         }
+        fs.unlink(outputFile);
         res.json(file);
       });
     },
@@ -502,7 +501,6 @@ async function missingFiles(body, res) {
 
 async function wordSearch(body, res) {
   const outputFile = path.join(config.directories.storage, 'word_search');
-  console.log(body[0]);
   await run(
     'word_search',
     '',
@@ -525,6 +523,7 @@ async function wordSearch(body, res) {
           winston.error(err);
           res.sendStatus(500).end();
         }
+        fs.unlink(outputFile);
         res.json(file);
       });
     },
@@ -533,7 +532,6 @@ async function wordSearch(body, res) {
 
 async function saveWords(body, res) {
   const outputFile = path.join(config.directories.storage, 'save_words');
-  console.log(body[0]);
   await run(
     'save_words',
     '',
@@ -556,37 +554,7 @@ async function saveWords(body, res) {
           winston.error(err);
           res.sendStatus(500).end();
         }
-        res.json(file);
-      });
-    },
-  );
-}
-
-async function errorSearch(body, res) {
-  const outputFile = path.join(config.directories.storage, 'errors');
-  console.log(body[0]);
-  await run(
-    'error_search',
-    '',
-    '',
-    body,
-    outputFile,
-    () => {},
-    async (code, signal) => {
-      if (code !== 0) {
-        res.send('failed');
-        return;
-      }
-      if (!fs.existsSync(outputFile)) {
-        res.sendStatus(204).end();
-        return;
-      }
-
-      fs.readJson(outputFile, (err, file) => {
-        if (err) {
-          winston.error(err);
-          res.sendStatus(500).end();
-        }
+        fs.unlink(outputFile);
         res.json(file);
       });
     },
@@ -625,12 +593,13 @@ async function editExceptionFile(res) {
 }
 
 async function saveExceptionFile(body, res) {
+  const outputFile = path.join(config.directories.storage, 'save_exceptionfile');
   await run(
     'save_exceptionfile',
     '',
     '',
     body,
-    '',
+    outputFile,
     () => {},
     async (code, signal) => {
       if (code !== 0) {
@@ -638,7 +607,103 @@ async function saveExceptionFile(body, res) {
         return;
       }
 
-      res.send('done');
+      fs.readJson(outputFile, (err, file) => {
+        if (err) {
+          winston.error(err);
+          res.sendStatus(500).end();
+        }
+        fs.unlink(outputFile);
+        res.json(file);
+      });
+    },
+  );
+}
+
+async function backUp(res) {
+  const outputFile = path.join(config.directories.storage, 'backup');
+  await run(
+    'backup',
+    '',
+    '',
+    '',
+    outputFile,
+    () => {},
+    async (code, signal) => {
+      if (code !== 0) {
+        res.send('failed');
+        return;
+      }
+      if (!fs.existsSync(outputFile)) {
+        res.sendStatus(204).end();
+        return;
+      }
+
+      fs.readJson(outputFile, (err, file) => {
+        if (err) {
+          winston.error(err);
+          res.sendStatus(500).end();
+        }
+        fs.unlink(outputFile);
+        res.json(file);
+      });
+    },
+  );
+}
+
+async function getBackUp(res) {
+  const outputFile = path.join(config.directories.storage, 'get_backups');
+  await run(
+    'get_backups',
+    '',
+    '',
+    '',
+    outputFile,
+    () => { },
+    async (code, signal) => {
+      if (code !== 0) {
+        res.send('failed');
+        return;
+      }
+      if (!fs.existsSync(outputFile)) {
+        res.sendStatus(204).end();
+        return;
+      }
+
+      fs.readJson(outputFile, (err, file) => {
+        if (err) {
+          winston.error(err);
+          res.sendStatus(500).end();
+        }
+        fs.unlink(outputFile);
+        res.json(file);
+      });
+    },
+  );
+}
+
+async function restoreBackUp(body, res) {
+  const outputFile = path.join(config.directories.storage, 'restore_backup');
+  await run(
+    'restore_backup',
+    '',
+    '',
+    body,
+    outputFile,
+    () => {},
+    async (code, signal) => {
+      if (code !== 0) {
+        res.send('failed');
+        return;
+      }
+
+      fs.readJson(outputFile, (err, file) => {
+        if (err) {
+          winston.error(err);
+          res.sendStatus(500).end();
+        }
+        fs.unlink(outputFile);
+        res.json(file);
+      });
     },
   );
 }
@@ -659,7 +724,9 @@ module.exports = {
   missingFiles,
   wordSearch,
   saveWords,
-  errorSearch,
   editExceptionFile,
   saveExceptionFile,
+  backUp,
+  getBackUp,
+  restoreBackUp,
 };

@@ -24,7 +24,8 @@
       id="nav_collapse"
       is-nav
     >
-      <b-navbar-nav v-if="loggedIn">
+      <b-navbar-nav
+        v-if="loggedIn">
 
         <b-button
           size="sm"
@@ -57,18 +58,15 @@
           FileTree
         </b-nav-item>
 
-        <b-nav-item-dropdown>
-          <b-dropdown-item :to="{ name: 'reroute', params: {errors: true} }">
-            <font-awesome-icon icon="exclamation-circle" /> ErrorSearch
-          </b-dropdown-item>
+        <b-nav-item-dropdown left>
           <b-dropdown-item :to="{ name: 'filetree.dictionary' }">
             <font-awesome-icon icon="atlas" /> Dictionary
           </b-dropdown-item>
           <b-dropdown-item :to="{ name: 'filetree.missing' }">
             <font-awesome-icon icon="ghost" /> Missing Files
           </b-dropdown-item>
-          <b-dropdown-item :to="{ name: 'filetree.infofiles' }">
-            <font-awesome-icon icon="info" /> Info Files
+          <b-dropdown-item :to="{ name: 'filetree.exceptionfile' }">
+            <font-awesome-icon icon="exclamation-circle" /> Exception File
           </b-dropdown-item>
         </b-nav-item-dropdown>
 
