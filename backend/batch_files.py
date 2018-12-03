@@ -29,9 +29,12 @@ def main(args):
             units.append({'text': dl, 'files': file_list, 'select': False, 'opened': False})
     counter = 0
     regex = [
-        {'key': counter, 'regex': 'S[0-9]{2}E[0-9]{2}', 'matches': [], 's_start': '1', 's_end': '3', 'e_start': '4', 'e_end': '6', 'sxe': []}
+        {'key': counter, 'regex': 'S[0-9]{2}E[0-9]{2}', 'matches': [],
+         's_start': '1', 's_end': '3', 'e_start': '4', 'e_end': '6', 'sxe': []},
+        {'key': counter+1, 'regex': 's[0-9]{2}e[0-9]{2}', 'matches': [],
+         's_start': '1', 's_end': '3', 'e_start': '4', 'e_end': '6', 'sxe': []}
     ]
-    counter += 1
+    counter += 2
     while counter < 10:
         regex.append({'key': counter, 'regex': '', 'matches': [], 's_start': '', 's_end': '', 'e_start': '', 'e_end': '', 'sxe': []})
         counter += 1

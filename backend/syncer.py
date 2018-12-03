@@ -79,7 +79,6 @@ def main(args):
         os.path.dirname(os.environ['OUTPUT_FILE']), 'synclog'))
     if not log:
         log = []
-    print(log)
     log.extend(report)
     io_utlis.save_json(report, os.environ['OUTPUT_FILE'])
     io_utlis.save_json(log, os.path.join(os.path.dirname(

@@ -52,7 +52,7 @@ def load_show(error, tree_file, queue):
     series_name = error[SERIES_NAME]
     if error['exception']:
         e_id = f'{series_name} {error["s_nr"]:02d}x{error["e_nr"]:0{3 if error["anime"] else 2}d}'
-        if error['exception'] not in ['part', 'double']:
+        if error['exception'] not in ['part', 'double', 'lower_general']:
             if e_id not in EXCEPTIONS[error['exception']]:
                 EXCEPTIONS[error['exception']][e_id] = []
             EXCEPTIONS[error['exception']][e_id].append(error['word'])
@@ -60,8 +60,12 @@ def load_show(error, tree_file, queue):
             if series_name not in EXCEPTIONS[error['exception']]:
                 EXCEPTIONS[error['exception']][series_name] = []
             EXCEPTIONS[error['exception']][series_name].append(error['title'])
+        elif error['exception'] == 'lower_general':
+            EXCEPTIONS[error['exception']].append(error['word'])
+            EXCEPTIONS[error['exception']] = sorted(EXCEPTIONS[error['exception']])
         else:
             EXCEPTIONS[error['exception']].append(e_id)
+            EXCEPTIONS[error['exception']] = sorted(EXCEPTIONS[error['exception']])
         return series_name
 
     if error['delete']:

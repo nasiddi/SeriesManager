@@ -32,8 +32,6 @@ def main(args):
         n1 = clean_up(n)
         series_names_words.append(n1)
         series_names.append(n)
-        if "'" in n:
-            print(n)
         n2 = n.replace('\'', '')
         n2 = n2.replace('.', '')
         n2 = clean_up(n2)
@@ -66,13 +64,35 @@ def main(args):
         file.file_id = i
         i += 1
 
-    pattern = re.compile('s[0-9]{2}e[0-9]{2}')
+    regex = [
+        {
+            "e_end": 6,
+            "e_start": 4,
+            "regex": "s[0-9]{2}e[0-9]{2}",
+            "s_end": 3,
+            "s_start": 1,
+        },
+        {
+            "e_end": 5,
+            "e_start": 3,
+            "regex": "[0-9]{2}x[0-9]{2}",
+            "s_end": 2,
+            "s_start": 0,
+        },
+    ]
     for file in file_list:
         location = file.location.lower()
-        match = re.findall(pattern, location)
-        if match:
-            file.s_nr = int(match[0][1:3])
-            file.e_nr = int(match[0][4:])
+        for reg in regex:
+
+            pattern = re.compile(reg['regex'])
+            match = re.findall(pattern, location)
+            if match:
+                try:
+                    file.s_nr = int(match[0][reg['s_start']:reg['s_end']])
+                    file.e_nr = int(match[0][reg['e_start']:reg['e_end']])
+                    break
+                except IndexError:
+                    continue
         for name in series_names_words:
             if all(word in location for word in name):
                 index = series_names_words.index(name)

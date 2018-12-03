@@ -10,7 +10,7 @@ from constants import *
 
 def save_json(data_json, file):
     with open(file, 'w', encoding='utf-8') as f:
-        f.write(json.dumps(data_json, indent=4, sort_keys=True))
+        f.write(json.dumps(data_json, indent=4, sort_keys=True, ))
 
 
 def load_json(file):

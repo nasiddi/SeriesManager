@@ -97,16 +97,22 @@ def main(args):
 
     keys = list(stats['total']['ratio'].keys())
     for key in keys:
-        stats['total']['ratio'][ASPECT_RATIOS[key]] = stats['total']['ratio'][key]
-        stats['total']['ratio'].pop(key, None)
+        try:
+            stats['total']['ratio'][ASPECT_RATIOS[key]] = stats['total']['ratio'][key]
+            stats['total']['ratio'].pop(key, None)
+        except KeyError:
+            pass
 
     keys = list(stats['total']['extension'].keys())
     stats['extensions'] = keys
     stats['total']['extension'].update({'other': 0})
     for key in keys:
-        if stats['total']['extension'][key] < 1000:
-            stats['total']['extension']['other'] += stats['total']['extension'][key]
-            stats['total']['extension'].pop(key, None)
+        try:
+            if stats['total']['extension'][key] < 1000:
+                stats['total']['extension']['other'] += stats['total']['extension'][key]
+                stats['total']['extension'].pop(key, None)
+        except KeyError:
+            pass
 
     stats['total']['days'] = int(duration / 60.0 / 24.0 * 100) / 100.0
     stats['total']['hours'] = int(duration / 60.0 * 100) / 100.0
@@ -128,7 +134,7 @@ def main(args):
 
     stats['total']['avg_mb_ep'] = int(size / ep_count * 100.0) / 100.0
     stats['total']['avg_gb_show'] = int(size / show_count / 1024 * 100.0) / 100.0
-    # print(json.dumps(stats, indent=4, sort_keys=True))
+    print(json.dumps(stats, indent=4))
 
     io_utlis.save_json(stats, os.environ['OUTPUT_FILE'])
 
