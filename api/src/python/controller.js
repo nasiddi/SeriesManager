@@ -154,9 +154,9 @@ async function unlockShows(res) {
 }
 
 async function prepFiles(res) {
-  const outputFile = path.join(config.directories.storage, 'names');
+  const outputFile = path.join(config.directories.storage, 'sync_prep');
   await run(
-    'file_loader',
+    'sync_prep',
     '',
     '',
     '',
@@ -593,10 +593,10 @@ async function errorSearch(body, res) {
   );
 }
 
-async function editInfoFiles(res) {
-  const outputFile = path.join(config.directories.storage, 'edit_infofiles');
+async function editExceptionFile(res) {
+  const outputFile = path.join(config.directories.storage, 'edit_exceptionfile');
   await run(
-    'edit_infofiles',
+    'edit_exceptionfile',
     '',
     '',
     '',
@@ -624,9 +624,9 @@ async function editInfoFiles(res) {
   );
 }
 
-async function saveInfoFiles(body, res) {
+async function saveExceptionFile(body, res) {
   await run(
-    'save_infofiles',
+    'save_exceptionfile',
     '',
     '',
     body,
@@ -660,6 +660,6 @@ module.exports = {
   wordSearch,
   saveWords,
   errorSearch,
-  editInfoFiles,
-  saveInfoFiles,
+  editExceptionFile,
+  saveExceptionFile,
 };

@@ -1,10 +1,9 @@
-import os
-import re
-import sys
-
-from file import File
-import io_utlis
 from constants import *
+import os
+from file import File
+import re
+import io_utlis
+import sys
 
 
 def main(args):
@@ -44,19 +43,19 @@ def main(args):
             series_names_words.append(n2)
 
     locations = []
-    multiples = []
+    multis = []
     delete = []
     for file in file_list:
-        loc = file.location.split(SEPARATOR)[2 + MAC_OFFSET]
+        loc = file.location.split(SEPERATOR)[2 + MAC_OFFSET]
         if loc in locations:
-            if loc not in multiples:
-                multiples.append(loc)
+            if loc not in multis:
+                multis.append(loc)
         else:
             locations.append(loc)
 
     for file in file_list:
-        loc = file.location.split(SEPARATOR)[2 + MAC_OFFSET]
-        if loc in multiples:
+        loc = file.location.split(SEPERATOR)[2 + MAC_OFFSET]
+        if loc in multis:
             delete.append(file)
 
     for file in delete:
@@ -90,7 +89,7 @@ def main(args):
     for file in file_list:
         json['files'].append(file.__str__())
 
-    io_utlis.save_json(json, os.environ[OUT_FILE])
+    io_utlis.save_json(json, os.environ['OUTPUT_FILE'])
     pass
 
 
@@ -105,5 +104,8 @@ def clean_up(n):
     return n
 
 
+
 if __name__ == '__main__':
     main(sys.argv[1:])
+
+
