@@ -8,8 +8,8 @@ __pycache__/
 
 .idea
 
-backend/*
-data/*
+backend/assets/
+backend/data/
 
 # Distribution / packaging
 .Python

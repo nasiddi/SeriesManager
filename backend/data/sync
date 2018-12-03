@@ -1,1 +1,332 @@
-{}
+[
+    {
+        "anime_o": {
+            "o": [
+                "Anime: No",
+                "Anime: Yes"
+            ],
+            "s": "Anime: No"
+        },
+        "delete": true,
+        "e_nr": 9,
+        "e_o": {
+            "o": [
+                "Single",
+                "Double",
+                "Triple"
+            ],
+            "s": "Single"
+        },
+        "location": "Doctor.Who.2005.S11E09.720p.iP.WEB-DL.AAC2.0.H.264-BTW/Doctor 09.mkv",
+        "name_o": {
+            "o": [
+                "Name required",
+                "Name optional"
+            ],
+            "s": "Name required"
+        },
+        "new_series": false,
+        "override": false,
+        "s_nr": 11,
+        "series_name": "Doctor Who",
+        "show_subs": false,
+        "status_o": {
+            "o": [
+                "Airing",
+                "Hiatus",
+                "Ended"
+            ],
+            "s": "Airing"
+        },
+        "subs": [],
+        "sync": false,
+        "t_o": {
+            "o": [
+                "Series",
+                "HD",
+                "SD",
+                "[ignore]"
+            ],
+            "s": "Series"
+        },
+        "title": "It Takes You Away",
+        "title2": "",
+        "title3": "",
+        "tvdb_id": 78804
+    },
+    {
+        "anime_o": {
+            "o": [
+                "Anime: No",
+                "Anime: Yes"
+            ],
+            "s": "Anime: No"
+        },
+        "delete": false,
+        "e_nr": 9,
+        "e_o": {
+            "o": [
+                "Single",
+                "Double",
+                "Triple"
+            ],
+            "s": "Single"
+        },
+        "location": "Doctor.Who.2005.S11E09.It.Takes.You.Away.HDTV.x264-KETTLE/3FA3HMGX7MYnZp.mkv",
+        "name_o": {
+            "o": [
+                "Name required",
+                "Name optional"
+            ],
+            "s": "Name required"
+        },
+        "new_series": false,
+        "override": false,
+        "s_nr": 11,
+        "series_name": "Doctor Who",
+        "show_subs": false,
+        "status_o": {
+            "o": [
+                "Airing",
+                "Hiatus",
+                "Ended"
+            ],
+            "s": "Airing"
+        },
+        "subs": [],
+        "sync": true,
+        "t_o": {
+            "o": [
+                "Series",
+                "HD",
+                "SD",
+                "[ignore]"
+            ],
+            "s": "Series"
+        },
+        "title": "It Takes You Away",
+        "title2": "",
+        "title3": "",
+        "tvdb_id": 78804
+    },
+    {
+        "anime_o": {
+            "o": [
+                "Anime: No",
+                "Anime: Yes"
+            ],
+            "s": "Anime: No"
+        },
+        "delete": true,
+        "e_nr": 8,
+        "e_o": {
+            "o": [
+                "Single",
+                "Double",
+                "Triple"
+            ],
+            "s": "Single"
+        },
+        "location": "Supergirl.S04E08.720p.HDTV.x264-AVS/gsHAhfsa5XcDzrkkWcaQ5CJRS02POEW2F5rkmAmd.mkv",
+        "name_o": {
+            "o": [
+                "Name required",
+                "Name optional"
+            ],
+            "s": "Name required"
+        },
+        "new_series": false,
+        "override": false,
+        "s_nr": 4,
+        "series_name": "Supergirl",
+        "show_subs": false,
+        "status_o": {
+            "o": [
+                "Airing",
+                "Hiatus",
+                "Ended"
+            ],
+            "s": "Airing"
+        },
+        "subs": [],
+        "sync": true,
+        "t_o": {
+            "o": [
+                "Series",
+                "HD",
+                "SD",
+                "[ignore]"
+            ],
+            "s": "Series"
+        },
+        "title": "Bunker Hill",
+        "title2": "",
+        "title3": "",
+        "tvdb_id": 295759
+    },
+    {
+        "anime_o": {
+            "o": [
+                "Anime: No",
+                "Anime: Yes"
+            ],
+            "s": "Anime: No"
+        },
+        "delete": false,
+        "e_nr": 5,
+        "e_o": {
+            "o": [
+                "Single",
+                "Double",
+                "Triple"
+            ],
+            "s": "Single"
+        },
+        "location": "Outlander.S04E05.720p.WEB.x265-MiNX[TGx]/Outlander.S04E05.720p.WEB.x265-MiNX.mkv",
+        "name_o": {
+            "o": [
+                "Name required",
+                "Name optional"
+            ],
+            "s": "Name required"
+        },
+        "new_series": false,
+        "override": false,
+        "s_nr": 4,
+        "series_name": "Outlander",
+        "show_subs": false,
+        "status_o": {
+            "o": [
+                "Airing",
+                "Hiatus",
+                "Ended"
+            ],
+            "s": "Airing"
+        },
+        "subs": [],
+        "sync": true,
+        "t_o": {
+            "o": [
+                "Series",
+                "HD",
+                "SD",
+                "[ignore]"
+            ],
+            "s": "Series"
+        },
+        "title": "Savages",
+        "title2": "",
+        "title3": "",
+        "tvdb_id": 270408
+    },
+    {
+        "anime_o": {
+            "o": [
+                "Anime: No",
+                "Anime: Yes"
+            ],
+            "s": "Anime: No"
+        },
+        "delete": true,
+        "e_nr": "",
+        "e_o": {
+            "o": [
+                "Single",
+                "Double",
+                "Triple"
+            ],
+            "s": "Single"
+        },
+        "location": "The.Late.Show.with.Stephen.Colbert.2016.11.07.Don.Cheadle.Stevie.Wonder.Katherine.Waterston.720p.CBS.WEBRip.AAC2.0.x264-monkee/MFcVDbbvFZEkmbpr92RHRDuNjPdHZGXasKe03rc.mkv",
+        "name_o": {
+            "o": [
+                "Name required",
+                "Name optional"
+            ],
+            "s": "Name required"
+        },
+        "new_series": false,
+        "override": false,
+        "s_nr": "",
+        "series_name": "Series Name",
+        "show_subs": false,
+        "status_o": {
+            "o": [
+                "Airing",
+                "Hiatus",
+                "Ended"
+            ],
+            "s": "Airing"
+        },
+        "subs": [],
+        "sync": false,
+        "t_o": {
+            "o": [
+                "Series",
+                "HD",
+                "SD",
+                "[ignore]"
+            ],
+            "s": "Series"
+        },
+        "title": "",
+        "title2": "",
+        "title3": "",
+        "tvdb_id": ""
+    },
+    {
+        "anime_o": {
+            "o": [
+                "Anime: No",
+                "Anime: Yes"
+            ],
+            "s": "Anime: No"
+        },
+        "delete": false,
+        "e_nr": 8,
+        "e_o": {
+            "o": [
+                "Single",
+                "Double",
+                "Triple"
+            ],
+            "s": "Single"
+        },
+        "location": "Supergirl.S04E08.HDTV.x264-SVA/nSWAmmDgmFojAzfvf57N6g9Afiqd.mkv",
+        "name_o": {
+            "o": [
+                "Name required",
+                "Name optional"
+            ],
+            "s": "Name required"
+        },
+        "new_series": false,
+        "override": false,
+        "s_nr": 4,
+        "series_name": "Supergirl",
+        "show_subs": false,
+        "status_o": {
+            "o": [
+                "Airing",
+                "Hiatus",
+                "Ended"
+            ],
+            "s": "Airing"
+        },
+        "subs": [],
+        "sync": true,
+        "t_o": {
+            "o": [
+                "Series",
+                "HD",
+                "SD",
+                "[ignore]"
+            ],
+            "s": "Series"
+        },
+        "title": "Bunker Hill",
+        "title2": "",
+        "title3": "",
+        "tvdb_id": 295759
+    }
+]
