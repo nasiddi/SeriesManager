@@ -53,7 +53,25 @@ class File:
         self.report = {'info': [], 'error': [], 'success': []}
 
     def __str__(self):
-        return self.location
+        return {'location': self.location.replace(FILE_DIR, ''),
+                SERIES_NAME: self.series_name,
+                's_nr': self.s_nr,
+                'e_nr': self.e_nr,
+                'title': self.title,
+                'title2': self.title,
+                'title3': self.title,
+                'override': False,
+                'show_subs': False,
+                'new_series': False,
+                'sync': False,
+                'delete': False,
+                't_o': {'s': 'Series', 'o': ['Series', 'HD', 'SD', '[ignore]']},
+                'e_o': {'s': 'Single', 'o': ['Single', 'Double', 'Triple']},
+                'anime_o': {'s': 'Anime: No', 'o': ['Anime: No', 'Anime: Yes']},
+                'name_o': {'s': 'Name required', 'o': ['Name required', 'Name optional']},
+                'tvdb_id': '',
+                'status_o': {'s': AIRING, 'o': [AIRING, HIATUS, ENDED]},
+                'subs': []}
 
     def get_report(self):
         return {
@@ -61,8 +79,5 @@ class File:
             'info': self.report['info'],
             'error': self.report['error'],
             'success': self.report['success']}
-
-
-
 
 
