@@ -1,5 +1,7 @@
 import json
+import os
 import pickle
+import shutil
 import time
 import getopt
 import sys
@@ -40,6 +42,15 @@ def wait_on_creation(file_path):
     return False
 
 
+def wait_on_delete(file_path):
+    start = time.time()
+    while os.path.exists(file_path) and time.time() - start < 5:
+        pass
+    if not os.path.exists(file_path):
+        return True
+    return False
+
+
 def save_shows(shows):
     meta = {}
     for show in shows.keys():
@@ -50,8 +61,7 @@ def save_shows(shows):
         os.remove(LOCK_File)
     except:
         pass
-
-
+    wait_on_delete(LOCK_File)
 
 
 def pickle_dump(data, file):
@@ -107,3 +117,14 @@ def parse_args(args):
         infos.update(info)
     save_json(infos, 'meta.json')
 """
+
+
+def recursive_delete(location):
+    if os.path.isdir(location):
+        shutil.rmtree(location)
+    else:
+        os.remove(location)
+
+    if os.path.exists(location):
+        return False
+    return True

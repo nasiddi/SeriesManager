@@ -21,7 +21,7 @@ def main(args):
                         del exceptions[d['key']][i['origin']]
                 else:
                     exceptions[d['key']].remove(i['text'])
-
+    io_utlis.save_json({'done': True}, os.environ[OUT_FILE])
     io_utlis.save_json(exceptions, EXCEPTIONS_FILE)
 
 

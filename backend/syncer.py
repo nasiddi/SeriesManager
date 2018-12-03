@@ -7,6 +7,7 @@ import io_utlis
 from constants import *
 from episode import Episode
 from file import File
+from io_utlis import recursive_delete
 from series import Series
 
 QUEUE = []
@@ -145,17 +146,6 @@ def file_exists(file, shows):
 def clean_up():
     for loc in CLEAN_UP:
         recursive_delete(loc)
-
-
-def recursive_delete(location):
-    if os.path.isdir(location):
-        shutil.rmtree(location)
-    else:
-        os.remove(location)
-
-    if os.path.exists(location):
-        return False
-    return True
 
 
 def delete_file(file):

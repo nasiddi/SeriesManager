@@ -114,6 +114,8 @@ class Episode:
         if self.e_nr == 999:
             warnings.warn('cannot parse episode nr of\n' + self.location)
 
+        if self.s_nr == 0 and match:
+            self.s_nr = int(match[0][:3])
         if len(match) <= 1:
             return
 
@@ -135,7 +137,7 @@ class Episode:
                 '\nDuration: ' + str(self.duration) + ' Size: ' + str(self.size))
 
     def id(self):
-        return ' '.join([self.series_name, str(self.s_nr), str(self.e_nr)])
+        return f'{self.series_name} {self.s_nr:02d}x{self.e_nr:0{3 if self.anime else 2}d}'
 
     def compile_file_name(self, file=None):
         if not file:

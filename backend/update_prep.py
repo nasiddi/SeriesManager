@@ -8,23 +8,17 @@ SHOWS = None
 
 def main(args):
     global SHOWS
-    SHOWS = io_utlis.load_shows()
+    SHOWS = io_utlis.load_shows(read_only=True)
     io_utlis.parse_args(args)
-
-    if SHOWS is None:
-        io_utlis.save_json({'shows_locked': True}, os.environ['OUTPUT_FILE'])
-        print('shows locked')
-        return
-    update = prep_data(SHOWS)
+    update = prep_data()
 
     io_utlis.save_json(update, os.environ['OUTPUT_FILE'])
-    io_utlis.save_shows(SHOWS)
 
 
-def prep_data(shows):
+def prep_data():
     update = []
-    for s in shows.keys():
-        show = shows[s]
+    for s in SHOWS.keys():
+        show = SHOWS[s]
         update.append({SERIES_NAME: show.series_name,
                        'series_name_unchanged': show.series_name,
                        NAME_NEEDED: show.name_needed,
@@ -40,7 +34,6 @@ def prep_data(shows):
         update = sorted(update, key=lambda k: k['series_name_unchanged'].lower())
 
     return update
-
 
 
 if __name__ == '__main__':

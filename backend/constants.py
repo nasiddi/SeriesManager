@@ -1,7 +1,7 @@
 import platform
 import os
 
-DEBUG = False
+DEBUG = False if os.path.exists('V:\\Series') else True
 
 # Status
 NONE = 'none'
@@ -16,11 +16,13 @@ TRIPLE = 'Triple'
 
 # Locations
 
+ASSETS = 'assets'
 LOCK_File = 'assets/shows.lock'
 OUT_FILE = 'OUTPUT_FILE'
 META_FILE = 'assets/metadata.json'
 DICT_FILE = 'assets/dictionary.json'
 SHOWS_FILE = 'assets/shows.pkl'
+BACKUP_DIR = 'assets/backup'
 EXCEPTIONS_FILE = 'assets/exceptions.json'
 
 if platform.system() == 'Windows':

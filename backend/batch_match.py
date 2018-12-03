@@ -4,36 +4,26 @@ from constants import *
 from file import File
 import re
 
-SHOWS = None
-
 
 def main(args):
-    global SHOWS
     io_utlis.parse_args(args)
     data = io_utlis.load_json(os.environ["DATA_FILE"])
     io_utlis.save_json(data, 'data/batch_match.json')
-    SHOWS = io_utlis.load_shows()
-
-    if SHOWS is None:
-        io_utlis.save_json({'shows_locked': True}, os.environ['OUTPUT_FILE'])
-        print('shows locked')
-        return
     file_list = []
     for u in data['units']:
         if not u['select']:
             continue
         location = os.path.join(FILE_DIR, u['text'])
         if os.path.isfile(location):
-            file = prepFile(location, '')
+            file = prep_file(location, '')
             if file:
                 file_list.append(file)
         else:
             for root, dirs, files in os.walk(location):
                 for name in files:
-                    file = prepFile(name, root)
+                    file = prep_file(name, root)
                     if file:
                         file_list.append(file)
-
 
     for reg in data['regex']:
         if not reg['regex']:
@@ -72,14 +62,7 @@ def main(args):
     io_utlis.save_json(output, os.environ['OUTPUT_FILE'])
 
 
-
-
-
-
-    io_utlis.save_shows(SHOWS)
-
-
-def prepFile(name, root):
+def prep_file(name, root):
     extension = name.split('.')[-1].lower()
     if extension in EXTENSIONS:
         if 'sample' in name.lower():
@@ -87,8 +70,6 @@ def prepFile(name, root):
         return File(location=os.path.join(root, name), subs=False)
     if extension in SUBS:
         return File(location=os.path.join(root, name), subs=True)
-
-
 
 
 if __name__ == '__main__':

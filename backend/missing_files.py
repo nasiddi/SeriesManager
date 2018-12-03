@@ -6,21 +6,17 @@ from constants import *
 SHOWS = None
 MISSING = []
 
+
 def main(args):
     global SHOWS
-    SHOWS = io_utlis.load_shows()
+    SHOWS = io_utlis.load_shows(read_only=True)
     io_utlis.parse_args(args)
-    if SHOWS is None:
-        io_utlis.save_json({'shows_locked': True}, os.environ['OUTPUT_FILE'])
-        print('shows locked')
-        return
 
     load_all()
 
     for l in MISSING:
         print(l)
     io_utlis.save_json({'files': MISSING, 'info': 'No Missing Files'}, os.environ['OUTPUT_FILE'])
-    io_utlis.save_shows(SHOWS)
 
 
 def load_all():

@@ -2,6 +2,9 @@ import io_utlis
 import sys
 import shutil
 from constants import *
+from episode import Episode
+
+
 SHOWS = None
 
 
@@ -9,8 +12,7 @@ def main(args):
     global SHOWS
     io_utlis.parse_args(args)
     data = io_utlis.load_json(os.environ["CONF_FILE"])
-    # io_utlis.save_json(data, 'data/save_words.json')
-
+    io_utlis.save_json(data, 'data/save_words.json')
     SHOWS = io_utlis.load_shows()
     dictionary = io_utlis.load_json(DICT_FILE)
 
@@ -18,6 +20,7 @@ def main(args):
         io_utlis.save_json({'shows_locked': True}, os.environ['OUTPUT_FILE'])
         print('shows locked')
         return
+    print('lock')
 
     for file in data['words']:
         changes = []
@@ -28,6 +31,7 @@ def main(args):
                 changes.append([w['index'], w['word']])
 
         if changes:
+            e = Episode(location=file['location'])
             old = file['file'].rsplit('.', 1)
             words = words = old[0].split(' ')
             for c in changes:
@@ -37,15 +41,13 @@ def main(args):
             new_location = file['location'].replace(old[0], file['file'])
             try:
                 shutil.move(file['location'], new_location)
+                SHOWS[e.series_name].seasons[e.s_nr].update_episodes()
             except Exception as e:
                 print('rename', e)
 
     io_utlis.save_json(dictionary, DICT_FILE)
+    io_utlis.save_json({'done': True}, os.environ[OUT_FILE])
     io_utlis.save_shows(SHOWS)
-
-
-
-
 
 
 if __name__ == '__main__':

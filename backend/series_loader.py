@@ -1,5 +1,6 @@
 from series import Series
 from io_utlis import *
+import backup
 
 sys.setrecursionlimit(10000)
 
@@ -63,7 +64,6 @@ def add_metadata(shows):
     for show in shows.values():
         if show.series_name not in meta:
             continue
-
         info = meta[show.series_name]
         show.status = info[STATUS]
         show.name_needed = info[NAME_NEEDED]
@@ -89,7 +89,12 @@ def add_metadata(shows):
 
 def main():
     start = time.time()
-    print('running')
+    print('running', SERIES_DIR)
+    if not backup.main():
+        print('backup failed')
+        sys.exit(-2)
+    else:
+        print('backup successful')
     load_shows(reload=True)
     shows = load_files(SERIES_DIR)
     shows.update(load_files(ANIME_DIR))

@@ -51,7 +51,7 @@ def main(args):
 def load_show(error, tree_file, queue):
     series_name = error[SERIES_NAME]
     if error['exception']:
-        e_id = series_name + ' ' + str(error['s_nr']) + ' ' + str(error['e_nr'])
+        e_id = f'{series_name} {error["s_nr"]:02d}x{error["e_nr"]:0{3 if error["anime"] else 2}d}'
         if error['exception'] not in ['part', 'double']:
             if e_id not in EXCEPTIONS[error['exception']]:
                 EXCEPTIONS[error['exception']][e_id] = []
@@ -163,7 +163,7 @@ def save_queue(queue):
     for file in queue:
         print(file.location)
         if file.delete:
-            syncer.recursive_delete(file.location)
+            io_utlis.recursive_delete(file.location)
             try:
                 SHOWS[file.series_name].seasons[file.s_nr].update_episodes()
             except FileNotFoundError:

@@ -130,10 +130,7 @@ def main(args):
     stats['total']['avg_gb_show'] = int(size / show_count / 1024 * 100.0) / 100.0
     # print(json.dumps(stats, indent=4, sort_keys=True))
 
-
     io_utlis.save_json(stats, os.environ['OUTPUT_FILE'])
-
-    io_utlis.save_shows(SHOWS)
 
 
 def update_file_meta(episode):

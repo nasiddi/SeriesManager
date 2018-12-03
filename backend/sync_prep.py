@@ -8,7 +8,7 @@ import sys
 
 def main(args):
     io_utlis.parse_args(args)
-    shows = io_utlis.load_shows()
+    shows = io_utlis.load_shows(read_only=True)
     file_list = []
     subs = []
     for root, dirs, files in os.walk(FILE_DIR):
@@ -102,7 +102,6 @@ def clean_up(n):
     while '&' in n:
         n.remove('&')
     return n
-
 
 
 if __name__ == '__main__':
