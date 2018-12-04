@@ -26,8 +26,8 @@ def main(args):
 
 
 def load_all():
-    for show in SHOWS.values():
-        if not show.status == ENDED:
+    for show in sorted(SHOWS.values(), key=get_seriesname):
+        if not show.status == ENDED and show.tvdb_id:
             check_for_newly_aired(show)
         get_show_data(show)
 
@@ -88,7 +88,10 @@ def check_for_newly_aired(show):
     for e in episodes:
         if e['airedSeason'] == 0:
             continue
-        first_aired = int(''.join(e['firstAired'].split('-')))
+        try:
+            first_aired = int(''.join(e['firstAired'].split('-')))
+        except:
+            continue
         if first_aired >= DATE:
             continue
         if show.get_episode_by_sxe(s_nr=e['airedSeason'], e_nr=e['airedEpisodeNumber']):
@@ -100,6 +103,10 @@ def check_for_newly_aired(show):
             MISSING.append({'key': len(MISSING), SERIES_NAME: m[SERIES_NAME], 's_nr': m['s_nr'], 'e_nr': m['e_nr']})
 
     pass
+
+
+def get_seriesname(show):
+    return show.series_name
 
 
 if __name__ == '__main__':
