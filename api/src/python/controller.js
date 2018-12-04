@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 /* eslint no-console: 0 */
 /* eslint no-undef: 0 */
 /* eslint max-len: 0 */
@@ -470,6 +471,7 @@ async function saveFileTree(body, res) {
 
 async function missingFiles(body, res) {
   const outputFile = path.join(config.directories.storage, 'missing_files');
+  const filterFile = path.join(config.directories.storage, 'missing_filter');
   await run(
     'missing_files',
     '',
@@ -492,8 +494,27 @@ async function missingFiles(body, res) {
           winston.error(err);
           res.sendStatus(500).end();
         }
-        fs.unlink(outputFile);
-        res.json(file);
+        if (fs.existsSync(filterFile)) {
+          fs.readJson(filterFile, (errFilter, filter) => {
+            if (errFilter) {
+              winston.error(errFilter);
+              res.sendStatus(500).end();
+            }
+            file.filter = filter;
+            fs.unlink(outputFile);
+            res.json(file);
+          });
+        } else {
+          fs.writeJSON(filterFile, [], (err2) => {
+            if (err2) {
+              winston.error(err2);
+              res.sendStatus(500).end();
+            }
+          });
+          file.filter = [];
+          fs.unlink(outputFile);
+          res.json(file);
+        }
       });
     },
   );
@@ -658,7 +679,7 @@ async function getBackUp(res) {
     '',
     '',
     outputFile,
-    () => { },
+    () => {},
     async (code, signal) => {
       if (code !== 0) {
         res.send('failed');

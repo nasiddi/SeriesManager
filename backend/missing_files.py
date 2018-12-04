@@ -11,22 +11,21 @@ MISSING = []
 
 api_client = ApiV2Client('nadinasiddiquiwaz', 'ZEDKTMYBNB29LBOS', 'EISRLGJH035SO60Q')
 api_client.login()
-print(api_client.is_authenticated)
 
 DATE = int(strftime("%Y%m%d", gmtime()))
 
 
 def main(args):
+
     global SHOWS
     SHOWS = io_utlis.load_shows(read_only=True)
     io_utlis.parse_args(args)
-
     load_all()
     io_utlis.save_json({'files': MISSING, 'info': 'No Missing Files'}, os.environ['OUTPUT_FILE'])
 
 
 def load_all():
-    for show in sorted(SHOWS.values(), key=get_seriesname):
+    for show in sorted(SHOWS.values(), key=get_series_name):
         if not show.status == ENDED and show.tvdb_id:
             check_for_newly_aired(show)
         get_show_data(show)
@@ -105,7 +104,7 @@ def check_for_newly_aired(show):
     pass
 
 
-def get_seriesname(show):
+def get_series_name(show):
     return show.series_name
 
 

@@ -127,6 +127,27 @@ routes.get('/sync/prep', async (req, res) => {
   python.prepFiles(res);
 });
 
+routes.post('/filetree/missing/filter', async (req, res) => {
+  const outputFile = path.join(config.directories.storage, 'missing_filter');
+  console.log(req.body);
+  delete req.body.key;
+  console.log(req.body);
+  fs.readJson(outputFile, (err, file) => {
+    if (err) {
+      winston.error(err);
+      res.sendStatus(500).end();
+    }
+    file.push(req.body);
+    fs.writeJSON(outputFile, file, (errInner) => {
+      if (errInner) {
+        winston.error(errInner);
+        res.sendStatus(500).end();
+      }
+      res.json({ done: true });
+    });
+  });
+});
+
 // TVDB
 routes.post('/tvdb', async (req, res) => {
   const tvdb = new TVDB('C9BPCUYZ8GFT2BZL');

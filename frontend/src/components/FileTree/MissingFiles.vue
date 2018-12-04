@@ -1,12 +1,21 @@
 <template>
   <div v-if="json.length !== 0">
     <div v-if="'files' in json && json.files.length !== 0">
+      <b-button
+        :pressed.sync="showFilteredFiles"
+        variant="outline-primary"
+        size="lg"
+        block
+        class="mt-3"
+      >Show Filtered Files</b-button>
       <b-alert
         v-for="line in json.files"
         :key="line.key"
         :variant="color(line.e_nr)"
-        show
-        class="mt-2 mx-2 mb-0">
+        :show="!filtered(line)"
+        dismissible
+        class="mt-2 mx-2 mb-0"
+        @dismissed="filter(line)">
         <a
           :href="getLink(line)"
           target="_blank"
@@ -37,6 +46,7 @@ export default {
     json: {},
     baseLink: 'http://thepiratebay.org/search/',
     endLink: '/0/3/0',
+    showFilteredFiles: false,
   }),
   computed: {
   },
@@ -48,6 +58,20 @@ export default {
   mounted() {
   },
   methods: {
+    filtered(line) {
+      if (this.showFilteredFiles) {
+        return false;
+      }
+      return this.json.filter.some((f) => {
+        if (f.e_nr === line.e_nr && f.s_nr === line.s_nr && f.series_name === line.series_name) {
+          return true;
+        }
+        return false;
+      });
+    },
+    filter(line) {
+      this.$http.post('jobs/filetree/missing/filter', line);
+    },
     color(num) {
       if (num === '*') {
         return 'danger';
