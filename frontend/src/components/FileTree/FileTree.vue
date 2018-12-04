@@ -46,7 +46,7 @@
     <div v-if="json.length !== 0 && 'shows' in json">
       <b-button
         v-if="_.isEmpty(error)"
-        variant="save"
+        :variant="saveColor"
         size="lg"
         block
         class="mt-3"

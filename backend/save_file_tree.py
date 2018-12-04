@@ -56,16 +56,18 @@ def load_show(error, tree_file, queue):
             if e_id not in EXCEPTIONS[error['exception']]:
                 EXCEPTIONS[error['exception']][e_id] = []
             EXCEPTIONS[error['exception']][e_id].append(error['word'])
+            EXCEPTIONS[error['exception']][e_id] = sorted(list(set(EXCEPTIONS[error['exception']])))
         elif error['exception'] == 'double':
             if series_name not in EXCEPTIONS[error['exception']]:
                 EXCEPTIONS[error['exception']][series_name] = []
             EXCEPTIONS[error['exception']][series_name].append(error['title'])
+            EXCEPTIONS[error['exception']][series_name] = sorted(list(set(EXCEPTIONS[error['exception']])))
         elif error['exception'] == 'lower_general':
             EXCEPTIONS[error['exception']].append(error['word'])
-            EXCEPTIONS[error['exception']] = sorted(EXCEPTIONS[error['exception']])
+            EXCEPTIONS[error['exception']] = sorted(list(set(EXCEPTIONS[error['exception']])))
         else:
             EXCEPTIONS[error['exception']].append(e_id)
-            EXCEPTIONS[error['exception']] = sorted(EXCEPTIONS[error['exception']])
+            EXCEPTIONS[error['exception']] = sorted(list(set(EXCEPTIONS[error['exception']])))
         return series_name
 
     if error['delete']:

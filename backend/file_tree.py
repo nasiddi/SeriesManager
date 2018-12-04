@@ -37,7 +37,7 @@ def main(args=None, series_name='*', out_file='data/treefile_comb'):
 def load_all():
     tree = {}
     errors = []
-    for show in SHOWS.values():
+    for show in sorted(SHOWS.values(), key=get_series_name):
         show_tree, show_error = get_show_data(show)
         tree[show.series_name] = show_tree
         if show_error:
@@ -98,6 +98,10 @@ def get_show_data(show):
 
         seasons.append(sea)
     return {SERIES_NAME: show.series_name, 'seasons': seasons}, error
+
+
+def get_series_name(show):
+    return show.series_name
 
 
 if __name__ == '__main__':
