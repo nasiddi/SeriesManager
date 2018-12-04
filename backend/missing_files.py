@@ -72,6 +72,7 @@ def check_for_missing_episode(show, e, episodes):
 def check_for_newly_aired(show):
     tvdb_show = tvdb.Series(show.tvdb_id)
     episodes = tvdb_show.Episodes.all()
+    io_utlis.pickle_dump(episodes, 'pickle/' + show.series_name + '_episodes.pkl')
     missing = []
     for e in reversed(episodes):
         if e['airedSeason'] == 0:
