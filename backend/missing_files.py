@@ -2,13 +2,16 @@ import io_utlis
 import time
 import sys
 from constants import *
-import tvdbsimple as tvdb
+from tvdb_client import ApiV2Client
 from time import gmtime, strftime
+from operator import itemgetter
 
 SHOWS = None
 MISSING = []
 
-tvdb.KEYS.API_KEY = "B43FF87DE395DF56"
+api_client = ApiV2Client('nadinasiddiquiwaz', 'ZEDKTMYBNB29LBOS', 'EISRLGJH035SO60Q')
+api_client.login()
+print(api_client.is_authenticated)
 
 DATE = int(strftime("%Y%m%d", gmtime()))
 
@@ -70,11 +73,19 @@ def check_for_missing_episode(show, e, episodes):
 
 
 def check_for_newly_aired(show):
-    tvdb_show = tvdb.Series(show.tvdb_id)
-    episodes = tvdb_show.Episodes.all()
-    io_utlis.pickle_dump(episodes, 'pickle/' + show.series_name + '_episodes.pkl')
+    episodes = []
+    for i in range(1, 100):
+        eps = api_client.get_series_episodes(show.tvdb_id, episode_number=None, page=i)
+        if 'code' in eps:
+            break
+        episodes.extend(eps['data'])
+
     missing = []
-    for e in reversed(episodes):
+    if not episodes:
+        print(show.series_name)
+        return
+    episodes = sorted(episodes, key=itemgetter('airedSeason', 'airedEpisodeNumber'), reverse=True)
+    for e in episodes:
         if e['airedSeason'] == 0:
             continue
         first_aired = int(''.join(e['firstAired'].split('-')))
