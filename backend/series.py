@@ -5,12 +5,10 @@ from season import Season
 class Series:
 
     def __init__(self, series_name='',
-                 season_count=0,
                  name_needed=False,
                  status=NONE,
                  location='',
                  tvdb_id='',
-                 anime=False,
                  premiere='',
                  final=''):
         self.series_name = series_name
@@ -98,8 +96,3 @@ class Series:
     def get_last_episode(self):
         last_season = self.seasons[max(self.seasons.keys())]
         return last_season[max(last_season.episodes.keys())]
-
-
-
-
-

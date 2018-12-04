@@ -1,13 +1,9 @@
 import json
 import shutil
-import sys
 import time
-
-import io_utlis
 from constants import *
 from episode import Episode
 from file import File
-from io_utlis import recursive_delete
 from series import Series
 
 QUEUE = []
@@ -92,7 +88,7 @@ def sync_queue(queue=None):
         queue = QUEUE
     for file in queue:
         if file.delete:
-            if recursive_delete(SEPERATOR.join(file.location.split(SEPERATOR)[:3 + MAC_OFFSET])):
+            if io_utlis.recursive_delete(SEPERATOR.join(file.location.split(SEPERATOR)[:3 + MAC_OFFSET])):
                 file.report['info'].append('Delete successful')
             else:
                 file.report['error'].append('Delete failed')
@@ -144,7 +140,7 @@ def file_exists(file, shows):
 
 def clean_up():
     for loc in CLEAN_UP:
-        recursive_delete(loc)
+        io_utlis.recursive_delete(loc)
 
 
 def delete_file(file):
@@ -160,10 +156,10 @@ def delete_file(file):
             file.report['error'].append('Delete failed')
             return
     else:
-        dir = HD_Movies if file.type_option == 'HD' else 'SD'
-        for name in os.listdir(dir):
+        folder = HD_Movies if file.type_option == 'HD' else 'SD'
+        for name in os.listdir(folder):
             if name.rsplit('.', 1)[0] == file.title:
-                location = os.path.join(dir, name)
+                location = os.path.join(folder, name)
                 break
 
     if location is None:
@@ -182,19 +178,19 @@ def delete_file(file):
 
 
 def create_new_series(file):
-    print(get_basepath(file))
-    print(get_basepath(file).rsplit(SEPERATOR, 1))
-    basepath = get_basepath(file).rsplit(SEPERATOR, 1)[0]
+    print(get_base_path(file))
+    print(get_base_path(file).rsplit(SEPERATOR, 1))
+    base_path = get_base_path(file).rsplit(SEPERATOR, 1)[0]
     SHOWS.update({file.series_name: Series(series_name=file.series_name, status=file.status, tvdb_id=file.tvdb_id,
-                                           anime=file.anime, name_needed=file.name_needed, location=basepath)})
+                                           name_needed=file.name_needed, location=base_path)})
     file.report['info'].append('Series created')
 
 
 def queue_episode(file):
-    name = Episode.compile_file_name(file)
+    name = Episode.compile_file_name(None, file=file)
 
-    basepath = get_basepath(file)
-    file.new_location = os.path.join(basepath, name)
+    base_path = get_base_path(file)
+    file.new_location = os.path.join(base_path, name)
 
     if file.subs:
         for sub in file.subs:
@@ -212,13 +208,13 @@ def queue_movie(file):
     QUEUE.append(file)
 
 
-def get_basepath(file):
-    basepath = os.path.join(ANIME_DIR if file.anime else SERIES_DIR,
-                            file.series_name, 'Season {:02d}'.format(file.s_nr))
-    if not os.path.exists(basepath):
-        os.makedirs(basepath)
-    io_utlis.wait_on_creation(basepath)
-    return basepath
+def get_base_path(file):
+    base_path = os.path.join(ANIME_DIR if file.anime else SERIES_DIR,
+                             file.series_name, 'Season {:02d}'.format(file.s_nr))
+    if not os.path.exists(base_path):
+        os.makedirs(base_path)
+    io_utlis.wait_on_creation(base_path)
+    return base_path
 
 
 def ignore_file(file):
@@ -233,9 +229,6 @@ def ignore_file(file):
     print(loc)
     print(new_loc)
     os.rename(loc, new_loc)
-
-
-
 
 
 if __name__ == '__main__':

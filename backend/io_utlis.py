@@ -1,10 +1,8 @@
 import json
-import os
 import pickle
 import shutil
 import time
 import getopt
-import sys
 from constants import *
 
 
@@ -96,27 +94,6 @@ def parse_args(args):
                 os.environ['DATA_FILE'] = arg
             else:
                 os.environ['DATA_FILE'] = os.path.join('data', arg)
-
-
-"""
-    infos = {}
-
-    with open("C:\\Users\\nadina\\Documents\\code\\FileManager\\assets\\status.txt") as f:
-        status = f.readlines()
-
-    with open("C:\\Users\\nadina\\Documents\\code\\FileManager\\assets\\names.txt") as f:
-        names = f.readlines()
-
-    for line_s, line_n in zip(status, names):
-        line_s = line_s.rstrip('\n')
-        line_s = line_s.split(';')
-        line_n = line_n.split('#')
-
-        show = shows[line_s[0]]
-        info = {show.series_name: {'Status': line_s[3], 'Premiere': line_s[1] if not line_s[1] == ' ' else '', 'Final': line_s[2] if not line_s[2] == ' ' else '', 'Name Needed': True if line_n[3] == 'Y' else False, 'Names': []}}
-        infos.update(info)
-    save_json(infos, 'meta.json')
-"""
 
 
 def recursive_delete(location):

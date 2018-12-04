@@ -1,5 +1,7 @@
 import platform
 import os
+import io_utlis
+import sys
 
 
 DEBUG = True if platform.system() == 'Windows' else False
@@ -93,8 +95,3 @@ NUMERALS = ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX']
 # print('sd', os.path.exists(SD_MOVIES))
 # print('file', os.path.exists(FILE_DIR))
 # print('subs', os.path.exists(SUB_DIR))
-
-
-
-
-

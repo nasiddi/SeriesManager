@@ -1,9 +1,7 @@
 from constants import *
-import io_utlis
 from episode import Episode
 
 EXCEPTIONS = io_utlis.load_json(EXCEPTIONS_FILE)
-
 NAMES = {}
 
 
@@ -29,7 +27,7 @@ def generate_error(message, e, show,
         'old_location': e.location,
         'title': title if title else e.get_title(),
         SERIES_NAME: show.series_name,
-        'e_nr': e_nr if not e_nr is None else e.e_nr,
+        'e_nr': e_nr if e_nr is not None else e.e_nr,
         's_nr': s_nr if s_nr else e.s_nr,
         's_nr_old': e.s_nr,
         'e_nr_old': e.e_nr,
@@ -48,8 +46,6 @@ def generate_error(message, e, show,
 
 def check_words(show, e):
     words = e.get_title().split(' ')
-    new_word = False
-    title_list = []
     for i in range(len(words)):
         w = words[i]
         if w == '':
@@ -106,11 +102,13 @@ def check_part_number(show, e):
                 substring[0] = t[-1]
                 t[-1] = ' '.join(substring)
             title = 'Part '.join(t)
-            return generate_error(message='Part Number Integer Error', e=e, show=show, title=title,  exception_type='part')
+            return generate_error(message='Part Number Integer Error', e=e,
+                                  show=show, title=title, exception_type='part')
         if len(set(t[-1])) == 1:
             t[-1] = NUMERALS[len(t[-1])]
             title = 'Part '.join(t)
-            return generate_error(message='Part Number Roman Error', e=e, show=show, title=title,  exception_type='part')
+            return generate_error(message='Part Number Roman Error', e=e,
+                                  show=show, title=title,  exception_type='part')
         return generate_error(message='Part Number Parse Error', e=e, show=show,  exception_type='part')
     if len(t) > 2:
         return generate_error(message='Unnecessary Part Numbers', e=e, show=show,  exception_type='part')
@@ -200,8 +198,3 @@ def check_extension(show, e):
 def check_for_empty_season(show, s):
     if not s.episodes:
         return generate_error(message='Empty Season', e=Episode(location=s.location, s_nr=s.s_nr, e_nr=1), show=show)
-
-
-
-
-

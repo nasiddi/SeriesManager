@@ -74,10 +74,8 @@ class File:
                 'subs': []}
 
     def get_report(self):
-        return {
-            'file_name': self.new_location.rsplit(SEPERATOR, 1)[1] if self.new_location else self.location.split(SEPERATOR, 2 + MAC_OFFSET)[-1],
-            'info': self.report['info'],
-            'error': self.report['error'],
-            'success': self.report['success']}
-
-
+        return dict(file_name=self.new_location.rsplit(SEPERATOR, 1)[1] if self.new_location else
+                    self.location.split(SEPERATOR, 2 + MAC_OFFSET)[-1],
+                    info=self.report['info'],
+                    error=self.report['error'],
+                    success=self.report['success'])

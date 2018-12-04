@@ -1,11 +1,11 @@
 import subprocess
 import shlex
 import json
-import io_utlis
-import sys
 from math import gcd
 from constants import *
 import time
+
+SHOWS = None
 
 
 def main(args):
@@ -21,7 +21,9 @@ def main(args):
     size = 0
     for show in SHOWS.values():
         show_count += 1
-        show_stats = {SERIES_NAME: show.series_name, 'status': {show.status: 1}, 'premiere': show.premiere, 'final': show.final, 'ratio': {}, 'extension': {}, 'duration': 0, 'episodes': 0, 'seasons': 0, 'size': 0, 'quality': {}}
+        show_stats = {SERIES_NAME: show.series_name, 'status': {show.status: 1}, 'premiere': show.premiere,
+                      'final': show.final, 'ratio': {}, 'extension': {}, 'duration': 0, 'episodes': 0,
+                      'seasons': 0, 'size': 0, 'quality': {}}
 
         if show.status in stats['total']['status']:
             stats['total']['status'][show.status] += 1
@@ -120,8 +122,6 @@ def main(args):
     stats['total']['tb'] = int(size / 1024.0 / 1024.0 * 100) / 100.0
     stats['total']['gb'] = int(size / 1024.0 * 100) / 100.0
 
-
-
     stats['total']['avg_sea_show'] = int(sea_count / show_count * 100.0) / 100.0
     stats['total']['avg_ep_sea'] = int(ep_count / sea_count * 100.0) / 100.0
     stats['total']['avg_ep_show'] = int(ep_count / show_count * 100.0) / 100.0
@@ -136,7 +136,7 @@ def main(args):
 
 
 def update_file_meta(episode):
-    data = findVideoMetada(episode.location)
+    data = find_video_metada(episode.location)
     if data:
         episode.set_file_meta(data)
 
@@ -152,23 +152,23 @@ def update_file_meta(episode):
         episode.quality = QUALITY[min(QUALITY, key=lambda x: abs(x-episode.height))]
 
 
-def findVideoMetada(file):
+def find_video_metada(file):
     cmd = "ffprobe -v quiet -print_format json -show_streams -show_format -i"
     args = shlex.split(cmd)
     args.append(file)
     # run the ffprobe process, decode stdout into utf-8 & convert to JSON
     try:
-        ffprobeOutput = subprocess.check_output(args).decode('utf-8')
+        ffprobe_output = subprocess.check_output(args).decode('utf-8')
     except Exception as e:
         print(os.path.basename(file), file=sys.stderr)
         print(e, file=sys.stderr)
         return None
-    ffprobeOutput = json.loads(ffprobeOutput)
+    ffprobe_output = json.loads(ffprobe_output)
 
     # prints all the metadata available:
     # import pprint
     # pp = pprint.PrettyPrinter(indent=2)
-    # pp.pprint(ffprobeOutput)
+    # pp.pprint(ffprobe_output)
 
     height = 0
     width = 0
@@ -177,7 +177,7 @@ def findVideoMetada(file):
     ratio = ''
     # for example, find height and width
     video_stream = None
-    for stream in ffprobeOutput['streams']:
+    for stream in ffprobe_output['streams']:
         if 'codec_type' in stream and stream['codec_type'] == 'video':
             video_stream = stream
             break
@@ -190,11 +190,11 @@ def findVideoMetada(file):
     except:
         pass
     try:
-        duration = int(float(ffprobeOutput['format']['duration']) / 60 * 100) / 100.0
+        duration = int(float(ffprobe_output['format']['duration']) / 60 * 100) / 100.0
     except:
         pass
     try:
-        size = int(float(ffprobeOutput['format']['size']) / 1024.0 / 1024.0 * 100) / 100.0
+        size = int(float(ffprobe_output['format']['size']) / 1024.0 / 1024.0 * 100) / 100.0
     except:
         pass
     try:

@@ -1,7 +1,4 @@
 from constants import *
-import io_utlis
-import sys
-
 
 
 def main(args):

@@ -1,5 +1,3 @@
-import io_utlis
-import sys
 from constants import *
 from file import File
 import re

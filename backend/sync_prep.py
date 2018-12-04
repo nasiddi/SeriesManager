@@ -1,9 +1,6 @@
 from constants import *
-import os
 from file import File
 import re
-import io_utlis
-import sys
 
 
 def main(args):
@@ -41,19 +38,19 @@ def main(args):
             series_names_words.append(n2)
 
     locations = []
-    multis = []
+    multi_title = []
     delete = []
     for file in file_list:
         loc = file.location.split(SEPERATOR)[2 + MAC_OFFSET]
         if loc in locations:
-            if loc not in multis:
-                multis.append(loc)
+            if loc not in multi_title:
+                multi_title.append(loc)
         else:
             locations.append(loc)
 
     for file in file_list:
         loc = file.location.split(SEPERATOR)[2 + MAC_OFFSET]
-        if loc in multis:
+        if loc in multi_title:
             delete.append(file)
 
     for file in delete:
@@ -126,5 +123,3 @@ def clean_up(n):
 
 if __name__ == '__main__':
     main(sys.argv[1:])
-
-

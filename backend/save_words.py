@@ -1,5 +1,3 @@
-import io_utlis
-import sys
 import shutil
 from constants import *
 from episode import Episode
@@ -33,7 +31,7 @@ def main(args):
         if changes:
             e = Episode(location=file['location'])
             old = file['file'].rsplit('.', 1)
-            words = words = old[0].split(' ')
+            words = old[0].split(' ')
             for c in changes:
                 words[c[0]] = c[1]
             words = list(filter(None, words))

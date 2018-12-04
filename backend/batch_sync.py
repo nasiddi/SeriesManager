@@ -1,12 +1,8 @@
-import io_utlis
 from constants import *
 import json
-import sys
-import os
 import shutil
 from series import Series
 from file import File
-from syncer import single_format, double_format, triple_format
 from episode import Episode
 import time
 
@@ -55,14 +51,15 @@ def main(args):
 def update_summary():
     summary = REPORT['summary']
     REPORT['summary'] = {}
-    REPORT['summary']['total'] = str(summary['total']['f']) + ' Files (' + str(summary['total']['e'])\
-                                 + ' Episodes) copied'
+    REPORT['summary']['total'] = str(summary['total']['f']) + ' Files (' + str(summary['total']['e']) \
+                                                                         + ' Episodes) copied'
     if summary['subs']:
         REPORT['summary']['subs'] = str(summary['subs']) + ' Subtitles copied'
     REPORT['summary']['seasons'] = {}
     for season in summary['seasons'].keys():
-        REPORT['summary']['seasons'][str(season)] = 'Season ' + str(season) + ': ' + str(summary['seasons'][season]['f'])\
-                                    + ' Files (' + str(summary['seasons'][season]['e']) + ' Episodes) copied'
+        REPORT['summary']['seasons'][str(season)] = 'Season ' + str(season) + ': ' + \
+                                                    str(summary['seasons'][season]['f']) + ' Files (' \
+                                                    + str(summary['seasons'][season]['e']) + ' Episodes) copied'
 
 
 def prep(data):
@@ -101,12 +98,7 @@ def prep(data):
         if not folder:
             return False
 
-        if f.episode_option == 'Single':
-            name = single_format(f)
-        elif f.episode_option == 'Double':
-            name = double_format(f)
-        else:
-            name = triple_format(f)
+        name = Episode.compile_file_name(None, file=f)
         if f.subs:
             f.new_location = os.path.join(SUB_DIR, name)
         else:

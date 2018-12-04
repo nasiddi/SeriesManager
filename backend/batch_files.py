@@ -1,9 +1,4 @@
 from constants import *
-import os
-from file import File
-import re
-import io_utlis
-import sys
 
 
 def main(args):
@@ -36,7 +31,8 @@ def main(args):
     ]
     counter += 2
     while counter < 10:
-        regex.append({'key': counter, 'regex': '', 'matches': [], 's_start': '', 's_end': '', 'e_start': '', 'e_end': '', 'sxe': []})
+        regex.append({'key': counter, 'regex': '', 'matches': [], 's_start': '',
+                      's_end': '', 'e_start': '', 'e_end': '', 'sxe': []})
         counter += 1
 
     js = {'regex': regex, 'units': units}

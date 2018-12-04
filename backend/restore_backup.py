@@ -1,6 +1,4 @@
 from constants import *
-import io_utlis
-import sys
 from shutil import copyfile
 
 SHOWS = None

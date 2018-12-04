@@ -1,6 +1,4 @@
-import io_utlis
 import time
-import sys
 from constants import *
 from tvdb_client import ApiV2Client
 from time import gmtime, strftime

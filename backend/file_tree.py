@@ -1,13 +1,11 @@
-import io_utlis
 import time
-import sys
 from error_search import *
 
 SHOWS = None
 MISSING = []
 
 
-def main(args=None, series_name='*', out_file='data/treefile_comb'):
+def main(args=None, series_name='*', out_file='data/tree_file_comb'):
     global SHOWS
     SHOWS = io_utlis.load_shows(read_only=True)
     if args:
@@ -72,7 +70,6 @@ def get_show_data(show):
                 error = check_for_multiple_files(show, episode)
             if not error:
                 error = check_for_name_used_twice(show, episode)
-
 
             if not error:
                 error = check_against_compiled(show, episode)

@@ -1,5 +1,3 @@
-import io_utlis
-import sys
 from constants import *
 
 SHOWS = None
@@ -17,7 +15,11 @@ def main(args):
         b_split = b.split('_')
         timestamp = f'{b_split[0]} {b_split[1][:2]}:{b_split[1][2:4]}:{b_split[1][4:]} '
         print(os.listdir(os.path.join(BACKUP_DIR, b)))
-        backups['backups'].append({'value': b, 'text': timestamp + str(int(sum(os.path.getsize(f) for f in [join_dir(d, b) for d in os.listdir(os.path.join(BACKUP_DIR, b))] if os.path.isfile(f)) / 1024)) + ' KB'})
+        backups['backups'].append({
+            'value': b,
+            'text': timestamp + str(int(sum(os.path.getsize(f) for f in
+                                            [join_dir(d, b) for d in os.listdir(os.path.join(BACKUP_DIR, b))]
+                                            if os.path.isfile(f)) / 1024)) + ' KB'})
         backups['selected'] = b
     io_utlis.save_json(backups, os.environ[OUT_FILE])
 

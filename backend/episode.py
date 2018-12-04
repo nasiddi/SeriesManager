@@ -1,4 +1,3 @@
-import os
 import re
 import warnings
 from constants import *
@@ -30,8 +29,6 @@ class Episode:
             self.anime = True
         self.episode_option = episode_option
         self.e_nr = e_nr
-        self.previous = None
-        self.next = None
         self.title = title
         self.title2 = title2
         self.title3 = title3
@@ -59,7 +56,7 @@ class Episode:
         self.width = data[1]
         self.size = data[2]
         self.duration = data[3]
-        self.aspect = data[4]
+        self.ratio = data[4]
 
     def update_location(self, old_series_name, new_series_name):
         old_loc = self.location.replace(old_series_name, new_series_name, 1)
@@ -132,7 +129,8 @@ class Episode:
 
     def __str__(self):
         return ('***' +
-                '\nShow: ' + self.location.split(SEPERATOR)[2 + MAC_OFFSET] + ' SNr: ' + str(self.s_nr) + ' ENr: ' + str(self.e_nr) +
+                '\nShow: ' + self.location.split(SEPERATOR)[2 + MAC_OFFSET] + ' SNr: ' + str(self.s_nr)
+                + ' ENr: ' + str(self.e_nr) +
                 '\nFilename: ' + self.file_name +
                 '\nDuration: ' + str(self.duration) + ' Size: ' + str(self.size))
 

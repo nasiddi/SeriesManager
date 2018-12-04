@@ -29,36 +29,6 @@ def load_files(top):
     return shows
 
 
-def link_objects(obj, min_obj, max_obj, objs, obj_nr):
-    if obj_nr > min_obj:
-        n = 1
-        while obj_nr - n not in objs and n > min_obj:
-            n += 1
-        if n > min_obj:
-            obj.previous = objs[obj_nr - n]
-
-    if obj_nr < max_obj:
-        n = 1
-        while obj_nr + n not in objs and n < max_obj:
-            n += 1
-        if n < max_obj:
-            obj.next = objs[obj_nr + n]
-
-
-def link_seasons_and_episodes(shows):
-    for show in shows.values():
-        keys_sn = show.seasons.keys()
-        show.season_count = len(keys_sn)
-        for season in show.seasons.values():
-            link_objects(season, min(keys_sn), max(keys_sn), show.seasons, season.s_nr)
-
-            keys_ep = season.episodes.keys()
-            for episode in season.episodes.values():
-                link_objects(episode, min(keys_ep), max(keys_ep), season.episodes, episode.e_nr)
-            if max(keys_sn) == season.s_nr:
-                show.last_ep = season.episodes[max(keys_ep)]
-
-
 def add_metadata(shows):
     meta = load_json(META_FILE)
     for show in shows.values():

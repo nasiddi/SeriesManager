@@ -1,12 +1,9 @@
-import io_utlis
-import sys
 import shutil
 from constants import *
 from file import File
 from episode import Episode
 import time
 import json
-import unlock_shows
 import syncer
 
 SHOWS = None
@@ -16,7 +13,6 @@ EXCEPTIONS = {}
 def main(args):
     start = time.time()
     global SHOWS, EXCEPTIONS
-    unlock_shows.main()
     io_utlis.parse_args(args)
     error = io_utlis.load_json(os.environ["CONF_FILE"])
 
@@ -175,7 +171,8 @@ def save_queue(queue):
             except FileNotFoundError:
                 del SHOWS[file.series_name].seasons[file.s_nr]
             continue
-        if syncer.file_exists(file, SHOWS) and not file.s_nr == file.s_nr_old and not file.e_nr == file.e_nr_old and not file.e_nr_old >= 999:
+        if syncer.file_exists(file, SHOWS) and not file.s_nr == file.s_nr_old \
+                and not file.e_nr == file.e_nr_old and not file.e_nr_old >= 999:
             continue
         try:
             if file.location == file.new_location:

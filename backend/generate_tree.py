@@ -1,6 +1,5 @@
 import os
-import time
-import shutil
+
 SERIES_DIR_TREE = 'L:\\Series'
 SERIES_DIR = 'V:\\Series'
 ANIME_DIR_TREE = 'L:\\Anime'

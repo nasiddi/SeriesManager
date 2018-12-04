@@ -1,7 +1,4 @@
-import io_utlis
 from constants import *
-import sys
-import os
 import shutil
 import update_prep
 
@@ -45,7 +42,8 @@ def main(args):
             show.series_name = s[SERIES_NAME]
             SHOWS[show.series_name] = show
 
-    io_utlis.save_json(update_prep.prep_data(SHOWS), os.environ['OUTPUT_FILE'])
+    update_prep.SHOWS = SHOWS
+    io_utlis.save_json(update_prep.prep_data(), os.environ['OUTPUT_FILE'])
     io_utlis.save_shows(SHOWS)
 
 

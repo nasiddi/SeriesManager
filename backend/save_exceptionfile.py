@@ -1,5 +1,3 @@
-import io_utlis
-import sys
 from constants import *
 SHOWS = None
 

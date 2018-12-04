@@ -1,6 +1,4 @@
 from constants import *
-import io_utlis
-import sys
 from time import gmtime, strftime
 from shutil import copyfile
 

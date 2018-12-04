@@ -1,6 +1,3 @@
-import io_utlis
-import time
-import sys
 from constants import *
 
 SHOWS = None
@@ -60,12 +57,6 @@ def search_for_new_words(e):
         WORDS.append({'location': e.location,
                       'file': e.file_name,
                       'words': title_list})
-
-
-if __name__ == '__main__':
-    start = time.time()
-    main(sys.argv[1:])
-    print(time.time() - start)
 
 
 if __name__ == '__main__':
