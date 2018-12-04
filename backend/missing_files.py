@@ -2,9 +2,15 @@ import io_utlis
 import time
 import sys
 from constants import *
+import tvdbsimple as tvdb
+from time import gmtime, strftime
 
 SHOWS = None
 MISSING = []
+
+tvdb.KEYS.API_KEY = "B43FF87DE395DF56"
+
+DATE = int(strftime("%Y%m%d", gmtime()))
 
 
 def main(args):
@@ -13,14 +19,13 @@ def main(args):
     io_utlis.parse_args(args)
 
     load_all()
-
-    for l in MISSING:
-        print(l)
     io_utlis.save_json({'files': MISSING, 'info': 'No Missing Files'}, os.environ['OUTPUT_FILE'])
 
 
 def load_all():
     for show in SHOWS.values():
+        if not show.status == ENDED:
+            check_for_newly_aired(show)
         get_show_data(show)
 
 
@@ -62,6 +67,27 @@ def check_for_missing_episode(show, e, episodes):
 
     for nr in range(last_e_nr + 1, e.e_nr):
         MISSING.append({'key': len(MISSING), SERIES_NAME: show.series_name, 's_nr': e.s_nr, 'e_nr': nr})
+
+
+def check_for_newly_aired(show):
+    tvdb_show = tvdb.Series(show.tvdb_id)
+    episodes = tvdb_show.Episodes.all()
+    missing = []
+    for e in reversed(episodes):
+        if e['airedSeason'] == 0:
+            continue
+        first_aired = int(''.join(e['firstAired'].split('-')))
+        if first_aired >= DATE:
+            continue
+        if show.get_episode_by_sxe(s_nr=e['airedSeason'], e_nr=e['airedEpisodeNumber']):
+            break
+        missing.append({SERIES_NAME: show.series_name, 's_nr': e['airedSeason'], 'e_nr': e['airedEpisodeNumber']})
+
+    if missing:
+        for m in reversed(missing):
+            MISSING.append({'key': len(MISSING), SERIES_NAME: m[SERIES_NAME], 's_nr': m['s_nr'], 'e_nr': m['e_nr']})
+
+    pass
 
 
 if __name__ == '__main__':

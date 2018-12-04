@@ -1,6 +1,7 @@
 from constants import *
 from season import Season
 
+
 class Series:
 
     def __init__(self, series_name='',
@@ -93,6 +94,11 @@ class Series:
         season = self.seasons[s_keys[index - 1]]
         e = max(season.episodes.keys())
         return season.episodes[e]
+
+    def get_last_episode(self):
+        last_season = self.seasons[max(self.seasons.keys())]
+        return last_season[max(last_season.episodes.keys())]
+
 
 
 
