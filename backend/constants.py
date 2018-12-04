@@ -1,7 +1,8 @@
 import platform
 import os
 
-DEBUG = False # if os.path.exists('V:\\Series') or os.path.exists('/Volumes/Video/Series') else True
+
+DEBUG = True if platform.system() == 'Windows' else False
 
 # Status
 NONE = 'none'
