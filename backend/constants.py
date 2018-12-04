@@ -1,7 +1,7 @@
 import platform
 import os
 
-DEBUG = False if os.path.exists('V:\\Series') else True
+DEBUG = False # if os.path.exists('V:\\Series') or os.path.exists('/Volumes/Video/Series') else True
 
 # Status
 NONE = 'none'
