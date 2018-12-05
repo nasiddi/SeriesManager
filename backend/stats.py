@@ -1,13 +1,13 @@
-from subprocess import check_output
-from shlex import split
 from json import loads
 from math import gcd
-from time import time
 from os import environ, path
+from shlex import split
+from subprocess import check_output
 from sys import argv, stderr
+from time import time
 
-from io_utlis import load_shows, parse_args, save_json
-from constants import SERIES_NAME, SINGLE, DOUBLE, ASPECT_RATIOS, QUALITY
+from utils.constants import SERIES_NAME, SINGLE, DOUBLE, ASPECT_RATIOS, QUALITY, OUT_FILE
+from utils.io_utlis import load_shows, parse_args, save_json
 
 SHOWS = None
 
@@ -135,7 +135,7 @@ def main(args):
     stats['total']['avg_mb_ep'] = int(size / ep_count * 100.0) / 100.0
     stats['total']['avg_gb_show'] = int(size / show_count / 1024 * 100.0) / 100.0
 
-    save_json(stats, environ['OUTPUT_FILE'])
+    save_json(stats, environ[OUT_FILE])
 
 
 def update_file_meta(episode):

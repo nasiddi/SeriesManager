@@ -1,8 +1,8 @@
 import os
 from sys import argv
 
-from io_utlis import parse_args, save_json
-from constants import FILE_DIR, EXTENSIONS, SUBS, OUT_FILE
+from utils.constants import FILE_DIR, EXTENSIONS, SUBS, OUT_FILE
+from utils.io_utlis import parse_args, save_json
 
 
 def main(args):

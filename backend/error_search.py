@@ -1,7 +1,6 @@
 from episode import Episode
-from io_utlis import load_json
-from constants import EXCEPTIONS_FILE, SERIES_NAME, ENDED, NUMERALS, WRONG_SYMBOLS, EXTENSIONS
-
+from utils.constants import EXCEPTIONS_FILE, SERIES_NAME, ENDED, NUMERALS, WRONG_SYMBOLS, EXTENSIONS
+from utils.io_utlis import load_json
 
 EXCEPTIONS = load_json(EXCEPTIONS_FILE)
 NAMES = {}

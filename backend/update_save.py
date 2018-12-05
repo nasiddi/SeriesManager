@@ -1,10 +1,10 @@
-from shutil import move
 from os import environ
+from shutil import move
 from sys import argv
 
 import update_prep
-from io_utlis import load_shows, parse_args, save_json, save_shows, load_json
-from constants import NAME_NEEDED, STATUS, PREMIERE, FINAL, TVDB_ID, SERIES_NAME, CONF_FILE, OUT_FILE
+from utils.constants import NAME_NEEDED, STATUS, PREMIERE, FINAL, TVDB_ID, SERIES_NAME, CONF_FILE, OUT_FILE
+from utils.io_utlis import load_shows, parse_args, save_json, save_shows, load_json
 
 SHOWS = None
 

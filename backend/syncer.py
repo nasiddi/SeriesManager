@@ -1,15 +1,15 @@
 import json
+import os
 import shutil
 import time
-import os
 from sys import argv
 
 from episode import Episode
-from file import File
 from series import Series
-from io_utlis import load_shows, parse_args, save_json, save_shows, load_json, wait_on_creation, recursive_delete
-from constants import CONF_FILE, OUT_FILE, FILE_DIR, SERIES_NAME, MAC_OFFSET, SUBS, HD_Movies,\
+from utils.constants import CONF_FILE, OUT_FILE, FILE_DIR, SERIES_NAME, MAC_OFFSET, SUBS, HD_Movies, \
     SUB_DIR, SD_MOVIES, SERIES_DIR, ANIME_DIR
+from utils.file import File
+from utils.io_utlis import load_shows, parse_args, save_json, save_shows, load_json, wait_on_creation, recursive_delete
 
 QUEUE = []
 SHOWS = None
@@ -77,13 +77,13 @@ def main(args):
     for file in QUEUE:
         report.append(file.get_report())
     log = load_json(os.path.join(
-        os.path.dirname(os.environ['OUTPUT_FILE']), 'synclog'))
+        os.path.dirname(os.environ[OUT_FILE]), 'synclog'))
     if not log:
         log = []
     log.extend(report)
-    save_json(report, os.environ['OUTPUT_FILE'])
+    save_json(report, os.environ[OUT_FILE])
     save_json(log, os.path.join(os.path.dirname(
-        os.environ['OUTPUT_FILE']), 'synclog'))
+        os.environ[OUT_FILE]), 'synclog'))
     print(json.dumps(report, indent=4, sort_keys=True))
     save_shows(SHOWS)
 

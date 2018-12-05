@@ -1,8 +1,8 @@
 from os import environ
 from sys import argv
 
-from io_utlis import load_shows, parse_args, save_json, load_json
-from constants import DICT_FILE
+from utils.constants import DICT_FILE, OUT_FILE
+from utils.io_utlis import load_shows, parse_args, save_json, load_json
 
 SHOWS = None
 DICTIONARY = {}
@@ -21,7 +21,7 @@ def main(args):
     new_dict = sorted(list(set(NEW_DICT)))
     save_json(new_dict, DICT_FILE)
 
-    save_json({'words': WORDS, 'info': 'Dictionary is up to date'}, environ['OUTPUT_FILE'])
+    save_json({'words': WORDS, 'info': 'Dictionary is up to date'}, environ[OUT_FILE])
 
 
 def load_all():

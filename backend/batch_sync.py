@@ -1,16 +1,14 @@
 import json
-import shutil
 import os
+import shutil
 from sys import argv
 
-
-from series import Series
-from file import File
 from episode import Episode
-from io_utlis import load_shows, parse_args, save_json, save_shows, wait_on_creation, load_json
-from constants import SERIES_NAME, TVDB_ID, PREMIERE, FINAL, STATUS, NAME_NEEDED, FILE_DIR,\
-    SUB_DIR, SINGLE, DOUBLE, TRIPLE, MAC_OFFSET, ANIME_DIR, SERIES_DIR
-
+from series import Series
+from utils.constants import SERIES_NAME, TVDB_ID, PREMIERE, FINAL, STATUS, NAME_NEEDED, FILE_DIR, \
+    SUB_DIR, SINGLE, DOUBLE, TRIPLE, MAC_OFFSET, ANIME_DIR, SERIES_DIR, OUT_FILE, CONF_FILE
+from utils.file import File
+from utils.io_utlis import load_shows, parse_args, save_json, save_shows, wait_on_creation, load_json
 
 SHOWS = None
 QUEUE = []
@@ -23,11 +21,11 @@ def main(args):
     SHOWS = load_shows()
     parse_args(args)
 
-    data = load_json(os.environ["CONF_FILE"])
+    data = load_json(os.environ[CONF_FILE])
     save_json(data, 'data/batch_sync.json')
 
     if SHOWS is None:
-        save_json({'error': 'Shows locked'}, os.environ['OUTPUT_FILE'])
+        save_json({'error': 'Shows locked'}, os.environ[OUT_FILE])
         print('shows locked')
         return
     show = prep(data)
@@ -40,7 +38,7 @@ def main(args):
 
     print(json.dumps(REPORT, indent=4, sort_keys=True))
 
-    save_json(REPORT, os.environ['OUTPUT_FILE'])
+    save_json(REPORT, os.environ[OUT_FILE])
     save_shows(SHOWS)
 
 

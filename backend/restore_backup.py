@@ -1,9 +1,9 @@
 import os
-from sys import argv
 from shutil import copyfile
+from sys import argv
 
-from io_utlis import load_shows, parse_args, save_json, save_shows, load_json, wait_on_delete
-from constants import BACKUP_DIR, ASSETS, OUT_FILE
+from utils.constants import BACKUP_DIR, ASSETS, OUT_FILE, CONF_FILE
+from utils.io_utlis import load_shows, parse_args, save_json, save_shows, load_json, wait_on_delete
 
 SHOWS = None
 
@@ -16,7 +16,7 @@ def main(args):
         save_json({'error': 'Shows locked'}, os.environ[OUT_FILE])
         print('shows locked')
         return
-    date = load_json(os.environ["CONF_FILE"])['date']
+    date = load_json(os.environ[CONF_FILE])['date']
     folder = os.path.join(BACKUP_DIR, date)
     file_list = os.listdir(ASSETS)
     for f in file_list:

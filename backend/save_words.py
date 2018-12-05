@@ -1,10 +1,10 @@
-from shutil import move
 from os import environ
+from shutil import move
 from sys import argv
 
 from episode import Episode
-from io_utlis import load_shows, parse_args, save_json, save_shows, load_json
-from constants import DICT_FILE, OUT_FILE, CONF_FILE
+from utils.constants import DICT_FILE, OUT_FILE, CONF_FILE
+from utils.io_utlis import load_shows, parse_args, save_json, save_shows, load_json
 
 SHOWS = None
 

@@ -1,7 +1,7 @@
-from time import time, sleep
 from os import path, remove
+from time import time, sleep
 
-from constants import LOCK_File
+from utils.constants import LOCK_File
 
 
 def main():

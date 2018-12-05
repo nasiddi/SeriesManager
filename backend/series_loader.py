@@ -3,9 +3,9 @@ from sys import exit, setrecursionlimit
 from time import time
 
 import backup
-from io_utlis import load_json, load_shows, save_shows
 from series import Series
-from constants import META_FILE, STATUS, NAME_NEEDED, PREMIERE, FINAL, TVDB_ID, SERIES_DIR, ANIME_DIR
+from utils.constants import META_FILE, STATUS, NAME_NEEDED, PREMIERE, FINAL, TVDB_ID, SERIES_DIR, ANIME_DIR
+from utils.io_utlis import load_json, load_shows, save_shows
 
 setrecursionlimit(10000)
 

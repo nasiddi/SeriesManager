@@ -1,7 +1,7 @@
 from os import sep
 
 from season import Season
-from constants import NONE
+from utils.constants import NONE
 
 
 class Series:

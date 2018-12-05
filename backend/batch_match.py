@@ -1,11 +1,11 @@
-import re
 import os
+import re
 from sys import argv
 
-from io_utlis import parse_args, save_json, load_json
-from file import File
-from constants import FILE_DIR, MAC_OFFSET, SERIES_NAME, TVDB_ID, PREMIERE, FINAL, STATUS, NAME_NEEDED,\
+from utils.constants import FILE_DIR, MAC_OFFSET, SERIES_NAME, TVDB_ID, PREMIERE, FINAL, STATUS, NAME_NEEDED, \
     EXTENSIONS, SUBS, CONF_FILE, OUT_FILE
+from utils.file import File
+from utils.io_utlis import parse_args, save_json, load_json
 
 
 def main(args):

@@ -2,10 +2,9 @@ import re
 from os import path, sep, walk, environ
 from sys import argv
 
-from file import File
-from io_utlis import load_shows, parse_args, save_json
-
-from constants import FILE_DIR, EXTENSIONS, SUBS, ENDED, MAC_OFFSET, OUT_FILE
+from utils.constants import FILE_DIR, EXTENSIONS, SUBS, ENDED, MAC_OFFSET, OUT_FILE
+from utils.file import File
+from utils.io_utlis import load_shows, parse_args, save_json
 
 
 def main(args):

@@ -1,8 +1,9 @@
 from os import environ
 from sys import argv
 
-import io_utlis
-from constants import EXCEPTIONS_FILE, OUT_FILE, CONF_FILE
+from utils import io_utlis
+from utils.constants import EXCEPTIONS_FILE, OUT_FILE, CONF_FILE
+
 SHOWS = None
 
 

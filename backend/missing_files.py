@@ -1,12 +1,13 @@
 import time
-from os import environ
-from tvdb_client import ApiV2Client
-from time import gmtime, strftime
 from operator import itemgetter
+from os import environ
 from sys import argv
+from time import gmtime, strftime
 
-from io_utlis import load_shows, parse_args, save_json
-from constants import ENDED, SERIES_NAME, DOUBLE, TRIPLE, OUT_FILE
+from tvdb_client import ApiV2Client
+
+from utils.constants import ENDED, SERIES_NAME, DOUBLE, TRIPLE, OUT_FILE
+from utils.io_utlis import load_shows, parse_args, save_json
 
 SHOWS = None
 MISSING = []

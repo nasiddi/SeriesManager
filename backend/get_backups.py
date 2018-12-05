@@ -1,8 +1,8 @@
 import os
 from sys import argv
 
-from io_utlis import parse_args, save_json
-from constants import BACKUP_DIR, OUT_FILE
+from utils.constants import BACKUP_DIR, OUT_FILE
+from utils.io_utlis import parse_args, save_json
 
 SHOWS = None
 DICTIONARY = {}

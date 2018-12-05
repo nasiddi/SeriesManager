@@ -1,9 +1,9 @@
-from sys import argv
 from os import environ
+from sys import argv
 
 import error_search
-from io_utlis import load_shows, parse_args, save_json, save_shows, load_json
-from constants import CONF_FILE, OUT_FILE, SERIES_NAME, LOCATION
+from utils.constants import CONF_FILE, OUT_FILE, SERIES_NAME, LOCATION
+from utils.io_utlis import load_shows, parse_args, save_json, save_shows, load_json
 
 SHOWS = None
 MISSING = []

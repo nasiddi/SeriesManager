@@ -1,8 +1,8 @@
-from sys import argv
 from os import environ
+from sys import argv
 
-from io_utlis import load_shows, parse_args, save_json
-from constants import SERIES_NAME, NAME_NEEDED, STATUS, PREMIERE, FINAL, TVDB_ID, OUT_FILE
+from utils.constants import SERIES_NAME, NAME_NEEDED, STATUS, PREMIERE, FINAL, TVDB_ID, OUT_FILE
+from utils.io_utlis import load_shows, parse_args, save_json
 
 SHOWS = None
 

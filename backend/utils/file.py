@@ -1,4 +1,4 @@
-from constants import NONE, SERIES_NAME, FILE_DIR, MAC_OFFSET, AIRING, HIATUS, ENDED
+from utils.constants import NONE, SERIES_NAME, FILE_DIR, MAC_OFFSET, AIRING, HIATUS, ENDED
 
 
 class File:

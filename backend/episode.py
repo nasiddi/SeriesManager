@@ -1,9 +1,9 @@
 import re
-import warnings
 import shutil
+import warnings
 from os import path, sep
 
-from constants import SINGLE, DOUBLE, TRIPLE, MAC_OFFSET, ANIME_PATTERN, SERIES_PATTERN
+from utils.constants import SINGLE, DOUBLE, TRIPLE, MAC_OFFSET, ANIME_PATTERN, SERIES_PATTERN
 
 
 class Episode:

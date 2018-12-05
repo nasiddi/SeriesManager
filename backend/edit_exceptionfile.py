@@ -1,8 +1,8 @@
 from os import environ
 from sys import argv
 
-from io_utlis import parse_args, save_json, load_json
-from constants import EXCEPTIONS_FILE, OUT_FILE
+from utils.constants import EXCEPTIONS_FILE, OUT_FILE
+from utils.io_utlis import parse_args, save_json, load_json
 
 
 def main(args):

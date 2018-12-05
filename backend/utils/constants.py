@@ -45,7 +45,6 @@ else:
 
 
 # Extentions
-
 EXTENSIONS = ['mp4', 'mkv', 'avi', 'flv', 'm4v', 'divx', 'webm', 'mpg']
 SUBS = ['idx', 'sub', 'srt']
 

@@ -1,12 +1,12 @@
+import getopt
 import json
 import pickle
-import getopt
 import sys
 from os import path, environ, remove
-from time import time
 from shutil import rmtree
+from time import time
 
-from constants import LOCK_File, SHOWS_FILE, META_FILE
+from utils.constants import LOCK_File, SHOWS_FILE, META_FILE, OUT_FILE, CONF_FILE
 
 
 def save_json(data_json, file):
@@ -84,14 +84,14 @@ def parse_args(args):
             continue
         if opt in ('-c', '--config'):
             if path.isabs(arg):
-                environ['CONF_FILE'] = arg
+                environ[CONF_FILE] = arg
             else:
-                environ['CONF_FILE'] = path.join('configurations', arg)
+                environ[CONF_FILE] = path.join('configurations', arg)
         if opt in ('-o', '--output'):
             if path.isabs(arg):
-                environ['OUTPUT_FILE'] = arg
+                environ[OUT_FILE] = arg
             else:
-                environ['OUTPUT_FILE'] = path.join('data', arg)
+                environ[OUT_FILE] = path.join('data', arg)
         if opt in ('-d', '--data'):
             if path.isabs(arg):
                 environ['DATA_FILE'] = arg

@@ -1,14 +1,13 @@
-from shutil import move
 from json import dumps
 from os import environ
+from shutil import move
 from sys import argv
 
 import syncer
-from file import File
 from episode import Episode
-from io_utlis import load_shows, parse_args, save_json, save_shows, load_json, wait_on_creation, recursive_delete
-from constants import EXCEPTIONS_FILE, SERIES_NAME, NAME_NEEDED, CONF_FILE, OUT_FILE
-
+from utils.constants import EXCEPTIONS_FILE, SERIES_NAME, NAME_NEEDED, CONF_FILE, OUT_FILE
+from utils.file import File
+from utils.io_utlis import load_shows, parse_args, save_json, save_shows, load_json, wait_on_creation, recursive_delete
 
 SHOWS = None
 EXCEPTIONS = {}
