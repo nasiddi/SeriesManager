@@ -1,11 +1,15 @@
-from constants import *
+from os import environ
+from sys import argv
+
+import io_utlis
+from constants import EXCEPTIONS_FILE, OUT_FILE, CONF_FILE
 SHOWS = None
 
 
 def main(args):
     global SHOWS
     io_utlis.parse_args(args)
-    data = io_utlis.load_json(os.environ["CONF_FILE"])
+    data = io_utlis.load_json(environ[CONF_FILE])
     io_utlis.save_json(data, 'data/save_infofiles.json')
 
     exceptions = io_utlis.load_json(EXCEPTIONS_FILE)
@@ -19,9 +23,9 @@ def main(args):
                         del exceptions[d['key']][i['origin']]
                 else:
                     exceptions[d['key']].remove(i['text'])
-    io_utlis.save_json({'done': True}, os.environ[OUT_FILE])
+    io_utlis.save_json({'done': True}, environ[OUT_FILE])
     io_utlis.save_json(exceptions, EXCEPTIONS_FILE)
 
 
 if __name__ == '__main__':
-    main(sys.argv[1:])
+    main(argv[1:])

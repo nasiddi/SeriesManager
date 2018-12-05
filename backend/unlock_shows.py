@@ -1,18 +1,19 @@
-import os
+from time import time, sleep
+from os import path, remove
+
 from constants import LOCK_File
-import time
 
 
 def main():
-    if not os.path.exists(LOCK_File):
+    if not path.exists(LOCK_File):
         return
     try:
-        os.remove(LOCK_File)
+        remove(LOCK_File)
     except:
         pass
-    start = time.time()
-    while os.path.exists(LOCK_File) and time.time() - start < 1000:
-        time.sleep(1)
+    start = time()
+    while path.exists(LOCK_File) and time() - start < 1000:
+        sleep(1)
 
 
 if __name__ == '__main__':

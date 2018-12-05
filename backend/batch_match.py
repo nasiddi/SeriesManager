@@ -1,12 +1,17 @@
-from constants import *
-from file import File
 import re
+import os
+from sys import argv
+
+from io_utlis import parse_args, save_json, load_json
+from file import File
+from constants import FILE_DIR, MAC_OFFSET, SERIES_NAME, TVDB_ID, PREMIERE, FINAL, STATUS, NAME_NEEDED,\
+    EXTENSIONS, SUBS, CONF_FILE, OUT_FILE
 
 
 def main(args):
-    io_utlis.parse_args(args)
-    data = io_utlis.load_json(os.environ["DATA_FILE"])
-    io_utlis.save_json(data, 'data/batch_match.json')
+    parse_args(args)
+    data = load_json(os.environ[CONF_FILE])
+    save_json(data, 'data/batch_match.json')
     file_list = []
     for u in data['units']:
         if not u['select']:
@@ -38,7 +43,7 @@ def main(args):
     output = {'files': []}
     for f in file_list:
         output['files'].append({
-            'location': f.location.split(SEPERATOR, 2 + MAC_OFFSET)[2 + MAC_OFFSET],
+            'location': f.location.split(os.sep, 2 + MAC_OFFSET)[2 + MAC_OFFSET],
             'title': '',
             'title2': '',
             'title3': '',
@@ -57,7 +62,7 @@ def main(args):
                    NAME_NEEDED: True,
                    })
 
-    io_utlis.save_json(output, os.environ['OUTPUT_FILE'])
+    save_json(output, os.environ[OUT_FILE])
 
 
 def prep_file(name, root):
@@ -71,5 +76,4 @@ def prep_file(name, root):
 
 
 if __name__ == '__main__':
-    main(sys.argv[1:])
-
+    main(argv[1:])

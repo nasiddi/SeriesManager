@@ -1,10 +1,15 @@
 import json
 import shutil
 import time
-from constants import *
+import os
+from sys import argv
+
 from episode import Episode
 from file import File
 from series import Series
+from io_utlis import load_shows, parse_args, save_json, save_shows, load_json, wait_on_creation, recursive_delete
+from constants import CONF_FILE, OUT_FILE, FILE_DIR, SERIES_NAME, MAC_OFFSET, SUBS, HD_Movies,\
+    SUB_DIR, SD_MOVIES, SERIES_DIR, ANIME_DIR
 
 QUEUE = []
 SHOWS = None
@@ -13,16 +18,16 @@ CLEAN_UP = []
 
 def main(args):
     global SHOWS
-    io_utlis.parse_args(args)
-    data = io_utlis.load_json(os.environ["CONF_FILE"])
+    parse_args(args)
+    data = load_json(os.environ[CONF_FILE])
 
-    SHOWS = io_utlis.load_shows()
+    SHOWS = load_shows()
 
     if SHOWS is None:
-        io_utlis.save_json({'shows_locked': True}, os.environ['OUTPUT_FILE'])
+        save_json({'shows_locked': True}, os.environ[OUT_FILE])
         print('shows locked')
         return
-    io_utlis.save_json(data, 'data/sync')
+    save_json(data, 'data/sync')
     files = []
     for f in data:
 
@@ -71,16 +76,16 @@ def main(args):
     report = []
     for file in QUEUE:
         report.append(file.get_report())
-    log = io_utlis.load_json(os.path.join(
+    log = load_json(os.path.join(
         os.path.dirname(os.environ['OUTPUT_FILE']), 'synclog'))
     if not log:
         log = []
     log.extend(report)
-    io_utlis.save_json(report, os.environ['OUTPUT_FILE'])
-    io_utlis.save_json(log, os.path.join(os.path.dirname(
+    save_json(report, os.environ['OUTPUT_FILE'])
+    save_json(log, os.path.join(os.path.dirname(
         os.environ['OUTPUT_FILE']), 'synclog'))
     print(json.dumps(report, indent=4, sort_keys=True))
-    io_utlis.save_shows(SHOWS)
+    save_shows(SHOWS)
 
 
 def sync_queue(queue=None):
@@ -88,7 +93,7 @@ def sync_queue(queue=None):
         queue = QUEUE
     for file in queue:
         if file.delete:
-            if io_utlis.recursive_delete(SEPERATOR.join(file.location.split(SEPERATOR)[:3 + MAC_OFFSET])):
+            if recursive_delete(os.sep.join(file.location.split(os.sep)[:3 + MAC_OFFSET])):
                 file.report['info'].append('Delete successful')
             else:
                 file.report['error'].append('Delete failed')
@@ -106,7 +111,7 @@ def sync_queue(queue=None):
             print('rename', e)
             file.report['error'].append('Copy failed')
             continue
-        if io_utlis.wait_on_creation(file.new_location):
+        if wait_on_creation(file.new_location):
             file.report['success'].append('Copy successful')
         else:
             file.report['error'].append('Copy failed')
@@ -125,7 +130,7 @@ def sync_queue(queue=None):
 
             if show.add_episode(episode):
                 file.report['info'].append('Season created')
-        loc = SEPERATOR.join(file.location.split(SEPERATOR)[:3 + MAC_OFFSET])
+        loc = os.sep.join(file.location.split(os.sep)[:3 + MAC_OFFSET])
         if os.path.isdir(loc):
             if loc not in CLEAN_UP:
                 CLEAN_UP.append(loc)
@@ -140,7 +145,7 @@ def file_exists(file, shows):
 
 def clean_up():
     for loc in CLEAN_UP:
-        io_utlis.recursive_delete(loc)
+        recursive_delete(loc)
 
 
 def delete_file(file):
@@ -171,7 +176,7 @@ def delete_file(file):
         file.report['error'].append('Delete failed')
         print(e)
         return
-    if io_utlis.wait_on_creation:
+    if wait_on_creation:
         file.report['error'].append('Delete failed')
     else:
         file.report['success'].append('Delete successful')
@@ -179,8 +184,8 @@ def delete_file(file):
 
 def create_new_series(file):
     print(get_base_path(file))
-    print(get_base_path(file).rsplit(SEPERATOR, 1))
-    base_path = get_base_path(file).rsplit(SEPERATOR, 1)[0]
+    print(get_base_path(file).rsplit(os.sep, 1))
+    base_path = get_base_path(file).rsplit(os.sep, 1)[0]
     SHOWS.update({file.series_name: Series(series_name=file.series_name, status=file.status, tvdb_id=file.tvdb_id,
                                            name_needed=file.name_needed, location=base_path)})
     file.report['info'].append('Series created')
@@ -213,13 +218,13 @@ def get_base_path(file):
                              file.series_name, 'Season {:02d}'.format(file.s_nr))
     if not os.path.exists(base_path):
         os.makedirs(base_path)
-    io_utlis.wait_on_creation(base_path)
+    wait_on_creation(base_path)
     return base_path
 
 
 def ignore_file(file):
-    split_loc = file.location.split(SEPERATOR)
-    loc = SEPERATOR.join(split_loc[:3 + MAC_OFFSET])
+    split_loc = file.location.split(os.sep)
+    loc = os.sep.join(split_loc[:3 + MAC_OFFSET])
     if os.path.isdir(loc):
         new_loc = ' '.join([loc, '[ignore]'])
     else:
@@ -232,4 +237,4 @@ def ignore_file(file):
 
 
 if __name__ == '__main__':
-    main(sys.argv[1:])
+    main(argv[1:])

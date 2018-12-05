@@ -1,9 +1,12 @@
 import json
 import pickle
-import shutil
-import time
 import getopt
-from constants import *
+import sys
+from os import path, environ, remove
+from time import time
+from shutil import rmtree
+
+from constants import LOCK_File, SHOWS_FILE, META_FILE
 
 
 def save_json(data_json, file):
@@ -21,7 +24,7 @@ def load_json(file):
 
 
 def load_shows(reload=False, read_only=False):
-    if os.path.exists(LOCK_File) and not read_only:
+    if path.exists(LOCK_File) and not read_only:
         return None
     if not read_only:
         lock = open(LOCK_File, 'w+')
@@ -32,19 +35,19 @@ def load_shows(reload=False, read_only=False):
 
 
 def wait_on_creation(file_path):
-    start = time.time()
-    while not os.path.exists(file_path) and time.time() - start < 5:
+    start = time()
+    while not path.exists(file_path) and time() - start < 5:
         pass
-    if os.path.exists(file_path):
+    if path.exists(file_path):
         return True
     return False
 
 
 def wait_on_delete(file_path):
-    start = time.time()
-    while os.path.exists(file_path) and time.time() - start < 5:
+    start = time()
+    while path.exists(file_path) and time() - start < 5:
         pass
-    if not os.path.exists(file_path):
+    if not path.exists(file_path):
         return True
     return False
 
@@ -56,7 +59,7 @@ def save_shows(shows):
     pickle_dump(shows, SHOWS_FILE)
     save_json(meta, META_FILE)
     try:
-        os.remove(LOCK_File)
+        remove(LOCK_File)
     except:
         pass
     wait_on_delete(LOCK_File)
@@ -80,28 +83,28 @@ def parse_args(args):
         if not arg:
             continue
         if opt in ('-c', '--config'):
-            if os.path.isabs(arg):
-                os.environ['CONF_FILE'] = arg
+            if path.isabs(arg):
+                environ['CONF_FILE'] = arg
             else:
-                os.environ['CONF_FILE'] = os.path.join('configurations', arg)
+                environ['CONF_FILE'] = path.join('configurations', arg)
         if opt in ('-o', '--output'):
-            if os.path.isabs(arg):
-                os.environ['OUTPUT_FILE'] = arg
+            if path.isabs(arg):
+                environ['OUTPUT_FILE'] = arg
             else:
-                os.environ['OUTPUT_FILE'] = os.path.join('data', arg)
+                environ['OUTPUT_FILE'] = path.join('data', arg)
         if opt in ('-d', '--data'):
-            if os.path.isabs(arg):
-                os.environ['DATA_FILE'] = arg
+            if path.isabs(arg):
+                environ['DATA_FILE'] = arg
             else:
-                os.environ['DATA_FILE'] = os.path.join('data', arg)
+                environ['DATA_FILE'] = path.join('data', arg)
 
 
 def recursive_delete(location):
-    if os.path.isdir(location):
-        shutil.rmtree(location)
+    if path.isdir(location):
+        rmtree(location)
     else:
-        os.remove(location)
+        remove(location)
 
-    if os.path.exists(location):
+    if path.exists(location):
         return False
     return True

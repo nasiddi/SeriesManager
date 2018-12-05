@@ -1,10 +1,16 @@
-from constants import *
 import json
 import shutil
+import os
+from sys import argv
+
+
 from series import Series
 from file import File
 from episode import Episode
-import time
+from io_utlis import load_shows, parse_args, save_json, save_shows, wait_on_creation, load_json
+from constants import SERIES_NAME, TVDB_ID, PREMIERE, FINAL, STATUS, NAME_NEEDED, FILE_DIR,\
+    SUB_DIR, SINGLE, DOUBLE, TRIPLE, MAC_OFFSET, ANIME_DIR, SERIES_DIR
+
 
 SHOWS = None
 QUEUE = []
@@ -14,38 +20,28 @@ CLEAN_UP = []
 
 def main(args):
     global SHOWS
-    SHOWS = io_utlis.load_shows()
-    io_utlis.parse_args(args)
+    SHOWS = load_shows()
+    parse_args(args)
 
-    data = io_utlis.load_json(os.environ["CONF_FILE"])
-    io_utlis.save_json(data, 'data/batch_sync.json')
+    data = load_json(os.environ["CONF_FILE"])
+    save_json(data, 'data/batch_sync.json')
 
     if SHOWS is None:
-        io_utlis.save_json({'error': 'Shows locked'}, os.environ['OUTPUT_FILE'])
+        save_json({'error': 'Shows locked'}, os.environ['OUTPUT_FILE'])
         print('shows locked')
         return
-    start = time.time()
     show = prep(data)
-    print('prep', time.time() - start)
 
     if show:
-        start = time.time()
         sync_queue(show)
-        print('sync', time.time() - start)
-        start = time.time()
         update_summary()
-        print('update', time.time() - start)
-        start = time.time()
         clean_up()
-        print('clean up', time.time() - start)
-        start = time.time()
         SHOWS[show.series_name] = show
-        print('save', time.time() - start)
 
     print(json.dumps(REPORT, indent=4, sort_keys=True))
 
-    io_utlis.save_json(REPORT, os.environ['OUTPUT_FILE'])
-    io_utlis.save_shows(SHOWS)
+    save_json(REPORT, os.environ['OUTPUT_FILE'])
+    save_shows(SHOWS)
 
 
 def update_summary():
@@ -112,7 +108,6 @@ def sync_queue(show):
     summary = REPORT['summary']['seasons']
     total = REPORT['summary']['total']
     for file in QUEUE:
-        start = time.time()
         if os.path.exists(file.new_location):
             REPORT['error'].append('File already exists: ' + file.new_location)
             continue
@@ -122,7 +117,7 @@ def sync_queue(show):
             print('rename', e)
             REPORT['error'].append('Copy failed: ' + file.new_location)
             continue
-        if io_utlis.wait_on_creation(file.new_location):
+        if wait_on_creation(file.new_location):
             REPORT['success'].append('Copy successful: ' + file.new_location)
             if file.subs:
                 REPORT['summary']['subs'] += 1
@@ -152,11 +147,10 @@ def sync_queue(show):
 
         if show.add_episode(episode):
             REPORT['info'].append('Season ' + str(file.s_nr) + ' created')
-        loc = SEPERATOR.join(file.location.split(SEPERATOR)[:3 + MAC_OFFSET])
+        loc = os.sep.join(file.location.split(os.sep)[:3 + MAC_OFFSET])
         if os.path.isdir(loc):
             if loc not in CLEAN_UP:
                 CLEAN_UP.append(loc)
-        print(time.time() - start, os.path.basename(file.new_location))
 
 
 def clean_up():
@@ -168,7 +162,7 @@ def make_season_folder(s_nr, show_loc):
     folder = os.path.join(show_loc, 'Season {:02d}'.format(s_nr))
     if not os.path.exists(folder):
         os.makedirs(folder)
-        if io_utlis.wait_on_creation(folder):
+        if wait_on_creation(folder):
             REPORT['summary'].update({s_nr: {'f': 0, 'e': 0}})
             return folder
         else:
@@ -182,7 +176,7 @@ def create_location(name, anime):
     base_path = os.path.join(ANIME_DIR if anime else SERIES_DIR, name)
     if not os.path.exists(base_path):
         os.makedirs(base_path)
-        io_utlis.wait_on_creation(base_path)
+        wait_on_creation(base_path)
         return base_path
     else:
         REPORT['error'].append('Series already exists')
@@ -190,4 +184,4 @@ def create_location(name, anime):
 
 
 if __name__ == '__main__':
-    main(sys.argv[1:])
+    main(argv[1:])

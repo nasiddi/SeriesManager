@@ -1,8 +1,4 @@
 import platform
-import os
-import io_utlis
-import sys
-
 
 DEBUG = True if platform.system() == 'Windows' else False
 
@@ -22,6 +18,7 @@ TRIPLE = 'Triple'
 ASSETS = 'assets'
 LOCK_File = 'assets/shows.lock'
 OUT_FILE = 'OUTPUT_FILE'
+CONF_FILE = 'CONF_FILE'
 META_FILE = 'assets/metadata.json'
 DICT_FILE = 'assets/dictionary.json'
 SHOWS_FILE = 'assets/shows.pkl'
@@ -36,7 +33,6 @@ if platform.system() == 'Windows':
     FILE_DIR = 'L:\\complete\\' if DEBUG else 'V:\\downloads\\'
     SUB_DIR = 'T:\\Subs'
     MAC_OFFSET = 0
-    SEPERATOR = '\\'
 
 else:
     SERIES_DIR = '/Volumes/Downloads/Series' if DEBUG else '/Volumes/Video/Series'
@@ -46,7 +42,6 @@ else:
     FILE_DIR = '/Volumes/Downloads/complete/' if DEBUG else '/Volumes/Video/downloads/'
     SUB_DIR = '/Volumes/Temp/Subs'
     MAC_OFFSET = 2
-    SEPERATOR = '/'
 
 
 # Extentions

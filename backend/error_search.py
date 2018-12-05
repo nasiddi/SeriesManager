@@ -1,18 +1,20 @@
-from constants import *
 from episode import Episode
+from io_utlis import load_json
+from constants import EXCEPTIONS_FILE, SERIES_NAME, ENDED, NUMERALS, WRONG_SYMBOLS, EXTENSIONS
 
-EXCEPTIONS = io_utlis.load_json(EXCEPTIONS_FILE)
+
+EXCEPTIONS = load_json(EXCEPTIONS_FILE)
 NAMES = {}
 
 
-def generate_error(message, e, show,
-                   title='',
-                   e_nr=None,
-                   s_nr='',
-                   update=False,
-                   delete=False,
-                   word='',
-                   exception_type=''):
+def _generate_error(message, e, show,
+                    title='',
+                    e_nr=None,
+                    s_nr='',
+                    update=False,
+                    delete=False,
+                    word='',
+                    exception_type=''):
     if exception_type:
         e_id = e.id()
         if exception_type == 'double':
@@ -55,22 +57,22 @@ def check_words(show, e):
                 if w[0].islower():
                     words[i] = w.capitalize()
                     title = ' '.join(words)
-                    return generate_error(message='LowerCase Error: ' + w, e=e, show=show, word=w, title=title,
-                                          exception_type='lower')
+                    return _generate_error(message='LowerCase Error: ' + w, e=e, show=show, word=w, title=title,
+                                           exception_type='lower')
                 else:
                     continue
 
             if w[0].isupper():
                 words[i] = w[0].lower() + w[1:]
                 title = ' '.join(words)
-                return generate_error(message='UpperCase Error: ' + w, e=e, show=show, word=w, title=title,
-                                      exception_type='upper')
+                return _generate_error(message='UpperCase Error: ' + w, e=e, show=show, word=w, title=title,
+                                       exception_type='upper')
             continue
         if w[0].islower():
             words[i] = w.capitalize()
             title = ' '.join(words)
-            return generate_error(message='LowerCase Error: ' + w, e=e, show=show, word=w, title=title,
-                                  exception_type='lower')
+            return _generate_error(message='LowerCase Error: ' + w, e=e, show=show, word=w, title=title,
+                                   exception_type='lower')
     return False
 
 
@@ -90,7 +92,7 @@ def check_part_number(show, e):
             next_title = following.get_title()
         if 'Part ' not in prev_title and 'Part ' not in next_title:
             if next_title or show.status == ENDED:
-                return generate_error(message='Unnecessary Part Number', e=e, show=show,  exception_type='part')
+                return _generate_error(message='Unnecessary Part Number', e=e, show=show, exception_type='part')
         if ' ' in t[-1]:
             substring = t[-1].split(' ', 1)
             t[-1] = substring[0]
@@ -102,29 +104,29 @@ def check_part_number(show, e):
                 substring[0] = t[-1]
                 t[-1] = ' '.join(substring)
             title = 'Part '.join(t)
-            return generate_error(message='Part Number Integer Error', e=e,
-                                  show=show, title=title, exception_type='part')
+            return _generate_error(message='Part Number Integer Error', e=e,
+                                   show=show, title=title, exception_type='part')
         if len(set(t[-1])) == 1:
             t[-1] = NUMERALS[len(t[-1])]
             title = 'Part '.join(t)
-            return generate_error(message='Part Number Roman Error', e=e,
-                                  show=show, title=title,  exception_type='part')
-        return generate_error(message='Part Number Parse Error', e=e, show=show,  exception_type='part')
+            return _generate_error(message='Part Number Roman Error', e=e,
+                                   show=show, title=title, exception_type='part')
+        return _generate_error(message='Part Number Parse Error', e=e, show=show, exception_type='part')
     if len(t) > 2:
-        return generate_error(message='Unnecessary Part Numbers', e=e, show=show,  exception_type='part')
+        return _generate_error(message='Unnecessary Part Numbers', e=e, show=show, exception_type='part')
     return False
 
 
 def check_for_spaces(show, e):
     if '  ' in e.get_title():
         title = e.get_title().replace('  ', ' ')
-        return generate_error(message='Double Space', e=e, show=show, title=title)
+        return _generate_error(message='Double Space', e=e, show=show, title=title)
     name = e.file_name.rsplit('.', 1)
     if not name:
         return False
     if name[0][-1] == ' ':
         title = e.get_title().strip()
-        return generate_error(message='Space Before Extension', e=e, show=show, title=title)
+        return _generate_error(message='Space Before Extension', e=e, show=show, title=title)
     return False
 
 
@@ -133,27 +135,27 @@ def check_for_missing_title(show, e):
         return False
     if e.title and not e.title == ' ':
         return False
-    return generate_error(message='Title Missing', e=e, show=show)
+    return _generate_error(message='Title Missing', e=e, show=show)
 
 
 def check_symbols(show, e):
     if any(s in e.get_title() for s in WRONG_SYMBOLS):
-        return generate_error(message='Symbol Error', e=e, show=show)
+        return _generate_error(message='Symbol Error', e=e, show=show)
 
 
 def check_series_name_and_numbers(show, e):
     file_name = e.file_name
     if not file_name.startswith(show.series_name):
-        return generate_error(message='Series Name Error', e=e, show=show)
+        return _generate_error(message='Series Name Error', e=e, show=show)
     file_name = file_name.replace(show.series_name + ' ', '')
     try:
         s_nr = int(file_name[:2])
     except ValueError:
-        return generate_error(message='Season Number Error', e=e, show=show)
+        return _generate_error(message='Season Number Error', e=e, show=show)
     if not s_nr == e.s_nr:
-        return generate_error(message='Season Number Error', e=e, show=show)
+        return _generate_error(message='Season Number Error', e=e, show=show)
     if e.e_nr >= 999:
-        return generate_error(message='Episode Number Error', e=e, show=show, e_nr='')
+        return _generate_error(message='Episode Number Error', e=e, show=show, e_nr='')
     return False
 
 
@@ -161,7 +163,7 @@ def check_for_multiple_files(show, e):
     if show.series_name == 'Doctor Who Classic':
         return False
     if 777 <= e.e_nr < 999:
-        return generate_error(message='Multiple Files', e=e, show=show, e_nr='')
+        return _generate_error(message='Multiple Files', e=e, show=show, e_nr='')
     return False
 
 
@@ -169,7 +171,7 @@ def check_against_compiled(show, e):
     if show.series_name == 'Doctor Who Classic':
         return False
     if not e.file_name == e.compile_file_name():
-        return generate_error(message='Compilation Mismatch', e=e, show=show)
+        return _generate_error(message='Compilation Mismatch', e=e, show=show)
     return False
 
 
@@ -181,7 +183,7 @@ def check_for_name_used_twice(show, e):
         NAMES[show.series_name] = [title]
         return False
     if title in NAMES[show.series_name]:
-        return generate_error(message='Name Used Twice', e=e, show=show, exception_type='double', word=title)
+        return _generate_error(message='Name Used Twice', e=e, show=show, exception_type='double', word=title)
     else:
         NAMES[show.series_name].append(title)
         return False
@@ -191,10 +193,10 @@ def check_extension(show, e):
     if e.extension not in EXTENSIONS:
         print(e.file_name)
         if not e.extension:
-            return generate_error(message='Extension Missing', e=e, show=show)
-        return generate_error(message='No Video Extension', e=e, show=show)
+            return _generate_error(message='Extension Missing', e=e, show=show)
+        return _generate_error(message='No Video Extension', e=e, show=show)
 
 
 def check_for_empty_season(show, s):
     if not s.episodes:
-        return generate_error(message='Empty Season', e=Episode(location=s.location, s_nr=s.s_nr, e_nr=1), show=show)
+        return _generate_error(message='Empty Season', e=Episode(location=s.location, s_nr=s.s_nr, e_nr=1), show=show)

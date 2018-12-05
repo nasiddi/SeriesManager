@@ -1,5 +1,9 @@
-import time
-from error_search import *
+from sys import argv
+from os import environ
+
+import error_search
+from io_utlis import load_shows, parse_args, save_json, save_shows, load_json
+from constants import CONF_FILE, OUT_FILE, SERIES_NAME, LOCATION
 
 SHOWS = None
 MISSING = []
@@ -7,17 +11,17 @@ MISSING = []
 
 def main(args=None, series_name='*', out_file='data/tree_file_comb'):
     global SHOWS
-    SHOWS = io_utlis.load_shows(read_only=True)
+    SHOWS = load_shows(read_only=True)
     if args:
-        io_utlis.parse_args(args)
-        conf = io_utlis.load_json(os.environ["CONF_FILE"])
+        parse_args(args)
+        conf = load_json(environ[CONF_FILE])
         series_name = conf[SERIES_NAME]
-        out_file = os.environ['OUTPUT_FILE']
+        out_file = environ[OUT_FILE]
 
     if series_name == '*':
         tree_file = load_all()
     else:
-        tree_file = io_utlis.load_json(out_file)
+        tree_file = load_json(out_file)
 
         show, error = get_show_data(SHOWS[series_name])
         for i in range(len(tree_file['errors'])):
@@ -28,8 +32,8 @@ def main(args=None, series_name='*', out_file='data/tree_file_comb'):
                     del tree_file['errors'][i]
                 break
         tree_file['shows'][series_name] = show
-    io_utlis.save_json(tree_file, out_file)
-    io_utlis.save_shows(SHOWS)
+    save_json(tree_file, out_file)
+    save_shows(SHOWS)
 
 
 def load_all():
@@ -48,31 +52,31 @@ def get_show_data(show):
     error = None
     for season in show.seasons.values():
         if not error:
-            error = check_for_empty_season(show, season)
+            error = error_search.check_for_empty_season(show, season)
         sea = {'key': season.s_nr, 'episodes': [], 'opened': False}
         episodes = sorted(list(season.episodes.values()), key=lambda x: x.e_nr)
         for episode in episodes:
             if not error:
-                error = check_for_spaces(show, episode)
+                error = error_search.check_for_spaces(show, episode)
             if not error:
-                error = check_extension(show, episode)
+                error = error_search.check_extension(show, episode)
             if not error:
-                error = check_part_number(show, episode)
+                error = error_search.check_part_number(show, episode)
             if not error:
-                error = check_words(show, episode)
+                error = error_search.check_words(show, episode)
             if not error:
-                error = check_symbols(show, episode)
+                error = error_search.check_symbols(show, episode)
             if not error:
-                error = check_series_name_and_numbers(show, episode)
+                error = error_search.check_series_name_and_numbers(show, episode)
             if not error:
-                error = check_for_missing_title(show, episode)
+                error = error_search.check_for_missing_title(show, episode)
             if not error:
-                error = check_for_multiple_files(show, episode)
+                error = error_search.check_for_multiple_files(show, episode)
             if not error:
-                error = check_for_name_used_twice(show, episode)
+                error = error_search.check_for_name_used_twice(show, episode)
 
             if not error:
-                error = check_against_compiled(show, episode)
+                error = error_search.check_against_compiled(show, episode)
 
             sea['episodes'].append({LOCATION: episode.location,
                                     'file_name': episode.file_name,
@@ -102,6 +106,4 @@ def get_series_name(show):
 
 
 if __name__ == '__main__':
-    start = time.time()
-    main(sys.argv[1:])
-    print(time.time() - start)
+    main(argv[1:])

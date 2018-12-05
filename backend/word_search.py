@@ -1,4 +1,8 @@
-from constants import *
+from os import environ
+from sys import argv
+
+from io_utlis import load_shows, parse_args, save_json, load_json
+from constants import DICT_FILE
 
 SHOWS = None
 DICTIONARY = {}
@@ -9,15 +13,15 @@ MISSING = []
 
 def main(args):
     global SHOWS, DICTIONARY
-    SHOWS = io_utlis.load_shows(read_only=True)
-    io_utlis.parse_args(args)
+    SHOWS = load_shows(read_only=True)
+    parse_args(args)
 
-    DICTIONARY = io_utlis.load_json(DICT_FILE)
+    DICTIONARY = load_json(DICT_FILE)
     load_all()
     new_dict = sorted(list(set(NEW_DICT)))
-    io_utlis.save_json(new_dict, DICT_FILE)
+    save_json(new_dict, DICT_FILE)
 
-    io_utlis.save_json({'words': WORDS, 'info': 'Dictionary is up to date'}, os.environ['OUTPUT_FILE'])
+    save_json({'words': WORDS, 'info': 'Dictionary is up to date'}, environ['OUTPUT_FILE'])
 
 
 def load_all():
@@ -60,4 +64,4 @@ def search_for_new_words(e):
 
 
 if __name__ == '__main__':
-    main(sys.argv[1:])
+    main(argv[1:])

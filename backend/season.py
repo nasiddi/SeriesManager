@@ -1,4 +1,5 @@
-import os
+from os import listdir, path
+
 from episode import Episode
 
 
@@ -18,9 +19,9 @@ class Season:
 
     def update_episodes(self):
         self.episodes = {}
-        files = os.listdir(self.location)
+        files = listdir(self.location)
         for file in files:
-            episode = Episode(location=os.path.join(self.location, file), s_nr=self.s_nr)
+            episode = Episode(location=path.join(self.location, file), s_nr=self.s_nr)
             if episode.anime:
                 print(episode)
             if episode.e_nr in self.episodes:

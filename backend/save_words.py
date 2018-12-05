@@ -1,24 +1,26 @@
-import shutil
-from constants import *
-from episode import Episode
+from shutil import move
+from os import environ
+from sys import argv
 
+from episode import Episode
+from io_utlis import load_shows, parse_args, save_json, save_shows, load_json
+from constants import DICT_FILE, OUT_FILE, CONF_FILE
 
 SHOWS = None
 
 
 def main(args):
     global SHOWS
-    io_utlis.parse_args(args)
-    data = io_utlis.load_json(os.environ["CONF_FILE"])
-    io_utlis.save_json(data, 'data/save_words.json')
-    SHOWS = io_utlis.load_shows()
-    dictionary = io_utlis.load_json(DICT_FILE)
+    parse_args(args)
+    data = load_json(environ[CONF_FILE])
+    save_json(data, 'data/save_words.json')
+    SHOWS = load_shows()
+    dictionary = load_json(DICT_FILE)
 
     if SHOWS is None:
-        io_utlis.save_json({'shows_locked': True}, os.environ['OUTPUT_FILE'])
+        save_json({'shows_locked': True}, environ[OUT_FILE])
         print('shows locked')
         return
-    print('lock')
 
     for file in data['words']:
         changes = []
@@ -38,15 +40,15 @@ def main(args):
             file['file'] = ' '.join(words)
             new_location = file['location'].replace(old[0], file['file'])
             try:
-                shutil.move(file['location'], new_location)
+                move(file['location'], new_location)
                 SHOWS[e.series_name].seasons[e.s_nr].update_episodes()
             except Exception as e:
                 print('rename', e)
 
-    io_utlis.save_json(dictionary, DICT_FILE)
-    io_utlis.save_json({'done': True}, os.environ[OUT_FILE])
-    io_utlis.save_shows(SHOWS)
+    save_json(dictionary, DICT_FILE)
+    save_json({'done': True}, environ[OUT_FILE])
+    save_shows(SHOWS)
 
 
 if __name__ == '__main__':
-    main(sys.argv[1:])
+    main(argv[1:])

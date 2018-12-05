@@ -1,20 +1,24 @@
-from constants import *
-import shutil
+from shutil import move
+from os import environ
+from sys import argv
+
 import update_prep
+from io_utlis import load_shows, parse_args, save_json, save_shows, load_json
+from constants import NAME_NEEDED, STATUS, PREMIERE, FINAL, TVDB_ID, SERIES_NAME, CONF_FILE, OUT_FILE
 
 SHOWS = None
 
 
 def main(args):
     global SHOWS
-    SHOWS = io_utlis.load_shows()
-    io_utlis.parse_args(args)
+    SHOWS = load_shows()
+    parse_args(args)
 
-    data = io_utlis.load_json(os.environ["CONF_FILE"])
-    io_utlis.save_json(data, 'data/update_save.json')
+    data = load_json(environ[CONF_FILE])
+    save_json(data, 'data/update_save.json')
 
     if SHOWS is None:
-        io_utlis.save_json({'error': 'Shows locked'}, os.environ['OUTPUT_FILE'])
+        save_json({'error': 'Shows locked'}, environ[OUT_FILE])
         print('shows locked')
         return
     for s in data:
@@ -43,13 +47,13 @@ def main(args):
             SHOWS[show.series_name] = show
 
     update_prep.SHOWS = SHOWS
-    io_utlis.save_json(update_prep.prep_data(), os.environ['OUTPUT_FILE'])
-    io_utlis.save_shows(SHOWS)
+    save_json(update_prep.prep_data(), environ[OUT_FILE])
+    save_shows(SHOWS)
 
 
 def update_location(show, des):
     new_loc = show.location.replace(show.series_name, des, 1)
-    shutil.move(show.location, new_loc)
+    move(show.location, new_loc)
     show.location = new_loc
 
     for season in show.seasons.values():
@@ -59,4 +63,4 @@ def update_location(show, des):
 
 
 if __name__ == '__main__':
-    main(sys.argv[1:])
+    main(argv[1:])

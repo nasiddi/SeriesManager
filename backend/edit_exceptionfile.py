@@ -1,4 +1,8 @@
-from constants import *
+from os import environ
+from sys import argv
+
+from io_utlis import parse_args, save_json, load_json
+from constants import EXCEPTIONS_FILE, OUT_FILE
 
 
 def main(args):
@@ -8,8 +12,8 @@ def main(args):
              'upper': {'title': 'UpperCase', 'order': 2},
              'lower_general': {'title': 'lowerGeneral', 'order': 3},
              'part': {'title': 'Part', 'order': 4}}
-    io_utlis.parse_args(args)
-    exceptions = io_utlis.load_json(EXCEPTIONS_FILE)
+    parse_args(args)
+    exceptions = load_json(EXCEPTIONS_FILE)
 
     files = [structure(k, v) for k, v in exceptions.items()]
     d = {}
@@ -17,7 +21,7 @@ def main(args):
         k = list(f.keys())[0]
         d[order[k]['order']] = {'items': f[k], 'open': False, 'title': order[k]['title'], 'key': k}
 
-    io_utlis.save_json(d, os.environ[OUT_FILE])
+    save_json(d, environ[OUT_FILE])
 
 
 def structure(k, l):
@@ -31,4 +35,4 @@ def flatten(k, v):
 
 
 if __name__ == '__main__':
-    main(sys.argv[1:])
+    main(argv[1:])

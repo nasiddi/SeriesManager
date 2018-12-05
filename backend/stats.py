@@ -1,17 +1,21 @@
-import subprocess
-import shlex
-import json
+from subprocess import check_output
+from shlex import split
+from json import loads
 from math import gcd
-from constants import *
-import time
+from time import time
+from os import environ, path
+from sys import argv, stderr
+
+from io_utlis import load_shows, parse_args, save_json
+from constants import SERIES_NAME, SINGLE, DOUBLE, ASPECT_RATIOS, QUALITY
 
 SHOWS = None
 
 
 def main(args):
     global SHOWS
-    SHOWS = io_utlis.load_shows(read_only=True)
-    io_utlis.parse_args(args)
+    SHOWS = load_shows(read_only=True)
+    parse_args(args)
 
     stats = {'shows': [], 'total': {'status': {}, 'extension': {}, 'ratio': {}, 'quality': {}}}
     duration = 0
@@ -130,9 +134,8 @@ def main(args):
 
     stats['total']['avg_mb_ep'] = int(size / ep_count * 100.0) / 100.0
     stats['total']['avg_gb_show'] = int(size / show_count / 1024 * 100.0) / 100.0
-    print(json.dumps(stats, indent=4))
 
-    io_utlis.save_json(stats, os.environ['OUTPUT_FILE'])
+    save_json(stats, environ['OUTPUT_FILE'])
 
 
 def update_file_meta(episode):
@@ -154,16 +157,16 @@ def update_file_meta(episode):
 
 def find_video_metada(file):
     cmd = "ffprobe -v quiet -print_format json -show_streams -show_format -i"
-    args = shlex.split(cmd)
+    args = split(cmd)
     args.append(file)
     # run the ffprobe process, decode stdout into utf-8 & convert to JSON
     try:
-        ffprobe_output = subprocess.check_output(args).decode('utf-8')
+        ffprobe_output = check_output(args).decode('utf-8')
     except Exception as e:
-        print(os.path.basename(file), file=sys.stderr)
-        print(e, file=sys.stderr)
+        print(path.basename(file), file=stderr)
+        print(e, file=stderr)
         return None
-    ffprobe_output = json.loads(ffprobe_output)
+    ffprobe_output = loads(ffprobe_output)
 
     # prints all the metadata available:
     # import pprint
@@ -214,6 +217,6 @@ def find_video_metada(file):
 
 
 if __name__ == '__main__':
-    start = time.time()
-    main(sys.argv[1:])
-    print(time.time() - start)
+    start = time()
+    main(argv[1:])
+    print(time() - start)

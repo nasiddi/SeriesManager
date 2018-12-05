@@ -1,8 +1,12 @@
-from constants import *
+import os
+from sys import argv
+
+from io_utlis import parse_args, save_json
+from constants import FILE_DIR, EXTENSIONS, SUBS, OUT_FILE
 
 
 def main(args):
-    io_utlis.parse_args(args)
+    parse_args(args)
     units = []
     downloads = os.listdir(FILE_DIR)
     for dl in downloads:
@@ -37,8 +41,8 @@ def main(args):
 
     js = {'regex': regex, 'units': units}
 
-    io_utlis.save_json(js, os.environ[OUT_FILE])
+    save_json(js, os.environ[OUT_FILE])
 
 
 if __name__ == '__main__':
-    main(sys.argv[1:])
+    main(argv[1:])

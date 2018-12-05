@@ -1,5 +1,7 @@
-from constants import *
+from os import sep
+
 from season import Season
+from constants import NONE
 
 
 class Series:
@@ -62,7 +64,7 @@ class Series:
     def add_episode(self, episode):
         new_season = False
         if episode.s_nr not in self.seasons:
-            self.add_season(location=SEPERATOR.join(episode.location.split(SEPERATOR)[:-1]), number=episode.s_nr)
+            self.add_season(location=sep.join(episode.location.split(sep)[:-1]), number=episode.s_nr)
             new_season = True
         self.seasons[episode.s_nr].update_episodes()
         return new_season

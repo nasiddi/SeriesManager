@@ -1,8 +1,12 @@
 import time
-from constants import *
+from os import environ
 from tvdb_client import ApiV2Client
 from time import gmtime, strftime
 from operator import itemgetter
+from sys import argv
+
+from io_utlis import load_shows, parse_args, save_json
+from constants import ENDED, SERIES_NAME, DOUBLE, TRIPLE, OUT_FILE
 
 SHOWS = None
 MISSING = []
@@ -16,10 +20,10 @@ DATE = int(strftime("%Y%m%d", gmtime()))
 def main(args):
 
     global SHOWS
-    SHOWS = io_utlis.load_shows(read_only=True)
-    io_utlis.parse_args(args)
+    SHOWS = load_shows(read_only=True)
+    parse_args(args)
     load_all()
-    io_utlis.save_json({'files': MISSING, 'info': 'No Missing Files'}, os.environ['OUTPUT_FILE'])
+    save_json({'files': MISSING, 'info': 'No Missing Files'}, environ[OUT_FILE])
 
 
 def load_all():
@@ -108,5 +112,5 @@ def get_series_name(show):
 
 if __name__ == '__main__':
     start = time.time()
-    main(sys.argv[1:])
+    main(argv[1:])
     print(time.time() - start)

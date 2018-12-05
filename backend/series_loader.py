@@ -1,29 +1,34 @@
-from series import Series
-from io_utlis import *
-import backup
+from os import sep, walk, path
+from sys import exit, setrecursionlimit
+from time import time
 
-sys.setrecursionlimit(10000)
+import backup
+from io_utlis import load_json, load_shows, save_shows
+from series import Series
+from constants import META_FILE, STATUS, NAME_NEEDED, PREMIERE, FINAL, TVDB_ID, SERIES_DIR, ANIME_DIR
+
+setrecursionlimit(10000)
 
 
 def load_files(top):
     shows = {}
-    len_top = len(top.split(os.sep))
-    for root, dirs, _ in os.walk(top):
+    len_top = len(top.split(sep))
+    for root, dirs, _ in walk(top):
 
         for name in dirs:
             if root == top:
-                shows[name] = Series(location=os.path.join(root, name), series_name=name)
+                shows[name] = Series(location=path.join(root, name), series_name=name)
                 continue
 
             if 'Specials' in name or 'Specials' in root:
                 continue
 
-            show = os.path.basename(root)
+            show = path.basename(root)
 
-            if len(root.split(os.sep)) - len_top > 1:
+            if len(root.split(sep)) - len_top > 1:
                 continue
 
-            season = shows[show].add_season(location=os.path.join(root, name))
+            season = shows[show].add_season(location=path.join(root, name))
             season.update_episodes()
 
     return shows
@@ -58,11 +63,11 @@ def add_metadata(shows):
 
 
 def main():
-    start = time.time()
+    start = time()
     print('running', SERIES_DIR)
     if not backup.main():
         print('backup failed')
-        sys.exit(-2)
+        exit(-2)
     else:
         print('backup successful')
     load_shows(reload=True)
@@ -71,7 +76,7 @@ def main():
     add_metadata(shows)
     save_shows(shows)
 
-    print(time.time() - start)
+    print(time() - start)
     return shows
 
 

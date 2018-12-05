@@ -345,8 +345,8 @@ async function batchMatch(body, res) {
   await run(
     'batch_match',
     '',
-    body,
     '',
+    body,
     outputFile,
     () => {},
     async (code, signal) => {

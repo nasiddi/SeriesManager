@@ -1,18 +1,22 @@
-from constants import *
+import os
+from sys import argv
 from shutil import copyfile
+
+from io_utlis import load_shows, parse_args, save_json, save_shows, load_json, wait_on_delete
+from constants import BACKUP_DIR, ASSETS, OUT_FILE
 
 SHOWS = None
 
 
 def main(args):
     global SHOWS
-    io_utlis.parse_args(args)
-    SHOWS = io_utlis.load_shows()
+    parse_args(args)
+    SHOWS = load_shows()
     if SHOWS is None:
-        io_utlis.save_json({'error': 'Shows locked'}, os.environ['OUTPUT_FILE'])
+        save_json({'error': 'Shows locked'}, os.environ[OUT_FILE])
         print('shows locked')
         return
-    date = io_utlis.load_json(os.environ["CONF_FILE"])['date']
+    date = load_json(os.environ["CONF_FILE"])['date']
     folder = os.path.join(BACKUP_DIR, date)
     file_list = os.listdir(ASSETS)
     for f in file_list:
@@ -22,7 +26,7 @@ def main(args):
         if os.path.isfile(file):
             try:
                 os.remove(file)
-                io_utlis.wait_on_delete(file)
+                wait_on_delete(file)
             except:
                 pass
     file_list = os.listdir(folder)
@@ -32,9 +36,9 @@ def main(args):
         except:
             pass
 
-    io_utlis.save_shows(SHOWS)
-    io_utlis.save_json({'done': True}, os.environ['OUTPUT_FILE'])
+    save_shows(SHOWS)
+    save_json({'done': True}, os.environ[OUT_FILE])
 
 
 if __name__ == '__main__':
-    main(sys.argv[1:])
+    main(argv[1:])

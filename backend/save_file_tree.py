@@ -1,47 +1,49 @@
-import shutil
-from constants import *
+from shutil import move
+from json import dumps
+from os import environ
+from sys import argv
+
+import syncer
 from file import File
 from episode import Episode
-import time
-import json
-import syncer
+from io_utlis import load_shows, parse_args, save_json, save_shows, load_json, wait_on_creation, recursive_delete
+from constants import EXCEPTIONS_FILE, SERIES_NAME, NAME_NEEDED, CONF_FILE, OUT_FILE
+
 
 SHOWS = None
 EXCEPTIONS = {}
 
 
 def main(args):
-    start = time.time()
     global SHOWS, EXCEPTIONS
-    io_utlis.parse_args(args)
-    error = io_utlis.load_json(os.environ["CONF_FILE"])
+    parse_args(args)
+    error = load_json(environ[CONF_FILE])
 
-    tree_file = io_utlis.load_json(os.environ['OUTPUT_FILE'])
-    SHOWS = io_utlis.load_shows()
-    EXCEPTIONS = io_utlis.load_json(EXCEPTIONS_FILE)
+    tree_file = load_json(environ[OUT_FILE])
+    SHOWS = load_shows()
+    EXCEPTIONS = load_json(EXCEPTIONS_FILE)
 
     if SHOWS is None:
-        io_utlis.save_json({'shows_locked': True}, os.environ['OUTPUT_FILE'])
+        save_json({'shows_locked': True}, environ[OUT_FILE])
         print('shows locked')
         return
-    io_utlis.save_json(error, 'data/save_tree_conf.json')
+    save_json(error, 'data/save_tree_conf.json')
     queue = syncer.QUEUE
 
     if error:
         series_name = load_show(error, tree_file, queue)
     else:
         series_name = load_all(tree_file, queue)
-    io_utlis.save_json(EXCEPTIONS, EXCEPTIONS_FILE)
+    save_json(EXCEPTIONS, EXCEPTIONS_FILE)
     save_queue(queue)
     report = []
     for file in queue:
         report.append(file.get_report())
-    print(json.dumps(report, indent=4, sort_keys=True))
-    io_utlis.save_shows(SHOWS)
+    print(dumps(report, indent=4, sort_keys=True))
+    save_shows(SHOWS)
 
     import file_tree
-    file_tree.main(series_name=series_name if not error else error[SERIES_NAME], out_file=os.environ['OUTPUT_FILE'])
-    print(time.time() - start)
+    file_tree.main(series_name=series_name if not error else error[SERIES_NAME], out_file=environ[OUT_FILE])
 
 
 def load_show(error, tree_file, queue):
@@ -165,7 +167,7 @@ def save_queue(queue):
     for file in queue:
         print(file.location)
         if file.delete:
-            io_utlis.recursive_delete(file.location)
+            recursive_delete(file.location)
             try:
                 SHOWS[file.series_name].seasons[file.s_nr].update_episodes()
             except FileNotFoundError:
@@ -177,33 +179,32 @@ def save_queue(queue):
         try:
             if file.location == file.new_location:
                 continue
-            shutil.move(file.location, file.new_location)
+            move(file.location, file.new_location)
         except Exception as e:
             print('rename', e)
             file.report['error'].append('Copy failed')
             continue
-        if io_utlis.wait_on_creation(file.new_location):
+        if wait_on_creation(file.new_location):
             file.report['success'].append('Copy successful')
         else:
             file.report['error'].append('Copy failed')
-        if file.type_option == 'Series' and file.extension not in SUBS:
-            show = SHOWS[file.series_name]
-            if not file.e_nr == file.e_nr_old or not file.s_nr == file.s_nr_old:
-                try:
-                    del show.seasons[file.s_nr_old].episodes[file.e_nr_old]
-                except:
-                    pass
-            episode = Episode(location=file.new_location,
-                              episode_option=file.episode_option,
-                              title=file.title,
-                              title2=file.title2,
-                              title3=file.title3,
-                              s_nr=file.s_nr,
-                              e_nr=file.e_nr)
+        show = SHOWS[file.series_name]
+        if not file.e_nr == file.e_nr_old or not file.s_nr == file.s_nr_old:
+            try:
+                del show.seasons[file.s_nr_old].episodes[file.e_nr_old]
+            except:
+                pass
+        episode = Episode(location=file.new_location,
+                          episode_option=file.episode_option,
+                          title=file.title,
+                          title2=file.title2,
+                          title3=file.title3,
+                          s_nr=file.s_nr,
+                          e_nr=file.e_nr)
 
-            if show.add_episode(episode):
-                file.report['info'].append('Season created')
+        if show.add_episode(episode):
+            file.report['info'].append('Season created')
 
 
 if __name__ == '__main__':
-    main(sys.argv[1:])
+    main(argv[1:])

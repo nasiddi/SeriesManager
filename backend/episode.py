@@ -1,7 +1,9 @@
 import re
 import warnings
-from constants import *
 import shutil
+from os import path, sep
+
+from constants import SINGLE, DOUBLE, TRIPLE, MAC_OFFSET, ANIME_PATTERN, SERIES_PATTERN
 
 
 class Episode:
@@ -20,12 +22,12 @@ class Episode:
                  ratio=0,
                  quality=''):
         self.location = location
-        self.series_name = self.location.split(SEPERATOR)[2 + MAC_OFFSET] if series_name == '' else series_name
-        self.file_name = os.path.basename(location)
+        self.series_name = self.location.split(sep)[2 + MAC_OFFSET] if series_name == '' else series_name
+        self.file_name = path.basename(location)
         self.extension = ''
         self.s_nr = s_nr
         self.anime = False
-        if os.path.normpath(location).split(os.path.sep)[1 + MAC_OFFSET] == 'Anime':
+        if path.normpath(location).split(path.sep)[1 + MAC_OFFSET] == 'Anime':
             self.anime = True
         self.episode_option = episode_option
         self.e_nr = e_nr
@@ -62,7 +64,7 @@ class Episode:
         old_loc = self.location.replace(old_series_name, new_series_name, 1)
         self.location = self.location.replace(old_series_name, new_series_name, 2)
         shutil.move(old_loc, self.location)
-        self.file_name = os.path.basename(self.location)
+        self.file_name = path.basename(self.location)
 
     def parse_episode_name_and_extension(self):
         file_name = self.file_name
@@ -129,7 +131,7 @@ class Episode:
 
     def __str__(self):
         return ('***' +
-                '\nShow: ' + self.location.split(SEPERATOR)[2 + MAC_OFFSET] + ' SNr: ' + str(self.s_nr)
+                '\nShow: ' + self.location.split(sep)[2 + MAC_OFFSET] + ' SNr: ' + str(self.s_nr)
                 + ' ENr: ' + str(self.e_nr) +
                 '\nFilename: ' + self.file_name +
                 '\nDuration: ' + str(self.duration) + ' Size: ' + str(self.size))

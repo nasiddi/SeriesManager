@@ -1,17 +1,19 @@
-from constants import *
-import sys
-import os
+from sys import argv
+from os import environ
+
+from io_utlis import load_shows, parse_args, save_json
+from constants import SERIES_NAME, NAME_NEEDED, STATUS, PREMIERE, FINAL, TVDB_ID, OUT_FILE
 
 SHOWS = None
 
 
 def main(args):
     global SHOWS
-    SHOWS = io_utlis.load_shows(read_only=True)
-    io_utlis.parse_args(args)
+    SHOWS = load_shows(read_only=True)
+    parse_args(args)
     update = prep_data()
 
-    io_utlis.save_json(update, os.environ['OUTPUT_FILE'])
+    save_json(update, environ[OUT_FILE])
 
 
 def prep_data():
@@ -36,4 +38,4 @@ def prep_data():
 
 
 if __name__ == '__main__':
-    main(sys.argv[1:])
+    main(argv[1:])

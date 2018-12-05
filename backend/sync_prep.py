@@ -1,14 +1,19 @@
-from constants import *
-from file import File
 import re
+from os import path, sep, walk, environ
+from sys import argv
+
+from file import File
+from io_utlis import load_shows, parse_args, save_json
+
+from constants import FILE_DIR, EXTENSIONS, SUBS, ENDED, MAC_OFFSET, OUT_FILE
 
 
 def main(args):
-    io_utlis.parse_args(args)
-    shows = io_utlis.load_shows(read_only=True)
+    parse_args(args)
+    shows = load_shows(read_only=True)
     file_list = []
     subs = []
-    for root, dirs, files in os.walk(FILE_DIR):
+    for root, dirs, files in walk(FILE_DIR):
         for name in files:
             if '[ignore]' in root or '[ignore]' in name:
                 continue
@@ -16,9 +21,9 @@ def main(args):
             if extension in EXTENSIONS:
                 if 'sample' in name.lower():
                     continue
-                file_list.append(File(location=os.path.join(root, name)))
+                file_list.append(File(location=path.join(root, name)))
             if extension in SUBS:
-                subs.append({'text': name, 'value': os.path.join(root, name)})
+                subs.append({'text': name, 'value': path.join(root, name)})
 
     series_names_words = []
     series_names = []
@@ -41,7 +46,7 @@ def main(args):
     multi_title = []
     delete = []
     for file in file_list:
-        loc = file.location.split(SEPERATOR)[2 + MAC_OFFSET]
+        loc = file.location.split(sep)[2 + MAC_OFFSET]
         if loc in locations:
             if loc not in multi_title:
                 multi_title.append(loc)
@@ -49,7 +54,7 @@ def main(args):
             locations.append(loc)
 
     for file in file_list:
-        loc = file.location.split(SEPERATOR)[2 + MAC_OFFSET]
+        loc = file.location.split(sep)[2 + MAC_OFFSET]
         if loc in multi_title:
             delete.append(file)
 
@@ -106,7 +111,7 @@ def main(args):
     for file in file_list:
         json['files'].append(file.__str__())
 
-    io_utlis.save_json(json, os.environ['OUTPUT_FILE'])
+    save_json(json, environ[OUT_FILE])
     pass
 
 
@@ -122,4 +127,4 @@ def clean_up(n):
 
 
 if __name__ == '__main__':
-    main(sys.argv[1:])
+    main(argv[1:])
