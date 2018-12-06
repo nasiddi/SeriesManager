@@ -7,8 +7,81 @@ const path = require('path');
 const fs = require('fs-extra');
 const TVDB = require('node-tvdb');
 const config = require('../../config');
+const python = require('../python/controller');
 
 const routes = express.Router();
+
+routes.post('/unlock', async (req, res) => {
+  python.unlockShows(res);
+});
+
+routes.post('/exceptionfile/load', async (req, res) => {
+  python.editExceptionFile(res);
+});
+
+routes.post('/exceptionfile/save', async (req, res) => {
+  python.saveExceptionFile(req.body, res);
+});
+
+routes.post('/backup', async (req, res) => {
+  python.backUp(res);
+});
+
+routes.post('/getbackup', async (req, res) => {
+  python.getBackUp(res);
+});
+
+routes.post('/restorebackup', async (req, res) => {
+  python.restoreBackUp(req.body, res);
+});
+
+routes.post('/update/prep', async (req, res) => {
+  python.updatePrep(res);
+});
+
+routes.post('/batch/files', async (req, res) => {
+  python.batchFiles(res);
+});
+
+routes.post('/batch/sync', async (req, res) => {
+  python.batchSync(req.body, res);
+});
+
+routes.post('/reload', async (req, res) => {
+  python.reloadSeries(res);
+});
+
+routes.post('/filetree', async (req, res) => {
+  python.fileTree(req.body, res);
+});
+
+routes.post('/filetree/save', async (req, res) => {
+  python.saveFileTree(req.body, res);
+});
+
+routes.post('/filetree/dictionary', async (req, res) => {
+  python.wordSearch(req.body, res);
+});
+
+routes.post('/filetree/savedictionary', async (req, res) => {
+  python.saveWords(req.body, res);
+});
+
+routes.post('/stats', async (req, res) => {
+  python.getStats(res);
+});
+
+routes.post('/sync/start', async (req, res) => {
+  python.syncFiles(req.body, res);
+});
+
+routes.post('/update/save', async (req, res) => {
+  python.updateSave(req.body, res);
+});
+
+routes.post('/filetree/missing', async (req, res) => {
+  python.missingFiles(req.body, res);
+});
 
 routes.post('/synclog', async (req, res) => {
   const outputFile = path.join(config.directories.storage, 'synclog');
@@ -31,6 +104,27 @@ routes.post('/clearlog', async (req, res) => {
     }
     res.json(out);
   });
+});
+
+routes.post('/batch/match', async (req, res) => {
+  const outputFile = path.join(config.directories.storage, 'batch_match');
+
+  fs.writeJSON(outputFile, req.body, (err) => {
+    if (err) {
+      winston.error(err);
+      res.sendStatus(500).end();
+    }
+    res.json(outputFile);
+  });
+});
+
+routes.post('/batch/start', async (req, res) => {
+  const inputFile = path.join(config.directories.storage, 'batch_match');
+  python.batchMatch(inputFile, res);
+});
+
+routes.get('/sync/prep', async (req, res) => {
+  python.prepFiles(res);
 });
 
 routes.post('/filetree/missing/filter', async (req, res) => {
@@ -142,6 +236,10 @@ routes.post('/tvdb/dates', async (req, res) => {
         console.log(error);
       }),
   );
+});
+
+routes.get('/', async (req, res) => {
+  res.send(await jobModel.getAll());
 });
 
 module.exports = { routes };

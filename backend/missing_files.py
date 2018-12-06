@@ -29,7 +29,7 @@ def main(args):
 
 def load_all():
     for show in sorted(SHOWS.values(), key=get_series_name):
-        if not show.status == ENDED and show.tvdb_id:
+        if show.tvdb_id:
             check_for_newly_aired(show)
         get_show_data(show)
 
@@ -83,6 +83,7 @@ def check_for_newly_aired(show):
         episodes.extend(eps['data'])
 
     missing = []
+    missing_seasons = []
     if not episodes:
         print(show.series_name)
         return
@@ -98,13 +99,23 @@ def check_for_newly_aired(show):
             continue
         if show.get_episode_by_sxe(s_nr=e['airedSeason'], e_nr=e['airedEpisodeNumber']):
             break
+        if e['airedSeason'] - 1 in missing_seasons:
+            continue
+        if e['airedSeason'] > show.get_last_episode().s_nr + 1:
+            missing.append({SERIES_NAME: show.series_name, 's_nr': e['airedSeason'] - 1, 'e_nr': '*'})
+            missing_seasons.append(e['airedSeason'] - 1)
+            continue
+        if e['airedSeason'] in missing_seasons:
+            continue
+        if missing_seasons and e['airedSeason'] > show.get_last_episode().s_nr:
+            missing.append({SERIES_NAME: show.series_name, 's_nr': e['airedSeason'], 'e_nr': '*'})
+            missing_seasons.append(e['airedSeason'])
+            continue
         missing.append({SERIES_NAME: show.series_name, 's_nr': e['airedSeason'], 'e_nr': e['airedEpisodeNumber']})
 
     if missing:
         for m in reversed(missing):
             MISSING.append({'key': len(MISSING), SERIES_NAME: m[SERIES_NAME], 's_nr': m['s_nr'], 'e_nr': m['e_nr']})
-
-    pass
 
 
 def get_series_name(show):

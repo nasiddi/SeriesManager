@@ -142,39 +142,39 @@ class Episode:
     def compile_file_name(self, file=None):
         if not file:
             file = self
-        pad = 3 if self.anime else 2
+        pad = 3 if file.anime else 2
         if file.episode_option == 'Single':
             if file.title == '':
-                return f'{self.series_name} {self.s_nr:02d}x{self.e_nr:0{pad}d}.{self.extension}'
-            return f'{self.series_name} {self.s_nr:02d}x{self.e_nr:0{pad}d} - {self.title}.{self.extension}'
+                return f'{file.series_name} {file.s_nr:02d}x{file.e_nr:0{pad}d}.{file.extension}'
+            return f'{file.series_name} {file.s_nr:02d}x{file.e_nr:0{pad}d} - {file.title}.{file.extension}'
         elif file.episode_option == 'Double':
             if file.title == '' and file.title2 == '':
-                return f'{self.series_name} {self.s_nr:02d}x{self.e_nr:0{pad}d}' \
-                       f' & {self.s_nr:02d}x{self.e_nr + 1:0{pad}d}.{self.extension}'
+                return f'{file.series_name} {file.s_nr:02d}x{file.e_nr:0{pad}d}' \
+                       f' & {file.s_nr:02d}x{file.e_nr + 1:0{pad}d}.{file.extension}'
             if not file.title == file.title2 and not (file.title == '' or file.title2 == ''):
-                return f'{self.series_name} {self.s_nr:02d}x{self.e_nr:0{pad}d}' \
-                       f' & {self.s_nr:02d}x{self.e_nr + 1:0{pad}d} - {self.title} & {self.title2}.{self.extension}'
-            return f'{self.series_name} {self.s_nr:02d}x{self.e_nr:0{pad}d} & ' \
-                   f'{self.s_nr:02d}x{self.e_nr + 1:0{pad}d}' \
-                   f' - {self.title if not self.title == "" else self.title2}.{self.extension}'
+                return f'{file.series_name} {file.s_nr:02d}x{file.e_nr:0{pad}d}' \
+                       f' & {file.s_nr:02d}x{file.e_nr + 1:0{pad}d} - {file.title} & {file.title2}.{file.extension}'
+            return f'{file.series_name} {file.s_nr:02d}x{file.e_nr:0{pad}d} & ' \
+                   f'{file.s_nr:02d}x{file.e_nr + 1:0{pad}d}' \
+                   f' - {file.title if not file.title == "" else file.title2}.{file.extension}'
         else:
             # no title
             if file.title == '' and file.title2 == '' and file.title3 == '':
-                return f'{self.series_name} {self.s_nr:02d}x{self.e_nr:0{pad}d} & {self.s_nr:02d}' \
-                       f'x{self.e_nr + 1:0{pad}d} & {self.s_nr:02d}x{self.e_nr + 2:0{pad}d}.{self.extension}'
+                return f'{file.series_name} {file.s_nr:02d}x{file.e_nr:0{pad}d} & {file.s_nr:02d}' \
+                       f'x{file.e_nr + 1:0{pad}d} & {file.s_nr:02d}x{file.e_nr + 2:0{pad}d}.{file.extension}'
             # all titles
             if not file.title == file.title2 and not file.title == file.title3 and not (
                                 file.title == '' or file.title2 == '' or file.title3 == ''):
-                return f'{self.series_name} {self.s_nr:02d}x{self.e_nr:0{pad}d} & {self.s_nr:02d}' \
-                       f'x{self.e_nr + 1:0{pad}d} & {self.s_nr:02d}x{self.e_nr + 2:0{pad}d}' \
-                       f' - {self.title} & {self.title2} & {self.title3}.{self.extension}'
+                return f'{file.series_name} {file.s_nr:02d}x{file.e_nr:0{pad}d} & {file.s_nr:02d}' \
+                       f'x{file.e_nr + 1:0{pad}d} & {file.s_nr:02d}x{file.e_nr + 2:0{pad}d}' \
+                       f' - {file.title} & {file.title2} & {file.title3}.{file.extension}'
             title_set = list(filter(None, list({file.title, file.title2, file.title3})))
             # one title
             if len(title_set) == 1:
-                return f'{self.series_name} {self.s_nr:02d}x{self.e_nr:0{pad}d} & ' \
-                       f'{self.s_nr:02d}x{self.e_nr + 1:0{pad}d} & ' \
-                       f'{self.s_nr:02d}x{self.e_nr + 2:0{pad}d} - {title_set[0]}.{self.extension}'
+                return f'{file.series_name} {file.s_nr:02d}x{file.e_nr:0{pad}d} & ' \
+                       f'{file.s_nr:02d}x{file.e_nr + 1:0{pad}d} & ' \
+                       f'{file.s_nr:02d}x{file.e_nr + 2:0{pad}d} - {title_set[0]}.{file.extension}'
             # two titles
-            return f'{self.series_name} {self.s_nr:02d}x{self.e_nr:0{pad}d} & ' \
-                   f'{self.s_nr:02d}x{self.e_nr + 1:0{pad}d} & {self.s_nr:02d}x{self.e_nr + 2:0{pad}d}' \
-                   f' - {title_set[0]} & {title_set[1]}.{self.extension}'
+            return f'{file.series_name} {file.s_nr:02d}x{file.e_nr:0{pad}d} & ' \
+                   f'{file.s_nr:02d}x{file.e_nr + 1:0{pad}d} & {file.s_nr:02d}x{file.e_nr + 2:0{pad}d}' \
+                   f' - {title_set[0]} & {title_set[1]}.{file.extension}'

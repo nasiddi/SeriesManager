@@ -97,4 +97,4 @@ class Series:
 
     def get_last_episode(self):
         last_season = self.seasons[max(self.seasons.keys())]
-        return last_season[max(last_season.episodes.keys())]
+        return last_season.episodes[max(last_season.episodes.keys())]

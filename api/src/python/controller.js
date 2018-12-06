@@ -21,17 +21,17 @@ const {
   evaluationOutputFileName,
 } = require('./helpers');
 
-function printOutput(child, uuid) {
+function printOutput(child) {
   child.stdout.on('data', (data) => {
-    winston.debug(`stdout (PID: ${child.pid}, uuid: ${uuid}):\n${data}`);
+    winston.debug(`stdout (PID: ${child.pid}):\n${data}`);
   });
 
   child.stderr.on('data', (data) => {
-    winston.debug(`stderr (PID: ${child.pid}, uuid: ${uuid}):\n${data}`);
+    winston.debug(`stderr (PID: ${child.pid}):\n${data}`);
   });
 
   child.on('close', (code) => {
-    const text = `child process (PID: ${child.pid}, ${uuid}) exited with code ${code}`;
+    const text = `child process (PID: ${child.pid}) exited with code ${code}`;
     if (code === 0) {
       winston.info(text);
     } else {
@@ -94,9 +94,9 @@ async function run(
     cwd,
   });
 
-  winston.verbose(`started ${what} for ${uuid} with PID ${child.pid}`);
-  winston.verbose(JSON.stringify(args));
-  winston.debug(`temporary config file is located at ${configFile.name}`);
+  winston.verbose(`started ${what} with PID ${child.pid}`);
+  // winston.verbose(JSON.stringify(args));
+  // winston.debug(`temporary config file is located at ${configFile.name}`);
   winston.debug(`output will be written to ${outputFile}`);
 
   printOutput(child, uuid);

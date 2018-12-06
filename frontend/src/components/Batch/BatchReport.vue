@@ -90,7 +90,7 @@ export default {
     },
     unlockShows() {
       this.$snotify.remove(this.notifLock.id);
-      this.$http.post('jobs/unlock')
+      this.$http.post('python/unlock')
         .then(
           (res) => {
             this.json = res;
@@ -99,7 +99,7 @@ export default {
         );
     },
     loadData() {
-      this.$http.post('jobs/batch/sync', this.$route.params).then(
+      this.$http.post('python/batch/sync', this.$route.params).then(
         (res) => {
           const body = _.defaults(res.body, {
           });

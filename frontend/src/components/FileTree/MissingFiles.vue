@@ -95,7 +95,7 @@ export default {
     },
     unlockShows() {
       this.$snotify.remove(this.notifLock.id);
-      this.$http.post('jobs/unlock')
+      this.$http.post('python/unlock')
         .then(
           (res) => {
             this.json = res;
@@ -105,7 +105,7 @@ export default {
     },
     loadData() {
       this.notifLoading = this.$snotify.info('loading', { timeout: 0 });
-      this.$http.post('jobs/filetree/missing').then(
+      this.$http.post('python/filetree/missing').then(
         (res) => {
           const body = _.defaults(res.body, {
           });

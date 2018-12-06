@@ -65,7 +65,7 @@ export default {
       timeout: 0,
     });
     this.$http
-      .get('jobs/sync/prep')
+      .get('python/sync/prep')
       .then(
         (res) => {
           if (res.body === 'failed') {

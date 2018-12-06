@@ -417,7 +417,7 @@ export default {
   methods: {
     unlockShows() {
       this.$snotify.remove(this.notifLock.id);
-      this.$http.post('jobs/unlock')
+      this.$http.post('python/unlock')
         .then(
           (res) => {
             this.json = res;
@@ -430,7 +430,7 @@ export default {
         timeout: 0,
       });
       this.$http
-        .post('jobs/stats')
+        .post('python/stats')
         .then(
           (res) => {
             const body = _.defaults(res.body, {

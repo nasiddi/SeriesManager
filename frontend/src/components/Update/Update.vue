@@ -92,7 +92,7 @@ export default {
   methods: {
     loadData() {
       this.notifLoading = this.$snotify.info('Loading', { timeout: 0 });
-      this.$http.post('jobs/update/prep').then(
+      this.$http.post('python/update/prep').then(
         (res) => {
           const body = _.defaults(res.body, {
           });
@@ -119,7 +119,7 @@ export default {
     },
     unlockShows() {
       this.$snotify.remove(this.notifLock.id);
-      this.$http.post('jobs/unlock')
+      this.$http.post('python/unlock')
         .then(
           (res) => {
             this.json = res;
@@ -129,7 +129,7 @@ export default {
     },
     async update() {
       this.notifLoading = this.$snotify.info('Updating', { timeout: 0 });
-      this.$http.post('jobs/update/save', this.json)
+      this.$http.post('python/update/save', this.json)
         .then(
           (res) => {
             const body = _.defaults(res.body, {

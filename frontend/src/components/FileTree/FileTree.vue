@@ -283,7 +283,7 @@ export default {
     },
     unlockShows() {
       this.$snotify.remove(this.notifLock.id);
-      this.$http.post('jobs/unlock')
+      this.$http.post('python/unlock')
         .then(
           (res) => {
             this.json = res;
@@ -294,7 +294,7 @@ export default {
     async loadData(name) {
       return new Promise((resolve) => {
         this.notifLoading = this.$snotify.info('loading FileTree', { timeout: 0 });
-        this.$http.post('jobs/filetree', { series_name: name }).then(
+        this.$http.post('python/filetree', { series_name: name }).then(
           (res) => {
             const body = _.defaults(res.body, {
             });
@@ -328,7 +328,7 @@ export default {
         return;
       }
       this.notifErrors = this.$snotify.info('Saving', { timeout: 0 });
-      this.$http.post('jobs/filetree/save', { error: this.error, tree: this.json }).then(
+      this.$http.post('python/filetree/save', { error: this.error, tree: this.json }).then(
         (res) => {
           const body = _.defaults(res.body, {
           });

@@ -135,7 +135,7 @@ export default {
     async reload() {
       let notifLoading = null;
       this.$http
-        .post('jobs/reload')
+        .post('python/reload')
         .then((notifLoading = this.$snotify.info('Reloading', { timeout: 0 })))
         .then((res) => {
           this.$snotify.remove(notifLoading.id);

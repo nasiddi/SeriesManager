@@ -113,6 +113,7 @@ export default {
     RegexForm,
   },
   data: () => ({
+    json: {},
     reg: [],
     units: [],
     counter: 2,
@@ -128,7 +129,7 @@ export default {
   },
   methods: {
     loadData() {
-      this.$http.post('jobs/batch/files').then(
+      this.$http.post('python/batch/files').then(
         (res) => {
           const body = _.defaults(res.body, {
           });
@@ -154,7 +155,7 @@ export default {
     },
     unlockShows() {
       this.$snotify.remove(this.notifLock.id);
-      this.$http.post('jobs/unlock')
+      this.$http.post('python/unlock')
         .then(
           (res) => {
             this.json = res;
@@ -164,7 +165,7 @@ export default {
     },
     unlockShowsStart() {
       this.$snotify.remove(this.notifLock.id);
-      this.$http.post('jobs/unlock')
+      this.$http.post('python/unlock')
         .then(
           (res) => {
             this.json = res;
@@ -176,34 +177,10 @@ export default {
       return this.counter === 10;
     },
     async start() {
-      this.$http
-        .post('jobs/batch/match', this.json)
-        .then(
-          (res) => {
-            if (res.body === 'failed') {
-              this.$snotify.error('Python failed', { timeout: 0 });
-              return;
-            }
-            if (res.body.includes('shows_locked')) {
-              this.notifLock = this.$snotify.confirm('', 'Shows locked', {
-                timeout: 0,
-                buttons: [
-                  { text: 'Unlock', action: () => this.unlockShowsStart(), bold: true },
-                ],
-              });
-            } else {
-              this.$router.push({
-                name: 'batch.validate',
-                paras: res.body,
-              });
-            }
-          },
-          (res) => {
-            this.hasSubmitError = true;
-            this.$snotify.error('res.body', { timeout: 0 });
-            if (res.body) this.output = res.body;
-          },
-        );
+      this.$router.push({
+        name: 'batch.validate',
+        params: this.json,
+      });
     },
     updateRegex() {
       if (this.units.length === 0) {

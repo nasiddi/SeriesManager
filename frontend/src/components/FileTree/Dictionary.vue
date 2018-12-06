@@ -81,7 +81,7 @@ export default {
     },
     unlockShows() {
       this.$snotify.remove(this.notifLock.id);
-      this.$http.post('jobs/unlock')
+      this.$http.post('python/unlock')
         .then(
           (res) => {
             this.json = res;
@@ -91,7 +91,7 @@ export default {
     },
     loadData() {
       this.notifLoading = this.$snotify.info('loading', { timeout: 0 });
-      this.$http.post('jobs/filetree/dictionary', { series_name: '*' }).then(
+      this.$http.post('python/filetree/dictionary', { series_name: '*' }).then(
         (res) => {
           const body = _.defaults(res.body, {
           });
@@ -119,7 +119,7 @@ export default {
     },
     save() {
       this.notifLoading = this.$snotify.info('Saving', { timeout: 0 });
-      this.$http.post('jobs/filetree/savedictionary', this.json).then(
+      this.$http.post('python/filetree/savedictionary', this.json).then(
         (res) => {
           const body = _.defaults(res.body, {
           });

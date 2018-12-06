@@ -66,7 +66,7 @@ export default {
   methods: {
     unlockShows() {
       this.$snotify.remove(this.notifLock.id);
-      this.$http.post('jobs/unlock')
+      this.$http.post('python/unlock')
         .then(
           (res) => {
             this.json = res;
@@ -75,7 +75,7 @@ export default {
         );
     },
     loadData() {
-      this.$http.post('jobs/sync/start', this.$route.params).then(
+      this.$http.post('python/sync/start', this.$route.params).then(
         (res) => {
           const body = _.defaults(res.body, {
           });

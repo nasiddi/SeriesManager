@@ -46,7 +46,7 @@ export default {
   methods: {
     loadData() {
       this.notifLoading = this.$snotify.info('Loading', { timeout: 0 });
-      this.$http.post('jobs/getbackup').then(
+      this.$http.post('python/getbackup').then(
         (res) => {
           const body = _.defaults(res.body, {
           });
@@ -73,7 +73,7 @@ export default {
     },
     unlockShows() {
       this.$snotify.remove(this.notifLock.id);
-      this.$http.post('jobs/unlock')
+      this.$http.post('python/unlock')
         .then(
           (res) => {
             this.json = res;
@@ -83,7 +83,7 @@ export default {
     },
     async backup() {
       this.notifLoading = this.$snotify.info('Creating BackUp', { timeout: 0 });
-      this.$http.post('jobs/backup')
+      this.$http.post('python/backup')
         .then(
           (res) => {
             const body = _.defaults(res.body, {
@@ -105,7 +105,7 @@ export default {
     },
     async restore() {
       this.notifLoading = this.$snotify.info('Restore from BackUp', { timeout: 0 });
-      this.$http.post('jobs/restorebackup', { date: this.json.selected })
+      this.$http.post('python/restorebackup', { date: this.json.selected })
         .then(
           (res) => {
             const body = _.defaults(res.body, {
