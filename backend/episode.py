@@ -158,23 +158,25 @@ class Episode:
                    f'{file.s_nr:02d}x{file.e_nr + 1:0{pad}d}' \
                    f' - {file.title if not file.title == "" else file.title2}.{file.extension}'
         else:
-            # no title
-            if file.title == '' and file.title2 == '' and file.title3 == '':
-                return f'{file.series_name} {file.s_nr:02d}x{file.e_nr:0{pad}d} & {file.s_nr:02d}' \
-                       f'x{file.e_nr + 1:0{pad}d} & {file.s_nr:02d}x{file.e_nr + 2:0{pad}d}.{file.extension}'
-            # all titles
-            if not file.title == file.title2 and not file.title == file.title3 and not (
-                                file.title == '' or file.title2 == '' or file.title3 == ''):
-                return f'{file.series_name} {file.s_nr:02d}x{file.e_nr:0{pad}d} & {file.s_nr:02d}' \
-                       f'x{file.e_nr + 1:0{pad}d} & {file.s_nr:02d}x{file.e_nr + 2:0{pad}d}' \
-                       f' - {file.title} & {file.title2} & {file.title3}.{file.extension}'
-            title_set = list(filter(None, list({file.title, file.title2, file.title3})))
+            seen = set()
+            titles = filter(None, [file.title, file.title2, file.title3])
+            title_set = [x for x in titles if not (x in seen or seen.add(x))]
             # one title
             if len(title_set) == 1:
                 return f'{file.series_name} {file.s_nr:02d}x{file.e_nr:0{pad}d} & ' \
                        f'{file.s_nr:02d}x{file.e_nr + 1:0{pad}d} & ' \
                        f'{file.s_nr:02d}x{file.e_nr + 2:0{pad}d} - {title_set[0]}.{file.extension}'
-            # two titles
-            return f'{file.series_name} {file.s_nr:02d}x{file.e_nr:0{pad}d} & ' \
-                   f'{file.s_nr:02d}x{file.e_nr + 1:0{pad}d} & {file.s_nr:02d}x{file.e_nr + 2:0{pad}d}' \
-                   f' - {title_set[0]} & {title_set[1]}.{file.extension}'
+            elif len(title_set) == 2:
+                return f'{file.series_name} {file.s_nr:02d}x{file.e_nr:0{pad}d} & ' \
+                       f'{file.s_nr:02d}x{file.e_nr + 1:0{pad}d} & {file.s_nr:02d}x{file.e_nr + 2:0{pad}d}' \
+                       f' - {title_set[0]} & {title_set[1]}.{file.extension}'
+            elif len(title_set) == 3:
+                return f'{file.series_name} {file.s_nr:02d}x{file.e_nr:0{pad}d} & {file.s_nr:02d}' \
+                       f'x{file.e_nr + 1:0{pad}d} & {file.s_nr:02d}x{file.e_nr + 2:0{pad}d}' \
+                       f' - {file.title} & {file.title2} & {file.title3}.{file.extension}'
+            # no title
+            return f'{file.series_name} {file.s_nr:02d}x{file.e_nr:0{pad}d} & {file.s_nr:02d}' \
+                   f'x{file.e_nr + 1:0{pad}d} & {file.s_nr:02d}x{file.e_nr + 2:0{pad}d}.{file.extension}'
+
+
+
