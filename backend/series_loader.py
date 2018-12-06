@@ -20,12 +20,11 @@ def load_files(top):
                 shows[name] = Series(location=path.join(root, name), series_name=name)
                 continue
 
-            if 'Specials' in name or 'Specials' in root:
-                continue
-
             show = path.basename(root)
 
             if len(root.split(sep)) - len_top > 1:
+                continue
+            if 'Special' in name:
                 continue
 
             season = shows[show].add_season(location=path.join(root, name))

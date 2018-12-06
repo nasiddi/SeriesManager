@@ -1,7 +1,7 @@
 from os import sep
 
 from season import Season
-from utils.constants import NONE
+from utils.constants import NONE, ANIME_DIR
 
 
 class Series:
@@ -21,7 +21,7 @@ class Series:
         self.premiere = premiere
         self.final = final
         self.tvdb_id = tvdb_id if not tvdb_id == 0 else ''
-        self.anime = True if 'Anime' in self.location else False
+        self.anime = True if ANIME_DIR in self.location else False
 
     def __str__(self):
         return ('Name:\t\t' + self.series_name +

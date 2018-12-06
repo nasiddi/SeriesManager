@@ -1,7 +1,7 @@
 from utils.file import File
 import unittest
-import traceback
 from episode import Episode
+from utils.constants import *
 
 
 class TestCompile(unittest.TestCase):
@@ -10,7 +10,7 @@ class TestCompile(unittest.TestCase):
         for t1 in ['Brian', '']:
             for t2 in ['Roger', '', 'Brian']:
                 for t3 in ['John', '', 'Brian', 'Roger']:
-                    for eo in ['Single', 'Double', 'Triple']:
+                    for eo in [SINGLE, DOUBLE, TRIPLE]:
                         for a in [True, False]:
                             for se in [[2, 1], [20, 10], [2, 100]]:
                                 if se[1] == 100 and not a:
@@ -29,11 +29,60 @@ class TestCompile(unittest.TestCase):
                                 s = ''.join([t1[0] if t1 else '_', t2[0] if t2 else '_',
                                              t3[0] if t3 else '_', 'A' if a else '_', eo[0],
                                              str(len(str(se[0])) + 3), str(len(str(se[1])))])
+                                #print(s)
+                                self.assertEqual(comp, comp_true[s])
+
+    def test_parse(self):
+        e = Episode()
+
+
+
+        comp_true = get_compile_truth()
+        for t1 in ['Brian', '']:
+            for t2 in ['Roger', '', 'Brian']:
+                for t3 in ['John', '', 'Brian', 'Roger']:
+                    for eo in [SINGLE, DOUBLE, TRIPLE]:
+                        for a in [True, False]:
+                            for se in [[2, 1], [20, 10], [2, 100]]:
+                                if se[1] == 100 and not a:
+                                    continue
+                                s = ''.join([t1[0] if t1 else '_', t2[0] if t2 else '_',
+                                             t3[0] if t3 else '_', 'A' if a else '_', eo[0],
+                                             str(len(str(se[0])) + 3), str(len(str(se[1])))])
                                 print(s)
-                                try:
-                                    self.assertEqual(comp, comp_true[s])
-                                except:
-                                    print(traceback.format_exc())
+                                if s == 'BRJAT41':
+                                    pass
+
+
+                                title1 = t1
+                                if not title1 and not eo == SINGLE:
+                                    title1 = t2
+                                    if not title1 and not eo == DOUBLE:
+                                        title1 = t3
+                                title2 = ''
+                                if not eo == SINGLE:
+                                    title2 = t2
+                                    if title1 == title2:
+                                        title2 = ''
+                                    if not title2 and not eo == DOUBLE:
+                                        title2 = t3
+                                        if title2 == title1:
+                                            title2 = ''
+
+                                title3 = t3 if eo == TRIPLE and not title1 == t3 and not title2 == t3 else ''
+
+                                if a:
+                                    location = 'L:\\Anime\\Freddie\\Season 02\\' + comp_true[s]
+                                else:
+                                    location = 'L:\\Series\\Freddie\\Season 02\\' + comp_true[s]
+                                e = Episode(location=location)
+                                self.assertEqual(e.e_nr, se[1])
+                                self.assertEqual(e.s_nr, se[0])
+                                self.assertEqual(e.series_name, 'Freddie')
+                                self.assertEqual(e.episode_option, eo)
+                                self.assertEqual(e.title, title1)
+                                self.assertEqual(e.title2, title2)
+                                self.assertEqual(e.title3, title3)
 
 
 def get_compile_truth():
@@ -72,7 +121,7 @@ def get_compile_truth():
         'BRBAS52': 'Freddie 20x010 - Brian.mkv',
         'BRBAS43': 'Freddie 02x100 - Brian.mkv',
         'BRB_S41': 'Freddie 02x01 - Brian.mkv',
-        'BRB_S52': 'Freddie 20x10.mkv',
+        'BRB_S52': 'Freddie 20x10 - Brian.mkv',
         'BRBAD41': 'Freddie 02x001 & 02x002 - Brian & Roger.mkv',
         'BRBAD52': 'Freddie 20x010 & 20x011 - Brian & Roger.mkv',
         'BRBAD43': 'Freddie 02x100 & 02x101 - Brian & Roger.mkv',
@@ -87,7 +136,7 @@ def get_compile_truth():
         'BRRAS52': 'Freddie 20x010 - Brian.mkv',
         'BRRAS43': 'Freddie 02x100 - Brian.mkv',
         'BRR_S41': 'Freddie 02x01 - Brian.mkv',
-        'BRR_S52': 'Freddie 20x10.mkv',
+        'BRR_S52': 'Freddie 20x10 - Brian.mkv',
         'BRRAD41': 'Freddie 02x001 & 02x002 - Brian & Roger.mkv',
         'BRRAD52': 'Freddie 20x010 & 20x011 - Brian & Roger.mkv',
         'BRRAD43': 'Freddie 02x100 & 02x101 - Brian & Roger.mkv',
@@ -102,7 +151,7 @@ def get_compile_truth():
         'B_JAS52': 'Freddie 20x010 - Brian.mkv',
         'B_JAS43': 'Freddie 02x100 - Brian.mkv',
         'B_J_S41': 'Freddie 02x01 - Brian.mkv',
-        'B_J_S52': 'Freddie 20x10.mkv',
+        'B_J_S52': 'Freddie 20x10 - Brian.mkv',
         'B_JAD41': 'Freddie 02x001 & 02x002 - Brian.mkv',
         'B_JAD52': 'Freddie 20x010 & 20x011 - Brian.mkv',
         'B_JAD43': 'Freddie 02x100 & 02x101 - Brian.mkv',
@@ -117,7 +166,7 @@ def get_compile_truth():
         'B__AS52': 'Freddie 20x010 - Brian.mkv',
         'B__AS43': 'Freddie 02x100 - Brian.mkv',
         'B___S41': 'Freddie 02x01 - Brian.mkv',
-        'B___S52': 'Freddie 20x10.mkv',
+        'B___S52': 'Freddie 20x10 - Brian.mkv',
         'B__AD41': 'Freddie 02x001 & 02x002 - Brian.mkv', 
         'B__AD52': 'Freddie 20x010 & 20x011 - Brian.mkv', 
         'B__AD43': 'Freddie 02x100 & 02x101 - Brian.mkv', 
@@ -132,7 +181,7 @@ def get_compile_truth():
         'B_BAS52': 'Freddie 20x010 - Brian.mkv',
         'B_BAS43': 'Freddie 02x100 - Brian.mkv',
         'B_B_S41': 'Freddie 02x01 - Brian.mkv',
-        'B_B_S52': 'Freddie 20x10.mkv',
+        'B_B_S52': 'Freddie 20x10 - Brian.mkv',
         'B_BAD41': 'Freddie 02x001 & 02x002 - Brian.mkv',
         'B_BAD52': 'Freddie 20x010 & 20x011 - Brian.mkv',
         'B_BAD43': 'Freddie 02x100 & 02x101 - Brian.mkv',
@@ -147,12 +196,12 @@ def get_compile_truth():
         'B_RAS52': 'Freddie 20x010 - Brian.mkv',
         'B_RAS43': 'Freddie 02x100 - Brian.mkv',
         'B_R_S41': 'Freddie 02x01 - Brian.mkv',
-        'B_R_S52': 'Freddie 20x10.mkv',
-        'B_RAD41': 'Freddie 02x001 & 02x002 - Brian & Roger.mkv',         
-        'B_RAD52': 'Freddie 20x010 & 20x011 - Brian & Roger.mkv',         
-        'B_RAD43': 'Freddie 02x100 & 02x101 - Brian & Roger.mkv',         
-        'B_R_D41': 'Freddie 02x01 & 02x02 - Brian & Roger.mkv',           
-        'B_R_D52': 'Freddie 20x10 & 20x11 - Brian & Roger.mkv',           
+        'B_R_S52': 'Freddie 20x10 - Brian.mkv',
+        'B_RAD41': 'Freddie 02x001 & 02x002 - Brian.mkv',
+        'B_RAD52': 'Freddie 20x010 & 20x011 - Brian.mkv',
+        'B_RAD43': 'Freddie 02x100 & 02x101 - Brian.mkv',
+        'B_R_D41': 'Freddie 02x01 & 02x02 - Brian.mkv',
+        'B_R_D52': 'Freddie 20x10 & 20x11 - Brian.mkv',
         'B_RAT41': 'Freddie 02x001 & 02x002 & 02x003 - Brian & Roger.mkv',
         'B_RAT52': 'Freddie 20x010 & 20x011 & 20x012 - Brian & Roger.mkv',
         'B_RAT43': 'Freddie 02x100 & 02x101 & 02x102 - Brian & Roger.mkv',
@@ -162,7 +211,7 @@ def get_compile_truth():
         'BBJAS52': 'Freddie 20x010 - Brian.mkv',
         'BBJAS43': 'Freddie 02x100 - Brian.mkv',
         'BBJ_S41': 'Freddie 02x01 - Brian.mkv',
-        'BBJ_S52': 'Freddie 20x10.mkv',
+        'BBJ_S52': 'Freddie 20x10 - Brian.mkv',
         'BBJAD41': 'Freddie 02x001 & 02x002 - Brian.mkv',
         'BBJAD52': 'Freddie 20x010 & 20x011 - Brian.mkv',
         'BBJAD43': 'Freddie 02x100 & 02x101 - Brian.mkv',
@@ -177,7 +226,7 @@ def get_compile_truth():
         'BB_AS52': 'Freddie 20x010 - Brian.mkv',
         'BB_AS43': 'Freddie 02x100 - Brian.mkv',
         'BB__S41': 'Freddie 02x01 - Brian.mkv',
-        'BB__S52': 'Freddie 20x10.mkv',
+        'BB__S52': 'Freddie 20x10 - Brian.mkv',
         'BB_AD41': 'Freddie 02x001 & 02x002 - Brian.mkv',         
         'BB_AD52': 'Freddie 20x010 & 20x011 - Brian.mkv',         
         'BB_AD43': 'Freddie 02x100 & 02x101 - Brian.mkv',         
@@ -192,7 +241,7 @@ def get_compile_truth():
         'BBBAS52': 'Freddie 20x010 - Brian.mkv',
         'BBBAS43': 'Freddie 02x100 - Brian.mkv',
         'BBB_S41': 'Freddie 02x01 - Brian.mkv',
-        'BBB_S52': 'Freddie 20x10.mkv',
+        'BBB_S52': 'Freddie 20x10 - Brian.mkv',
         'BBBAD41': 'Freddie 02x001 & 02x002 - Brian.mkv',         
         'BBBAD52': 'Freddie 20x010 & 20x011 - Brian.mkv',         
         'BBBAD43': 'Freddie 02x100 & 02x101 - Brian.mkv',         
@@ -207,12 +256,12 @@ def get_compile_truth():
         'BBRAS52': 'Freddie 20x010 - Brian.mkv',
         'BBRAS43': 'Freddie 02x100 - Brian.mkv',
         'BBR_S41': 'Freddie 02x01 - Brian.mkv',
-        'BBR_S52': 'Freddie 20x10.mkv',
-        'BBRAD41': 'Freddie 02x001 & 02x002 - Brian & Roger.mkv',         
-        'BBRAD52': 'Freddie 20x010 & 20x011 - Brian & Roger.mkv',         
-        'BBRAD43': 'Freddie 02x100 & 02x101 - Brian & Roger.mkv',         
-        'BBR_D41': 'Freddie 02x01 & 02x02 - Brian & Roger.mkv',           
-        'BBR_D52': 'Freddie 20x10 & 20x11 - Brian & Roger.mkv',           
+        'BBR_S52': 'Freddie 20x10 - Brian.mkv',
+        'BBRAD41': 'Freddie 02x001 & 02x002 - Brian.mkv',
+        'BBRAD52': 'Freddie 20x010 & 20x011 - Brian.mkv',
+        'BBRAD43': 'Freddie 02x100 & 02x101 - Brian.mkv',
+        'BBR_D41': 'Freddie 02x01 & 02x02 - Brian.mkv',
+        'BBR_D52': 'Freddie 20x10 & 20x11 - Brian.mkv',
         'BBRAT41': 'Freddie 02x001 & 02x002 & 02x003 - Brian & Roger.mkv',
         'BBRAT52': 'Freddie 20x010 & 20x011 & 20x012 - Brian & Roger.mkv',
         'BBRAT43': 'Freddie 02x100 & 02x101 & 02x102 - Brian & Roger.mkv',
@@ -258,11 +307,11 @@ def get_compile_truth():
         '_RBAD43': 'Freddie 02x100 & 02x101 - Roger.mkv',         
         '_RB_D41': 'Freddie 02x01 & 02x02 - Roger.mkv',           
         '_RB_D52': 'Freddie 20x10 & 20x11 - Roger.mkv',           
-        '_RBAT41': 'Freddie 02x001 & 02x002 & 02x003 - Roger.mkv',
-        '_RBAT52': 'Freddie 20x010 & 20x011 & 20x012 - Roger.mkv',
-        '_RBAT43': 'Freddie 02x100 & 02x101 & 02x102 - Roger.mkv',
-        '_RB_T41': 'Freddie 02x01 & 02x02 & 02x03 - Roger.mkv',   
-        '_RB_T52': 'Freddie 20x10 & 20x11 & 20x12 - Roger.mkv',   
+        '_RBAT41': 'Freddie 02x001 & 02x002 & 02x003 - Roger & Brian.mkv',
+        '_RBAT52': 'Freddie 20x010 & 20x011 & 20x012 - Roger & Brian.mkv',
+        '_RBAT43': 'Freddie 02x100 & 02x101 & 02x102 - Roger & Brian.mkv',
+        '_RB_T41': 'Freddie 02x01 & 02x02 & 02x03 - Roger & Brian.mkv',
+        '_RB_T52': 'Freddie 20x10 & 20x11 & 20x12 - Roger & Brian.mkv',
         '_RRAS41': 'Freddie 02x001.mkv',
         '_RRAS52': 'Freddie 20x010.mkv',
         '_RRAS43': 'Freddie 02x100.mkv',

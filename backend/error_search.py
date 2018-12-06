@@ -20,9 +20,9 @@ def _generate_error(message, e, show,
             e_id = show.series_name
         if e_id in EXCEPTIONS[exception_type]:
             if not word:
-                return False
+                return
             if word in EXCEPTIONS[exception_type][e_id]:
-                return False
+                return
     return {
         'message': message,
         'old_location': e.location,
@@ -72,14 +72,14 @@ def check_words(show, e):
             title = ' '.join(words)
             return _generate_error(message='LowerCase Error: ' + w, e=e, show=show, word=w, title=title,
                                    exception_type='lower')
-    return False
+    return
 
 
 def check_part_number(show, e):
     substring = None
     t = e.get_title().split('Part ')
     if len(t) == 0:
-        return False
+        return
     if len(t) == 2:
         prev_title = ''
         next_title = ''
@@ -96,7 +96,7 @@ def check_part_number(show, e):
             substring = t[-1].split(' ', 1)
             t[-1] = substring[0]
         if t[-1] in NUMERALS:
-            return False
+            return
         if t[-1].isdigit():
             t[-1] = NUMERALS[int(t[-1])]
             if substring:
@@ -113,7 +113,7 @@ def check_part_number(show, e):
         return _generate_error(message='Part Number Parse Error', e=e, show=show, exception_type='part')
     if len(t) > 2:
         return _generate_error(message='Unnecessary Part Numbers', e=e, show=show, exception_type='part')
-    return False
+    return
 
 
 def check_for_spaces(show, e):
@@ -122,18 +122,18 @@ def check_for_spaces(show, e):
         return _generate_error(message='Double Space', e=e, show=show, title=title)
     name = e.file_name.rsplit('.', 1)
     if not name:
-        return False
+        return
     if name[0][-1] == ' ':
         title = e.get_title().strip()
         return _generate_error(message='Space Before Extension', e=e, show=show, title=title)
-    return False
+    return
 
 
 def check_for_missing_title(show, e):
     if not show.name_needed:
-        return False
+        return
     if e.title and not e.title == ' ':
-        return False
+        return
     return _generate_error(message='Title Missing', e=e, show=show)
 
 
@@ -155,37 +155,37 @@ def check_series_name_and_numbers(show, e):
         return _generate_error(message='Season Number Error', e=e, show=show)
     if e.e_nr >= 999:
         return _generate_error(message='Episode Number Error', e=e, show=show, e_nr='')
-    return False
+    return
 
 
 def check_for_multiple_files(show, e):
     if show.series_name == 'Doctor Who Classic':
-        return False
+        return
     if 777 <= e.e_nr < 999:
         return _generate_error(message='Multiple Files', e=e, show=show, e_nr='')
-    return False
+    return
 
 
 def check_against_compiled(show, e):
     if show.series_name == 'Doctor Who Classic':
-        return False
+        return
     if not e.file_name == e.compile_file_name():
         return _generate_error(message='Compilation Mismatch', e=e, show=show)
-    return False
+    return
 
 
 def check_for_name_used_twice(show, e):
     title = e.get_title()
     if not title:
-        return False
+        return
     if show.series_name not in NAMES:
         NAMES[show.series_name] = [title]
-        return False
+        return
     if title in NAMES[show.series_name]:
         return _generate_error(message='Name Used Twice', e=e, show=show, exception_type='double', word=title)
     else:
         NAMES[show.series_name].append(title)
-        return False
+        return
 
 
 def check_extension(show, e):
