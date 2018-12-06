@@ -1,3 +1,5 @@
+from os import sep
+
 from utils.constants import NONE, SERIES_NAME, FILE_DIR, MAC_OFFSET, AIRING, HIATUS, ENDED
 
 
@@ -74,8 +76,8 @@ class File:
                 'subs': []}
 
     def get_report(self):
-        return dict(file_name=self.new_location.rsplit(os.sep, 1)[1] if self.new_location else
-                    self.location.split(os.sep, 2 + MAC_OFFSET)[-1],
+        return dict(file_name=self.new_location.rsplit(sep, 1)[1] if self.new_location else
+                    self.location.split(sep, 2 + MAC_OFFSET)[-1],
                     info=self.report['info'],
                     error=self.report['error'],
                     success=self.report['success'])
