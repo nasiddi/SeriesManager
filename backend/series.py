@@ -1,7 +1,7 @@
 from os import sep
 
 from season import Season
-from utils.constants import NONE, ANIME_DIR
+from utils.constants import NONE, ANIME_DIR, SINGLE, TRIPLE
 
 
 class Series:
@@ -59,6 +59,17 @@ class Series:
         try:
             return self.seasons[s_nr].episodes[e_nr]
         except Exception:
+            try:
+                e = self.seasons[s_nr].episodes[e_nr - 1]
+                if not e.episode_option == SINGLE:
+                    return e
+            except Exception:
+                try:
+                    e = self.seasons[s_nr].episodes[e_nr - 2]
+                    if e.episode_option == TRIPLE:
+                        return e
+                except Exception:
+                    return None
             return None
 
     def add_episode(self, episode):

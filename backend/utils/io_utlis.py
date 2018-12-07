@@ -66,11 +66,13 @@ def save_shows(shows):
 
 
 def pickle_dump(data, file):
-    pickle.dump(data, open(file, 'wb'))
+    with open(file, "wb") as f:
+        pickle.dump(data, f)
 
 
 def pickle_load(file):
-    return pickle.load(open(file, 'rb'))
+    with open(file, "rb") as f:
+        return pickle.load(f)
 
 
 def parse_args(args):

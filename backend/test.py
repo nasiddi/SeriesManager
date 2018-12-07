@@ -2,6 +2,8 @@ from utils.file import File
 import unittest
 from episode import Episode
 from utils.constants import *
+from utils.io_utlis import load_shows
+from series import Series
 
 
 class TestCompile(unittest.TestCase):
@@ -33,10 +35,6 @@ class TestCompile(unittest.TestCase):
                                 self.assertEqual(comp, comp_true[s])
 
     def test_parse(self):
-        e = Episode()
-
-
-
         comp_true = get_compile_truth()
         for t1 in ['Brian', '']:
             for t2 in ['Roger', '', 'Brian']:
@@ -83,6 +81,18 @@ class TestCompile(unittest.TestCase):
                                 self.assertEqual(e.title, title1)
                                 self.assertEqual(e.title2, title2)
                                 self.assertEqual(e.title3, title3)
+
+    def test_sxe(self):
+        shows = load_shows(read_only=True)
+        battle: Series = shows['Battlestar Galactica']
+        self.assertEqual(battle.get_episode_by_sxe(4, 21), battle.get_episode_by_sxe(4, 19))
+        self.assertEqual(battle.get_episode_by_sxe(4, 20), battle.get_episode_by_sxe(4, 19))
+        self.assertEqual(battle.get_episode_by_sxe(4, 19).e_nr, 19)
+        self.assertEqual(battle.get_episode_by_sxe(4, 22), None)
+        star: Series = shows['Star Trek - Enterprise']
+        self.assertEqual(star.get_episode_by_sxe(1, 2), star.get_episode_by_sxe(1, 1))
+        self.assertEqual(star.get_episode_by_sxe(1, 27), None)
+        self.assertEqual(star.get_episode_by_sxe(1, 1).e_nr, 1)
 
 
 def get_compile_truth():
