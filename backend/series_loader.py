@@ -37,10 +37,12 @@ def load_files(top):
 
 
 def reload_metadata(shows):
-    p = multiprocessing.Pool(8)
-    shows = p.map(loop_parallel, shows.values())
+    start = time()
+    p = multiprocessing.Pool(28)
+    p.map(loop_parallel, shows.values())
     p.close()
     p.join()
+    print('metadata', time() - start)
 
 
 def loop_parallel(show):
