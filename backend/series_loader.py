@@ -3,6 +3,8 @@ from sys import exit, setrecursionlimit
 from time import time
 
 import backup
+from stats import update_file_meta
+from episode import Episode
 from series import Series
 from utils.constants import META_FILE, STATUS, NAME_NEEDED, PREMIERE, FINAL, TVDB_ID, SERIES_DIR, ANIME_DIR
 from utils.io_utlis import load_json, load_shows, save_shows
@@ -46,7 +48,7 @@ def add_metadata(shows):
         if TVDB_ID not in info:
             info[TVDB_ID] = ''
         show.tvdb_id = info[TVDB_ID] if not info[TVDB_ID] == 0 else ''
-
+        e: Episode
         for season in show.seasons.values():
             for e in season.episodes.values():
                 try:
@@ -59,6 +61,10 @@ def add_metadata(shows):
                     e.quality = file_meta['quality']
                 except:
                     print('*load metadata*', e.location)
+                    update_file_meta(e)
+                if not e.quality:
+                    update_file_meta(e)
+                    print(e.id())
 
 
 def main():

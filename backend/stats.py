@@ -16,7 +16,7 @@ def main(args):
     global SHOWS
     SHOWS = load_shows(read_only=True)
     parse_args(args)
-
+    print(environ[OUT_FILE])
     stats = {'shows': [], 'total': {'status': {}, 'extension': {}, 'ratio': {}, 'quality': {}}}
     duration = 0
     show_count = 0
@@ -139,7 +139,7 @@ def main(args):
 
 
 def update_file_meta(episode):
-    data = find_video_metada(episode.location)
+    data = find_video_metadata(episode.location)
     if data:
         episode.set_file_meta(data)
 
@@ -155,7 +155,7 @@ def update_file_meta(episode):
         episode.quality = QUALITY[min(QUALITY, key=lambda x: abs(x-episode.height))]
 
 
-def find_video_metada(file):
+def find_video_metadata(file):
     cmd = "ffprobe -v quiet -print_format json -show_streams -show_format -i"
     args = split(cmd)
     args.append(file)

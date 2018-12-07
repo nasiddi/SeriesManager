@@ -22,8 +22,6 @@ class Season:
         files = listdir(self.location)
         for file in files:
             episode = Episode(location=path.join(self.location, file), s_nr=self.s_nr)
-            if episode.anime:
-                print(episode)
             if episode.e_nr in self.episodes:
                 if not episode.e_nr == 999:
                     episode.e_nr = 777
