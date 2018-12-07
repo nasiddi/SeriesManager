@@ -1,4 +1,5 @@
 import time
+import multiprocessing
 from operator import itemgetter
 from os import environ
 from sys import argv
@@ -28,13 +29,19 @@ def main(args):
 
 
 def load_all():
+    shows = sorted(SHOWS.values(), key=get_series_name)
+    p = multiprocessing.Pool(8)
+    p.map(get_show_data, shows)
+    p.close()
+    p.join()
+    return
     for show in sorted(SHOWS.values(), key=get_series_name):
-        if show.tvdb_id:
-            check_for_newly_aired(show)
         get_show_data(show)
 
 
 def get_show_data(show):
+    if show.tvdb_id:
+        check_for_newly_aired(show)
     for season in show.seasons.values():
         check_for_missing_season(show, season, sorted(show.seasons.values(), key=lambda x: x.s_nr))
         episodes = sorted(list(season.episodes.values()), key=lambda x: x.e_nr)
@@ -124,5 +131,6 @@ def get_series_name(show):
 
 if __name__ == '__main__':
     start = time.time()
+    multiprocessing.freeze_support()
     main(argv[1:])
     print(time.time() - start)
