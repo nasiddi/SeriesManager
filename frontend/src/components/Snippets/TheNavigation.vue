@@ -27,13 +27,17 @@
       <b-navbar-nav
         v-if="loggedIn">
 
-        <b-button
-          size="sm"
-          class="my-2 my-sm-0"
-          type="submit"
-          @click="reload">
+        <b-nav-item
+          @click="reload(false)">
           <font-awesome-icon icon="sync-alt"/>
-        </b-button>
+        </b-nav-item>
+
+        <b-nav-item-dropdown>
+          <b-dropdown-item
+            @click="reload(true)">
+            <font-awesome-icon :icon="['fab', 'cloudscale']"/> Metadata
+          </b-dropdown-item>
+        </b-nav-item-dropdown>
 
         <b-nav-item
           :to="{ name: 'sync.prep' }"
@@ -132,10 +136,10 @@ export default {
     isRoutePrefix(prefix) {
       return this.$router.currentRoute.path.split('/')[1] === prefix;
     },
-    async reload() {
+    async reload(metadata) {
       let notifLoading = null;
       this.$http
-        .post('python/reload')
+        .post('python/reload', { reload_metadata: metadata })
         .then((notifLoading = this.$snotify.info('Reloading', { timeout: 0 })))
         .then((res) => {
           this.$snotify.remove(notifLoading.id);

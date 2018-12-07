@@ -48,7 +48,7 @@ routes.post('/batch/sync', async (req, res) => {
 });
 
 routes.post('/reload', async (req, res) => {
-  python.reloadSeries(res);
+  python.reloadSeries(req.body, res);
 });
 
 routes.post('/filetree', async (req, res) => {

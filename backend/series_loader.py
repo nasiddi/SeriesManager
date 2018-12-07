@@ -84,6 +84,10 @@ def add_metadata(shows):
 
 def main(args):
     parse_args(args)
+
+    with open(environ[CONF_FILE]) as mytxt:
+        for line in mytxt:
+            print(line)
     config = load_json(environ[CONF_FILE])
     start = time()
     print('running', SERIES_DIR)

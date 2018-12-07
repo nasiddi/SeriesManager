@@ -116,12 +116,13 @@ async function run(
   });
 }
 
-async function reloadSeries(res) {
+async function reloadSeries(body, res) {
+  console.log(body);
   await run(
     'series_loader',
     'series_loader',
     '',
-    '',
+    body,
     '',
     () => {},
     async (code, signal) => {
