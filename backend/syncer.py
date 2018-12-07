@@ -104,13 +104,11 @@ def sync_queue(queue=None):
             file.report['error'].append('File exists')
             continue
         try:
-            start = time.time()
             shutil.move(file.location, file.new_location)
-            print(time.time() - start)
         except Exception as e:
             print('rename', e)
             file.report['error'].append('Copy failed')
-            continue
+            return
         if wait_on_creation(file.new_location):
             file.report['success'].append('Copy successful')
         else:

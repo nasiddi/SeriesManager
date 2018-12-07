@@ -3,7 +3,7 @@ from shutil import copyfile
 from sys import argv
 from unlock_shows import unlock
 from utils.constants import BACKUP_DIR, ASSETS, OUT_FILE, CONF_FILE
-from utils.io_utlis import load_shows, parse_args, save_json, save_shows, load_json, wait_on_delete
+from utils.io_utlis import load_shows, parse_args, save_json, load_json, wait_on_delete
 
 SHOWS = None
 

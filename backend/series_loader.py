@@ -1,13 +1,14 @@
-from os import sep, walk, path
-from sys import exit, setrecursionlimit
+from os import sep, walk, path, environ
+from sys import exit, setrecursionlimit, argv
 from time import time
+import multiprocessing
 
 import backup
 from stats import update_file_meta
 from episode import Episode
 from series import Series
-from utils.constants import META_FILE, STATUS, NAME_NEEDED, PREMIERE, FINAL, TVDB_ID, SERIES_DIR, ANIME_DIR
-from utils.io_utlis import load_json, load_shows, save_shows
+from utils.constants import META_FILE, STATUS, NAME_NEEDED, PREMIERE, FINAL, TVDB_ID, SERIES_DIR, ANIME_DIR, CONF_FILE
+from utils.io_utlis import load_json, load_shows, save_shows, parse_args
 
 setrecursionlimit(10000)
 
@@ -34,6 +35,20 @@ def load_files(top):
 
     return shows
 
+
+def reload_metadata(shows):
+    p = multiprocessing.Pool(8)
+    shows = p.map(loop_parallel(), shows.values())
+    p.close()
+    p.join()
+
+
+
+
+def loop_parallel(show):
+    for season in show.seasons.values():
+        for e in season.episodes.values():
+            update_file_meta(e)
 
 def add_metadata(shows):
     meta = load_json(META_FILE)
@@ -67,7 +82,9 @@ def add_metadata(shows):
                     print(e.id())
 
 
-def main():
+def main(args):
+    parse_args(args)
+    config = load_json(environ[CONF_FILE])
     start = time()
     print('running', SERIES_DIR)
     if not backup.main():
@@ -78,7 +95,10 @@ def main():
     load_shows(reload=True)
     shows = load_files(SERIES_DIR)
     shows.update(load_files(ANIME_DIR))
-    add_metadata(shows)
+    if config['reload_metadata']:
+        reload_metadata(shows)
+    else:
+        add_metadata(shows)
     save_shows(shows)
 
     print(time() - start)
@@ -86,4 +106,5 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    multiprocessing.freeze_support()
+    main(argv[1:])
