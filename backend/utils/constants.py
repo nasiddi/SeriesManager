@@ -43,8 +43,7 @@ else:
     SUB_DIR = '/Volumes/Temp/Subs'
     MAC_OFFSET = 2
 
-
-# Extentions
+# Extensions
 EXTENSIONS = ['mp4', 'mkv', 'avi', 'flv', 'm4v', 'divx', 'webm', 'mpg']
 SUBS = ['idx', 'sub', 'srt']
 

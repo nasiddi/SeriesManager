@@ -1,7 +1,7 @@
 import os
 from shutil import copyfile
 from sys import argv
-
+from unlock_shows import unlock
 from utils.constants import BACKUP_DIR, ASSETS, OUT_FILE, CONF_FILE
 from utils.io_utlis import load_shows, parse_args, save_json, save_shows, load_json, wait_on_delete
 
@@ -36,7 +36,7 @@ def main(args):
         except:
             pass
 
-    save_shows(SHOWS)
+    unlock()
     save_json({'done': True}, os.environ[OUT_FILE])
 
 

@@ -4,7 +4,7 @@ from time import time, sleep
 from utils.constants import LOCK_File
 
 
-def main():
+def unlock():
     if not path.exists(LOCK_File):
         return
     try:
@@ -17,4 +17,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    unlock()
