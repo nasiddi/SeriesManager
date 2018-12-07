@@ -72,12 +72,12 @@ class Series:
                     return None
             return None
 
-    def add_episode(self, episode):
+    def add_episode(self, file, reload_metadata=True):
         new_season = False
-        if episode.s_nr not in self.seasons:
-            self.add_season(location=sep.join(episode.location.split(sep)[:-1]), number=episode.s_nr)
+        if file.s_nr not in self.seasons:
+            self.add_season(location=sep.join(file.new_location.split(sep)[:-1]), number=file.s_nr)
             new_season = True
-        self.seasons[episode.s_nr].update_episodes()
+        self.seasons[file.s_nr].update_episodes(reload_metadata=reload_metadata)
         return new_season
 
     def get_next(self, episode):

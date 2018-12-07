@@ -135,15 +135,7 @@ def sync_queue(show):
                     summary[file.s_nr]['e'] += 2
         else:
             REPORT['error'].append('Copy failed: ' + file.new_location)
-        episode = Episode(location=file.new_location,
-                          episode_option=file.episode_option,
-                          title=file.title,
-                          title2=file.title2 if not file.episode_option == SINGLE else '',
-                          title3=file.title3 if file.episode_option == TRIPLE else '',
-                          s_nr=file.s_nr,
-                          e_nr=file.e_nr)
-
-        if show.add_episode(episode):
+        if show.add_episode(file, reload_metadata=False):
             REPORT['info'].append('Season ' + str(file.s_nr) + ' created')
         loc = os.sep.join(file.location.split(os.sep)[:3 + MAC_OFFSET])
         if os.path.isdir(loc):

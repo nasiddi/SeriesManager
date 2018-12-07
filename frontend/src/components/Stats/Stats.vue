@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <b-row v-if="json.length !== 0 && 'total' in json">
+  <div v-if="json.length !== 0 && 'total' in json">
+    <b-row>
       <b-col lg>
         <b-row class="text-center">
           <b-col class="text-center">
@@ -151,7 +151,7 @@
         </b-row>
       </b-col>
     </b-row>
-    <div v-if="json.length !== 0 && 'shows' in json">
+    <div>
       <b-card>
         <b-row class="mt-3">
           <b-col>
@@ -169,17 +169,24 @@
             >Table</b-button>
           </b-col>
         </b-row>
-        <div v-if="cards">
+        <div>
           <hr>
           <b-row>
-            <b-col v-if="json.length !== 0 && 'total' in json">
+            <b-button
+              :pressed.sync="additive"
+              :variant="'outline-primary'"
+              :style="{width: '100%'}"
+            >{{ (additive) ? 'Additive' : 'Subtractive' }}</b-button>
+          </b-row>
+          <b-row class="mt-3">
+            <b-col>
               <b-form-checkbox-group
                 v-model="selected"
                 :options="_.keys(json.total.status)"
                 :style="{width: '100%'}"
                 stacked
                 buttons
-                button-variant="outline-primary"
+                button-variant="outline-secondary"
                 name="status"/>
             </b-col>
             <b-col>
@@ -189,7 +196,7 @@
                 :style="{width: '100%'}"
                 stacked
                 buttons
-                button-variant="outline-primary"
+                button-variant="outline-secondary"
                 name="quality"/>
             </b-col>
             <b-col>
@@ -199,7 +206,7 @@
                 :style="{width: '100%'}"
                 stacked
                 buttons
-                button-variant="outline-primary"
+                button-variant="outline-secondary"
                 name="ratio"/>
             </b-col>
             <b-col>
@@ -209,7 +216,7 @@
                 :style="{width: '100%'}"
                 stacked
                 buttons
-                button-variant="outline-primary"
+                button-variant="outline-secondary"
                 name="extension"/>
             </b-col>
             <b-col>
@@ -219,18 +226,26 @@
                 :style="{width: '100%'}"
                 stacked
                 buttons
-                button-variant="outline-primary"
+                button-variant="outline-secondary"
                 name="extension"/>
             </b-col>
           </b-row>
           <b-row class="mt-3">
             <b-col>
               <b-button
-                :pressed.sync="all"
-                :variant="'outline-primary'"
                 :style="{width: '100%'}"
-                @click.prevent="selectAllFilters"
+                variant="primary"
+                class="mt-2"
+                @click="selectAllFilters"
               >Select All</b-button>
+            </b-col>
+            <b-col>
+              <b-button
+                :style="{width: '100%'}"
+                variant="primary"
+                class="mt-2"
+                @click="selected = []"
+              >Select None</b-button>
             </b-col>
           </b-row>
           <hr>
@@ -339,7 +354,6 @@ export default {
     ],
     table: false,
     cards: true,
-    all: true,
     direction: 'sort-down',
     selected: [],
     json: {},
@@ -352,6 +366,7 @@ export default {
     shows: [],
     primaryExt: [],
     sencondaryExt: [],
+    additive: true,
   }),
   computed: {
     getTable() {
@@ -381,6 +396,12 @@ export default {
       deep: true,
     },
     sorter: {
+      handler() {
+        this.applyFilterAndSorter();
+      },
+      deep: true,
+    },
+    additive: {
       handler() {
         this.applyFilterAndSorter();
       },
@@ -426,9 +447,7 @@ export default {
         );
     },
     loadData() {
-      this.notifLoading = this.$snotify.info('Loading', {
-        timeout: 0,
-      });
+      this.notifLoading = this.$snotify.info('Loading', { timeout: 0 });
       this.$http
         .post('python/stats')
         .then(
@@ -468,12 +487,18 @@ export default {
       if (!('total' in this.json)) { return; }
       let series = [];
       this.shows = [];
-      series = series.concat(this.filterGroup(_.keys(this.json.total.status), 'status'));
-      series = series.concat(this.filterGroup(_.keys(this.json.total.ratio), 'ratio'));
-      series = series.concat(this.filterGroup(this.json.extensions, 'extension'));
-      series = series.concat(this.filterGroup(_.keys(this.json.total.quality), 'quality'));
-
-
+      if (this.additive) {
+        series = this.filterGroup(_.keys(this.json.total.status), 'status', this.json.shows);
+        series = series.concat(this.filterGroup(_.keys(this.json.total.ratio), 'ratio', this.json.shows));
+        series = series.concat(this.filterGroup(_.values(this.json.extensions), 'extension', this.json.shows));
+        series = series.concat(this.filterGroup(_.keys(this.json.total.quality), 'quality', this.json.shows));
+      } else {
+        series = this.filterGroup(_.keys(this.json.total.status), 'status', this.json.shows);
+        series = this.filterGroup(_.keys(this.json.total.ratio), 'ratio', series);
+        series = this.filterGroup(_.values(this.json.extensions), 'extension', series);
+        series = this.filterGroup(_.keys(this.json.total.quality), 'quality', series);
+      }
+      series = [...new Set(series.map(s => s.series_name))];
       this.json.shows.forEach((s) => {
         if (series.includes(s.series_name)) {
           this.shows.push(s);
@@ -487,7 +512,7 @@ export default {
       }
       this.shows.sort(this.dynamicSort(this.sorter, dir));
     },
-    filterGroup(group, name) {
+    filterGroup(group, name, series) {
       const filteredGroup = [];
       const shows = [];
       group.forEach((g) => {
@@ -496,9 +521,9 @@ export default {
         }
       });
 
-      this.json.shows.forEach((s) => {
+      series.forEach((s) => {
         if (_.keys(s[name]).some(n => filteredGroup.indexOf(n) >= 0)) {
-          shows.push(s.series_name);
+          shows.push(s);
         }
       });
       return shows;
@@ -512,12 +537,10 @@ export default {
     },
     selectAllFilters() {
       this.selected = [];
-      if (this.all) {
-        this.selected = this.json.extensions;
-        this.selected = this.selected.concat(_.keys(this.json.total.status));
-        this.selected = this.selected.concat(_.keys(this.json.total.ratio));
-        this.selected = this.selected.concat(_.keys(this.json.total.quality));
-      }
+      this.selected = this.json.extensions;
+      this.selected = this.selected.concat(_.keys(this.json.total.status));
+      this.selected = this.selected.concat(_.keys(this.json.total.ratio));
+      this.selected = this.selected.concat(_.keys(this.json.total.quality));
     },
     setExtentions(primary) {
       if (!('total' in this.json)) {

@@ -4,7 +4,6 @@ from shutil import move
 from sys import argv
 
 import syncer
-from episode import Episode
 from utils.constants import EXCEPTIONS_FILE, SERIES_NAME, NAME_NEEDED, CONF_FILE, OUT_FILE
 from utils.file import File
 from utils.io_utlis import load_shows, parse_args, save_json, save_shows, load_json, wait_on_creation, recursive_delete
@@ -168,7 +167,7 @@ def save_queue(queue):
         if file.delete:
             recursive_delete(file.location)
             try:
-                SHOWS[file.series_name].seasons[file.s_nr].update_episodes()
+                SHOWS[file.series_name].seasons[file.s_nr].update_episodes(reload_metadata=False)
             except FileNotFoundError:
                 del SHOWS[file.series_name].seasons[file.s_nr]
             continue
@@ -193,15 +192,7 @@ def save_queue(queue):
                 del show.seasons[file.s_nr_old].episodes[file.e_nr_old]
             except:
                 pass
-        episode = Episode(location=file.new_location,
-                          episode_option=file.episode_option,
-                          title=file.title,
-                          title2=file.title2,
-                          title3=file.title3,
-                          s_nr=file.s_nr,
-                          e_nr=file.e_nr)
-
-        if show.add_episode(episode):
+        if show.add_episode(file):
             file.report['info'].append('Season created')
 
 

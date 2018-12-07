@@ -4,7 +4,6 @@ from time import time
 import multiprocessing
 
 import backup
-from stats import update_file_meta
 from episode import Episode
 from series import Series
 from utils.constants import META_FILE, STATUS, NAME_NEEDED, PREMIERE, FINAL, TVDB_ID, SERIES_DIR, ANIME_DIR, CONF_FILE
@@ -31,7 +30,7 @@ def load_files(top):
                 continue
 
             season = shows[show].add_season(location=path.join(root, name))
-            season.update_episodes()
+            season.update_episodes(reload_metadata=False)
 
     return shows
 
@@ -48,7 +47,7 @@ def reload_metadata(shows):
 def loop_parallel(show):
     for season in show.seasons.values():
         for e in season.episodes.values():
-            update_file_meta(e)
+            e.update_file_meta()
 
 def add_metadata(shows):
     meta = load_json(META_FILE)
@@ -76,9 +75,9 @@ def add_metadata(shows):
                     e.quality = file_meta['quality']
                 except:
                     print('*load metadata*', e.location)
-                    update_file_meta(e)
+                    e.update_file_meta()
                 if not e.quality:
-                    update_file_meta(e)
+                    e.update_file_meta()
                     print(e.id())
 
 
