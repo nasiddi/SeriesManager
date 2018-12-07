@@ -2,8 +2,13 @@ import getopt
 import json
 import pickle
 import sys
+from json import loads
+from math import gcd
 from os import path, environ, remove
+from shlex import split
 from shutil import rmtree
+from subprocess import check_output
+from sys import stderr
 from time import time
 
 from utils.constants import LOCK_File, SHOWS_FILE, META_FILE, OUT_FILE, CONF_FILE
@@ -110,3 +115,64 @@ def recursive_delete(location):
     if path.exists(location):
         return False
     return True
+
+
+def find_video_metadata(file):
+    cmd = "ffprobe -v quiet -print_format json -show_streams -show_format -i"
+    args = split(cmd)
+    args.append(file)
+    # run the ffprobe process, decode stdout into utf-8 & convert to JSON
+    try:
+        ffprobe_output = check_output(args).decode('utf-8')
+    except Exception as e:
+        print(path.basename(file), file=stderr)
+        print(e, file=stderr)
+        return None
+    ffprobe_output = loads(ffprobe_output)
+
+    # prints all the metadata available:
+    # import pprint
+    # pp = pprint.PrettyPrinter(indent=2)
+    # pp.pprint(ffprobe_output)
+
+    height = 0
+    width = 0
+    duration = 0
+    size = 0
+    ratio = ''
+    # for example, find height and width
+    video_stream = None
+    for stream in ffprobe_output['streams']:
+        if 'codec_type' in stream and stream['codec_type'] == 'video':
+            video_stream = stream
+            break
+    try:
+        height = video_stream['height']
+    except:
+        pass
+    try:
+        width = video_stream['width']
+    except:
+        pass
+    try:
+        duration = int(float(ffprobe_output['format']['duration']) / 60 * 100) / 100.0
+    except:
+        pass
+    try:
+        size = int(float(ffprobe_output['format']['size']) / 1024.0 / 1024.0 * 100) / 100.0
+    except:
+        pass
+    try:
+        ratio = video_stream['display_aspect_ratio']
+    except:
+        if not height == 0 and not width == 0:
+            d = gcd(width, height)
+            ratio = str(int(width/d)) + ':' + str(int(height/d))
+
+    # print(os.path.basename(file))
+    # print('height', height, 'pixel')
+    # print('size:', size, 'MB')
+    # print('duration', duration, 'minutes')
+    # print('ratio', ratio)
+    # print('*************************')
+    return height, width, size, duration, ratio

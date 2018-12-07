@@ -1,12 +1,8 @@
-from json import loads
-from math import gcd
-from os import environ, path
-from shlex import split
-from subprocess import check_output
-from sys import argv, stderr
+from os import environ
+from sys import argv
 from time import time
 
-from utils.constants import SERIES_NAME, SINGLE, DOUBLE, ASPECT_RATIOS, QUALITY, OUT_FILE
+from utils.constants import SERIES_NAME, SINGLE, DOUBLE, ASPECT_RATIOS, OUT_FILE
 from utils.io_utlis import load_shows, parse_args, save_json
 
 SHOWS = None
@@ -42,7 +38,7 @@ def main(args):
                 episode_option = 1 if episode.episode_option == SINGLE else 2 if episode.episode_option == DOUBLE else 3
 
                 if episode.duration == 0 or episode.quality == '':
-                    update_file_meta(episode)
+                    episode.update_file_meta()
 
                 duration += episode.duration
                 show_stats['duration'] += episode.duration
@@ -136,84 +132,6 @@ def main(args):
     stats['total']['avg_gb_show'] = int(size / show_count / 1024 * 100.0) / 100.0
 
     save_json(stats, environ[OUT_FILE])
-
-
-def update_file_meta(episode):
-    data = find_video_metadata(episode.location)
-    if data:
-        episode.set_file_meta(data)
-
-    if episode.height == 0 or episode.width == 0:
-        ratio = 0
-    else:
-        ratio = int(1000.0 * episode.width / episode.height) / 1000.0
-        ratio = min(ASPECT_RATIOS, key=lambda x: abs(x-ratio))
-    episode.ratio = ratio
-    if episode.height == 0:
-        episode.quality = ''
-    else:
-        episode.quality = QUALITY[min(QUALITY, key=lambda x: abs(x-episode.height))]
-
-
-def find_video_metadata(file):
-    cmd = "ffprobe -v quiet -print_format json -show_streams -show_format -i"
-    args = split(cmd)
-    args.append(file)
-    # run the ffprobe process, decode stdout into utf-8 & convert to JSON
-    try:
-        ffprobe_output = check_output(args).decode('utf-8')
-    except Exception as e:
-        print(path.basename(file), file=stderr)
-        print(e, file=stderr)
-        return None
-    ffprobe_output = loads(ffprobe_output)
-
-    # prints all the metadata available:
-    # import pprint
-    # pp = pprint.PrettyPrinter(indent=2)
-    # pp.pprint(ffprobe_output)
-
-    height = 0
-    width = 0
-    duration = 0
-    size = 0
-    ratio = ''
-    # for example, find height and width
-    video_stream = None
-    for stream in ffprobe_output['streams']:
-        if 'codec_type' in stream and stream['codec_type'] == 'video':
-            video_stream = stream
-            break
-    try:
-        height = video_stream['height']
-    except:
-        pass
-    try:
-        width = video_stream['width']
-    except:
-        pass
-    try:
-        duration = int(float(ffprobe_output['format']['duration']) / 60 * 100) / 100.0
-    except:
-        pass
-    try:
-        size = int(float(ffprobe_output['format']['size']) / 1024.0 / 1024.0 * 100) / 100.0
-    except:
-        pass
-    try:
-        ratio = video_stream['display_aspect_ratio']
-    except:
-        if not height == 0 and not width == 0:
-            d = gcd(width, height)
-            ratio = str(int(width/d)) + ':' + str(int(height/d))
-
-    # print(os.path.basename(file))
-    # print('height', height, 'pixel')
-    # print('size:', size, 'MB')
-    # print('duration', duration, 'minutes')
-    # print('ratio', ratio)
-    # print('*************************')
-    return height, width, size, duration, ratio
 
 
 if __name__ == '__main__':

@@ -2,7 +2,9 @@ import re
 from shutil import move
 from os import path, sep
 
-from utils.constants import SINGLE, DOUBLE, TRIPLE, MAC_OFFSET, ANIME_PATTERN, SERIES_PATTERN, ANIME_DIR
+from utils.io_utlis import find_video_metadata
+from utils.constants import SINGLE, DOUBLE, TRIPLE, MAC_OFFSET, ANIME_PATTERN, SERIES_PATTERN, ANIME_DIR, ASPECT_RATIOS, \
+    QUALITY
 
 
 class Episode:
@@ -144,3 +146,21 @@ class Episode:
                + (f" & {title_set.pop(0)}" if title_set else '')\
                + (f" & {title_set.pop(0)}" if title_set else '')\
                + f".{file.extension}"
+
+    def update_file_meta(self):
+        data = find_video_metadata(self.location)
+        if data:
+            self.set_file_meta(data)
+
+        if self.height == 0 or self.width == 0:
+            ratio = 0
+        else:
+            ratio = int(1000.0 * self.width / self.height) / 1000.0
+            ratio = min(ASPECT_RATIOS, key=lambda x: abs(x - ratio))
+        self.ratio = ratio
+        if self.height == 0:
+            self.quality = ''
+        else:
+            self.quality = QUALITY[min(QUALITY, key=lambda x: abs(x - self.height))]
+
+

@@ -1,7 +1,6 @@
 import json
 import os
 import shutil
-import time
 from sys import argv
 
 from episode import Episode
@@ -118,15 +117,8 @@ def sync_queue(queue=None):
             if not show.status == file.status:
                 file.report['info'].append('Status changed to ' + file.status)
             show.status = file.status
-            episode = Episode(location=file.new_location,
-                              episode_option=file.episode_option,
-                              title=file.title,
-                              title2=file.title2,
-                              title3=file.title3,
-                              s_nr=file.s_nr,
-                              e_nr=file.e_nr)
 
-            if show.add_episode(episode):
+            if show.add_episode(file):
                 file.report['info'].append('Season created')
         loc = os.sep.join(file.location.split(os.sep)[:3 + MAC_OFFSET])
         if os.path.isdir(loc):
