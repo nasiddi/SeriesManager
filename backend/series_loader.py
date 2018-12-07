@@ -38,17 +38,16 @@ def load_files(top):
 
 def reload_metadata(shows):
     p = multiprocessing.Pool(8)
-    shows = p.map(loop_parallel(), shows.values())
+    shows = p.map(loop_parallel, shows.values())
     p.close()
     p.join()
-
-
 
 
 def loop_parallel(show):
     for season in show.seasons.values():
         for e in season.episodes.values():
             update_file_meta(e)
+
 
 def add_metadata(shows):
     meta = load_json(META_FILE)

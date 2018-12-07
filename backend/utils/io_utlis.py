@@ -88,7 +88,7 @@ def parse_args(args):
             if path.isabs(arg):
                 environ[CONF_FILE] = arg
             else:
-                environ[CONF_FILE] = path.join('configurations', arg)
+                environ[CONF_FILE] = path.join('data', arg)
         if opt in ('-o', '--output'):
             if path.isabs(arg):
                 environ[OUT_FILE] = arg
