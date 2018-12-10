@@ -14,24 +14,10 @@ def main(args=None, series_name='*', out_file='data/tree_file_comb'):
     SHOWS = load_shows(read_only=True)
     if args:
         parse_args(args)
-        conf = load_json(environ[CONF_FILE])
-        series_name = conf[SERIES_NAME]
         out_file = environ[OUT_FILE]
 
-    if series_name == '*':
-        tree_file = load_all()
-    else:
-        tree_file = load_json(out_file)
+    tree_file = load_all()
 
-        show, error = get_show_data(SHOWS[series_name])
-        for i in range(len(tree_file['errors'])):
-            if tree_file['errors'][i][SERIES_NAME] == series_name:
-                if error:
-                    tree_file['errors'][i] = error
-                else:
-                    del tree_file['errors'][i]
-                break
-        tree_file['shows'][series_name] = show
     save_json(tree_file, out_file)
     save_shows(SHOWS)
 

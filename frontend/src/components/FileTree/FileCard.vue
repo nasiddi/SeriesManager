@@ -22,7 +22,8 @@
           <b-input
             id="title"
             :disabled="isEdit"
-            v-model="e.title"/>
+            :placeholder="completeTitle"
+            v-model="title1"/>
         </b-col>
         <b-col
           v-if="edit"
@@ -187,6 +188,8 @@ export default {
       'Double',
       'Triple',
     ],
+    completeTitle: '',
+    title1: '',
     original: {},
     updated: {},
     edit: false,
@@ -213,19 +216,6 @@ export default {
     buttonColor() {
       return this.edit ? 'secondary' : 'outline-secondary';
     },
-    title() {
-      if (this.e.title === '') {
-        return '';
-      }
-      const eo = this.e.episode_option;
-      if (eo === 'Double' && this.e.title2 !== '') {
-        return `${this.e.title} & ${this.e.title2}`;
-      }
-      if (eo === 'Triple' && this.e.title3 !== '') {
-        return `${this.e.title} & ${this.e.title2} & ${this.e.title3}`;
-      }
-      return this.e.title;
-    },
     enr() {
       const eo = this.e.episode_option;
       if (eo === 'Single') {
@@ -238,10 +228,57 @@ export default {
     },
   },
   watch: {
+    edit: {
+      handler(edit) {
+        if (!edit) {
+          this.completeTitle = this.title();
+          this.title1 = '';
+        } else {
+          this.title1 = this.e.title;
+        }
+      },
+      deep: true,
+    },
+    title1: {
+      handler(e) {
+        const o = this.original;
+        if (this.title1 !== '') {
+          this.e.title = this.title1;
+          return true;
+        }
+        // const u = this.updated;
+        if (this.checkWrongSymbols(this.title1)) {
+          return this.updateSave(false);
+        }
+        if (e.name_needed) {
+          if (this.title1 === '') {
+            return this.updateSave(false);
+          }
+        }
+        this.updateSave(true);
+
+        if (!this.hasChanged(e)) {
+          e.save = false;
+          o.save = e.save;
+          return true;
+        }
+        if (e.save !== o.save) {
+          o.save = e.save;
+          return e.save;
+        }
+
+        e.save = true;
+        o.save = e.save;
+        return e.save;
+      },
+      deep: true,
+    },
     e: {
       handler(e) {
         const o = this.original;
-
+        if (this.title1 !== '') {
+          this.e.title = this.title1;
+        }
         // const u = this.updated;
         if (this.checkWrongSymbols(e.title)) {
           return this.updateSave(false);
@@ -287,8 +324,22 @@ export default {
   mounted() {
     this.original = _.cloneDeep(this.e);
     this.updated = _.cloneDeep(this.e);
+    this.completeTitle = this.title();
   },
   methods: {
+    title() {
+      if (this.e.title === '') {
+        return '';
+      }
+      const eo = this.e.episode_option;
+      if (eo === 'Double' && this.e.title2 !== '') {
+        return `${this.e.title} & ${this.e.title2}`;
+      }
+      if (eo === 'Triple' && this.e.title3 !== '') {
+        return `${this.e.title} & ${this.e.title2} & ${this.e.title3}`;
+      }
+      return this.e.title;
+    },
     hasChanged(e) {
       const o = this.original;
       if (e.title !== o.title) {
@@ -328,6 +379,9 @@ export default {
     },
     updateSave(primary) {
       if (primary) {
+        if (this.saveColor === 'outline-danger') {
+          this.e.save = true;
+        }
         this.saveColor = 'outline-primary';
       } else {
         this.saveColor = 'outline-danger';

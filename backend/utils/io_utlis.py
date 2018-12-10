@@ -25,6 +25,8 @@ def load_json(file):
             j_data = json.load(json_data)
     except FileNotFoundError:
         return {}
+    except json.decoder.JSONDecodeError:
+        return {}
     return j_data
 
 

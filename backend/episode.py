@@ -24,7 +24,7 @@ class Episode:
                  quality=''):
         self.location = location
         self.series_name = series_name
-        self.file_name = path.basename(location)
+        self.file_name = ''
         self.extension = ''
         self.s_nr = s_nr
         self.anime = False
@@ -65,6 +65,7 @@ class Episode:
         self.series_name = new_series_name
 
     def _parse(self):
+        self.file_name = path.basename(self.location)
         series_name = self.location.split(sep)[2 + MAC_OFFSET: 3 + MAC_OFFSET]
         if series_name:
             self.series_name = series_name[0]
@@ -162,5 +163,9 @@ class Episode:
             self.quality = ''
         else:
             self.quality = QUALITY[min(QUALITY, key=lambda x: abs(x - self.height))]
+
+    def set_location(self, location):
+        self.location = location
+        self._parse()
 
 

@@ -436,16 +436,11 @@ async function fileTree(body, res) {
 
 async function saveFileTree(body, res) {
   const outputFile = path.join(config.directories.storage, 'file_tree');
-  fs.writeJSON(outputFile, body.tree, (err) => {
-    if (err) {
-      winston.error(err);
-    }
-  });
   await run(
     'save_file_tree',
     '',
     '',
-    body.error,
+    body,
     outputFile,
     () => {},
     async (code, signal) => {

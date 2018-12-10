@@ -21,8 +21,8 @@
           class="px-2 mb-1">
           <b-button
             :style="{width: '100%'}"
-            :variant="saveColor"
-            @click.prevent="save">
+            :pressed.sync="error.save"
+            :variant="saveColor">
             Save
           </b-button>
         </b-col>
@@ -45,8 +45,7 @@
       class="text-center mt-4"/>
     <div v-if="json.length !== 0 && 'shows' in json">
       <b-button
-        v-if="_.isEmpty(error)"
-        :variant="saveColor"
+        variant="success"
         size="lg"
         block
         class="mt-3"
@@ -217,7 +216,7 @@ export default {
     },
     updateSave(primary) {
       if (primary) {
-        this.saveColor = 'success';
+        this.saveColor = 'outline-primary';
       } else {
         this.saveColor = 'outline-danger';
         this.error.save = false;
@@ -250,30 +249,15 @@ export default {
       if (this.errors.length === 0) {
         return;
       }
-
-      if ('skip' in this.$route.params) {
-        // eslint-disable-next-line prefer-destructuring
-        const skip = this.$route.params.skip;
-        if (skip >= this.errors.length) {
-          // eslint-disable-next-line prefer-destructuring
-          this.error = this.errors[this.errors.length - 1];
-          this.error.save = true;
-        } else {
-          this.error = this.errors[skip];
-          this.error.save = true;
-        }
-      } else {
-        // eslint-disable-next-line prefer-destructuring
-        this.error = this.errors[0];
-        this.error.save = true;
-      }
+      // eslint-disable-next-line prefer-destructuring
+      this.error = this.errors[0];
+      this.error.save = true;
       this.selected = this.error.series_name;
       this.original = _.cloneDeep(this.error);
       this.updated = _.cloneDeep(this.error);
     },
     async move(dir) {
       const current = this.errors.indexOf(this.error);
-      this.error.save = false;
       this.error = this.errors[current + dir];
       this.error.save = true;
       this.selected = this.error.series_name;
@@ -323,12 +307,8 @@ export default {
       });
     },
     save() {
-      if (this.saveColor === 'outline-danger') {
-        this.$snotify.error('Can\'t Save with Errors', { timeout: 1000 });
-        return;
-      }
       this.notifErrors = this.$snotify.info('Saving', { timeout: 0 });
-      this.$http.post('python/filetree/save', { error: this.error, tree: this.json }).then(
+      this.$http.post('python/filetree/save', this.json).then(
         (res) => {
           const body = _.defaults(res.body, {
           });
@@ -353,7 +333,6 @@ export default {
             name: 'reroute',
             params: {
               json: this.json,
-              skip: this.errors.indexOf(this.error),
               selected: this.selected,
             },
           });

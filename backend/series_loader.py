@@ -8,6 +8,7 @@ from episode import Episode
 from series import Series
 from utils.constants import META_FILE, STATUS, NAME_NEEDED, PREMIERE, FINAL, TVDB_ID, SERIES_DIR, ANIME_DIR, CONF_FILE
 from utils.io_utlis import load_json, load_shows, save_shows, parse_args
+from unlock_shows import unlock
 
 setrecursionlimit(10000)
 
@@ -84,7 +85,7 @@ def add_metadata(shows):
 
 def main(args):
     parse_args(args)
-
+    unlock()
     with open(environ[CONF_FILE]) as mytxt:
         for line in mytxt:
             print(line)

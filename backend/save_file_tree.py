@@ -7,17 +7,17 @@ import syncer
 from utils.constants import EXCEPTIONS_FILE, SERIES_NAME, NAME_NEEDED, CONF_FILE, OUT_FILE
 from utils.file import File
 from utils.io_utlis import load_shows, parse_args, save_json, save_shows, load_json, wait_on_creation, recursive_delete
-
+from unlock_shows import unlock
 SHOWS = None
 EXCEPTIONS = {}
 
 
 def main(args):
     global SHOWS, EXCEPTIONS
+    unlock()
     parse_args(args)
-    error = load_json(environ[CONF_FILE])
-
-    tree_file = load_json(environ[OUT_FILE])
+    data = load_json(environ[CONF_FILE])
+    #save_json(data, 'data/save_tree.json')
     SHOWS = load_shows()
     EXCEPTIONS = load_json(EXCEPTIONS_FILE)
 
@@ -25,13 +25,9 @@ def main(args):
         save_json({'shows_locked': True}, environ[OUT_FILE])
         print('shows locked')
         return
-    save_json(error, 'data/save_tree_conf.json')
     queue = syncer.QUEUE
-
-    if error:
-        series_name = load_show(error, tree_file, queue)
-    else:
-        series_name = load_all(tree_file, queue)
+    queue_errors(data['errors'], queue)
+    series_name = load_all(data['shows'], queue)
     save_json(EXCEPTIONS, EXCEPTIONS_FILE)
     save_queue(queue)
     report = []
@@ -41,89 +37,58 @@ def main(args):
     save_shows(SHOWS)
 
     import file_tree
-    file_tree.main(series_name=series_name if not error else error[SERIES_NAME], out_file=environ[OUT_FILE])
+    file_tree.main(out_file=environ[OUT_FILE])
 
 
-def load_show(error, tree_file, queue):
-    series_name = error[SERIES_NAME]
-    if error['exception']:
-        e_id = f'{series_name} {error["s_nr"]:02d}x{error["e_nr"]:0{3 if error["anime"] else 2}d}'
-        if error['exception'] not in ['part', 'double', 'lower_general']:
-            if e_id not in EXCEPTIONS[error['exception']]:
-                EXCEPTIONS[error['exception']][e_id] = []
-            EXCEPTIONS[error['exception']][e_id].append(error['word'])
-            EXCEPTIONS[error['exception']][e_id] = sorted(list(set(EXCEPTIONS[error['exception']])))
-        elif error['exception'] == 'double':
-            if series_name not in EXCEPTIONS[error['exception']]:
-                EXCEPTIONS[error['exception']][series_name] = []
-            EXCEPTIONS[error['exception']][series_name].append(error['title'])
-            EXCEPTIONS[error['exception']][series_name] = sorted(list(set(EXCEPTIONS[error['exception']])))
-        elif error['exception'] == 'lower_general':
-            EXCEPTIONS[error['exception']].append(error['word'])
-            EXCEPTIONS[error['exception']] = sorted(list(set(EXCEPTIONS[error['exception']])))
-        else:
-            EXCEPTIONS[error['exception']].append(e_id)
-            EXCEPTIONS[error['exception']] = sorted(list(set(EXCEPTIONS[error['exception']])))
-        return series_name
+def queue_errors(errors, queue):
+    for error in errors:
+        series_name = error[SERIES_NAME]
+        if 'exception' in error and error['exception']:
+            e_id = f'{series_name} {error["s_nr"]:02d}x{error["e_nr"]:0{3 if error["anime"] else 2}d}'
+            if error['exception'] not in ['part', 'double', 'lower_general']:
+                if e_id not in EXCEPTIONS[error['exception']]:
+                    EXCEPTIONS[error['exception']][e_id] = []
+                EXCEPTIONS[error['exception']][e_id].append(error['word'])
+                EXCEPTIONS[error['exception']][e_id] = sorted(list(set(EXCEPTIONS[error['exception']])))
+            elif error['exception'] == 'double':
+                if series_name not in EXCEPTIONS[error['exception']]:
+                    EXCEPTIONS[error['exception']][series_name] = []
+                EXCEPTIONS[error['exception']][series_name].append(error['title'])
+                EXCEPTIONS[error['exception']][series_name] = sorted(list(set(EXCEPTIONS[error['exception']])))
+            elif error['exception'] == 'lower_general':
+                EXCEPTIONS[error['exception']].append(error['word'])
+                EXCEPTIONS[error['exception']] = sorted(list(set(EXCEPTIONS[error['exception']])))
+            else:
+                EXCEPTIONS[error['exception']].append(e_id)
+                EXCEPTIONS[error['exception']] = sorted(list(set(EXCEPTIONS[error['exception']])))
+            continue
 
-    if error['delete']:
-        err = File(location=error['old_location'],
-                   s_nr=error['s_nr'],
-                   e_nr=error['e_nr'],
-                   series_name=series_name,
-                   title=error['title'],
-                   episode_option=error['episode_option'],
-                   name_needed=error[NAME_NEEDED],
-                   delete=True,
-                   anime=SHOWS[series_name].anime)
-        queue.append(err)
-    elif error['save']:
-        err = File(location=error['old_location'],
-                   s_nr=error['s_nr'],
-                   e_nr=error['e_nr'],
-                   s_nr_old=error['s_nr_old'],
-                   e_nr_old=error['e_nr_old'],
-                   series_name=series_name,
-                   title=error['title'],
-                   episode_option=error['episode_option'],
-                   name_needed=error[NAME_NEEDED],
-                   anime=SHOWS[series_name].anime)
-        syncer.queue_episode(err)
-
-    for s in tree_file['shows'][series_name]['seasons']:
-        for e in s['episodes']:
-            if e['delete']:
-                e = File(location=e['location'],
-                         s_nr=e['s_nr'],
-                         e_nr=e['e_nr'],
-                         series_name=series_name,
-                         title=e['title'],
-                         title2=e['title2'],
-                         title3=e['title3'],
-                         episode_option=e['episode_option'],
-                         name_needed=e[NAME_NEEDED],
-                         delete=True,
-                         anime=SHOWS[series_name].anime)
-                queue.append(e)
-            elif e['save']:
-                e = File(location=e['location'],
-                         s_nr=e['s_nr'],
-                         e_nr=e['e_nr'],
-                         s_nr_old=e['s_nr_old'],
-                         e_nr_old=e['e_nr_old'],
-                         series_name=series_name,
-                         title=e['title'],
-                         title2=e['title2'],
-                         title3=e['title3'],
-                         episode_option=e['episode_option'],
-                         name_needed=e[NAME_NEEDED],
-                         anime=SHOWS[series_name].anime)
-                syncer.queue_episode(e)
-    return series_name
+        if error['delete']:
+            err = File(location=error['old_location'],
+                       s_nr=error['s_nr'],
+                       e_nr=error['e_nr'],
+                       series_name=series_name,
+                       title=error['title'],
+                       episode_option=error['episode_option'],
+                       name_needed=error[NAME_NEEDED],
+                       delete=True,
+                       anime=SHOWS[series_name].anime)
+            queue.append(err)
+        elif error['save']:
+            err = File(location=error['old_location'],
+                       s_nr=error['s_nr'],
+                       e_nr=error['e_nr'],
+                       s_nr_old=error['s_nr_old'],
+                       e_nr_old=error['e_nr_old'],
+                       series_name=series_name,
+                       title=error['title'],
+                       episode_option=error['episode_option'],
+                       name_needed=error[NAME_NEEDED],
+                       anime=SHOWS[series_name].anime)
+            syncer.queue_episode(err)
 
 
-def load_all(tree_file, queue):
-    update = tree_file['shows']
+def load_all(update, queue):
     series_names = update.keys()
 
     for n in series_names:
@@ -186,6 +151,7 @@ def save_queue(queue):
             file.report['success'].append('Copy successful')
         else:
             file.report['error'].append('Copy failed')
+            continue
         show = SHOWS[file.series_name]
         if not file.e_nr == file.e_nr_old or not file.s_nr == file.s_nr_old:
             try:

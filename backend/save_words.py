@@ -41,7 +41,7 @@ def main(args):
             new_location = file['location'].replace(old[0], file['file'])
             try:
                 move(file['location'], new_location)
-                SHOWS[e.series_name].seasons[e.s_nr].episodes[e.e_nr] = e
+                SHOWS[e.series_name].seasons[e.s_nr].episodes[e.e_nr].set_location(new_location)
             except Exception as e:
                 print('rename', e)
 
