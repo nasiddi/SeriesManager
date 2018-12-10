@@ -77,7 +77,7 @@ def prep(data):
         if not f['s_nr'] or not f['e_nr']:
             continue
 
-        f = File(location=os.path.join(FILE_DIR, f['location']),
+        f = File(old_location=os.path.join(FILE_DIR, f['location']),
                  series_name=show.series_name,
                  s_nr=f['s_nr'],
                  e_nr=f['e_nr'],
@@ -94,9 +94,9 @@ def prep(data):
 
         name = Episode.compile_file_name(None, file=f)
         if f.subs:
-            f.new_location = os.path.join(SUB_DIR, name)
+            f.location = os.path.join(SUB_DIR, name)
         else:
-            f.new_location = os.path.join(folder, name)
+            f.location = os.path.join(folder, name)
         QUEUE.append(f)
 
     return show
@@ -106,17 +106,17 @@ def sync_queue(show):
     summary = REPORT['summary']['seasons']
     total = REPORT['summary']['total']
     for file in QUEUE:
-        if os.path.exists(file.new_location):
-            REPORT['error'].append('File already exists: ' + file.new_location)
+        if os.path.exists(file.location):
+            REPORT['error'].append('File already exists: ' + file.location)
             continue
         try:
-            shutil.move(file.location, file.new_location)
+            shutil.move(file.old_location, file.location)
         except Exception as e:
             print('rename', e)
-            REPORT['error'].append('Copy failed: ' + file.new_location)
+            REPORT['error'].append('Copy failed: ' + file.location)
             continue
-        if wait_on_creation(file.new_location):
-            REPORT['success'].append('Copy successful: ' + file.new_location)
+        if wait_on_creation(file.location):
+            REPORT['success'].append('Copy successful: ' + file.location)
             if file.subs:
                 REPORT['summary']['subs'] += 1
             else:
@@ -134,13 +134,16 @@ def sync_queue(show):
                     total['e'] += 2
                     summary[file.s_nr]['e'] += 2
         else:
-            REPORT['error'].append('Copy failed: ' + file.new_location)
-        if show.add_episode(file, reload_metadata=False):
+            REPORT['error'].append('Copy failed: ' + file.location)
+        e = Episode(location=file.location)
+        if show.add_episode(e):
             REPORT['info'].append('Season ' + str(file.s_nr) + ' created')
-        loc = os.sep.join(file.location.split(os.sep)[:3 + MAC_OFFSET])
+        loc = os.sep.join(file.old_location.split(os.sep)[:3 + MAC_OFFSET])
         if os.path.isdir(loc):
             if loc not in CLEAN_UP:
                 CLEAN_UP.append(loc)
+
+        show.update_metadata()
 
 
 def clean_up():

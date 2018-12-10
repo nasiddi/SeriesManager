@@ -46,9 +46,7 @@ def reload_metadata(shows):
 
 
 def loop_parallel(show):
-    for season in show.seasons.values():
-        for e in season.episodes.values():
-            e.update_file_meta()
+    show.update_metadata()
 
 
 def add_metadata(shows):

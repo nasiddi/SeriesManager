@@ -30,7 +30,7 @@ def main(args):
     files = []
     for f in data:
 
-        f = File(location=os.path.join(FILE_DIR, f['location']),
+        f = File(old_location=os.path.join(FILE_DIR, f['location']),
                  sync=f['sync'],
                  s_nr=f['s_nr'],
                  e_nr=f['e_nr'],
@@ -92,23 +92,23 @@ def sync_queue(queue=None):
         queue = QUEUE
     for file in queue:
         if file.delete:
-            if recursive_delete(os.sep.join(file.location.split(os.sep)[:3 + MAC_OFFSET])):
+            if recursive_delete(os.sep.join(file.old_location.split(os.sep)[:3 + MAC_OFFSET])):
                 file.report['info'].append('Delete successful')
             else:
                 file.report['error'].append('Delete failed')
             continue
         if file.override:
             delete_file(file)
-        if file_exists(file, SHOWS):
+        if file.type_option == 'Series' and file_exists(file, SHOWS):
             file.report['error'].append('File exists')
             continue
         try:
-            shutil.move(file.location, file.new_location)
+            shutil.move(file.old_location, file.location)
         except Exception as e:
             print('rename', e)
             file.report['error'].append('Copy failed')
             return
-        if wait_on_creation(file.new_location):
+        if wait_on_creation(file.location):
             file.report['success'].append('Copy successful')
         else:
             file.report['error'].append('Copy failed')
@@ -117,10 +117,11 @@ def sync_queue(queue=None):
             if not show.status == file.status:
                 file.report['info'].append('Status changed to ' + file.status)
             show.status = file.status
-
-            if show.add_episode(file):
+            e = Episode(file.location)
+            e.update_file_meta()
+            if show.add_episode(e):
                 file.report['info'].append('Season created')
-        loc = os.sep.join(file.location.split(os.sep)[:3 + MAC_OFFSET])
+        loc = os.sep.join(file.old_location.split(os.sep)[:3 + MAC_OFFSET])
         if os.path.isdir(loc):
             if loc not in CLEAN_UP:
                 CLEAN_UP.append(loc)
@@ -185,20 +186,20 @@ def queue_episode(file):
     name = Episode.compile_file_name(None, file=file)
 
     base_path = get_base_path(file)
-    file.new_location = os.path.join(base_path, name)
+    file.location = os.path.join(base_path, name)
 
     if file.subs:
         for sub in file.subs:
-            QUEUE.append(File(location=sub,
+            QUEUE.append(File(old_location=sub,
                               series_name=file.series_name,
-                              new_location=os.path.join(
+                              location=os.path.join(
                                   SUB_DIR, '{}.{}'.format(name.rsplit('.', 1)[0], sub.rsplit('.', 1)[1]))))
     QUEUE.append(file)
     return QUEUE
 
 
 def queue_movie(file):
-    file.new_location = os.path.join(
+    file.location = os.path.join(
         HD_Movies if file.type_option == 'HD' else SD_MOVIES, '{f.title}.{f.extension}'.format(f=file))
     QUEUE.append(file)
 
@@ -213,12 +214,12 @@ def get_base_path(file):
 
 
 def ignore_file(file):
-    split_loc = file.location.split(os.sep)
+    split_loc = file.old_location.split(os.sep)
     loc = os.sep.join(split_loc[:3 + MAC_OFFSET])
     if os.path.isdir(loc):
         new_loc = ' '.join([loc, '[ignore]'])
     else:
-        split_loc = file.location.rsplit('.', 1)
+        split_loc = file.old_location.rsplit('.', 1)
         split_loc[0] = ' '.join([split_loc[0], '[ignore]'])
         new_loc = '.'.join(split_loc)
     print(loc)

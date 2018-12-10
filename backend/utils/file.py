@@ -6,7 +6,7 @@ from utils.constants import NONE, SERIES_NAME, FILE_DIR, MAC_OFFSET, AIRING, HIA
 class File:
     def __init__(self,
                  sync=False,
-                 location='',
+                 old_location='',
                  s_nr='',
                  e_nr='',
                  s_nr_old='',
@@ -21,13 +21,13 @@ class File:
                  type_option='Series',
                  status=NONE,
                  new_series=False,
-                 new_location='',
+                 location='',
                  tvdb_id=0,
                  name_needed=True,
                  anime=False,
                  delete=False,
                  ):
-        self.location = location
+        self.old_location = old_location
         self.sync = sync
         self.s_nr = s_nr
         self.e_nr = e_nr
@@ -43,8 +43,8 @@ class File:
         self.override = override
         self.subs = subs
         self.type_option = type_option
-        self.new_location = new_location
-        self.extension = location.split('.')[-1]
+        self.location = location
+        self.extension = old_location.split('.')[-1]
         self.status = status
         self.anime = False
         self.new_series = new_series
@@ -55,7 +55,7 @@ class File:
         self.report = {'info': [], 'error': [], 'success': []}
 
     def __str__(self):
-        return {'location': self.location.replace(FILE_DIR, ''),
+        return {'location': self.old_location.replace(FILE_DIR, ''),
                 SERIES_NAME: self.series_name,
                 's_nr': self.s_nr,
                 'e_nr': self.e_nr,
@@ -76,8 +76,8 @@ class File:
                 'subs': []}
 
     def get_report(self):
-        return dict(file_name=self.new_location.rsplit(sep, 1)[1] if self.new_location else
-                    self.location.split(sep, 2 + MAC_OFFSET)[-1],
+        return dict(file_name=self.location.rsplit(sep, 1)[1] if self.location else
+                    self.old_location.split(sep, 2 + MAC_OFFSET)[-1],
                     info=self.report['info'],
                     error=self.report['error'],
                     success=self.report['success'])

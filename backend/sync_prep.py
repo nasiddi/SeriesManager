@@ -20,7 +20,7 @@ def main(args):
             if extension in EXTENSIONS:
                 if 'sample' in name.lower():
                     continue
-                file_list.append(File(location=path.join(root, name)))
+                file_list.append(File(old_location=path.join(root, name)))
             if extension in SUBS:
                 subs.append({'text': name, 'value': path.join(root, name)})
 
@@ -45,7 +45,7 @@ def main(args):
     multi_title = []
     delete = []
     for file in file_list:
-        loc = file.location.split(sep)[2 + MAC_OFFSET]
+        loc = file.old_location.split(sep)[2 + MAC_OFFSET]
         if loc in locations:
             if loc not in multi_title:
                 multi_title.append(loc)
@@ -53,7 +53,7 @@ def main(args):
             locations.append(loc)
 
     for file in file_list:
-        loc = file.location.split(sep)[2 + MAC_OFFSET]
+        loc = file.old_location.split(sep)[2 + MAC_OFFSET]
         if loc in multi_title:
             delete.append(file)
 
@@ -82,7 +82,7 @@ def main(args):
         },
     ]
     for file in file_list:
-        location = file.location.lower()
+        location = file.old_location.lower()
         for reg in regex:
 
             pattern = re.compile(reg['regex'])

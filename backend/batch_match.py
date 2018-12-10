@@ -33,7 +33,7 @@ def main(args):
             continue
         pattern = re.compile(reg['regex'])
         for file in file_list:
-            match = re.findall(pattern, file.location)
+            match = re.findall(pattern, file.old_location)
             if match:
                 try:
                     file.s_nr = int(match[0][reg['s_start']:reg['s_end']])
@@ -43,7 +43,7 @@ def main(args):
     output = {'files': []}
     for f in file_list:
         output['files'].append({
-            'location': f.location.split(os.sep, 2 + MAC_OFFSET)[2 + MAC_OFFSET],
+            'location': f.old_location.split(os.sep, 2 + MAC_OFFSET)[2 + MAC_OFFSET],
             'title': '',
             'title2': '',
             'title3': '',
@@ -70,9 +70,9 @@ def prep_file(name, root):
     if extension in EXTENSIONS:
         if 'sample' in name.lower():
             return None
-        return File(location=os.path.join(root, name), subs=False)
+        return File(old_location=os.path.join(root, name), subs=False)
     if extension in SUBS:
-        return File(location=os.path.join(root, name), subs=True)
+        return File(old_location=os.path.join(root, name), subs=True)
 
 
 if __name__ == '__main__':
