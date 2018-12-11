@@ -4,11 +4,11 @@ from episode import Episode
 
 
 class Season:
-    def __init__(self, s_nr=0, episodes=None, episode_count=0, location=''):
+    def __init__(self, s_nr=0, location=''):
 
         self.s_nr = s_nr
-        self.episodes = episodes
-        self.episode_count = episode_count
+        self.episodes = {}
+        self.episode_count = 0
         self.location = location
 
     def save(self):

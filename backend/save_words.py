@@ -44,8 +44,8 @@ def main(args):
                 SHOWS[e.series_name].seasons[e.s_nr].episodes[e.e_nr].set_location(new_location)
             except Exception as e:
                 print('rename', e)
-
-    save_json(dictionary, DICT_FILE)
+    if dictionary:
+        save_json(dictionary, DICT_FILE)
     save_json({'done': True}, environ[OUT_FILE])
     save_shows(SHOWS)
 

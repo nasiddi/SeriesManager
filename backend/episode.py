@@ -154,7 +154,7 @@ class Episode:
             self.set_file_meta(data)
 
         if self.height == 0 or self.width == 0:
-            ratio = 0
+            ratio = ''
         else:
             ratio = int(1000.0 * self.width / self.height) / 1000.0
             ratio = min(ASPECT_RATIOS, key=lambda x: abs(x - ratio))

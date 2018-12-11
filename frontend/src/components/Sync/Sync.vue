@@ -111,7 +111,7 @@ export default {
     async updateTitle(f) {
       return new Promise((resolve) => {
         const file = f;
-        if (!(file.new_series)) {
+        if (!(file.new_series) && !_.isEmpty(this.json) && file.series_name in this.json.shows) {
           file.tvdb_id = this.json.shows[file.series_name].tvdb_id;
         }
         this.$http.post('jobs/tvdb', file)

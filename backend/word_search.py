@@ -19,7 +19,8 @@ def main(args):
     DICTIONARY = load_json(DICT_FILE)
     load_all()
     new_dict = sorted(list(set(NEW_DICT)))
-    save_json(new_dict, DICT_FILE)
+    if new_dict:
+        save_json(new_dict, DICT_FILE)
 
     save_json({'words': WORDS, 'info': 'Dictionary is up to date'}, environ[OUT_FILE])
 

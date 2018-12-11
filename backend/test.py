@@ -4,6 +4,7 @@ from episode import Episode
 from utils.constants import *
 from utils.io_utlis import load_shows
 from series import Series
+import stats
 
 
 class TestCompile(unittest.TestCase):
@@ -47,10 +48,9 @@ class TestCompile(unittest.TestCase):
                                 s = ''.join([t1[0] if t1 else '_', t2[0] if t2 else '_',
                                              t3[0] if t3 else '_', 'A' if a else '_', eo[0],
                                              str(len(str(se[0])) + 3), str(len(str(se[1])))])
-                                print(s)
+                                # print(s)
                                 if s == 'BRJAT41':
                                     pass
-
 
                                 title1 = t1
                                 if not title1 and not eo == SINGLE:
@@ -93,6 +93,11 @@ class TestCompile(unittest.TestCase):
         self.assertEqual(star.get_episode_by_sxe(1, 2), star.get_episode_by_sxe(1, 1))
         self.assertEqual(star.get_episode_by_sxe(1, 27), None)
         self.assertEqual(star.get_episode_by_sxe(1, 1).e_nr, 1)
+
+    def test_stats(self):
+        statistics = stats.main(['--output=stats.json'])
+        self.assertTrue(statistics)
+
 
 
 def get_compile_truth():

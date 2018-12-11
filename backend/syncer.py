@@ -19,7 +19,7 @@ def main(args):
     global SHOWS
     parse_args(args)
     data = load_json(os.environ[CONF_FILE])
-
+    save_json(data, 'data/syncer.json')
     SHOWS = load_shows()
 
     if SHOWS is None:
@@ -116,7 +116,7 @@ def sync_queue(queue=None):
             show = SHOWS[file.series_name]
             if not show.status == file.status:
                 file.report['info'].append('Status changed to ' + file.status)
-            show.status = file.status
+                show.status = file.status
             e = Episode(file.location)
             e.update_file_meta()
             if show.add_episode(e):
@@ -174,11 +174,18 @@ def delete_file(file):
 
 
 def create_new_series(file):
+    from tvdb_client import ApiV2Client
+    api_client = ApiV2Client('nadinasiddiquiwaz', 'ZEDKTMYBNB29LBOS', 'EISRLGJH035SO60Q')
+    api_client.login()
+    show = api_client.get_series(file.tvdb_id)
+    premiere = ''
+    if 'data' in show:
+        premiere = show['data']['firstAired']
     print(get_base_path(file))
     print(get_base_path(file).rsplit(os.sep, 1))
     base_path = get_base_path(file).rsplit(os.sep, 1)[0]
     SHOWS.update({file.series_name: Series(series_name=file.series_name, status=file.status, tvdb_id=file.tvdb_id,
-                                           name_needed=file.name_needed, location=base_path)})
+                                           name_needed=file.name_needed, location=base_path, premiere=premiere)})
     file.report['info'].append('Series created')
 
 

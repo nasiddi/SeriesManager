@@ -52,6 +52,7 @@ class Series:
         if number == 0:
             number = int(location[-2:])
         season = Season(location=location, s_nr=number)
+        season.episodes = {}
         self.seasons[number] = season
         return season
 

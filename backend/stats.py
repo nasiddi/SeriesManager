@@ -85,7 +85,6 @@ def main(args):
             finally:
                 show_stats['ratio'].pop(key, None)
 
-        print(show.series_name)
 
         show_stats['avg_duration'] = int(show_stats['duration'] / show_stats['episodes'] * 100) / 100.0
         show_stats['avg_size'] = int(show_stats['size'] / show_stats['episodes'] * 100) / 100.0
@@ -130,9 +129,14 @@ def main(args):
 
     stats['total']['avg_mb_ep'] = int(size / ep_count * 100.0) / 100.0
     stats['total']['avg_gb_show'] = int(size / show_count / 1024 * 100.0) / 100.0
+    for s in stats['shows']:
+        keys = s['quality'].keys()
+        for k in keys:
+            if type(k) is int:
+                print(s['series_name'])
 
     save_json(stats, environ[OUT_FILE])
-
+    return stats
 
 if __name__ == '__main__':
     start = time()

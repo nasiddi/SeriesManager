@@ -11,7 +11,7 @@ class File:
                  e_nr='',
                  s_nr_old='',
                  e_nr_old='',
-                 series_name='Series Name',
+                 series_name='',
                  title='',
                  title2='',
                  title3='',

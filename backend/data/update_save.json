@@ -56,7 +56,7 @@
         "tvdb_id_unchanged": 272156
     },
     {
-        "final": "2016-02-23",
+        "final": "",
         "final_unchanged": "2016-02-23",
         "name_needed": true,
         "name_needed_unchanged": true,
@@ -64,8 +64,8 @@
         "premiere_unchanged": "2015-01-06",
         "series_name": "Agent Carter",
         "series_name_unchanged": "Agent Carter",
-        "status": "Ended",
-        "status_unchanged": "Ended",
+        "status": "Airing",
+        "status_unchanged": "Airing",
         "tvdb_id": 281485,
         "tvdb_id_unchanged": 281485
     },
@@ -350,6 +350,20 @@
         "tvdb_id_unchanged": 75817
     },
     {
+        "final": "",
+        "final_unchanged": "",
+        "name_needed": true,
+        "name_needed_unchanged": true,
+        "premiere": "",
+        "premiere_unchanged": "",
+        "series_name": "Castle",
+        "series_name_unchanged": "Castle",
+        "status": "Airing",
+        "status_unchanged": "Airing",
+        "tvdb_id": 82607,
+        "tvdb_id_unchanged": 82607
+    },
+    {
         "final": "2017-11-29",
         "final_unchanged": "2017-11-29",
         "name_needed": true,
@@ -588,7 +602,7 @@
         "tvdb_id_unchanged": 282165
     },
     {
-        "final": "",
+        "final": "2018-10-19",
         "final_unchanged": "",
         "name_needed": true,
         "name_needed_unchanged": true,
@@ -597,7 +611,7 @@
         "series_name": "Daredevil",
         "series_name_unchanged": "Daredevil",
         "status": "Ended",
-        "status_unchanged": "Hiatus",
+        "status_unchanged": "Ended",
         "tvdb_id": 281662,
         "tvdb_id_unchanged": 281662
     },
@@ -618,16 +632,16 @@
     {
         "final": "",
         "final_unchanged": "",
-        "name_needed": true,
-        "name_needed_unchanged": true,
-        "premiere": "2016-11-09",
+        "name_needed": false,
+        "name_needed_unchanged": false,
+        "premiere": "",
         "premiere_unchanged": "",
         "series_name": "Dark Heart",
         "series_name_unchanged": "Dark Heart",
-        "status": "Airing",
-        "status_unchanged": "Airing",
-        "tvdb_id": 319359,
-        "tvdb_id_unchanged": 319359
+        "status": "none",
+        "status_unchanged": "none",
+        "tvdb_id": "",
+        "tvdb_id_unchanged": ""
     },
     {
         "final": "2017-08-25",
@@ -966,16 +980,16 @@
         "tvdb_id_unchanged": 259063
     },
     {
-        "final": "",
+        "final": "2018-02-10",
         "final_unchanged": "",
         "name_needed": false,
-        "name_needed_unchanged": true,
+        "name_needed_unchanged": false,
         "premiere": "2018-01-06",
         "premiere_unchanged": "2018-01-06",
         "series_name": "Hard Sun",
         "series_name_unchanged": "Hard Sun",
         "status": "Ended",
-        "status_unchanged": "Hiatus",
+        "status_unchanged": "Ended",
         "tvdb_id": 333402,
         "tvdb_id_unchanged": 333402
     },
@@ -1051,7 +1065,7 @@
     },
     {
         "final": "2018-11-02",
-        "final_unchanged": "",
+        "final_unchanged": "2018-11-02",
         "name_needed": true,
         "name_needed_unchanged": true,
         "premiere": "2013-02-01",
@@ -1248,16 +1262,16 @@
     {
         "final": "",
         "final_unchanged": "",
-        "name_needed": true,
-        "name_needed_unchanged": true,
-        "premiere": "2018-04-13",
-        "premiere_unchanged": "2018-04-13",
+        "name_needed": false,
+        "name_needed_unchanged": false,
+        "premiere": "",
+        "premiere_unchanged": "",
         "series_name": "Lost in Space",
         "series_name_unchanged": "Lost in Space",
-        "status": "Hiatus",
-        "status_unchanged": "Hiatus",
-        "tvdb_id": 343253,
-        "tvdb_id_unchanged": 343253
+        "status": "none",
+        "status_unchanged": "none",
+        "tvdb_id": "",
+        "tvdb_id_unchanged": ""
     },
     {
         "final": "2018-05-28",
@@ -1472,16 +1486,16 @@
     {
         "final": "",
         "final_unchanged": "",
-        "name_needed": true,
-        "name_needed_unchanged": true,
-        "premiere": "2014-08-09",
+        "name_needed": false,
+        "name_needed_unchanged": false,
+        "premiere": "",
         "premiere_unchanged": "",
         "series_name": "Outlander",
         "series_name_unchanged": "Outlander",
-        "status": "Airing",
-        "status_unchanged": "Airing",
-        "tvdb_id": 270408,
-        "tvdb_id_unchanged": 270408
+        "status": "none",
+        "status_unchanged": "none",
+        "tvdb_id": "",
+        "tvdb_id_unchanged": ""
     },
     {
         "final": "2013-02-25",
@@ -2136,8 +2150,8 @@
         "premiere_unchanged": "2015-12-14",
         "series_name": "The Expanse",
         "series_name_unchanged": "The Expanse",
-        "status": "Hiatus",
-        "status_unchanged": "Hiatus",
+        "status": "Airing",
+        "status_unchanged": "Airing",
         "tvdb_id": 280619,
         "tvdb_id_unchanged": 280619
     },
@@ -2270,16 +2284,16 @@
     {
         "final": "",
         "final_unchanged": "",
-        "name_needed": true,
-        "name_needed_unchanged": true,
-        "premiere": "2015-01-15",
-        "premiere_unchanged": "2015-01-15",
+        "name_needed": false,
+        "name_needed_unchanged": false,
+        "premiere": "",
+        "premiere_unchanged": "",
         "series_name": "The Man in High Castle",
         "series_name_unchanged": "The Man in High Castle",
-        "status": "Hiatus",
-        "status_unchanged": "Hiatus",
-        "tvdb_id": 295829,
-        "tvdb_id_unchanged": 295829
+        "status": "none",
+        "status_unchanged": "none",
+        "tvdb_id": "",
+        "tvdb_id_unchanged": ""
     },
     {
         "final": "2018-04-04",
@@ -2466,16 +2480,16 @@
     {
         "final": "",
         "final_unchanged": "",
-        "name_needed": true,
-        "name_needed_unchanged": true,
-        "premiere": "2018-10-12",
-        "premiere_unchanged": "2018-10-12",
+        "name_needed": false,
+        "name_needed_unchanged": false,
+        "premiere": "",
+        "premiere_unchanged": "",
         "series_name": "Titans",
         "series_name_unchanged": "Titans",
-        "status": "Airing",
-        "status_unchanged": "Airing",
-        "tvdb_id": 341663,
-        "tvdb_id_unchanged": 341663
+        "status": "none",
+        "status_unchanged": "none",
+        "tvdb_id": "",
+        "tvdb_id_unchanged": ""
     },
     {
         "final": "2018-04-01",
@@ -2584,8 +2598,8 @@
         "premiere_unchanged": "2013-03-03",
         "series_name": "Vikings",
         "series_name_unchanged": "Vikings",
-        "status": "Hiatus",
-        "status_unchanged": "Hiatus",
+        "status": "Airing",
+        "status_unchanged": "Airing",
         "tvdb_id": 260449,
         "tvdb_id_unchanged": 260449
     },

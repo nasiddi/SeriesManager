@@ -331,6 +331,9 @@ export default {
   },
   methods: {
     checkWrongSymbols(val) {
+      if (!val) {
+        return false;
+      }
       let found = false;
       this.wrongSymbols.forEach((sym) => {
         if (val.includes(sym)) {

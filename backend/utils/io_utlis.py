@@ -127,8 +127,8 @@ def find_video_metadata(file):
     try:
         ffprobe_output = check_output(args).decode('utf-8')
     except Exception as e:
-        print(path.basename(file), file=stderr)
-        print(e, file=stderr)
+        # print(path.basename(file), file=stderr)
+        # print(e, file=stderr)
         return None
     ffprobe_output = loads(ffprobe_output)
 

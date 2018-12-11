@@ -64,5 +64,27 @@
         "file_name": "NCIS Los Angeles 09x20 - Reentry.mkv",
         "info": [],
         "success": []
+    },
+    {
+        "error": [],
+        "file_name": "Castle 01x01 - Pilot.mkv",
+        "info": [
+            "Series created",
+            "Season created"
+        ],
+        "success": [
+            "Copy successful"
+        ]
+    },
+    {
+        "error": [],
+        "file_name": "Castle 01x01 - Pilot.mkv",
+        "info": [
+            "Series created",
+            "Season created"
+        ],
+        "success": [
+            "Copy successful"
+        ]
     }
 ]
