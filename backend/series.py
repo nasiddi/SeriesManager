@@ -77,7 +77,7 @@ class Series:
         if episode.s_nr not in self.seasons:
             self.add_season(location=sep.join(episode.location.split(sep)[:-1]), number=episode.s_nr)
             new_season = True
-        self.seasons[episode.s_nr][episode.e_nr] = episode
+        self.seasons[episode.s_nr].episodes[episode.e_nr] = episode
         return new_season
 
     def get_next(self, episode):

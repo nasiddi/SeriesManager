@@ -8,7 +8,7 @@ from series import Series
 from utils.constants import CONF_FILE, OUT_FILE, FILE_DIR, SERIES_NAME, MAC_OFFSET, SUBS, HD_Movies, \
     SUB_DIR, SD_MOVIES, SERIES_DIR, ANIME_DIR
 from utils.file import File
-from utils.io_utlis import load_shows, parse_args, save_json, save_shows, load_json, wait_on_creation, recursive_delete
+from utils.io_utlis import load_shows, parse_args, save_json, save_shows, load_json, wait_on_creation, recursive_delete, wait_on_delete
 
 QUEUE = []
 SHOWS = None
@@ -146,10 +146,10 @@ def delete_file(file):
             location = SHOWS[file.series_name].get_episode_by_sxe(
                 file.s_nr, file.e_nr).location
         except KeyError:
-            file.report['error'].append('Delete failed')
+            file.report['info'].append('No File to delete')
             return
         except AttributeError:
-            file.report['error'].append('Delete failed')
+            file.report['info'].append('No File to delete')
             return
     else:
         folder = HD_Movies if file.type_option == 'HD' else 'SD'
@@ -159,7 +159,7 @@ def delete_file(file):
                 break
 
     if location is None:
-        file.report['error'].append('Delete failed')
+        file.report['info'].append('No File to delete')
         return
     try:
         os.remove(location)
@@ -167,10 +167,10 @@ def delete_file(file):
         file.report['error'].append('Delete failed')
         print(e)
         return
-    if wait_on_creation:
-        file.report['error'].append('Delete failed')
-    else:
+    if wait_on_delete(location):
         file.report['success'].append('Delete successful')
+    else:
+        file.report['error'].append('Delete failed')
 
 
 def create_new_series(file):

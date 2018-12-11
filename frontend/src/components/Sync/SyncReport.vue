@@ -80,7 +80,6 @@ export default {
           const body = _.defaults(res.body, {
           });
           if (res.body === 'failed') {
-            this.$snotify.remove(this.notifLoading.id);
             this.$snotify.error('Python failed', { timeout: 0 });
             return;
           }
