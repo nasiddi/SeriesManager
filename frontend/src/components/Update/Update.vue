@@ -43,7 +43,8 @@
 
       <update-card
         v-for="s in json"
-        v-if="(s.status == 'Airing' && a)||(s.status == 'Hiatus' && h)||(s.status == 'Ended' && e)"
+        v-if="(s.status == 'Airing' && a)||(s.status == 'Hiatus' && h)
+        ||(s.status == 'Ended' && e)||(s.status =='none')"
         :key="s.series_name_unchanged"
         :id="setRef(s)"
         :s="s"/>
@@ -70,26 +71,36 @@ export default {
   },
   data: () => ({
     json: {},
+    hasNone: false,
     a: true,
     h: true,
     e: true,
-    status_s: [],
-    status_option: [
-      'Airing',
-      'Hiatus',
-      'Ended',
-    ],
-    name_option: [
-      { text: 'Name required', value: true },
-      { text: 'Name optional', value: false },
-    ],
   }),
+  watch: {
+    json: {
+      handler(json) {
+        this.findNone(json);
+      },
+      deep: true,
+    },
+  },
   created() {
     this.loadData();
   },
   mounted() {
   },
   methods: {
+    findNone(json) {
+      if (json.some(s => s.status === 'none')) {
+        this.a = false;
+        this.h = false;
+        this.e = false;
+      } else if (!this.a && !this.b && !this.c) {
+        this.a = true;
+        this.h = true;
+        this.e = true;
+      }
+    },
     loadData() {
       this.notifLoading = this.$snotify.info('Loading', { timeout: 0 });
       this.$http.post('python/update/prep').then(
@@ -102,6 +113,8 @@ export default {
             return;
           }
           this.json = body;
+          this.findNone(body);
+
           this.$snotify.remove(this.notifLoading.id);
           if ('shows_locked' in body) {
             this.notifLock = this.$snotify.confirm('', 'Shows locked', {

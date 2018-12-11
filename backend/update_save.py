@@ -23,24 +23,13 @@ def main(args):
         return
     for s in data:
         show = SHOWS[s['series_name_unchanged']]
-
-        if not s['name_needed_unchanged'] == s[NAME_NEEDED]:
-            print(s['series_name_unchanged'], NAME_NEEDED, s['name_needed_unchanged'], s[NAME_NEEDED])
+        if s['changed']:
             show.name_needed = s[NAME_NEEDED]
-        if not s['status_unchanged'] == s[STATUS]:
-            print(s['series_name_unchanged'], STATUS, s['status_unchanged'], s[STATUS])
             show.status = s[STATUS]
-        if not s['premiere_unchanged'] == s[PREMIERE]:
-            print(s['series_name_unchanged'], PREMIERE, s['premiere_unchanged'], s[PREMIERE])
             show.premiere = s[PREMIERE]
-        if not s['final_unchanged'] == s[FINAL]:
-            print(s['series_name_unchanged'], FINAL, s['final_unchanged'], s[FINAL])
             show.final = s[FINAL]
-        if not s['tvdb_id_unchanged'] == s[TVDB_ID]:
-            print(s['series_name_unchanged'], TVDB_ID, s['tvdb_id_unchanged'], s[TVDB_ID])
             show.tvdb_id = s[TVDB_ID]
         if not s['series_name_unchanged'] == s[SERIES_NAME]:
-            print(s['series_name_unchanged'], s[SERIES_NAME])
             update_location(show, s[SERIES_NAME])
             SHOWS.pop(s['series_name_unchanged'], None)
             show.series_name = s[SERIES_NAME]

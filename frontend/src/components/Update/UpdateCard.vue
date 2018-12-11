@@ -84,7 +84,7 @@ export default {
     },
   },
   data: () => ({
-    json: {},
+    original: {},
     status_option: [
       'Airing',
       'Hiatus',
@@ -97,35 +97,72 @@ export default {
   }),
   computed: {
     validateSeriesName() {
-      return this.s.series_name === this.s.series_name_unchanged ? null : true;
+      if (this.s.series_name !== this.original.series_name) {
+        // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+        this.s.changed = true;
+        return true;
+      }
+      return null;
     },
     validateStatus() {
-      return this.s.status === this.s.status_unchanged ? null : true;
+      if (this.s.status !== this.original.status) {
+        // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+        this.s.changed = true;
+        return true;
+      }
+      return null;
     },
     validateNameNeeded() {
-      return this.s.name_needed === this.s.name_needed_unchanged ? null : true;
+      if (this.s.name_needed !== this.original.name_needed) {
+        // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+        this.s.changed = true;
+        return true;
+      }
+      return null;
     },
     validateTVDBID() {
-      return this.s.tvdb_id === this.s.tvdb_id_unchanged ? null : true;
+      if (this.s.tvdb_id !== this.original.tvdb_id) {
+        // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+        this.s.changed = true;
+        return true;
+      }
+      return null;
     },
     validatePremiere() {
-      if (this.s.premiere === '') { return false; }
-      return this.s.premiere === this.s.premiere_unchanged ? null : true;
+      let change = false;
+      if (this.s.premiere !== this.original.premiere) {
+        // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+        this.s.changed = true;
+        change = true;
+      }
+      if (this.s.premiere === '') {
+        return false;
+      }
+      return change ? true : null;
     },
     validateFinal() {
-      if (this.s.final === '' && this.s.status === 'Ended') { return false; }
-      return this.s.final === this.s.final_unchanged ? null : true;
+      let change = false;
+      if (this.s.final !== this.original.final) {
+        // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+        this.s.changed = true;
+        change = true;
+      }
+      if (this.s.final === '' && this.s.status === 'Ended') {
+        return false;
+      }
+      return change ? true : null;
     },
   },
   created() {
     this.$parent.$on('dates', this.getDates);
+    this.original = _.cloneDeep(this.s);
   },
   mounted() {
     this.getDates();
   },
   methods: {
     async getDates() {
-      if (this.isValidDateWithDash(this.s.premiere)) {
+      if (this.s.premiere !== '' && this.isValidDateWithDash(this.s.premiere)) {
         if (this.s.status !== 'Ended') {
           if (this.s.final === '') {
             return;
@@ -133,8 +170,8 @@ export default {
           this.s.final = '';
           return;
         }
+        if (this.s.final !== '' && this.isValidDateWithDash(this.s.final)) { return; }
       }
-      if (this.isValidDateWithDash(this.s.final)) { return; }
       if (this.s.tvdb_id === '') {
         return;
       }
