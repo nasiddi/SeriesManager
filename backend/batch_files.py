@@ -12,7 +12,11 @@ def main(args):
     for dl in downloads:
         d = os.path.join(FILE_DIR, dl)
         if os.path.isfile(d):
-            units.append({'text': dl, 'files': [], 'select': False})
+            extension = dl.split('.')[-1].lower()
+            if extension in EXTENSIONS:
+                if 'sample' in dl.lower():
+                    continue
+                units.append({'text': dl, 'files': [], 'select': False})
             continue
         file_list = []
         for root, dirs, files in os.walk(d):
@@ -42,6 +46,7 @@ def main(args):
     js = {'regex': regex, 'units': units}
 
     save_json(js, os.environ[OUT_FILE])
+    return js
 
 
 if __name__ == '__main__':

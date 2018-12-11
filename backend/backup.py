@@ -44,7 +44,7 @@ def main(args=''):
     unlock()
     if args:
         save_json({'done': True}, os.environ[OUT_FILE])
-    return True
+    return date
 
 
 if __name__ == '__main__':

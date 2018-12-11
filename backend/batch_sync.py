@@ -18,12 +18,12 @@ CLEAN_UP = []
 
 def main(args):
     global SHOWS
-    SHOWS = load_shows()
+
     parse_args(args)
 
     data = load_json(os.environ[CONF_FILE])
     save_json(data, 'data/batch_sync.json')
-
+    SHOWS = load_shows()
     if SHOWS is None:
         save_json({'error': 'Shows locked'}, os.environ[OUT_FILE])
         print('shows locked')
@@ -35,11 +35,9 @@ def main(args):
         update_summary()
         clean_up()
         SHOWS[show.series_name] = show
-
-    print(json.dumps(REPORT, indent=4, sort_keys=True))
-
     save_json(REPORT, os.environ[OUT_FILE])
     save_shows(SHOWS)
+    return REPORT
 
 
 def update_summary():

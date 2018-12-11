@@ -89,7 +89,6 @@ def add_metadata(shows):
                     e.update_file_meta()
                 if not e.quality:
                     e.update_file_meta()
-                    print(e.id())
 
 
 def main(args):

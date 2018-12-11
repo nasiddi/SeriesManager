@@ -293,7 +293,7 @@ export default {
         );
     },
     loadData() {
-      this.$http.post('python/batch/start').then(
+      this.$http.post('python/batch/match', this.$route.params).then(
         (res) => {
           const body = _.defaults(res.body, {
           });
@@ -301,7 +301,6 @@ export default {
             this.$snotify.error('Python failed', { timeout: 0 });
             return;
           }
-          this.$snotify.error(body, { timeout: 0 });
           if ('shows_locked' in body) {
             this.notifLock = this.$snotify.confirm('', 'Shows locked', {
               timeout: 0,

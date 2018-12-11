@@ -8,15 +8,17 @@ from utils.io_utlis import load_shows, parse_args, save_json, load_json, wait_on
 SHOWS = None
 
 
-def main(args):
+def main(args='', date=''):
     global SHOWS
-    parse_args(args)
+    if args:
+        parse_args(args)
+        date = load_json(os.environ[CONF_FILE])['date']
+
     SHOWS = load_shows()
     if SHOWS is None:
         save_json({'error': 'Shows locked'}, os.environ[OUT_FILE])
         print('shows locked')
         return
-    date = load_json(os.environ[CONF_FILE])['date']
     folder = os.path.join(BACKUP_DIR, date)
     file_list = os.listdir(ASSETS)
     for f in file_list:

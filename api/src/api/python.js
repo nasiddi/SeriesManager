@@ -107,20 +107,7 @@ routes.post('/clearlog', async (req, res) => {
 });
 
 routes.post('/batch/match', async (req, res) => {
-  const outputFile = path.join(config.directories.storage, 'batch_match');
-
-  fs.writeJSON(outputFile, req.body, (err) => {
-    if (err) {
-      winston.error(err);
-      res.sendStatus(500).end();
-    }
-    res.json(outputFile);
-  });
-});
-
-routes.post('/batch/start', async (req, res) => {
-  const inputFile = path.join(config.directories.storage, 'batch_match');
-  python.batchMatch(inputFile, res);
+  python.batchMatch(req.body, res);
 });
 
 routes.get('/sync/prep', async (req, res) => {

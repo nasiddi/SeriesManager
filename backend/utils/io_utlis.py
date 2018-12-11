@@ -109,11 +109,14 @@ def parse_args(args):
 
 
 def recursive_delete(location):
+    if not path.exists(location):
+        return True
     if path.isdir(location):
         rmtree(location)
+        wait_on_delete(location)
     else:
         remove(location)
-
+        wait_on_delete(location)
     if path.exists(location):
         return False
     return True

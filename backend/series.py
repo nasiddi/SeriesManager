@@ -1,11 +1,10 @@
 from os import sep
 
 from season import Season
-from utils.constants import NONE, ANIME_DIR, SINGLE, TRIPLE
+from utils.constants import NONE, ANIME_DIR, SINGLE, DOUBLE, TRIPLE
 
 
 class Series:
-
     def __init__(self, series_name='',
                  name_needed=False,
                  status=NONE,
@@ -78,7 +77,20 @@ class Series:
         if episode.s_nr not in self.seasons:
             self.add_season(location=sep.join(episode.location.split(sep)[:-1]), number=episode.s_nr)
             new_season = True
-        self.seasons[episode.s_nr].episodes[episode.e_nr] = episode
+        season = self.seasons[episode.s_nr]
+        if episode.e_nr in season.episode_numbers:
+            if not episode.e_nr == 999:
+                episode.e_nr = 777
+        while episode.e_nr in season.episodes:
+            episode.e_nr += 1
+        season.episodes[episode.e_nr] = episode
+        if episode.e_nr < 777:
+            season.episode_numbers.append(episode.e_nr)
+            if episode.episode_option == DOUBLE:
+                season.episode_numbers.append(episode.e_nr + 1)
+            if episode.episode_option == TRIPLE:
+                season.episode_numbers.append(episode.e_nr + 2)
+        sorted(season.episode_numbers)
         return new_season
 
     def get_next(self, episode):
