@@ -1,10 +1,9 @@
 import re
-from shutil import move
 from os import path, sep
 
 from utils.io_utlis import find_video_metadata
-from utils.constants import SINGLE, DOUBLE, TRIPLE, MAC_OFFSET, ANIME_PATTERN, SERIES_PATTERN, ANIME_DIR, ASPECT_RATIOS, \
-    QUALITY
+from utils.constants import SINGLE, DOUBLE, TRIPLE, MAC_OFFSET, ANIME_PATTERN,\
+    SERIES_PATTERN, ANIME_DIR, ASPECT_RATIOS, QUALITY
 
 
 class Episode:
@@ -57,13 +56,6 @@ class Episode:
         self.duration = data[3]
         self.ratio = data[4]
 
-    def update_location(self, old_series_name, new_series_name):
-        old_loc = self.location.replace(old_series_name, new_series_name, 1)
-        self.location = self.location.replace(old_series_name, new_series_name, 2)
-        move(old_loc, self.location)
-        self.file_name = path.basename(self.location)
-        self.series_name = new_series_name
-
     def _parse(self):
         self.file_name = path.basename(self.location)
         series_name = self.location.split(sep)[2 + MAC_OFFSET: 3 + MAC_OFFSET]
@@ -110,15 +102,14 @@ class Episode:
         self.title2 = titles[1]
 
     def get_title(self):
-        if not self.title:
-            return ''
-        if self.episode_option == DOUBLE:
-            if self.title2:
-                return ' & '.join([self.title, self.title2])
-        elif self.episode_option == TRIPLE:
-            if self.title2 and self.title3:
-                return ' & '.join([self.title, self.title2, self.title3])
-        return self.title
+        title_list = []
+        if self.title:
+            title_list.append(self.title)
+        if not self.episode_option == SINGLE and self.title2:
+            title_list.append(self.title2)
+        if self.episode_option == TRIPLE and self.title3:
+            title_list.append(self.title3)
+        return ' & '.join(title_list)
 
     def __str__(self):
         return ('***' +
@@ -167,5 +158,3 @@ class Episode:
     def set_location(self, location):
         self.location = location
         self._parse()
-
-

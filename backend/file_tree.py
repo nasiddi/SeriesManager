@@ -9,7 +9,7 @@ SHOWS = None
 MISSING = []
 
 
-def main(args=None, series_name='*', out_file='data/tree_file_comb'):
+def main(args=None, out_file='data/tree_file_comb.json'):
     global SHOWS
     SHOWS = load_shows(read_only=True)
     if args:
@@ -20,6 +20,7 @@ def main(args=None, series_name='*', out_file='data/tree_file_comb'):
 
     save_json(tree_file, out_file)
     save_shows(SHOWS)
+    return tree_file
 
 
 def load_all():

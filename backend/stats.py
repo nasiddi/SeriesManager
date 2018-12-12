@@ -85,9 +85,12 @@ def main(args):
             finally:
                 show_stats['ratio'].pop(key, None)
 
-
-        show_stats['avg_duration'] = int(show_stats['duration'] / show_stats['episodes'] * 100) / 100.0
-        show_stats['avg_size'] = int(show_stats['size'] / show_stats['episodes'] * 100) / 100.0
+        if show_stats['episodes']:
+            show_stats['avg_duration'] = int(show_stats['duration'] / show_stats['episodes'] * 100) / 100.0
+            show_stats['avg_size'] = int(show_stats['size'] / show_stats['episodes'] * 100) / 100.0
+        else:
+            show_stats['avg_duration'] = 0
+            show_stats['avg_size'] = 0
         show_stats['duration'] = int(show_stats['duration'] / 60.0 * 100) / 100.0
         show_stats['size'] = int(show_stats['size'] / 1024.0 * 100) / 100.0
         stats['shows'].append(show_stats)

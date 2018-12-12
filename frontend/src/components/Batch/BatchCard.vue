@@ -182,8 +182,8 @@ export default {
       }
     },
     async updateTitle(f) {
-      if (this.tvdb_id === '' || this.file.s_nr === '' || this.file.e_nr === '') {
-        this.$snotify.error('Title failed', { timeout: 5000 });
+      if (this.tvdb_id === '' || f.s_nr === '' || f.e_nr === '') {
+        this.$snotify.error('Title failed', { timeout: 1000 });
         return;
       }
       const file = f;

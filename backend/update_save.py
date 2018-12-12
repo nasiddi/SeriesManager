@@ -11,11 +11,10 @@ SHOWS = None
 
 def main(args):
     global SHOWS
-    SHOWS = load_shows()
     parse_args(args)
-
     data = load_json(environ[CONF_FILE])
     save_json(data, 'data/update_save.json')
+    SHOWS = load_shows()
 
     if SHOWS is None:
         save_json({'error': 'Shows locked'}, environ[OUT_FILE])
@@ -48,7 +47,10 @@ def update_location(show, des):
     for season in show.seasons.values():
         season.location = season.location.replace(show.series_name, des, 1)
         for ep in season.episodes.values():
-            ep.update_location(show.series_name, des)
+            old_loc = ep.location.replace(show.series_name, des, 1)
+            new_loc = ep.location.replace(show.series_name, des, 2)
+            move(old_loc, new_loc)
+            ep.set_location(ep.location.replace(show.series_name, des, 2))
 
 
 if __name__ == '__main__':

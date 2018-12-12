@@ -39,7 +39,8 @@ def main(args='', date=''):
             pass
 
     unlock()
-    save_json({'done': True}, os.environ[OUT_FILE])
+    if args:
+        save_json({'done': True}, os.environ[OUT_FILE])
 
 
 if __name__ == '__main__':

@@ -181,6 +181,7 @@ def check_for_name_used_twice(show, e):
     if show.series_name not in NAMES:
         NAMES[show.series_name] = [title]
         return
+
     if title in NAMES[show.series_name]:
         return _generate_error(message='Name Used Twice', e=e, show=show, exception_type='double', word=title)
     else:
