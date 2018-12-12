@@ -25,19 +25,32 @@
         >Restore BackUp</b-button>
       </b-col>
     </b-row>
+    <b-row>
+      <vue-json-pretty
+        :path="'res'"
+        :data="getFiles()"
+        @click="handleClick"/>
+    </b-row>
   </div>
 </template>
 
 <script>
+import VueJsonPretty from 'vue-json-pretty';
 
 const _ = require('lodash');
 
 export default {
   components: {
+    VueJsonPretty,
   },
   data: () => ({
     json: {},
   }),
+  computed: {
+    getFiles() {
+      return this.json.backups.filter(obj => obj.value === this.selected);
+    },
+  },
   created() {
     this.loadData();
   },
