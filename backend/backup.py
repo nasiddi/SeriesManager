@@ -28,7 +28,7 @@ def main(args=''):
     os.makedirs(folder)
     file_list = os.listdir(ASSETS)
     for f in file_list:
-        if 'lock' in f:
+        if 'lock' in f or 'test' in f:
             continue
         file = os.path.join(ASSETS, f)
         if os.path.isfile(file):

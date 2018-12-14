@@ -30,6 +30,8 @@
     "vue-chartjs": "^3.3.2",
     "vue-cookie": "^1.1.4",
     "vue-enhanced-check": "^1.5.3",
+    "vue-json-pretty": "^1.4.1",
+    "vue-json-tree": "^0.3.3",
     "vue-lodash": "^2.0.0",
     "vue-meta": "^1.5.2",
     "vue-moment": "^4.0.0",
@@ -42,8 +44,7 @@
     "vue-text-highlight": "^1.1.2",
     "vue-wordcloud": "^1.0.2",
     "vuetrend": "^0.2.3",
-    "vuex": "^3.0.1",
-    "vue-json-pretty":"^1.4.1"
+    "vuex": "^3.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^8.6.5",

@@ -93,9 +93,8 @@ Vue.mixin({
             .value();
 
           if (_.size(distances) > 0) {
-            const color = Object.keys(distances).reduce(
-              (a, b) => (distances[a] < distances[b] ? a : b),
-            );
+            const color = Object.keys(distances)
+              .reduce((a, b) => (distances[a] < distances[b] ? a : b));
 
             _.remove(colors, val => val === color);
             return color;

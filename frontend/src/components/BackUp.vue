@@ -1,3 +1,4 @@
+/* eslint-disable vue/attribute-hyphenation */
 <template>
   <div v-if="!_.isEmpty(json)">
     <b-row class="mt-4">
@@ -25,12 +26,43 @@
         >Restore BackUp</b-button>
       </b-col>
     </b-row>
-    <b-row>
-      <vue-json-pretty
-        :path="'res'"
-        :data="getFiles()"
-        @click="handleClick"/>
-    </b-row>
+    <div v-if="json.selected in json.backups">
+      <b-row
+        v-for="(c, i) in json.backups[json.selected].content"
+        :key="c.key"
+        class="mt-2">
+        <b-button
+          :class="c.opened ? 'collapsed' : null"
+          :aria-expanded="c.opened ? 'true' : 'false'"
+          :style="{width: '100%'}"
+          :aria-controls="c.key"
+          @click="c.opened = !c.opened"
+        >{{ c.key }}</b-button>
+        <b-collapse
+          :id="c.key"
+          v-model="c.opened">
+          <b-card-group>
+            <b-card
+              :title="json.selected"
+              :style="{width: getWidth()}"
+              class="mt-2"
+              align="top">
+              <vue-json-pretty
+                :data="c.data"/>
+            </b-card>
+            <b-card
+              :style="{width: getWidth()}"
+              title="Current"
+              class="mt-2"
+              align="top">
+              <vue-json-pretty
+                :data="json.current.content[i].data"
+                show-length/>
+            </b-card>
+          </b-card-group>
+        </b-collapse>
+      </b-row>
+    </div>
   </div>
 </template>
 
@@ -57,6 +89,9 @@ export default {
   mounted() {
   },
   methods: {
+    getWidth() {
+      return `${window.innerWidth * 10 / 12 / 2}px`;
+    },
     loadData() {
       this.notifLoading = this.$snotify.info('Loading', { timeout: 0 });
       this.$http.post('python/getbackup').then(
