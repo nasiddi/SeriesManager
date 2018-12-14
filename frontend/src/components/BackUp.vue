@@ -48,7 +48,8 @@
               class="mt-2"
               align="top">
               <vue-json-pretty
-                :data="c.data"/>
+                :data="c.data"
+                show-length/>
             </b-card>
             <b-card
               :style="{width: getWidth()}"
