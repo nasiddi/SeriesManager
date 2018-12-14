@@ -132,7 +132,7 @@ def save_queue(queue):
         if file.delete:
             recursive_delete(file.old_location)
             try:
-                SHOWS[file.series_name].seasons[file.s_nr].update_episodes(reload_metadata=False)
+                SHOWS[file.series_name].seasons[file.s_nr].update_episodes(reload_metadata=True)
             except FileNotFoundError:
                 del SHOWS[file.series_name].seasons[file.s_nr]
             continue

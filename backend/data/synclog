@@ -86,5 +86,14 @@
         "success": [
             "Copy successful"
         ]
+    },
+    {
+        "error": [],
+        "file_name": "NCIS Los Angeles 10x01 - To Live and Die in Mexico.mkv",
+        "info": [],
+        "success": [
+            "Delete successful",
+            "Copy successful"
+        ]
     }
 ]

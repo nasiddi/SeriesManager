@@ -155,13 +155,13 @@ async function unlockShows(res) {
   );
 }
 
-async function prepFiles(res) {
+async function prepFiles(body, res) {
   const outputFile = path.join(config.directories.storage, 'sync_prep');
   await run(
     'sync_prep',
     '',
     '',
-    '',
+    body,
     outputFile,
     () => {},
     async (code, signal) => {

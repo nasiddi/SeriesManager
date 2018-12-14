@@ -110,8 +110,9 @@ routes.post('/batch/match', async (req, res) => {
   python.batchMatch(req.body, res);
 });
 
-routes.get('/sync/prep', async (req, res) => {
-  python.prepFiles(res);
+routes.post('/sync/prep', async (req, res) => {
+  console.log(req);
+  python.prepFiles(req.body, res);
 });
 
 routes.post('/filetree/missing/filter', async (req, res) => {

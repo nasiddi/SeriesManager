@@ -99,6 +99,16 @@ def sync_queue(queue=None):
             continue
         if file.override:
             delete_file(file)
+            try:
+                e = SHOWS[file.series_name].get_episode_by_sxe(file.s_nr, file.e_nr)
+                if e:
+                    del SHOWS[file.series_name].seasons[file.s_nr].episodes[file.e_nr]
+                    SHOWS[file.series_name].seasons[file.s_nr].episode_numbers.remove(file.e_nr)
+
+            except KeyError:
+                pass
+            except ValueError:
+                pass
         if file.type_option == 'Series' and file_exists(file, SHOWS):
             file.report['error'].append('File exists')
             continue
@@ -147,10 +157,10 @@ def delete_file(file):
                 file.s_nr, file.e_nr).location
         except KeyError:
             file.report['info'].append('No File to delete')
-            return
+            return False
         except AttributeError:
             file.report['info'].append('No File to delete')
-            return
+            return False
     else:
         folder = HD_Movies if file.type_option == 'HD' else 'SD'
         for name in os.listdir(folder):
@@ -160,7 +170,7 @@ def delete_file(file):
 
     if location is None:
         file.report['info'].append('No File to delete')
-        return
+        return False
     try:
         os.remove(location)
     except OSError as e:

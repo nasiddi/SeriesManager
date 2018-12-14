@@ -44,7 +44,7 @@ export default {
   },
   data: () => ({
     json: {},
-    baseLink: 'http://thepiratebay.org/search/',
+    baseLink: 'http://thepiratebay.cd/search/',
     endLink: '/0/3/0',
     showFilteredFiles: false,
   }),

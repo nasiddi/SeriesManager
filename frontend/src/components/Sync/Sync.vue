@@ -1,45 +1,59 @@
 <template>
   <div v-if="Object.keys(json).length !== 0">
     <b-button
-      type="sync"
-      variant="primary"
+      variant="secondary"
       size="lg"
       class="mt-3"
       block
-      @click.prevent="sync"
-    >Sync</b-button>
-    <b-button
-      type="sync"
-      variant="success"
-      size="lg"
-      block
-      class="mt-3"
-      @click.prevent="updateAll"
-    >Update All</b-button>
-    <SyncCard
-      v-for="file in json.files"
-      ref="card"
-      :key="file.location"
-      :f="file"
-      :shows="json.shows"
-      :subs="json.subs"/>
+      @click.prevent="loadData(true)"
+    >Show All Files</b-button>
+    <div v-if="!_.isEmpty(json.files)">
+      <b-button
+        type="sync"
+        variant="primary"
+        size="lg"
+        class="mt-3"
+        block
+        @click.prevent="sync"
+      >Sync</b-button>
+      <b-button
+        type="sync"
+        variant="success"
+        size="lg"
+        block
+        class="mt-3"
+        @click.prevent="updateAll"
+      >Update All</b-button>
+      <SyncCard
+        v-for="file in json.files"
+        ref="card"
+        :key="file.location"
+        :f="file"
+        :shows="json.shows"
+        :subs="json.subs"/>
 
-    <b-button
-      type="sync"
-      variant="success"
-      size="lg"
-      block
-      class="mt-3"
-      @click.prevent="updateAll"
-    >Update All</b-button>
-    <b-button
-      type="sync"
-      variant="primary"
-      size="lg"
-      block
-      class="mt-3"
-      @click.prevent="sync"
-    >Sync</b-button>
+      <b-button
+        type="sync"
+        variant="success"
+        size="lg"
+        block
+        class="mt-3"
+        @click.prevent="updateAll"
+      >Update All</b-button>
+      <b-button
+        type="sync"
+        variant="primary"
+        size="lg"
+        block
+        class="mt-3"
+        @click.prevent="sync"
+      >Sync</b-button>
+    </div>
+    <b-card
+      v-if="_.isEmpty(json.files)"
+      :style="{width: '100%'}"
+      title="No Files to Sync"
+      class="text-center py-1 mt-4"/>
   </div>
 </template>
 
@@ -61,31 +75,34 @@ export default {
   computed: {
   },
   created() {
-    this.notifLoading = this.$snotify.info('Loading', {
-      timeout: 0,
-    });
-    this.$http
-      .get('python/sync/prep')
-      .then(
-        (res) => {
-          if (res.body === 'failed') {
-            this.$snotify.remove(this.notifLoading.id);
-            this.$snotify.error('Python failed', { timeout: 0 });
-            return;
-          }
-          const body = _.defaults(res.body, {
-          });
-          this.json = body;
-          this.series_options = this.json.shows;
-
-          this.updateAll();
-        },
-        () => {
-          this.$snotify.error('Failed to load data', { timeout: 0 });
-        },
-      );
+    this.loadData(false);
   },
   methods: {
+    loadData(allFiles) {
+      this.notifLoading = this.$snotify.info('Loading', {
+        timeout: 0,
+      });
+      this.$http
+        .post('python/sync/prep', { all: allFiles })
+        .then(
+          (res) => {
+            if (res.body === 'failed') {
+              this.$snotify.remove(this.notifLoading.id);
+              this.$snotify.error('Python failed', { timeout: 0 });
+              return;
+            }
+            const body = _.defaults(res.body, {
+            });
+            this.json = body;
+            this.series_options = this.json.shows;
+
+            this.updateAll();
+          },
+          () => {
+            this.$snotify.error('Failed to load data', { timeout: 0 });
+          },
+        );
+    },
     setColor(file) {
       if (file.override) {
         return 'outline-primary';

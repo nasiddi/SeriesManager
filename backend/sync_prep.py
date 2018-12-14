@@ -2,13 +2,15 @@ import re
 from os import path, sep, walk, environ
 from sys import argv
 
-from utils.constants import FILE_DIR, EXTENSIONS, SUBS, ENDED, MAC_OFFSET, OUT_FILE
+from utils.constants import FILE_DIR, EXTENSIONS, SUBS, ENDED, MAC_OFFSET, OUT_FILE, CONF_FILE
 from utils.file import File
-from utils.io_utlis import load_shows, parse_args, save_json
+from utils.io_utlis import load_shows, parse_args, save_json, load_json
 
 
 def main(args):
     parse_args(args)
+    conf = load_json(environ[CONF_FILE])
+    save_json(conf, 'data/sync_prep.json')
     shows = load_shows(read_only=True)
     file_list = []
     subs = []
@@ -26,7 +28,7 @@ def main(args):
 
     series_names_words = []
     series_names = []
-    series_n = shows.keys()
+    series_n = sorted(list(shows.keys()))
     for n in series_n:
         if shows[n].status == ENDED:
             continue
@@ -40,25 +42,10 @@ def main(args):
         if not set(n1) == set(n2):
             series_names.append(n)
             series_names_words.append(n2)
+    print(series_names)
 
-    locations = []
-    multi_title = []
-    delete = []
-    for file in file_list:
-        loc = file.old_location.split(sep)[2 + MAC_OFFSET]
-        if loc in locations:
-            if loc not in multi_title:
-                multi_title.append(loc)
-        else:
-            locations.append(loc)
-
-    for file in file_list:
-        loc = file.old_location.split(sep)[2 + MAC_OFFSET]
-        if loc in multi_title:
-            delete.append(file)
-
-    for file in delete:
-        file_list.remove(file)
+    if not conf['all']:
+        remove_folders_with_multiple_files(file_list)
 
     i = 0
     for file in file_list:
@@ -112,6 +99,25 @@ def main(args):
 
     save_json(json, environ[OUT_FILE])
     pass
+
+
+def remove_folders_with_multiple_files(file_list):
+    locations = []
+    multi_title = []
+    delete = []
+    for file in file_list:
+        loc = file.old_location.split(sep)[2 + MAC_OFFSET]
+        if loc in locations:
+            if loc not in multi_title:
+                multi_title.append(loc)
+        else:
+            locations.append(loc)
+    for file in file_list:
+        loc = file.old_location.split(sep)[2 + MAC_OFFSET]
+        if loc in multi_title:
+            delete.append(file)
+    for file in delete:
+        file_list.remove(file)
 
 
 def clean_up(n):
