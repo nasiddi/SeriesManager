@@ -30,7 +30,8 @@
         :key="file.location"
         :f="file"
         :shows="json.shows"
-        :subs="json.subs"/>
+        :subs="json.subs"
+      />
 
       <b-button
         type="sync"
@@ -53,7 +54,8 @@
       v-if="_.isEmpty(json.files)"
       :style="{width: '100%'}"
       title="No Files to Sync"
-      class="text-center py-1 mt-4"/>
+      class="text-center py-1 mt-4"
+    />
   </div>
 </template>
 
@@ -61,7 +63,6 @@
 import SyncCard from './SyncCard';
 
 const _ = require('lodash');
-
 
 export default {
   components: {
@@ -72,8 +73,7 @@ export default {
     series_selected: 'Series Name',
     series_options: [],
   }),
-  computed: {
-  },
+  computed: {},
   created() {
     this.loadData(false);
   },
@@ -82,26 +82,23 @@ export default {
       this.notifLoading = this.$snotify.info('Loading', {
         timeout: 0,
       });
-      this.$http
-        .post('python/sync/prep', { all: allFiles })
-        .then(
-          (res) => {
-            if (res.body === 'failed') {
-              this.$snotify.remove(this.notifLoading.id);
-              this.$snotify.error('Python failed', { timeout: 0 });
-              return;
-            }
-            const body = _.defaults(res.body, {
-            });
-            this.json = body;
-            this.series_options = this.json.shows;
+      this.$http.post('python/sync/prep', { all: allFiles }).then(
+        (res) => {
+          if (res.body === 'failed') {
+            this.$snotify.remove(this.notifLoading.id);
+            this.$snotify.error('Python failed', { timeout: 0 });
+            return;
+          }
+          const body = _.defaults(res.body, {});
+          this.json = body;
+          this.series_options = this.json.shows;
 
-            this.updateAll();
-          },
-          () => {
-            this.$snotify.error('Failed to load data', { timeout: 0 });
-          },
-        );
+          this.updateAll();
+        },
+        () => {
+          this.$snotify.error('Failed to load data', { timeout: 0 });
+        },
+      );
     },
     setColor(file) {
       if (file.override) {
@@ -128,28 +125,32 @@ export default {
     async updateTitle(f) {
       return new Promise((resolve) => {
         const file = f;
-        if (!(file.new_series) && !_.isEmpty(this.json) && file.series_name in this.json.shows) {
+        if (
+          !file.new_series
+          && !_.isEmpty(this.json)
+          && file.series_name in this.json.shows
+        ) {
           file.tvdb_id = this.json.shows[file.series_name].tvdb_id;
         }
-        this.$http.post('jobs/tvdb', file)
-          .then(
-            (res) => {
-              const body = _.defaults(res.body, {
-              });
+        this.$http.post('jobs/tvdb', file).then(
+          (res) => {
+            const body = _.defaults(res.body, {});
+            if ('title' in body) {
               file.title = body.title;
-              if (file.e_o.s !== 'Single') {
-                file.title2 = body.title2;
-              }
-              if (file.e_o.s === 'Triple') {
-                file.title3 = body.title3;
-              }
-              resolve(true);
-            },
-            () => {
-              this.$snotify.error('Failed to load data', { timeout: 0 });
-              resolve(false);
-            },
-          );
+            }
+            if (file.e_o.s !== 'Single') {
+              file.title2 = body.title2;
+            }
+            if (file.e_o.s === 'Triple') {
+              file.title3 = body.title3;
+            }
+            resolve(true);
+          },
+          () => {
+            this.$snotify.error('Failed to load data', { timeout: 0 });
+            resolve(false);
+          },
+        );
       });
     },
     async sync() {

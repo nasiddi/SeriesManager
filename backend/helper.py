@@ -5,7 +5,6 @@ import error_search
 from os.path import join
 from series import Series
 from episode import Episode
-from test import *
 from shutil import move
 from tvdb_client import ApiV2Client
 
@@ -21,8 +20,7 @@ for show in shows.values():
     if not show.tvdb_id:
         continue
     api = api_client.get_series(show.tvdb_id)
-
-    api_name = api['seriesName']
+    api_name = api['data']['seriesName']
     if not show.series_name == api_name:
         print(show.series_name, api_name, show.tvdb_id)
 
