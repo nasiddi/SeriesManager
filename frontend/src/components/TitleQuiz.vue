@@ -97,6 +97,7 @@ export default {
     start: {},
     stop: false,
     duration: '',
+    counter: 0,
   }),
   computed: {
   },
@@ -114,7 +115,7 @@ export default {
               if (e.highlight === 'success') {
                 e.highlight = 'secondary';
               }
-            } else if (e.title_list.includes(word) || e.title_text_list.includes(word.replace(/[^a-zA-Z0-9' ]/g, ''))) {
+            } else if (e.title_list.includes(word) || e.title_list.includes(word.replace(/[^a-zA-Z0-9' ]/g, ''))) {
               e.title = e.solution;
               e.highlight = 'success';
               found = true;
@@ -136,8 +137,7 @@ export default {
           const body = _.defaults(res.body, {
           });
           this.shows = body.shows;
-          const duration = moment.duration(0);
-          this.duration = this.hmsFormat(duration);
+          this.duration = this.hmsFormat(moment.duration(0));
         },
         () => {
           this.$snotify.error('Failed to load data', { timeout: 0 });
@@ -160,12 +160,10 @@ export default {
         });
       });
     },
-    async setDuration() {
+    setDuration() {
       if (this.stop) { return; }
-      const current = moment(moment());
-      const duration = moment.duration(current.diff(this.start));
-      this.duration = this.hmsFormat(duration);
-      setInterval(this.setDuration, 1000);
+      this.duration = this.hmsFormat(moment.duration(this.counter, 's'));
+      this.counter += 1;
     },
     hmsFormat(diff) {
       return `${_.padStart(diff.minutes(), 2, 0)}:${_.padStart(diff.seconds(), 2, 0)}`;
@@ -182,8 +180,9 @@ export default {
             this.episodes = body.episodes;
             this.found = 0;
             this.total = body.total;
-            this.start = moment(moment());
-            this.setDuration();
+            this.counter = 0;
+            this.stop = false;
+            setInterval(this.setDuration, 1000);
           },
           () => {
             this.$snotify.error('Failed to load data', { timeout: 0 });
