@@ -3,7 +3,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import VuePromiseBtn from 'vue-promise-btn';
-
+import Sticky from 'vue-sticky-directive';
 import App from './App';
 import router from './router';
 
@@ -119,6 +119,7 @@ Vue.http.interceptors.push((request) => {
 });
 
 Vue.use(Vuex);
+Vue.use(Sticky);
 
 const store = new Vuex.Store({
   /* eslint-disable no-param-reassign */

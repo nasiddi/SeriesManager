@@ -15,6 +15,18 @@ routes.post('/unlock', async (req, res) => {
   python.unlockShows(res);
 });
 
+routes.post('/titlequizprep', async (req, res) => {
+  python.titleQuizPrep(res);
+});
+
+routes.post('/titlequiz', async (req, res) => {
+  python.titleQuiz(req.body, res);
+});
+
+routes.post('/unlock', async (req, res) => {
+  python.unlockShows(res);
+});
+
 routes.post('/exceptionfile/load', async (req, res) => {
   python.editExceptionFile(res);
 });

@@ -41,6 +41,8 @@ import BatchReport from '@/components/Batch/BatchReport';
 
 import ExceptionFile from '@/components/ExceptionFile/ExceptionFile';
 import BackUp from '@/components/BackUp';
+import TitleQuiz from '@/components/TitleQuiz';
+
 
 import Stats from '@/components/Stats/Stats';
 
@@ -186,6 +188,12 @@ export default new Router({
       path: '/settings',
       name: 'settings',
       component: SettingsIndex,
+      beforeEnter: Vue.prototype.$auth.requireAuth,
+    },
+    {
+      path: '/titlequiz',
+      name: 'titlequiz',
+      component: TitleQuiz,
       beforeEnter: Vue.prototype.$auth.requireAuth,
     },
   ],

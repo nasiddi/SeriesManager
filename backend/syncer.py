@@ -231,6 +231,8 @@ def get_base_path(file):
 
 
 def ignore_file(file):
+    if not os.path.exists(file.old_location):
+        return
     split_loc = file.old_location.split(os.sep)
     loc = os.sep.join(split_loc[:3 + MAC_OFFSET])
     if os.path.isdir(loc):

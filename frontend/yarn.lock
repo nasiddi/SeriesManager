@@ -8521,6 +8521,11 @@ vue-snotify@^3.2.0:
   resolved "https://registry.yarnpkg.com/vue-snotify/-/vue-snotify-3.2.1.tgz#1e093838b67ecb4141d6227b6b19175735f4e259"
   integrity sha512-7kETtCAK3key/mDkz47FY/LuPzDGNwHHrYmS037JuVac2FW/9GTtoCNIrOp+SNbpMHeXFdLIDktkBK0IdPdHew==
 
+vue-sticky-directive@^0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/vue-sticky-directive/-/vue-sticky-directive-0.0.7.tgz#ae7f59ddeb7667de5f7631e443df99fcaae41539"
+  integrity sha512-MbfW/p09K+VQzUDmJCkqRyaq9olGWowOvwDneA6NWvK+qeoOhjTFUBiRn92WeeVg/z6k0vRiBzDVpexUVHiL9g==
+
 vue-style-loader@^4.0.1, vue-style-loader@^4.1.0:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/vue-style-loader/-/vue-style-loader-4.1.2.tgz#dedf349806f25ceb4e64f3ad7c0a44fba735fcf8"

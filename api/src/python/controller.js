@@ -725,6 +725,64 @@ async function restoreBackUp(body, res) {
   );
 }
 
+async function titleQuiz(body, res) {
+  const outputFile = path.join(config.directories.storage, 'title_quiz');
+  await run(
+    'title_quiz',
+    '',
+    '',
+    body,
+    outputFile,
+    () => { },
+    async (code, signal) => {
+      if (code !== 0) {
+        res.send('failed');
+        return;
+      }
+
+      fs.readJson(outputFile, (err, file) => {
+        if (err) {
+          winston.error(err);
+          res.sendStatus(500).end();
+        }
+        fs.unlink(outputFile);
+        res.json(file);
+      });
+    },
+  );
+}
+
+async function titleQuizPrep(res) {
+  const outputFile = path.join(config.directories.storage, 'title_quiz_prep');
+  await run(
+    'title_quiz_prep',
+    '',
+    '',
+    '',
+    outputFile,
+    () => {},
+    async (code, signal) => {
+      if (code !== 0) {
+        res.send('failed');
+        return;
+      }
+      if (!fs.existsSync(outputFile)) {
+        res.sendStatus(204).end();
+        return;
+      }
+
+      fs.readJson(outputFile, (err, file) => {
+        if (err) {
+          winston.error(err);
+          res.sendStatus(500).end();
+        }
+        fs.unlink(outputFile);
+        res.json(file);
+      });
+    },
+  );
+}
+
 module.exports = {
   reloadSeries,
   prepFiles,
@@ -746,4 +804,6 @@ module.exports = {
   backUp,
   getBackUp,
   restoreBackUp,
+  titleQuizPrep,
+  titleQuiz,
 };

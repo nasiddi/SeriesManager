@@ -2,7 +2,7 @@ from os import environ
 from sys import argv
 from time import time
 
-from utils.constants import SERIES_NAME, SINGLE, DOUBLE, ASPECT_RATIOS, OUT_FILE
+from utils.constants import SERIES_NAME, SINGLE, DOUBLE, ASPECT_RATIOS, OUT_FILE, DEBUG
 from utils.io_utlis import load_shows, parse_args, save_json
 
 SHOWS = None
@@ -37,7 +37,7 @@ def main(args):
             for episode in season.episodes.values():
                 episode_option = 1 if episode.episode_option == SINGLE else 2 if episode.episode_option == DOUBLE else 3
 
-                if episode.duration == 0 or episode.quality == '':
+                if not DEBUG and episode.duration == 0 or episode.quality == '':
                     episode.update_file_meta()
 
                 duration += episode.duration
