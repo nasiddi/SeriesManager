@@ -23,7 +23,7 @@ def main(args):
         show_count += 1
         show_stats = {SERIES_NAME: show.series_name, 'status': {show.status: 1}, 'premiere': show.premiere,
                       'final': show.final, 'ratio': {}, 'extension': {}, 'duration': 0, 'episodes': 0,
-                      'seasons': 0, 'size': 0, 'quality': {}}
+                      'seasons': 0, 'size': 0, 'quality': {}, 'selected': '', 'color': '', 'result': False}
 
         if show.status in stats['total']['status']:
             stats['total']['status'][show.status] += 1

@@ -97,7 +97,6 @@ export default {
     start: {},
     stop: false,
     duration: '',
-    counter: 0,
   }),
   computed: {
   },
@@ -162,8 +161,7 @@ export default {
     },
     setDuration() {
       if (this.stop) { return; }
-      this.duration = this.hmsFormat(moment.duration(this.counter, 's'));
-      this.counter += 1;
+      this.duration = this.hmsFormat(moment.duration(moment(moment()).diff(this.start)));
     },
     hmsFormat(diff) {
       return `${_.padStart(diff.minutes(), 2, 0)}:${_.padStart(diff.seconds(), 2, 0)}`;
@@ -180,8 +178,8 @@ export default {
             this.episodes = body.episodes;
             this.found = 0;
             this.total = body.total;
-            this.counter = 0;
             this.stop = false;
+            this.start = moment(moment());
             setInterval(this.setDuration, 1000);
           },
           () => {

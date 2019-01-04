@@ -154,7 +154,7 @@ export default {
     },
   },
   created() {
-    this.$parent.$on('dates', this.getDates);
+    this.$root.$on('dates', this.getDates);
     this.original = _.cloneDeep(this.s);
   },
   mounted() {

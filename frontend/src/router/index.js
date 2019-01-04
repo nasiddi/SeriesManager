@@ -45,6 +45,8 @@ import TitleQuiz from '@/components/TitleQuiz';
 
 
 import Stats from '@/components/Stats/Stats';
+import StatsQuiz from '@/components/Stats/StatsQuiz';
+
 
 const VueMoment = require('vue-moment');
 const VueCookie = require('vue-cookie');
@@ -171,6 +173,12 @@ export default new Router({
       path: '/stats',
       name: 'stats',
       component: Stats,
+      beforeEnter: Vue.prototype.$auth.requireAuth,
+    },
+    {
+      path: '/stats/quiz',
+      name: 'stats.quiz',
+      component: StatsQuiz,
       beforeEnter: Vue.prototype.$auth.requireAuth,
     },
     {
