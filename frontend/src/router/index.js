@@ -41,11 +41,13 @@ import BatchReport from '@/components/Batch/BatchReport';
 
 import ExceptionFile from '@/components/ExceptionFile/ExceptionFile';
 import BackUp from '@/components/BackUp';
-import TitleQuiz from '@/components/TitleQuiz';
+
+import TitleQuiz from '@/components/Quizzes/TitleQuiz';
+import StatsQuiz from '@/components/Quizzes/StatsQuiz';
+import LyricsQuiz from '@/components/Quizzes/LyricsQuiz';
 
 
 import Stats from '@/components/Stats/Stats';
-import StatsQuiz from '@/components/Stats/StatsQuiz';
 
 
 const VueMoment = require('vue-moment');
@@ -175,12 +177,7 @@ export default new Router({
       component: Stats,
       beforeEnter: Vue.prototype.$auth.requireAuth,
     },
-    {
-      path: '/stats/quiz',
-      name: 'stats.quiz',
-      component: StatsQuiz,
-      beforeEnter: Vue.prototype.$auth.requireAuth,
-    },
+
     {
       path: '/login',
       name: 'login',
@@ -199,9 +196,21 @@ export default new Router({
       beforeEnter: Vue.prototype.$auth.requireAuth,
     },
     {
-      path: '/titlequiz',
-      name: 'titlequiz',
+      path: '/quiz/episodes',
+      name: 'quiz.episodes',
       component: TitleQuiz,
+      beforeEnter: Vue.prototype.$auth.requireAuth,
+    },
+    {
+      path: '/quiz/stats',
+      name: 'quiz.stats',
+      component: StatsQuiz,
+      beforeEnter: Vue.prototype.$auth.requireAuth,
+    },
+    {
+      path: '/quiz/lyrics',
+      name: 'quiz.lyrics',
+      component: LyricsQuiz,
       beforeEnter: Vue.prototype.$auth.requireAuth,
     },
   ],

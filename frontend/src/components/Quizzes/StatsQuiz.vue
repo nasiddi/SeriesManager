@@ -98,7 +98,7 @@ export default {
             this.$set(s, 'color', 'info');
           }
         });
-      }, 100);
+      }, 50);
     },
     loadData() {
       this.notifLoading = this.$snotify.info('Loading', { timeout: 0 });

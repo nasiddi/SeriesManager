@@ -74,6 +74,21 @@
           </b-dropdown-item>
         </b-nav-item-dropdown>
 
+        <b-nav-item-dropdown
+          :active="isRoutePrefix('quiz')"
+          left
+          text="Quizzes">
+          <b-dropdown-item :to="{ name: 'quiz.stats' }">
+            <font-awesome-icon icon="chart-bar" /> Stats
+          </b-dropdown-item>
+          <b-dropdown-item :to="{ name: 'quiz.episodes' }">
+            <font-awesome-icon icon="bars" /> Episodes
+          </b-dropdown-item>
+          <b-dropdown-item :to="{ name: 'quiz.lyrics' }">
+            <font-awesome-icon icon="music" /> Lyrics
+          </b-dropdown-item>
+        </b-nav-item-dropdown>
+
 
       </b-navbar-nav>
 

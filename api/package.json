@@ -20,6 +20,7 @@
     "jsonwebtoken": "^8.3.0",
     "lodash": "4.17.10",
     "lodash.product": "^18.1.16",
+    "lyrics-fetcher": "^1.0.2",
     "md5-file": "^4.0.0",
     "moment": "^2.22.2",
     "morgan": "^1.7.0",

@@ -40,6 +40,7 @@
           v-model="word"
           type="text"
           class="mb-3 mt-3"
+          @change="match"
           @keyup.native.enter="word = ''"/>
       </b-col>
       <b-col>
@@ -146,6 +147,32 @@ export default {
   mounted() {
   },
   methods: {
+    match(w) {
+      if (w === '') {
+        return;
+      }
+      let found = false;
+      const word = w.toLowerCase();
+      this.episodes.forEach((s) => {
+        s.forEach((e) => {
+          if (e.title) {
+            if (e.highlight === 'success') {
+              e.highlight = 'secondary';
+            }
+          } else if (e.title_list.includes(word) || e.title_list.includes(word.replace(/[^a-zA-Z0-9' ]/g, ''))) {
+            e.title = e.solution;
+            e.highlight = 'success';
+            found = true;
+            this.found += 1;
+          }
+        });
+      });
+      if (found) {
+        setTimeout(() => {
+          this.word = '';
+        }, 50);
+      }
+    },
     showAll() {
       this.stop = true;
       this.episodes.forEach((s) => {
