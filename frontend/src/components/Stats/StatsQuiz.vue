@@ -67,6 +67,9 @@ export default {
     },
     result() {
       this.trueCounter = 0;
+      this.seriesNames.forEach((n) => {
+        this.$set(n, 'text', `${n.value}`);
+      });
       this.shows.forEach((s) => {
         this.$set(s, 'result', true);
         if (s.series_name === s.selected) {
@@ -81,7 +84,11 @@ export default {
       setTimeout(() => {
         const selected = _.map(this.shows, 'selected');
         const duplicates = _.filter(selected, (val, i, e) => _.includes(e, val, i + 1));
-
+        this.seriesNames.forEach((n) => {
+          if (selected.includes(n.value)) {
+            this.$set(n, 'text', `${n.text} | SELECTED`);
+          }
+        });
         this.shows.forEach((s) => {
           if (s.selected === '') {
             this.$set(s, 'color', 'warning');
@@ -109,11 +116,13 @@ export default {
 
             this.json = body;
             this.shows = _.shuffle(body.shows);
-            this.setColors();
 
-            // this.seriesName = _.map(this.shows, 'series_name');
-            this.seriesNames = _.map(body.shows, 'series_name');
+
+            const names = _.map(body.shows, 'series_name');
+            this.seriesNames = names.map(n => ({ text: n, value: n }));
             this.trueCounter = -1;
+
+            this.setColors();
             this.$snotify.remove(this.notifLoading.id);
           },
           () => {
