@@ -113,7 +113,7 @@ export default {
           s.forEach((e) => {
             if (e.title) {
               if (e.highlight === 'success') {
-                e.highlight = 'secondary';
+                e.highlight = 'info';
               }
             } else if (e.title_list.includes(word) || e.title_list.includes(word.replace(/[^a-zA-Z0-9' ]/g, ''))) {
               e.title = e.solution;
@@ -125,6 +125,9 @@ export default {
         });
         if (found) {
           this.word = '';
+        }
+        if (this.found === this.total) {
+          this.showAll();
         }
       },
       deep: true,

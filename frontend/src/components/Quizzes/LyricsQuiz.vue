@@ -172,6 +172,9 @@ export default {
         setTimeout(() => {
           this.word = '';
         }, 50);
+        if (this.found === this.total) {
+          this.showAll();
+        }
       }
     },
     showAll() {
