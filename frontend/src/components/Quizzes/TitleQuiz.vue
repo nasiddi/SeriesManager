@@ -139,7 +139,7 @@ export default {
         (res) => {
           const body = _.defaults(res.body, {
           });
-          this.shows = body.shows;
+          this.shows = _.sortBy(body.shows);
           this.duration = this.hmsFormat(moment.duration(0));
         },
         () => {

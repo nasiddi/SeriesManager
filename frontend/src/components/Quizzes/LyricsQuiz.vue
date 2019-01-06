@@ -181,7 +181,7 @@ export default {
       this.stop = true;
       this.foundLyrics = this.lyrics;
       this.title = this.titleHidden;
-      this.highlight = this.highlight.map(item => ((item === 'secondary') ? 'danger' : item));
+      this.highlight = this.highlight.map(item => ((item === 'secondary') ? 'danger' : 'success'));
     },
     getWidth() {
       return `${window.innerWidth * 10 / 12}px`;
