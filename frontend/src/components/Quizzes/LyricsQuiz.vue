@@ -32,6 +32,7 @@
         <b-form-select
           v-model="level"
           :options="['ordered', 'all']"
+          selected="all"
           class="mb-2 mt-3"/>
       </b-col>
       <b-col sm="1">
@@ -105,7 +106,6 @@ export default {
   data: () => ({
     lyrics: '',
     lyricsLower: [],
-    lyricsText: [],
     foundLyrics: [],
     highlight: [],
     word: '',
@@ -164,6 +164,8 @@ export default {
     },
     checkNext(w) {
       const index = this.foundLyrics.findIndex(l => l === '');
+      this.$snotify.error(w, { timeout: 0 });
+      this.$snotify.info(this.lyricsLower[index], { timeout: 0 });
       if (w === this.lyricsLower[index]) {
         this.foundLyrics[index] = this.lyrics[index];
         this.highlight = this.highlight.map(item => (item === 'success' ? 'info' : item));
@@ -219,12 +221,10 @@ export default {
       }
       lyrics = lyrics.replace(/[^a-zA-Z0-9' ]/g, '');
       this.lyricsLower = lyrics.toLowerCase().replace(/[']/g, '');
-      this.lyricsText = this.lyricsLower.replace(/[']/g, '');
       this.lyricsLower = _.filter(
         this.lyricsLower.split(' '),
         sub => sub.length,
       );
-      this.lyricsText = _.filter(this.lyricsText.split(' '), sub => sub.length);
       this.lyrics = _.filter(lyrics.split(' '), sub => sub.length);
       this.stableCopy = _.map(this.lyrics, _.clone);
       this.foundLyrics = _.fill(Array(this.lyrics.length), '\u200F');
