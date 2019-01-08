@@ -165,6 +165,7 @@ export default {
       const index = this.foundLyrics.findIndex(l => l === '');
       this.$snotify.error(w, { timeout: 0 });
       this.$snotify.info(this.lyricsLower[index], { timeout: 0 });
+      this.$snotify.info(index, { timeout: 0 });
       if (w === this.lyricsLower[index]) {
         this.foundLyrics[index] = this.lyrics[index];
         this.highlight = this.highlight.map(item => (item === 'success' ? 'info' : item));
