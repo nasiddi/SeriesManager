@@ -85,8 +85,10 @@ export default {
         const selected = _.map(this.shows, 'selected');
         const duplicates = _.filter(selected, (val, i, e) => _.includes(e, val, i + 1));
         this.seriesNames.forEach((n) => {
-          if (selected.includes(n.value)) {
+          if (selected.includes(n.value) && !n.text.includes('SELECTED')) {
             this.$set(n, 'text', `${n.text} | SELECTED`);
+          } else if (n.text.includes('SELECTED')) {
+            this.$set(n, 'text', n.value);
           }
         });
         this.shows.forEach((s) => {
