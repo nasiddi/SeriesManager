@@ -124,7 +124,7 @@ export default {
 
             const names = _.sortBy(_.map(body.shows, 'series_name'));
             this.seriesNames = names.map(n => ({ text: n, value: n }));
-            this.seriesNames = [{ value: null, text: 'Select Show' }].concat(this.seriesNames);
+            this.seriesNames = [{ value: null, text: '' }].concat(this.seriesNames);
             this.trueCounter = -1;
 
             this.setColors();
