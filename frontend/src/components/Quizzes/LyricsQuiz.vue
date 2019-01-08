@@ -32,7 +32,6 @@
         <b-form-select
           v-model="level"
           :options="['ordered', 'all']"
-          selected="all"
           class="mb-2 mt-3"/>
       </b-col>
       <b-col sm="1">
@@ -113,12 +112,12 @@ export default {
     found: 0,
     total: 0,
     artist: 'queen',
-    title: '',
+    title: 'no one but you',
     titleHidden: '',
     start: {},
     stop: false,
     duration: '',
-    model: 'all',
+    level: 'all',
     currentIndex: 0,
   }),
   computed: {
