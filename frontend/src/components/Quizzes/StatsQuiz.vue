@@ -118,7 +118,7 @@ export default {
             this.shows = _.shuffle(body.shows);
 
 
-            const names = _.map(body.shows, 'series_name');
+            const names = _.sortBy(_.map(body.shows, 'series_name'));
             this.seriesNames = names.map(n => ({ text: n, value: n }));
             this.trueCounter = -1;
 
