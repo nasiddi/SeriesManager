@@ -162,17 +162,19 @@ export default {
       )}`;
     },
     checkNext(w) {
-      this.$snotify.error(w, { timeout: 0 });
-      this.$snotify.info(this.lyricsLower[this.currentIndex], { timeout: 0 });
-      this.$snotify.info(this.currentIndex, { timeout: 0 });
       if (w === this.lyricsLower[this.currentIndex]) {
         this.foundLyrics[this.currentIndex] = this.lyrics[this.currentIndex];
         this.highlight = this.highlight.map(item => (item === 'success' ? 'info' : item));
         this.highlight[this.currentIndex] = 'success';
         this.currentIndex += 1;
+        this.found += 1;
         setTimeout(() => {
           this.word = '';
         }, 50);
+
+        if (this.found === this.total) {
+          this.showAll();
+        }
       }
     },
     matchWord(w) {
