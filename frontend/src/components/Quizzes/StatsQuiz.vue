@@ -85,7 +85,7 @@ export default {
         const selected = _.map(this.shows, 'selected');
         const duplicates = _.filter(selected, (val, i, e) => _.includes(e, val, i + 1));
         this.seriesNames.forEach((n) => {
-          if (!(n == null)) {
+          if (!(n.value == null)) {
             if (selected.includes(n.value) && !n.text.includes('SELECTED')) {
               this.$set(n, 'text', `${n.text} | SELECTED`);
             } else if (n.text.includes('SELECTED')) {
@@ -124,7 +124,7 @@ export default {
 
             const names = _.sortBy(_.map(body.shows, 'series_name'));
             this.seriesNames = names.map(n => ({ text: n, value: n }));
-            this.seriesNames = [{ value: null, text: 'Please select an option' }].concat(this.seriesNames);
+            this.seriesNames = [{ value: null, text: 'Select Show' }].concat(this.seriesNames);
             this.trueCounter = -1;
 
             this.setColors();
