@@ -166,6 +166,11 @@ export default {
       const index = this.foundLyrics.findIndex(l => l === '');
       if (w === this.lyricsLower[index]) {
         this.foundLyrics[index] = this.lyrics[index];
+        this.highlight = this.highlight.map(item => (item === 'success' ? 'info' : item));
+        this.highlight[index] = 'success';
+        setTimeout(() => {
+          this.word = '';
+        }, 50);
       }
     },
     matchWord(w) {
@@ -189,12 +194,10 @@ export default {
         // eslint-disable-next-line no-return-assign
         index.forEach(i => (this.lyricsLower[i] = ''));
         this.found += index.length;
-        this.highlight = this.highlight.map(item => (item === 'success' ? '' : item));
+        this.highlight = this.highlight.map(item => (item === 'success' ? 'info' : item));
         // eslint-disable-next-line no-return-assign
         index.forEach(i => (this.highlight[i] = 'success'));
-        setTimeout(() => {
-          this.word = '';
-        }, 50);
+
         if (this.found === this.total) {
           this.showAll();
         }
