@@ -202,7 +202,9 @@ export default {
         this.highlight = this.highlight.map(item => (item === 'success' ? 'info' : item));
         // eslint-disable-next-line no-return-assign
         index.forEach(i => (this.highlight[i] = 'success'));
-
+        setTimeout(() => {
+          this.word = '';
+        }, 50);
         if (this.found === this.total) {
           this.showAll();
         }
