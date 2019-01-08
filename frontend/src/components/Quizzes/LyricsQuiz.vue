@@ -162,14 +162,14 @@ export default {
       )}`;
     },
     checkNext(w) {
-      const index = this.foundLyrics.findIndex(l => l === '');
       this.$snotify.error(w, { timeout: 0 });
-      this.$snotify.info(this.lyricsLower[index], { timeout: 0 });
-      this.$snotify.info(index, { timeout: 0 });
-      if (w === this.lyricsLower[index]) {
-        this.foundLyrics[index] = this.lyrics[index];
+      this.$snotify.info(this.lyricsLower[this.currentIndex], { timeout: 0 });
+      this.$snotify.info(this.currentIndex, { timeout: 0 });
+      if (w === this.lyricsLower[this.currentIndex]) {
+        this.foundLyrics[this.currentIndex] = this.lyrics[this.currentIndex];
         this.highlight = this.highlight.map(item => (item === 'success' ? 'info' : item));
-        this.highlight[index] = 'success';
+        this.highlight[this.currentIndex] = 'success';
+        this.currentIndex += 1;
         setTimeout(() => {
           this.word = '';
         }, 50);
