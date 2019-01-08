@@ -167,6 +167,7 @@ export default {
         this.highlight = this.highlight.map(item => (item === 'success' ? 'info' : item));
         this.highlight[this.currentIndex] = 'success';
         this.currentIndex += 1;
+        this.highlight[this.currentIndex] = 'warning';
         this.found += 1;
         setTimeout(() => {
           this.word = '';
@@ -254,6 +255,10 @@ export default {
             this.stop = false;
             this.start = moment(moment());
             setInterval(this.setDuration, 1000);
+
+            if (this.level === 'ordered') {
+              this.highlight[this.currentIndex] = 'warning';
+            }
           },
           () => {
             this.$snotify.error('Failed to load data', { timeout: 0 });
