@@ -85,8 +85,12 @@ export default {
         const selected = _.map(this.shows, 'selected');
         const duplicates = _.filter(selected, (val, i, e) => _.includes(e, val, i + 1));
         this.seriesNames.forEach((n) => {
-          if (selected.includes(n.value)) {
-            this.$set(n, 'text', `${n.text} | SELECTED`);
+          if (!(n.value === '')) {
+            if (selected.includes(n.value) && !n.text.includes('SELECTED')) {
+              this.$set(n, 'text', `${n.text} | SELECTED`);
+            } else if (n.text.includes('SELECTED')) {
+              this.$set(n, 'text', n.value);
+            }
           }
         });
         this.shows.forEach((s) => {
@@ -118,8 +122,9 @@ export default {
             this.shows = _.shuffle(body.shows);
 
 
-            const names = _.map(body.shows, 'series_name');
+            const names = _.sortBy(_.map(body.shows, 'series_name'));
             this.seriesNames = names.map(n => ({ text: n, value: n }));
+            this.seriesNames = [{ value: '', text: '' }].concat(this.seriesNames);
             this.trueCounter = -1;
 
             this.setColors();

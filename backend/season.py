@@ -20,6 +20,7 @@ class Season:
 
     def update_episodes(self, reload_metadata=True):
         self.episodes = {}
+        self.episode_numbers = []
         files = listdir(self.location)
         for file in files:
             episode = Episode(location=path.join(self.location, file), s_nr=self.s_nr)
@@ -34,3 +35,4 @@ class Season:
             if episode.e_nr < 777:
                 self.episode_numbers.append(episode.e_nr)
         sorted(self.episode_numbers)
+        print(self.episode_numbers)

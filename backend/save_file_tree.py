@@ -18,7 +18,7 @@ def main(args):
     global SHOWS, EXCEPTIONS
     parse_args(args)
     data = load_json(environ[CONF_FILE])
-    # save_json(data, 'data/save_tree.json')
+    save_json(data, 'data/save_tree.json')
     SHOWS = load_shows()
     EXCEPTIONS = load_json(EXCEPTIONS_FILE)
 
@@ -28,6 +28,7 @@ def main(args):
         return
     queue = syncer.QUEUE
     queue_errors(data['errors'], queue)
+    load_all(data['shows'], queue)
     save_json(EXCEPTIONS, EXCEPTIONS_FILE)
     save_queue(queue)
     report = []
@@ -109,6 +110,9 @@ def load_all(update, queue):
                              anime=SHOWS[n].anime)
                     queue.append(e)
                 elif e['save']:
+                    print(e)
+
+
                     e = File(old_location=e['location'],
                              s_nr=e['s_nr'],
                              e_nr=e['e_nr'],
@@ -131,7 +135,7 @@ def save_queue(queue):
         if file.delete:
             recursive_delete(file.old_location)
             try:
-                SHOWS[file.series_name].seasons[file.s_nr].update_episodes(reload_metadata=True)
+                SHOWS[file.series_name].seasons[file.s_nr].update_episodes(reload_metadata=False)
             except FileNotFoundError:
                 del SHOWS[file.series_name].seasons[file.s_nr]
             continue

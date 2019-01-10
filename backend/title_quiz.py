@@ -32,8 +32,9 @@ def generate_episode(e: Episode, title_nr, level):
             while exception in title_text_list:
                 title_text_list.remove(exception)
     else:
-        title_list = [title_low]
-        title_text_list = [title_text]
+        title_list = [title_low, remove_starting_the(title_low), title_low.replace(' ', ''), remove_starting_the(title_low).replace(' ', '')]
+        title_text_list = [title_text, remove_starting_the(title_text), title_text.replace(' ', ''), remove_starting_the(title_text).replace(' ', '')]
+
 
     title_list.extend(title_text_list)
     title_list = list(set(title_list))
@@ -45,6 +46,13 @@ def generate_episode(e: Episode, title_nr, level):
         'title_list': title_list,
         'highlight': 'secondary'
     }
+
+
+def remove_starting_the(title):
+    if title.startswith('the '):
+        return title[4:]
+    return title
+
 
 
 def remove_part(title):
@@ -77,13 +85,10 @@ def get_all_episodes(show, level):
 def main(args):
     parse_args(args)
     conf = load_json(environ[CONF_FILE])
-    # conf = {'series_name': 'Lost', 'level': 'word'}
+    # conf = {'series_name': 'Doctor Who', 'level': 'title'}
     shows = load_shows(read_only=True)
     show: Series = shows[conf['series_name']]
     episodes, total = get_all_episodes(show, conf['level'])
-    for s in episodes:
-        for e in s:
-            print(e)
     save_json({'episodes': episodes, 'total': total}, environ[OUT_FILE])
 
 
