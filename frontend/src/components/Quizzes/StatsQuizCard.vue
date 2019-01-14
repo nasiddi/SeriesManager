@@ -149,13 +149,15 @@ export default {
       this.$root.$emit('colors');
     },
     sortByCount(data) {
-      return _.chain(data)
+      const d = _.chain(data)
         .map((val, key) => ({ name: key, count: val }))
         .sortBy('count')
         .reverse()
         .keyBy('name')
         .mapValues('count')
         .value();
+      this.$snotify.error(d, { timeout: 0 });
+      return d;
     },
     getPieData(pie) {
       const data = { labels: [], datasets: [{ data: [], backgroundColor: [] }] };
