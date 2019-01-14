@@ -27,8 +27,8 @@ def prep_data():
                        PREMIERE: show.premiere,
                        FINAL: show.final,
                        TVDB_ID: show.tvdb_id,
-                       'genre1': show.genre1 if not show.genre1 == 'Anime' else 'Animation',
-                       'genre2': show.genre2 if not show.genre2 == 'Anime' else 'Animation',
+                       'genre1': show.genre1,
+                       'genre2': show.genre2,
                        'changed': False})
         update = sorted(update, key=lambda k: k[SERIES_NAME].lower())
 
