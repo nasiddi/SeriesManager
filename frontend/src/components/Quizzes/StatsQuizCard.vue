@@ -133,7 +133,6 @@ export default {
   methods: {
     setColor() {
       this.$root.$emit('colors');
-      this.$snotify.error(_.values(this.show.extension), { timeout: 0 });
     },
     sortByCount(data) {
       const d = _.chain(data)
