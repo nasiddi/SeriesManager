@@ -77,11 +77,13 @@
       <b-row lg>
         <b-col class="text-center">
           <h6 class="mt-3">Extensions</h6><br>
-          <span
+          <div
             v-for="(k, v) in sortByCount(show.extension)"
-            :key="v"
-            class="mt-2">
-          <strong>{{ v }}</strong> {{ k }}</span><br>
+            :key="v">
+            <span
+              class="mt-2">
+            <strong>{{ v }}</strong> {{ k }}</span><br>
+          </div>
         </b-col>
         <b-col
           class="text-center">
