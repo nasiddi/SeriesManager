@@ -2,7 +2,7 @@ from os import environ
 from sys import argv
 from time import time
 
-from utils.constants import SERIES_NAME, SINGLE, DOUBLE, ASPECT_RATIOS, OUT_FILE, DEBUG
+from utils.constants import SERIES_NAME, SINGLE, DOUBLE, ASPECT_RATIOS, OUT_FILE, DEBUG, AIRING
 from utils.io_utlis import load_shows, parse_args, save_json
 
 SHOWS = None
@@ -21,8 +21,8 @@ def main(args):
     size = 0
     for show in SHOWS.values():
         show_count += 1
-        show_stats = {SERIES_NAME: show.series_name, 'status': {show.status: 1}, 'premiere': show.premiere,
-                      'final': show.final, 'ratio': {}, 'extension': {}, 'duration': 0, 'episodes': 0,
+        show_stats = {SERIES_NAME: show.series_name, 'status': {show.status: 1}, 'premiere': show.premiere, 'avg_e_per_s': 0,
+                      'final': show.final, 'ratio': {}, 'extension': {}, 'duration': 0, 'episodes': 0, 'genre1': show.genre1, 'genre2': show.genre2,
                       'seasons': 0, 'size': 0, 'quality': {}, 'selected': '', 'color': '', 'result': False}
 
         if show.status in stats['total']['status']:
@@ -30,10 +30,14 @@ def main(args):
         else:
             stats['total']['status'][show.status] = 1
 
+
+
         for season in show.seasons.values():
             sea_count += 1
             show_stats['seasons'] += 1
 
+            if not season.s_nr >= len(list(show.seasons.values())) or not show.status == AIRING:
+                show_stats['avg_e_per_s'] += len(season.episode_numbers)
             for episode in season.episodes.values():
                 episode_option = 1 if episode.episode_option == SINGLE else 2 if episode.episode_option == DOUBLE else 3
 
@@ -93,6 +97,10 @@ def main(args):
             show_stats['avg_size'] = 0
         show_stats['duration'] = int(show_stats['duration'] / 60.0 * 100) / 100.0
         show_stats['size'] = int(show_stats['size'] / 1024.0 * 100) / 100.0
+        try:
+            show_stats['avg_e_per_s'] = int(show_stats['avg_e_per_s'] / (show_stats['seasons'] if not show.status == AIRING else show_stats['seasons'] - 1) > 0 * 100) / 100.0
+        except ZeroDivisionError:
+            pass
         stats['shows'].append(show_stats)
 
     keys = list(stats['total']['ratio'].keys())
