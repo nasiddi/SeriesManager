@@ -80,33 +80,27 @@
           <div
             v-for="(k, v) in sortByCount(show.extension)"
             :key="v">
-            <span
-              class="mt-2">
+            <span>
             <strong>{{ v }}</strong> {{ k }}</span><br>
           </div>
         </b-col>
-        <b-col
-          class="text-center">
-          <h6 class="mt-3">Quality</h6>
-          <pie-chart
-            :chart-data="getPieData(show.quality)"
-            :options="chartOptions"
-            :style="{display: 'inline-block'}"
-            :width="50"
-            :height="50"
-          />
+        <b-col class="text-center">
+          <h6 class="mt-3">Quality</h6><br>
+          <div
+            v-for="(k, v) in sortByCount(show.quality)"
+            :key="v">
+            <span>
+            <strong>{{ v }}</strong> {{ k }}</span><br>
+          </div>
         </b-col>
-        <b-col
-          class="text-center">
-          <h6 class="mt-3">Aspect Ratio</h6>
-          <pie-chart
-            :chart-data="getPieData(show.ratio)"
-            :options="chartOptions"
-            :style="{display: 'inline-block'}"
-
-            :width="50"
-            :height="50"
-          />
+        <b-col class="text-center">
+          <h6 class="mt-3">Ratio</h6><br>
+          <div
+            v-for="(k, v) in sortByCount(show.ratio)"
+            :key="v">
+            <span>
+            <strong>{{ v }}</strong> {{ k }}</span><br>
+          </div>
         </b-col>
       </b-row>
     </b-card>
