@@ -94,7 +94,8 @@
           </div>
         </b-col>
         <b-col class="text-center">
-          <h6 class="mt-2 mb-0">Ratio</h6><br>
+          <span class="mt-0">
+          <strong>Ratio</strong></span><br>
           <div
             v-for="(k, v) in sortByCount(show.ratio)"
             :key="v">
