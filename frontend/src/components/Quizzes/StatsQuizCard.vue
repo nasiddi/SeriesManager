@@ -149,7 +149,7 @@ export default {
       this.$root.$emit('colors');
     },
     sortByCount(data) {
-      _.chain(data)
+      return _.chain(data)
         .map((val, key) => ({ name: key, count: val }))
         .sortBy('count')
         .reverse()
