@@ -43,6 +43,10 @@
           <span class="mt-2"><strong>{{ show.episodes }}</strong></span><br>
           <span>Episodes</span>
         </b-col>
+        <b-col class="text-center mt-2">
+          <span class="mt-2"><strong>{{ show.genre1 }}</strong></span><br>
+          <span>{{ show.genre2 }}</span>
+        </b-col>
       </b-row>
       <hr>
       <b-row
@@ -64,18 +68,19 @@
           <span class="mt-2"><strong>{{ show.avg_size }}</strong></span><br>
           <span>MB per Episode</span>
         </b-col>
+        <b-col class="text-center mt-2">
+          <span class="mt-2"><strong>{{ show.avg_e_per_s }}</strong></span><br>
+          <span>Episodes per Season</span>
+        </b-col>
       </b-row>
       <hr>
       <b-row lg>
         <b-col class="text-center">
-          <h6 class="mt-3">Extentions</h6>
-          <pie-chart
-            :chart-data="getPieData(show.extension)"
-            :options="chartOptions"
-            :style="{display: 'inline-block'}"
-            :width="50"
-            :height="50"
-          />
+          <h6 class="mt-3">Extensions</h6><br>
+          <span
+            v-for="(k, v) in sortByCount(show.extensions)"
+            :key="k"
+            class="mt-2"><strong>{{ k }}</strong>{{ v }}</span><br>
         </b-col>
         <b-col
           class="text-center">
@@ -142,6 +147,15 @@ export default {
   methods: {
     setColor() {
       this.$root.$emit('colors');
+    },
+    sortByCount(data) {
+      _.chain(data)
+        .map((val, key) => ({ name: key, count: val }))
+        .sortBy('count')
+        .reverse()
+        .keyBy('name')
+        .mapValues('count')
+        .value();
     },
     getPieData(pie) {
       const data = { labels: [], datasets: [{ data: [], backgroundColor: [] }] };
