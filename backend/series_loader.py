@@ -2,6 +2,7 @@ from os import sep, walk, path, environ
 from sys import exit, setrecursionlimit, argv
 from time import time
 import multiprocessing
+from tvdb_client import ApiV2Client
 
 import backup
 from episode import Episode
@@ -9,6 +10,9 @@ from series import Series
 from utils.constants import META_FILE, STATUS, NAME_NEEDED, PREMIERE, FINAL, TVDB_ID, SERIES_DIR, ANIME_DIR, CONF_FILE, SERIES_NAME
 from utils.io_utlis import load_json, load_shows, save_shows, parse_args
 from unlock_shows import unlock
+
+api_client = ApiV2Client('nadinasiddiquiwaz', 'ZEDKTMYBNB29LBOS', 'EISRLGJH035SO60Q')
+api_client.login()
 
 setrecursionlimit(10000)
 META_DATA = load_json(META_FILE)
@@ -64,6 +68,8 @@ def add_show_metadata(show):
     show.name_needed = info[NAME_NEEDED]
     show.premiere = info[PREMIERE]
     show.final = info[FINAL]
+    show.genre1 = info['genre1'] if 'genre1' in info else ''
+    show.genre2 = info['genre2'] if 'genre2' in info else ''
     if TVDB_ID not in info:
         info[TVDB_ID] = ''
     show.tvdb_id = info[TVDB_ID] if not info[TVDB_ID] == 0 else ''
@@ -71,8 +77,10 @@ def add_show_metadata(show):
 
 
 def add_metadata(shows):
+    counter = 0
     for show in shows.values():
         info = add_show_metadata(show)
+        update_all_air_dates(show)
         e: Episode
         for season in show.seasons.values():
             for e in season.episodes.values():
@@ -89,6 +97,28 @@ def add_metadata(shows):
                     e.update_file_meta()
                 if not e.quality:
                     e.update_file_meta()
+
+                if e.air_date == '':
+                    counter += 1
+    print('counter', counter)
+
+
+def update_all_air_dates(show: Series):
+    if not show.tvdb_id:
+        return
+    episodes = []
+    for i in range(1, 100):
+        eps = api_client.get_series_episodes(show.tvdb_id, episode_number=None, page=i)
+        if 'code' in eps:
+            break
+        episodes.extend(eps['data'])
+    for e_meta in episodes:
+        e: Episode
+        e = show.get_episode_by_sxe(e_meta['airedSeason'], e_meta['airedEpisodeNumber'])
+        if not e:
+            continue
+        e.air_date = e_meta['firstAired']
+
 
 
 def main(args):

@@ -21,6 +21,8 @@ class Series:
         self.final = final
         self.tvdb_id = tvdb_id if not tvdb_id == 0 else ''
         self.anime = True if ANIME_DIR in self.location else False
+        self.genre1 = ''
+        self.genre2 = ''
 
     def __str__(self):
         return ('Name:\t\t' + self.series_name +
@@ -38,7 +40,9 @@ class Series:
             'premiere': self.premiere,
             'final': self.final,
             'tvdb_id': self.tvdb_id,
-            'seasons': self.save_seasons()
+            'seasons': self.save_seasons(),
+            'genre1': self.genre1 if hasattr(self, 'genre1') else '',
+            'genre2': self.genre2 if hasattr(self, 'genre2') else ''
         }}
 
     def save_seasons(self):

@@ -27,6 +27,8 @@ def prep_data():
                        PREMIERE: show.premiere,
                        FINAL: show.final,
                        TVDB_ID: show.tvdb_id,
+                       'genre1': show.genre1 if hasattr(show, 'genre1') else '',
+                       'genre2': show.genre1 if hasattr(show, 'genre1') else '',
                        'changed': False})
         update = sorted(update, key=lambda k: k[SERIES_NAME].lower())
 

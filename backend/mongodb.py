@@ -4,6 +4,9 @@ from series import Series
 from episode import Episode
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
+import json
+import matplotlib.pyplot as plt
+import pandas as pd
 
 db = connect('atlantis', host='localhost', port=27017)
 
@@ -11,7 +14,7 @@ db = connect('atlantis', host='localhost', port=27017)
 def fill_db_from_pickle():
     db.drop_database('atlantis')
 
-    SHOWS = pickle_load('shows.pkl')
+    SHOWS = pickle_load('assets/shows.pkl')
     s: Series
     for s in sorted(list(SHOWS.values()), key=lambda k: k.series_name.lower()):
         Show(
@@ -41,13 +44,15 @@ def fill_db_from_pickle():
                     anime=e.anime,
                     episode_option=e.episode_option,
                     e_nr=e.e_nr,
-                    duration=e.duration,
-                    height=e.height,
-                    width=e.width,
-                    size=e.size,
-                    ratio=e.ratio,
-                    quality=e.quality,
-                    title=e.title
+                    #duration=e.duration,
+                    #height=e.height,
+                    #width=e.width,
+                    #size=e.size,
+                    #ratio=e.ratio,
+                    #quality=e.quality,
+                    title=e.title,
+                    air_date=datetime.strptime(e.air_date, '%Y-%m-%d') if e.air_date else None
+                    
                 ).save()
 
 
@@ -110,6 +115,7 @@ class E(Document):
     ratio = FloatField()
     quality = StringField()
     title = StringField()
+    air_date = DateField()
 
     def __str__(self):
         return self.episode_id
@@ -159,8 +165,8 @@ def get_density(show):
 # fill_db_from_pickle()
 
 
-for s in ['Airing', 'Hiatus', 'Ended']:
-    print(s, Show.objects(status__exact=s).count())
+for status in ['Airing', 'Hiatus', 'Ended']:
+    print(status, Show.objects(status__exact=status).count())
 
 print(E.objects.sum('duration') / 60 / 24)
 
@@ -179,37 +185,95 @@ for show in Show.objects.order_by('-density'):
 print()
 print(len(Show.objects))
 print()
-dates = []
-for show in Show.objects.order_by('premiere'):
-    names = []
-    if show.premiere not in dates and show.final is not None:
-        names.append([show.show_id, 'premiere'])
-        matches = Show.objects(premiere=show.premiere)
-        if matches:
-            dates.append(show.premiere)
-            for match in matches:
-                if match.show_id == show.show_id:
-                    continue
-                names.append([match.show_id, 'premiere'])
-        matches = Show.objects(final=show.premiere)
-        if matches:
-            dates.append(show.premiere)
-            for match in matches:
-                if match.show_id == show.show_id:
-                    continue
-                names.append([match.show_id, 'final'])
-        if len(names) > 1:
-            print(show.premiere, names)
-    names = []
-    if show.final not in dates and show.final is not None:
-        matches = Show.objects(final=show.final)
-        names.append([show.show_id, 'final'])
-        if matches:
-            dates.append(show.final)
-            for match in matches:
-                if match.show_id == show.show_id:
-                    continue
-                names.append([match.show_id, 'final'])
-        if len(names) > 1:
-            print(show.final, names)
+
+
+def find_date_matches(show_date, show_id, date_type, dates, matched):
+    matches = Show.objects((Q(premiere=show_date) or Q(final=show_date)))
+    if len(matches) > 1:
+        dates.append(show_date)
+        if show_date not in matched:
+            matched[show_date] = {'premiere': [], 'final': []}
+        matched[show_date][date_type].append(show_id)
+        for match in matches:
+            if match.premiere == show_date and match.show_id not in matched[show_date]['premiere']:
+                matched[show_date]['premiere'].append(match.show_id)
+            elif match.final == show_date and match.show_id not in matched[show_date]['final']:
+                matched[show_date]['final'].append(match.show_id)
+
+
+def find_all_matching_dates():
+    matched = {}
+    dates = []
+    for show in Show.objects.order_by('premiere'):
+        if show.premiere is not None:
+            find_date_matches(show.premiere.strftime('%Y-%m-%d'), show.show_id, 'premiere', dates, matched)
+        if show.final is not None:
+            find_date_matches(show.final.strftime('%Y-%m-%d'), show.show_id, 'final', dates, matched)
+
+    print(json.dumps(matched, indent=2, sort_keys=True))
+
+
+find_all_matching_dates()
+
+premieres = Show.objects.aggregate({
+    '$group': {'_id': {'premiere': '$premiere', 'final': '$final'}, 'show_id': {'$push': '$show_id'}}
+})
+
+for p in list(premieres):
+    if len(p['show_id']) > 1:
+        print(p)
+
+
+finals = Show.objects.aggregate({
+    '$group': {'_id': {'final': '$final'}, 'show_id': {'$push': '$show_id'}}
+})
+
+for p in list(finals):
+    if len(p['show_id']) > 1:
+        print(p)
+
+
+print()
+
+years = dict.fromkeys(list(range(1960, 2020)), 0)
+
+for s in Show.objects:
+    for y in years.keys():
+        final = s.final.year if s.final else 2019
+        if s.premiere.year <= y <= final:
+            years[y] += 1
+
+print(years)
+years = dict.fromkeys(list(range(1960, 2021)), 0)
+years_sep = dict.fromkeys(list(range(1960, 2021)), 0)
+print()
+shows = {}
+
+for e in E.objects:
+    if e.air_date:
+        years[e.air_date.year] += 1
+        if not years_sep[e.air_date.year] or e.show_id not in years_sep[e.air_date.year]:
+            years_sep[e.air_date.year] = { e.show_id: 0 }
+
+        years_sep[e.air_date.year][e.show_id] += 1
+
+        if e.show_id not in shows:
+            shows[e.show_id] = dict.fromkeys(list(range(1960, 2021)), 0)
+        shows[e.show_id][e.air_date.year] += 1 if e.episode_option == 'Single' else 2
+
+print(years)
+
+#plt.bar(range(len(years)), list(years.values()), align='center')
+decades = [y if y % 10 == 0 else '' for y in years.keys()]
+plt.xticks(range(len(decades)), list(decades))
+
+#plt.show()
+print(years_sep)
+print(shows)
+df = pd.DataFrame(shows)
+
+df.plot(kind="bar", stacked=True)
+decades = [y if y % 10 == 0 else '' for y in years.keys()]
+plt.xticks(range(len(decades)), list(decades))
+plt.show()
 

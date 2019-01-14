@@ -1,10 +1,13 @@
 import re
 from os import path, sep
+from tvdb_client import ApiV2Client
 
 from utils.io_utlis import find_video_metadata
 from utils.constants import SINGLE, DOUBLE, TRIPLE, MAC_OFFSET, ANIME_PATTERN,\
     SERIES_PATTERN, ANIME_DIR, ASPECT_RATIOS, QUALITY
 
+api_client = ApiV2Client('nadinasiddiquiwaz', 'ZEDKTMYBNB29LBOS', 'EISRLGJH035SO60Q')
+api_client.login()
 
 class Episode:
     def __init__(self, location='',
@@ -38,6 +41,7 @@ class Episode:
         self.size = size
         self.ratio = ratio
         self.quality = quality
+        self.air_date = ''
 
         self._parse()
 
@@ -47,7 +51,8 @@ class Episode:
                 'width': self.width,
                 'size': self.size,
                 'ratio': self.ratio,
-                'quality': self.quality}
+                'quality': self.quality,
+                'air_date': self.air_date}
 
     def set_file_meta(self, data):
         self.height = data[0]
@@ -55,6 +60,9 @@ class Episode:
         self.size = data[2]
         self.duration = data[3]
         self.ratio = data[4]
+
+    def set_air_date(self):
+        pass
 
     def _parse(self):
         self.file_name = path.basename(self.location)
@@ -116,7 +124,8 @@ class Episode:
                 '\nShow: ' + self.location.split(sep)[2 + MAC_OFFSET] + ' SNr: ' + str(self.s_nr)
                 + ' ENr: ' + str(self.e_nr) +
                 '\nFilename: ' + self.file_name +
-                '\nDuration: ' + str(self.duration) + ' Size: ' + str(self.size))
+                '\nDuration: ' + str(self.duration) + ' Size: ' + str(self.size)) + \
+                '\nAirDate: ' + self.air_date
 
     def id(self):
         return f'{self.series_name} {self.s_nr:02d}x{self.e_nr:0{3 if self.anime else 2}d}'

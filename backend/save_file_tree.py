@@ -16,6 +16,7 @@ EXCEPTIONS = {}
 
 def main(args):
     global SHOWS, EXCEPTIONS
+    unlock()
     parse_args(args)
     data = load_json(environ[CONF_FILE])
     save_json(data, 'data/save_tree.json')

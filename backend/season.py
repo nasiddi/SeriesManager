@@ -35,4 +35,3 @@ class Season:
             if episode.e_nr < 777:
                 self.episode_numbers.append(episode.e_nr)
         sorted(self.episode_numbers)
-        print(self.episode_numbers)

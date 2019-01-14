@@ -38,6 +38,22 @@
         <b-col
           sm
           class="px-2">
+          <b-form-select
+            v-model="s.genre1"
+            :options="genre_option"
+            class="mt-3"/>
+        </b-col>
+        <b-col
+          sm
+          class="px-2">
+          <b-form-select
+            v-model="s.genre2"
+            :options="genre_option"
+            class="mt-3"/>
+        </b-col>
+        <b-col
+          sm
+          class="px-2">
           <b-input
             v-model.number="s.tvdb_id"
             :state="validateTVDBID"
@@ -89,6 +105,19 @@ export default {
       'Airing',
       'Hiatus',
       'Ended',
+    ],
+    genre_option: [
+      '',
+      'Action',
+      'Anime',
+      'Comedy',
+      'Comics',
+      'Documentary',
+      'Drama',
+      'Fantasy',
+      'Historical',
+      'Hospital',
+      'Sci-Fi',
     ],
     name_option: [
       { text: 'Name required', value: true },
