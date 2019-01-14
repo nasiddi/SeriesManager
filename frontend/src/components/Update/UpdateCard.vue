@@ -118,6 +118,7 @@ export default {
       'Documentary',
       'Drama',
       'Fantasy',
+      'Game Show',
       'Historical',
       'Hospital',
       'Sci-Fi',
