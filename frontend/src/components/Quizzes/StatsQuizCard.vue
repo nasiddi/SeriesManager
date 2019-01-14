@@ -40,10 +40,10 @@
       <hr>
       <b-row>
         <b-col class="text-center mt-2">
-          <span>Seasons </span><span class="mt-2"><strong>{{ show.seasons }}</strong></span>
-        </b-col>
-        <b-col class="text-center mt-2">
-          <span>Episodes </span><span class="mt-2"><strong>{{ show.episodes }}</strong></span>
+          // eslint-disable-next-line max-len
+          <span>Seasons </span><span class="mt-2"><strong>{{
+          show.seasons }}</strong></span><span>Episodes </span><span class="mt-2"><strong>{{
+          show.episodes }}</strong></span>
         </b-col>
         <b-col class="text-center mt-2">
           <span>Hours </span><span class="mt-2"><strong>{{ show.duration }}</strong></span>
