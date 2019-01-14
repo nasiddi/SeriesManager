@@ -96,14 +96,13 @@ const _ = require('lodash');
 
 export default {
   props: {
-    original: {
+    s: {
       type: Object,
       required: true,
     },
   },
   data: () => ({
-    s: {},
-    old: {},
+    original: {},
     status_option: [
       'Airing',
       'Hiatus',
@@ -203,12 +202,9 @@ export default {
       return change ? true : null;
     },
   },
-  watch: {
-  },
   created() {
     this.$root.$on('dates', this.getDates);
-    this.s = _.cloneDeep(this.original);
-    this.old = _.cloneDeep(this.original);
+    this.original = _.cloneDeep(this.s);
   },
   mounted() {
     this.getDates();
