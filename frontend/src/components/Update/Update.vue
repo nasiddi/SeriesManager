@@ -40,14 +40,15 @@
       </b-row>
     </div>
     <div v-if="json.length !== 0">
-
-      <update-card
-        v-for="s in json"
+      <div
         v-if="(s.status == 'Airing' && a)||(s.status == 'Hiatus' && h)
-        ||(s.status == 'Ended' && e)||(s.status =='none')"
-        :key="s.series_name_unchanged"
-        :id="setRef(s)"
-        :s="s"/>
+        ||(s.status == 'Ended' && e)||(s.status =='none')">
+        <update-card
+          v-for="s in json"
+          :key="s.series_name_unchanged"
+          :id="setRef(s)"
+          :s="s"/>
+      </div>
       <b-button
         type="update"
         variant="primary"
@@ -141,6 +142,7 @@ export default {
         );
     },
     async update() {
+      this.json = {};
       this.notifLoading = this.$snotify.info('Updating', { timeout: 0 });
       this.$http.post('python/update/save', this.json)
         .then(
