@@ -78,7 +78,7 @@
         <b-col class="text-center">
           <h6 class="mt-3">Extensions</h6><br>
           <span
-            v-for="(k, v) in _.values(show.extensions)"
+            v-for="(k, v) in _.values(show.extension)"
             :key="k"
             class="mt-2"><strong>{{ k }}</strong>{{ v }}</span><br>
         </b-col>
@@ -147,7 +147,7 @@ export default {
   methods: {
     setColor() {
       this.$root.$emit('colors');
-      this.$snotify.error(_.values(this.show.extensions), { timeout: 0 });
+      this.$snotify.error(_.values(this.show.extension), { timeout: 0 });
     },
     sortByCount(data) {
       const d = _.chain(data)
