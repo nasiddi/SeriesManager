@@ -144,13 +144,13 @@ export default {
         );
     },
     async update() {
-      this.json = {};
       this.notifLoading = this.$snotify.info('Updating', { timeout: 0 });
       this.$http.post('python/update/save', this.json)
         .then(
           (res) => {
             const body = _.defaults(res.body, {
             });
+            this.json = {};
             if (res.body === 'failed') {
               this.$snotify.remove(this.notifLoading.id);
               this.$snotify.error('Python failed', { timeout: 0 });
