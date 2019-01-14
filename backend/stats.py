@@ -22,7 +22,7 @@ def main(args):
     for show in SHOWS.values():
         show_count += 1
         show_stats = {SERIES_NAME: show.series_name, 'status': {show.status: 1}, 'premiere': show.premiere, 'avg_e_per_s': 0,
-                      'final': show.final, 'ratio': {}, 'extension': {}, 'duration': 0, 'episodes': 0, 'genre1': show.genre1, 'genre2': show.genre2,
+                      'final': show.final, 'ratio': {}, 'extension': {}, 'duration': 0, 'episodes': 0, #'genre1': show.genre1, 'genre2': show.genre2,
                       'seasons': 0, 'size': 0, 'quality': {}, 'selected': '', 'color': '', 'result': False}
 
         if show.status in stats['total']['status']:
@@ -98,7 +98,7 @@ def main(args):
         show_stats['duration'] = int(show_stats['duration'] / 60.0 * 100) / 100.0
         show_stats['size'] = int(show_stats['size'] / 1024.0 * 100) / 100.0
         try:
-            show_stats['avg_e_per_s'] = int(show_stats['avg_e_per_s'] / (show_stats['seasons'] if not show.status == AIRING else show_stats['seasons'] - 1) > 0 * 100) / 100.0
+            show_stats['avg_e_per_s'] = int(show_stats['avg_e_per_s'] / (show_stats['seasons'] if not show.status == AIRING else show_stats['seasons'] - 1) * 100) / 100.0
         except ZeroDivisionError:
             pass
         stats['shows'].append(show_stats)
