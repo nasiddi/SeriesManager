@@ -49,7 +49,7 @@
           ||(s.status == 'Ended' && e)||(s.status =='none')"
           :key="s.series_name_unchanged"
           :id="setRef(s)"
-          :s="s"/>
+          :original="s"/>
       </div>
       <b-button
         type="update"
