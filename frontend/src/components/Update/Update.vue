@@ -147,6 +147,7 @@ export default {
         );
     },
     async update() {
+      this.updated = false;
       this.notifLoading = this.$snotify.info('Updating', { timeout: 0 });
       this.$http.post('python/update/save', this.json)
         .then(
@@ -165,7 +166,7 @@ export default {
               return;
             }
             this.json = body;
-            this.body = _.cloneDeep(body);
+            this.updated = true;
             this.$emit('dates');
           },
           () => {
