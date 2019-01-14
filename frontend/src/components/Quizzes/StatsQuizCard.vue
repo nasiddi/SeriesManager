@@ -76,30 +76,26 @@
       <hr>
       <b-row lg>
         <b-col class="text-center">
-          <h6 class="mt-2 mb-0">Extensions</h6><br>
           <div
             v-for="(k, v) in sortByCount(show.extension)"
             :key="v">
-            <span>
+            <span class="mt-2">
             <strong>{{ v }}</strong> {{ k }}</span><br>
           </div>
         </b-col>
         <b-col class="text-center">
-          <h6 class="mt-2 mb-0">Quality</h6><br>
           <div
             v-for="(k, v) in sortByCount(show.quality)"
             :key="v">
-            <span>
+            <span class="mt-2">
             <strong>{{ v }}</strong> {{ k }}</span><br>
           </div>
         </b-col>
         <b-col class="text-center">
-          <span class="mt-0">
-          <strong>Ratio</strong></span><br>
           <div
             v-for="(k, v) in sortByCount(show.ratio)"
             :key="v">
-            <span class="mt-0">
+            <span class="mt-2">
             <em>{{ v }}</em> {{ k }}</span><br>
           </div>
         </b-col>
