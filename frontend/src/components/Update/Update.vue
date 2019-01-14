@@ -163,7 +163,7 @@ export default {
               return;
             }
             this.json = body;
-            this.body = body;
+            this.body = _.cloneDeep(body);
             this.$emit('dates');
           },
           () => {
