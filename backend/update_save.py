@@ -30,6 +30,7 @@ def main(args):
             show.tvdb_id = s[TVDB_ID]
             show.genre1 = s['genre1']
             show.genre2 = s['genre2']
+            print(s)
         if not s['series_name_unchanged'] == s[SERIES_NAME]:
             update_location(show, s[SERIES_NAME])
             SHOWS.pop(s['series_name_unchanged'], None)
