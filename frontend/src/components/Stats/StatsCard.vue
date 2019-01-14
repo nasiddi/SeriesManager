@@ -23,6 +23,10 @@
           <span class="mt-2"><strong>{{ show.episodes }}</strong></span><br>
           <span>Episodes</span>
         </b-col>
+        <b-col class="text-center mt-2">
+          <span class="mt-2"><strong>{{ show.genre1 }}</strong></span><br>
+          <span>{{ show.genre2 }}</span>
+        </b-col>
       </b-row>
       <hr>
       <b-row
@@ -43,6 +47,10 @@
         <b-col class="text-center mt-2">
           <span class="mt-2"><strong>{{ show.avg_size }}</strong></span><br>
           <span>MB per Episode</span>
+        </b-col>
+        <b-col class="text-center mt-2">
+          <span class="mt-2"><strong>{{ show.avg_e_per_s }}</strong></span><br>
+          <span>Episodes per Season</span>
         </b-col>
       </b-row>
       <hr>
