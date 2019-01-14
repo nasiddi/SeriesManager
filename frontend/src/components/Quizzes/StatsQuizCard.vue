@@ -79,8 +79,9 @@
           <h6 class="mt-3">Extensions</h6><br>
           <span
             v-for="(k, v) in sortByCount(show.extension)"
-            :key="k"
-            class="mt-2"><strong>{{ k }}</strong>{{ v }}</span><br>
+            :key="v"
+            class="mt-2">
+          <strong>{{ v }}</strong> {{ k }}</span><br>
         </b-col>
         <b-col
           class="text-center">
