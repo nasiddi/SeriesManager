@@ -206,13 +206,6 @@ export default {
       return change ? true : null;
     },
   },
-  created() {
-    this.$root.$on('dates', this.getDates);
-    this.original = _.cloneDeep(this.s);
-  },
-  mounted() {
-    this.getDates();
-  },
   watch: {
     updated: {
       handler(u) {
@@ -223,6 +216,13 @@ export default {
       },
       deep: true,
     },
+  },
+  created() {
+    this.$root.$on('dates', this.getDates);
+    this.original = _.cloneDeep(this.s);
+  },
+  mounted() {
+    this.getDates();
   },
   methods: {
     async getDates() {
