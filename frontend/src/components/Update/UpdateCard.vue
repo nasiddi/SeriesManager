@@ -41,6 +41,7 @@
           <b-form-select
             v-model="s.genre1"
             :options="genre_option"
+            :state="validateGenre1"
             class="mt-3"/>
         </b-col>
         <b-col
@@ -49,6 +50,7 @@
           <b-form-select
             v-model="s.genre2"
             :options="genre_option"
+            :state="validateGenre2"
             class="mt-3"/>
         </b-col>
         <b-col
@@ -143,6 +145,22 @@ export default {
     },
     validateNameNeeded() {
       if (this.s.name_needed !== this.original.name_needed) {
+        // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+        this.s.changed = true;
+        return true;
+      }
+      return null;
+    },
+    validateGenre1() {
+      if (this.s.genre1 !== this.original.genre1) {
+        // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+        this.s.changed = true;
+        return true;
+      }
+      return null;
+    },
+    validateGenre2() {
+      if (this.s.genre2 !== this.original.genre2) {
         // eslint-disable-next-line vue/no-side-effects-in-computed-properties
         this.s.changed = true;
         return true;
