@@ -22,6 +22,8 @@ def main(args):
         return
     for s in data:
         show = SHOWS[s['series_name_unchanged']]
+        if s.series_name == '13 Reasons Why':
+            print(s)
         if s['changed']:
             show.name_needed = s[NAME_NEEDED]
             show.status = s[STATUS]
@@ -30,7 +32,7 @@ def main(args):
             show.tvdb_id = s[TVDB_ID]
             show.genre1 = s['genre1']
             show.genre2 = s['genre2']
-            print(s)
+
         if not s['series_name_unchanged'] == s[SERIES_NAME]:
             update_location(show, s[SERIES_NAME])
             SHOWS.pop(s['series_name_unchanged'], None)
