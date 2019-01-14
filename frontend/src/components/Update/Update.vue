@@ -41,10 +41,12 @@
     </div>
     <div v-if="json.length !== 0">
       <div
-        v-if="(s.status == 'Airing' && a)||(s.status == 'Hiatus' && h)
-        ||(s.status == 'Ended' && e)||(s.status =='none')">
+        v-for="s in json"
+        :key="s.series_name_unchanged"
+      >
         <update-card
-          v-for="s in json"
+          v-if="(s.status == 'Airing' && a)||(s.status == 'Hiatus' && h)
+          ||(s.status == 'Ended' && e)||(s.status =='none')"
           :key="s.series_name_unchanged"
           :id="setRef(s)"
           :s="s"/>
