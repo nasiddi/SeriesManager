@@ -147,6 +147,7 @@ export default {
   methods: {
     setColor() {
       this.$root.$emit('colors');
+      this.$snotify.error(_.values(this.show.extensions), { timeout: 0 });
     },
     sortByCount(data) {
       const d = _.chain(data)
@@ -156,7 +157,6 @@ export default {
         .keyBy('name')
         .mapValues('count')
         .value();
-      this.$snotify.error(d, { timeout: 0 });
       return d;
     },
     getPieData(pie) {
