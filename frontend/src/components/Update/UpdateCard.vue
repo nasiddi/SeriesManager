@@ -114,6 +114,7 @@ export default {
       'Anime',
       'Comedy',
       'Comics',
+      'Crime',
       'Documentary',
       'Drama',
       'Fantasy',
