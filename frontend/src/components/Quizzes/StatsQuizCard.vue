@@ -40,38 +40,30 @@
       <hr>
       <b-row>
         <b-col class="text-center mt-2">
-          <span class="mt-2"><strong>{{ show.seasons }}</strong></span><br>
-          <span>Seasons</span>
+          <span>Seasons </span><span class="mt-2"><strong>{{ show.seasons }}</strong></span>
         </b-col>
         <b-col class="text-center mt-2">
-          <span class="mt-2"><strong>{{ show.episodes }}</strong></span><br>
-          <span>Episodes</span>
+          <span>Episodes </span><span class="mt-2"><strong>{{ show.episodes }}</strong></span>
         </b-col>
-
+        <b-col class="text-center mt-2">
+          <span>Hours </span><span class="mt-2"><strong>{{ show.duration }}</strong></span>
+        </b-col>
+        <b-col class="text-center mt-2">
+          <span>GB </span><span class="mt-2"><strong>{{ show.size }}</strong></span>
+        </b-col>
       </b-row>
       <hr>
       <b-row
         lg
         class="mt-3">
         <b-col class="text-center mt-2">
-          <span class="mt-2"><strong>{{ show.duration }}</strong></span><br>
-          <span>Hours</span>
+          <span>Minutes per Episode </span><span class="mt-2"><b>{{ show.avg_duration }}</b></span>
         </b-col>
         <b-col class="text-center mt-2">
-          <span class="mt-2"><strong>{{ show.size }}</strong></span><br>
-          <span>GB</span>
+          <span>MB per Episode </span><span class="mt-2"><b>{{ show.avg_size }}</b></span>
         </b-col>
         <b-col class="text-center mt-2">
-          <span class="mt-2"><strong>{{ show.avg_duration }}</strong></span><br>
-          <span>Minutes per Episode</span>
-        </b-col>
-        <b-col class="text-center mt-2">
-          <span class="mt-2"><strong>{{ show.avg_size }}</strong></span><br>
-          <span>MB per Episode</span>
-        </b-col>
-        <b-col class="text-center mt-2">
-          <span class="mt-2"><strong>{{ show.avg_e_per_s }}</strong></span><br>
-          <span>Episodes per Season</span>
+          <span>Episodes per Season </span><span class="mt-2"><b>{{ show.avg_e_per_s }}</b></span>
         </b-col>
       </b-row>
       <hr>
