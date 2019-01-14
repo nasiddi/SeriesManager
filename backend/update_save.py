@@ -22,7 +22,7 @@ def main(args):
         return
     for s in data:
         show = SHOWS[s['series_name_unchanged']]
-        if s.series_name == '13 Reasons Why':
+        if s[SERIES_NAME] == '13 Reasons Why':
             print(s)
         if s['changed']:
             show.name_needed = s[NAME_NEEDED]
