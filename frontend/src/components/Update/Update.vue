@@ -78,6 +78,7 @@ export default {
     a: true,
     h: true,
     e: true,
+    body: {},
   }),
   watch: {
     json: {
@@ -162,6 +163,7 @@ export default {
               return;
             }
             this.json = body;
+            this.body = body;
             this.$emit('dates');
           },
           () => {
