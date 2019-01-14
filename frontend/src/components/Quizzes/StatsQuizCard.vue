@@ -28,13 +28,17 @@
         lg
         class="mt-3">
         <b-col class="text-center mt-2">
-          <span class="mt-2"><strong>{{ show.premiere }}</strong></span><br>
-          <span>Premiere</span>
+          <span>Premiere </span><span class="mt-2"><strong>{{ show.premiere }}</strong></span>
         </b-col>
         <b-col class="text-center mt-2">
-          <span class="mt-2"><strong>{{ show.final }}</strong></span><br>
-          <span>Final</span>
+          <span>Final </span><span class="mt-2"><strong>{{ show.final }}</strong></span>
         </b-col>
+        <b-col class="text-center mt-2">
+          <span class="mt-2"><strong>{{ show.genre1 }} </strong></span>
+          <span>{{ show.genre2 }}</span>
+        </b-col>
+      </b-row>
+      <b-row>
         <b-col class="text-center mt-2">
           <span class="mt-2"><strong>{{ show.seasons }}</strong></span><br>
           <span>Seasons</span>
@@ -43,10 +47,7 @@
           <span class="mt-2"><strong>{{ show.episodes }}</strong></span><br>
           <span>Episodes</span>
         </b-col>
-        <b-col class="text-center mt-2">
-          <span class="mt-2"><strong>{{ show.genre1 }}</strong></span><br>
-          <span>{{ show.genre2 }}</span>
-        </b-col>
+
       </b-row>
       <hr>
       <b-row
@@ -96,7 +97,7 @@
             v-for="(k, v) in sortByCount(show.ratio)"
             :key="v">
             <span class="mt-2">
-            <em>{{ v }}</em> {{ k }}</span><br>
+            <strong>{{ v }}</strong> {{ k }}</span><br>
           </div>
         </b-col>
       </b-row>
