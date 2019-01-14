@@ -151,7 +151,7 @@ export default {
           (res) => {
             const body = _.defaults(res.body, {
             });
-            this.json = {};
+            // this.json = {};
             if (res.body === 'failed') {
               this.$snotify.remove(this.notifLoading.id);
               this.$snotify.error('Python failed', { timeout: 0 });
