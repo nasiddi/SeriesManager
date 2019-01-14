@@ -22,7 +22,7 @@ def main(args):
     for show in SHOWS.values():
         show_count += 1
         show_stats = {SERIES_NAME: show.series_name, 'status': {show.status: 1}, 'premiere': show.premiere, 'avg_e_per_s': 0,
-                      'final': show.final, 'ratio': {}, 'extension': {}, 'duration': 0, 'episodes': 0, #'genre1': show.genre1, 'genre2': show.genre2,
+                      'final': show.final, 'ratio': {}, 'extension': {}, 'duration': 0, 'episodes': 0, 'genre1': show.genre1, 'genre2': show.genre2,
                       'seasons': 0, 'size': 0, 'quality': {}, 'selected': '', 'color': '', 'result': False}
 
         if show.status in stats['total']['status']:
