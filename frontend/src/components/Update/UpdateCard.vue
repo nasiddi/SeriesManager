@@ -115,7 +115,7 @@ export default {
     genre_option: [
       '',
       'Action',
-      'Anime',
+      'Animation',
       'Comedy',
       'Comics',
       'Crime',
