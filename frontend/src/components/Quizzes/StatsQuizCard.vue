@@ -78,7 +78,7 @@
         <b-col class="text-center">
           <h6 class="mt-3">Extensions</h6><br>
           <span
-            v-for="(k, v) in sortByCount(show.extensions)"
+            v-for="(k, v) in show.extensions"
             :key="k"
             class="mt-2"><strong>{{ k }}</strong>{{ v }}</span><br>
         </b-col>
