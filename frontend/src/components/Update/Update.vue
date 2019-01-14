@@ -49,7 +49,8 @@
           ||(s.status == 'Ended' && e)||(s.status =='none')"
           :key="s.series_name_unchanged"
           :id="setRef(s)"
-          :s="s"/>
+          :s="s"
+          :updated="updated"/>
       </div>
       <b-button
         type="update"
@@ -79,6 +80,7 @@ export default {
     h: true,
     e: true,
     body: {},
+    updated: false,
   }),
   watch: {
     json: {

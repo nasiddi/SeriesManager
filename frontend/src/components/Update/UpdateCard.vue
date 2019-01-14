@@ -100,6 +100,10 @@ export default {
       type: Object,
       required: true,
     },
+    updated: {
+      type: Boolean,
+      required: true,
+    },
   },
   data: () => ({
     original: {},
@@ -208,6 +212,17 @@ export default {
   },
   mounted() {
     this.getDates();
+  },
+  watch: {
+    updated: {
+      handler(u) {
+        if (u) {
+          this.original = _.cloneDeep(this.s);
+          this.s.changed = false;
+        }
+      },
+      deep: true,
+    },
   },
   methods: {
     async getDates() {
