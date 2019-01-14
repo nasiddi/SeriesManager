@@ -100,7 +100,7 @@
             v-for="(k, v) in sortByCount(show.ratio)"
             :key="v">
             <span class="mt-0">
-            <strong>{{ v }}</strong> {{ k }}</span><br>
+            <em>{{ v }}</em> {{ k }}</span><br>
           </div>
         </b-col>
       </b-row>
