@@ -34,10 +34,10 @@
           <span>Final </span><span class="mt-2"><strong>{{ show.final }}</strong></span>
         </b-col>
         <b-col class="text-center mt-2">
-          <span class="mt-2"><strong>{{ show.genre1 }} </strong></span>
-          <span>{{ show.genre2 }}</span>
+          <span class="mt-2"><b>{{ show.genre1 }} </b></span><span>{{ show.genre2 }}</span>
         </b-col>
       </b-row>
+      <hr>
       <b-row>
         <b-col class="text-center mt-2">
           <span class="mt-2"><strong>{{ show.seasons }}</strong></span><br>
