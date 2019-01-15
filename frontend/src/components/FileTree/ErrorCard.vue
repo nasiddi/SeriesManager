@@ -115,13 +115,13 @@ export default {
   },
   data: () => ({
     exceptions: [
-      { value: false, text: 'Exception' },
+      { value: '', text: 'Exception' },
       { value: 'part', text: 'Part' },
       { value: 'lower', text: 'lowerCase' },
       { value: 'upper', text: 'UpperCase' },
       { value: 'double', text: 'DoubleTitle' },
       { value: 'lower_general', text: 'lowerGeneral' },
-      { value: 'title_match', text: 'TitleMatch' }.
+      { value: 'title_match', text: 'TitleMatch' },
     ],
     episode_options: [
       'Single',
