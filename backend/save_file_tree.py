@@ -22,7 +22,8 @@ def main(args):
     save_json(data, 'data/save_tree.json')
     SHOWS = load_shows()
     EXCEPTIONS = load_json(EXCEPTIONS_FILE)
-
+    if 'title_match' not in EXCEPTIONS:
+        EXCEPTIONS['title_match'] = []
     if SHOWS is None:
         save_json({'shows_locked': True}, environ[OUT_FILE])
         print('shows locked')

@@ -1,9 +1,17 @@
 from episode import Episode
 from utils.constants import EXCEPTIONS_FILE, SERIES_NAME, ENDED, NUMERALS, WRONG_SYMBOLS, EXTENSIONS
 from utils.io_utlis import load_json
+from tvdb_client import ApiV2Client
+from operator import itemgetter
+
 
 EXCEPTIONS = load_json(EXCEPTIONS_FILE)
+if 'title_match' not in EXCEPTIONS:
+    EXCEPTIONS['title_match'] = []
 NAMES = {}
+
+api_client = ApiV2Client('nadinasiddiquiwaz', 'ZEDKTMYBNB29LBOS', 'EISRLGJH035SO60Q')
+api_client.login()
 
 
 def _generate_error(message, e, show,
@@ -13,7 +21,8 @@ def _generate_error(message, e, show,
                     update=False,
                     delete=False,
                     word='',
-                    exception_type=''):
+                    exception_type='',
+                    exception=''):
     if exception_type:
         e_id = e.id()
         if exception_type == 'double':
@@ -41,8 +50,30 @@ def _generate_error(message, e, show,
         'episode_option': e.episode_option,
         'anime': show.anime,
         'word': word,
-        'exception': False
+        'exception': exception
     }
+
+
+def check_title_against_db(show):
+    episodes = []
+    if not show.tvdb_id:
+        return
+    for i in range(1, 100):
+        eps = api_client.get_series_episodes(show.tvdb_id, episode_number=None, page=i)
+        if 'code' in eps:
+            break
+        episodes.extend(eps['data'])
+
+    if not episodes:
+        return
+    episodes = sorted(episodes, key=itemgetter('airedSeason', 'airedEpisodeNumber'))
+    for e in episodes:
+        ep = show.get_episode_by_sxe(e['airedSeason'], e['airedEpisodeNumber'])
+        if not ep:
+            continue
+        if not ep.get_title() == e['episodeName']:
+            return _generate_error(message='Title mismatch: ', e=e, show=show,
+                                   title=e['episodeName'], exception_type='title_match', exception='title_match')
 
 
 def check_words(show, e):

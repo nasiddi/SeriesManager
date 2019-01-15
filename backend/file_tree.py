@@ -35,8 +35,11 @@ def load_all():
 
 
 def get_show_data(show):
+    print(show.series_name)
     seasons = []
     error = None
+    if not error:
+        error = error_search.check_title_against_db(show)
     for season in show.seasons.values():
         if not error:
             error = error_search.check_for_empty_season(show, season)

@@ -121,6 +121,7 @@ export default {
       { value: 'upper', text: 'UpperCase' },
       { value: 'double', text: 'DoubleTitle' },
       { value: 'lower_general', text: 'lowerGeneral' },
+      { value: 'title_match', text: 'TitleMatch' }.
     ],
     episode_options: [
       'Single',
