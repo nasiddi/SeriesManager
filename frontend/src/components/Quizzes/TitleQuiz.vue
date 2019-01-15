@@ -40,7 +40,6 @@
           v-model="word"
           type="text"
           class="mb-3 mt-3"
-          @change="match"
           @keyup.native.enter="word = ''"/>
       </b-col>
       <b-col>
@@ -108,8 +107,13 @@ export default {
         if (w === '') {
           return;
         }
-        let found = false;
         const word = w.toLowerCase();
+        if (this.level === 'ordered') {
+          this.checkNext(word);
+          return;
+        }
+        let found = false;
+
         this.episodes.forEach((s) => {
           s.forEach((e) => {
             if (e.title) {
@@ -151,6 +155,26 @@ export default {
   mounted() {
   },
   methods: {
+    checkNext(w) {
+      const current = this.episodes[this.currentPosition[0]][this.currentPosition[1]];
+      if (current.title_list.includes(w) || current.title_list.includes(w.replace(/[^a-zA-Z0-9' ]/g, ''))) {
+        current.title = current.solution;
+        current.highlight = 'success';
+        this.word = '';
+        this.found += 1;
+        if (this.episodes[this.currentPosition[0]].length > this.currentPosition[1] + 1) {
+          this.currentPosition[1] += 1;
+        } else if (this.episodes.length > this.currentPosition[0] + 1) {
+          this.currentPosition[0] += 1;
+          this.currentPosition[1] = 0;
+        }
+        const next = this.episodes[this.currentPosition[0]][this.currentPosition[1]];
+        next.highlight = 'warning';
+        if (this.found === this.total) {
+          this.showAll();
+        }
+      }
+    },
     showAll() {
       this.stop = true;
       this.episodes.forEach((s) => {
