@@ -103,6 +103,36 @@ export default {
   computed: {
   },
   watch: {
+    word: {
+      handler(w) {
+        if (w === '') {
+          return;
+        }
+        let found = false;
+        const word = w.toLowerCase();
+        this.episodes.forEach((s) => {
+          s.forEach((e) => {
+            if (e.title) {
+              if (e.highlight === 'success') {
+                e.highlight = 'info';
+              }
+            } else if (e.title_list.includes(word) || e.title_list.includes(word.replace(/[^a-zA-Z0-9' ]/g, ''))) {
+              e.title = e.solution;
+              e.highlight = 'success';
+              found = true;
+              this.found += 1;
+            }
+          });
+        });
+        if (found) {
+          this.word = '';
+        }
+        if (this.found === this.total) {
+          this.showAll();
+        }
+      },
+      deep: true,
+    },
   },
   created() {
     this.$http.post('python/titlequizprep')
@@ -121,36 +151,6 @@ export default {
   mounted() {
   },
   methods: {
-    match(w) {
-      if (w === '') {
-        return;
-      }
-      if (this.level === 'ordered') {
-        this.checkNext(w);
-        return;
-      }
-      let found = false;
-      const word = w.toLowerCase();
-      this.episodes.forEach((s) => {
-        s.forEach((e) => {
-          if (e.title) {
-            if (e.highlight === 'success') {
-              e.highlight = 'secondary';
-            }
-          } else if (e.title_list.includes(word) || e.title_list.includes(word.replace(/[^a-zA-Z0-9' ]/g, ''))) {
-            e.title = e.solution;
-            e.highlight = 'success';
-            found = true;
-            this.found += 1;
-          }
-        });
-      });
-      if (found) {
-        setTimeout(() => {
-          this.word = '';
-        }, 50);
-      }
-    },
     showAll() {
       this.stop = true;
       this.episodes.forEach((s) => {
