@@ -30,7 +30,7 @@ def load_all():
         show_tree, show_error = get_show_data(show, len(errors) < 100)
         tree[show.series_name] = show_tree
         if show_error:
-            if type(show_error == list):
+            if type(show_error) == list:
                 errors.extend(show_error)
             else:
                 errors.append(show_error)
@@ -91,6 +91,8 @@ def get_show_data(show, get_errors):
                                     'name_needed': show.name_needed})
 
         seasons.append(sea)
+    if error:
+        print(error)
     return {SERIES_NAME: show.series_name, 'seasons': seasons}, error
 
 
