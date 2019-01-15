@@ -48,7 +48,7 @@ def queue_errors(errors, queue):
         series_name = error[SERIES_NAME]
         if 'exception' in error and error['exception']:
             e_id = f'{series_name} {error["s_nr"]:02d}x{error["e_nr"]:0{3 if error["anime"] else 2}d}'
-            if error['exception'] not in ['part', 'double', 'lower_general']:
+            if error['exception'] not in ['part', 'double', 'lower_general', 'title_match']:
                 if e_id not in EXCEPTIONS[error['exception']]:
                     EXCEPTIONS[error['exception']][e_id] = []
                 EXCEPTIONS[error['exception']][e_id].append(error['word'])
