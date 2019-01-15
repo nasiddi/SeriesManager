@@ -11,7 +11,8 @@ def main(args):
              'lower': {'title': 'lowerCase', 'order': 1},
              'upper': {'title': 'UpperCase', 'order': 2},
              'lower_general': {'title': 'lowerGeneral', 'order': 3},
-             'part': {'title': 'Part', 'order': 4}}
+             'part': {'title': 'Part', 'order': 4},
+             'title_match': {'title': 'TitleMatch', 'order': 6}}
     parse_args(args)
     exceptions = load_json(EXCEPTIONS_FILE)
 
