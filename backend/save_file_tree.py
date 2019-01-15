@@ -64,7 +64,7 @@ def queue_errors(errors, queue):
             elif error['exception'] == 'title_match' and error['save']:
                 EXCEPTIONS[error['exception']].append(e_id)
                 EXCEPTIONS[error['exception']] = sorted(list(set(EXCEPTIONS[error['exception']])))
-            else:
+            elif error['exception'] == 'part':
                 EXCEPTIONS[error['exception']].append(e_id)
                 EXCEPTIONS[error['exception']] = sorted(list(set(EXCEPTIONS[error['exception']])))
             continue
