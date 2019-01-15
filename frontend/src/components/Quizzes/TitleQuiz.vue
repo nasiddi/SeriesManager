@@ -199,7 +199,7 @@ export default {
       return (number < 10 ? '0' : '') + number;
     },
     loadEpisodes() {
-      this.$http.post('python/titlequiz', { series_name: this.show, level: this.level })
+      this.$http.post('python/titlequiz', { series_name: this.show, level: (this.level === 'ordered') ? 'title' : this.level })
         .then(
           (res) => {
             const body = _.defaults(res.body, {
