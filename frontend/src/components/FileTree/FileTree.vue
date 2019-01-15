@@ -110,8 +110,6 @@ export default {
     selected: null,
     errorlist: {},
     shows: [],
-    forwardDisable: false,
-    backDisable: false,
     original: {},
     updated: {},
     saveColor: 'success',
@@ -131,6 +129,18 @@ export default {
     ],
   }),
   computed: {
+    forwardDisable() {
+      if (this.errors.indexOf(this.error) + 1 >= this.errors.length) {
+        return true;
+      }
+      return false;
+    },
+    backDisable() {
+      if (this.errors.indexOf(this.error) === 0) {
+        return true;
+      }
+      return false;
+    },
     orderedSeasons() {
       return _.orderBy(this.show.seasons, 'key');
     },
@@ -184,17 +194,6 @@ export default {
           // eslint-disable-next-line prefer-destructuring
           this.show = Object.values(this.json.shows)
             .filter(s => s.series_name === this.selected)[0];
-          const current = this.errors.indexOf(this.error);
-          if (current + 1 >= this.errors.length) {
-            this.forwardDisable = true;
-          } else {
-            this.forwardDisable = false;
-          }
-          if (current === 0) {
-            this.backDisable = true;
-          } else {
-            this.backDisable = false;
-          }
         });
       },
     },
