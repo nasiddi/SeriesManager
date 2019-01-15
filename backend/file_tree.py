@@ -2,8 +2,8 @@ from os import environ
 from sys import argv
 
 import error_search
-from utils.constants import CONF_FILE, OUT_FILE, SERIES_NAME, LOCATION
-from utils.io_utlis import load_shows, parse_args, save_json, save_shows, load_json
+from utils.constants import OUT_FILE, SERIES_NAME, LOCATION
+from utils.io_utlis import load_shows, parse_args, save_json, save_shows
 
 SHOWS = None
 MISSING = []
@@ -30,7 +30,10 @@ def load_all():
         show_tree, show_error = get_show_data(show)
         tree[show.series_name] = show_tree
         if show_error:
-            errors.append(show_error)
+            if type(show_error == list):
+                errors.extend(show_error)
+            else:
+                errors.append(show_error)
     return {'shows': tree, 'errors': errors, 'info': 'Tree is Clean'}
 
 

@@ -55,6 +55,7 @@ def _generate_error(message, e, show,
 
 
 def check_title_against_db(show):
+    errors = []
     episodes = []
     if not show.tvdb_id:
         return
@@ -72,8 +73,9 @@ def check_title_against_db(show):
         if not ep:
             continue
         if not ep.get_title() == e['episodeName']:
-            return _generate_error(message='Title mismatch: ', e=ep, show=show,
-                                   title=e['episodeName'], exception_type='title_match', exception='title_match')
+            errors.append(_generate_error(message='Title mismatch: ', e=ep, show=show, title=e['episodeName'],
+                                          exception_type='title_match', exception='title_match'))
+    return errors
 
 
 def check_words(show, e):
