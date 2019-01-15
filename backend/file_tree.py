@@ -27,7 +27,7 @@ def load_all():
     tree = {}
     errors = []
     for show in sorted(SHOWS.values(), key=get_series_name):
-        show_tree, show_error = get_show_data(show)
+        show_tree, show_error = get_show_data(show, len(errors) < 100)
         tree[show.series_name] = show_tree
         if show_error:
             if type(show_error == list):
@@ -37,38 +37,38 @@ def load_all():
     return {'shows': tree, 'errors': errors, 'info': 'Tree is Clean'}
 
 
-def get_show_data(show):
+def get_show_data(show, get_errors):
     print(show.series_name)
     seasons = []
     error = None
-    if not error:
+    if not error and get_errors:
         error = error_search.check_title_against_db(show)
     for season in show.seasons.values():
-        if not error:
+        if not error and get_errors:
             error = error_search.check_for_empty_season(show, season)
         sea = {'key': season.s_nr, 'episodes': [], 'opened': False}
         episodes = sorted(list(season.episodes.values()), key=lambda x: x.e_nr)
         for episode in episodes:
-            if not error:
+            if not error and get_errors:
                 error = error_search.check_for_spaces(show, episode)
-            if not error:
+            if not error and get_errors:
                 error = error_search.check_extension(show, episode)
-            if not error:
+            if not error and get_errors:
                 error = error_search.check_part_number(show, episode)
-            if not error:
+            if not error and get_errors:
                 error = error_search.check_words(show, episode)
-            if not error:
+            if not error and get_errors:
                 error = error_search.check_symbols(show, episode)
-            if not error:
+            if not error and get_errors:
                 error = error_search.check_series_name_and_numbers(show, episode)
-            if not error:
+            if not error and get_errors:
                 error = error_search.check_for_missing_title(show, episode)
-            if not error:
+            if not error and get_errors:
                 error = error_search.check_for_multiple_files(show, episode)
-            if not error:
+            if not error and get_errors:
                 error = error_search.check_for_name_used_twice(show, episode)
 
-            if not error:
+            if not error and get_errors:
                 error = error_search.check_against_compiled(show, episode)
 
             sea['episodes'].append({LOCATION: episode.location,
