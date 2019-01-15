@@ -49,10 +49,10 @@ def generate_episode(e: Episode, title_nr, level):
 
 
 def remove_starting_the(title):
-    if title.startswith('the '):
-        return title[4:]
+    splits = title.split(' ')
+    if splits[0] in LOWER_GENERAL:
+        return ' '.join(splits[1:])
     return title
-
 
 
 def remove_part(title):

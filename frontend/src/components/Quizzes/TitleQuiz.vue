@@ -208,6 +208,10 @@ export default {
             this.found = 0;
             this.total = body.total;
             this.stop = false;
+            this.currentPosition = [0, 0];
+            if (this.level === 'ordered') {
+              this.episodes[this.currentPosition[0]][this.currentPosition[1]].highlight = 'warning';
+            }
             this.start = moment(moment());
             setInterval(this.setDuration, 1000);
           },
