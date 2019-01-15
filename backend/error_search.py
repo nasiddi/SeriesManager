@@ -72,7 +72,7 @@ def check_title_against_db(show):
         if not ep:
             continue
         if not ep.get_title() == e['episodeName']:
-            return _generate_error(message='Title mismatch: ', e=e, show=show,
+            return _generate_error(message='Title mismatch: ', e=ep, show=show,
                                    title=e['episodeName'], exception_type='title_match', exception='title_match')
 
 
