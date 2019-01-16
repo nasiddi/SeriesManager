@@ -37,7 +37,7 @@
         </b-col>
       </b-row>
       <b-row
-        v-for="w in _.sortBy(e.words.slice(1), 'key')"
+        v-for="w in e.words.slice(1)"
         :key="w.key">
         <b-col
           class="px-1 mt-1"
@@ -181,6 +181,7 @@ export default {
   mounted() {
     this.original = _.cloneDeep(this.e);
     this.updated = _.cloneDeep(this.e);
+    this.e.words = _.sortBy(this.e.words.slice(1), 'key');
   },
   methods: {
     setInput(w) {
