@@ -37,7 +37,7 @@
         </b-col>
       </b-row>
       <b-row
-        v-for="w in e.words.slice(1)"
+        v-for="w in _.sortBy(e.words.slice(1), 'key')"
         :key="w.key">
         <b-col
           class="px-1 mt-1"
