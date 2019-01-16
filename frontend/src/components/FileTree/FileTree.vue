@@ -253,6 +253,7 @@ export default {
       if (this.errors.length > 101) {
         // eslint-disable-next-line prefer-destructuring
         this.ahundredandone = this.errors[101];
+        this.$snotify.info(this.ahundredandone.series_name, { timeout: 0 });
       }
       // eslint-disable-next-line prefer-destructuring
       this.error = this.errors[0];
