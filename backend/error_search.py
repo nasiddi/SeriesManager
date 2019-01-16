@@ -72,7 +72,7 @@ def check_title_against_db(show):
         ep = show.get_episode_by_sxe(e['airedSeason'], e['airedEpisodeNumber'])
         if not ep:
             continue
-        if not ep.get_title().lower() == e['episodeName'].lower():
+        if not ' '.join(w.capitalize() for w in ep.get_title().split()) == ' '.join(w.capitalize() for w in e['episodeName'].split()):
             error = _generate_error(message='Title mismatch', e=ep, show=show, title=e['episodeName'],
                                     exception_type='title_match', exception='title_match')
             if error:
