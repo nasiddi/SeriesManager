@@ -72,7 +72,7 @@ def search_for_new_words(e):
                                    'changed': False})
             else:
                 UNIQUE[w] += 1
-    if new_word:
+    if new_word and title_list:
         WORDS.append({'location': e.location,
                       'file': e.file_name,
                       'words': title_list})
