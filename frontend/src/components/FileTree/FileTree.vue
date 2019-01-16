@@ -113,6 +113,7 @@ export default {
     original: {},
     updated: {},
     saveColor: 'success',
+    ahundredandone: {},
     wrongSymbols: [
       ':',
       '/',
@@ -247,6 +248,11 @@ export default {
 
       if (this.errors.length === 0) {
         return;
+      }
+
+      if (this.errors.length > 101) {
+        // eslint-disable-next-line prefer-destructuring
+        this.ahundredandone = this.errors[101];
       }
       // eslint-disable-next-line prefer-destructuring
       this.error = this.errors[0];
