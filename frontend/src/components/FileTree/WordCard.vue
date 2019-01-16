@@ -1,6 +1,6 @@
 <template>
   <div
-    v-if="e.length !== 0">
+    v-if="e.length !== 0 && 'words' in e">
     <b-card
       no-body
       class="px-3 pt-1 pb-2 mt-2">
