@@ -120,7 +120,6 @@ def update_all_air_dates(show: Series):
         e.air_date = e_meta['firstAired']
 
 
-
 def main(args):
     parse_args(args)
     unlock()

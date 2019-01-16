@@ -12,7 +12,6 @@ NAMES = {}
 
 api_client = ApiV2Client('nadinasiddiquiwaz', 'ZEDKTMYBNB29LBOS', 'EISRLGJH035SO60Q')
 api_client.login()
-EPISODES = {}
 
 
 def _generate_error(message, e, show,
@@ -55,32 +54,30 @@ def _generate_error(message, e, show,
     }
 
 
-def load_data_from_db(show):
-    global EPISODES
-    EPISODES = {}
+def check_title_against_db(show):
+    errors = []
+    episodes = []
     if not show.tvdb_id:
         return
     for i in range(1, 100):
         eps = api_client.get_series_episodes(show.tvdb_id, episode_number=None, page=i)
         if 'code' in eps:
             break
-        for e in eps['data']:
-            if e['airedSeason'] not in EPISODES:
-                EPISODES[e['airedSeason']] = {}
-            EPISODES[e['airedSeason']][e['airedEpisodeNumber']] = e
+        episodes.extend(eps['data'])
 
-
-def check_title_against_db(show, e):
-    if not EPISODES:
+    if not episodes:
         return
-    try:
-        episode = EPISODES[e.s_nr][e.e_nr]
-    except KeyError:
-        return
-
-    if not ' '.join(w.capitalize() for w in e.get_title().split()) == ' '.join(w.capitalize() for w in episode['episodeName'].split()):
-        return _generate_error(message='Title mismatch', e=e, show=show, title=episode['episodeName'],
-                               exception_type='title_match', exception='title_match')
+    episodes = sorted(episodes, key=itemgetter('airedSeason', 'airedEpisodeNumber'))
+    for e in episodes:
+        ep = show.get_episode_by_sxe(e['airedSeason'], e['airedEpisodeNumber'])
+        if not ep:
+            continue
+        if not ' '.join(w.capitalize() for w in ep.get_title().split()) == ' '.join(w.capitalize() for w in e['episodeName'].split()):
+            error = _generate_error(message='Title mismatch', e=ep, show=show, title=e['episodeName'],
+                                    exception_type='title_match', exception='title_match')
+            if error:
+                errors.append(error)
+    return errors
 
 
 def check_words(show, e):

@@ -1,6 +1,7 @@
 from os import environ
 from sys import argv
-
+import multiprocessing
+from time import time
 import error_search
 from utils.constants import OUT_FILE, SERIES_NAME, LOCATION
 from utils.io_utlis import load_shows, parse_args, save_json, save_shows
@@ -16,11 +17,33 @@ def main(args=None, out_file='data/tree_file_comb.json'):
         parse_args(args)
         out_file = environ[OUT_FILE]
 
-    tree_file = load_all()
+    tree_file = load_all_parallel()
 
     save_json(tree_file, out_file)
     save_shows(SHOWS)
     return tree_file
+
+
+def load_all_parallel():
+    tree = {}
+    errors = []
+    p = multiprocessing.Pool(28)
+    show_list = p.map(get_show_data, sorted(SHOWS.values(), key=get_series_name))
+    p.close()
+    p.join()
+    print(show_list[0])
+    for s, e in show_list:
+        tree[s['series_name']] = s
+        if e and len(errors) < 100:
+            if type(e) == list:
+                errors.extend(e)
+            else:
+                errors.append(e)
+    return {'shows': tree, 'errors': errors, 'info': 'Tree is Clean'}
+
+
+
+
 
 
 def load_all():
@@ -37,11 +60,12 @@ def load_all():
     return {'shows': tree, 'errors': errors, 'info': 'Tree is Clean'}
 
 
-def get_show_data(show, get_errors):
+def get_show_data(show, get_errors=True):
     print(show.series_name)
     seasons = []
     error = None
-    error_search.load_data_from_db(show)
+    if not error and get_errors:
+        error = error_search.check_title_against_db(show)
     for season in show.seasons.values():
         if not error and get_errors:
             error = error_search.check_for_empty_season(show, season)
@@ -69,8 +93,7 @@ def get_show_data(show, get_errors):
 
             if not error and get_errors:
                 error = error_search.check_against_compiled(show, episode)
-            if not error and get_errors:
-                error = error_search.check_title_against_db(show, episode)
+
 
             sea['episodes'].append({LOCATION: episode.location,
                                     'file_name': episode.file_name,
@@ -92,8 +115,6 @@ def get_show_data(show, get_errors):
                                     'name_needed': show.name_needed})
 
         seasons.append(sea)
-    if error:
-        print(error)
     return {SERIES_NAME: show.series_name, 'seasons': seasons}, error
 
 
@@ -102,4 +123,7 @@ def get_series_name(show):
 
 
 if __name__ == '__main__':
+    multiprocessing.freeze_support()
+    start = time()
     main(argv[1:])
+    print(time() - start)
