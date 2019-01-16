@@ -112,9 +112,6 @@ def load_all(update, queue):
                              anime=SHOWS[n].anime)
                     queue.append(e)
                 elif e['save']:
-                    print(e)
-
-
                     e = File(old_location=e['location'],
                              s_nr=e['s_nr'],
                              e_nr=e['e_nr'],
@@ -131,9 +128,7 @@ def load_all(update, queue):
 
 
 def save_queue(queue):
-    print(len(queue))
     for file in queue:
-        print(file.location)
         if file.delete:
             recursive_delete(file.old_location)
             try:

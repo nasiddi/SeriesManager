@@ -1,13 +1,12 @@
-from episode import Episode
-from utils.constants import EXCEPTIONS_FILE, SERIES_NAME, ENDED, NUMERALS, WRONG_SYMBOLS, EXTENSIONS
-from utils.io_utlis import load_json
 from tvdb_client import ApiV2Client
 from operator import itemgetter
 
+from episode import Episode
+from utils.constants import EXCEPTIONS_FILE, SERIES_NAME, ENDED, NUMERALS, WRONG_SYMBOLS, EXTENSIONS
+from utils.io_utlis import load_json
+
 
 EXCEPTIONS = load_json(EXCEPTIONS_FILE)
-if 'title_match' not in EXCEPTIONS:
-    EXCEPTIONS['title_match'] = []
 NAMES = {}
 
 api_client = ApiV2Client('nadinasiddiquiwaz', 'ZEDKTMYBNB29LBOS', 'EISRLGJH035SO60Q')
@@ -72,7 +71,8 @@ def check_title_against_db(show):
         ep = show.get_episode_by_sxe(e['airedSeason'], e['airedEpisodeNumber'])
         if not ep:
             continue
-        if not ' '.join(w.capitalize() for w in ep.get_title().split()) == ' '.join(w.capitalize() for w in e['episodeName'].split()):
+        if not ' '.join(w.capitalize()
+                        for w in ep.get_title().split()) == ' '.join(w.capitalize() for w in e['episodeName'].split()):
             error = _generate_error(message='Title mismatch', e=ep, show=show, title=e['episodeName'],
                                     exception_type='title_match', exception='title_match')
             if error:
@@ -226,7 +226,6 @@ def check_for_name_used_twice(show, e):
 
 def check_extension(show, e):
     if e.extension not in EXTENSIONS:
-        print(e.file_name)
         if not e.extension:
             return _generate_error(message='Extension Missing', e=e, show=show)
         return _generate_error(message='No Video Extension', e=e, show=show)
