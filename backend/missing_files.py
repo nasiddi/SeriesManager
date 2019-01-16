@@ -36,9 +36,9 @@ def get_show_data(show):
     missing_files = []
     if show.tvdb_id:
         missing_files.extend(check_for_newly_aired(show))
-    for season in show.seasons.values():
-        missing_files.extend(check_for_missing_season(show, season, sorted(show.seasons.values(), key=lambda x: x.s_nr)))
-        episodes = sorted(list(season.episodes.values()), key=lambda x: x.e_nr)
+    for s in show.seasons.values():
+        missing_files.extend(check_for_missing_season(show, s, sorted(show.seasons.values(), key=lambda x: x.s_nr)))
+        episodes = sorted(list(s.episodes.values()), key=lambda x: x.e_nr)
         for episode in episodes:
             missing_files.extend(check_for_missing_episode(show, episode, episodes))
     return missing_files
@@ -103,7 +103,9 @@ def check_for_newly_aired(show):
             continue
         try:
             first_aired = int(''.join(e['firstAired'].split('-')))
-        except:
+        except ValueError:
+            continue
+        except KeyError:
             continue
         if first_aired >= DATE:
             continue

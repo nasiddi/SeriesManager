@@ -57,7 +57,8 @@ def queue_errors(errors, queue):
                 if series_name not in EXCEPTIONS[error['exception']]:
                     EXCEPTIONS[error['exception']][series_name] = []
                 EXCEPTIONS[error['exception']][series_name].append(error['title'])
-                EXCEPTIONS[error['exception']][series_name] = sorted(list(set(EXCEPTIONS[error['exception']][series_name])))
+                EXCEPTIONS[error['exception']][series_name] = sorted(
+                    list(set(EXCEPTIONS[error['exception']][series_name])))
             elif error['exception'] == 'lower_general':
                 EXCEPTIONS[error['exception']].append(error['word'])
                 EXCEPTIONS[error['exception']] = sorted(list(set(EXCEPTIONS[error['exception']])))

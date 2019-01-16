@@ -9,6 +9,7 @@ from utils.constants import SINGLE, DOUBLE, TRIPLE, MAC_OFFSET, ANIME_PATTERN,\
 api_client = ApiV2Client('nadinasiddiquiwaz', 'ZEDKTMYBNB29LBOS', 'EISRLGJH035SO60Q')
 api_client.login()
 
+
 class Episode:
     def __init__(self, location='',
                  e_nr=999,
@@ -92,7 +93,8 @@ class Episode:
                 double_pattern = re.compile(single_pattern + '&' + single_pattern)
                 if re.findall(double_pattern, self.file_name):
                     self.episode_option = DOUBLE
-        title = file_name.split(match[-1], 1)
+
+        title: str = file_name.split(match[-1], 1)
         if len(title) == 1:
             self.title = ''
             return

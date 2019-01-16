@@ -65,6 +65,7 @@ def main(args):
     save_json(output, os.environ[OUT_FILE])
     return output
 
+
 def prep_file(name, root):
     extension = name.split('.')[-1].lower()
     if extension in EXTENSIONS:

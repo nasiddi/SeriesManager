@@ -1,4 +1,3 @@
-import json
 import os
 import shutil
 from sys import argv
@@ -6,7 +5,7 @@ from sys import argv
 from episode import Episode
 from series import Series
 from utils.constants import SERIES_NAME, TVDB_ID, PREMIERE, FINAL, STATUS, NAME_NEEDED, FILE_DIR, \
-    SUB_DIR, SINGLE, DOUBLE, TRIPLE, MAC_OFFSET, ANIME_DIR, SERIES_DIR, OUT_FILE, CONF_FILE
+    SUB_DIR, DOUBLE, TRIPLE, MAC_OFFSET, ANIME_DIR, SERIES_DIR, OUT_FILE, CONF_FILE
 from utils.file import File
 from utils.io_utlis import load_shows, parse_args, save_json, save_shows, wait_on_creation, load_json
 

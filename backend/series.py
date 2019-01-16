@@ -62,17 +62,17 @@ class Series:
     def get_episode_by_sxe(self, s_nr, e_nr):
         try:
             return self.seasons[s_nr].episodes[e_nr]
-        except Exception:
+        except KeyError:
             try:
                 e = self.seasons[s_nr].episodes[e_nr - 1]
                 if not e.episode_option == SINGLE:
                     return e
-            except Exception:
+            except KeyError:
                 try:
                     e = self.seasons[s_nr].episodes[e_nr - 2]
                     if e.episode_option == TRIPLE:
                         return e
-                except Exception:
+                except KeyError:
                     return None
             return None
 

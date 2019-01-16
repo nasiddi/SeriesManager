@@ -11,7 +11,7 @@
           @click.prevent="save"
         >Save Changes</b-button>
         <WordCard
-          v-for="e in json.words"
+          v-for="e in _.sortBy(json.words, 'file')"
           ref="card"
           :key="e.location"
           :e="e"

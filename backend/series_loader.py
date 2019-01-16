@@ -7,7 +7,7 @@ from tvdb_client import ApiV2Client
 import backup
 from episode import Episode
 from series import Series
-from utils.constants import META_FILE, STATUS, NAME_NEEDED, PREMIERE, FINAL, TVDB_ID, SERIES_DIR, ANIME_DIR, CONF_FILE, SERIES_NAME
+from utils.constants import META_FILE, STATUS, NAME_NEEDED, PREMIERE, FINAL, TVDB_ID, SERIES_DIR, ANIME_DIR, CONF_FILE
 from utils.io_utlis import load_json, load_shows, save_shows, parse_args
 from unlock_shows import unlock
 
@@ -92,7 +92,7 @@ def add_metadata(shows):
                     e.width = file_meta['width']
                     e.height = file_meta['height']
                     e.quality = file_meta['quality']
-                except:
+                except KeyError:
                     print('*load metadata*', e.location)
                     e.update_file_meta()
                 if not e.quality:

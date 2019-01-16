@@ -23,13 +23,14 @@ def main(args):
         backups['backups'][b] = {
             'key': b, 'content': j_list,
             'text': (timestamp + str(int(sum(os.path.getsize(f) for f in
-                                            [os.path.join(BACKUP_DIR, b, d) for d in os.listdir(os.path.join(BACKUP_DIR, b))]
-                                            if os.path.isfile(f) and 'test' not in f) / 1024)) + ' KB')}
+                                             [os.path.join(BACKUP_DIR, b, d)
+                                              for d in os.listdir(os.path.join(BACKUP_DIR, b))]
+                                             if os.path.isfile(f) and 'test' not in f) / 1024)) + ' KB')}
         backups['selected'] = b
     current_files = load_json_files(ASSETS)
     backups['current'] = {'size': str(int(sum(os.path.getsize(f) for f in
-                                            [os.path.join(ASSETS, d) for d in os.listdir(ASSETS)]
-                                            if os.path.isfile(f) and 'test' not in f) / 1024)) + ' KB',
+                                              [os.path.join(ASSETS, d) for d in os.listdir(ASSETS)]
+                                              if os.path.isfile(f) and 'test' not in f) / 1024)) + ' KB',
                           'content': current_files}
     save_json(backups, os.environ[OUT_FILE])
 

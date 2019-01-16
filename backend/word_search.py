@@ -57,7 +57,6 @@ def search_for_new_words(e):
         if w in DICTIONARY:
                 NEW_DICT.append(w)
                 if w not in UNIQUE:
-                    new_word = True
                     UNIQUE[w] = 1
                 else:
                     UNIQUE[w] += 1

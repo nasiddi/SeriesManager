@@ -19,7 +19,7 @@ else:
     HD_Movies_TREE = '/Volumes/Downloads/HD'
     HD_Movies = '/Volumes/Video/HD'
     SD_MOVIES_TREE = '/Volumes/Downloads/SD'
-    SD_MOVIES ='/Volumes/Video/SD'
+    SD_MOVIES = '/Volumes/Video/SD'
 
 
 def build_tree(src, des):
@@ -42,4 +42,3 @@ build_tree(ANIME_DIR, ANIME_DIR_TREE)
 build_tree(SERIES_DIR, SERIES_DIR_TREE)
 build_tree(HD_Movies, HD_Movies_TREE)
 build_tree(SD_MOVIES, SD_MOVIES_TREE)
-
