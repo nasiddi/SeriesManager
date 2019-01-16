@@ -41,8 +41,7 @@ def get_show_data(show, get_errors):
     print(show.series_name)
     seasons = []
     error = None
-    if not error and get_errors:
-        error = error_search.check_title_against_db(show)
+    error_search.load_data_from_db(show)
     for season in show.seasons.values():
         if not error and get_errors:
             error = error_search.check_for_empty_season(show, season)
@@ -70,6 +69,8 @@ def get_show_data(show, get_errors):
 
             if not error and get_errors:
                 error = error_search.check_against_compiled(show, episode)
+            if not error and get_errors:
+                error = error_search.check_title_against_db(show, episode)
 
             sea['episodes'].append({LOCATION: episode.location,
                                     'file_name': episode.file_name,
