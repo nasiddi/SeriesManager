@@ -161,7 +161,7 @@ export default {
   mounted() {
   },
   methods: {
-    findRandom(w) {
+    findRandom() {
 
     },
     getPositions() {
@@ -216,7 +216,14 @@ export default {
       return (number < 10 ? '0' : '') + number;
     },
     loadEpisodes() {
-      this.$http.post('python/titlequiz', { series_name: this.show, level: (this.level === 'ordered') ? 'title' : this.level })
+      // eslint-disable-next-line prefer-destructuring
+      let levelType = this.level;
+      if (levelType.includes('title')) {
+        levelType = 'title';
+      } else if (levelType.includes('no_lows')) {
+        levelType = 'no_lows';
+      }
+      this.$http.post('python/titlequiz', { series_name: this.show, level: levelType })
         .then(
           (res) => {
             const body = _.defaults(res.body, {
