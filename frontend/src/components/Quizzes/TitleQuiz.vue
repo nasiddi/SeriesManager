@@ -171,10 +171,12 @@ export default {
         this.word = '';
         this.found += 1;
         this.curPos += 1;
-        const next = this.episodes[this.positions[this.curPos][0]][this.positions[this.curPos][1]];
-        next.highlight = 'warning';
         if (this.found === this.total) {
           this.showAll();
+        } else {
+          const next = this.episodes[
+            this.positions[this.curPos][0]][this.positions[this.curPos][1]];
+          next.highlight = 'warning';
         }
       }
     },
