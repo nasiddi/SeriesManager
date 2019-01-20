@@ -162,6 +162,9 @@ export default {
   },
   methods: {
     findRandom(w) {
+      if (this.positions.length <= this.curPos) {
+        return;
+      }
       const current = this.episodes[this.positions[this.curPos][0]][this.positions[this.curPos][1]];
       if (current.title_list.includes(w) || current.title_list.includes(w.replace(/[^a-zA-Z0-9' ]/g, ''))) {
         current.highlight = 'info';
