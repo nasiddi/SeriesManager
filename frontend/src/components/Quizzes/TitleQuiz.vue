@@ -196,25 +196,28 @@ export default {
           this.curPos[0] += 1;
           this.curPos[1] = 0;
         }
-        const next = this.episodes[this.curPos[0]][this.curPos[1]];
-        next.highlight = 'warning';
         if (this.found === this.total) {
           this.showAll();
+        } else {
+          const next = this.episodes[this.curPos[0]][this.curPos[1]];
+          next.highlight = 'warning';
         }
       }
     },
     showAll() {
       this.stop = true;
-      this.episodes.forEach((s) => {
-        s.forEach((e) => {
-          e.title = e.solution;
-          if (e.highlight !== 'info') {
-            e.highlight = 'danger';
-          } else {
-            e.highlight = 'success';
-          }
+      setTimeout(() => {
+        this.episodes.forEach((s) => {
+          s.forEach((e) => {
+            e.title = e.solution;
+            if (e.highlight !== 'info') {
+              e.highlight = 'danger';
+            } else {
+              e.highlight = 'success';
+            }
+          });
         });
-      });
+      }, 50);
     },
     setDuration() {
       if (this.stop) { return; }
