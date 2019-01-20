@@ -162,13 +162,13 @@ export default {
   },
   methods: {
     findRandom(w) {
-      const current = this.episodes[this.positions[this.curPos[0]]][this.positions[this.curPos[1]]];
+      const current = this.episodes[this.positions[this.curPos][0]][this.positions[this.curPos][1]];
       if (current.title_list.includes(w) || current.title_list.includes(w.replace(/[^a-zA-Z0-9' ]/g, ''))) {
         current.highlight = 'info';
         this.word = '';
         this.found += 1;
         this.curPos += 1;
-        const next = this.episodes[this.positions[this.curPos[0]]][this.positions[this.curPos[1]]];
+        const next = this.episodes[this.positions[this.curPos][0]][this.positions[this.curPos][1]];
         next.highlight = 'warning';
         if (this.found === this.total) {
           this.showAll();
