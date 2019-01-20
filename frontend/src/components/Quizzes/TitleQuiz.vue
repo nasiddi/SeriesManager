@@ -161,8 +161,21 @@ export default {
   mounted() {
   },
   methods: {
-    findRandom() {
-
+    findRandom(w) {
+      const current = this.episodes[this.positions[
+        this.currentPosition[0]]][this.positions[this.currentPosition[1]]];
+      if (current.title_list.includes(w) || current.title_list.includes(w.replace(/[^a-zA-Z0-9' ]/g, ''))) {
+        current.highlight = 'info';
+        this.word = '';
+        this.found += 1;
+        this.currentPosition += 1;
+        const next = this.episodes[this.positions[
+          this.currentPosition[0]]][this.positions[this.currentPosition[1]]];
+        next.highlight = 'warning';
+        if (this.found === this.total) {
+          this.showAll();
+        }
+      }
     },
     getPositions() {
       this.episodes.forEach((s, iS) => {
@@ -170,7 +183,7 @@ export default {
           this.positions.push([iS, iE]);
         });
       });
-      this.episodes = _.shuffle(this.episodes);
+      this.positions = _.shuffle(this.positions);
     },
     checkNext(w) {
       const current = this.episodes[this.currentPosition[0]][this.currentPosition[1]];
@@ -196,9 +209,9 @@ export default {
       this.stop = true;
       this.episodes.forEach((s) => {
         s.forEach((e) => {
-          if (!e.title) {
+          e.title = e.solution;
+          if (e.highlight !== 'info') {
             e.highlight = 'danger';
-            e.title = e.solution;
           } else {
             e.highlight = 'success';
           }
