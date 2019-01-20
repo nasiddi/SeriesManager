@@ -98,7 +98,7 @@ export default {
     start: {},
     stop: false,
     duration: '',
-    currentPosition: [0, 0],
+    curPos: [0, 0],
     positions: [],
   }),
   computed: {
@@ -162,15 +162,13 @@ export default {
   },
   methods: {
     findRandom(w) {
-      const current = this.episodes[this.positions[
-        this.currentPosition[0]]][this.positions[this.currentPosition[1]]];
+      const current = this.episodes[this.positions[this.curPos[0]]][this.positions[this.curPos[1]]];
       if (current.title_list.includes(w) || current.title_list.includes(w.replace(/[^a-zA-Z0-9' ]/g, ''))) {
         current.highlight = 'info';
         this.word = '';
         this.found += 1;
-        this.currentPosition += 1;
-        const next = this.episodes[this.positions[
-          this.currentPosition[0]]][this.positions[this.currentPosition[1]]];
+        this.curPos += 1;
+        const next = this.episodes[this.positions[this.curPos[0]]][this.positions[this.curPos[1]]];
         next.highlight = 'warning';
         if (this.found === this.total) {
           this.showAll();
@@ -186,19 +184,19 @@ export default {
       this.positions = _.shuffle(this.positions);
     },
     checkNext(w) {
-      const current = this.episodes[this.currentPosition[0]][this.currentPosition[1]];
+      const current = this.episodes[this.curPos[0]][this.curPos[1]];
       if (current.title_list.includes(w) || current.title_list.includes(w.replace(/[^a-zA-Z0-9' ]/g, ''))) {
         current.title = current.solution;
         current.highlight = 'info';
         this.word = '';
         this.found += 1;
-        if (this.episodes[this.currentPosition[0]].length > this.currentPosition[1] + 1) {
-          this.currentPosition[1] += 1;
-        } else if (this.episodes.length > this.currentPosition[0] + 1) {
-          this.currentPosition[0] += 1;
-          this.currentPosition[1] = 0;
+        if (this.episodes[this.curPos[0]].length > this.curPos[1] + 1) {
+          this.curPos[1] += 1;
+        } else if (this.episodes.length > this.curPos[0] + 1) {
+          this.curPos[0] += 1;
+          this.curPos[1] = 0;
         }
-        const next = this.episodes[this.currentPosition[0]][this.currentPosition[1]];
+        const next = this.episodes[this.curPos[0]][this.curPos[1]];
         next.highlight = 'warning';
         if (this.found === this.total) {
           this.showAll();
@@ -246,12 +244,12 @@ export default {
             this.total = body.total;
             this.stop = false;
             if (this.level.includes('ordered')) {
-              this.currentPosition = [0, 0];
-              this.episodes[this.currentPosition[0]][this.currentPosition[1]].highlight = 'warning';
+              this.curPos = [0, 0];
+              this.episodes[this.curPos[0]][this.curPos[1]].highlight = 'warning';
             }
             if (this.level.includes('hidden')) {
               this.getPositions();
-              this.currentPosition = 0;
+              this.curPos = 0;
               this.episodes[this.positions[0][0]][this.positions[0][1]].highlight = 'warning';
             }
             this.start = moment(moment());
