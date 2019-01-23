@@ -5,7 +5,6 @@
       <b-col >
         <b-button
           variant="primary"
-          size="lg"
           class="mt-3"
           block
           @click.prevent="result"
@@ -14,7 +13,6 @@
       <b-col >
         <b-button
           variant="primary"
-          size="lg"
           class="mt-3"
           block
           @click.prevent="reset"
@@ -30,7 +28,7 @@
     <b-row class="text-center mt-3">
       <b-col class="text-center">
         <h1
-          v-if="trueCounter > -1"
+          v-if="trueCounter > 0 || level === 'single'"
           class="mb-3 mt-2 text-center"> {{ trueCounter }} / {{ shows.length }} </h1>
       </b-col>
     </b-row>
@@ -89,7 +87,7 @@ export default {
     json: {},
     shows: [],
     seriesNames: [],
-    trueCounter: -1,
+    trueCounter: 0,
     level: 'single',
     currentIndex: 0,
   }),
@@ -103,7 +101,14 @@ export default {
   },
   methods: {
     submit() {
-      this.$set(this.shows[this.currentIndex], 'result', true);
+      const s = this.shows[this.currentIndex];
+      this.$set(s, 'result', true);
+      if (s.series_name === s.selected) {
+        this.trueCounter += 1;
+        this.$set(s, 'color', 'success');
+      } else {
+        this.$set(s, 'color', 'danger');
+      }
     },
     next() {
       if (this.currentIndex < this.shows.length) {
@@ -116,7 +121,6 @@ export default {
       this.loadData();
     },
     result() {
-      this.trueCounter = 0;
       this.seriesNames.forEach((n) => {
         this.$set(n, 'text', `${n.value}`);
       });
@@ -177,7 +181,7 @@ export default {
             const names = _.sortBy(_.map(body.shows, 'series_name'));
             this.seriesNames = names.map(n => ({ text: n, value: n }));
             this.seriesNames = [{ value: '', text: '' }].concat(this.seriesNames);
-            this.trueCounter = -1;
+            this.trueCounter = 0;
             this.currentIndex = 0;
             this.setColors();
             this.$snotify.remove(this.notifLoading.id);
