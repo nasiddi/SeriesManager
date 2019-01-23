@@ -108,16 +108,18 @@ export default {
   created() {
     this.loadData();
     this.$root.$on('colors', this.setColors);
+    this.$root.$on('submit', this.submit);
+    this.$root.$on('back', this.back);
+    this.$root.$on('next', this.next);
   },
   mounted() {
-    // eslint-disable-next-line func-names
     window.addEventListener('keyup', (event) => {
       if (event.keyCode === 32) {
-        window.submit();
+        this.$root.$emit('submit');
       } else if (event.keyCode === 37) {
-        window.back();
+        this.$root.$emit('back');
       } else if (event.keyCode === 39) {
-        window.next();
+        this.$root.$emit('next');
       }
     });
   },
