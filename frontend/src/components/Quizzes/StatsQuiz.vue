@@ -103,7 +103,7 @@ export default {
   },
   methods: {
     submit() {
-      this.$set(this.shows[currentIndex], 'result', true);
+      this.$set(this.shows[this.currentIndex], 'result', true);
     },
     next() {
       if (this.currentIndex < this.shows.length) {
