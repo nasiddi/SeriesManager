@@ -10,7 +10,8 @@
       <b-col sm="3">
         <b-form-select
           v-model="level"
-          :options="['word', 'no_lows', 'title', 'ordered']"
+          :options="['word', 'no_lows', 'title', 'ordered_title',
+                     'ordered_no_lows', 'hidden_title', 'hidden_no_lows']"
           class="mb-2 mt-3" />
       </b-col>
       <b-col sm="3">
@@ -97,7 +98,8 @@ export default {
     start: {},
     stop: false,
     duration: '',
-    currentPosition: [0, 0],
+    curPos: [0, 0],
+    positions: [],
   }),
   computed: {
   },
@@ -108,8 +110,12 @@ export default {
           return;
         }
         const word = w.toLowerCase();
-        if (this.level === 'ordered') {
+        if (this.level.includes('ordered')) {
           this.checkNext(word);
+          return;
+        }
+        if (this.level.includes('hidden')) {
+          this.findRandom(word);
           return;
         }
         let found = false;
@@ -155,38 +161,68 @@ export default {
   mounted() {
   },
   methods: {
-    checkNext(w) {
-      const current = this.episodes[this.currentPosition[0]][this.currentPosition[1]];
+    findRandom(w) {
+      if (this.positions.length <= this.curPos) {
+        return;
+      }
+      const current = this.episodes[this.positions[this.curPos][0]][this.positions[this.curPos][1]];
       if (current.title_list.includes(w) || current.title_list.includes(w.replace(/[^a-zA-Z0-9' ]/g, ''))) {
-        current.title = current.solution;
-        current.highlight = 'success';
+        current.highlight = 'info';
         this.word = '';
         this.found += 1;
-        if (this.episodes[this.currentPosition[0]].length > this.currentPosition[1] + 1) {
-          this.currentPosition[1] += 1;
-        } else if (this.episodes.length > this.currentPosition[0] + 1) {
-          this.currentPosition[0] += 1;
-          this.currentPosition[1] = 0;
-        }
-        const next = this.episodes[this.currentPosition[0]][this.currentPosition[1]];
-        next.highlight = 'warning';
+        this.curPos += 1;
         if (this.found === this.total) {
           this.showAll();
+        } else {
+          const next = this.episodes[
+            this.positions[this.curPos][0]][this.positions[this.curPos][1]];
+          next.highlight = 'warning';
+        }
+      }
+    },
+    getPositions() {
+      this.episodes.forEach((s, iS) => {
+        s.forEach((e, iE) => {
+          this.positions.push([iS, iE]);
+        });
+      });
+      this.positions = _.shuffle(this.positions);
+    },
+    checkNext(w) {
+      const current = this.episodes[this.curPos[0]][this.curPos[1]];
+      if (current.title_list.includes(w) || current.title_list.includes(w.replace(/[^a-zA-Z0-9' ]/g, ''))) {
+        current.title = current.solution;
+        current.highlight = 'info';
+        this.word = '';
+        this.found += 1;
+        if (this.episodes[this.curPos[0]].length > this.curPos[1] + 1) {
+          this.curPos[1] += 1;
+        } else if (this.episodes.length > this.curPos[0] + 1) {
+          this.curPos[0] += 1;
+          this.curPos[1] = 0;
+        }
+        if (this.found === this.total) {
+          this.showAll();
+        } else {
+          const next = this.episodes[this.curPos[0]][this.curPos[1]];
+          next.highlight = 'warning';
         }
       }
     },
     showAll() {
       this.stop = true;
-      this.episodes.forEach((s) => {
-        s.forEach((e) => {
-          if (!e.title) {
-            e.highlight = 'danger';
+      setTimeout(() => {
+        this.episodes.forEach((s) => {
+          s.forEach((e) => {
             e.title = e.solution;
-          } else {
-            e.highlight = 'success';
-          }
+            if (e.highlight !== 'info') {
+              e.highlight = 'danger';
+            } else {
+              e.highlight = 'success';
+            }
+          });
         });
-      });
+      }, 50);
     },
     setDuration() {
       if (this.stop) { return; }
@@ -199,7 +235,14 @@ export default {
       return (number < 10 ? '0' : '') + number;
     },
     loadEpisodes() {
-      this.$http.post('python/titlequiz', { series_name: this.show, level: (this.level === 'ordered') ? 'title' : this.level })
+      // eslint-disable-next-line prefer-destructuring
+      let levelType = this.level;
+      if (levelType.includes('title')) {
+        levelType = 'title';
+      } else if (levelType.includes('no_lows')) {
+        levelType = 'no_lows';
+      }
+      this.$http.post('python/titlequiz', { series_name: this.show, level: levelType })
         .then(
           (res) => {
             const body = _.defaults(res.body, {
@@ -208,9 +251,14 @@ export default {
             this.found = 0;
             this.total = body.total;
             this.stop = false;
-            this.currentPosition = [0, 0];
-            if (this.level === 'ordered') {
-              this.episodes[this.currentPosition[0]][this.currentPosition[1]].highlight = 'warning';
+            if (this.level.includes('ordered')) {
+              this.curPos = [0, 0];
+              this.episodes[this.curPos[0]][this.curPos[1]].highlight = 'warning';
+            }
+            if (this.level.includes('hidden')) {
+              this.getPositions();
+              this.curPos = 0;
+              this.episodes[this.positions[0][0]][this.positions[0][1]].highlight = 'warning';
             }
             this.start = moment(moment());
             setInterval(this.setDuration, 1000);
