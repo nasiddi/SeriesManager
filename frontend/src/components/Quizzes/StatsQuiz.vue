@@ -91,7 +91,6 @@ export default {
     seriesNames: [],
     trueCounter: -1,
     level: 'single',
-    current: {},
     currentIndex: 0,
   }),
   computed: {
@@ -104,7 +103,7 @@ export default {
   },
   methods: {
     submit() {
-      this.$set(this.current, 'result', true);
+      this.$set(this.shows[currentIndex], 'result', true);
     },
     next() {
       if (this.currentIndex < this.shows.length) {
@@ -179,7 +178,7 @@ export default {
             this.seriesNames = names.map(n => ({ text: n, value: n }));
             this.seriesNames = [{ value: '', text: '' }].concat(this.seriesNames);
             this.trueCounter = -1;
-
+            this.currentIndex = 0;
             this.setColors();
             this.$snotify.remove(this.notifLoading.id);
           },
