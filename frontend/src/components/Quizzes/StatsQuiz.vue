@@ -52,6 +52,16 @@
         </b-col>
         <b-col >
           <b-button
+            :disabled="currentIndex === 0"
+            variant="primary"
+            class="mt-3"
+            block
+            @click.prevent="back"
+          >Back</b-button>
+        </b-col>
+        <b-col >
+          <b-button
+            :disabled="currentIndex >= shows.length"
             variant="primary"
             class="mt-3"
             block
@@ -110,11 +120,14 @@ export default {
         this.$set(s, 'color', 'danger');
       }
     },
+    back() {
+      if (this.currentIndex > 0) {
+        this.currentIndex -= 1;
+      }
+    },
     next() {
       if (this.currentIndex < this.shows.length) {
         this.currentIndex += 1;
-      } else {
-        this.result();
       }
     },
     reset() {
