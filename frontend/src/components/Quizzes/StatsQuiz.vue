@@ -44,20 +44,20 @@
       <b-row >
         <b-col >
           <b-button
-            variant="primary"
-            class="mt-3"
-            block
-            @click.prevent="submit"
-          >Submit</b-button>
-        </b-col>
-        <b-col >
-          <b-button
             :disabled="currentIndex === 0"
             variant="primary"
             class="mt-3"
             block
             @click.prevent="back"
           >Back</b-button>
+        </b-col>
+        <b-col >
+          <b-button
+            variant="primary"
+            class="mt-3"
+            block
+            @click.prevent="submit"
+          >Submit</b-button>
         </b-col>
         <b-col >
           <b-button
