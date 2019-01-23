@@ -49,7 +49,6 @@
             class="mt-3"
             block
             @click.prevent="back"
-            @keyup.native.left="back"
           >Back</b-button>
         </b-col>
         <b-col >
@@ -58,7 +57,6 @@
             class="mt-3"
             block
             @click.prevent="submit"
-            @keyup.native.enter="submit"
           >Submit</b-button>
         </b-col>
         <b-col >
@@ -68,7 +66,6 @@
             class="mt-3"
             block
             @click.prevent="next"
-            @keyup.native.right="next"
           >Next</b-button>
         </b-col>
       </b-row>
@@ -111,6 +108,18 @@ export default {
   created() {
     this.loadData();
     this.$root.$on('colors', this.setColors);
+  },
+  mounted() {
+    // eslint-disable-next-line func-names
+    window.addEventListener('keyup', function (event) {
+      if (event.keyCode === 32) {
+        this.submit();
+      } else if (event.keyCode === 37) {
+        this.back();
+      } else if (event.keyCode === 39) {
+        this.next();
+      }
+    });
   },
   methods: {
     submit() {
