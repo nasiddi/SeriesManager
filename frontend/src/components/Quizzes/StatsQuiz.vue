@@ -49,6 +49,7 @@
             class="mt-3"
             block
             @click.prevent="back"
+            @keyup.native.left="back"
           >Back</b-button>
         </b-col>
         <b-col >
@@ -57,6 +58,7 @@
             class="mt-3"
             block
             @click.prevent="submit"
+            @keyup.native.enter="submit"
           >Submit</b-button>
         </b-col>
         <b-col >
@@ -66,6 +68,7 @@
             class="mt-3"
             block
             @click.prevent="next"
+            @keyup.native.right="next"
           >Next</b-button>
         </b-col>
       </b-row>
