@@ -19,7 +19,14 @@
           block
           @click.prevent="reset"
         >Reset</b-button>
-    </b-col></b-row>
+      </b-col>
+      <b-col>
+        <b-form-select
+          v-model="level"
+          :options="['all', 'single']"
+          class="mt-3"/>
+      </b-col>
+    </b-row>
     <b-row class="text-center mt-3">
       <b-col class="text-center">
         <h1
@@ -27,12 +34,43 @@
           class="mb-3 mt-2 text-center"> {{ trueCounter }} / {{ shows.length }} </h1>
       </b-col>
     </b-row>
-    <stats-quiz-card
-      v-for="show in shows"
-      :key="show.series_name"
-      :show="show"
-      :selector="seriesNames"
-      class="mt-3"/>
+    <div v-if="level === 'all'">
+      <stats-quiz-card
+        v-for="show in shows"
+        :key="show.series_name"
+        :show="show"
+        :selector="seriesNames"
+        class="mt-3"/>
+    </div>
+    <div v-if="level === 'single'">
+      <b-row >
+        <b-col >
+          <b-button
+            variant="primary"
+            class="mt-3"
+            block
+            @click.prevent="submit"
+          >Submit</b-button>
+        </b-col>
+        <b-col >
+          <b-button
+            variant="primary"
+            class="mt-3"
+            block
+            @click.prevent="next"
+          >Next</b-button>
+        </b-col>
+      </b-row>
+      <b-row >
+        <b-col >
+          <stats-quiz-card
+            :key="shows[currentIndex].series_name"
+            :show="shows[currentIndex]"
+            :selector="seriesNames"
+            class="mt-3"/>
+        </b-col>
+      </b-row>
+    </div>
   </div>
 </template>
 
@@ -52,6 +90,9 @@ export default {
     shows: [],
     seriesNames: [],
     trueCounter: -1,
+    level: 'single',
+    current: {},
+    currentIndex: 0,
   }),
   computed: {
   },
@@ -62,6 +103,16 @@ export default {
     this.$root.$on('colors', this.setColors);
   },
   methods: {
+    submit() {
+      this.$set(this.current, 'result', true);
+    },
+    next() {
+      if (this.currentIndex < this.shows.length) {
+        this.currentIndex += 1;
+      } else {
+        this.result();
+      }
+    },
     reset() {
       this.loadData();
     },

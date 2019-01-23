@@ -18,9 +18,8 @@
               @change="setColor" />
           </b-col>
           <b-col
-            v-if="show.result"
             class="pt-2">
-            <h5>{{ show.series_name }}</h5>
+            <h5>{{ (show.result) ? show.series_name : show.selected }}</h5>
           </b-col>
         </b-row>
       </div>

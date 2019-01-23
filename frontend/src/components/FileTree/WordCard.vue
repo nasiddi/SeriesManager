@@ -262,42 +262,6 @@ export default {
         this.original.save = false;
       }
     },
-    async updateTitle() {
-      return new Promise((resolve) => {
-        const file = this.e;
-        this.$http.post('jobs/tvdb', file)
-          .then(
-            (res) => {
-              const body = _.defaults(res.body, {
-              });
-              if (!('title' in body)) {
-                this.$snotify.error(file.series_name, 'Title failed', { timeout: 5000 });
-                return resolve(false);
-              }
-              file.title = body.title;
-              if (file.episode_option !== 'Single') {
-                if (!('title2' in body)) {
-                  this.$snotify.error(file.series_name, 'Title 2 failed', { timeout: 5000 });
-                  return resolve(false);
-                }
-                file.title2 = body.title2;
-              }
-              if (file.episode_option === 'Triple') {
-                if (!('title3' in body)) {
-                  this.$snotify.error(file.series_name, 'Title 3 failed', { timeout: 5000 });
-                  return resolve(false);
-                }
-                file.title3 = body.title3;
-              }
-              return resolve(true);
-            },
-            () => {
-              this.$snotify.error('Failed to load data', { timeout: 0 });
-              resolve(false);
-            },
-          );
-      });
-    },
   },
 };
 </script>

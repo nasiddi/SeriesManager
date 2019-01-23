@@ -52,7 +52,7 @@ def fill_db_from_pickle():
                     #quality=e.quality,
                     title=e.title,
                     air_date=datetime.strptime(e.air_date, '%Y-%m-%d') if e.air_date else None
-                    
+
                 ).save()
 
 
@@ -213,67 +213,71 @@ def find_all_matching_dates():
     print(json.dumps(matched, indent=2, sort_keys=True))
 
 
-find_all_matching_dates()
+for e in E.objects(title__contains='Planet'):
+    print(e)
+    print(e.title)
 
-premieres = Show.objects.aggregate({
-    '$group': {'_id': {'premiere': '$premiere', 'final': '$final'}, 'show_id': {'$push': '$show_id'}}
-})
-
-for p in list(premieres):
-    if len(p['show_id']) > 1:
-        print(p)
-
-
-finals = Show.objects.aggregate({
-    '$group': {'_id': {'final': '$final'}, 'show_id': {'$push': '$show_id'}}
-})
-
-for p in list(finals):
-    if len(p['show_id']) > 1:
-        print(p)
-
-
-print()
-
-years = dict.fromkeys(list(range(1960, 2020)), 0)
-
-for s in Show.objects:
-    for y in years.keys():
-        final = s.final.year if s.final else 2019
-        if s.premiere.year <= y <= final:
-            years[y] += 1
-
-print(years)
-years = dict.fromkeys(list(range(1960, 2021)), 0)
-years_sep = dict.fromkeys(list(range(1960, 2021)), 0)
-print()
-shows = {}
-
-for e in E.objects:
-    if e.air_date:
-        years[e.air_date.year] += 1
-        if not years_sep[e.air_date.year] or e.show_id not in years_sep[e.air_date.year]:
-            years_sep[e.air_date.year] = { e.show_id: 0 }
-
-        years_sep[e.air_date.year][e.show_id] += 1
-
-        if e.show_id not in shows:
-            shows[e.show_id] = dict.fromkeys(list(range(1960, 2021)), 0)
-        shows[e.show_id][e.air_date.year] += 1 if e.episode_option == 'Single' else 2
-
-print(years)
-
-#plt.bar(range(len(years)), list(years.values()), align='center')
-decades = [y if y % 10 == 0 else '' for y in years.keys()]
-plt.xticks(range(len(decades)), list(decades))
-
-#plt.show()
-print(years_sep)
-print(shows)
-df = pd.DataFrame(shows)
-
-df.plot(kind="bar", stacked=True)
-decades = [y if y % 10 == 0 else '' for y in years.keys()]
-plt.xticks(range(len(decades)), list(decades))
-plt.show()
+# find_all_matching_dates()
+#
+# premieres = Show.objects.aggregate({
+#     '$group': {'_id': {'premiere': '$premiere', 'final': '$final'}, 'show_id': {'$push': '$show_id'}}
+# })
+#
+# for p in list(premieres):
+#     if len(p['show_id']) > 1:
+#         print(p)
+#
+#
+# finals = Show.objects.aggregate({
+#     '$group': {'_id': {'final': '$final'}, 'show_id': {'$push': '$show_id'}}
+# })
+#
+# for p in list(finals):
+#     if len(p['show_id']) > 1:
+#         print(p)
+#
+#
+# print()
+#
+# years = dict.fromkeys(list(range(1960, 2020)), 0)
+#
+# for s in Show.objects:
+#     for y in years.keys():
+#         final = s.final.year if s.final else 2019
+#         if s.premiere.year <= y <= final:
+#             years[y] += 1
+#
+# print(years)
+# years = dict.fromkeys(list(range(1960, 2021)), 0)
+# years_sep = dict.fromkeys(list(range(1960, 2021)), 0)
+# print()
+# shows = {}
+#
+# for e in E.objects:
+#     if e.air_date:
+#         years[e.air_date.year] += 1
+#         if not years_sep[e.air_date.year] or e.show_id not in years_sep[e.air_date.year]:
+#             years_sep[e.air_date.year] = { e.show_id: 0 }
+#
+#         years_sep[e.air_date.year][e.show_id] += 1
+#
+#         if e.show_id not in shows:
+#             shows[e.show_id] = dict.fromkeys(list(range(1960, 2021)), 0)
+#         shows[e.show_id][e.air_date.year] += 1 if e.episode_option == 'Single' else 2
+#
+# print(years)
+#
+# #plt.bar(range(len(years)), list(years.values()), align='center')
+# decades = [y if y % 10 == 0 else '' for y in years.keys()]
+# plt.xticks(range(len(decades)), list(decades))
+#
+# #plt.show()
+# print(years_sep)
+# print(shows)
+# df = pd.DataFrame(shows)
+#
+# df.plot(kind="bar", stacked=True)
+# decades = [y if y % 10 == 0 else '' for y in years.keys()]
+# plt.xticks(range(len(decades)), list(decades))
+# plt.show()
 
