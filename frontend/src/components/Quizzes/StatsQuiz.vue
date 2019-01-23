@@ -29,7 +29,7 @@
       <b-col class="text-center">
         <h1
           v-if="trueCounter > 0 || level === 'single'"
-          class="mb-3 mt-2 text-center"> {{ trueCounter }} / {{ shows.length }} </h1>
+          class="mb-3 mt-2 text-center">counter</h1>
       </b-col>
     </b-row>
     <div v-if="level === 'all'">
@@ -102,6 +102,9 @@ export default {
     currentIndex: 0,
   }),
   computed: {
+    counter() {
+      return `${this.trueCounter} / ${this.shows.length} ${(this.level === 'single') ? ` (${this.currentIndex})` : ''}`;
+    },
   },
   watch: {
   },
@@ -114,7 +117,7 @@ export default {
   },
   mounted() {
     window.addEventListener('keyup', (event) => {
-      if (event.keyCode === 32) {
+      if (event.keyCode === 34) {
         this.$root.$emit('submit');
       } else if (event.keyCode === 37) {
         this.$root.$emit('back');
