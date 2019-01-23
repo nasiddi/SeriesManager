@@ -29,7 +29,7 @@
       <b-col class="text-center">
         <h1
           v-if="trueCounter > 0 || level === 'single'"
-          class="mb-3 mt-2 text-center">counter</h1>
+          class="mb-3 mt-2 text-center">{{ counter }}</h1>
       </b-col>
     </b-row>
     <div v-if="level === 'all'">
