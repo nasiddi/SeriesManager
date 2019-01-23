@@ -111,13 +111,13 @@ export default {
   },
   mounted() {
     // eslint-disable-next-line func-names
-    window.addEventListener('keyup', function (event) {
+    window.addEventListener('keyup', (event) => {
       if (event.keyCode === 32) {
-        this.submit();
+        window.submit();
       } else if (event.keyCode === 37) {
-        this.back();
+        window.back();
       } else if (event.keyCode === 39) {
-        this.next();
+        window.next();
       }
     });
   },
