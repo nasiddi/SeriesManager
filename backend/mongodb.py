@@ -177,7 +177,7 @@ for e in episodes:
     print(shows[0].status, e, e.title)
 
 print()
-for show in Show.objects.order_by('-density'):
+for show in Show.objects.order_by('premiere'):
     diff = get_diff_in_years(show.premiere, show.final)
     density = "{0: >5}".format("{:4.2f}".format(show.density))
     print(show.premiere if show.premiere else '          ', show.final if show.final else '          ',
@@ -216,6 +216,20 @@ def find_all_matching_dates():
 for e in E.objects(title__contains='Planet'):
     print(e)
     print(e.title)
+
+
+years = list(range(1960, 2021))
+
+for y in years:
+    from_date = datetime.strptime(str(y) + '-01-01', '%Y-%m-%d')
+    to_date = datetime.strptime(str(y) + '-12-31', '%Y-%m-%d')
+    ps = Show.objects(premiere__gte=from_date, premiere__lte=to_date)
+    premieres = ' | '.join([p.show_id for p in ps])
+    fs = Show.objects(final__gte=from_date, final__lte=to_date)
+    finals = ' | '.join([f.show_id for f in fs])
+    print(y, str(ps.count()).rjust(2), premieres)
+    print(y, str(fs.count()).rjust(2), finals)
+
 
 # find_all_matching_dates()
 #

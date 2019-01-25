@@ -11,7 +11,7 @@
         <b-form-select
           v-model="level"
           :options="['word', 'no_lows', 'title', 'ordered_title',
-                     'ordered_no_lows', 'hidden_title', 'hidden_no_lows']"
+                     'ordered_no_lows', 'hidden_title', 'hidden_no_lows', 'sxe_no_lows']"
           class="mb-2 mt-3" />
       </b-col>
       <b-col sm="3">
@@ -36,6 +36,11 @@
       v-sticky="true"
       sticky-offset="10"
       sticky-side="top">
+      <b-col>
+        <h1
+          class="mb-3 mt-2"> {{ episodes[positions[curPos][0]][positions[curPos][1]].s_nr }}
+          x {{ episodes[positions[curPos][0]][positions[curPos][1]].e_nr }} </h1>
+      </b-col>
       <b-col sm="8">
         <b-form-input
           v-model="word"
@@ -48,7 +53,7 @@
           class="mb-3 mt-2"> {{ found }} / {{ total + ' | ' + duration }} </h1>
       </b-col>
     </b-row>
-    <b-row>
+    <b-row v-if="!level.includes('sxe') || stop ">
       <b-col
         v-for="(a, c) in episodes"
         :key="c"
@@ -115,6 +120,10 @@ export default {
           return;
         }
         if (this.level.includes('hidden')) {
+          this.findRandom(word);
+          return;
+        }
+        if (this.level.includes('sxe')) {
           this.findRandom(word);
           return;
         }
