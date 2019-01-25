@@ -36,7 +36,7 @@
       v-sticky="true"
       sticky-offset="10"
       sticky-side="top">
-      <b-col v-if="!_.isEmpty(episodes)">
+      <b-col v-if="level.includes('sxe') && !_.isEmpty(episodes) && !_.isEmpty(episodes[0])">
         <h1
           class="mb-3 mt-2"> {{ episodes[positions[curPos][0]][positions[curPos][1]].s_nr }}
           x {{ episodes[positions[curPos][0]][positions[curPos][1]].e_nr }} </h1>
