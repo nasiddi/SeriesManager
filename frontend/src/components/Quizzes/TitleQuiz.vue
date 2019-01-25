@@ -36,7 +36,7 @@
       v-sticky="true"
       sticky-offset="10"
       sticky-side="top">
-      <b-col>
+      <b-col v-if="!_.isEmpty(episodes)">
         <h1
           class="mb-3 mt-2"> {{ episodes[positions[curPos][0]][positions[curPos][1]].s_nr }}
           x {{ episodes[positions[curPos][0]][positions[curPos][1]].e_nr }} </h1>
