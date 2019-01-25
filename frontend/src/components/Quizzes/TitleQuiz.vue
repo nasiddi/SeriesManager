@@ -264,7 +264,7 @@ export default {
               this.curPos = [0, 0];
               this.episodes[this.curPos[0]][this.curPos[1]].highlight = 'warning';
             }
-            if (this.level.includes('hidden')) {
+            if (this.level.includes('hidden') || this.level.includes('sxe')) {
               this.getPositions();
               this.curPos = 0;
               this.episodes[this.positions[0][0]][this.positions[0][1]].highlight = 'warning';
