@@ -41,7 +41,7 @@
           class="mb-3 mt-2"> {{ pad2(episodes[positions[curPos][0]][positions[curPos][1]].s_nr)
           }}x{{ pad2(episodes[positions[curPos][0]][positions[curPos][1]].e_nr) }} </h1>
       </b-col>
-      <b-col sm="8">
+      <b-col sm="6">
         <b-form-input
           v-model="word"
           type="text"
