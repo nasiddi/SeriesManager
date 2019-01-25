@@ -190,7 +190,7 @@ export default {
       }
     },
     getPositions() {
-      this.position = [];
+      this.positions = [];
       this.episodes.forEach((s, iS) => {
         s.forEach((e, iE) => {
           this.positions.push([iS, iE]);
