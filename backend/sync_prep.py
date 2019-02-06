@@ -37,6 +37,7 @@ def main(args):
         series_names.append(n)
         n2 = n.replace('\'', '')
         n2 = n2.replace('.', '')
+        n2 = n2.replace('.', '')
         n2 = clean_up(n2)
 
         if not set(n1) == set(n2):

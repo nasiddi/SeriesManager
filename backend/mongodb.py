@@ -55,39 +55,6 @@ def fill_db_from_pickle():
 
                 ).save()
 
-
-    s = Show.objects(show_id='Star Trek')[0]
-    s.premiere = datetime.strptime('1966-09-08', '%Y-%m-%d')
-    s.save()
-
-    s = Show.objects(show_id='The Magicians')[0]
-    s.premiere = datetime.strptime('2015-12-16', '%Y-%m-%d')
-    s.save()
-
-    s = Show.objects(show_id='The Musketeers')[0]
-    s.premiere = datetime.strptime('2014-01-19', '%Y-%m-%d')
-    s.save()
-
-    s = Show.objects(show_id='Star Trek - Deep Space Nine')[0]
-    s.final = datetime.strptime('1999-06-02', '%Y-%m-%d')
-    s.save()
-
-    s = Show.objects(show_id='Star Trek - Voyager')[0]
-    s.final = datetime.strptime('2001-05-23', '%Y-%m-%d')
-    s.save()
-
-    s = Show.objects(show_id='Star Trek - Enterprise')[0]
-    s.final = datetime.strptime('2005-05-13', '%Y-%m-%d')
-    s.save()
-
-    s = Show.objects(show_id='Firefly')[0]
-    s.final = datetime.strptime('2002-12-20', '%Y-%m-%d')
-    s.save()
-
-    s = Show.objects(show_id='Naruto')[0]
-    s.final = datetime.strptime('2007-02-08', '%Y-%m-%d')
-    s.save()
-
     for show in Show.objects:
         show.density = get_density(show)
         show.save()
@@ -139,6 +106,7 @@ class Show(Document):
     premiere = DateField()
     final = DateField()
     density = FloatField()
+    started = DateField()
 
     def __str__(self):
         return self.show_id
@@ -162,7 +130,7 @@ def get_density(show):
     return e_count / float(diff) if float(diff) > 1 else e_count
 
 
-# fill_db_from_pickle()
+#fill_db_from_pickle()
 
 
 for status in ['Airing', 'Hiatus', 'Ended']:
@@ -185,6 +153,21 @@ for show in Show.objects.order_by('premiere'):
 print()
 print(len(Show.objects))
 print()
+
+
+for show in Show.objects(started=None).order_by('premiere'):
+    entry = input(show.show_id + ': ')
+    if entry == 'p':
+        show.started = show.premiere
+    elif entry == 'n':
+        show.started = datetime.strptime('20200101', '%Y%m%d')
+    else:
+        try:
+            show.started = datetime.strptime(entry, '%Y%m%d')
+        except ValueError:
+            pass
+    show.save()
+    # wrong: ds9
 
 
 def find_date_matches(show_date, show_id, date_type, dates, matched):
@@ -212,23 +195,19 @@ def find_all_matching_dates():
 
     print(json.dumps(matched, indent=2, sort_keys=True))
 
-
-for e in E.objects(title__contains='Planet'):
-    print(e)
-    print(e.title)
-
-
-years = list(range(1960, 2021))
-
-for y in years:
-    from_date = datetime.strptime(str(y) + '-01-01', '%Y-%m-%d')
-    to_date = datetime.strptime(str(y) + '-12-31', '%Y-%m-%d')
-    ps = Show.objects(premiere__gte=from_date, premiere__lte=to_date)
-    premieres = ' | '.join([p.show_id for p in ps])
-    fs = Show.objects(final__gte=from_date, final__lte=to_date)
-    finals = ' | '.join([f.show_id for f in fs])
-    print(y, str(ps.count()).rjust(2), premieres)
-    print(y, str(fs.count()).rjust(2), finals)
+#
+#
+# years = list(range(1960, 2021))
+#
+# for y in years:
+#     from_date = datetime.strptime(str(y) + '-01-01', '%Y-%m-%d')
+#     to_date = datetime.strptime(str(y) + '-12-31', '%Y-%m-%d')
+#     ps = Show.objects(premiere__gte=from_date, premiere__lte=to_date)
+#     premieres = ' | '.join([p.show_id for p in ps])
+#     fs = Show.objects(final__gte=from_date, final__lte=to_date)
+#     finals = ' | '.join([f.show_id for f in fs])
+#     print(y, str(ps.count()).rjust(2), premieres)
+#     print(y, str(fs.count()).rjust(2), finals)
 
 
 # find_all_matching_dates()
