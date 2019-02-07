@@ -497,19 +497,20 @@ export default {
       if (!('total' in this.json)) { return; }
       let series = [];
       this.shows = [];
-      series = this.filterGroup(this.getGenres(), 'genre1', this.json.shows);
-      series = series.concat(this.filterGroup(this.getGenres(), 'genre2', this.json.shows));
-      this.$snotify.info(series, { timeout: 0 });
+
+
       if (this.additive) {
         series = series.concat(this.filterGroup(_.keys(this.json.total.status), 'status', series));
         series = series.concat(this.filterGroup(_.keys(this.json.total.ratio), 'ratio', this.json.shows));
         series = series.concat(this.filterGroup(_.values(this.json.extensions), 'extension', this.json.shows));
         series = series.concat(this.filterGroup(_.keys(this.json.total.quality), 'quality', this.json.shows));
+        series = series.concat(this.filterGenre(this.json.shows));
       } else {
         series = this.filterGroup(_.keys(this.json.total.status), 'status', series);
         series = this.filterGroup(_.keys(this.json.total.ratio), 'ratio', series);
         series = this.filterGroup(_.values(this.json.extensions), 'extension', series);
         series = this.filterGroup(_.keys(this.json.total.quality), 'quality', series);
+        series = this.filterGenre(series);
       }
       series = [...new Set(series.map(s => s.series_name))];
       this.json.shows.forEach((s) => {
@@ -533,7 +534,6 @@ export default {
           filteredGroup.push(g);
         }
       });
-
       series.forEach((s) => {
         if (_.keys(s[name]).some(n => filteredGroup.indexOf(n) >= 0)) {
           shows.push(s);
@@ -541,6 +541,21 @@ export default {
       });
       return shows;
     },
+    filterGenre(series) {
+      const filteredGroup = [];
+      const shows = [];
+      this.getGenres().forEach((g) => {
+        if (this.selected.includes(g)) {
+          filteredGroup.push(g);
+        }
+      });
+      series.forEach((s) => {
+        if (filteredGroup.includes(s.genre1) || filteredGroup.includes(s.genre2)) {
+          shows.push(s);
+        }
+      });
+      return shows;
+    }
     changeDirection() {
       if (this.direction === 'sort-down') {
         this.direction = 'sort-up';
