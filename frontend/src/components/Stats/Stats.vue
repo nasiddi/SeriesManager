@@ -190,7 +190,7 @@
                   button-variant="outline-secondary"
                   name="status"/>
               </b-row>
-              <b-row>
+              <b-row class="mt-2">
                 <b-form-checkbox-group
                   v-model="selected"
                   :options="_.keys(json.total.quality)"
@@ -200,7 +200,7 @@
                   button-variant="outline-secondary"
                   name="quality"/>
               </b-row>
-              <b-row>
+              <b-row class="mt-2">
                 <b-form-checkbox-group
                   v-model="selected"
                   :options="_.keys(json.total.ratio)"
