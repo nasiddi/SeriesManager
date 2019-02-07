@@ -179,7 +179,7 @@
             >{{ (additive) ? 'Additive' : 'Subtractive' }}</b-button>
           </b-row>
           <b-row class="mt-3">
-            <b-col class="mx-2">
+            <b-col class="mx-3">
               <b-row>
                 <b-form-checkbox-group
                   v-model="selected"
@@ -570,18 +570,6 @@ export default {
       this.selected = this.selected.concat(_.keys(this.json.total.ratio));
       this.selected = this.selected.concat(_.keys(this.json.total.quality));
       this.selected = this.selected.concat(this.getGenres());
-    },
-    setExtentions(primary) {
-      if (!('total' in this.json)) {
-        return [];
-      }
-      const ext = [];
-      this.json.extensions.forEach((e) => {
-        if (primary && e in this.json.total.extension) {
-          ext.push(e);
-        } else if (!primary && !(e in this.json.total.extension)) { ext.push(e); }
-      });
-      return ext;
     },
     getPieData(pie) {
       const data = { labels: [], datasets: [{ data: [], backgroundColor: [] }] };
