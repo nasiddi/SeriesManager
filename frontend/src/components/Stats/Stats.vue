@@ -377,6 +377,7 @@ export default {
     primaryExt: [],
     sencondaryExt: [],
     additive: true,
+    genres: [],
   }),
   computed: {
     getTable() {
