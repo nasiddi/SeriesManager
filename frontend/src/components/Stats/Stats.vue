@@ -555,7 +555,7 @@ export default {
         }
       });
       return shows;
-    }
+    },
     changeDirection() {
       if (this.direction === 'sort-down') {
         this.direction = 'sort-up';
