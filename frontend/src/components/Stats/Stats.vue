@@ -179,7 +179,7 @@
             >{{ (additive) ? 'Additive' : 'Subtractive' }}</b-button>
           </b-row>
           <b-row class="mt-3">
-            <b-col>
+            <b-col class="px-2">
               <b-row>
                 <b-form-checkbox-group
                   v-model="selected"
