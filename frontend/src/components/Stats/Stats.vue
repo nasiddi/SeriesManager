@@ -497,8 +497,9 @@ export default {
       if (!('total' in this.json)) { return; }
       let series = [];
       this.shows = [];
-      series = series.concat(this.filterGroup(this.getGenres(), 'genre1', this.json.shows));
+      series = this.filterGroup(this.getGenres(), 'genre1', this.json.shows);
       series = series.concat(this.filterGroup(this.getGenres(), 'genre2', this.json.shows));
+      this.$snotify.info(series, { timeout: 0 });
       if (this.additive) {
         series = series.concat(this.filterGroup(_.keys(this.json.total.status), 'status', series));
         series = series.concat(this.filterGroup(_.keys(this.json.total.ratio), 'ratio', this.json.shows));
@@ -553,6 +554,7 @@ export default {
       this.selected = this.selected.concat(_.keys(this.json.total.status));
       this.selected = this.selected.concat(_.keys(this.json.total.ratio));
       this.selected = this.selected.concat(_.keys(this.json.total.quality));
+      this.selected = this.selected.concat(this.getGenres());
     },
     setExtentions(primary) {
       if (!('total' in this.json)) {
