@@ -443,6 +443,13 @@ export default {
     },
   },
   created() {
+    this.getGenres().forEach((g) => {
+      if (g === '') {
+        this.genres.push({ value: g, text: 'None' });
+      } else {
+        this.genres.push(g);
+      }
+    });
     this.loadData();
   },
   methods: {
