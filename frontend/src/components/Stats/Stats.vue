@@ -200,7 +200,7 @@
                   button-variant="outline-secondary"
                   name="quality"/>
               </b-row>
-              <b-row class="mt-4">
+              <b-row class="my-4">
                 <b-form-checkbox-group
                   v-model="selected"
                   :options="_.keys(json.total.ratio)"
