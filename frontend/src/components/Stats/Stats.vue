@@ -211,25 +211,29 @@
                   name="ratio"/>
               </b-row>
             </b-col>
-            <b-col>
-              <b-form-checkbox-group
-                v-model="selected"
-                :options="json.extensions"
-                :style="{width: '100%'}"
-                stacked
-                buttons
-                button-variant="outline-secondary"
-                name="extension"/>
+            <b-col class="mx-3">
+              <b-row>
+                <b-form-checkbox-group
+                  v-model="selected"
+                  :options="json.extensions"
+                  :style="{width: '100%'}"
+                  stacked
+                  buttons
+                  button-variant="outline-secondary"
+                  name="extension"/>
+              </b-row>
             </b-col>
-            <b-col>
-              <b-form-checkbox-group
-                v-model="selected"
-                :options="genres"
-                :style="{width: '100%'}"
-                stacked
-                buttons
-                button-variant="outline-secondary"
-                name="genres"/>
+            <b-col class="mx-3">
+              <b-row>
+                <b-form-checkbox-group
+                  v-model="selected"
+                  :options="genres"
+                  :style="{width: '100%'}"
+                  stacked
+                  buttons
+                  button-variant="outline-secondary"
+                  name="genres"/>
+              </b-row>
             </b-col>
           </b-row>
           <b-row class="mt-3">
