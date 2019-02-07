@@ -232,7 +232,7 @@
             <b-col>
               <b-form-checkbox-group
                 v-model="selected"
-                :options="getGenres"
+                :options="getGenres()"
                 :style="{width: '100%'}"
                 stacked
                 buttons
