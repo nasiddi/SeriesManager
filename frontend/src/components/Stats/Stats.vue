@@ -180,49 +180,41 @@
           </b-row>
           <b-row class="mt-3">
             <b-col>
-              <b-form-checkbox-group
-                v-model="selected"
-                :options="_.keys(json.total.status)"
-                :style="{width: '100%'}"
-                stacked
-                buttons
-                button-variant="outline-secondary"
-                name="status"/>
+              <b-row>
+                <b-form-checkbox-group
+                  v-model="selected"
+                  :options="_.keys(json.total.status)"
+                  :style="{width: '100%'}"
+                  stacked
+                  buttons
+                  button-variant="outline-secondary"
+                  name="status"/>
+              </b-row>
+              <b-row>
+                <b-form-checkbox-group
+                  v-model="selected"
+                  :options="_.keys(json.total.quality)"
+                  :style="{width: '100%'}"
+                  stacked
+                  buttons
+                  button-variant="outline-secondary"
+                  name="quality"/>
+              </b-row>
+              <b-row>
+                <b-form-checkbox-group
+                  v-model="selected"
+                  :options="_.keys(json.total.ratio)"
+                  :style="{width: '100%'}"
+                  stacked
+                  buttons
+                  button-variant="outline-secondary"
+                  name="ratio"/>
+              </b-row>
             </b-col>
             <b-col>
               <b-form-checkbox-group
                 v-model="selected"
-                :options="_.keys(json.total.quality)"
-                :style="{width: '100%'}"
-                stacked
-                buttons
-                button-variant="outline-secondary"
-                name="quality"/>
-            </b-col>
-            <b-col>
-              <b-form-checkbox-group
-                v-model="selected"
-                :options="_.keys(json.total.ratio)"
-                :style="{width: '100%'}"
-                stacked
-                buttons
-                button-variant="outline-secondary"
-                name="ratio"/>
-            </b-col>
-            <b-col>
-              <b-form-checkbox-group
-                v-model="selected"
-                :options="setExtentions(true)"
-                :style="{width: '100%'}"
-                stacked
-                buttons
-                button-variant="outline-secondary"
-                name="extension"/>
-            </b-col>
-            <b-col>
-              <b-form-checkbox-group
-                v-model="selected"
-                :options="setExtentions(false)"
+                :options="json.extensions"
                 :style="{width: '100%'}"
                 stacked
                 buttons
