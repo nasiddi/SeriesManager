@@ -344,11 +344,11 @@ export default {
         sortable: true,
       },
       {
-        key: 'premiere',
+        key: 'fremiere',
         sortable: true,
       },
       {
-        key: 'Final',
+        key: 'final',
         sortable: true,
       },
     ],

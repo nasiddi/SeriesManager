@@ -112,21 +112,7 @@ export default {
       'Hiatus',
       'Ended',
     ],
-    genre_option: [
-      '',
-      'Action',
-      'Animation',
-      'Comedy',
-      'Comics',
-      'Crime',
-      'Documentary',
-      'Drama',
-      'Fantasy',
-      'Game Show',
-      'Historical',
-      'Hospital',
-      'Sci-Fi',
-    ],
+    genre_option: [],
     name_option: [
       { text: 'Name required', value: true },
       { text: 'Name optional', value: false },
@@ -220,6 +206,7 @@ export default {
   created() {
     this.$root.$on('dates', this.getDates);
     this.original = _.cloneDeep(this.s);
+    this.genre_option = this.getGenres();
   },
   mounted() {
     this.getDates();

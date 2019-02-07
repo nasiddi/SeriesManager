@@ -48,6 +48,24 @@ Vue.mixin({
         );
       }
     },
+
+    getGenres() {
+      return [
+        '',
+        'Action',
+        'Animation',
+        'Comedy',
+        'Comics',
+        'Crime',
+        'Documentary',
+        'Drama',
+        'Fantasy',
+        'Game Show',
+        'Historical',
+        'Hospital',
+        'Sci-Fi',
+      ];
+    },
     // Basically, this function returns predictable, "random" colors
     // and for extra fun it does so by finding the smallest hamming distance
     // to any one of Google's Material Design 500 colors
