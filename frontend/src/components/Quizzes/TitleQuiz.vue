@@ -179,10 +179,10 @@ export default {
         current.highlight = 'info';
         this.word = '';
         this.found += 1;
-        this.curPos += 1;
         if (this.found === this.total) {
           this.showAll();
         } else {
+          this.curPos += 1;
           const next = this.episodes[
             this.positions[this.curPos][0]][this.positions[this.curPos][1]];
           next.highlight = 'warning';
