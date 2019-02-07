@@ -229,6 +229,16 @@
                 button-variant="outline-secondary"
                 name="extension"/>
             </b-col>
+            <b-col>
+              <b-form-checkbox-group
+                v-model="selected"
+                :options="getGenres"
+                :style="{width: '100%'}"
+                stacked
+                buttons
+                button-variant="outline-secondary"
+                name="genres"/>
+            </b-col>
           </b-row>
           <b-row class="mt-3">
             <b-col>
@@ -344,7 +354,7 @@ export default {
         sortable: true,
       },
       {
-        key: 'fremiere',
+        key: 'premiere',
         sortable: true,
       },
       {
@@ -487,13 +497,15 @@ export default {
       if (!('total' in this.json)) { return; }
       let series = [];
       this.shows = [];
+      series = series.concat(this.filterGroup(this.getGenres(), 'genre1', this.json.shows));
+      series = series.concat(this.filterGroup(this.getGenres(), 'genre2', this.json.shows));
       if (this.additive) {
-        series = this.filterGroup(_.keys(this.json.total.status), 'status', this.json.shows);
+        series = series.concat(this.filterGroup(_.keys(this.json.total.status), 'status', series));
         series = series.concat(this.filterGroup(_.keys(this.json.total.ratio), 'ratio', this.json.shows));
         series = series.concat(this.filterGroup(_.values(this.json.extensions), 'extension', this.json.shows));
         series = series.concat(this.filterGroup(_.keys(this.json.total.quality), 'quality', this.json.shows));
       } else {
-        series = this.filterGroup(_.keys(this.json.total.status), 'status', this.json.shows);
+        series = this.filterGroup(_.keys(this.json.total.status), 'status', series);
         series = this.filterGroup(_.keys(this.json.total.ratio), 'ratio', series);
         series = this.filterGroup(_.values(this.json.extensions), 'extension', series);
         series = this.filterGroup(_.keys(this.json.total.quality), 'quality', series);
