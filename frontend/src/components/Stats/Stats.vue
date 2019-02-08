@@ -612,6 +612,8 @@ export default {
         series = this.filterGroup(_.keys(this.json.total.quality), 'quality', series);
         series = this.filterGenre(series);
       }
+      // eslint-disable-next-line no-console
+      console.log(series);
       series = [...new Set(series.map(s => s.series_name))];
       const temp = [];
       this.json.shows.forEach((s) => {
