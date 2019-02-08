@@ -109,7 +109,7 @@
           <b-col class="text-center">
             <h4 class="mt-3">Status</h4>
             <pie-chart
-              :chart-data="getPieData(totalStatus)"
+              :chart-data="getPieData(totalPies('status'))"
               :options="chartOptions"
               :style="{display: 'inline-block'}"
               :width="230"
@@ -120,7 +120,7 @@
             class="text-center">
             <h4 class="mt-3">Quality</h4>
             <pie-chart
-              :chart-data="getPieData(json.total.quality)"
+              :chart-data="getPieData(totalPies('quality'))"
               :options="chartOptions"
               :style="{display: 'inline-block'}"
               :width="230"
@@ -139,7 +139,7 @@
             <h4
               class="mt-3">Extentions</h4>
             <pie-chart
-              :chart-data="getPieData(json.total.extension)"
+              :chart-data="getPieData(totalPies('extension'))"
               :options="chartOptions"
               :style="{display: 'inline-block'}"
               :width="230"
@@ -151,7 +151,7 @@
           >
             <h4 class="mt-3">Aspect Ratio</h4>
             <pie-chart
-              :chart-data="getPieData(json.total.ratio)"
+              :chart-data="getPieData(totalPies('ratio'))"
               :options="chartOptions"
               :style="{display: 'inline-block'}"
               :width="230"
@@ -405,7 +405,7 @@ export default {
       return table;
     },
     totalHours() {
-      return Math.round(_.sumBy(this.shows, 'hours') * 100) / 100;
+      return Math.round(_.sumBy(this.shows, 'duration') * 100) / 100;
     },
     totalEpisodes() {
       return _.sumBy(this.shows, 'episodes');
@@ -419,12 +419,12 @@ export default {
     totalGB() {
       return Math.round(_.sumBy(this.shows, 'size') * 100) / 100;
     },
-    totalStatus() {
-      const status = {};
+    totalPies(key) {
+      const obj = {};
       this.shows.forEach((s) => {
-        _.mergeWith(status, s.status, _.add);
+        _.mergeWith(obj, s[key], _.add);
       });
-      return status;
+      return obj;
     },
   },
   watch: {
