@@ -269,38 +269,44 @@
           </b-row>
           <hr>
           <b-row>
-            <b-col
-              sm
-              class="px-2">
-              <b-input
-                v-model="premiereStart"
-                :formatter="dateFormat"
-                class="mt-3"
-                lazy-formatter
-                placeholder="Premiere Start"/>
-            </b-col>
-            <b-col
-              sm
-              class="px-2">
-              <b-form-input
-                v-model="premiereEnd"
-                :formatter="dateFormat"
-                type="text"
-                class="mt-3"
-                lazy-formatter
-                placeholder="Premiere End"/>
+            <b-col>
+              <b-row class="text-center mt-2">
+                <span class="mt-2"><strong>Premiere</strong></span><br>
+                <span>days</span>
+              </b-row>
+              <b-row>
+                <b-col>
+                  <b-input
+                    v-model="premiereStart"
+                    :formatter="dateFormat"
+                    class="mt-3"
+                    lazy-formatter
+                    placeholder="Premiere Start"/>
+                </b-col>
+                <b-col>
+                  <b-form-input
+                    v-model="premiereEnd"
+                    :formatter="dateFormat"
+                    type="text"
+                    class="mt-3"
+                    lazy-formatter
+                    placeholder="Premiere End"/>
+                </b-col>
+              </b-row>
             </b-col>
           </b-row>
           <hr>
-          <b-row class="mt-3">
-            <b-col sm="10">
+          <b-row>
+            <b-col
+              sm="10"
+              class="mt-3">
               <b-form-select
                 v-model="sorter"
                 :options="sortOptions"
                 :style="{width: '100%'}"
                 selected="Series"/>
             </b-col>
-            <b-col>
+            <b-col class="mt-3">
               <b-button
                 :variant="'primary'"
                 :style="{width: '100%'}"
@@ -458,6 +464,30 @@ export default {
       },
       deep: true,
     },
+    premiereStart: {
+      handler() {
+        this.applyFilterAndSorter();
+      },
+      deep: true,
+    },
+    premiereEnd: {
+      handler() {
+        this.applyFilterAndSorter();
+      },
+      deep: true,
+    },
+    finalStart: {
+      handler() {
+        this.applyFilterAndSorter();
+      },
+      deep: true,
+    },
+    finalEnd: {
+      handler() {
+        this.applyFilterAndSorter();
+      },
+      deep: true,
+    },
     sorter: {
       handler() {
         this.applyFilterAndSorter();
@@ -510,8 +540,6 @@ export default {
   },
   methods: {
     dateFormat(value) {
-      // eslint-disable-next-line no-console
-      console.log(typeof value);
       if (value.length === 4) {
         const year = parseInt(value, 10);
         // eslint-disable-next-line no-restricted-globals
@@ -605,6 +633,7 @@ export default {
         series = series.concat(this.filterGroup(_.keys(this.json.total.quality), 'quality', this.json.shows));
         series = series.concat(this.filterGenre(this.json.shows));
         series = series.concat(this.filterDates(this.json.shows, 'premiere'));
+        series = series.concat(this.filterDates(this.json.shows, 'final'));
       } else {
         series = this.filterGroup(_.keys(this.json.total.status), 'status', this.json.shows);
         series = this.filterGroup(_.keys(this.json.total.ratio), 'ratio', series);
@@ -612,10 +641,9 @@ export default {
         series = this.filterGroup(_.keys(this.json.total.quality), 'quality', series);
         series = this.filterGenre(series);
         series = this.filterDates(series, 'premiere');
+        series = this.filterDates(series, 'final');
       }
       series = [...new Set(series.map(s => s.series_name))];
-      // eslint-disable-next-line no-console
-      console.log(series);
       const temp = [];
       this.json.shows.forEach((s) => {
         if (series.includes(s.series_name)) {
@@ -643,12 +671,8 @@ export default {
         end = (this.finalEnd) ? new Date(this.finalEnd) : new Date().toISOString().slice(0, 10);
       }
       const shows = [];
-      // eslint-disable-next-line no-console
-      console.log(`${start} ${end}`);
       series.forEach((s) => {
         const date = new Date(s[key]);
-        // eslint-disable-next-line no-console
-        console.log(`${date} ${end}`);
         if (start.getTime() <= date.getTime() && date.getTime() <= end.getTime()) {
           shows.push(s);
         }
