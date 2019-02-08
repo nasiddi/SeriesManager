@@ -493,7 +493,8 @@ export default {
           } else {
             keysToKeep.push(k);
           }
-          this.$snotify.info(keysToKeep, { timeout: 0 });
+          // eslint-disable-next-line no-console
+          console.log(keysToKeep);
           obj = _.pick(obj, keysToKeep);
           obj.other = other;
         });
