@@ -646,7 +646,7 @@ export default {
 
       series.forEach((s) => {
         const date = new Date(s[key]);
-        if (start < date && date > end) {
+        if (start.getTime() <= date.getTime() && date.getTime() <= end.getTime()) {
           // eslint-disable-next-line no-console
           console.log(s.series_name);
           shows.push(s);
