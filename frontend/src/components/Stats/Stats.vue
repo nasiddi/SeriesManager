@@ -19,7 +19,8 @@
           </b-col>
           <b-col class="text-center mt-2">
             <span class="mt-2"><strong>{{
-            (totalEpisodes > 0) ? totalHours / totalEpisodes * 60 : 0 }}</strong></span><br>
+              (totalEpisodes > 0) ? Math.round(
+            totalHours / totalEpisodes * 60 * 100) / 100 : 0 }}</strong></span><br>
             <span>minutes per Episode</span>
           </b-col>
         </b-row>
@@ -30,7 +31,8 @@
           </b-col>
           <b-col>
             <b-col class="text-center mb-2">
-              <span class="mt-2"><strong>{{ json.total.avg_duration_show }}</strong></span><br>
+              <span class="mt-2"><strong>{{ (totalShows > 0) ? Math.round(
+              totalHours / totalShows * 100) / 100 : 0 }}</strong></span><br>
               <span>hours per Show</span>
             </b-col>
           </b-col>
@@ -38,24 +40,26 @@
         <hr>
         <b-row class="mt-3">
           <b-col class="text-center mt-2">
-            <span class="mt-2"><strong>{{ json.total.shows }}</strong></span><br>
+            <span class="mt-2"><strong>{{ totalShows }}</strong></span><br>
             <span>Shows</span>
           </b-col>
           <b-col>
             <b-col class="text-center mt-2">
-              <span class="mt-2"><strong>{{ json.total.avg_sea_show }}</strong></span><br>
+              <span class="mt-2"><strong>{{ (totalShows > 0) ? Math.round(
+              totalSeasons/ totalShows * 100) / 100 : 0 }}</strong></span><br>
               <span>Seasons per Show</span>
             </b-col>
           </b-col>
         </b-row>
         <b-row class="mt-2">
           <b-col class="text-center">
-            <span class="mt-2"><strong>{{ json.total.seas }}</strong></span><br>
+            <span class="mt-2"><strong>{{ totalSeasons }}</strong></span><br>
             <span>Seasons</span>
           </b-col>
           <b-col>
             <b-col class="text-center">
-              <span class="mt-2"><strong>{{ json.total.avg_ep_sea }}</strong></span><br>
+              <span class="mt-2"><strong>{{ (totalSeasons > 0) ? Math.round(
+              totalEpisodes / totalSeasons * 100) / 100 : 0 }}</strong></span><br>
               <span>Episodes per Season</span>
             </b-col>
           </b-col>
@@ -67,7 +71,8 @@
           </b-col>
           <b-col>
             <b-col class="text-center mb-2">
-              <span class="mt-2"><strong>{{ json.total.avg_ep_show }}</strong></span><br>
+              <span class="mt-2"><strong>{{ (totalShows > 0) ? Math.round(
+              totalEpisodes / totalShows * 100) / 100 : 0 }}</strong></span><br>
               <span>Episodes per Show</span>
             </b-col>
           </b-col>
@@ -75,22 +80,25 @@
         <hr>
         <b-row class="mt-3">
           <b-col class="text-center mt-2">
-            <span class="mt-2"><strong>{{ json.total.tb }}</strong></span><br>
+            <span class="mt-2"><strong>{{ Math.round(
+            totalGB / 1024 * 100) / 100 }}</strong></span><br>
             <span>TB</span>
           </b-col>
           <b-col class="text-center mt-2">
-            <span class="mt-2"><strong>{{ json.total.avg_mb_ep }}</strong></span><br>
+            <span class="mt-2"><strong>{{ (totalEpisodes > 0) ? Math.round(
+              totalGB * 1024 / totalEpisodes * 100) / 100 : 0 }}</strong></span><br>
             <span>MB per Episode</span>
           </b-col>
         </b-row>
         <b-row class="mt-2">
           <b-col class="text-center">
-            <span class="mt-2"><strong>{{ json.total.gb }}</strong></span><br>
+            <span class="mt-2"><strong>{{ totalGB }}</strong></span><br>
             <span>GB</span>
           </b-col>
           <b-col>
             <b-col class="text-center">
-              <span class="mt-2"><strong>{{ json.total.avg_gb_show }}</strong></span><br>
+              <span class="mt-2"><strong>{{ (totalShows > 0) ? Math.round(
+              totalGB / totalShows * 100) / 100 : 0 }}</strong></span><br>
               <span>GB per Show</span>
             </b-col>
           </b-col>
@@ -397,14 +405,19 @@ export default {
       return table;
     },
     totalHours() {
-      let hours = 0;
-      this.shows.forEach((s) => {
-        hours += s.duration;
-      });
-      return Math.round(hours * 100) / 100;
+      return Math.round(_.sumBy(this.shows, 'episodes') * 100) / 100;
     },
     totalEpisodes() {
       return _.sumBy(this.shows, 'episodes');
+    },
+    totalSeasons() {
+      return _.sumBy(this.shows, 'seasons');
+    },
+    totalShows() {
+      return this.shows.length;
+    },
+    totalGB() {
+      return _.sumBy(this.shows, 'size');
     },
   },
   watch: {
@@ -516,13 +529,13 @@ export default {
 
 
       if (this.additive) {
-        series = series.concat(this.filterGroup(_.keys(this.json.total.status), 'status', series));
+        series = series.concat(this.filterGroup(_.keys(this.json.total.status), 'status', this.json.shows));
         series = series.concat(this.filterGroup(_.keys(this.json.total.ratio), 'ratio', this.json.shows));
         series = series.concat(this.filterGroup(_.values(this.json.extensions), 'extension', this.json.shows));
         series = series.concat(this.filterGroup(_.keys(this.json.total.quality), 'quality', this.json.shows));
         series = series.concat(this.filterGenre(this.json.shows));
       } else {
-        series = this.filterGroup(_.keys(this.json.total.status), 'status', series);
+        series = this.filterGroup(_.keys(this.json.total.status), 'status', this.json.shows);
         series = this.filterGroup(_.keys(this.json.total.ratio), 'ratio', series);
         series = this.filterGroup(_.values(this.json.extensions), 'extension', series);
         series = this.filterGroup(_.keys(this.json.total.quality), 'quality', series);
