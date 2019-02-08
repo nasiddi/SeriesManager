@@ -268,15 +268,15 @@
             </b-col>
           </b-row>
           <hr>
-          <b-row md>
+          <b-row sm>
             <b-col>
               <b-row>
                 <b-col class="text-center">
                   <span><strong>Premiere</strong></span>
                 </b-col>
               </b-row>
-              <b-row md>
-                <b-col md>
+              <b-row sm>
+                <b-col sm>
                   <b-input
                     v-model="premiereStart"
                     :formatter="dateFormat"
@@ -284,7 +284,7 @@
                     lazy-formatter
                     placeholder="Premiere Start"/>
                 </b-col>
-                <b-col md>
+                <b-col sm>
                   <b-form-input
                     v-model="premiereEnd"
                     :formatter="dateFormat"
@@ -295,14 +295,14 @@
                 </b-col>
               </b-row>
             </b-col>
-            <b-col md>
-              <b-row nd>
+            <b-col sm>
+              <b-row sm>
                 <b-col class="text-center">
                   <span><strong>Final</strong></span>
                 </b-col>
               </b-row>
-              <b-row md>
-                <b-col md>
+              <b-row sm>
+                <b-col sm>
                   <b-input
                     v-model="finalStart"
                     :formatter="dateFormat"
@@ -310,7 +310,7 @@
                     lazy-formatter
                     placeholder="Final Start"/>
                 </b-col>
-                <b-col md>
+                <b-col sm>
                   <b-form-input
                     v-model="finalEnd"
                     :formatter="dateFormat"
