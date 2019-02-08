@@ -538,8 +538,6 @@ export default {
             other += value;
             keysToDelete.push(k);
           }
-          // eslint-disable-next-line no-console
-          console.log(keysToDelete);
           obj = _.omit(obj, keysToDelete);
           obj.other = other;
         });
