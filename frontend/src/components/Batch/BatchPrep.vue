@@ -15,11 +15,13 @@
         >Start</b-button>
       </b-col>
     </b-row>
-    <RegexForm
+    <div
       v-for="r in reg"
-      v-if="r.key < counter"
-      :key="r.key"
-      :regex="r"/>
+      :key="r.key">
+      <RegexForm
+        v-if="r.key < counter"
+        :regex="r"/>
+    </div>
     <b-row class="mb-4">
       <b-col
         sm=""
@@ -227,24 +229,6 @@ export default {
           }
         });
       });
-    },
-    isValidDateWithDash(dateString) {
-      const regEx = /^\d{4}-\d{2}-\d{2}$/;
-      if (!dateString.match(regEx)) return false;
-      const d = new Date(dateString);
-      if (!d.getTime() && d.getTime() !== 0) return false;
-      return d.toISOString().slice(0, 10) === dateString;
-    },
-    isValidDateNoDash(dateString) {
-      const regEx = /^\d{8}$/;
-      if (!dateString.match(regEx)) return '';
-      const val = `${dateString.slice(0, 4)}-${dateString.slice(4, 6)}-${dateString.slice(6, 8)}`;
-      const d = new Date(val);
-      if (!d.getTime() && d.getTime() !== 0) return '';
-      if (d.toISOString().slice(0, 10) === val) {
-        return val;
-      }
-      return '';
     },
     addRegex() {
       if (this.counter <= 10) {

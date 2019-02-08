@@ -182,11 +182,14 @@
         <div>
           <hr>
           <b-row>
-            <b-button
-              :pressed.sync="additive"
-              :variant="'outline-primary'"
-              :style="{width: '100%'}"
-            >{{ (additive) ? 'Additive' : 'Subtractive' }}</b-button>
+            <b-col>
+              <b-button
+                :pressed.sync="additive"
+                :variant="'outline-primary'"
+                :style="{width: '100%'}"
+              >{{ (additive) ? 'Additive' : 'Subtractive' }}
+              </b-button>
+            </b-col>
           </b-row>
           <b-row class="mt-3">
             <b-col class="mx-3">
@@ -262,6 +265,30 @@
                 class="mt-2"
                 @click="selected = []"
               >Select None</b-button>
+            </b-col>
+          </b-row>
+          <hr>
+          <b-row>
+            <b-col
+              sm
+              class="px-2">
+              <b-input
+                v-model="premiereStart"
+                :formatter="dateFormat"
+                class="mt-3"
+                lazy-formatter
+                placeholder="PremiereStart"/>
+            </b-col>
+            <b-col
+              sm
+              class="px-2">
+              <b-form-input
+                v-model="premiereEnd"
+                :formatter="dateFormat"
+                type="text"
+                class="mt-3"
+                lazy-formatter
+                placeholder="Final"/>
             </b-col>
           </b-row>
           <hr>
@@ -384,6 +411,10 @@ export default {
     sencondaryExt: [],
     additive: true,
     genres: [],
+    premiereStart: '1960-01-01',
+    premiereEnd: '',
+    finalStart: '1960-01-01',
+    finalEnd: '',
   }),
   computed: {
     getTable() {
@@ -472,9 +503,24 @@ export default {
         this.genres.push(g);
       }
     });
+    const currentDate = new Date().toISOString().slice(0, 10);
+    this.premiereEnd = currentDate;
+    this.finalEnd = currentDate;
     this.loadData();
   },
   methods: {
+    dateFormat(value) {
+      const year = parseInt(value, 10);
+      // eslint-disable-next-line no-restricted-globals
+      if (!isNaN(year)) {
+        // eslint-disable-next-line no-param-reassign
+        value = `${value}-01-01`;
+      }
+      if (this.isValidDateWithDash(value)) {
+        return value;
+      }
+      return this.isValidDateNoDash(value);
+    },
     totalPies(key) {
       let obj = {};
       this.shows.forEach((s) => {
@@ -550,15 +596,14 @@ export default {
     applyFilterAndSorter() {
       if (!('total' in this.json)) { return; }
       let series = [];
-      this.shows = [];
-
-
       if (this.additive) {
         series = series.concat(this.filterGroup(_.keys(this.json.total.status), 'status', this.json.shows));
         series = series.concat(this.filterGroup(_.keys(this.json.total.ratio), 'ratio', this.json.shows));
         series = series.concat(this.filterGroup(_.values(this.json.extensions), 'extension', this.json.shows));
         series = series.concat(this.filterGroup(_.keys(this.json.total.quality), 'quality', this.json.shows));
         series = series.concat(this.filterGenre(this.json.shows));
+        series = series.concat(this.filterDates(this.json.shows, 'premiere'));
+        series = [...new Set(series.map(s => s.series_name))];
       } else {
         series = this.filterGroup(_.keys(this.json.total.status), 'status', this.json.shows);
         series = this.filterGroup(_.keys(this.json.total.ratio), 'ratio', series);
@@ -566,12 +611,13 @@ export default {
         series = this.filterGroup(_.keys(this.json.total.quality), 'quality', series);
         series = this.filterGenre(series);
       }
-      series = [...new Set(series.map(s => s.series_name))];
+      const temp = [];
       this.json.shows.forEach((s) => {
         if (series.includes(s.series_name)) {
-          this.shows.push(s);
+          temp.push(s);
         }
       });
+      this.shows = temp;
       let dir;
       if (this.direction === 'sort-up') {
         dir = -1;
@@ -579,6 +625,26 @@ export default {
         dir = 1;
       }
       this.shows.sort(this.dynamicSort(this.sorter, dir));
+    },
+    filterDates(series, key) {
+      let start = null;
+      let end = null;
+      if (key === 'premiere') {
+        start = (this.premiereStart) ? new Date(this.premiereStart) : '1960-10-01';
+        end = (this.premiereEnd) ? new Date(this.premiereEnd)
+          : new Date().toISOString().slice(0, 10);
+      } else {
+        start = (this.finalStart) ? new Date(this.finalStart) : '1960-10-01';
+        end = (this.finalEnd) ? new Date(this.finalEnd) : new Date().toISOString().slice(0, 10);
+      }
+      const shows = [];
+
+      series.forEach((s) => {
+        const date = new Date(s[key]);
+        if (start < date && date > end) {
+          shows.push(s);
+        }
+      });
     },
     filterGroup(group, name, series) {
       const filteredGroup = [];
