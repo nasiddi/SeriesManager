@@ -268,14 +268,14 @@
             </b-col>
           </b-row>
           <hr>
-          <b-row sm>
+          <b-row lg>
             <b-col>
               <b-row>
                 <b-col class="text-center">
                   <span><strong>Premiere</strong></span>
                 </b-col>
               </b-row>
-              <b-row sm>
+              <b-row lg>
                 <b-col>
                   <b-input
                     v-model="premiereStart"
@@ -296,7 +296,7 @@
               </b-row>
             </b-col>
             <b-col>
-              <b-row sm>
+              <b-row lg>
                 <b-col class="text-center">
                   <span><strong>Final</strong></span>
                 </b-col>
