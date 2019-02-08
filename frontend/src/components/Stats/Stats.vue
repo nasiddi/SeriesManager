@@ -486,16 +486,15 @@ export default {
           return obj;
         }
         let other = 0;
-        const keysToKeep = [];
+        const keysToDelete = [];
         _.forOwn(obj, (value, k) => {
           if (value / total < 0.05) {
             other += value;
-          } else {
-            keysToKeep.push(k);
+            keysToDelete.push(k);
           }
           // eslint-disable-next-line no-console
-          console.log(keysToKeep);
-          obj = _.pick(obj, keysToKeep);
+          console.log(keysToDelete);
+          obj = _.omit(obj, keysToDelete);
           obj.other = other;
         });
       }
