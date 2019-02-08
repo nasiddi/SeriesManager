@@ -476,10 +476,27 @@ export default {
   },
   methods: {
     totalPies(key) {
-      const obj = {};
+      let obj = {};
       this.shows.forEach((s) => {
         _.mergeWith(obj, s[key], _.add);
       });
+      if (_.size(obj > 4)) {
+        const total = _.sum(_.values(obj));
+        if (total === 0) {
+          return obj;
+        }
+        let other = 0;
+        const keysToKeep = [];
+        _.forOwn(obj, (value, k) => {
+          if (value / total < 0.05) {
+            other += value;
+          } else {
+            keysToKeep.push(k);
+          }
+          obj = _.pick(obj, keysToKeep);
+          obj.other = other;
+        });
+      }
       return obj;
     },
     unlockShows() {
