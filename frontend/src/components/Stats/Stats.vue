@@ -643,12 +643,13 @@ export default {
         end = (this.finalEnd) ? new Date(this.finalEnd) : new Date().toISOString().slice(0, 10);
       }
       const shows = [];
-
+      // eslint-disable-next-line no-console
+      console.log(`${start} ${end}`);
       series.forEach((s) => {
         const date = new Date(s[key]);
+        // eslint-disable-next-line no-console
+        console.log(`${date} ${end}`);
         if (start.getTime() <= date.getTime() && date.getTime() <= end.getTime()) {
-          // eslint-disable-next-line no-console
-          console.log(s.series_name);
           shows.push(s);
         }
       });
