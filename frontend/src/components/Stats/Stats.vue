@@ -13,7 +13,7 @@
         <hr>
         <b-row class="mt-3">
           <b-col class="text-center mt-2">
-            <span class="mt-2"><strong>{{ json.total.days }}</strong></span><br>
+            <span class="mt-2"><strong>{{ totalDays }}</strong></span><br>
             <span>days</span>
           </b-col>
           <b-col class="text-center mt-2">
@@ -23,7 +23,7 @@
         </b-row>
         <b-row class="mt-2">
           <b-col class="text-center mb-2">
-            <span class="mt-2"><strong>{{ json.total.hours }}</strong></span><br>
+            <span class="mt-2"><strong>{{ totalHours }}</strong></span><br>
             <span>hours</span>
           </b-col>
           <b-col>
@@ -393,6 +393,20 @@ export default {
         });
       });
       return table;
+    },
+    totalHours() {
+      let hours = 0;
+      this.shows.forEach((s) => {
+        hours += s.duration;
+      });
+      return hours;
+    },
+    totalDays() {
+      let hours = 0;
+      this.shows.forEach((s) => {
+        hours += s.duration;
+      });
+      return hours / 365;
     },
   },
   watch: {
