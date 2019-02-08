@@ -612,9 +612,9 @@ export default {
         series = this.filterGroup(_.keys(this.json.total.quality), 'quality', series);
         series = this.filterGenre(series);
       }
+      series = [...new Set(series.map(s => s.series_name))];
       // eslint-disable-next-line no-console
       console.log(series);
-      series = [...new Set(series.map(s => s.series_name))];
       const temp = [];
       this.json.shows.forEach((s) => {
         if (series.includes(s.series_name)) {
@@ -642,7 +642,8 @@ export default {
         end = (this.finalEnd) ? new Date(this.finalEnd) : new Date().toISOString().slice(0, 10);
       }
       const shows = [];
-
+      // eslint-disable-next-line no-console
+      console.log(`${start} ${end}`);
       series.forEach((s) => {
         const date = new Date(s[key]);
         if (start < date && date > end) {
