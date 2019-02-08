@@ -86,7 +86,7 @@
           </b-col>
           <b-col class="text-center mt-2">
             <span class="mt-2"><strong>{{ (totalEpisodes > 0) ? Math.round(
-              totalGB * 1024 / totalEpisodes * 100) / 100 : 0 }}</strong></span><br>
+            totalGB * 1024 / totalEpisodes * 100) / 100 : 0 }}</strong></span><br>
             <span>MB per Episode</span>
           </b-col>
         </b-row>
