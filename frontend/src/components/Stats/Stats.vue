@@ -13,18 +13,18 @@
         <hr>
         <b-row class="mt-3">
           <b-col class="text-center mt-2">
-            <span class="mt-2"><strong>{{ json.total.days }}</strong></span>
-            <span class="mt-2"><strong>{{ totalDays }}</strong></span><br>
+            <span class="mt-2"><strong>{{
+            Math.round(totalHours / 24 * 100) / 100 }}</strong></span><br>
             <span>days</span>
           </b-col>
           <b-col class="text-center mt-2">
-            <span class="mt-2"><strong>{{ json.total.avg_duration_ep }}</strong></span><br>
+            <span class="mt-2"><strong>{{
+            (totalEpisodes > 0) ? totalHours / totalEpisodes * 60 : 0 }}</strong></span><br>
             <span>minutes per Episode</span>
           </b-col>
         </b-row>
         <b-row class="mt-2">
           <b-col class="text-center mb-2">
-            <span class="mt-2"><strong>{{ json.total.hours }}</strong></span>
             <span class="mt-2"><strong>{{ totalHours }}</strong></span><br>
             <span>hours</span>
           </b-col>
@@ -62,7 +62,7 @@
         </b-row>
         <b-row class="mt-2">
           <b-col class="text-center mb-2">
-            <span class="mt-2"><strong>{{ json.total.eps }}</strong></span><br>
+            <span class="mt-2"><strong>{{ totalEpisodes }}</strong></span><br>
             <span>Episodes</span>
           </b-col>
           <b-col>
@@ -403,12 +403,8 @@ export default {
       });
       return Math.round(hours * 100) / 100;
     },
-    totalDays() {
-      let hours = 0;
-      this.shows.forEach((s) => {
-        hours += s.duration;
-      });
-      return Math.round(hours / 24 * 100) / 100;
+    totalEpisodes() {
+      return _.sumBy(this.shows, 'episodes');
     },
   },
   watch: {
