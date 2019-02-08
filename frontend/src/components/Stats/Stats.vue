@@ -480,7 +480,7 @@ export default {
       this.shows.forEach((s) => {
         _.mergeWith(obj, s[key], _.add);
       });
-      if (_.size(obj > 4)) {
+      if (_.size(obj) > 4) {
         const total = _.sum(_.values(obj));
         if (total === 0) {
           return obj;
