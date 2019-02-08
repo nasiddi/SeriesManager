@@ -649,6 +649,7 @@ export default {
           shows.push(s);
         }
       });
+      return shows;
     },
     filterGroup(group, name, series) {
       const filteredGroup = [];
