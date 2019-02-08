@@ -271,8 +271,7 @@
           <b-row>
             <b-col>
               <b-row class="text-center mt-2">
-                <span class="mt-2"><strong>Premiere</strong></span><br>
-                <span>days</span>
+                <span class="mt-2"><strong>Premiere</strong></span>
               </b-row>
               <b-row>
                 <b-col>
@@ -291,6 +290,30 @@
                     class="mt-3"
                     lazy-formatter
                     placeholder="Premiere End"/>
+                </b-col>
+              </b-row>
+            </b-col>
+            <b-col>
+              <b-row class="text-center mt-2">
+                <span class="mt-2"><strong>Final</strong></span>
+              </b-row>
+              <b-row>
+                <b-col>
+                  <b-input
+                    v-model="finalStart"
+                    :formatter="dateFormat"
+                    class="mt-3"
+                    lazy-formatter
+                    placeholder="Final Start"/>
+                </b-col>
+                <b-col>
+                  <b-form-input
+                    v-model="finalEnd"
+                    :formatter="dateFormat"
+                    type="text"
+                    class="mt-3"
+                    lazy-formatter
+                    placeholder="Final End"/>
                 </b-col>
               </b-row>
             </b-col>
