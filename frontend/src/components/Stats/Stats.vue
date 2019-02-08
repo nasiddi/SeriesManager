@@ -510,12 +510,6 @@ export default {
   },
   methods: {
     dateFormat(value) {
-      const year = parseInt(value, 10);
-      // eslint-disable-next-line no-restricted-globals
-      if (!isNaN(year)) {
-        // eslint-disable-next-line no-param-reassign
-        value = `${value}-01-01`;
-      }
       if (this.isValidDateWithDash(value)) {
         return value;
       }
@@ -592,7 +586,7 @@ export default {
       }
     },
     applyFilterAndSorter() {
-      if (!('total' in this.json)) { return; }
+      if (!('total' in this.json || 'shows' in this.json)) { return; }
       let series = [];
       if (this.additive) {
         series = series.concat(this.filterGroup(_.keys(this.json.total.status), 'status', this.json.shows));
