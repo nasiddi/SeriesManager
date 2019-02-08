@@ -419,13 +419,6 @@ export default {
     totalGB() {
       return Math.round(_.sumBy(this.shows, 'size') * 100) / 100;
     },
-    totalPies(key) {
-      const obj = {};
-      this.shows.forEach((s) => {
-        _.mergeWith(obj, s[key], _.add);
-      });
-      return obj;
-    },
   },
   watch: {
     selected: {
@@ -482,6 +475,13 @@ export default {
     this.loadData();
   },
   methods: {
+    totalPies(key) {
+      const obj = {};
+      this.shows.forEach((s) => {
+        _.mergeWith(obj, s[key], _.add);
+      });
+      return obj;
+    },
     unlockShows() {
       this.$snotify.remove(this.notifLock.id);
       this.$http.post('python/unlock')
