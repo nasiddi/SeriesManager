@@ -510,6 +510,16 @@ export default {
   },
   methods: {
     dateFormat(value) {
+      // eslint-disable-next-line no-console
+      console.log(typeof value);
+      if (value.length === 4) {
+        const year = parseInt(value, 10);
+        // eslint-disable-next-line no-restricted-globals
+        if (!isNaN(year)) {
+          // eslint-disable-next-line no-param-reassign
+          value = `${value}-01-01`;
+        }
+      }
       if (this.isValidDateWithDash(value)) {
         return value;
       }
