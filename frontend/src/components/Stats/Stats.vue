@@ -399,14 +399,14 @@ export default {
       this.shows.forEach((s) => {
         hours += s.duration;
       });
-      return hours;
+      return Math.round(hours * 100) / 100;
     },
     totalDays() {
       let hours = 0;
       this.shows.forEach((s) => {
         hours += s.duration;
       });
-      return hours / 365;
+      return Math.round(hours / 365 * 100) / 100;
     },
   },
   watch: {
