@@ -493,6 +493,7 @@ export default {
           } else {
             keysToKeep.push(k);
           }
+          this.$snotify.info(keysToKeep, { timeout: 0 });
           obj = _.pick(obj, keysToKeep);
           obj.other = other;
         });
