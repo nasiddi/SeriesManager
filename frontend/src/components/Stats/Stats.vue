@@ -611,6 +611,7 @@ export default {
         series = this.filterGroup(_.values(this.json.extensions), 'extension', series);
         series = this.filterGroup(_.keys(this.json.total.quality), 'quality', series);
         series = this.filterGenre(series);
+        series = this.filterDates(series, 'premiere');
       }
       series = [...new Set(series.map(s => s.series_name))];
       // eslint-disable-next-line no-console
@@ -642,11 +643,12 @@ export default {
         end = (this.finalEnd) ? new Date(this.finalEnd) : new Date().toISOString().slice(0, 10);
       }
       const shows = [];
-      // eslint-disable-next-line no-console
-      console.log(`${start} ${end}`);
+
       series.forEach((s) => {
         const date = new Date(s[key]);
         if (start < date && date > end) {
+          // eslint-disable-next-line no-console
+          console.log(s.series_name);
           shows.push(s);
         }
       });
