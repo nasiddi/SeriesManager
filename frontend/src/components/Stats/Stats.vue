@@ -277,7 +277,7 @@
                 :formatter="dateFormat"
                 class="mt-3"
                 lazy-formatter
-                placeholder="PremiereStart"/>
+                placeholder="Premiere Start"/>
             </b-col>
             <b-col
               sm
@@ -288,7 +288,7 @@
                 type="text"
                 class="mt-3"
                 lazy-formatter
-                placeholder="Final"/>
+                placeholder="Premiere End"/>
             </b-col>
           </b-row>
           <hr>
@@ -605,7 +605,6 @@ export default {
         series = series.concat(this.filterGroup(_.keys(this.json.total.quality), 'quality', this.json.shows));
         series = series.concat(this.filterGenre(this.json.shows));
         series = series.concat(this.filterDates(this.json.shows, 'premiere'));
-        series = [...new Set(series.map(s => s.series_name))];
       } else {
         series = this.filterGroup(_.keys(this.json.total.status), 'status', this.json.shows);
         series = this.filterGroup(_.keys(this.json.total.ratio), 'ratio', series);
@@ -613,6 +612,7 @@ export default {
         series = this.filterGroup(_.keys(this.json.total.quality), 'quality', series);
         series = this.filterGenre(series);
       }
+      series = [...new Set(series.map(s => s.series_name))];
       const temp = [];
       this.json.shows.forEach((s) => {
         if (series.includes(s.series_name)) {
