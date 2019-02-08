@@ -13,6 +13,7 @@
         <hr>
         <b-row class="mt-3">
           <b-col class="text-center mt-2">
+            <span class="mt-2"><strong>{{ json.total.days }}</strong></span>
             <span class="mt-2"><strong>{{ totalDays }}</strong></span><br>
             <span>days</span>
           </b-col>
@@ -23,6 +24,7 @@
         </b-row>
         <b-row class="mt-2">
           <b-col class="text-center mb-2">
+            <span class="mt-2"><strong>{{ json.total.hours }}</strong></span>
             <span class="mt-2"><strong>{{ totalHours }}</strong></span><br>
             <span>hours</span>
           </b-col>
@@ -406,7 +408,7 @@ export default {
       this.shows.forEach((s) => {
         hours += s.duration;
       });
-      return Math.round(hours / 365 * 100) / 100;
+      return hours / 365;
     },
   },
   watch: {
