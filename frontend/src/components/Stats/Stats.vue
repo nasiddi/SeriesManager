@@ -408,7 +408,7 @@ export default {
       this.shows.forEach((s) => {
         hours += s.duration;
       });
-      return hours / 365;
+      return Math.round(hours / 24 * 100) / 100;
     },
   },
   watch: {
