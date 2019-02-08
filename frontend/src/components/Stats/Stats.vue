@@ -109,7 +109,7 @@
           <b-col class="text-center">
             <h4 class="mt-3">Status</h4>
             <pie-chart
-              :chart-data="getPieData(json.total.status)"
+              :chart-data="getPieData(totalStatus)"
               :options="chartOptions"
               :style="{display: 'inline-block'}"
               :width="230"
@@ -405,7 +405,7 @@ export default {
       return table;
     },
     totalHours() {
-      return Math.round(_.sumBy(this.shows, 'episodes') * 100) / 100;
+      return Math.round(_.sumBy(this.shows, 'hours') * 100) / 100;
     },
     totalEpisodes() {
       return _.sumBy(this.shows, 'episodes');
@@ -417,7 +417,14 @@ export default {
       return this.shows.length;
     },
     totalGB() {
-      return _.sumBy(this.shows, 'size');
+      return Math.round(_.sumBy(this.shows, 'size') * 100) / 100;
+    },
+    totalStatus() {
+      const status = {};
+      this.shows.forEach((s) => {
+        _.mergeWith(status, s.status, _.add);
+      });
+      return status;
     },
   },
   watch: {
