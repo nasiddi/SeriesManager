@@ -268,8 +268,8 @@
             </b-col>
           </b-row>
           <hr>
-          <b-row sm>
-            <b-col>
+          <b-row md>
+            <b-col md>
               <b-row>
                 <b-col class="text-center">
                   <span><strong>Premiere</strong></span>
@@ -295,8 +295,8 @@
                 </b-col>
               </b-row>
             </b-col>
-            <b-col sm>
-              <b-row sm>
+            <b-col md>
+              <b-row>
                 <b-col class="text-center">
                   <span><strong>Final</strong></span>
                 </b-col>
