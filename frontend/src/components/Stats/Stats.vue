@@ -505,7 +505,8 @@ export default {
       return durations;
     },
     genreSum() {
-      const genres = _.zipObject(this.genres, [0] * this.genres.length);
+      const genres = _.zipObject(_.keys(this.genres), [0] * this.genres.length);
+      genres[''] = 0;
       this.shows.forEach((s) => {
         genres[s.genre1] += 1;
         genres[s.genre2] += 1;
