@@ -670,6 +670,8 @@ export default {
         series = this.filterDates(series, 'premiere');
         series = this.filterDates(series, 'final');
       }
+      // eslint-disable-next-line no-console
+      console.log(series.length);
       series = [...new Set(series.map(s => s.series_name))];
       const temp = [];
       // eslint-disable-next-line no-console
