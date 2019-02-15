@@ -651,7 +651,7 @@ export default {
       }
     },
     applyFilterAndSorter() {
-      if (!('status' in this.json || 'shows' in this.json)) { return; }
+      if (!('shows' in this.json)) { return; }
       let series = [];
       if (this.additive) {
         series = series.concat(this.filterGroup(this.json.status, 'status', this.json.shows));
@@ -714,6 +714,7 @@ export default {
           filteredGroup.push(g);
         }
       });
+      console.log(filteredGroup);
       series.forEach((s) => {
         if (_.keys(s[name]).some(n => filteredGroup.indexOf(n) >= 0)) {
           shows.push(s);
