@@ -763,6 +763,10 @@ export default {
         this.direction = 'sort-down';
       }
     },
+    averageDuration() {
+      // eslint-disable-next-line no-console
+      this.series.forEach(s => console.log(s.avg_duration));
+    },
     selectAllFilters() {
       this.selected = [];
       this.selected = this.json.extension;
