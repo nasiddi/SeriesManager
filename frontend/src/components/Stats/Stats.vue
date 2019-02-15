@@ -196,7 +196,7 @@
               <b-row>
                 <b-form-checkbox-group
                   v-model="selected"
-                  :options="_.keys(json.total.status)"
+                  :options="_.keys(json.status)"
                   :style="{width: '100%'}"
                   stacked
                   buttons
@@ -206,7 +206,7 @@
               <b-row class="mt-4">
                 <b-form-checkbox-group
                   v-model="selected"
-                  :options="_.keys(json.total.quality)"
+                  :options="_.keys(json.quality)"
                   :style="{width: '100%'}"
                   stacked
                   buttons
@@ -216,7 +216,7 @@
               <b-row class="my-4">
                 <b-form-checkbox-group
                   v-model="selected"
-                  :options="_.keys(json.total.ratio)"
+                  :options="_.keys(json.ratio)"
                   :style="{width: '100%'}"
                   stacked
                   buttons
@@ -228,7 +228,7 @@
               <b-row>
                 <b-form-checkbox-group
                   v-model="selected"
-                  :options="json.extensions"
+                  :options="json.extension"
                   :style="{width: '100%'}"
                   stacked
                   buttons
@@ -654,18 +654,18 @@ export default {
       if (!('total' in this.json || 'shows' in this.json)) { return; }
       let series = [];
       if (this.additive) {
-        series = series.concat(this.filterGroup(_.keys(this.json.total.status), 'status', this.json.shows));
-        series = series.concat(this.filterGroup(_.keys(this.json.total.ratio), 'ratio', this.json.shows));
-        series = series.concat(this.filterGroup(_.values(this.json.extensions), 'extension', this.json.shows));
-        series = series.concat(this.filterGroup(_.keys(this.json.total.quality), 'quality', this.json.shows));
+        series = series.concat(this.filterGroup(_.keys(this.json.status), 'status', this.json.shows));
+        series = series.concat(this.filterGroup(_.keys(this.json.ratio), 'ratio', this.json.shows));
+        series = series.concat(this.filterGroup(_.values(this.json.extension), 'extension', this.json.shows));
+        series = series.concat(this.filterGroup(_.keys(this.json.quality), 'quality', this.json.shows));
         series = series.concat(this.filterGenre(this.json.shows));
         series = series.concat(this.filterDates(this.json.shows, 'premiere'));
         series = series.concat(this.filterDates(this.json.shows, 'final'));
       } else {
-        series = this.filterGroup(_.keys(this.json.total.status), 'status', this.json.shows);
-        series = this.filterGroup(_.keys(this.json.total.ratio), 'ratio', series);
-        series = this.filterGroup(_.values(this.json.extensions), 'extension', series);
-        series = this.filterGroup(_.keys(this.json.total.quality), 'quality', series);
+        series = this.filterGroup(_.keys(this.json.status), 'status', this.json.shows);
+        series = this.filterGroup(_.keys(this.json.ratio), 'ratio', series);
+        series = this.filterGroup(_.values(this.json.extension), 'extension', series);
+        series = this.filterGroup(_.keys(this.json.quality), 'quality', series);
         series = this.filterGenre(series);
         series = this.filterDates(series, 'premiere');
         series = this.filterDates(series, 'final');
@@ -745,10 +745,10 @@ export default {
     },
     selectAllFilters() {
       this.selected = [];
-      this.selected = this.json.extensions;
-      this.selected = this.selected.concat(_.keys(this.json.total.status));
-      this.selected = this.selected.concat(_.keys(this.json.total.ratio));
-      this.selected = this.selected.concat(_.keys(this.json.total.quality));
+      this.selected = this.json.extension;
+      this.selected = this.selected.concat(_.keys(this.json.status));
+      this.selected = this.selected.concat(_.keys(this.json.ratio));
+      this.selected = this.selected.concat(_.keys(this.json.quality));
       this.selected = this.selected.concat(this.getGenres());
     },
     getPieData(pie) {
