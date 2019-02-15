@@ -225,7 +225,7 @@
               </b-row>
             </b-col>
             <b-col class="mx-3">
-              <b-row class="my-4">
+              <b-row>
                 <b-form-checkbox-group
                   v-model="selected"
                   :options="json.extension"
