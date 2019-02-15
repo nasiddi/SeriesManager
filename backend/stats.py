@@ -13,14 +13,14 @@ def main(args):
     SHOWS = load_shows(read_only=True)
     parse_args(args)
     print(environ[OUT_FILE])
-    stats = {'shows': [], 'status': {}, 'extension': {}, 'ratio': {}, 'quality': {}}
+    stats = {'shows': [], 'status': [], 'extension': [], 'ratio': [], 'quality': []}
     for show in SHOWS.values():
         show_stats = {SERIES_NAME: show.series_name, 'status': {show.status: 1}, 'premiere': show.premiere, 'avg_e_per_s': 0,
                       'final': show.final, 'ratio': {}, 'extension': {}, 'duration': 0, 'episodes': 0, 'genre1': show.genre1, 'genre2': show.genre2,
                       'seasons': 0, 'size': 0, 'quality': {}, 'selected': '', 'color': '', 'result': False}
 
         if show.status not in stats['status']:
-            stats['status'][show.status] = 1
+            stats['status'].append(show.status)
 
         for season in show.seasons.values():
             show_stats['seasons'] += 1
@@ -38,21 +38,21 @@ def main(args):
                 show_stats['size'] += episode.size
 
                 if episode.extension not in stats['extension']:
-                    stats['extension'][episode.extension] = episode_option
+                    stats['extension'].append(episode.extension)
                 if episode.extension in show_stats['extension']:
                     show_stats['extension'][episode.extension] += episode_option
                 else:
                     show_stats['extension'][episode.extension] = episode_option
 
                 if episode.quality not in stats['quality']:
-                    stats['quality'][episode.quality] = episode_option
+                    stats['quality'].append(episode.quality)
                 if episode.quality in show_stats['quality']:
                     show_stats['quality'][episode.quality] += episode_option
                 else:
                     show_stats['quality'][episode.quality] = episode_option
 
                 if episode.ratio not in stats['ratio']:
-                    stats['ratio'][episode.ratio] = episode_option
+                    stats['ratio'].append(episode.ratio)
                 if episode.ratio in show_stats['ratio']:
                     show_stats['ratio'][episode.ratio] += episode_option
                 else:
@@ -81,13 +81,13 @@ def main(args):
             pass
         stats['shows'].append(show_stats)
 
-    keys = list(stats['ratio'].keys())
-    for key in keys:
+    temp = []
+    for key in stats['ratio']:
         try:
-            stats['ratio'][ASPECT_RATIOS[key]] = stats['ratio'][key]
-            stats['ratio'].pop(key, None)
-        except KeyError:
+            temp.append(ASPECT_RATIOS[key])
+        except:
             pass
+    stats['ratio'] = temp
 
     save_json(stats, environ[OUT_FILE])
     return stats
