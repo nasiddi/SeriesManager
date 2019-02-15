@@ -651,7 +651,7 @@ export default {
       }
     },
     applyFilterAndSorter() {
-      if (!('total' in this.json || 'shows' in this.json)) { return; }
+      if (!('status' in this.json || 'shows' in this.json)) { return; }
       let series = [];
       if (this.additive) {
         series = series.concat(this.filterGroup(_.keys(this.json.status), 'status', this.json.shows));
