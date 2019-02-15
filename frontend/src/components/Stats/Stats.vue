@@ -504,6 +504,14 @@ export default {
       });
       return durations;
     },
+    genrePie() {
+      const genres = _.zipOnject(this.genres, [0] * this.genres.length);
+      this.shows.forEach((s) => {
+        genres[s.genre1] += 1;
+        genres[s.genre2] += 1;
+      });
+      return genres;
+    },
   },
   watch: {
     selected: {
@@ -663,7 +671,6 @@ export default {
               this.json = body;
               this.shows = body.shows;
               this.selectAllFilters();
-              this.averageDuration();
             }
             this.$snotify.remove(this.notifLoading.id);
           },
