@@ -454,9 +454,9 @@ export default {
     sencondaryExt: [],
     additive: true,
     genres: [],
-    premiereStart: '1960-01-01',
+    premiereStart: '',
     premiereEnd: '',
-    finalStart: '1960-01-01',
+    finalStart: '',
     finalEnd: '',
   }),
   computed: {
@@ -570,12 +570,17 @@ export default {
         this.genres.push(g);
       }
     });
-    const currentDate = new Date().toISOString().slice(0, 10);
-    this.premiereEnd = currentDate;
-    this.finalEnd = currentDate;
+    this.resetDates();
     this.loadData();
   },
   methods: {
+    resetDates() {
+      const currentDate = new Date().toISOString().slice(0, 10);
+      this.premiereEnd = currentDate;
+      this.finalEnd = currentDate;
+      this.premiereStart = '1960-01-01';
+      this.finalStart = '1960-01-01';
+    },
     dateFormat(value) {
       if (value.length === 4) {
         const year = parseInt(value, 10);
@@ -770,6 +775,8 @@ export default {
       this.selected = this.selected.concat(this.json.ratio);
       this.selected = this.selected.concat(this.json.quality);
       this.selected = this.selected.concat(this.getGenres());
+      this.selected = this.selected.concat(['Premiere', 'Final']);
+      this.resetDates();
     },
     getPieData(pie) {
       const data = { labels: [], datasets: [{ data: [], backgroundColor: [] }] };
