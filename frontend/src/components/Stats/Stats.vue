@@ -134,7 +134,6 @@
           <b-col
             :style="{margin: 'auto', position: 'relative'}"
             class="text-center"
-
           >
             <h4
               class="mt-3">Extentions</h4>
@@ -196,7 +195,7 @@
               <b-row>
                 <b-form-checkbox-group
                   v-model="selected"
-                  :options="json.status"
+                  :options="['Airing', 'Hiatus', 'Ended']"
                   :style="{width: '100%'}"
                   stacked
                   buttons
@@ -206,7 +205,7 @@
               <b-row class="mt-4">
                 <b-form-checkbox-group
                   v-model="selected"
-                  :options="json.quality"
+                  :options="['SD', 'HD', 'FullHD']"
                   :style="{width: '100%'}"
                   stacked
                   buttons
@@ -687,8 +686,6 @@ export default {
       }
       series = [...new Set(series.map(s => s.series_name))];
       const temp = [];
-      // eslint-disable-next-line no-console
-      console.log(series.length);
       this.json.shows.forEach((s) => {
         if (series.includes(s.series_name)) {
           temp.push(s);
@@ -727,8 +724,6 @@ export default {
           shows.push(s);
         }
       });
-      // eslint-disable-next-line no-console
-      console.log(shows.length);
       return shows;
     },
     filterGroup(group, name, series) {
