@@ -651,6 +651,7 @@ export default {
               this.json = body;
               this.shows = body.shows;
               this.selectAllFilters();
+              this.averageDuration();
             }
             this.$snotify.remove(this.notifLoading.id);
           },
