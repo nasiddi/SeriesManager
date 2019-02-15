@@ -723,6 +723,8 @@ export default {
           shows.push(s);
         }
       });
+      // eslint-disable-next-line no-console
+      console.log(`${shows.length} ${name}`);
       return shows;
     },
     filterGenre(series) {
