@@ -705,9 +705,9 @@ export default {
       let end = null;
       if (!this.selected.includes(key.toLowerCase())) {
         if (this.additive) {
-          return series;
+          return [];
         }
-        return [];
+        return series;
       }
       if (key === 'premiere') {
         start = (this.premiereStart) ? new Date(this.premiereStart) : '1960-10-01';
