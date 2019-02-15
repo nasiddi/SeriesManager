@@ -225,10 +225,20 @@
               </b-row>
             </b-col>
             <b-col class="mx-3">
-              <b-row>
+              <b-row class="my-4">
                 <b-form-checkbox-group
                   v-model="selected"
                   :options="json.extension"
+                  :style="{width: '100%'}"
+                  stacked
+                  buttons
+                  button-variant="outline-secondary"
+                  name="extension"/>
+              </b-row>
+              <b-row class="my-4">
+                <b-form-checkbox-group
+                  v-model="selected"
+                  :options="['Premiere', 'Final']"
                   :style="{width: '100%'}"
                   stacked
                   buttons
@@ -693,6 +703,12 @@ export default {
     filterDates(series, key) {
       let start = null;
       let end = null;
+      if (!this.selected.includes(key.toLowerCase())) {
+        if (this.additive) {
+          return series;
+        }
+        return [];
+      }
       if (key === 'premiere') {
         start = (this.premiereStart) ? new Date(this.premiereStart) : '1960-10-01';
         end = (this.premiereEnd) ? new Date(this.premiereEnd)
