@@ -73,6 +73,8 @@ def main(args):
         else:
             show_stats['avg_duration'] = 0
             show_stats['avg_size'] = 0
+        print(show_stats['avg_duration'])
+
         show_stats['duration'] = int(show_stats['duration'] / 60.0 * 100) / 100.0
         show_stats['size'] = int(show_stats['size'] / 1024.0 * 100) / 100.0
         try:
