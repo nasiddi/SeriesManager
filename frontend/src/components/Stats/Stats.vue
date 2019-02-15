@@ -680,8 +680,6 @@ export default {
         series = this.filterDates(series, 'premiere');
         series = this.filterDates(series, 'final');
       }
-      // eslint-disable-next-line no-console
-      console.log(series.length);
       series = [...new Set(series.map(s => s.series_name))];
       const temp = [];
       // eslint-disable-next-line no-console
@@ -724,6 +722,8 @@ export default {
           shows.push(s);
         }
       });
+      // eslint-disable-next-line no-console
+      console.log(shows.length);
       return shows;
     },
     filterGroup(group, name, series) {
@@ -734,15 +734,11 @@ export default {
           filteredGroup.push(g);
         }
       });
-      // eslint-disable-next-line no-console
-      console.log(filteredGroup);
       series.forEach((s) => {
         if (_.keys(s[name]).some(n => filteredGroup.indexOf(n) >= 0)) {
           shows.push(s);
         }
       });
-      // eslint-disable-next-line no-console
-      console.log(`${shows.length} ${name}`);
       return shows;
     },
     filterGenre(series) {
