@@ -701,6 +701,8 @@ export default {
     filterDates(series, key) {
       let start = null;
       let end = null;
+      // eslint-disable-next-line no-console
+      console.log(this.selected.includes(key.toLowerCase()));
       if (!this.selected.includes(key.toLowerCase())) {
         if (this.additive) {
           return [];
