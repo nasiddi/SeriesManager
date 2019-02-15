@@ -766,7 +766,7 @@ export default {
     },
     averageDuration() {
       // eslint-disable-next-line no-console
-      this.series.forEach(s => console.log(s.avg_duration));
+      this.shows.forEach(s => console.log(s.avg_duration));
     },
     selectAllFilters() {
       this.selected = [];
