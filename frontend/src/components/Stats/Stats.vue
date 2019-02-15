@@ -497,7 +497,7 @@ export default {
         25: 0, 45: 0, 60: 0, 90: 0,
       };
 
-      this.series.forEach((s) => {
+      this.shows.forEach((s) => {
         const x = s.avg_duration;
         const closest = _.keys(durations).sort((a, b) => Math.abs(x - a) - Math.abs(x - b))[0];
         durations[closest] += 1;
