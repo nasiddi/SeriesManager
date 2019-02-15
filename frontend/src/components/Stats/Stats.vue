@@ -672,6 +672,8 @@ export default {
       }
       series = [...new Set(series.map(s => s.series_name))];
       const temp = [];
+      // eslint-disable-next-line no-console
+      console.log(series.length);
       this.json.shows.forEach((s) => {
         if (series.includes(s.series_name)) {
           temp.push(s);
@@ -714,6 +716,7 @@ export default {
           filteredGroup.push(g);
         }
       });
+      // eslint-disable-next-line no-console
       console.log(filteredGroup);
       series.forEach((s) => {
         if (_.keys(s[name]).some(n => filteredGroup.indexOf(n) >= 0)) {
