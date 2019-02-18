@@ -467,8 +467,18 @@ export default {
     chartOptions: {
       legend: {
         display: true,
+        labels: {
+          filter(legendItem, data) {
+            // only show 2nd dataset in legend
+            // eslint-disable-next-line no-console
+            console.log(legendItem);
+            // eslint-disable-next-line no-console
+            console.log(data);
+            return true;
+          },
+        },
+        responsive: false,
       },
-      responsive: false,
     },
     shows: [],
     primaryExt: [],
