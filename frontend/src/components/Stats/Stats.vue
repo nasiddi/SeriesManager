@@ -1,7 +1,7 @@
 <template>
   <div v-if="json.length !== 0 && 'shows' in json">
     <b-row>
-      <b-col lg>
+      <b-col lg="4">
         <b-row class="text-center">
           <b-col class="text-center">
             <h4 class="mt-3">Total</h4>
