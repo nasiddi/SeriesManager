@@ -505,7 +505,7 @@ export default {
       return durations;
     },
     genreSum() {
-      const genres = _.zipObject(_.keys(this.genres), [0] * this.genres.length);
+      const genres = _.zipObject(_.map(this.genres, 'text'), [0] * this.genres.length);
       genres[''] = 0;
       this.shows.forEach((s) => {
         genres[s.genre1] += 1;
@@ -587,7 +587,7 @@ export default {
       if (g === '') {
         this.genres.push({ value: g, text: 'None' });
       } else {
-        this.genres.push(g);
+        this.genres.push({ value: g, text: g });
       }
     });
     this.resetDates();
