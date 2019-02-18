@@ -840,7 +840,11 @@ export default {
       data.labels = _.keys(pie);
       const values = _.orderBy([_.values(pie)], ['desc']);
       values.forEach((v) => {
-        const k = _.findKey(pieData, item => (item === v));
+        const k = _.findKey(pieData, (item) => {
+          // eslint-disable-next-line no-console
+          console.log(`${item} ${v}`);
+          return true;
+        });
         // eslint-disable-next-line no-console
         console.log(`${k} ${v}`);
       });
