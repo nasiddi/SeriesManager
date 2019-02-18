@@ -474,7 +474,10 @@ export default {
             console.log(legendItem);
             // eslint-disable-next-line no-console
             console.log(data);
-            return true;
+            if (data.labels.indexOf(legendItem.text) < 4) {
+              return true;
+            }
+            return false;
           },
         },
         responsive: false,
