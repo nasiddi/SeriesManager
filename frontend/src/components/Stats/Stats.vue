@@ -813,8 +813,13 @@ export default {
           filteredGroup.push(g);
         }
       });
+
       series.forEach((s) => {
-        if (filteredGroup.includes(s.genre1) || filteredGroup.includes(s.genre2)) {
+        if (this.additive) {
+          if (filteredGroup.includes(s.genre1) || filteredGroup.includes(s.genre2)) {
+            shows.push(s);
+          }
+        } else if (filteredGroup.includes(s.genre1) && filteredGroup.includes(s.genre2)) {
           shows.push(s);
         }
       });
