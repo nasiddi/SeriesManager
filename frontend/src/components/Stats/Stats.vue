@@ -471,10 +471,6 @@ export default {
           filter(legendItem, data) {
             // only show 2nd dataset in legend
             // eslint-disable-next-line no-console
-            console.log('legendItem');
-            // eslint-disable-next-line no-console
-            console.log(legendItem);
-            // eslint-disable-next-line no-console
             console.log('data');
             // eslint-disable-next-line no-console
             console.log(data);
@@ -840,8 +836,15 @@ export default {
     },
     getPieData(pie) {
       const data = { labels: [], datasets: [{ data: [], backgroundColor: [] }] };
+      const pieData = _.cloneDeep(pie);
       data.labels = _.keys(pie);
-      data.datasets[0].data = _.values(pie);
+      const values = _.orderBy([_.values(pie)], ['desc']);
+      values.forEach((v) => {
+        const k = _.findKey(pieData, v);
+        // eslint-disable-next-line no-console
+        console.log(`${k} ${v}`);
+      });
+      data.datasets[0].data = values;
       data.datasets[0].backgroundColor = this.colorArrayRandom(
         _.keys(pie),
       );
