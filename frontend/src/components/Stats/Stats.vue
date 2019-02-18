@@ -471,9 +471,13 @@ export default {
           filter(legendItem, data) {
             // only show 2nd dataset in legend
             // eslint-disable-next-line no-console
-            console.log(`legendItems ${legendItem}`);
+            console.log('legendItem');
             // eslint-disable-next-line no-console
-            console.log(`data ${data}`);
+            console.log(legendItem);
+            // eslint-disable-next-line no-console
+            console.log('data');
+            // eslint-disable-next-line no-console
+            console.log(data);
             return true;
           },
         },
