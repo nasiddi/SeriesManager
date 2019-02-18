@@ -505,11 +505,19 @@ export default {
       return durations;
     },
     genreSum() {
-      const genres = _.zipObject(_.map(this.genres, 'text'), [0] * this.genres.length);
-      genres[''] = 0;
+      const genres = _.zipObject(_.map(this.genres, 'text'), _.constant(0));
+      genres.None = 0;
       this.shows.forEach((s) => {
-        genres[s.genre1] += 1;
-        genres[s.genre2] += 1;
+        if (s.genre1 === '') {
+          genres.None += 1;
+        } else {
+          genres[s.genre1] += 1;
+        }
+        if (s.genre2 === '') {
+          genres.None += 1;
+        } else {
+          genres[s.genre2] += 1;
+        }
       });
       return genres;
     },
