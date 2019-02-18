@@ -842,7 +842,7 @@ export default {
       values.forEach((v) => {
         const k = _.findKey(pieData, (item) => {
           // eslint-disable-next-line no-console
-          console.log(`${item} ${v}`);
+          console.log(`k${item} ${v}`);
           return true;
         });
         // eslint-disable-next-line no-console
