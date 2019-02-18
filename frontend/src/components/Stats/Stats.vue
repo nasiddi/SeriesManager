@@ -838,8 +838,7 @@ export default {
       const data = { labels: [], datasets: [{ data: [], backgroundColor: [] }] };
       const pieData = _.cloneDeep(pie);
       data.labels = _.keys(pie);
-      const values = _.values(pie);
-      values.sort().reverse();
+      const values = _.values(pie).sort((a, b) => b - a);
       // eslint-disable-next-line no-console
       console.log(`values ${values}`);
       values.forEach((v) => {
