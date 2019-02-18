@@ -181,6 +181,83 @@
           </b-col>
         </b-row>
       </b-col>
+      <b-col>
+        <b-row lg>
+          <b-col class="text-center">
+            <h4 class="mt-3">Status</h4>
+            <pie-chart
+              :chart-data="getPieData(totalPies('status'))"
+              :options="chartOptions"
+              :style="{display: 'inline-block'}"
+              :width="230"
+              :height="230"
+            />
+          </b-col>
+          <b-col
+            class="text-center">
+            <h4 class="mt-3">Quality</h4>
+            <pie-chart
+              :chart-data="getPieData(totalPies('quality'))"
+              :options="chartOptions"
+              :style="{display: 'inline-block'}"
+              :width="230"
+              :height="230"
+            />
+          </b-col>
+          <b-col
+            class="text-center">
+            <h4 class="mt-3">Genres</h4>
+            <pie-chart
+              :chart-data="getPieData(genreSum)"
+              :options="chartOptions"
+              :style="{display: 'inline-block'}"
+              :width="230"
+              :height="230"
+            />
+          </b-col>
+        </b-row>
+        <b-row
+          lg
+          class="mb-5">
+          <b-col
+            :style="{margin: 'auto', position: 'relative'}"
+            class="text-center"
+          >
+            <h4
+              class="mt-3">Extentions</h4>
+            <pie-chart
+              :chart-data="getPieData(totalPies('extension'))"
+              :options="chartOptions"
+              :style="{display: 'inline-block'}"
+              :width="230"
+              :height="230"
+            />
+          </b-col>
+          <b-col
+            class="text-center"
+          >
+            <h4 class="mt-3">Aspect Ratio</h4>
+            <pie-chart
+              :chart-data="getPieData(totalPies('ratio'))"
+              :options="chartOptions"
+              :style="{display: 'inline-block'}"
+              :width="230"
+              :height="230"
+            />
+          </b-col>
+          <b-col
+            class="text-center">
+            <h4 class="mt-3">Duration</h4>
+            <pie-chart
+              :chart-data="getPieData(averageDuration)"
+              :options="chartOptions"
+              :style="{display: 'inline-block'}"
+              :width="230"
+              :height="230"
+            />
+          </b-col>
+        </b-row>
+      </b-col>
     </b-row>
     <div>
       <b-card>
