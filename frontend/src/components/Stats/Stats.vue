@@ -836,14 +836,19 @@ export default {
     },
     getPieData(pie) {
       const data = { labels: [], datasets: [{ data: [], backgroundColor: [] }] };
-      const pieData = _.cloneDeep(pie);
+      let pieData = _.cloneDeep(pie);
       data.labels = _.keys(pie);
       const values = _.values(pie).sort((a, b) => b - a);
+      const keys = [];
       values.forEach((v) => {
         const k = _.findKey(pieData, item => item === v);
-        // eslint-disable-next-line no-console
-        console.log(`${k} ${v}`);
+        pieData = _.omit(pieData, [k]);
+        keys.push(k);
       });
+      // eslint-disable-next-line no-console
+      console.log(keys);
+      // eslint-disable-next-line no-console
+      console.log(values);
       data.datasets[0].data = values;
       data.datasets[0].backgroundColor = this.colorArrayRandom(
         _.keys(pie),
