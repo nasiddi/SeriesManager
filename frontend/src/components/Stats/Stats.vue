@@ -839,14 +839,8 @@ export default {
       const pieData = _.cloneDeep(pie);
       data.labels = _.keys(pie);
       const values = _.values(pie).sort((a, b) => b - a);
-      // eslint-disable-next-line no-console
-      console.log(`values ${values}`);
       values.forEach((v) => {
-        const k = _.findKey(pieData, (item) => {
-          // eslint-disable-next-line no-console
-          console.log(`k${item} ${v}`);
-          return true;
-        });
+        const k = _.findKey(pieData, (item) => item === v);
         // eslint-disable-next-line no-console
         console.log(`${k} ${v}`);
       });
