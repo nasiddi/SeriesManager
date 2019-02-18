@@ -505,7 +505,7 @@ export default {
       return durations;
     },
     genreSum() {
-      const genres = _.zipObject(_.map(this.genres, 'text'), _.constant(0));
+      const genres = _.zipObject(_.map(this.genres, 'text'), _.fill(Array(this.genres.length), 0));
       genres.None = 0;
       this.shows.forEach((s) => {
         if (s.genre1 === '') {
