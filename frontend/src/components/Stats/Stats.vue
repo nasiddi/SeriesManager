@@ -127,6 +127,17 @@
               :height="230"
             />
           </b-col>
+          <b-col
+            class="text-center">
+            <h4 class="mt-3">Genres</h4>
+            <pie-chart
+              :chart-data="getPieData(genreSum)"
+              :options="chartOptions"
+              :style="{display: 'inline-block'}"
+              :width="230"
+              :height="230"
+            />
+          </b-col>
         </b-row>
         <b-row
           lg
@@ -151,6 +162,17 @@
             <h4 class="mt-3">Aspect Ratio</h4>
             <pie-chart
               :chart-data="getPieData(totalPies('ratio'))"
+              :options="chartOptions"
+              :style="{display: 'inline-block'}"
+              :width="230"
+              :height="230"
+            />
+          </b-col>
+          <b-col
+            class="text-center">
+            <h4 class="mt-3">Duration</h4>
+            <pie-chart
+              :chart-data="getPieData(averageDuration)"
               :options="chartOptions"
               :style="{display: 'inline-block'}"
               :width="230"
