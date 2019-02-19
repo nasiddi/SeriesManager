@@ -154,6 +154,9 @@ print()
 print(len(Show.objects))
 print()
 
+for e in E.objects(title__icontains='brexit'):
+    print(e)
+
 
 for show in Show.objects(started=None).order_by('premiere'):
     entry = input(show.show_id + ': ')

@@ -1,6 +1,6 @@
 /* eslint-disable no-unreachable */
 <template>
-  <div v-if="json.length !== 0 && 'total' in json">
+  <div v-if="json.length !== 0 && 'shows' in json">
     <b-row >
       <b-col >
         <b-button
