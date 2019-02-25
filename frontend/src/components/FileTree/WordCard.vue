@@ -181,7 +181,7 @@ export default {
   mounted() {
     this.original = _.cloneDeep(this.e);
     this.updated = _.cloneDeep(this.e);
-    this.e.words = _.sortBy(this.e.words.slice(1), 'key');
+    this.e.words = _.sortBy(this.e.words, 'key');
   },
   methods: {
     setInput(w) {
