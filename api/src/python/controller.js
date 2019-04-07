@@ -783,6 +783,37 @@ async function titleQuizPrep(res) {
   );
 }
 
+async function loadLog(res) {
+  const outputFile = path.join(config.directories.storage, 'loadLog');
+  await run(
+    'load_logs',
+    '',
+    '',
+    '',
+    outputFile,
+    () => { },
+    async (code, signal) => {
+      if (code !== 0) {
+        res.send('failed');
+        return;
+      }
+      if (!fs.existsSync(outputFile)) {
+        res.sendStatus(204).end();
+        return;
+      }
+
+      fs.readJson(outputFile, (err, file) => {
+        if (err) {
+          winston.error(err);
+          res.sendStatus(500).end();
+        }
+        fs.unlink(outputFile);
+        res.json(file);
+      });
+    },
+  );
+}
+
 module.exports = {
   reloadSeries,
   prepFiles,
