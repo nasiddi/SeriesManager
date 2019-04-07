@@ -783,7 +783,7 @@ async function titleQuizPrep(res) {
   );
 }
 
-async function loadLog(res) {
+async function loadLogs(res) {
   const outputFile = path.join(config.directories.storage, 'loadLog');
   await run(
     'load_logs',
@@ -837,4 +837,5 @@ module.exports = {
   restoreBackUp,
   titleQuizPrep,
   titleQuiz,
+  loadLogs,
 };

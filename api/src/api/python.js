@@ -15,7 +15,7 @@ routes.post('/unlock', async (req, res) => {
   python.unlockShows(res);
 });
 routes.post('/loadlogs', async (req, res) => {
-  python.titleQuizPrep(res);
+  python.loadLogs(res);
 });
 routes.post('/titlequizprep', async (req, res) => {
   python.titleQuizPrep(res);
