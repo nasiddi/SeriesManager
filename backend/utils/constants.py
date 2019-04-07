@@ -32,6 +32,7 @@ if platform.system() == 'Windows':
     SD_MOVIES = 'L:\\SD' if DEBUG else 'V:\\SD'
     FILE_DIR = 'L:\\complete\\' if DEBUG else 'V:\\downloads\\'
     SUB_DIR = 'T:\\Subs'
+    LOG_DIR = 'T:\\watch'
     MAC_OFFSET = 0
 
 else:
@@ -41,6 +42,7 @@ else:
     SD_MOVIES = '/Volumes/Downloads/SD' if DEBUG else '/Volumes/Video/SD'
     FILE_DIR = '/Volumes/Downloads/complete/' if DEBUG else '/Volumes/Video/downloads/'
     SUB_DIR = '/Volumes/Temp/Subs'
+    LOG_DIR = '/Volumes/Temp/watch'
     MAC_OFFSET = 2
 
 # Extensions

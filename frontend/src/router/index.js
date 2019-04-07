@@ -46,6 +46,7 @@ import TitleQuiz from '@/components/Quizzes/TitleQuiz';
 import StatsQuiz from '@/components/Quizzes/StatsQuiz';
 import LyricsQuiz from '@/components/Quizzes/LyricsQuiz';
 
+import Logs from '@/components/Downloads/Logs';
 
 import Stats from '@/components/Stats/Stats';
 
@@ -211,6 +212,12 @@ export default new Router({
       path: '/quiz/lyrics',
       name: 'quiz.lyrics',
       component: LyricsQuiz,
+      beforeEnter: Vue.prototype.$auth.requireAuth,
+    },
+    {
+      path: '/downloads',
+      name: 'downloads',
+      component: Logs,
       beforeEnter: Vue.prototype.$auth.requireAuth,
     },
   ],
