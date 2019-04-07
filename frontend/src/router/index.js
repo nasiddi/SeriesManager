@@ -46,7 +46,7 @@ import TitleQuiz from '@/components/Quizzes/TitleQuiz';
 import StatsQuiz from '@/components/Quizzes/StatsQuiz';
 import LyricsQuiz from '@/components/Quizzes/LyricsQuiz';
 
-import Logs from '@/components/Downloads/Logs';
+import Logs from '@/components/DownloadLogs/Logs';
 
 import Stats from '@/components/Stats/Stats';
 
