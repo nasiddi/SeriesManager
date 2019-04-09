@@ -13,27 +13,28 @@
           @click="log.opened = !log.opened"
         >{{ log.file }}</b-button>
         <b-collapse
-          v-if="'data' in log"
           :id="log.file"
           v-model="log.opened">
-          <b-button
+          <div
             v-for="l in log.data"
-            :key="l.key"
-            :class="l.opened ? 'collapsed' : null"
-            :aria-expanded="l.opened ? 'true' : 'false'"
-            :style="{width: '100%'}"
-            :aria-controls="l.key"
-            @click="l.opened = !l.opened"
-          >{{ l.key }}</b-button>
-          <b-collapse
-            :id="l.key"
-            v-model="l.opened">
-            <b-alert
-              v-for="f in l.files"
-              :key="f"
+            :key="l.key">
+            <b-button
+              :class="l.opened ? 'collapsed' : null"
+              :aria-expanded="l.opened ? 'true' : 'false'"
               :style="{width: '100%'}"
-            >{{ f }}</b-alert>
-          </b-collapse>
+              :aria-controls="l.key"
+              @click="l.opened = !l.opened"
+            >{{ l.key }}</b-button>
+            <b-collapse
+              :id="l.key"
+              v-model="l.opened">
+              <b-alert
+                v-for="f in l.files"
+                :key="f"
+                :style="{width: '100%'}"
+              >{{ f }}</b-alert>
+            </b-collapse>
+          </div>
         </b-collapse>
       </b-col>
     </b-row>
