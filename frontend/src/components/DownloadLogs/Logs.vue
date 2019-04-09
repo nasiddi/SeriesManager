@@ -32,6 +32,7 @@
                 v-for="f in l.files"
                 :key="f"
                 :style="{width: '100%'}"
+                show
               >{{ f }}</b-alert>
             </b-collapse>
           </div>
