@@ -13,7 +13,7 @@
           @click="log.opened = !log.opened"
         >{{ log.file }}</b-button>
         <b-collapse
-          v-if="data in log"
+          v-if="'data' in log"
           :id="log.file"
           v-model="log.opened">
           <b-button
