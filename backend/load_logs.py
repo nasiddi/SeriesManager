@@ -11,9 +11,9 @@ def main(args, out_file='data/load_logs.json'):
     logs = [{'file': f[:-5], 'data': load_json(path.join(LOG_DIR, f)), 'opened': True}
             for f in listdir(LOG_DIR) if f.endswith('json')]
 
-    for l in logs:
-        if l['file'] == 'dsyncerlog':
-            l['data'] = list(l['data'].values())
+    # for l in logs:
+    #     if l['file'] == 'dsyncerlog':
+    #         l['data'] = list(l['data'].values())
     print(logs)
 
     save_json(logs, out_file)
