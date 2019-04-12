@@ -70,11 +70,11 @@ export default {
           }
           const body = _.defaults(res.body, {});
           this.json = body;
-          // eslint-disable-next-line no-console
-          console.log(this.json[0].data[0].key);
+          this.$snotify.remove(this.notifLoading.id);
         },
         () => {
           this.$snotify.error('Failed to load data', { timeout: 0 });
+          this.$snotify.remove(this.notifLoading.id);
         },
       );
     },
