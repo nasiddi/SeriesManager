@@ -1,5 +1,5 @@
 from sys import argv
-from os import path, listdir, makedirs, stat
+from os import path, listdir, makedirs, stat, system
 import shutil
 from time import sleep
 
@@ -19,6 +19,7 @@ def main(args):
         print(log2)
 
     while True:
+        mount_drives()
         local_files = listdir(LOCAL_DIR)
         for file in local_files:
             if file not in log['files']:
@@ -87,6 +88,15 @@ def get_size(file):
         for item in listdir(file):
             total_size += get_size(path.join(file, item))
     return total_size
+
+
+def mount_drive(folder):
+    system("/usr/bin/osascript -e \"try\" -e \"mount volume \\\"smb://nadina:Sherlock69@Rocinante/" + folder + "\\\"\" -e \"end try\"")
+
+
+def mount_drives():
+    mount_drive('Video')
+    mount_drive('Temp')
 
 
 if __name__ == '__main__':
