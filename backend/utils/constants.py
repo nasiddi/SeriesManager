@@ -33,6 +33,8 @@ if platform.system() == 'Windows':
     FILE_DIR = 'L:\\complete\\' if DEBUG else 'V:\\downloads\\'
     SUB_DIR = 'T:\\Subs'
     LOG_DIR = 'T:\\watch'
+    LOCAL_DIR = 'C:\\Users\\Nadina\\Downloads\\complete'
+    
     MAC_OFFSET = 0
 
 else:
@@ -43,6 +45,8 @@ else:
     FILE_DIR = '/Volumes/Downloads/complete/' if DEBUG else '/Volumes/Video/downloads/'
     SUB_DIR = '/Volumes/Temp/Subs'
     LOG_DIR = '/Volumes/Temp/watch'
+    LOCAL_DIR = '/Users/nadina/Downloads'
+
     MAC_OFFSET = 2
 
 # Extensions
