@@ -95,6 +95,10 @@ def add_metadata(shows):
                 except KeyError:
                     print('*load metadata*', e.location)
                     e.update_file_meta()
+                except TypeError:
+                    print(show.series_name)
+                    print('*load metadata*', e.location)
+                    e.update_file_meta()
                 if not e.quality:
                     e.update_file_meta()
 

@@ -2,8 +2,9 @@ from sys import argv
 from os import path, listdir, makedirs, stat, system
 import shutil
 from time import sleep
+import schedule
 
-from utils.io_utlis import load_json, save_json
+from utils.io_utlis import load_json, save_json, recursive_delete
 from utils.constants import FILE_DIR, LOCAL_DIR, LOG_DIR
 
 
@@ -13,14 +14,23 @@ def main(args):
     if not log:
         log = {'files': {}, 'sizes': {}}
 
+    def clean_up():
+        for f in log['files'].keys():
+            if log['files'][f] == 'delete':
+                if recursive_delete(path.join(LOCAL_DIR, f)):
+                    print('deleted', f)
+
+    schedule.every().day.at('04:00').do(clean_up)
+
     def save_log():
         save_json(log, log_path)
         log2 = load_json(log_path)
-        print(log2)
 
     while True:
         mount_drives()
         local_files = listdir(LOCAL_DIR)
+        schedule.run_pending()
+
         for file in local_files:
             if file not in log['files']:
                 if file not in log['sizes'] or log['sizes'][file] != 'done':
@@ -29,14 +39,20 @@ def main(args):
                         log['sizes'][file] = current_size
                         save_log()
                         continue
+                    elif file.startswith('_UNPACK'):
+                        continue
+                    elif file.startswith('.'):
+                        continue
                     else:
                         del log['sizes'][file]
                         save_log()
-
+                print('copying', file)
                 log['files'][file] = 'copying'
                 save_log()
-                if copytree(path.join(LOCAL_DIR, file), path.join(FILE_DIR, file)):
+                path.join(LOCAL_DIR, file)
+                if copytree(path.join(LOCAL_DIR, file), FILE_DIR, file, True):
                     log['files'][file] = 'copied'
+                    print('copied', file)
                 else:
                     del log['files'][file]
                 save_log()
@@ -44,8 +60,6 @@ def main(args):
         remote_files = listdir(FILE_DIR)
         delete = []
         for file in log['files'].keys():
-            if log['files'][file] == 'delete':
-                continue
             if file not in remote_files:
                 log['files'][file] = 'delete'
                 save_log()
@@ -61,7 +75,11 @@ def main(args):
         sleep(1)
 
 
-def copytree(src, dst):
+def copytree(src, dst_folder, name, root=False):
+    if root:
+        dst = path.join(dst_folder, f'_{name}')
+    else:
+        dst = path.join(dst_folder, )
     if path.isfile(src):
         if not path.exists(dst) or stat(src).st_mtime - stat(dst).st_mtime > 1:
             try:
@@ -75,8 +93,10 @@ def copytree(src, dst):
         for item in listdir(src):
             s = path.join(src, item)
             d = path.join(dst, item)
-            copytree(s, d)
-
+            copytree(s, d, name)
+    if root:
+        sleep(0.5)
+        shutil.move(dst, path.join(dst_folder, name))
     return True
 
 
