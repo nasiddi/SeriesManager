@@ -1,3 +1,10 @@
+var fs = require('fs');
+var http = require('http');
+var https = require('https');
+var privateKey  = fs.readFileSync('/etc/letsencrypt/live/api.skyship.space/privkey.pem', 'utf8');
+var certificate = fs.readFileSync('/etc/letsencrypt/live/api.skyship.space/cert.pem', 'utf8');
+var credentials = {key: privateKey, cert: certificate};
+
 const winston = require('winston');
 const express = require('express');
 const cors = require('cors');
@@ -75,5 +82,9 @@ app.use((err, req, res, next) => {
   res.send('Something broke!');
 });
 
-app.listen(port);
-winston.info(`http://localhost:${port}`);
+var httpServer = http.createServer(app);
+var httpsServer = https.createServer(credentials, app);
+
+httpServer.listen(port);
+httpsServer.listen(8443);
+winston.info(`https://localhost:${port}`);
