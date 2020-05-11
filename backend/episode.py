@@ -4,9 +4,9 @@ from tvdb_client import ApiV2Client
 
 from utils.io_utlis import find_video_metadata
 from utils.constants import SINGLE, DOUBLE, TRIPLE, MAC_OFFSET, ANIME_PATTERN,\
-    SERIES_PATTERN, ANIME_DIR, ASPECT_RATIOS, QUALITY
+    SERIES_PATTERN, ANIME_DIR, ASPECT_RATIOS, QUALITY, TVDB_LOGIN
 
-api_client = ApiV2Client('nadinasiddiquiwaz', 'ZEDKTMYBNB29LBOS', 'EISRLGJH035SO60Q')
+api_client = ApiV2Client(TVDB_LOGIN['username'], TVDB_LOGIN['api_key'], TVDB_LOGIN['account_identifier'])
 api_client.login()
 
 

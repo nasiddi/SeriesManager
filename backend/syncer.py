@@ -6,7 +6,7 @@ from sys import argv
 from episode import Episode
 from series import Series
 from utils.constants import CONF_FILE, OUT_FILE, FILE_DIR, SERIES_NAME, MAC_OFFSET, SUBS, HD_Movies, \
-    SUB_DIR, SD_MOVIES, SERIES_DIR, ANIME_DIR
+    SUB_DIR, SD_MOVIES, SERIES_DIR, ANIME_DIR, TVDB_LOGIN
 from utils.file import File
 from utils.io_utlis import load_shows, parse_args, save_json, save_shows, load_json, wait_on_creation, recursive_delete, wait_on_delete
 
@@ -185,7 +185,7 @@ def delete_file(file):
 
 def create_new_series(file):
     from tvdb_client import ApiV2Client
-    api_client = ApiV2Client('nadinasiddiquiwaz', 'ZEDKTMYBNB29LBOS', 'EISRLGJH035SO60Q')
+    api_client = ApiV2Client(TVDB_LOGIN['username'], TVDB_LOGIN['api_key'], TVDB_LOGIN['account_identifier'])
     api_client.login()
     show = api_client.get_series(file.tvdb_id)
     premiere = ''

@@ -2,14 +2,14 @@ from tvdb_client import ApiV2Client
 from operator import itemgetter
 
 from episode import Episode
-from utils.constants import EXCEPTIONS_FILE, SERIES_NAME, ENDED, NUMERALS, WRONG_SYMBOLS, EXTENSIONS
+from utils.constants import EXCEPTIONS_FILE, SERIES_NAME, ENDED, NUMERALS, WRONG_SYMBOLS, EXTENSIONS, TVDB_LOGIN
 from utils.io_utlis import load_json
 
 
 EXCEPTIONS = load_json(EXCEPTIONS_FILE)
 NAMES = {}
 
-api_client = ApiV2Client('nadinasiddiquiwaz', 'ZEDKTMYBNB29LBOS', 'EISRLGJH035SO60Q')
+api_client = ApiV2Client(TVDB_LOGIN['username'], TVDB_LOGIN['api_key'], TVDB_LOGIN['account_identifier'])
 api_client.login()
 
 

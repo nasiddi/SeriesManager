@@ -42,7 +42,7 @@ else:
     ANIME_DIR = '/Volumes/Downloads/Anime' if DEBUG else '/Volumes/Video/Anime'
     HD_Movies = '/Volumes/Downloads/HD' if DEBUG else '/Volumes/Video/HD'
     SD_MOVIES = '/Volumes/Downloads/SD' if DEBUG else '/Volumes/Video/SD'
-    FILE_DIR = '/Volumes/Downloads/complete/' if DEBUG else '/Volumes/Video/downloads/'
+    FILE_DIR = '/Volumes/Downloads/complete/' if DEBUG else '/Volumes/Video/download/'
     SUB_DIR = '/Volumes/Temp/Subs'
     LOG_DIR = '/Volumes/Temp/watch'
     LOCAL_DIR = '/Users/nadina/Downloads/complete'
@@ -86,6 +86,12 @@ WRONG_SYMBOLS = [
     ]
 
 NUMERALS = ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX']
+
+TVDB_LOGIN = {
+    'username': 'nadinasiddiquiwaz',
+    'api_key': 'ZEDKTMYBNB29LBOS',
+    'account_identifier': '1JCXCP8BLZD7987G'
+    }
 
 # print('meta', os.path.exists(META_FILE))
 # print('series', os.path.exists(SERIES_DIR))

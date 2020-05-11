@@ -7,10 +7,10 @@ from time import gmtime, strftime
 
 from tvdb_client import ApiV2Client
 
-from utils.constants import SERIES_NAME, DOUBLE, TRIPLE, OUT_FILE
+from utils.constants import SERIES_NAME, DOUBLE, TRIPLE, OUT_FILE, TVDB_LOGIN
 from utils.io_utlis import load_shows, parse_args, save_json
 
-api_client = ApiV2Client('nadinasiddiquiwaz', 'ZEDKTMYBNB29LBOS', 'EISRLGJH035SO60Q')
+api_client = ApiV2Client(TVDB_LOGIN['username'], TVDB_LOGIN['api_key'], TVDB_LOGIN['account_identifier'])
 api_client.login()
 
 DATE = int(strftime("%Y%m%d", gmtime()))

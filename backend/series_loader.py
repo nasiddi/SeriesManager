@@ -11,7 +11,7 @@ from utils.constants import META_FILE, STATUS, NAME_NEEDED, PREMIERE, FINAL, TVD
 from utils.io_utlis import load_json, load_shows, save_shows, parse_args
 from unlock_shows import unlock
 
-api_client = ApiV2Client('nadinasiddiquiwaz', 'ZEDKTMYBNB29LBOS', 'EISRLGJH035SO60Q')
+api_client = ApiV2Client(TVDB_LOGIN['username'], TVDB_LOGIN['api_key'], TVDB_LOGIN['account_identifier'])
 api_client.login()
 
 setrecursionlimit(10000)

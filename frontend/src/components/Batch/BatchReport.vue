@@ -99,7 +99,7 @@ export default {
         );
     },
     loadData() {
-      this.$http.post('python/batch/sync', this.$route.params).then(
+      this.$http.post('python/batch/sync', { ...this.$route.params, timeout: 5000 }).then(
         (res) => {
           const body = _.defaults(res.body, {
           });
