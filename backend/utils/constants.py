@@ -30,7 +30,7 @@ if platform.system() == 'Windows':
     ANIME_DIR = 'L:\\Anime' if DEBUG else 'V:\\Anime'
     HD_Movies = 'L:\\HD' if DEBUG else 'V:\\HD'
     SD_MOVIES = 'L:\\SD' if DEBUG else 'V:\\SD'
-    FILE_DIR = 'L:\\complete\\' if DEBUG else 'V:\\download\\'
+    FILE_DIR = 'L:\\complete\\' if DEBUG else 'V:\\downloads\\'
     SUB_DIR = 'T:\\Subs'
     LOG_DIR = 'T:\\watch'
     LOCAL_DIR = 'C:\\Users\\Nadina\\Downloads\\complete'
@@ -42,15 +42,12 @@ else:
     ANIME_DIR = '/Volumes/Downloads/Anime' if DEBUG else '/Volumes/Video/Anime'
     HD_Movies = '/Volumes/Downloads/HD' if DEBUG else '/Volumes/Video/HD'
     SD_MOVIES = '/Volumes/Downloads/SD' if DEBUG else '/Volumes/Video/SD'
-    FILE_DIR = '/Volumes/Downloads/complete/' if DEBUG else '/Volumes/Video/download/'
+    FILE_DIR = '/Volumes/Downloads/complete/' if DEBUG else '/Volumes/Video/downloads/'
     SUB_DIR = '/Volumes/Temp/Subs'
     LOG_DIR = '/Volumes/Temp/watch'
     LOCAL_DIR = '/Users/nadina/Downloads/complete'
 
     MAC_OFFSET = 2
-
-if platform.system() == 'Linux':
-    LOCAL_DIR = '/home/nadina/Downloads/complete'
 
 # Extensions
 EXTENSIONS = ['mp4', 'mkv', 'avi', 'flv', 'm4v', 'divx', 'webm', 'mpg']

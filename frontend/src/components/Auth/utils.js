@@ -1,4 +1,4 @@
-// https://alligator.io/vuejs/creating-custom-plugins/ ??
+// https://alligator.io/vuejs/creating-custom-plugins/
 import Router from 'vue-router';
 import Cookies from 'js-cookie';
 
@@ -52,7 +52,7 @@ function install(Vue) {
     created() {
       if (!init) {
         init = true;
-        Vue.https
+        Vue.http
           .get('auth/check')
           .then(() => {
             if (isTokenEpxiringSoon()) {
@@ -85,7 +85,7 @@ function install(Vue) {
 
   const login = (params, failure) => {
     Vue.prototype.$auth.logoutSoft();
-    Vue.https
+    Vue.http
       .post('auth/authenticate', params)
       .then((res) => {
         setTokenFromResponse(res);
@@ -102,7 +102,7 @@ function install(Vue) {
   };
 
   const refresh = () => {
-    Vue.https
+    Vue.http
       .post('auth/refresh')
       .then((res) => {
         setTokenFromResponse(res);

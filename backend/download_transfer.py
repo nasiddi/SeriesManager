@@ -1,6 +1,5 @@
 from sys import argv
 from os import path, listdir, makedirs, stat, system
-import subprocess
 import shutil
 from time import sleep
 import schedule
@@ -112,17 +111,12 @@ def get_size(file):
 
 
 def mount_drive(folder):
-    cmd = f'mount /Volumes/{folder}'
-    p = subprocess.call(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    if p == 0:
-        print(f'{folder} mounted')
+    system("/usr/bin/osascript -e \"try\" -e \"mount volume \\\"smb://nadina:Sherlock69@Rocinante/" + folder + "\\\"\" -e \"end try\"")
 
 
 def mount_drives():
     mount_drive('Video')
     mount_drive('Temp')
-    mount_drive('Music')
-    mount_drive('Cloud')
 
 
 if __name__ == '__main__':

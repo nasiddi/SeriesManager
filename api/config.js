@@ -12,7 +12,7 @@ module.exports = {
     backend: path.resolve('../backend'),
   },
   logging: {
-    https: true,
+    http: true,
   },
   port: process.env.PORT || 8778,
 };
