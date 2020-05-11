@@ -4,14 +4,17 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 import VuePromiseBtn from 'vue-promise-btn';
 import Sticky from 'vue-sticky-directive';
+import VueDarkMode from '@growthbunker/vuedarkmode';
 import App from './App';
 import router from './router';
+
 
 const _ = require('lodash');
 const md5 = require('md5');
 const config = require('./config');
 
 Vue.config.productionTip = false;
+Vue.use(VueDarkMode);
 Vue.use(VuePromiseBtn, {});
 
 const shared = {
@@ -202,6 +205,7 @@ const store = new Vuex.Store({
 });
 
 Vue.prototype.$eventHub = new Vue(); // Global event bus
+Vue.use(VueDarkMode);
 
 // eslint-disable-next-line
 const vm = new Vue({

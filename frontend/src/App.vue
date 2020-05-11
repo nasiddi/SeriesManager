@@ -1,3 +1,4 @@
+/*eslint max-len: ["error", { "ignoreStrings": true }]*/
 <template>
   <div id="app">
     <meta
@@ -93,6 +94,80 @@ input[type="number"]::-webkit-outer-spin-button {
 .table-hidden {
   display: none;
 }
+
+body {
+  background-color: #292929;
+  color: #d6d6d6;
+}
+
+.card {
+  color: #d6d6d6;
+  background-color: #353535;
+}
+
+.list-group-item {
+  color: #d6d6d6;
+  background-color: #3f3f3f;
+}
+
+.list-group-item-success {
+    color: #155724;
+    background-color: #c3e6cb;
+}
+
+.list-group-item-secondary {
+    color: #383d41;
+    background-color: #d6d8db;
+}
+
+.list-group-item-danger {
+    color: #721c24;
+    background-color: #f5c6cb;
+}
+
+
+.custom-select {
+  color: #d6d6d6;
+  background-color: #353535;
+}
+
+.custom-select:focus {
+  color: #d6d6d6;
+  background-color: #353535;
+}
+
+.custom-select:after {
+ border-color: #d6d6d6;
+}
+
+.form-control {
+  color: #d6d6d6;
+  background-color: #353535;
+}
+
+.form-control:focus {
+  color: #d6d6d6;
+  background-color: #353535;
+}
+
+.form-control:disabled {
+  color: #d6d6d6;
+  background-color: #8a8a8a;
+}
+
+.custom-select::-ms-expand {
+  display: none;
+}
+
+.custom-select {
+  background: url(http://bigastro.unige.ch/concrete/images/icons/arrow_down.png) no-repeat right;
+  border: 1px solid grey;
+  border-radius: 5px;
+  overflow: hidden;
+  background-size: 11px 6px;
+  background-position: right 5px center;
+  }
+
 </style>
 
 <style lang="scss">
