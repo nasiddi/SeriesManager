@@ -50,7 +50,7 @@ async function run(
   exitCallback,
 ) {
   const cwd = resolveCwd('$BACKEND$');
-  const executable = executableMagic('python', cwd);
+  const executable = executableMagic('python3.7', cwd);
 
   const configFile = tmp.fileSync();
   let args = '';
