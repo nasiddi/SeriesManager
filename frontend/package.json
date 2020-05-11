@@ -20,7 +20,7 @@
     "chart.js": "^2.7.2",
     "js-cookie": "^2.2.0",
     "jsonwebtoken": "^8.3.0",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.13",
     "md5": "^2.2.1",
     "moment": "^2.22.2",
     "percentile": "^1.2.1",
