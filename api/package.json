@@ -5,7 +5,7 @@
   "private": true,
   "dependencies": {
     "async-lodash": "^1.0.9",
-    "bcrypt": "^3.0.0",
+    "bcrypt": "^5.0.0",
     "bluebird": "^3.5.1",
     "body-parser": "^1.18.3",
     "chokidar": "^2.0.4",
