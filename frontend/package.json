@@ -35,7 +35,7 @@
     "vue-json-tree": "^0.3.3",
     "vue-lodash": "^2.0.0",
     "vue-meta": "^1.5.2",
-    "vue-moment": "^4.0.0",
+    "vue-moment": "^4.1.0",
     "vue-peity": "^0.5.0",
     "vue-promise-btn": "^1.1.0",
     "vue-resource": "^1.5.1",
