@@ -49,6 +49,9 @@ else:
 
     MAC_OFFSET = 2
 
+if platform.system() == 'Linux':
+    LOCAL_DIR = '/home/nadina/Downloads/complete'
+
 # Extensions
 EXTENSIONS = ['mp4', 'mkv', 'avi', 'flv', 'm4v', 'divx', 'webm', 'mpg']
 SUBS = ['idx', 'sub', 'srt']
