@@ -30,11 +30,11 @@ function resolveCwd(cwd) {
 }
 
 function executableMagic(command, cwd) {
-  if (command === 'python3.7') {
+  if (command === 'python3.8') {
     const venv = path.join(cwd, 'venv');
-    const venvPythonNix = path.join(venv, 'bin', 'python3.7');
-    const venvPythonWin = path.join(venv, 'Scripts', 'python3.7.exe');
-    const venvAnaconda = path.join(venv, 'python3.7.exe');
+    const venvPythonNix = path.join(venv, 'bin', 'python3.8');
+    const venvPythonWin = path.join(venv, 'Scripts', 'python3.8.exe');
+    const venvAnaconda = path.join(venv, 'python3.8.exe');
 
     if (fs.pathExistsSync(venvPythonNix)) {
       return path.resolve(venvPythonNix);

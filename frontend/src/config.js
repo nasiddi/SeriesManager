@@ -1,4 +1,4 @@
 module.exports = {
-  rootUrl: 'http://skyship.space:8778/',
+  rootUrl: 'https://api.skyship.space/',
   authTokenCookie: 'token',
 };
