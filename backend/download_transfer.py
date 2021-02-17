@@ -1,5 +1,4 @@
-from sys import argv
-from os import path, listdir, makedirs, stat, system
+from os import path, listdir, makedirs, stat
 import shutil
 from time import sleep
 import schedule
@@ -8,7 +7,7 @@ from utils.io_utlis import load_json, save_json, recursive_delete
 from utils.constants import FILE_DIR, LOCAL_DIR, LOG_DIR
 
 
-def main(args):
+def main():
     log_path = path.join(LOG_DIR, 'download_transfer.json')
     log = load_json(log_path)
     if not log:
@@ -24,10 +23,8 @@ def main(args):
 
     def save_log():
         save_json(log, log_path)
-        log2 = load_json(log_path)
 
     while True:
-        mount_drives()
         local_files = listdir(LOCAL_DIR)
         schedule.run_pending()
 
@@ -110,14 +107,5 @@ def get_size(file):
     return total_size
 
 
-def mount_drive(folder):
-    system("/usr/bin/osascript -e \"try\" -e \"mount volume \\\"smb://nadina:Sherlock69@Rocinante/" + folder + "\\\"\" -e \"end try\"")
-
-
-def mount_drives():
-    mount_drive('Video')
-    mount_drive('Temp')
-
-
 if __name__ == '__main__':
-    main(argv[1:])
+    main()

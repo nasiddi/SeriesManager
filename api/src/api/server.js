@@ -34,6 +34,7 @@ app.use(compression());
 
 app.use(
   cors({
+    origin: 'https://atlantis.skyship.space',
     exposedHeaders: ['X-Access-Token', 'X-Access-Token-Expiry', 'X-File-Hash'].join(','),
   }),
 );

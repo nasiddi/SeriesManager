@@ -401,7 +401,7 @@ export default {
                 this.$snotify.error(file.series_name, 'Title failed', { timeout: 5000 });
                 return resolve(false);
               }
-              file.title = body.title;
+              this.title1 = body.title;
               if (file.episode_option !== 'Single') {
                 if (!('title2' in body)) {
                   this.$snotify.error(file.series_name, 'Title 2 failed', { timeout: 5000 });
